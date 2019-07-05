@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="jquery-2.1.4.min.js"></script>
+<script type="text/javascript">
+	function code() {
+		console.log("code()");
+		$.ajax({
+			type : "GET",
+			xhrFields : {
+				withCredentials : true
+			},
+			url : "http://fh.xinkaoyun.com:65533/app/getSignupStudents",
+			success : function(data) {
+				console.log(data);
+			}
+		});
+
+	}
+</script>
+</head>
+<body>
+	<input type="button" value="test" onclick="code()" />
+</body>
+</html>

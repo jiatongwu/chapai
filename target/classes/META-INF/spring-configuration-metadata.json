@@ -1,0 +1,94 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "cn.xvkang.properties.ApplicationProperties",
+      "name": "cn.xvkang",
+      "type": "cn.xvkang.properties.ApplicationProperties"
+    },
+    {
+      "sourceType": "cn.xvkang.config.SlaveDataSourceConfig",
+      "name": "slave.datasource",
+      "sourceMethod": "public javax.sql.DataSource slaveDataSource() ",
+      "type": "javax.sql.DataSource"
+    },
+    {
+      "sourceType": "cn.xvkang.config.PrimaryDataSourceConfig",
+      "name": "spring.datasource",
+      "sourceMethod": "public javax.sql.DataSource primaryDataSource() ",
+      "type": "javax.sql.DataSource"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "cn.xvkang.properties.ApplicationProperties",
+      "name": "cn.xvkang.appauth",
+      "type": "cn.xvkang.properties.AppauthProperties"
+    },
+    {
+      "sourceType": "cn.xvkang.properties.ApplicationProperties",
+      "name": "cn.xvkang.birthday-end",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "cn.xvkang.properties.ApplicationProperties",
+      "name": "cn.xvkang.birthday-start",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "cn.xvkang.properties.ApplicationProperties",
+      "name": "cn.xvkang.fei-nongye-end-reg-code",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "cn.xvkang.properties.ApplicationProperties",
+      "name": "cn.xvkang.fei-nongye-start-reg-code",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "cn.xvkang.properties.ApplicationProperties",
+      "name": "cn.xvkang.image-code",
+      "type": "cn.xvkang.properties.ImageCodeValidateProperties"
+    },
+    {
+      "sourceType": "cn.xvkang.properties.ApplicationProperties",
+      "name": "cn.xvkang.image-code-require-validate-urls",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "cn.xvkang.properties.ApplicationProperties",
+      "name": "cn.xvkang.max-reg-student",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "cn.xvkang.properties.ApplicationProperties",
+      "name": "cn.xvkang.name",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "cn.xvkang.properties.ApplicationProperties",
+      "name": "cn.xvkang.nongye-end-reg-code",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "cn.xvkang.properties.ApplicationProperties",
+      "name": "cn.xvkang.nongye-start-reg-code",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "cn.xvkang.properties.ApplicationProperties",
+      "name": "cn.xvkang.redis-name-space",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "cn.xvkang.properties.ApplicationProperties",
+      "name": "cn.xvkang.sms",
+      "type": "cn.xvkang.properties.SmsCodeValidateProperties"
+    },
+    {
+      "sourceType": "cn.xvkang.properties.ApplicationProperties",
+      "name": "cn.xvkang.sms-code-require-validate-urls",
+      "type": "java.lang.String"
+    }
+  ]
+}
