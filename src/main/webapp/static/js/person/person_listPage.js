@@ -48,7 +48,7 @@ layui.config({
                 type: 2,
                 area: ['900px', '550px'],
                 title: '报名信息',
-                content: contextPath + '/chepai/viewPage.html?id=' + data.id,
+                content: contextPath + '/person/viewPage.html?id=' + data.id,
                 end: function () {
                     // tableReload(table,data);
                 }
@@ -58,7 +58,7 @@ layui.config({
                 type: 2,
                 area: ['900px', '550px'],
                 title: '审核',
-                content: contextPath + '/chepai/shenhePage.html?id=' + data.id,
+                content: contextPath + '/person/shenhePage.html?id=' + data.id,
                 end: function () {
                     // tableReload(table,data);
                     $('button[lay-filter = "query"]').click();
@@ -69,7 +69,7 @@ layui.config({
                 type: 2,
                 area: ['900px', '550px'],
                 title: '编辑汽车信息',
-                content: contextPath + '/chepai/editPage.html?id=' + data.id,
+                content: contextPath + '/person/editPage.html?id=' + data.id,
                 end: function () {
                     // tableReload(table,data);
                    // $('button[lay-filter = "query"]').click();
@@ -131,7 +131,7 @@ layui.config({
                 }
                 var params = new URLSearchParams();
                 params.append("id", data.id);
-                instance.post(contextPath + '/chepai/emptyRegCode', params, config)
+                instance.post(contextPath + '/person/emptyRegCode', params, config)
                     .then(function (response) {
                         if (response.data.code == 0) {
                             layer.closeAll('loading');
@@ -176,7 +176,7 @@ layui.config({
                 }
                 var params = new URLSearchParams();
                 params.append("id", data.id);
-                instance.post(contextPath + '/chepai/reGeneratorRegCode', params, config)
+                instance.post(contextPath + '/person/reGeneratorRegCode', params, config)
                     .then(function (response) {
                         if (response.data.code == 0) {
                             layer.closeAll('loading');
@@ -219,7 +219,7 @@ layui.config({
             type: 2,
             area: ['500px', '600px'],
             title: '新增汽车',
-            content: contextPath + '/chepai/addPage.html',
+            content: contextPath + '/person/addPage.html',
             end: function () {
                 // tableReload(table,data);
                 // layer.load(2);
@@ -240,7 +240,7 @@ layui.config({
         });
     });
     $("#exportStudent").on("click", function () {
-        var url = contextPath + "/chepai/exportAllStudent";
+        var url = contextPath + "/person/exportAllStudent";
         $.fileDownload(url, {
             data: {
                 name: $("#name").val(),
@@ -300,11 +300,40 @@ layui.config({
     });
 
 
-    /** 渲染表格 */
+    /** 渲染表格
+     * UserNO varchar(10) COLLATE
+     UserName varchar(50) COLLA
+     Sex varchar(10) COLLATE Ch
+     HomeAddress varchar(200) C
+     DeptName varchar(200) COLL
+     Job varchar(200) COLLATE C
+     WorkTime datetime NULL,
+     BirthDate datetime NULL,
+     IDCard varchar(50) COLLATE
+     MaritalStatus varchar(10)
+     HighestDegree varchar(50)
+     PoliticalStatus varchar(50
+     PicPath varchar(256) COLLA
+     School varchar(50) COLLATE
+     Speciality varchar(50) COL
+     ForeignLanguage varchar(20
+     Skill varchar(50) COLLATE
+     TelNumber varchar(40) COLL
+     MobNumber varchar(40) COLL
+     ZipCode varchar(30) COLLAT
+     NativePlace varchar(200) C
+     CPH varchar(20) COLLATE Ch
+     CarType varchar(50) COLLAT
+     CarColor varchar(50) COLLA
+     CarPic varchar(256) COLLAT
+     CarPlace varchar(100) COLL
+     PersonPhoto image(16) DEFA
+     CarPhoto image(16) DEFAULT
+      */
     table.render({
         elem: '#table',
         height: 'full-300',
-        url: contextPath + '/chepai/selectAll',
+        url: contextPath + '/person/selectAll',
         where: {
             name: ''
         },
@@ -313,62 +342,20 @@ layui.config({
             limit: 10
         },
         cols: [[{
-            field: 'name',
+            field: 'UserName',
             title: '姓名'
         }, {
-            field: 'birthday',
-            title: '出生年月'
-        },  {
-            field: 'idcard',
+            field: 'IDCard',
             title: '身份证号'
-        },  {
-            field: 'reg_code',
-            title: '预约号'
         }, {
-            field: 'phone',
-            title: '报名电话'
+            field: 'MobNumber',
+            title: '手机号'
         }, {
-            field: 'census',
+            field: 'NativePlace',
             title: '户籍'
         }, {
-            field: 'create_time',
-            title: '报名时间',
-            templet: function (d) {
-                var createTime = d.create_time;
-                console.log(createTime);
-                if (createTime == null) {
-                    return "";
-                }
-                return new Date(createTime).Format("yyyy-MM-dd hh:mm:ss");
-            }
-        }, {
-            field: 'first_trial',
-            title: '初审状态',
-            templet: function (d) {
-                var createTime = d.first_trial;
-                console.log(createTime);
-                if (createTime == null || createTime == undefined) {
-                    return "";
-                }
-                if (createTime == 1) {
-                    return "通过";
-                }
-                if (createTime == 2) {
-                    return "未通过";
-                }
-                return "";
-            }
-        }, {
-            field: 'first_trial_datetime',
-            title: '初审时间',
-            templet: function (d) {
-                var createTime = d.first_trial_datetime;
-                console.log(createTime);
-                if (createTime == null) {
-                    return "";
-                }
-                return new Date(createTime).Format("yyyy-MM-dd hh:mm:ss");
-            }
+            field: 'HomeAddress',
+            title: '家庭住址'
         }
             // , {
             // field: 'createTime',

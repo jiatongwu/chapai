@@ -1,0 +1,8 @@
+
+@CardNO='88000001',@OptDate='2019-07-05 14:33:04.847',@SFJE=$0.0000,@OperatorCardNO='888888',@OptType='1',@NewStartDate='2019-07-05 00:00:00',@NewEndDate='2019-08-05 00:00:00',@LastEndDate='2019-07-05 00:00:00',@Remark=''
+,@CardNO='88000002',@OptDate='2019-07-05 15:39:02.743',@SFJE=$0.0000,@OperatorCardNO='888888',@OptType='1',@NewStartDate='2019-07-05 00:00:00',@NewEndDate='2019-08-05 00:00:00',@LastEndDate='2019-07-05 00:00:00',@Remark='';
+@CardNO='88000003',@OptDate='2019-07-05 15:39:02.790',@SFJE=$0.0000,@OperatorCardNO='888888',@OptType='1',@NewStartDate='2019-07-05 00:00:00',@NewEndDate='2019-08-05 00:00:00',@LastEndDate='2019-07-05 00:00:00',@Remark=''
+@CardNO='88000004',@OptDate='2019-07-05 15:54:19.597',@SFJE=$500.0000,@OperatorCardNO='888888',@OptType='1',@NewStartDate='2019-07-05 00:00:00',@NewEndDate='2019-08-05 00:00:00',@LastEndDate='2019-07-05 00:00:00',@Remark=''
+@CardNO='88000004',@OptDate='2019-07-05 15:54:19.597',@SFJE=$200.0000,@OperatorCardNO='888888',@OptType='E',@NewStartDate='2019-07-05 00:00:00',@NewEndDate='2019-08-05 00:00:00',@LastEndDate='2019-07-05 00:00:00',@Remark=''
+@CardNO='88000005',@OptDate='2019-07-05 16:04:52.527',@SFJE=$1000.0000,@OperatorCardNO='888888',@OptType='1',@NewStartDate='2019-07-05 00:00:00',@NewEndDate='2019-08-05 00:00:00',@LastEndDate='2019-07-05 00:00:00',@Remark=''
+@CardNO='88000005',@OptDate='2019-07-05 16:04:52.527',@SFJE=$100.0000,@OperatorCardNO='888888',@OptType='E',@NewStartDate='2019-07-05 00:00:00',@NewEndDate='2019-08-05 00:00:00',@LastEndDate='2019-07-05 00:00:00',@Remark=''

@@ -29,11 +29,11 @@
 <div class="layui-layout layui-layout-admin">
     <!--顶部导航开始-->
     <div class="layui-header">
-        <a class="layui-logo">府兴小学招生预约系统</a>
+        <a class="layui-logo">车牌管理系统</a>
         <ul class="layui-nav layui-layout-right">
             <li class="layui-nav-item" style="margin-right: 35px;" lay-unselect>
-                <a href="javascript:;"> <!-- <img src="http://t.cn/RCzsdCq" class="layui-nav-img"> -->欢迎
-                    <sec:authentication property="principal.username"/>
+                <a href="javascript:;"> <!-- <img src="http://t.cn/RCzsdCq" class="layui-nav-img"> -->欢迎&nbsp;
+                    <sec:authentication property="principal.mySystemUser.name"/>
                 </a>
                 <dl class="layui-nav-child">
                     <!--  <dd><a>基本资料</a></dd>
@@ -62,24 +62,24 @@
                 </a></li>
 
 
-                <sec:authorize access="hasRole('school_manager')">
+                <sec:authorize access="hasRole('super_admin')">
                     <li class="lau-nav-item"><a class="lau-nav-header"><i
-                            class="layui-icon layui-icon-right"></i><cite>学生信息</cite></a>
+                            class="layui-icon layui-icon-right"></i><cite>人员管理</cite></a>
                         <dl class="lau-nav-child">
                             <dd style="">
                                 <a style="padding-left: 20px;"
-                                   lau-href="${pageContext.request.contextPath }/browser/signup/listPage.html"><i
-                                        class="layui-icon layui-icon-circle"></i><cite>报名列表</cite></a>
+                                   lau-href="${pageContext.request.contextPath }/person/listPage.html"><i
+                                        class="layui-icon layui-icon-circle"></i><cite>人员列表</cite></a>
                             </dd>
+                        </dl>
+                    </li>
+                    <li class="lau-nav-item"><a class="lau-nav-header"><i
+                            class="layui-icon layui-icon-right"></i><cite>车牌管理</cite></a>
+                        <dl class="lau-nav-child">
                             <dd style="">
                                 <a style="padding-left: 20px;"
-                                   lau-href="${pageContext.request.contextPath }/settingZhaoshengRenshuIndex.html"><i
-                                        class="layui-icon layui-icon-circle"></i><cite>招生人数设置</cite></a>
-                            </dd>
-                            <dd style="">
-                                <a style="padding-left: 20px;"
-                                   lau-href="${pageContext.request.contextPath }/settingZhaoShengTimeIndex.html"><i
-                                        class="layui-icon layui-icon-circle"></i><cite>招生时间设置</cite></a>
+                                   lau-href="${pageContext.request.contextPath }/chepai/listPage.html"><i
+                                        class="layui-icon layui-icon-circle"></i><cite>车牌列表</cite></a>
                             </dd>
                         </dl>
                     </li>

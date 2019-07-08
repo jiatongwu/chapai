@@ -1,0 +1,47 @@
+@CardNO='88000001',@UserNO='A00001',@CardState='0',@CardYJ=$0.0000,@SubSystem='10000',@CarCardType='FreA'
+ ,@CarIssueDate='2019-07-05 14:33:04.800',@CarIssueUserCard='888888',@Balance=$0.0000,@CarValidStartDate='2019-07-05 00:00:00',
+ @CarValidEndDate='2019-08-05 00:00:00',@CPH='冀T2A086',@CarColor=N'0',@CarType='蓝鸟',@CarPlace='11车位',@CarWithdrawCardDate='2019-07-05 14:33:04.800',
+ @CarWithdrawOptCard='',@CarValidMachine='3FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF',@CarValidZone='0000000000000000',@CarMemo='',@MJCardType='2',
+ @MJIssueDate='2019-07-05 14:33:04.800',@MJIssueUserCard='888888',@MJEndDate='2019-07-05 14:33:04.800',@MJValidStartTime='00',@MJValidEndTime='24',
+ @MJValidMachine='F',@MJWithdrawCardDate='2019-07-05 14:33:04.800',@MJWithdrawOptCard='',@MJMemo='',@IssueDate='2019-07-05 14:33:04.800',
+ @WithdrawDate='2019-07-05 14:33:04.800',@IssueUserCard='888888',@WithdrawUserCard='',@LossregDate='2019-07-05 14:33:04.800',@LossregUserCard='',@CardIDNO='',
+ @DownloadSignal='00000000000000000000000000000000000000000000000000';
+ 
+ CardNO车辆编号 UserNO用户编号 cardState=‘0’  CardYj=0.0000 SubSystem='10000' CarCardType=FreB,FreA,MthA CarIssueDate=now CarIssueUserCard='888888' Balance=0.0000 CarValidStartDate CarValidEndDate
+ CPH='桂A8C088'  @CarColor=N'0',@CarType='蓝鸟',@CarPlace='11车位',@CarWithdrawCardDate=now CarWithdrawOptCard='' CarValidMachine='FF7FFFFFFFFFFFFFFFFFFFFFFFFFFFFF'这个好像是机号?
+ CarValidZone='0000000000000000' CarMemo='车辆备注' @MJCardType='2' MJIssueDate=now MJIssueUserCard='888888', MJEndDate=now @MJValidStartTime='00' ,@MJValidEndTime='24',
+@MJValidMachine='F' @MJWithdrawCardDate=now @MJWithdrawOptCard='',@MJMemo='' ,@IssueDate=now @WithdrawDate=now,@IssueUserCard='888888',
+@WithdrawUserCard='',@LossregDate=now ,@LossregUserCard='', ,@CardIDNO='',@DownloadSignal='00000000000000000000000000000000000000000000000000'
+
+ 
+ 
+ ,@CardNO='88000003',@UserNO='A00002',@CardState='0',@CardYJ=$0.0000,@SubSystem='10000',@CarCardType='FreA',@CarIssueDate='2019-07-05 15:39:02.660',
+@CarIssueUserCard='888888',@Balance=$0.0000,@CarValidStartDate='2019-07-05 00:00:00',@CarValidEndDate='2019-08-05 00:00:00',@CPH='粤B2C200',@CarColor=N'0',
+@CarType='奔驰',@CarPlace='11',@CarWithdrawCardDate='2019-07-05 15:39:02.660',@CarWithdrawOptCard='',
+@CarValidMachine='7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF',@CarValidZone='0000000000000000',@CarMemo='',@MJCardType='2',
+@MJIssueDate='2019-07-05 15:39:02.660',@MJIssueUserCard='888888',@MJEndDate='2019-07-05 15:39:02.660',@MJValidStartTime='00',
+@MJValidEndTime='24',@MJValidMachine='F',@MJWithdrawCardDate='2019-07-05 15:39:02.660',@MJWithdrawOptCard='',@MJMemo='',
+@IssueDate='2019-07-05 15:39:02.660',@WithdrawDate='2019-07-05 15:39:02.660',@IssueUserCard='888888',@WithdrawUserCard='',
+@LossregDate='2019-07-05 15:39:02.660',@LossregUserCard='',@CardIDNO='',@DownloadSignal='00000000000000000000000000000000000000000000000000'
+
+
+,@CardNO='88000004',@UserNO='A00003',@CardState='0',@CardYJ=$200.0000,@SubSystem='10000',@CarCardType='MthA',
+@CarIssueDate='2019-07-05 15:54:19.587',@CarIssueUserCard='888888',@Balance=$0.0000,@CarValidStartDate='2019-07-05 00:00:00',
+@CarValidEndDate='2019-08-05 00:00:00',@CPH='琼C80C22',@CarColor=N'0',@CarType='富康',@CarPlace='11',
+@CarWithdrawCardDate='2019-07-05 15:54:19.587',@CarWithdrawOptCard='',@CarValidMachine='FFF1FFFFFFFFFFFFFFFFFFFFFFFFFFFF',
+@CarValidZone='0000000000000000',@CarMemo='车辆备注',@MJCardType='2',@MJIssueDate='2019-07-05 15:54:19.587',@MJIssueUserCard='888888',
+@MJEndDate='2019-07-05 15:54:19.587',@MJValidStartTime='00',@MJValidEndTime='24',@MJValidMachine='F',@MJWithdrawCardDate='2019-07-05 15:54:19.587',
+@MJWithdrawOptCard='',@MJMemo='',@IssueDate='2019-07-05 15:54:19.587',@WithdrawDate='2019-07-05 15:54:19.587',@IssueUserCard='888888',@WithdrawUserCard='',
+@LossregDate='2019-07-05 15:54:19.587',@LossregUserCard='',@CardIDNO='',@DownloadSignal='00000000000000000000000000000000000000000000000000'
+
+
+@CardNO='88000005',@UserNO='A00004',@CardState='0',@CardYJ=$100.0000,@SubSystem='10000',@CarCardType='FreB',
+@CarIssueDate='2019-07-05 16:04:52.503',@CarIssueUserCard='888888',@Balance=$0.0000,@CarValidStartDate='2019-07-05 00:00:00',
+@CarValidEndDate='2019-08-05 00:00:00',@CPH='桂A8C088',@CarColor=N'0',@CarType='解放',@CarPlace='8',@CarWithdrawCardDate='2019-07-05 16:04:52.503',
+@CarWithdrawOptCard='',@CarValidMachine='FF7FFFFFFFFFFFFFFFFFFFFFFFFFFFFF',@CarValidZone='0000000000000000',@CarMemo='车辆备注',@MJCardType='2',
+@MJIssueDate='2019-07-05 16:04:52.503',@MJIssueUserCard='888888',@MJEndDate='2019-07-05 16:04:52.503',@MJValidStartTime='00',@MJValidEndTime='24',
+@MJValidMachine='F',@MJWithdrawCardDate='2019-07-05 16:04:52.503',@MJWithdrawOptCard='',@MJMemo='',@IssueDate='2019-07-05 16:04:52.503',
+@WithdrawDate='2019-07-05 16:04:52.503',@IssueUserCard='888888',@WithdrawUserCard='',@LossregDate='2019-07-05 16:04:52.503',@LossregUserCard='',
+@CardIDNO='',@DownloadSignal='00000000000000000000000000000000000000000000000000'
+
+

@@ -22,85 +22,69 @@
 <br/>
 <div id="addApp">
     <form class="layui-form">
-        <input name="id" value="${chepai.id}" hidden/>
 
         <div class="layui-form-item">
             <label class="layui-form-label">联系人姓名</label>
             <div class="layui-input-inline">
-                <input type="text" name="personName" readonly
-                       value="${chepai.personName }"
+                <input type="text" name="personName"
+                       value="" lay-verify="required"
                        autocomplete="off" class="layui-input"/>
             </div>
         </div>
-
         <div class="layui-form-item">
             <label class="layui-form-label">联系人手机号</label>
             <div class="layui-input-inline">
-                <input type="text" name="personPhone" readonly
-                       value="${chepai.personPhone }"
+                <input type="text" name="phone"
+                       value="" lay-verify="required"
                        autocomplete="off" class="layui-input"/>
             </div>
         </div>
         <div class="layui-form-item">
-            <label class="layui-form-label">车辆编码</label>
+            <label class="layui-form-label">联系人家庭住址</label>
             <div class="layui-input-inline">
-                <input type="text" name="cheBianma" readonly
-                       value="${chepai.cheBianma }"
+                <input type="text" name="homeAddress"
+                       value="" lay-verify="required"
                        autocomplete="off" class="layui-input"/>
             </div>
         </div>
-
-        <div class="layui-form-item">
-            <label class="layui-form-label">车型</label>
-            <div class="layui-input-inline">
-                <select name="chexing" id="chexing">
-                    <option value=""></option>
-                    <c:forEach var="tmp" items="${chexings}">
-                        <option value="<c:out value="${tmp}" />"   <c:if test="${chepai.chexing==tmp}">
-                            selected
-                        </c:if>><c:out value="${tmp}"/></option>
-                    </c:forEach>
-                </select>
-            </div>
-        </div>
-
-
         <div class="layui-form-item">
             <label class="layui-form-label">车牌号</label>
             <div class="layui-input-inline">
-                <input type="text" name="chepaihao" readonly
-                       value="${chepai.chepaihao }"
+                <input type="text" name="chepaihao"
+                       value="" lay-verify="required"
+                       autocomplete="off" class="layui-input"/>
+            </div>
+            <div class="layui-form-mid layui-word-aux">*</div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">车型</label>
+            <div class="layui-input-inline">
+                <input type="text" name="chexing"
+                       value="" lay-verify="required"
                        autocomplete="off" class="layui-input"/>
             </div>
         </div>
         <div class="layui-form-item">
             <label class="layui-form-label">有效起日</label>
             <div class="layui-input-inline">
-                <input type="text" class="layui-input" id="validStart" value="${chepai.validStart}" name="validStart" lay-verify="required"/>
+                <input type="text" class="layui-input" id="validStart" value="" name="validStart" lay-verify="required"/>
             </div>
         </div>
         <div class="layui-form-item">
             <label class="layui-form-label">有效止日</label>
             <div class="layui-input-inline">
-                <input type="text" class="layui-input" id="validEnd" value="${chepai.validEnd}" name="validEnd" lay-verify="required"/>
+                <input type="text" class="layui-input" id="validEnd" value="" name="validEnd" lay-verify="required"/>
             </div>
         </div>
         <div class="layui-form-item">
-            <label class="layui-form-label">添加时间</label>
+            <label class="layui-form-label">车辆备注</label>
             <div class="layui-input-inline">
-                <input type="text" name="createTime" readonly
-                       value=" <fmt:formatDate type="both"
-            dateStyle="medium" timeStyle="medium"
-            value="${chepai.createTime}" />"
-                       autocomplete="off" class="layui-input"/>
+                <textarea placeholder="请输入车辆备注" name="cheRemark" class="layui-textarea"></textarea>
             </div>
         </div>
         <div class="layui-form-item">
             <label class="layui-form-label"></label>
             <div class="layui-input-inline">
-                <%-- <c:if test="${comFromFastInput =='1'}">
-                     <a class="layui-btn layui-btn-normal" id="returnToFastInputPage">返回</a>
-                 </c:if>--%>
                 <button class="layui-btn layui-btn-normal" lay-submit
                         lay-filter="update">提交
                 </button>
@@ -109,10 +93,18 @@
     </form>
 </div>
 </body>
+<style>
+    .layui-form-label {
+        width: 160px;
+    }
+    .layui-form-item .layui-input-inline{
+        width:430px;
+    }
+</style>
 <jsp:include page="/WEB-INF/jsp/common/body_script.jsp"></jsp:include>
 <style>
 </style>
-<script src="${pageContext.request.contextPath }/static/js/chepai/chepai_editPage.js"></script>
+<script src="${pageContext.request.contextPath }/static/js/chepai/chepai_addPage.js"></script>
 <script>
 </script>
 </html>

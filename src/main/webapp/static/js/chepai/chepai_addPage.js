@@ -68,19 +68,17 @@ layui.config({
 
 
 
-        instance.post(contextPath + '/browser/baseCheck/edit', params, config)
+        instance.post(contextPath + '/chepai/add', params, config)
             .then(function (response) {
                 layer.closeAll('loading');
                 if (response.data.code == 0) {
-                    //parent.layer.closeAll('iframe');
-                    parent.layer.msg("修改成功", {
+                    parent.layer.closeAll('iframe');
+                    parent.layer.msg("增加成功", {
                         icon: 6
                     });
-                    location.reload();
-                    //$('button[lay-filter = "query"]', window.parent.document).click();
-                } else if (response.data.code == 13) {
-                    location.href = contextPath + '/browser/baseCheck/fastInputPage';
-                } else {
+                   // location.reload();
+                    $('button[lay-filter = "query"]', window.parent.document).click();
+                }  else {
                     var message = response.data.message;
                     var alertMessage = '操作失败';
                     if (message.length > 0) {

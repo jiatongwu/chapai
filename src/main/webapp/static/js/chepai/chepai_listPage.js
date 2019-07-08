@@ -48,7 +48,7 @@ layui.config({
                 type: 2,
                 area: ['900px', '550px'],
                 title: '报名信息',
-                content: contextPath + '/browser/signup/viewPage.html?id=' + data.id,
+                content: contextPath + '/chepai/viewPage.html?id=' + data.id,
                 end: function () {
                     // tableReload(table,data);
                 }
@@ -58,10 +58,22 @@ layui.config({
                 type: 2,
                 area: ['900px', '550px'],
                 title: '审核',
-                content: contextPath + '/browser/signup/shenhePage.html?id=' + data.id,
+                content: contextPath + '/chepai/shenhePage.html?id=' + data.id,
                 end: function () {
                     // tableReload(table,data);
                     $('button[lay-filter = "query"]').click();
+                }
+            });
+        }else if (event == 'eidt') {
+            layer.open({
+                type: 2,
+                area: ['900px', '550px'],
+                title: '编辑汽车信息',
+                content: contextPath + '/chepai/editPage.html?id=' + data.id,
+                end: function () {
+                    // tableReload(table,data);
+                   // $('button[lay-filter = "query"]').click();
+                    $('.layui-laypage-btn').click();
                 }
             });
         } else if (event == 'delete') {
@@ -119,7 +131,7 @@ layui.config({
                 }
                 var params = new URLSearchParams();
                 params.append("id", data.id);
-                instance.post(contextPath + '/browser/signup/emptyRegCode', params, config)
+                instance.post(contextPath + '/chepai/emptyRegCode', params, config)
                     .then(function (response) {
                         if (response.data.code == 0) {
                             layer.closeAll('loading');
@@ -164,7 +176,7 @@ layui.config({
                 }
                 var params = new URLSearchParams();
                 params.append("id", data.id);
-                instance.post(contextPath + '/browser/signup/reGeneratorRegCode', params, config)
+                instance.post(contextPath + '/chepai/reGeneratorRegCode', params, config)
                     .then(function (response) {
                         if (response.data.code == 0) {
                             layer.closeAll('loading');
@@ -205,9 +217,9 @@ layui.config({
         var e = layer.open({
 
             type: 2,
-            area: ['500px', '600px'],
-            title: '新增学生基础信息',
-            content: contextPath + '/browser/student/addPage',
+            area: ['700px', '500px'],
+            title: '新增汽车',
+            content: contextPath + '/chepai/addPage.html',
             end: function () {
                 // tableReload(table,data);
                 // layer.load(2);
@@ -228,7 +240,7 @@ layui.config({
         });
     });
     $("#exportStudent").on("click", function () {
-        var url = contextPath + "/browser/signup/exportAllStudent";
+        var url = contextPath + "/chepai/exportAllStudent";
         $.fileDownload(url, {
             data: {
                 name: $("#name").val(),
@@ -292,7 +304,7 @@ layui.config({
     table.render({
         elem: '#table',
         height: 'full-300',
-        url: contextPath + '/browser/signup/selectAll',
+        url: contextPath + '/chepai/selectAll',
         where: {
             name: ''
         },
@@ -301,24 +313,56 @@ layui.config({
             limit: 10
         },
         cols: [[{
-            field: 'name',
-            title: '姓名'
+            field: 'UserName',
+            title: '联系人姓名'
         }, {
-            field: 'birthday',
-            title: '出生年月'
+            field: 'MobNumber',
+            title: '手机号'
         },  {
-            field: 'idcard',
-            title: '身份证号'
+            field: 'CardNO',
+            title: '车辆编码'
         },  {
-            field: 'reg_code',
-            title: '预约号'
+            field: 'CarType',
+            title: '车型'
         }, {
-            field: 'phone',
-            title: '报名电话'
+            field: 'CPH',
+            title: '车牌号'
         }, {
-            field: 'census',
-            title: '户籍'
-        }, {
+            field: 'CarValidStartDate',
+            title: '有效时间起日',
+            templet: function (d) {
+                var createTime = d.CarValidStartDate;
+                console.log(createTime);
+                if (createTime == null) {
+                    return "";
+                }
+                return new Date(createTime).Format("yyyy-MM-dd hh:mm:ss");
+            }
+        },  {
+            field: 'CarValidEndDate',
+            title: '有效时间止日',
+            templet: function (d) {
+                var createTime = d.CarValidEndDate;
+                console.log(createTime);
+                if (createTime == null) {
+                    return "";
+                }
+                return new Date(createTime).Format("yyyy-MM-dd hh:mm:ss");
+            }
+        },
+            {
+                field: 'CarIssueDate',
+                title: '汽车创建时间',
+                templet: function (d) {
+                    var createTime = d.CarIssueDate;
+                    console.log(createTime);
+                    if (createTime == null) {
+                        return "";
+                    }
+                    return new Date(createTime).Format("yyyy-MM-dd hh:mm:ss");
+                }
+            },
+           /* {
             field: 'create_time',
             title: '报名时间',
             templet: function (d) {
@@ -329,7 +373,8 @@ layui.config({
                 }
                 return new Date(createTime).Format("yyyy-MM-dd hh:mm:ss");
             }
-        }, {
+        }, */
+          /* {
             field: 'first_trial',
             title: '初审状态',
             templet: function (d) {
@@ -346,18 +391,7 @@ layui.config({
                 }
                 return "";
             }
-        }, {
-            field: 'first_trial_datetime',
-            title: '初审时间',
-            templet: function (d) {
-                var createTime = d.first_trial_datetime;
-                console.log(createTime);
-                if (createTime == null) {
-                    return "";
-                }
-                return new Date(createTime).Format("yyyy-MM-dd hh:mm:ss");
-            }
-        }
+        },*/
             // , {
             // field: 'createTime',
             // title: '报名时间',
@@ -370,7 +404,7 @@ layui.config({
             // return new Date(createTime).Format("yyyy-MM-dd hh:mm:ss");
             // }
             // },
-            , {
+             {
                 title: '操作',
                 toolbar: '#bar',
                 width:300

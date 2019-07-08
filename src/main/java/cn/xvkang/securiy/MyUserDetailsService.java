@@ -9,6 +9,7 @@ import org.springframework.security.core.authority.AuthorityUtils;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 
 import cn.xvkang.dto.MyUserDetails;
@@ -17,8 +18,8 @@ import cn.xvkang.service.UserService;
 
 @Component
 public class MyUserDetailsService implements UserDetailsService {
-//	@Autowired
-//	private PasswordEncoder passwordEncoder;
+	@Autowired
+	private PasswordEncoder passwordEncoder;
 	@Autowired
 	private UserService userService;
 
@@ -26,6 +27,7 @@ public class MyUserDetailsService implements UserDetailsService {
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 		// cn.xvkang.entitydynamicsql.User findByUsername =
 		// userService.findByUsername(username);
+		System.out.println("123456的密码是:"+passwordEncoder.encode("123456"));
 		UserDto userDto = userService.loginFindByUsername(username);
 		if (userDto != null) {
 			List<String> authorityList = new ArrayList<>();

@@ -1,0 +1,30 @@
+
+@UserNO='A00001',@UserName='吴佳同',@Sex='男',@HomeAddress='河北衡水',@DeptName='',@Job='',@WorkTime='2019-07-05 14:33:04.887',@BirthDate='2019-07-05 14:33:04.887',@IDCard='',@MaritalStatus='未婚',
+@HighestDegree='',@PoliticalStatus='',@PicPath='',@School='',@Speciality='',@ForeignLanguage='',@Skill='',@TelNumber='',@MobNumber='13120344930',@ZipCode='1',@NativePlace='',@CPH='冀T2A086',@CarType='蓝鸟',
+@CarColor='#FFFFFF',@CarPic='',@CarPlace='11车位',@PersonPhoto=NULL,@CarPhoto=NULL
+ 
+ 
+ 用户编号userNo ,@UserName='吴佳同',@Sex='男',@HomeAddress='河北衡水',@DeptName='',@Job='',@WorkTime='2019-07-05 14:33:04.887',@BirthDate='2019-07-05 14:33:04.887',@IDCard='',@MaritalStatus='未婚',
+@HighestDegree='',@PoliticalStatus='',@PicPath='',@School='',@Speciality='',@ForeignLanguage='',@Skill='',@TelNumber='',@MobNumber='13120344930',@ZipCode='1',@NativePlace='',@CPH='冀T2A086',@CarType='蓝鸟',
+@CarColor='#FFFFFF',@CarPic='',@CarPlace='11车位',@PersonPhoto=NULL,@CarPhoto=NULL
+ 
+ @UserNO='A00002',@UserName='白纪华',@Sex='男',@HomeAddress='衡水',@DeptName='',@Job='',@WorkTime='2019-07-05 15:39:02.747',@BirthDate='2019-07-05 15:39:02.747',@IDCard='',
+ @MaritalStatus='未婚',@HighestDegree='',@PoliticalStatus='',@PicPath='',@School='',@Speciality='',@ForeignLanguage='',@Skill='',@TelNumber='',@MobNumber='15512978293',
+ @ZipCode='1',@NativePlace='',@CPH='粤',@CarType='奔驰',@CarColor='#FFFFFF',@CarPic='',@CarPlace='11',@PersonPhoto=NULL,@CarPhoto=NULL;
+ 
+ 
+ 
+ @UserNO='A00003',@UserName='张三',@Sex='男',@HomeAddress='家庭住址',@DeptName='',@Job='',@WorkTime='2019-07-05 15:54:19.603',@BirthDate='2019-07-05 15:54:19.603',@IDCard='',
+ @MaritalStatus='未婚',@HighestDegree='',@PoliticalStatus='',@PicPath='',@School='',@Speciality='',@ForeignLanguage='',@Skill='',@TelNumber='',@MobNumber='13120344930',
+ @ZipCode='1',@NativePlace='',@CPH='琼C80C22',@CarType='富康',@CarColor='#FFFFFF',@CarPic='',@CarPlace='11',@PersonPhoto=NULL,@CarPhoto=NULL
+ 
+ 
+ 
+ @UserNO='A00004',@UserName='李四',@Sex='男',@HomeAddress='北京',@DeptName='',@Job='',@WorkTime='2019-07-05 16:04:52.537',@BirthDate='2019-07-05 16:04:52.537',@IDCard='',
+ @MaritalStatus='未婚',@HighestDegree='',@PoliticalStatus='',@PicPath='',@School='',@Speciality='',@ForeignLanguage='',@Skill='',@TelNumber='',@MobNumber='1',@ZipCode='1'
+ ,@NativePlace='',@CPH='桂A8C088',@CarType='解放',@CarColor='#FFFFFF',@CarPic='',@CarPlace='8',@PersonPhoto=NULL,@CarPhoto=NULL;
+
+
+
+
+ 

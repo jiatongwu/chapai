@@ -23,97 +23,60 @@
             <form class="layui-form ">
                 <div class="layui-form-item">
                     <div class="layui-inline">
-                        <label class="layui-form-label">姓名</label>
+                        <label class="layui-form-label">联系人姓名</label>
                         <div class="layui-input-inline">
-                            <input type="text" name="name" id="name" placeholder=""
+                            <input type="text" name="personName" id="personName" placeholder=""
                                    autocomplete="off" class="layui-input">
                         </div>
                     </div>
                     <div class="layui-inline">
-                        <label class="layui-form-label">出生日期起始</label>
+                        <label class="layui-form-label">联系人手机号</label>
                         <div class="layui-input-inline">
-                            <input type="text" class="layui-input" id="test1" name="birthdayStart"/>
+                            <input type="text" name="personPhone" id="personPhone" placeholder=""
+                                   autocomplete="off" class="layui-input">
                         </div>
                     </div>
                     <div class="layui-inline">
-                        <label class="layui-form-label">出生日期结束</label>
+                        <label class="layui-form-label">车辆编码</label>
                         <div class="layui-input-inline">
-                            <input type="text" class="layui-input" id="test2" name="birthdayEnd"/>
+                            <input type="text" class="layui-input" id="cheBianma" name="cheBianma"/>
                         </div>
                     </div>
                     <div class="layui-inline">
-                        <label class="layui-form-label">预约号起始</label>
+                        <label class="layui-form-label">车型</label>
                         <div class="layui-input-inline">
-                            <input type="number" step="1" class="layui-input" id="regCodeStart" name="regCodeStart"/>
-                        </div>
-                    </div>
-                    <div class="layui-inline">
-                        <label class="layui-form-label">预约号结束</label>
-                        <div class="layui-input-inline">
-                            <input type="number" step="1" class="layui-input" id="regCodeEnd" name="regCodeEnd"/>
-                        </div>
-                    </div>
-                    <div class="layui-inline">
-                        <label class="layui-form-label">预约号</label>
-                        <div class="layui-input-inline">
-                            <input type="text" class="layui-input" id="regCode" name="regCode"/>
-                        </div>
-                    </div>
-                    <div class="layui-inline">
-                        <label class="layui-form-label">预约号被删除</label>
-                        <div class="layui-input-inline">
-                            <select name="isRegCodeDeleted" id="isRegCodeDeleted">
+                            <input type="text" class="layui-input" id="chexing" name="chexing"/>
+                          <%--  <select name="chexing" id="chexing">
                                 <option value=""></option>
-                                <option value="1">被删除</option>
-                                <option value="0">没有被删除</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="layui-inline">
-                        <label class="layui-form-label">报名电话</label>
-                        <div class="layui-input-inline">
-                            <input type="text" name="phone" id="phone" placeholder=""
-                                   autocomplete="off" class="layui-input">
-                        </div>
-                    </div>
-                    <div class="layui-inline">
-                        <label class="layui-form-label">身份证号</label>
-                        <div class="layui-input-inline">
-                            <input type="text" name="idcard" id="idcard" placeholder=""
-                                   autocomplete="off" class="layui-input">
-                        </div>
-                    </div>
-                    <div class="layui-inline">
-                        <label class="layui-form-label">户籍</label>
-                        <div class="layui-input-inline">
-                            <select name="census" id="census">
-                                <option value=""></option>
-                                <c:forEach var="tmp" items="${censuses}">
+                                <c:forEach var="tmp" items="${chexings}">
                                     <option value="<c:out value="${tmp}" />"><c:out value="${tmp}"/></option>
                                 </c:forEach>
+                            </select>--%>
+                        </div>
+                    </div>
+                    <div class="layui-inline">
+                        <label class="layui-form-label">车牌号</label>
+                        <div class="layui-input-inline">
+                            <input type="text" class="layui-input" id="chepaihao" name="chepaihao"/>
+                        </div>
+                    </div>
+                    <div class="layui-inline">
+                        <label class="layui-form-label">车辆是否在有效期内</label>
+                        <div class="layui-input-inline">
+                            <select name="isInDate" id="isInDate">
+                                <option value=""></option>
+                                <option value="1">在有效期内</option>
+                                <option value="0">不在有效期内</option>
                             </select>
                         </div>
                     </div>
                     <div class="layui-inline">
-                        <label class="layui-form-label">报名时间排序</label>
+                        <label class="layui-form-label">车辆添加时间排序</label>
                         <div class="layui-input-inline">
                             <select name="createTimeAsc" id="createTimeAsc">
                                 <option value=""></option>
                                 <option value="1">升序</option>
                                 <option value="0">降序</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="layui-inline">
-                        <label class="layui-form-label">初审状态</label>
-                        <div class="layui-input-inline">
-                            <select name="chushenStatus" id="chushenStatus">
-                                <option value=""></option>
-                                <c:forEach var="tmp" items="${firstTrialStatus}">
-                                    <option value="<c:out value="${tmp.status}" />"><c:out
-                                            value="${tmp.name}"/></option>
-                                </c:forEach>
-                                <option value="11">未进行初审</option>
                             </select>
                         </div>
                     </div>
@@ -130,13 +93,14 @@
         </div>
         <div class="">
             <div class="layui-block">
-                <a href="javascript:;" id="exportStudent" class="layui-btn layui-btn-normal">根据搜索条件导出报名信息</a>
+                <a href="javascript:;" id="add" class="layui-btn layui-btn-normal">添加汽车</a>
+                <%-- <a href="javascript:;" id="exportStudent" class="layui-btn layui-btn-normal">根据搜索条件导出报名信息</a>--%>
             </div>
             <table id="table" lay-filter="table"></table>
             <script type="text/html" id="bar">
-                <a href="javascript:;" class="layui-btn layui-btn-xs layui-btn-normal" lay-event="viewPage">查看</a>
-                <a href="javascript:;" class="layui-btn layui-btn-xs layui-btn-normal" lay-event="shenhe">审核</a>
-                <a href="javascript:;" class="layui-btn layui-btn-xs layui-btn-normal" lay-event="emptyRegCode">删除预约号</a>
+                <%-- <a href="javascript:;" class="layui-btn layui-btn-xs layui-btn-normal" lay-event="viewPage">查看</a>--%>
+                <a href="javascript:;" class="layui-btn layui-btn-xs layui-btn-normal" lay-event="edit">编辑</a>
+                <%-- <a href="javascript:;" class="layui-btn layui-btn-xs layui-btn-normal" lay-event="emptyRegCode">删除预约号</a>--%>
                 <%--<a href="javascript:;" class="layui-btn layui-btn-xs layui-btn-normal" lay-event="regeneratorRegCode">重新生成预约号</a>--%>
 
             </script>
@@ -146,12 +110,12 @@
 </body>
 <style>
     .layui-form-label {
-        width: 120px;
+        width: 160px;
     }
 </style>
 <jsp:include page="/WEB-INF/jsp/common/body_script.jsp"></jsp:include>
 <script
-        src="${pageContext.request.contextPath }/static/js/signup/signup_listPage.js"></script>
+        src="${pageContext.request.contextPath }/static/js/chepai/chepai_listPage.js"></script>
 <script>
 
 </script>
