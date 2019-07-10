@@ -93,13 +93,16 @@
         </div>
         <div class="">
             <div class="layui-block">
-                <a href="javascript:;" id="add" class="layui-btn layui-btn-normal">添加人员</a>
+
+            <%--    <a href="javascript:;" id="add" class="layui-btn layui-btn-normal">添加人员</a>--%>
                 <%-- <a href="javascript:;" id="exportStudent" class="layui-btn layui-btn-normal">根据搜索条件导出报名信息</a>--%>
             </div>
             <table id="table" lay-filter="table"></table>
             <script type="text/html" id="bar">
+                <a href="javascript:;" class="layui-btn layui-btn-xs layui-btn-normal" lay-event="view">查看</a>
+                <a href="javascript:;" class="layui-btn layui-btn-xs layui-btn-normal" lay-event="delete">删除</a>
                 <%-- <a href="javascript:;" class="layui-btn layui-btn-xs layui-btn-normal" lay-event="viewPage">查看</a>--%>
-                <a href="javascript:;" class="layui-btn layui-btn-xs layui-btn-normal" lay-event="edit">编辑人员</a>
+            <%--    <a href="javascript:;" class="layui-btn layui-btn-xs layui-btn-normal" lay-event="edit">编辑人员</a>--%>
                 <%-- <a href="javascript:;" class="layui-btn layui-btn-xs layui-btn-normal" lay-event="emptyRegCode">删除预约号</a>--%>
                 <%--<a href="javascript:;" class="layui-btn layui-btn-xs layui-btn-normal" lay-event="regeneratorRegCode">重新生成预约号</a>--%>
 

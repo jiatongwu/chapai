@@ -1009,6 +1009,18 @@
 			<generatedKey column="id" sqlStatement="SqlServer"
 				type="post" identity="true" />
 		</table>
+		<table tableName="shenpi"
+			mapperName="ShenpiDynamicSqlMapper">
+			<property name="useActualColumnNames" value="false" />
+			<generatedKey column="id" sqlStatement="SqlServer"
+				type="post" identity="true" />
+		</table>
+		<table tableName="shenpi_detail"
+			mapperName="ShenpiDetailDynamicSqlMapper">
+			<property name="useActualColumnNames" value="false" />
+			<generatedKey column="id" sqlStatement="SqlServer"
+				type="post" identity="true" />
+		</table>
 
 	</context>
 </generatorConfiguration>

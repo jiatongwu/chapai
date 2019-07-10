@@ -4,9 +4,15 @@ import java.util.Map;
 
 import org.springframework.data.domain.PageImpl;
 
+import cn.xvkang.primaryentity.Myfaxingssue;
+
 public interface ChepaiService {
 
 	public PageImpl<Map<String, Object>> selectAllPage(Map<String, Object> params, Integer pageNum, Integer pageSize);
 
 	public int add(Map<String, Object> params);
+
+	public int delete(String id);
+
+	public Myfaxingssue getCarById(String id);
 }

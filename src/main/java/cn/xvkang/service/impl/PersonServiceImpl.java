@@ -36,6 +36,15 @@ import org.springframework.stereotype.Service;
 import com.github.pagehelper.PageHelper;
 
 import cn.xvkang.primarycustommapper.BaseCustomMapper;
+import cn.xvkang.primaryentity.Myfaxingssue;
+import cn.xvkang.primaryentity.Myjibenziliao;
+import cn.xvkang.primarymapperdynamicsql.MyfaxingssueDynamicSqlMapper;
+import cn.xvkang.primarymapperdynamicsql.MyfaxingssueDynamicSqlSupport;
+import cn.xvkang.primarymapperdynamicsql.MyicmoneyDynamicSqlMapper;
+import cn.xvkang.primarymapperdynamicsql.MyicmoneyDynamicSqlSupport;
+import cn.xvkang.primarymapperdynamicsql.MyicvalidDynamicSqlMapper;
+import cn.xvkang.primarymapperdynamicsql.MyicvalidDynamicSqlSupport;
+import cn.xvkang.primarymapperdynamicsql.MyjibenziliaoDynamicSqlMapper;
 import cn.xvkang.primarymapperdynamicsql.MyjibenziliaoDynamicSqlSupport;
 import cn.xvkang.service.PersonService;
 import cn.xvkang.utils.MyPageImpl;
@@ -44,8 +53,14 @@ import cn.xvkang.utils.MyPageImpl;
 public class PersonServiceImpl implements PersonService {
 	@Autowired
 	private BaseCustomMapper baseCustomMapper;
-	// @Autowired
-	// private MyjibenziliaoDynamicSqlMapper myjibenziliaoDynamicSqlMapper;
+	@Autowired
+	private MyjibenziliaoDynamicSqlMapper myjibenziliaoDynamicSqlMapper;
+	@Autowired
+	private MyfaxingssueDynamicSqlMapper myfaxingssueDynamicSqlMapper;
+	@Autowired
+	private MyicvalidDynamicSqlMapper myicvalidDynamicSqlMapper;
+	@Autowired
+	private MyicmoneyDynamicSqlMapper myicmoneyDynamicSqlMapper;
 
 	@Override
 	public PageImpl<Map<String, Object>> selectAllPage(Map<String, Object> params, Integer pageNum, Integer pageSize) {
@@ -265,6 +280,47 @@ public class PersonServiceImpl implements PersonService {
 						"first_trial", "first_trial_information"),
 				datas);
 
+	}
+
+	@Override
+	public int delete(String userno) {
+		// List<Myjibenziliao> myjibenziliaos =
+		// myjibenziliaoDynamicSqlMapper.selectByExample()
+		// .where(MyjibenziliaoDynamicSqlSupport.userno,
+		// SqlBuilder.isEqualTo(userno)).build().execute();
+		List<Myfaxingssue> myfaxingssues = myfaxingssueDynamicSqlMapper.selectByExample()
+				.where(MyfaxingssueDynamicSqlSupport.userno, SqlBuilder.isEqualTo(userno)).build().execute();
+		for (Myfaxingssue myfaxingssue : myfaxingssues) {
+			String cardno = myfaxingssue.getCardno();
+			myicmoneyDynamicSqlMapper.deleteByExample()
+					.where(MyicmoneyDynamicSqlSupport.cardno, SqlBuilder.isEqualTo(cardno)).build().execute();
+			myicvalidDynamicSqlMapper.deleteByExample()
+					.where(MyicvalidDynamicSqlSupport.cardno, SqlBuilder.isEqualTo(cardno)).build().execute();
+			myfaxingssueDynamicSqlMapper.deleteByExample()
+					.where(MyfaxingssueDynamicSqlSupport.cardno, SqlBuilder.isEqualTo(cardno)).build().execute();
+		}
+		myjibenziliaoDynamicSqlMapper.deleteByExample()
+				.where(MyjibenziliaoDynamicSqlSupport.userno, SqlBuilder.isEqualTo(userno)).build().execute();
+		return 1;
+	}
+
+	@Override
+	public Myjibenziliao getPersonByUserno(String userno) {
+		if (StringUtils.isNotBlank(userno)) {
+			List<Myjibenziliao> myjibenziliaos = myjibenziliaoDynamicSqlMapper.selectByExample()
+					.where(MyjibenziliaoDynamicSqlSupport.userno, SqlBuilder.isEqualTo(userno)).build().execute();
+			if (myjibenziliaos.size() > 0) {
+				return myjibenziliaos.get(0);
+			}
+		}
+		return null;
+	}
+
+	@Override
+	public List<Myfaxingssue> getCarsByUserno(String userno) {
+		List<Myfaxingssue> myfaxingssues = myfaxingssueDynamicSqlMapper.selectByExample()
+				.where(MyfaxingssueDynamicSqlSupport.userno, SqlBuilder.isEqualTo(userno)).build().execute();
+		return myfaxingssues;
 	}
 
 }

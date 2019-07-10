@@ -21,4 +21,8 @@ public interface BaseCustomMapper {
 	// "cph", jdbcType = JdbcType.VARCHAR) })
 	List<Map<String, Object>> selectMany(SelectStatementProvider selectStatement);
 
+	@SelectProvider(type = SqlProviderAdapter.class, method = "select")
+	// @Results(id = "AutocphResult", value = { @Result(column = "CPH", property =
+	// "cph", jdbcType = JdbcType.VARCHAR) })
+	String selectMax(SelectStatementProvider selectStatement);
 }

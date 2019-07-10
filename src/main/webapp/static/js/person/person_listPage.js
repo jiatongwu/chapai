@@ -43,12 +43,12 @@ layui.config({
         var data = obj.data;
         var event = obj.event;
         /** 显示修改弹出层页面 */
-        if (event == 'viewPage') {
+        if (event == 'view') {
             layer.open({
                 type: 2,
                 area: ['900px', '550px'],
-                title: '报名信息',
-                content: contextPath + '/person/viewPage.html?id=' + data.id,
+                title: ' 查看此人及其汽车信息',
+                content: contextPath + '/person/viewPage.html?userno=' + data.UserNO,
                 end: function () {
                     // tableReload(table,data);
                 }
@@ -77,7 +77,7 @@ layui.config({
                 }
             });
         } else if (event == 'delete') {
-            layer.confirm('您确定要删除该学生基础信息吗？', function (index) {
+            layer.confirm('删除该人员,会同时删除此人所有汽车,是否删除？', function (index) {
                 layer.load(2);
                 let config = {
                     headers: {
@@ -85,8 +85,9 @@ layui.config({
                     }
                 }
                 const params = new URLSearchParams();
-                params.append("id", data.id);
-                instance.post(contextPath + '/browser/student/delete', params, config)
+                console.log(data);
+                params.append("userno", data.UserNO);
+                instance.post(contextPath + '/person/delete', params, config)
                     .then(function (response) {
                         if (response.data.code == 0) {
                             layer.closeAll('loading');
@@ -107,9 +108,7 @@ layui.config({
                                     shift: 6
                                 });
                             }
-
                             layer.closeAll('loading');
-
                         }
                     })
                     .catch(function (error) {
@@ -345,6 +344,9 @@ layui.config({
             field: 'UserName',
             title: '姓名'
         }, {
+            field: 'UserNO',
+            title: '人员编号'
+        },  {
             field: 'IDCard',
             title: '身份证号'
         }, {

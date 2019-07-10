@@ -2,9 +2,15 @@
 ',@NewEachDayEndTime='                    ',@ValidMachineID='                                                               
  ',@OperatorCardNO='888888',@OptType='t'
  
- @CardNO='88000002',@OptDate='2019-07-05 15:39:02.743',@NewStartDate='2019-07-05 00:00:00',@NewEndDate='2019-08-05 00:00:00',@NewEachDayStartTime='                    ',@NewEachDayEndTime='                    ',@ValidMachineID='                                                                ',@OperatorCardNO='888888',@OptType='t'
-@CardNO='88000003',@OptDate='2019-07-05 15:39:02.790',@NewStartDate='2019-07-05 00:00:00',@NewEndDate='2019-08-05 00:00:00',@NewEachDayStartTime='                    ',@NewEachDayEndTime='                    ',@ValidMachineID='                                                                ',@OperatorCardNO='888888',@OptType='t'
-@CardNO='88000004',@OptDate='2019-07-05 15:54:19.603',@NewStartDate='2019-07-05 00:00:00',@NewEndDate='2019-08-05 00:00:00',@NewEachDayStartTime='                    ',@NewEachDayEndTime='                    ',@ValidMachineID='                                                                ',@OperatorCardNO='888888',@OptType='t'
-@CardNO='88000005',@OptDate='2019-07-05 16:04:52.530',@NewStartDate='2019-07-05 00:00:00',@NewEndDate='2019-08-05 00:00:00',@NewEachDayStartTime='                    ',@NewEachDayEndTime='                    ',@ValidMachineID='                                                                ',@OperatorCardNO='888888',@OptType='t'
+ 
+ 
+ @CardNO='88000002',@OptDate='2019-07-05 15:39:02.743',@NewStartDate='2019-07-05 00:00:00',@NewEndDate='2019-08-05 00:00:00',@NewEachDayStartTime='  
+                   ',@NewEachDayEndTime='                    ',@ValidMachineID='                                                                ',@OperatorCardNO='888888',@OptType='t'
+@CardNO='88000003',@OptDate='2019-07-05 15:39:02.790',@NewStartDate='2019-07-05 00:00:00',@NewEndDate='2019-08-05 00:00:00',@NewEachDayStartTime=' 
+                   ',@NewEachDayEndTime='                    ',@ValidMachineID='                                                                ',@OperatorCardNO='888888',@OptType='t'
+@CardNO='88000004',@OptDate='2019-07-05 15:54:19.603',@NewStartDate='2019-07-05 00:00:00',@NewEndDate='2019-08-05 00:00:00',@NewEachDayStartTime=' 
+                   ',@NewEachDayEndTime='                    ',@ValidMachineID='                                                                ',@OperatorCardNO='888888',@OptType='t'
+@CardNO='88000005',@OptDate='2019-07-05 16:04:52.530',@NewStartDate='2019-07-05 00:00:00',@NewEndDate='2019-08-05 00:00:00',@NewEachDayStartTime='  
+                  ',@NewEachDayEndTime='                    ',@ValidMachineID='                                                                ',@OperatorCardNO='888888',@OptType='t'
 
 

@@ -43,12 +43,12 @@ layui.config({
         var data = obj.data;
         var event = obj.event;
         /** 显示修改弹出层页面 */
-        if (event == 'viewPage') {
+        if (event == 'view') {
             layer.open({
                 type: 2,
                 area: ['900px', '550px'],
-                title: '报名信息',
-                content: contextPath + '/chepai/viewPage.html?id=' + data.id,
+                title: '查看汽车信息',
+                content: contextPath + '/chepai/viewPage.html?id=' + data.ID,
                 end: function () {
                     // tableReload(table,data);
                 }
@@ -77,16 +77,18 @@ layui.config({
                 }
             });
         } else if (event == 'delete') {
-            layer.confirm('您确定要删除该学生基础信息吗？', function (index) {
+            layer.confirm('您确定要删除该汽车吗？', function (index) {
                 layer.load(2);
-                let config = {
+                var config = {
                     headers: {
                         'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8',
                     }
                 }
-                const params = new URLSearchParams();
-                params.append("id", data.id);
-                instance.post(contextPath + '/browser/student/delete', params, config)
+                var params = new URLSearchParams();
+
+                console.log(data);
+                params.append("id", data.ID);
+                instance.post(contextPath + '/chepai/delete', params, config)
                     .then(function (response) {
                         if (response.data.code == 0) {
                             layer.closeAll('loading');

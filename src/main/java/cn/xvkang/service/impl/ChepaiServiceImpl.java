@@ -3,8 +3,12 @@ package cn.xvkang.service.impl;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
+import java.math.BigDecimal;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
@@ -36,12 +40,15 @@ import org.springframework.stereotype.Service;
 import com.github.pagehelper.PageHelper;
 
 import cn.xvkang.primarycustommapper.ChepaiCustomMapper;
+import cn.xvkang.primarycustommapper.PersonCustomMapper;
 import cn.xvkang.primaryentity.Myfaxingssue;
 import cn.xvkang.primaryentity.Myicvalid;
 import cn.xvkang.primaryentity.Myjibenziliao;
 import cn.xvkang.primarymapperdynamicsql.MycardtypeDynamicSqlSupport;
 import cn.xvkang.primarymapperdynamicsql.MyfaxingssueDynamicSqlMapper;
 import cn.xvkang.primarymapperdynamicsql.MyfaxingssueDynamicSqlSupport;
+import cn.xvkang.primarymapperdynamicsql.MyicmoneyDynamicSqlMapper;
+import cn.xvkang.primarymapperdynamicsql.MyicmoneyDynamicSqlSupport;
 import cn.xvkang.primarymapperdynamicsql.MyicvalidDynamicSqlMapper;
 import cn.xvkang.primarymapperdynamicsql.MyicvalidDynamicSqlSupport;
 import cn.xvkang.primarymapperdynamicsql.MyjibenziliaoDynamicSqlMapper;
@@ -59,6 +66,14 @@ public class ChepaiServiceImpl implements ChepaiService {
 	private MyfaxingssueDynamicSqlMapper myfaxingssueDynamicSqlMapper;
 	@Autowired
 	private MyicvalidDynamicSqlMapper myicvalidDynamicSqlMapper;
+	@Autowired
+	private MyicmoneyDynamicSqlMapper myicmoneyDynamicSqlMapper;
+	@Autowired
+	private PersonCustomMapper personCustomMapper;
+	// @Autowired
+	// private BaseCustomMapper baseCustomMapper;
+	public static String startPersonNo = "Z99000001";
+	public static String startCarno = "YY99000001";
 
 	@Override
 	public PageImpl<Map<String, Object>> selectAllPage(Map<String, Object> params, Integer pageNum, Integer pageSize) {
@@ -319,7 +334,28 @@ public class ChepaiServiceImpl implements ChepaiService {
 		String chepaihao = (String) params.get("chepaihao");
 		String chexing = (String) params.get("chexing");
 		String validStart = (String) params.get("validStart");
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+
+		LocalDateTime yestday = LocalDateTime.now().minusDays(1);
+		ZoneId zoneId = ZoneId.systemDefault();
+		ZonedDateTime zdt = yestday.atZone(zoneId);
+		Date validStartDate = Date.from(zdt.toInstant());
+		try {
+			validStartDate = sdf.parse(validStart);
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
 		String validEnd = (String) params.get("validEnd");
+		LocalDateTime plusMonth = LocalDateTime.now().plusMonths(1);
+
+		ZonedDateTime plusMonthzdt = plusMonth.atZone(zoneId);
+		Date validEndDate = Date.from(plusMonthzdt.toInstant());
+		;
+		try {
+			validEndDate = sdf.parse(validEnd);
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
 		String cheRemark = (String) params.get("cheRemark");
 		// 新增或修改人员信息
 		/**
@@ -330,7 +366,9 @@ public class ChepaiServiceImpl implements ChepaiService {
 		 * 14:33:04.887',@IDCard='',@MaritalStatus='未婚', @HighestDegree='',@PoliticalStatus='',@PicPath='',@School='',@Speciality='',@ForeignLanguage='',@Skill='',@TelNumber=''
 		 * ,@MobNumber='13120344930',@ZipCode='1',@NativePlace='',@CPH='冀T2A086',@CarType='蓝鸟', @CarColor='#FFFFFF',@CarPic='',@CarPlace='11车位',@PersonPhoto=NULL,@CarPhoto=NULL
 		 */
+		String userno = getNextPersonNo();
 		Myjibenziliao myjibenziliao = new Myjibenziliao();
+		myjibenziliao.setUserno(userno);
 		myjibenziliao.setUsername(personName);
 		myjibenziliao.setSex("男");
 		myjibenziliao.setHomeaddress(homeAddress);
@@ -358,7 +396,7 @@ public class ChepaiServiceImpl implements ChepaiService {
 		myjibenziliao.setCarplace("21");
 		myjibenziliao.setPersonphoto(null);
 		myjibenziliao.setCarphoto(null);
-
+		int saveOrUpdatePersonByPhone = saveOrUpdatePersonByPhone(myjibenziliao);
 		// 新增或修改车牌信息
 		/**
 		 * CardNO车辆编号 UserNO用户编号 cardState=‘0’ CardYj=0.0000 SubSystem='10000'
@@ -376,6 +414,45 @@ public class ChepaiServiceImpl implements ChepaiService {
 		 * ,@CardIDNO='',@DownloadSignal='00000000000000000000000000000000000000000000000000'
 		 */
 		Myfaxingssue myfaxingssue = new Myfaxingssue();
+		String cardno = getNextCarNo();
+		myfaxingssue.setCardno(cardno);
+		myfaxingssue.setUserno(myjibenziliao.getUserno());
+		myfaxingssue.setCardstate("0");
+		myfaxingssue.setCardyj(new BigDecimal(0.0000d));
+		myfaxingssue.setSubsystem("10000");
+		myfaxingssue.setCarcardtype("FreB");
+		myfaxingssue.setCarissuedate(now);
+		myfaxingssue.setCarissueusercard("888888");
+		myfaxingssue.setBalance(new BigDecimal(0.0000d));
+		myfaxingssue.setCarvalidstartdate(validStartDate);
+		myfaxingssue.setCarvalidenddate(validEndDate);
+		myfaxingssue.setCph(chepaihao);
+		myfaxingssue.setCarcolor("");
+		myfaxingssue.setCartype(chexing);
+		myfaxingssue.setCarplace("11车位");
+		myfaxingssue.setCarwithdrawcarddate(now);
+		myfaxingssue.setCarwithdrawoptcard("");
+		// TODO
+		myfaxingssue.setCarvalidmachine("00000003FFFFFFFFFFFFFFFFFFFFFFFF");
+		myfaxingssue.setCarvalidzone("0000000000000000");
+		myfaxingssue.setCarmemo(cheRemark);
+		myfaxingssue.setMjissuedate(now);
+		myfaxingssue.setMjvalidstarttime("00");
+		myfaxingssue.setMjvalidendtime("24");
+		myfaxingssue.setMjvalidmachine("F");
+		myfaxingssue.setMjcardtype("2");
+		myfaxingssue.setMjwithdrawcarddate(now);
+		myfaxingssue.setMjwithdrawoptcard("");
+		myfaxingssue.setMjmemo("");
+		myfaxingssue.setIssuedate(now);
+		myfaxingssue.setWithdrawdate(now);
+		myfaxingssue.setIssueusercard("888888");
+		myfaxingssue.setWithdrawusercard("");
+		myfaxingssue.setLossregdate(now);
+		myfaxingssue.setLossregusercard("");
+		myfaxingssue.setCardidno("");
+		myfaxingssue.setDownloadsignal("00000000000000000000000000000000000000000000000000");
+		int saveOrUpdateChepaiByChepaihao = saveOrUpdateChepaiByChepaihao(myfaxingssue);
 		// 新增 Myicvalid表一条数据
 		/*
 		 * @CardNO='88000004',@OptDate='2019-07-05
@@ -389,7 +466,19 @@ public class ChepaiServiceImpl implements ChepaiService {
 		 * ',@OperatorCardNO='888888',@OptType='t'
 		 */
 		Myicvalid myicvalid = new Myicvalid();
-
+		myicvalid.setCardno(myfaxingssue.getCardno());
+		myicvalid.setOptdate(now);
+		myicvalid.setNewstartdate(validStartDate);
+		myicvalid.setNewenddate(validEndDate);
+		myicvalid.setNeweachdaystarttime("");
+		myicvalid.setNeweachdayendtime("");
+		myicvalid.setValidmachineid("");
+		myicvalid.setOperatorcardno("888888");
+		myicvalid.setOpttype("t");
+		int saveOrUpdateMyIcvalid = saveOrUpdateMyIcvalid(myicvalid);
+		if (saveOrUpdateChepaiByChepaihao > 0 && saveOrUpdatePersonByPhone > 0 && saveOrUpdateMyIcvalid > 0) {
+			return 1;
+		}
 		return 0;
 	}
 
@@ -452,11 +541,43 @@ public class ChepaiServiceImpl implements ChepaiService {
 				.where(MyjibenziliaoDynamicSqlSupport.mobnumber, SqlBuilder.isEqualTo(mobnumber)).build().execute();
 		if (myjibenziliaos.size() > 0) {
 			// 更新//为了简单 可以先删除此数据然后统一进行新增
+			myjibenziliao.setUserno(myjibenziliaos.get(0).getUserno());
 			myjibenziliaoDynamicSqlMapper.deleteByExample()
 					.where(MyjibenziliaoDynamicSqlSupport.mobnumber, SqlBuilder.isEqualTo(mobnumber)).build().execute();
 		}
 		// 新增
 		return myjibenziliaoDynamicSqlMapper.insert(myjibenziliao);
+	}
+
+	public String getNextCarNo() {
+		SelectStatementProvider render = SqlBuilder.select(SqlBuilder.max(MyfaxingssueDynamicSqlSupport.cardno))
+				.from(MyfaxingssueDynamicSqlSupport.myfaxingssue)
+				.where(MyfaxingssueDynamicSqlSupport.cardno, SqlBuilder.isLike("YY%")).build()
+				.render(RenderingStrategy.MYBATIS3);
+		String selectMax = chepaiCustomMapper.selectMaxCarno(render);
+
+		if (selectMax == null) {
+			return startCarno;
+		}
+		String substring = selectMax.substring(2, selectMax.length());
+		Integer maxCarNo = Integer.parseInt(substring);
+		return "YY" + maxCarNo.intValue() + 1;
+	}
+
+	public String getNextPersonNo() {
+		SelectStatementProvider render = SqlBuilder.select(SqlBuilder.max(MyjibenziliaoDynamicSqlSupport.userno))
+				.from(MyjibenziliaoDynamicSqlSupport.myjibenziliao)
+				.where(MyjibenziliaoDynamicSqlSupport.userno, SqlBuilder.isLike("Z%")).build()
+				.render(RenderingStrategy.MYBATIS3);
+		String selectMax = personCustomMapper.selectMaxPersonno(render);
+
+		if (selectMax == null) {
+			return startPersonNo;
+		}
+		String substring = selectMax.substring(2, selectMax.length());
+		Integer maxPersonNo = Integer.parseInt(substring);
+		return "Z" + maxPersonNo.intValue() + 1;
+
 	}
 
 	public int saveOrUpdateChepaiByChepaihao(Myfaxingssue myfaxingssue) {
@@ -485,7 +606,31 @@ public class ChepaiServiceImpl implements ChepaiService {
 		}
 		// 新增
 		return myfaxingssueDynamicSqlMapper.insert(myfaxingssue);
-
 	}
 
+	@Override
+	public int delete(String id) {
+		Myfaxingssue myfaxingssue = myfaxingssueDynamicSqlMapper.selectByPrimaryKey(Integer.parseInt(id));
+		if (myfaxingssue != null) {
+			myicmoneyDynamicSqlMapper.deleteByExample()
+					.where(MyicmoneyDynamicSqlSupport.cardno, SqlBuilder.isEqualTo(myfaxingssue.getCardno())).build()
+					.execute();
+			myicvalidDynamicSqlMapper.deleteByExample()
+					.where(MyicvalidDynamicSqlSupport.cardno, SqlBuilder.isEqualTo(myfaxingssue.getCardno())).build()
+					.execute();
+			myfaxingssueDynamicSqlMapper.deleteByExample()
+					.where(MyfaxingssueDynamicSqlSupport.cardno, SqlBuilder.isEqualTo(myfaxingssue.getCardno())).build()
+					.execute();
+			return 1;
+		}
+		return 1;
+	}
+
+	@Override
+	public Myfaxingssue getCarById(String id) {
+		if (StringUtils.isNotBlank(id)) {
+			return myfaxingssueDynamicSqlMapper.selectByPrimaryKey(Integer.parseInt(id));
+		}
+		return null;
+	}
 }

@@ -1,6 +1,6 @@
 spring:
   profiles: 
-    active: dev
+    active: prod
 
 ---
 isRealySendSms: false
@@ -15,7 +15,7 @@ spring:
   session:
     store-type: redis
     redis:
-      namespace: fuxing
+      namespace: chepai
   redis: 
     database: 0      # Redis数据库索引（默认为0）
     host: localhost  # Redis服务器地址
@@ -89,7 +89,7 @@ spring:
   session:
     store-type: redis
     redis:
-      namespace: fuxing
+      namespace: chepai
   redis: 
     database: 0      # Redis数据库索引（默认为0）
     host: localhost  # Redis服务器地址
@@ -109,10 +109,10 @@ spring:
       prefix: /WEB-INF/jsp/
       suffix: .jsp
   datasource:
-    url: jdbc:jtds:sqlserver://192.168.56.101:1433/chepai
+    url: jdbc:jtds:sqlserver://127.0.0.1:1433/znykt_Auto
     driverClassName: net.sourceforge.jtds.jdbc.Driver
     username: sa
-    password: wujiatong
+    password: 12345
     dbcp2:
       validation-query: SELECT 1
       test-while-idle: true

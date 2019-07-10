@@ -17,6 +17,8 @@ import cn.xvkang.utils.Constants;
 
 @Mapper
 public interface ChepaiCustomMapper {
+	@SelectProvider(type = SqlProviderAdapter.class, method = "select")
+	String selectMaxCarno(SelectStatementProvider selectStatement);
 //	@Select("select max(reg_code) from signup where census = #{census}")
 //	public Integer selectMaxRegCodeByCensue(String census);
 //

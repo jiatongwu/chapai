@@ -15,6 +15,8 @@ public interface PersonCustomMapper {
 //
 //	@Select("select reg_code from signup where census = #{census}")
 //	public List<Integer> selectAllRegCodeByCensue(String census);
+	@SelectProvider(type = SqlProviderAdapter.class, method = "select")
+	String selectMaxPersonno(SelectStatementProvider selectStatement);
 
 	@SelectProvider(type = SqlProviderAdapter.class, method = "select")
 	// @Results(id = "AutocphResult", value = { @Result(column = "CPH", property =
