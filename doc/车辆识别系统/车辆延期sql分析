@@ -1,0 +1,9 @@
+Update MYFAXINGSSUE set CarValidStartDate=@CarValidStartDate,CarValidEndDate=@CarValidEndDate,DownloadSignal=@DownloadSignal,
+CPHDownloadSignal=@CPHDownloadSignal where CardNO=@CardNO',N'@CarValidStartDate datetime,@CarValidEndDate datetime,@DownloadSignal varchar(50),@CPHDownloadSignal varchar(50),@CardNO varchar(8)',
+@CarValidStartDate='2019-07-02 00:00:00',@CarValidEndDate='2019-07-20 00:00:00',@DownloadSignal='00000000000000000000000000000000000000000000000000',@CPHDownloadSignal='00000000000000000000000000000000000000000000000000',@CardNO='Y9000001'
+
+insert into MYICMONEY(CardNO,OptDate,SFJE,OperatorCardNO,OptType,NewStartDate,NewEndDate,LastEndDate,Remark) 
+values (@CardNO,@OptDate,@SFJE,@OperatorCardNO,@OptType,@NewStartDate,@NewEndDate,@LastEndDate,@Remark);
+
+select @@IDENTITY',N'@CardNO varchar(30),@OptDate datetime,@SFJE money,@OperatorCardNO varchar(30),@OptType varchar(50),@NewStartDate datetime,@NewEndDate datetime,@LastEndDate datetime,@Remark varchar(255)',
+@CardNO='Y9000001',@OptDate='2019-07-12 11:21:48.257',@SFJE=$0.0000,@OperatorCardNO='888888',@OptType='F',@NewStartDate='2019-07-02 00:00:00',@NewEndDate='2019-07-20 00:00:00',@LastEndDate='2019-07-13 00:00:00',@Remark=''

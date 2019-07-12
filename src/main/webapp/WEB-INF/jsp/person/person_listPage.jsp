@@ -81,6 +81,16 @@
                         </div>
                     </div>
                     <div class="layui-inline">
+                        <label class="layui-form-label">人员添加时间排序</label>
+                        <div class="layui-input-inline">
+                            <select name="createTimeAsc" id="createTimeAsc">
+                                <option value=""></option>
+                                <option value="1">升序</option>
+                                <option value="0">降序</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="layui-inline">
                         <label class="layui-form-label"></label>
                         <div class="layui-input-inline">
                             <button class="layui-btn layui-btn-normal" lay-submit

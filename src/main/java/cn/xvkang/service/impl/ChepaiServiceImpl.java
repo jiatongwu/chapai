@@ -3,16 +3,21 @@ package cn.xvkang.service.impl;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.math.BigDecimal;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import org.apache.commons.lang3.StringUtils;
 import org.apache.poi.ss.usermodel.Cell;
@@ -24,12 +29,16 @@ import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.VerticalAlignment;
 import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.xssf.usermodel.XSSFCell;
+import org.apache.poi.xssf.usermodel.XSSFRow;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.mybatis.dynamic.sql.SqlBuilder;
 import org.mybatis.dynamic.sql.render.RenderingStrategy;
 import org.mybatis.dynamic.sql.select.QueryExpressionDSL;
 import org.mybatis.dynamic.sql.select.SelectModel;
 import org.mybatis.dynamic.sql.select.render.SelectStatementProvider;
+import org.mybatis.dynamic.sql.update.render.UpdateStatementProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.InputStreamResource;
 import org.springframework.core.io.Resource;
@@ -55,6 +64,7 @@ import cn.xvkang.primarymapperdynamicsql.MyjibenziliaoDynamicSqlMapper;
 import cn.xvkang.primarymapperdynamicsql.MyjibenziliaoDynamicSqlSupport;
 import cn.xvkang.service.ChepaiService;
 import cn.xvkang.utils.MyPageImpl;
+import cn.xvkang.utils.WordExcelUtils;
 
 @Service
 public class ChepaiServiceImpl implements ChepaiService {
@@ -72,8 +82,8 @@ public class ChepaiServiceImpl implements ChepaiService {
 	private PersonCustomMapper personCustomMapper;
 	// @Autowired
 	// private BaseCustomMapper baseCustomMapper;
-	public static String startPersonNo = "Z99000001";
-	public static String startCarno = "YY99000001";
+	public static String startPersonNo = "Z40001";
+	public static String startCarno = "Y4000001";
 
 	@Override
 	public PageImpl<Map<String, Object>> selectAllPage(Map<String, Object> params, Integer pageNum, Integer pageSize) {
@@ -432,7 +442,7 @@ public class ChepaiServiceImpl implements ChepaiService {
 		myfaxingssue.setCarplace("11车位");
 		myfaxingssue.setCarwithdrawcarddate(now);
 		myfaxingssue.setCarwithdrawoptcard("");
-		// TODO
+
 		myfaxingssue.setCarvalidmachine("00000003FFFFFFFFFFFFFFFFFFFFFFFF");
 		myfaxingssue.setCarvalidzone("0000000000000000");
 		myfaxingssue.setCarmemo(cheRemark);
@@ -452,6 +462,7 @@ public class ChepaiServiceImpl implements ChepaiService {
 		myfaxingssue.setLossregusercard("");
 		myfaxingssue.setCardidno("");
 		myfaxingssue.setDownloadsignal("00000000000000000000000000000000000000000000000000");
+		myfaxingssue.setCphdownloadsignal("10000000000000000000000000000000000000000000000000");
 		int saveOrUpdateChepaiByChepaihao = saveOrUpdateChepaiByChepaihao(myfaxingssue);
 		// 新增 Myicvalid表一条数据
 		/*
@@ -552,16 +563,16 @@ public class ChepaiServiceImpl implements ChepaiService {
 	public String getNextCarNo() {
 		SelectStatementProvider render = SqlBuilder.select(SqlBuilder.max(MyfaxingssueDynamicSqlSupport.cardno))
 				.from(MyfaxingssueDynamicSqlSupport.myfaxingssue)
-				.where(MyfaxingssueDynamicSqlSupport.cardno, SqlBuilder.isLike("YY%")).build()
+				.where(MyfaxingssueDynamicSqlSupport.cardno, SqlBuilder.isLike("Y%")).build()
 				.render(RenderingStrategy.MYBATIS3);
 		String selectMax = chepaiCustomMapper.selectMaxCarno(render);
 
 		if (selectMax == null) {
 			return startCarno;
 		}
-		String substring = selectMax.substring(2, selectMax.length());
+		String substring = selectMax.substring(1, selectMax.length());
 		Integer maxCarNo = Integer.parseInt(substring);
-		return "YY" + maxCarNo.intValue() + 1;
+		return "Y" + (maxCarNo.intValue() + 1);
 	}
 
 	public String getNextPersonNo() {
@@ -574,9 +585,9 @@ public class ChepaiServiceImpl implements ChepaiService {
 		if (selectMax == null) {
 			return startPersonNo;
 		}
-		String substring = selectMax.substring(2, selectMax.length());
+		String substring = selectMax.substring(1, selectMax.length());
 		Integer maxPersonNo = Integer.parseInt(substring);
-		return "Z" + maxPersonNo.intValue() + 1;
+		return "Z" + (maxPersonNo.intValue() + 1);
 
 	}
 
@@ -600,6 +611,8 @@ public class ChepaiServiceImpl implements ChepaiService {
 		List<Myfaxingssue> myfaxingssues = myfaxingssueDynamicSqlMapper.selectByExample()
 				.where(MyfaxingssueDynamicSqlSupport.cph, SqlBuilder.isEqualTo(cph)).build().execute();
 		if (myfaxingssues.size() > 0) {
+			String oldcardno = myfaxingssues.get(0).getCardno();
+			myfaxingssue.setCardno(oldcardno);
 			// 更新//为了简单 可以先删除此数据然后统一进行新增
 			myfaxingssueDynamicSqlMapper.deleteByExample()
 					.where(MyfaxingssueDynamicSqlSupport.cph, SqlBuilder.isEqualTo(cph)).build().execute();
@@ -633,4 +646,204 @@ public class ChepaiServiceImpl implements ChepaiService {
 		}
 		return null;
 	}
+
+	@Override
+	public int yaqi(String id, String endDate) {
+		/*
+		 * Update MYFAXINGSSUE set
+		 * CarValidStartDate=@CarValidStartDate,CarValidEndDate=@CarValidEndDate,
+		 * DownloadSignal=@DownloadSignal, CPHDownloadSignal=@CPHDownloadSignal where
+		 * CardNO=@CardNO',N'@CarValidStartDate datetime,@CarValidEndDate
+		 * datetime,@DownloadSignal varchar(50),@CPHDownloadSignal varchar(50),@CardNO
+		 * varchar(8)',
+		 * 
+		 * @CarValidStartDate='2019-07-02 00:00:00',@CarValidEndDate='2019-07-20
+		 * 00:00:00',@DownloadSignal='00000000000000000000000000000000000000000000000000
+		 * ',@CPHDownloadSignal='00000000000000000000000000000000000000000000000000',@
+		 * CardNO='Y9000001'
+		 * 
+		 * insert into
+		 * MYICMONEY(CardNO,OptDate,SFJE,OperatorCardNO,OptType,NewStartDate,NewEndDate,
+		 * LastEndDate,Remark) values
+		 * (@CardNO,@OptDate,@SFJE,@OperatorCardNO,@OptType,@NewStartDate,@NewEndDate,@
+		 * LastEndDate,@Remark);
+		 * 
+		 * select @@IDENTITY',N'@CardNO varchar(30),@OptDate datetime,@SFJE
+		 * money,@OperatorCardNO varchar(30),@OptType varchar(50),@NewStartDate
+		 * datetime,@NewEndDate datetime,@LastEndDate datetime,@Remark varchar(255)',
+		 * 
+		 * @CardNO='Y9000001',@OptDate='2019-07-12
+		 * 11:21:48.257',@SFJE=$0.0000,@OperatorCardNO='888888',@OptType='F',@
+		 * NewStartDate='2019-07-02 00:00:00',@NewEndDate='2019-07-20
+		 * 00:00:00',@LastEndDate='2019-07-13 00:00:00',@Remark=''
+		 */
+		Myfaxingssue myfaxingssue = myfaxingssueDynamicSqlMapper.selectByPrimaryKey(Integer.parseInt(id));
+		if (myfaxingssue != null) {
+			SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+			try {
+				UpdateStatementProvider updateStatement = SqlBuilder.update(MyfaxingssueDynamicSqlSupport.myfaxingssue)
+						.set(MyfaxingssueDynamicSqlSupport.carvalidenddate).equalTo(sdf.parse(endDate))
+						.set(MyfaxingssueDynamicSqlSupport.downloadsignal)
+						.equalTo("00000000000000000000000000000000000000000000000000")
+						.set(MyfaxingssueDynamicSqlSupport.cphdownloadsignal)
+						.equalTo("00000000000000000000000000000000000000000000000000")
+						.where(MyfaxingssueDynamicSqlSupport.id, SqlBuilder.isEqualTo(Integer.parseInt(id))).build()
+						.render(RenderingStrategy.MYBATIS3);
+				return myfaxingssueDynamicSqlMapper.update(updateStatement);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+
+		}
+		return 0;
+	}
+
+	@SuppressWarnings("unused")
+	@Override
+	public Map<String, Object> importExcel(InputStream inputStream) {
+
+		Date now = new Date();
+		List<String> errorMessages = new ArrayList<String>();
+		List<Map<String, Object>> datas = new ArrayList<>();
+		// List<String> messageList = new ArrayList<>();
+		Set<String> tmpUniqueKeyUniqueSet = new HashSet<>();
+		long errorCount = 0l;
+		long successCount = 0l;
+		XSSFWorkbook xssfWorkbook;
+
+		try {
+			xssfWorkbook = new XSSFWorkbook(inputStream);
+			XSSFSheet sheetAt = xssfWorkbook.getSheetAt(0);
+			for (int i = 1; i < 1048576; i++) {
+				// 处理每一行
+				XSSFRow row = sheetAt.getRow(i);
+				if (row == null) {
+					// 最后一行了，终止处理。
+					break;
+				}
+				XSSFCell nameCell = row.getCell(0);
+				String nameCellString = WordExcelUtils.getCellStringValue(nameCell);
+				if (StringUtils.isBlank(nameCellString)) {
+					// 最后一行了，终止处理。
+					break;
+				}
+
+				XSSFCell phoneCell = row.getCell(1);
+				XSSFCell cphCell = row.getCell(2);
+				XSSFCell chexingCell = row.getCell(3);
+				XSSFCell validStartCell = row.getCell(4);
+				XSSFCell validEndCell = row.getCell(5);
+				XSSFCell cheRemarkCell = row.getCell(6);
+
+				String phoneCellString = WordExcelUtils.getCellStringValue(phoneCell);
+				String cphCellString = WordExcelUtils.getCellStringValue(cphCell);
+				String chexingCellString = WordExcelUtils.getCellStringValue(chexingCell);
+				String validStartCellString = WordExcelUtils.getCellStringValue(validStartCell);
+				String validEndCellString = WordExcelUtils.getCellStringValue(validEndCell);
+				String cheRemarkCellString = WordExcelUtils.getCellStringValue(cheRemarkCell);
+
+				boolean isDataFormatOk = true;
+
+				StringBuilder errorMsgStringBuilder = new StringBuilder();
+				errorMsgStringBuilder.append("第" + (i + 1) + "行：");
+
+				if (StringUtils.isBlank(nameCellString)) {
+					isDataFormatOk = false;
+					errorMsgStringBuilder.append(" 联系人姓名不能为空 ");
+				}
+				if (StringUtils.isBlank(phoneCellString)) {
+					isDataFormatOk = false;
+					errorMsgStringBuilder.append(" 联系人手机号不能为空 ");
+				}
+				if (StringUtils.isBlank(cphCellString)) {
+					isDataFormatOk = false;
+					errorMsgStringBuilder.append(" 车牌号不能为空 ");
+				}
+				if (StringUtils.isBlank(chexingCellString)) {
+					isDataFormatOk = false;
+					errorMsgStringBuilder.append(" 车型不能为空 ");
+				}
+				if (StringUtils.isBlank(validStartCellString)) {
+					isDataFormatOk = false;
+					errorMsgStringBuilder.append(" 有效期起始日不能为空 ");
+				} else {
+					if (!(validStartCellString.matches("^\\d{4}-\\d{1,2}-\\d{1,2}$")
+							|| validStartCellString.matches("^\\d{4}年\\d{1,2}月\\d{1,2}日$"))) {
+						isDataFormatOk = false;
+						errorMsgStringBuilder.append(" 有效期起始日格式不正确 ");
+					}
+//					SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+//					try {
+//						sdf.parse(validStartCellString);
+//					} catch (ParseException e) {
+//						isDataFormatOk = false;
+//						errorMsgStringBuilder.append("有效期起始日格式不正确 ");
+//					}
+				}
+				if (StringUtils.isBlank(validEndCellString)) {
+					isDataFormatOk = false;
+					errorMsgStringBuilder.append(" 有效期起始日不能为空 ");
+				} else {
+					if (!(validStartCellString.matches("^\\d{4}-\\d{1,2}-\\d{1,2}$")
+							|| validStartCellString.matches("^\\d{4}年\\d{1,2}月\\d{1,2}日$"))) {
+						isDataFormatOk = false;
+						errorMsgStringBuilder.append(" 有效期起始日格式不正确 ");
+					}
+
+				}
+				if (isDataFormatOk) {
+					Map<String, Object> tmpData = new HashMap<String, Object>();
+					tmpData.put("personName", nameCellString);
+					tmpData.put("phone", phoneCellString);
+					tmpData.put("homeAddress", " ");
+					tmpData.put("chepaihao", cphCellString);
+					tmpData.put("chexing", chexingCellString);
+					tmpData.put("validStart", validStartCellString);
+					tmpData.put("validEnd", validEndCellString);
+					tmpData.put("cheRemark", cheRemarkCellString);
+					datas.add(tmpData);
+				} else {
+					// 有格式不正确的行 ，提示给用户
+					errorMessages.add(errorMsgStringBuilder.toString());
+				}
+
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+		// 批量插入学生信息
+		List<Map<String, String>> batchImportExcelStudent = batchImportExcel(datas);
+		successCount = datas.size() - batchImportExcelStudent.size();
+		errorCount = errorMessages.size() + batchImportExcelStudent.size();
+
+		for (Map<String, String> tmp : batchImportExcelStudent) {
+			String chepaihao = tmp.get("chepaihao");
+			String phone = tmp.get("phone");
+			errorMessages.add("联系人手机：" + phone + ",车牌号" + chepaihao + " 导入失败，请联系管理员。");
+		}
+		Map<String, Object> result = new HashMap<>();
+		result.put("state", "ok");
+		result.put("msg", "导入成功" + successCount + "个学生");
+
+		result.put("errorMessages", errorMessages);
+		result.put("successCount", successCount);
+		result.put("errorCount", errorCount);
+		return result;
+	}
+
+	private List<Map<String, String>> batchImportExcel(List<Map<String, Object>> datas) {
+		List<Map<String, String>> result = new ArrayList<Map<String, String>>();
+		for (Map<String, Object> s : datas) {
+			int addResult = add(s);
+			if (addResult == 0) {
+				Map<String, String> errorStudent = new HashMap<String, String>();
+				errorStudent.put("phone", (String) s.get("phone"));
+				errorStudent.put("chepaihao", (String) s.get("chepaihao"));
+				result.add(errorStudent);
+			}
+		}
+		return result;
+	}
+
 }

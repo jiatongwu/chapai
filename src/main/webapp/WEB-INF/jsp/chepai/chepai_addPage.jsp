@@ -43,7 +43,7 @@
             <label class="layui-form-label">联系人家庭住址</label>
             <div class="layui-input-inline">
                 <input type="text" name="homeAddress"
-                       value="" lay-verify="required"
+                       value=""
                        autocomplete="off" class="layui-input"/>
             </div>
         </div>
@@ -67,13 +67,13 @@
         <div class="layui-form-item">
             <label class="layui-form-label">有效起日</label>
             <div class="layui-input-inline">
-                <input type="text" class="layui-input" id="validStart" value="" name="validStart" lay-verify="required"/>
+                <input type="text" class="layui-input test-item" id="validStart" value="" name="validStart" lay-verify="required"/>
             </div>
         </div>
         <div class="layui-form-item">
             <label class="layui-form-label">有效止日</label>
             <div class="layui-input-inline">
-                <input type="text" class="layui-input" id="validEnd" value="" name="validEnd" lay-verify="required"/>
+                <input type="text" class="layui-input test-item" id="validEnd" value="" name="validEnd" lay-verify="required"/>
             </div>
         </div>
         <div class="layui-form-item">

@@ -1,0 +1,356 @@
+exec sp_reset_connection 
+go
+declare @p1 nvarchar(64)
+set @p1=N'147'
+exec GetDBVersion @DBVersion=@p1 output
+select @p1
+go
+declare @p1 nvarchar(64)
+set @p1=N'147'
+exec GetDBVersion @DBVersion=@p1 output
+select @p1
+go
+
+                                            declare @BatchID uniqueidentifier
+
+                                            set @BatchID = NEWID()
+
+                                            UPDATE [Event] WITH (TABLOCKX)
+                                                SET [BatchID] = @BatchID,
+                                                [ProcessStart] = GETUTCDATE(),
+                                                [ProcessHeartbeat] = GETUTCDATE()
+                                            FROM (
+                                                SELECT TOP 4 [EventID] FROM [Event] WITH (TABLOCKX) WHERE [ProcessStart] is NULL ORDER BY [TimeEntered]
+                                                ) AS t1
+                                            WHERE [Event].[EventID] = t1.[EventID]
+
+                                            select top 4
+	                                            E.[EventID],
+	                                            E.[EventType],
+	                                            E.[EventData]
+                                            from
+	                                            [Event] E WITH (TABLOCKX)
+                                            where
+	                                            [BatchID] = @BatchID
+                                            ORDER BY [TimeEntered]
+                                            
+go
+
+                                    declare @BatchID uniqueidentifier
+
+                                    set @BatchID = newid()
+
+                                    UPDATE [Notifications] WITH (TABLOCKX)
+                                        SET [BatchID] = @BatchID,
+                                        [ProcessStart] = GETUTCDATE(),
+                                        [ProcessHeartbeat] = GETUTCDATE()
+                                    FROM (
+                                        SELECT TOP 4  [NotificationID] FROM [Notifications] WITH (TABLOCKX) WHERE ProcessStart is NULL and
+	                                    (ProcessAfter is NULL or ProcessAfter < GETUTCDATE()) ORDER BY [NotificationEntered]
+                                    ) AS t1
+                                    WHERE [Notifications].[NotificationID] = t1.[NotificationID]
+
+                                    select top 4
+		                                    -- Notification data
+		                                    N.[NotificationID],
+		                                    N.[SubscriptionID],
+		                                    N.[ActivationID],
+		                                    N.[ReportID],
+		                                    N.[SnapShotDate],
+		                                    N.[DeliveryExtension],
+		                                    N.[ExtensionSettings],
+                                            N.[Locale],
+		                                    N.[Parameters],
+		                                    N.[SubscriptionLastRunTime],
+		                                    N.[ProcessStart],
+		                                    N.[NotificationEntered],
+		                                    N.[Attempt],
+		                                    N.[IsDataDriven],
+		                                    SUSER_SNAME(Owner.[Sid]),
+		                                    Owner.[UserName],
+		                                    -- Report Data
+		                                    O.[Path],
+		                                    N.[ReportZone],
+		                                    O.[Type],
+		                                    SD.NtSecDescPrimary,
+                                            N.[Version],
+                                            Owner.[AuthType]
+	                                    from 
+		                                    [Notifications] N with (TABLOCKX) inner join [Catalog] O on O.[ItemID] = N.[ReportID]
+		                                    inner join [Users] Owner on N.SubscriptionOwnerID = Owner.UserID
+		                                    left outer join [SecData] SD on O.[PolicyID] = SD.[PolicyID] AND SD.AuthType = Owner.AuthType
+	                                    where 
+		                                    N.[BatchID] = @BatchID
+                                    ORDER BY [NotificationEntered]
+                                    
+go
+exec sp_reset_connection 
+go
+select CardType,Identifying ,Enabled,Reamrks,ID from MYCardType where 1=1
+go
+exec sp_reset_connection 
+go
+select * from MYGANGWEIKOUSET order by CtrlNumber
+go
+exec sp_reset_connection 
+go
+select * from MYGANGWEIKOUSET order by CtrlNumber
+go
+exec sp_reset_connection 
+go
+declare @p1 nvarchar(64)
+set @p1=N'147'
+exec GetDBVersion @DBVersion=@p1 output
+select @p1
+go
+declare @p1 nvarchar(64)
+set @p1=N'147'
+exec GetDBVersion @DBVersion=@p1 output
+select @p1
+go
+
+                                            declare @BatchID uniqueidentifier
+
+                                            set @BatchID = NEWID()
+
+                                            UPDATE [Event] WITH (TABLOCKX)
+                                                SET [BatchID] = @BatchID,
+                                                [ProcessStart] = GETUTCDATE(),
+                                                [ProcessHeartbeat] = GETUTCDATE()
+                                            FROM (
+                                                SELECT TOP 4 [EventID] FROM [Event] WITH (TABLOCKX) WHERE [ProcessStart] is NULL ORDER BY [TimeEntered]
+                                                ) AS t1
+                                            WHERE [Event].[EventID] = t1.[EventID]
+
+                                            select top 4
+	                                            E.[EventID],
+	                                            E.[EventType],
+	                                            E.[EventData]
+                                            from
+	                                            [Event] E WITH (TABLOCKX)
+                                            where
+	                                            [BatchID] = @BatchID
+                                            ORDER BY [TimeEntered]
+                                            
+go
+
+                                    declare @BatchID uniqueidentifier
+
+                                    set @BatchID = newid()
+
+                                    UPDATE [Notifications] WITH (TABLOCKX)
+                                        SET [BatchID] = @BatchID,
+                                        [ProcessStart] = GETUTCDATE(),
+                                        [ProcessHeartbeat] = GETUTCDATE()
+                                    FROM (
+                                        SELECT TOP 4  [NotificationID] FROM [Notifications] WITH (TABLOCKX) WHERE ProcessStart is NULL and
+	                                    (ProcessAfter is NULL or ProcessAfter < GETUTCDATE()) ORDER BY [NotificationEntered]
+                                    ) AS t1
+                                    WHERE [Notifications].[NotificationID] = t1.[NotificationID]
+
+                                    select top 4
+		                                    -- Notification data
+		                                    N.[NotificationID],
+		                                    N.[SubscriptionID],
+		                                    N.[ActivationID],
+		                                    N.[ReportID],
+		                                    N.[SnapShotDate],
+		                                    N.[DeliveryExtension],
+		                                    N.[ExtensionSettings],
+                                            N.[Locale],
+		                                    N.[Parameters],
+		                                    N.[SubscriptionLastRunTime],
+		                                    N.[ProcessStart],
+		                                    N.[NotificationEntered],
+		                                    N.[Attempt],
+		                                    N.[IsDataDriven],
+		                                    SUSER_SNAME(Owner.[Sid]),
+		                                    Owner.[UserName],
+		                                    -- Report Data
+		                                    O.[Path],
+		                                    N.[ReportZone],
+		                                    O.[Type],
+		                                    SD.NtSecDescPrimary,
+                                            N.[Version],
+                                            Owner.[AuthType]
+	                                    from 
+		                                    [Notifications] N with (TABLOCKX) inner join [Catalog] O on O.[ItemID] = N.[ReportID]
+		                                    inner join [Users] Owner on N.SubscriptionOwnerID = Owner.UserID
+		                                    left outer join [SecData] SD on O.[PolicyID] = SD.[PolicyID] AND SD.AuthType = Owner.AuthType
+	                                    where 
+		                                    N.[BatchID] = @BatchID
+                                    ORDER BY [NotificationEntered]
+                                    
+go
+exec sp_reset_connection 
+go
+Select CardNO,CardState,CarCardType, UserNO,CarValidStartDate, CarValidEndDate,CPH, DownloadSignal,CarValidMachine,CPHDownloadSignal from MYFAXINGSSUE where left(SubSystem,1)='1'  and  CardState='0'  and (left(CarCardType,3)='Mth' or left(CarCardType,3)='Fre' or left(CarCardType,3)='Str')  order by len(CardNO),CardNO
+go
+exec sp_reset_connection 
+go
+delete from MYOffLine where CardNO='00057141'
+go
+exec sp_reset_connection 
+go
+insert into MYOffLine (CardNO,CPHCardNO,DownLoadTime,State) values ('00057141','00057141','2019-07-11 11:44:19',0)
+go
+exec sp_reset_connection 
+go
+delete from MYOffLine where CardNO='00057141'
+go
+exec sp_reset_connection 
+go
+insert into MYOffLine (CardNO,CPHCardNO,DownLoadTime,State) values ('00057141','00057141','2019-07-11 11:44:19',0)
+go
+exec sp_reset_connection 
+go
+exec sp_executesql N'Update MYFAXINGSSUE set CPHDownloadSignal=@CPHDownloadSignal where CardNO=@CardNO',N'@CPHDownloadSignal varchar(50),@CardNO varchar(8)',@CPHDownloadSignal='10000000000000000000000000000000000000000000000000',@CardNO='00057141'
+go
+exec sp_reset_connection 
+go
+delete from MYOffLine where CardNO='00249210'
+go
+exec sp_reset_connection 
+go
+insert into MYOffLine (CardNO,CPHCardNO,DownLoadTime,State) values ('00249210','00249210','2019-07-11 11:44:19',0)
+go
+exec sp_reset_connection 
+go
+delete from MYOffLine where CardNO='00249210'
+go
+exec sp_reset_connection 
+go
+insert into MYOffLine (CardNO,CPHCardNO,DownLoadTime,State) values ('00249210','00249210','2019-07-11 11:44:19',0)
+go
+exec sp_reset_connection 
+go
+exec sp_executesql N'Update MYFAXINGSSUE set CPHDownloadSignal=@CPHDownloadSignal where CardNO=@CardNO',N'@CPHDownloadSignal varchar(50),@CardNO varchar(8)',@CPHDownloadSignal='10000000000000000000000000000000000000000000000000',@CardNO='00249210'
+go
+exec sp_reset_connection 
+go
+delete from MYOffLine where CardNO='010082C9'
+go
+exec sp_reset_connection 
+go
+insert into MYOffLine (CardNO,CPHCardNO,DownLoadTime,State) values ('010082C9','010082C9','2019-07-11 11:44:19',0)
+go
+exec sp_reset_connection 
+go
+delete from MYOffLine where CardNO='010082C9'
+go
+exec sp_reset_connection 
+go
+insert into MYOffLine (CardNO,CPHCardNO,DownLoadTime,State) values ('010082C9','010082C9','2019-07-11 11:44:19',0)
+go
+exec sp_reset_connection 
+go
+exec sp_executesql N'Update MYFAXINGSSUE set CPHDownloadSignal=@CPHDownloadSignal where CardNO=@CardNO',N'@CPHDownloadSignal varchar(50),@CardNO varchar(8)',@CPHDownloadSignal='10000000000000000000000000000000000000000000000000',@CardNO='010082C9'
+go
+exec sp_reset_connection 
+go
+delete from MYOffLine where CardNO='01051081'
+go
+exec sp_reset_connection 
+go
+insert into MYOffLine (CardNO,CPHCardNO,DownLoadTime,State) values ('01051081','01051081','2019-07-11 11:44:19',0)
+go
+exec sp_reset_connection 
+go
+delete from MYOffLine where CardNO='01051081'
+go
+exec sp_reset_connection 
+go
+insert into MYOffLine (CardNO,CPHCardNO,DownLoadTime,State) values ('01051081','01051081','2019-07-11 11:44:19',0)
+go
+exec sp_reset_connection 
+go
+exec sp_executesql N'Update MYFAXINGSSUE set CPHDownloadSignal=@CPHDownloadSignal where CardNO=@CardNO',N'@CPHDownloadSignal varchar(50),@CardNO varchar(8)',@CPHDownloadSignal='10000000000000000000000000000000000000000000000000',@CardNO='01051081'
+go
+exec sp_reset_connection 
+go
+delete from MYOffLine where CardNO='01081289'
+go
+exec sp_reset_connection 
+go
+insert into MYOffLine (CardNO,CPHCardNO,DownLoadTime,State) values ('01081289','01081289','2019-07-11 11:44:19',0)
+go
+exec sp_reset_connection 
+go
+delete from MYOffLine where CardNO='01081289'
+go
+exec sp_reset_connection 
+go
+insert into MYOffLine (CardNO,CPHCardNO,DownLoadTime,State) values ('01081289','01081289','2019-07-11 11:44:19',0)
+go
+exec sp_reset_connection 
+go
+exec sp_executesql N'Update MYFAXINGSSUE set CPHDownloadSignal=@CPHDownloadSignal where CardNO=@CardNO',N'@CPHDownloadSignal varchar(50),@CardNO varchar(8)',@CPHDownloadSignal='10000000000000000000000000000000000000000000000000',@CardNO='01081289'
+go
+exec sp_reset_connection 
+go
+delete from MYOffLine where CardNO='010CF040'
+go
+exec sp_reset_connection 
+go
+insert into MYOffLine (CardNO,CPHCardNO,DownLoadTime,State) values ('010CF040','010CF040','2019-07-11 11:44:19',0)
+go
+exec sp_reset_connection 
+go
+delete from MYOffLine where CardNO='010CF040'
+go
+exec sp_reset_connection 
+go
+insert into MYOffLine (CardNO,CPHCardNO,DownLoadTime,State) values ('010CF040','010CF040','2019-07-11 11:44:19',0)
+go
+exec sp_reset_connection 
+go
+exec sp_executesql N'Update MYFAXINGSSUE set CPHDownloadSignal=@CPHDownloadSignal where CardNO=@CardNO',N'@CPHDownloadSignal varchar(50),@CardNO varchar(8)',@CPHDownloadSignal='10000000000000000000000000000000000000000000000000',@CardNO='010CF040'
+go
+exec sp_reset_connection 
+go
+delete from MYOffLine where CardNO='0215D185'
+go
+exec sp_reset_connection 
+go
+insert into MYOffLine (CardNO,CPHCardNO,DownLoadTime,State) values ('0215D185','0215D185','2019-07-11 11:44:19',0)
+go
+exec sp_reset_connection 
+go
+delete from MYOffLine where CardNO='0215D185'
+go
+exec sp_reset_connection 
+go
+insert into MYOffLine (CardNO,CPHCardNO,DownLoadTime,State) values ('0215D185','0215D185','2019-07-11 11:44:19',0)
+go
+exec sp_reset_connection 
+go
+exec sp_executesql N'Update MYFAXINGSSUE set CPHDownloadSignal=@CPHDownloadSignal where CardNO=@CardNO',N'@CPHDownloadSignal varchar(50),@CardNO varchar(8)',@CPHDownloadSignal='10000000000000000000000000000000000000000000000000',@CardNO='0215D185'
+go
+exec sp_reset_connection 
+go
+delete from MYOffLine where CardNO='0220371E'
+go
+exec sp_reset_connection 
+go
+insert into MYOffLine (CardNO,CPHCardNO,DownLoadTime,State) values ('0220371E','0220371E','2019-07-11 11:44:19',0)
+go
+exec sp_reset_connection 
+go
+delete from MYOffLine where CardNO='0220371E'
+go
+exec sp_reset_connection 
+go
+insert into MYOffLine (CardNO,CPHCardNO,DownLoadTime,State) values ('0220371E','0220371E','2019-07-11 11:44:19',0)
+go
+exec sp_reset_connection 
+go
+exec sp_executesql N'Update MYFAXINGSSUE set CPHDownloadSignal=@CPHDownloadSignal where CardNO=@CardNO',N'@CPHDownloadSignal varchar(50),@CardNO varchar(8)',@CPHDownloadSignal='10000000000000000000000000000000000000000000000000',@CardNO='0220371E'
+go
+exec sp_reset_connection 
+go
+delete from MYOffLine where CardNO='02245288'
+go
+exec sp_reset_connection 
+go
+insert into MYOffLine (CardNO,CPHCardNO,DownLoadTime,State) values ('02245288','02245288','2019-07-11 11:44:19',0)
+go

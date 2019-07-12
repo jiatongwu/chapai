@@ -38,12 +38,15 @@ layui.config({
     var element = layui.element;
     var laydate = layui.laydate;
     //执行一个laydate实例
-    laydate.render({
-        elem: '#validStart'
-    });
-    laydate.render({
+   /* laydate.render({
         elem: '#validEnd'
     });
+    laydate.render({
+        elem: '#validStart'
+    });*/
+    //同时绑定多个
+    lay('.test-item').each(function(){ laydate.render({ elem: this ,format:'yyyy-MM-dd' ,type:'date' ,trigger: 'click' }); });
+
 
 
 

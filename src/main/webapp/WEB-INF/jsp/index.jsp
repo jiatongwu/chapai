@@ -64,22 +64,27 @@
 
                 <sec:authorize access="hasRole('super_admin')">
                     <li class="lau-nav-item"><a class="lau-nav-header"><i
-                            class="layui-icon layui-icon-right"></i><cite>人员管理</cite></a>
+                            class="layui-icon layui-icon-right"></i><cite>车牌系统</cite></a>
                         <dl class="lau-nav-child">
                             <dd style="">
                                 <a style="padding-left: 20px;"
                                    lau-href="${pageContext.request.contextPath }/person/listPage.html"><i
                                         class="layui-icon layui-icon-circle"></i><cite>人员列表</cite></a>
                             </dd>
-                        </dl>
-                    </li>
-                    <li class="lau-nav-item"><a class="lau-nav-header"><i
-                            class="layui-icon layui-icon-right"></i><cite>车牌管理</cite></a>
-                        <dl class="lau-nav-child">
                             <dd style="">
                                 <a style="padding-left: 20px;"
                                    lau-href="${pageContext.request.contextPath }/chepai/listPage.html"><i
                                         class="layui-icon layui-icon-circle"></i><cite>车牌列表</cite></a>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li class="lau-nav-item"><a class="lau-nav-header"><i
+                            class="layui-icon layui-icon-right"></i><cite>管理中心</cite></a>
+                        <dl class="lau-nav-child">
+                            <dd style="">
+                                <a style="padding-left: 20px;"
+                                   lau-href="${pageContext.request.contextPath }/user/listPage.html"><i
+                                        class="layui-icon layui-icon-circle"></i><cite>用户列表</cite></a>
                             </dd>
                         </dl>
                     </li>

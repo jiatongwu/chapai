@@ -108,6 +108,15 @@ public class PersonServiceImpl implements PersonService {
 			where.and(MyjibenziliaoDynamicSqlSupport.homeaddress,
 					SqlBuilder.isLike((String) params.get("homeAddress")));
 		}
+		String createTimeAsc = (String) params.get("createTimeAsc");
+		if (StringUtils.isNotBlank(createTimeAsc)) {
+			if ("1".equals(createTimeAsc)) {
+				where.orderBy(MyjibenziliaoDynamicSqlSupport.myjibenziliao.worktime);
+			} else if ("0".equals(createTimeAsc)) {
+				where.orderBy(MyjibenziliaoDynamicSqlSupport.myjibenziliao.worktime.descending());
+			}
+		}
+
 		SelectStatementProvider render = where.build().render(RenderingStrategy.MYBATIS3);
 		PageHelper.startPage(pageNum, pageSize);
 		List<Map<String, Object>> selectByExample = baseCustomMapper.selectMany(render);// findAll(params);//

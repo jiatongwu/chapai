@@ -1,5 +1,6 @@
 package cn.xvkang.service;
 
+import java.io.InputStream;
 import java.util.Map;
 
 import org.springframework.data.domain.PageImpl;
@@ -15,4 +16,8 @@ public interface ChepaiService {
 	public int delete(String id);
 
 	public Myfaxingssue getCarById(String id);
+
+	public int yaqi(String id, String endDate);
+
+	public Map<String, Object> importExcel(InputStream inputStream);
 }

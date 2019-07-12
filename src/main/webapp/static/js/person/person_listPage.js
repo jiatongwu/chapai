@@ -358,7 +358,18 @@ layui.config({
         }, {
             field: 'HomeAddress',
             title: '家庭住址'
-        }
+        }, {
+        field: 'WorkTime',
+            title: '添加时间',
+            templet: function (d) {
+                var createTime = d.WorkTime;
+                console.log(createTime);
+                if (createTime == null) {
+                    return "";
+                }
+                return new Date(createTime).Format("yyyy-MM-dd hh:mm:ss");
+            }
+    },
             // , {
             // field: 'createTime',
             // title: '报名时间',

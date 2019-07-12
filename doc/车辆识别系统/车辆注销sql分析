@@ -1,0 +1,16 @@
+Update MYCARCOMERECORD set CardNO=@CardNOnew,InTime=@InTime,CardType=@CardType,FreeReason=@FreeReason 
+where CPH=@CPH and CardNO = @CardNO',N'@CardNOnew varchar(20),@InTime datetime,@CardType varchar(20),@FreeReason varchar(100),@CPH varchar(20),@CardNO varchar(20)',
+@CardNOnew='762C4040',@InTime='2019-07-12 11:04:01',@CardType='TmpA',@FreeReason='退卡切换为临时车',@CPH='冀TLG308',@CardNO='Y9000001'
+
+Update MYFAXINGSSUE set CardState=@CardState where CardNO=@CardNO',N'@CardState varchar(1),@CardNO varchar(8)',@CardState='5',@CardNO='Y9000001'
+update Myfaxingssue set DownloadSignal='00000000000000000000000000000000000000000000000000',CPHDownloadSignal='00000000000000000000000000000000000000000000000000' where CardNO='Y9000001'
+
+select f.ID,f.CPH,f.CardNO,t.CardType CarCardType, CASE f.CardState WHEN 0 THEN '正常使用' WHEN 1 THEN '挂失未下载' WHEN 2 THEN '挂失已下载' WHEN 3 THEN '解挂未下载' WHEN 4 THEN '解挂已下载' WHEN 5 THEN '已注销' END AS CardState,f.UserNO,m.UserName,f.CarValidStartDate,f.CarValidEndDate,m.MobNumber,m.HomeAddress,f.Balance,f.CardYJ,f.CarType,f.CarPlace,f.CarIssueDate,f.CarIssueUserCard ,f.CarValidZone,f.CarMemo ,f.CarValidMachine,m.ZipCode  from dbo.MYFAXINGSSUE f left join MYJIBENZILIAO m on f.Userno=m.UserNO left JOIN MYCardType t ON t.Identifying = f.CarCardType where substring(f.SubSystem,1,1)='1' and f.CardState=0  order by f.CarissueDate desc
+
+select s.UserNO,m.UserName,m.HomeAddress,s.CarValidStartDate,s.CarValidEndDate,m.MobNumber,s.CarCardType,s.Balance,s.IssueUserCard,s.CarCardType,s.CarIssueDate,s.CarIssueUserCard,m.DeptName,m.TelNumber,m.Sex from MYFAXINGSSUE s,MYJIBENZILIAO m 
+where s.UserNO=m.UserNO and CardNO = 'Y9000001'
+insert into MYCarCancelTable(UserNO,CardNO,UserName,Sex,HomeAddress,DeptName,TelNumber,MobNumber,IssueUserCard,CPH,CarCardType,CarIssueDate,Balance,CarValidStartDate,CarValidEndDate,CancelCardNO,CancelTime,CancelUserName) 
+values (@UserNO,@CardNO,@UserName,@Sex,@HomeAddress,@DeptName,@TelNumber,@MobNumber,@IssueUserCard,@CPH,@CarCardType,@CarIssueDate,@Balance,@CarValidStartDate,@CarValidEndDate,@CancelCardNO,@CancelTime,@CancelUserName)',N'@UserNO varchar(50),@CardNO varchar(50),@UserName varchar(50),@Sex varchar(50),@HomeAddress varchar(100),@DeptName varchar(100),@TelNumber varchar(50),@MobNumber varchar(50),@IssueUserCard varchar(50),@CPH varchar(50),@CarCardType varchar(50),@CarIssueDate varchar(50),@Balance money,@CarValidStartDate datetime,@CarValidEndDate datetime,@CancelCardNO varchar(50),@CancelTime datetime,@CancelUserName varchar(50)'
+,@UserNO='Z90001',@CardNO='Y9000001',@UserName='任垒根',@Sex='男',@HomeAddress='庭住址',@DeptName='',@TelNumber='',@MobNumber='18888888888',@IssueUserCard='888888',@CPH='冀TLG308',@CarCardType='免费车B',@CarIssueDate='2019-07-11 18:33:36',@Balance=$0.0000,@CarValidStartDate='2019-07-02 00:00:00',@CarValidEndDate='2019-07-03 00:00:00',@CancelCardNO='888888',@CancelTime='2019-07-12 11:04:05.447',@CancelUserName='管理员'
+
+update MYICMONEY set Remark = '冀TLG308已注销[Z90001]' where CardNO = 'Y9000001'

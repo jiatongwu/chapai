@@ -53,6 +53,16 @@ layui.config({
                     // tableReload(table,data);
                 }
             });
+        }else  if (event == 'yanqi') {
+            layer.open({
+                type: 2,
+                area: ['900px', '550px'],
+                title: '汽车延期信息',
+                content: contextPath + '/chepai/yanqiPage.html?id=' + data.ID,
+                end: function () {
+                    // tableReload(table,data);
+                }
+            });
         } else if (event == 'shenhe') {
             layer.open({
                 type: 2,
@@ -213,6 +223,17 @@ layui.config({
             });
         }
     });
+    $("#importChepai").on("click", function () {
+		var e = layer.open({
+			type: 2,
+			area: ['800px', '600px'],
+			title: '导入车牌',
+			content: contextPath + '/chepai/importExcelPage.html',
+			end: function () {				
+				$('button[lay-filter = "query"]').click();
+			}
+		});
+	});
 
     $("#add").on("click", function () {
         var namePara = $("input[name='name']").val();
