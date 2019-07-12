@@ -1,0 +1,150 @@
+var contextPath = $("#contextPath").val();
+var tmpFiles = [];
+layui.use(['jquery', 'upload', 'form', 'table', 'layer', 'element'], function () {
+
+    upload = layui.upload;
+    var $ = layui.$;
+    var form = layui.form;
+    var table = layui.table;
+    var layer = layui.layer;
+    var element = layui.element;
+
+    // $(document).on('click', '#downloadTemplate', function () {
+    // downloadFile(contextPath+"/browser/studentimportTemplateDownload");
+    // });
+    $('#downloadTemplate').on('click', function () {
+        // var areaId = $('[name="areaId"]').val();
+        // var studentType=$('[name="studentType"]').val();
+        // if(areaId==''||studentType==''||areaId==undefined||studentType==undefined){
+        // console.log("null");
+        // layer.msg("请选择班级");
+        // return;
+        // }
+        // var fieldData = {};
+        // fieldData.areaId = areaId;
+        // fieldData.studentType=studentType;
+        // downloadFileByForm(contextPath +"/xm/exportBjRank", fieldData);
+        var url = contextPath + "/chepai/importTemplateDownload.xlsx";
+        $.fileDownload(url, {
+            prepareCallback: function (url) {
+                // alert("正在导出,请稍后...");
+                layer.load(2);
+            },
+            successCallback: function (url) {
+                // alert("导出完成！");
+                layer.closeAll('loading');
+
+            },
+            failCallback: function (html, url) {
+                // alert("导出失败，未知的异常。");
+                layer.closeAll('loading');
+                layer.msg("下载模板失败请联系管理员");
+            }
+        });
+    });
+
+    function uploadListenReset(uploadListen) {
+
+    }
+
+    // 选完文件后不自动上传
+    var uploadListen = upload.render({
+        elem: '#test8'
+        , url: contextPath + '/chepai/importExcel'
+        , auto: false,
+        // ,multiple: true
+        accept: 'file',
+        data: {
+
+        },
+        field: 'excel'
+        // , data: {
+        // schoolId: function () {
+        // var schoolId = $('[name="schoolId"]').val();
+        // return schoolId;
+        // }, deleteOriginStudent: function () {
+        // var deleteOriginStudent = $('#deleteOriginStudent').is(":checked");
+        // return deleteOriginStudent;
+        // }
+        // }
+        , bindAction: '#test9',
+        before: function (obj) { // obj参数包含的信息，跟 choose回调完全一致，可参见上文。
+            // console.log(tmpFiles)
+            var hasFile = false;
+            for (var key in tmpFiles) {
+                hasFile = true;
+            }
+            if (hasFile == true) {
+                layer.load(2); // 上传loading
+            } else {
+                layer.msg("请先选择要上传的文件");
+            }
+        }
+        , done: function (res, index, upload) {
+            if (res.code == 2) {
+                layer.confirm('您已超时请重新登录？', function (index) {
+                    // (window.top === window.self) || (window.top.location.href =
+                    // window.self.location.href);
+                    window.top.location.href = contextPath + "/browser/";
+                });
+            } else if (res.code == 3) {
+                layer.msg("没有权限", {
+                    icon: 6
+                });
+            }
+
+            delete tmpFiles[index];
+            layer.closeAll('loading');
+            var successCount = res.successCount;
+            var errorCount = res.errorCount;
+            var messageList = res.errorMessages;
+            var messagestring = "";
+            $.each(messageList, function (i, item) {
+                messagestring += (item + "<br/>");
+            });
+            if (res.state == 'ok') {
+                $("#fileNameDiv").html('无');
+                $("#messageDiv").html(`
+				导入成功` + successCount + `条<br/>
+				导入失败` + errorCount + `条 <br/>
+				` + messagestring + `
+			
+			`);
+                showOkMsg(res.msg);
+                $('.layui-laypage-btn').click();
+            } else if (res.state == 'fail') {
+                $("#fileNameDiv").html('无');
+                $("#messageDiv").html(``);
+                showFailMsg(res.msg);
+            } else if (res.state == 'over') {
+                jumpToUrl(contextPath + res.url);
+            }
+        },
+        choose: function (obj) {
+            // 将每次选择的文件追加到文件队列
+            tmpFiles = this.files = obj.pushFile();
+            // 预读本地文件，如果是多文件，则会遍历。(不支持ie8/9)
+            obj.preview(function (index, file, result) {
+                // var schoolId = $('[name="schoolId"]').val();
+                // if (schoolId == "") {
+                // for (var key in tmpFiles) {
+                // delete tmpFiles[key];
+                // }
+                // layer.msg("请选择学校");
+                // return;
+                // }
+                for (var key in tmpFiles) {
+                    if (index == key) {
+                    } else {
+                        delete tmpFiles[key];
+                    }
+                }
+                // console.log(index); //得到文件索引
+                // console.log(file); //得到文件对象
+                var fileName = file.name;
+                $("#fileNameDiv").html(fileName)
+                // console.log(result); //得到文件base64编码，比如图片
+            });
+        }
+    });
+});
