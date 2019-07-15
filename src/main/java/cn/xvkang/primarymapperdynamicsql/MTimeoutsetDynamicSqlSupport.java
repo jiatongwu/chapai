@@ -6,22 +6,22 @@ import org.mybatis.dynamic.sql.SqlColumn;
 import org.mybatis.dynamic.sql.SqlTable;
 
 public final class MTimeoutsetDynamicSqlSupport {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.757+08:00", comments="Source Table: M_TimeOutSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.874+08:00", comments="Source Table: M_TimeOutSet")
     public static final MTimeoutset MTimeoutset = new MTimeoutset();
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.757+08:00", comments="Source field: M_TimeOutSet.id")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.874+08:00", comments="Source field: M_TimeOutSet.id")
     public static final SqlColumn<Integer> id = MTimeoutset.id;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.757+08:00", comments="Source field: M_TimeOutSet.DevcNum")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.874+08:00", comments="Source field: M_TimeOutSet.DevcNum")
     public static final SqlColumn<Integer> devcnum = MTimeoutset.devcnum;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.757+08:00", comments="Source field: M_TimeOutSet.Doornum")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.874+08:00", comments="Source field: M_TimeOutSet.Doornum")
     public static final SqlColumn<Integer> doornum = MTimeoutset.doornum;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.757+08:00", comments="Source field: M_TimeOutSet.Times")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.874+08:00", comments="Source field: M_TimeOutSet.Times")
     public static final SqlColumn<Integer> times = MTimeoutset.times;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.757+08:00", comments="Source Table: M_TimeOutSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.874+08:00", comments="Source Table: M_TimeOutSet")
     public static final class MTimeoutset extends SqlTable {
         public final SqlColumn<Integer> id = column("id", JDBCType.INTEGER);
 

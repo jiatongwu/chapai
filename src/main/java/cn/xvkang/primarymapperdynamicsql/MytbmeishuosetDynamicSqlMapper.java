@@ -33,25 +33,25 @@ import org.mybatis.dynamic.sql.util.SqlProviderAdapter;
 
 @Mapper
 public interface MytbmeishuosetDynamicSqlMapper {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.663+08:00", comments="Source Table: MYTBMEISHUOSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.799+08:00", comments="Source Table: MYTBMEISHUOSET")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     long count(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.663+08:00", comments="Source Table: MYTBMEISHUOSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.799+08:00", comments="Source Table: MYTBMEISHUOSET")
     @DeleteProvider(type=SqlProviderAdapter.class, method="delete")
     int delete(DeleteStatementProvider deleteStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.663+08:00", comments="Source Table: MYTBMEISHUOSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.799+08:00", comments="Source Table: MYTBMEISHUOSET")
     @InsertProvider(type=SqlProviderAdapter.class, method="insert")
     @SelectKey(statement="SELECT SCOPE_IDENTITY()", keyProperty="record.ctrlnumber", before=true, resultType=Integer.class)
     int insert(InsertStatementProvider<Mytbmeishuoset> insertStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.663+08:00", comments="Source Table: MYTBMEISHUOSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.799+08:00", comments="Source Table: MYTBMEISHUOSET")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @ResultMap("MytbmeishuosetResult")
     Mytbmeishuoset selectOne(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.663+08:00", comments="Source Table: MYTBMEISHUOSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.799+08:00", comments="Source Table: MYTBMEISHUOSET")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @Results(id="MytbmeishuosetResult", value = {
         @Result(column="CtrlNumber", property="ctrlnumber", jdbcType=JdbcType.INTEGER, id=true),
@@ -64,22 +64,22 @@ public interface MytbmeishuosetDynamicSqlMapper {
     })
     List<Mytbmeishuoset> selectMany(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.663+08:00", comments="Source Table: MYTBMEISHUOSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.799+08:00", comments="Source Table: MYTBMEISHUOSET")
     @UpdateProvider(type=SqlProviderAdapter.class, method="update")
     int update(UpdateStatementProvider updateStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.663+08:00", comments="Source Table: MYTBMEISHUOSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.799+08:00", comments="Source Table: MYTBMEISHUOSET")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<Long>> countByExample() {
         return SelectDSL.selectWithMapper(this::count, SqlBuilder.count())
                 .from(mytbmeishuoset);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.663+08:00", comments="Source Table: MYTBMEISHUOSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.799+08:00", comments="Source Table: MYTBMEISHUOSET")
     default DeleteDSL<MyBatis3DeleteModelAdapter<Integer>> deleteByExample() {
         return DeleteDSL.deleteFromWithMapper(this::delete, mytbmeishuoset);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.663+08:00", comments="Source Table: MYTBMEISHUOSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.799+08:00", comments="Source Table: MYTBMEISHUOSET")
     default int deleteByPrimaryKey(Integer ctrlnumber_) {
         return DeleteDSL.deleteFromWithMapper(this::delete, mytbmeishuoset)
                 .where(ctrlnumber, isEqualTo(ctrlnumber_))
@@ -87,7 +87,7 @@ public interface MytbmeishuosetDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.663+08:00", comments="Source Table: MYTBMEISHUOSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.799+08:00", comments="Source Table: MYTBMEISHUOSET")
     default int insert(Mytbmeishuoset record) {
         return insert(SqlBuilder.insert(record)
                 .into(mytbmeishuoset)
@@ -102,7 +102,7 @@ public interface MytbmeishuosetDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.663+08:00", comments="Source Table: MYTBMEISHUOSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.800+08:00", comments="Source Table: MYTBMEISHUOSET")
     default int insertSelective(Mytbmeishuoset record) {
         return insert(SqlBuilder.insert(record)
                 .into(mytbmeishuoset)
@@ -117,19 +117,19 @@ public interface MytbmeishuosetDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.663+08:00", comments="Source Table: MYTBMEISHUOSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.800+08:00", comments="Source Table: MYTBMEISHUOSET")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Mytbmeishuoset>>> selectByExample() {
         return SelectDSL.selectWithMapper(this::selectMany, ctrlnumber, locklocation, deptname, doorid, pcname, produceindex, ctrltype)
                 .from(mytbmeishuoset);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.663+08:00", comments="Source Table: MYTBMEISHUOSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.800+08:00", comments="Source Table: MYTBMEISHUOSET")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Mytbmeishuoset>>> selectDistinctByExample() {
         return SelectDSL.selectDistinctWithMapper(this::selectMany, ctrlnumber, locklocation, deptname, doorid, pcname, produceindex, ctrltype)
                 .from(mytbmeishuoset);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.663+08:00", comments="Source Table: MYTBMEISHUOSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.800+08:00", comments="Source Table: MYTBMEISHUOSET")
     default Mytbmeishuoset selectByPrimaryKey(Integer ctrlnumber_) {
         return SelectDSL.selectWithMapper(this::selectOne, ctrlnumber, locklocation, deptname, doorid, pcname, produceindex, ctrltype)
                 .from(mytbmeishuoset)
@@ -138,7 +138,7 @@ public interface MytbmeishuosetDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.663+08:00", comments="Source Table: MYTBMEISHUOSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.800+08:00", comments="Source Table: MYTBMEISHUOSET")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExample(Mytbmeishuoset record) {
         return UpdateDSL.updateWithMapper(this::update, mytbmeishuoset)
                 .set(ctrlnumber).equalTo(record::getCtrlnumber)
@@ -150,7 +150,7 @@ public interface MytbmeishuosetDynamicSqlMapper {
                 .set(ctrltype).equalTo(record::getCtrltype);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.663+08:00", comments="Source Table: MYTBMEISHUOSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.800+08:00", comments="Source Table: MYTBMEISHUOSET")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExampleSelective(Mytbmeishuoset record) {
         return UpdateDSL.updateWithMapper(this::update, mytbmeishuoset)
                 .set(ctrlnumber).equalToWhenPresent(record::getCtrlnumber)
@@ -162,7 +162,7 @@ public interface MytbmeishuosetDynamicSqlMapper {
                 .set(ctrltype).equalToWhenPresent(record::getCtrltype);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.663+08:00", comments="Source Table: MYTBMEISHUOSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.800+08:00", comments="Source Table: MYTBMEISHUOSET")
     default int updateByPrimaryKey(Mytbmeishuoset record) {
         return UpdateDSL.updateWithMapper(this::update, mytbmeishuoset)
                 .set(locklocation).equalTo(record::getLocklocation)
@@ -176,7 +176,7 @@ public interface MytbmeishuosetDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.664+08:00", comments="Source Table: MYTBMEISHUOSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.800+08:00", comments="Source Table: MYTBMEISHUOSET")
     default int updateByPrimaryKeySelective(Mytbmeishuoset record) {
         return UpdateDSL.updateWithMapper(this::update, mytbmeishuoset)
                 .set(locklocation).equalToWhenPresent(record::getLocklocation)

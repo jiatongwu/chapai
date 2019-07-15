@@ -14,9 +14,9 @@
 		<setting name="mapUnderscoreToCamelCase" value="true" />
 
 	</settings>
-	<typeAliases>
+	<!-- <typeAliases>
 		<package name="cn.xvkang.primaryentity" />
-	</typeAliases>
+	</typeAliases> -->
 	<plugins>
 		<!-- <plugin interceptor="com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor"> 
 			<property name="dialectType" value="sqlserver"/> </plugin> -->

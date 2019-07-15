@@ -6,19 +6,19 @@ import org.mybatis.dynamic.sql.SqlColumn;
 import org.mybatis.dynamic.sql.SqlTable;
 
 public final class DtHordaystuatDynamicSqlSupport {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.388+08:00", comments="Source Table: Dt_HordayStuat")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.628+08:00", comments="Source Table: Dt_HordayStuat")
     public static final DtHordaystuat dtHordaystuat = new DtHordaystuat();
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.388+08:00", comments="Source field: Dt_HordayStuat.id")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.628+08:00", comments="Source field: Dt_HordayStuat.id")
     public static final SqlColumn<Integer> id = dtHordaystuat.id;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.388+08:00", comments="Source field: Dt_HordayStuat.DevcNum")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.628+08:00", comments="Source field: Dt_HordayStuat.DevcNum")
     public static final SqlColumn<Integer> devcnum = dtHordaystuat.devcnum;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.388+08:00", comments="Source field: Dt_HordayStuat.FoorInfo")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.629+08:00", comments="Source field: Dt_HordayStuat.FoorInfo")
     public static final SqlColumn<String> foorinfo = dtHordaystuat.foorinfo;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.388+08:00", comments="Source Table: Dt_HordayStuat")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.628+08:00", comments="Source Table: Dt_HordayStuat")
     public static final class DtHordaystuat extends SqlTable {
         public final SqlColumn<Integer> id = column("id", JDBCType.INTEGER);
 

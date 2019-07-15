@@ -7,22 +7,22 @@ import org.mybatis.dynamic.sql.SqlColumn;
 import org.mybatis.dynamic.sql.SqlTable;
 
 public final class MynocphDynamicSqlSupport {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.770+08:00", comments="Source Table: MyNoCPH")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.885+08:00", comments="Source Table: MyNoCPH")
     public static final Mynocph mynocph = new Mynocph();
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.770+08:00", comments="Source field: MyNoCPH.ID")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.885+08:00", comments="Source field: MyNoCPH.ID")
     public static final SqlColumn<Integer> id = mynocph.id;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.770+08:00", comments="Source field: MyNoCPH.InTime")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.885+08:00", comments="Source field: MyNoCPH.InTime")
     public static final SqlColumn<Date> intime = mynocph.intime;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.770+08:00", comments="Source field: MyNoCPH.InPic")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.885+08:00", comments="Source field: MyNoCPH.InPic")
     public static final SqlColumn<String> inpic = mynocph.inpic;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.770+08:00", comments="Source field: MyNoCPH.InGateName")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.885+08:00", comments="Source field: MyNoCPH.InGateName")
     public static final SqlColumn<String> ingatename = mynocph.ingatename;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.770+08:00", comments="Source Table: MyNoCPH")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.885+08:00", comments="Source Table: MyNoCPH")
     public static final class Mynocph extends SqlTable {
         public final SqlColumn<Integer> id = column("ID", JDBCType.INTEGER);
 

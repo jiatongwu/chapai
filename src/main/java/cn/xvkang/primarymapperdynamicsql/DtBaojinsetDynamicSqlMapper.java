@@ -33,25 +33,25 @@ import org.mybatis.dynamic.sql.util.SqlProviderAdapter;
 
 @Mapper
 public interface DtBaojinsetDynamicSqlMapper {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.351+08:00", comments="Source Table: Dt_BaoJinSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.601+08:00", comments="Source Table: Dt_BaoJinSet")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     long count(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.351+08:00", comments="Source Table: Dt_BaoJinSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.601+08:00", comments="Source Table: Dt_BaoJinSet")
     @DeleteProvider(type=SqlProviderAdapter.class, method="delete")
     int delete(DeleteStatementProvider deleteStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.351+08:00", comments="Source Table: Dt_BaoJinSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.601+08:00", comments="Source Table: Dt_BaoJinSet")
     @InsertProvider(type=SqlProviderAdapter.class, method="insert")
     @SelectKey(statement="SELECT SCOPE_IDENTITY()", keyProperty="record.id", before=false, resultType=Integer.class)
     int insert(InsertStatementProvider<DtBaojinset> insertStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.351+08:00", comments="Source Table: Dt_BaoJinSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.601+08:00", comments="Source Table: Dt_BaoJinSet")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @ResultMap("DtBaojinsetResult")
     DtBaojinset selectOne(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.352+08:00", comments="Source Table: Dt_BaoJinSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.601+08:00", comments="Source Table: Dt_BaoJinSet")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @Results(id="DtBaojinsetResult", value = {
         @Result(column="id", property="id", jdbcType=JdbcType.INTEGER, id=true),
@@ -60,22 +60,22 @@ public interface DtBaojinsetDynamicSqlMapper {
     })
     List<DtBaojinset> selectMany(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.352+08:00", comments="Source Table: Dt_BaoJinSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.601+08:00", comments="Source Table: Dt_BaoJinSet")
     @UpdateProvider(type=SqlProviderAdapter.class, method="update")
     int update(UpdateStatementProvider updateStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.352+08:00", comments="Source Table: Dt_BaoJinSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.602+08:00", comments="Source Table: Dt_BaoJinSet")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<Long>> countByExample() {
         return SelectDSL.selectWithMapper(this::count, SqlBuilder.count())
                 .from(dtBaojinset);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.352+08:00", comments="Source Table: Dt_BaoJinSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.602+08:00", comments="Source Table: Dt_BaoJinSet")
     default DeleteDSL<MyBatis3DeleteModelAdapter<Integer>> deleteByExample() {
         return DeleteDSL.deleteFromWithMapper(this::delete, dtBaojinset);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.352+08:00", comments="Source Table: Dt_BaoJinSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.602+08:00", comments="Source Table: Dt_BaoJinSet")
     default int deleteByPrimaryKey(Integer id_) {
         return DeleteDSL.deleteFromWithMapper(this::delete, dtBaojinset)
                 .where(id, isEqualTo(id_))
@@ -83,7 +83,7 @@ public interface DtBaojinsetDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.352+08:00", comments="Source Table: Dt_BaoJinSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.602+08:00", comments="Source Table: Dt_BaoJinSet")
     default int insert(DtBaojinset record) {
         return insert(SqlBuilder.insert(record)
                 .into(dtBaojinset)
@@ -93,7 +93,7 @@ public interface DtBaojinsetDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.352+08:00", comments="Source Table: Dt_BaoJinSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.602+08:00", comments="Source Table: Dt_BaoJinSet")
     default int insertSelective(DtBaojinset record) {
         return insert(SqlBuilder.insert(record)
                 .into(dtBaojinset)
@@ -103,19 +103,19 @@ public interface DtBaojinsetDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.352+08:00", comments="Source Table: Dt_BaoJinSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.602+08:00", comments="Source Table: Dt_BaoJinSet")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<DtBaojinset>>> selectByExample() {
         return SelectDSL.selectWithMapper(this::selectMany, id, devcnum, baojin)
                 .from(dtBaojinset);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.355+08:00", comments="Source Table: Dt_BaoJinSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.602+08:00", comments="Source Table: Dt_BaoJinSet")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<DtBaojinset>>> selectDistinctByExample() {
         return SelectDSL.selectDistinctWithMapper(this::selectMany, id, devcnum, baojin)
                 .from(dtBaojinset);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.355+08:00", comments="Source Table: Dt_BaoJinSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.602+08:00", comments="Source Table: Dt_BaoJinSet")
     default DtBaojinset selectByPrimaryKey(Integer id_) {
         return SelectDSL.selectWithMapper(this::selectOne, id, devcnum, baojin)
                 .from(dtBaojinset)
@@ -124,21 +124,21 @@ public interface DtBaojinsetDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.355+08:00", comments="Source Table: Dt_BaoJinSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.602+08:00", comments="Source Table: Dt_BaoJinSet")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExample(DtBaojinset record) {
         return UpdateDSL.updateWithMapper(this::update, dtBaojinset)
                 .set(devcnum).equalTo(record::getDevcnum)
                 .set(baojin).equalTo(record::getBaojin);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.355+08:00", comments="Source Table: Dt_BaoJinSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.602+08:00", comments="Source Table: Dt_BaoJinSet")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExampleSelective(DtBaojinset record) {
         return UpdateDSL.updateWithMapper(this::update, dtBaojinset)
                 .set(devcnum).equalToWhenPresent(record::getDevcnum)
                 .set(baojin).equalToWhenPresent(record::getBaojin);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.355+08:00", comments="Source Table: Dt_BaoJinSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.602+08:00", comments="Source Table: Dt_BaoJinSet")
     default int updateByPrimaryKey(DtBaojinset record) {
         return UpdateDSL.updateWithMapper(this::update, dtBaojinset)
                 .set(devcnum).equalTo(record::getDevcnum)
@@ -148,7 +148,7 @@ public interface DtBaojinsetDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.356+08:00", comments="Source Table: Dt_BaoJinSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.602+08:00", comments="Source Table: Dt_BaoJinSet")
     default int updateByPrimaryKeySelective(DtBaojinset record) {
         return UpdateDSL.updateWithMapper(this::update, dtBaojinset)
                 .set(devcnum).equalToWhenPresent(record::getDevcnum)

@@ -30,19 +30,19 @@ import org.mybatis.dynamic.sql.util.SqlProviderAdapter;
 
 @Mapper
 public interface MycarcanceltableDynamicSqlMapper {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.546+08:00", comments="Source Table: MYCarCancelTable")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.749+08:00", comments="Source Table: MYCarCancelTable")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     long count(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.546+08:00", comments="Source Table: MYCarCancelTable")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.749+08:00", comments="Source Table: MYCarCancelTable")
     @DeleteProvider(type=SqlProviderAdapter.class, method="delete")
     int delete(DeleteStatementProvider deleteStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.546+08:00", comments="Source Table: MYCarCancelTable")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.749+08:00", comments="Source Table: MYCarCancelTable")
     @InsertProvider(type=SqlProviderAdapter.class, method="insert")
     int insert(InsertStatementProvider<Mycarcanceltable> insertStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.546+08:00", comments="Source Table: MYCarCancelTable")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.749+08:00", comments="Source Table: MYCarCancelTable")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @Results(id="MycarcanceltableResult", value = {
         @Result(column="UserNO", property="userno", jdbcType=JdbcType.VARCHAR),
@@ -66,22 +66,22 @@ public interface MycarcanceltableDynamicSqlMapper {
     })
     List<Mycarcanceltable> selectMany(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.546+08:00", comments="Source Table: MYCarCancelTable")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.749+08:00", comments="Source Table: MYCarCancelTable")
     @UpdateProvider(type=SqlProviderAdapter.class, method="update")
     int update(UpdateStatementProvider updateStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.546+08:00", comments="Source Table: MYCarCancelTable")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.749+08:00", comments="Source Table: MYCarCancelTable")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<Long>> countByExample() {
         return SelectDSL.selectWithMapper(this::count, SqlBuilder.count())
                 .from(mycarcanceltable);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.547+08:00", comments="Source Table: MYCarCancelTable")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.749+08:00", comments="Source Table: MYCarCancelTable")
     default DeleteDSL<MyBatis3DeleteModelAdapter<Integer>> deleteByExample() {
         return DeleteDSL.deleteFromWithMapper(this::delete, mycarcanceltable);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.547+08:00", comments="Source Table: MYCarCancelTable")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.749+08:00", comments="Source Table: MYCarCancelTable")
     default int insert(Mycarcanceltable record) {
         return insert(SqlBuilder.insert(record)
                 .into(mycarcanceltable)
@@ -107,7 +107,7 @@ public interface MycarcanceltableDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.547+08:00", comments="Source Table: MYCarCancelTable")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.749+08:00", comments="Source Table: MYCarCancelTable")
     default int insertSelective(Mycarcanceltable record) {
         return insert(SqlBuilder.insert(record)
                 .into(mycarcanceltable)
@@ -133,19 +133,19 @@ public interface MycarcanceltableDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.547+08:00", comments="Source Table: MYCarCancelTable")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.750+08:00", comments="Source Table: MYCarCancelTable")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Mycarcanceltable>>> selectByExample() {
         return SelectDSL.selectWithMapper(this::selectMany, userno, cardno, username, sex, homeaddress, deptname, telnumber, mobnumber, issueusercard, cph, carcardtype, carissuedate, balance, carvalidstartdate, carvalidenddate, cancelcardno, canceltime, cancelusername)
                 .from(mycarcanceltable);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.547+08:00", comments="Source Table: MYCarCancelTable")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.750+08:00", comments="Source Table: MYCarCancelTable")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Mycarcanceltable>>> selectDistinctByExample() {
         return SelectDSL.selectDistinctWithMapper(this::selectMany, userno, cardno, username, sex, homeaddress, deptname, telnumber, mobnumber, issueusercard, cph, carcardtype, carissuedate, balance, carvalidstartdate, carvalidenddate, cancelcardno, canceltime, cancelusername)
                 .from(mycarcanceltable);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.547+08:00", comments="Source Table: MYCarCancelTable")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.750+08:00", comments="Source Table: MYCarCancelTable")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExample(Mycarcanceltable record) {
         return UpdateDSL.updateWithMapper(this::update, mycarcanceltable)
                 .set(userno).equalTo(record::getUserno)
@@ -168,7 +168,7 @@ public interface MycarcanceltableDynamicSqlMapper {
                 .set(cancelusername).equalTo(record::getCancelusername);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.547+08:00", comments="Source Table: MYCarCancelTable")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.750+08:00", comments="Source Table: MYCarCancelTable")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExampleSelective(Mycarcanceltable record) {
         return UpdateDSL.updateWithMapper(this::update, mycarcanceltable)
                 .set(userno).equalToWhenPresent(record::getUserno)

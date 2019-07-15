@@ -25,6 +25,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.security.core.authority.AuthorityUtils;
 import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.WebAuthenticationDetailsSource;
 import org.springframework.stereotype.Component;
 import org.springframework.util.AntPathMatcher;
@@ -81,8 +82,8 @@ public class AppLoginFilter extends OncePerRequestFilter implements Initializing
 	 * 验证请求url与配置的url是否匹配的工具类
 	 */
 	private AntPathMatcher pathMatcher = new AntPathMatcher();
-	// @Autowired
-	// private PasswordEncoder passwordEncoder;
+	@Autowired
+	private PasswordEncoder passwordEncoder;
 	@Autowired
 	private ObjectMapper objectMapper;
 
@@ -94,6 +95,7 @@ public class AppLoginFilter extends OncePerRequestFilter implements Initializing
 		super.afterPropertiesSet();
 	}
 
+	@SuppressWarnings("unused")
 	@Override
 	protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain chain)
 			throws ServletException, IOException {
@@ -129,12 +131,9 @@ public class AppLoginFilter extends OncePerRequestFilter implements Initializing
 			} else {
 				// 用户名存在 校验下密码
 				String password2 = loadUserByUsername.getPassword();
-				// TODO
-				String encode = null;// passwordEncoder.encode(password);
+				String encode = passwordEncoder.encode(password);
 				logger.debug(password + "正确密码" + encode);
-				// if (passwordEncoder.matches(password, password2)) {
-				if (1 == 1) {
-
+				if (passwordEncoder.matches(password, password2)) {
 				} else {
 					isLoginOk = false;
 				}

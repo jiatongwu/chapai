@@ -69,6 +69,32 @@ public class Constants {
 		}
 	}
 
+	public static enum DEFAULT_USER_NAME {
+		管理员("管理员");
+		private String name;
+
+		DEFAULT_USER_NAME(String name) {
+			this.name = name;
+		}
+
+		public String getName() {
+			return name;
+		}
+
+		public void setName(String name) {
+			this.name = name;
+		}
+
+		public static List<String> getAll() {
+			List<String> result = new ArrayList<>();
+			CENSUE_NAME_ENUM[] values = CENSUE_NAME_ENUM.values();
+			for (CENSUE_NAME_ENUM value : values) {
+				result.add(value.getName());
+			}
+			return result;
+		}
+	}
+
 	public static enum FIRST_TRIAL_STATUS {
 		初审通过(1, "初审通过"), 初审不通过(2, "初审不通过");
 		private int status;
@@ -110,7 +136,7 @@ public class Constants {
 		账号不存在(6, "账号不存在"), 密码错误(7, "密码错误"), 您已经登录了不能再次登录(8, "您已经登录了不能再次登录"), 该用户已注册(9, "该用户已注册"),
 		扫码登录时_登录失败提示信息_这种情况不应该出现(10, "扫码登录失败,这种情况不应该出现，因为如果超时了前端就应该提示重新获取验证码，让用户重新扫"), 刚注册的用户不允许登录(11, "刚注册的用户不允许登录"),
 		验证码错误(12, "验证码错误"), 登录失败(15, "登录失败"), 短信验证码发送失败(16, "短信验证码发送失败"), 找不到(404, "迷路了"), 您被挤掉线了(17, "您被挤掉线了"),
-		用户名或密码错误(18, "用户名或密码错误"), 用户名或短信验证码错误(18, "用户名或短信验证码错误");
+		用户名或密码错误(18, "用户名或密码错误"), 用户名或短信验证码错误(18, "用户名或短信验证码错误"), 账号被禁用(19, "账号被禁用"),;
 
 		private Integer code;
 		private String message;
@@ -129,8 +155,26 @@ public class Constants {
 		}
 	}
 
-	public static enum DEFAULT_ROLES_ENUM {
+	public static enum DEFAULT_ROLES_ENUM_FUXING {
 		学生家长角色("student_parent"), 学校管理员角色("school_manager");
+		private String code;
+
+		DEFAULT_ROLES_ENUM_FUXING(String code) {
+			this.code = code;
+		}
+
+		public String getCode() {
+			return code;
+		}
+
+		public void setCode(String code) {
+			this.code = code;
+		}
+
+	}
+
+	public static enum DEFAULT_ROLES_ENUM {
+		管理员("admin_user"), 普通用户("normal_user"), 超级管理员("super_admin");
 		private String code;
 
 		DEFAULT_ROLES_ENUM(String code) {

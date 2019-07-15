@@ -33,7 +33,7 @@ function modifyPwd() {
 		type : 2,
 		area : [ '500px', '450px' ],
 		title : '修改密码',
-		content : contextPath + '/browser/user/modifyPwdPage'
+		content : contextPath + '/user/modifyPwdPage.html'
 	});
 }
 String.prototype.replaceAll = function (search, replacement) {

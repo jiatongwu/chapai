@@ -6,52 +6,52 @@ import org.mybatis.dynamic.sql.SqlColumn;
 import org.mybatis.dynamic.sql.SqlTable;
 
 public final class PermissionDynamicSqlSupport {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.866+08:00", comments="Source Table: permission")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.940+08:00", comments="Source Table: permission")
     public static final Permission permission = new Permission();
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.866+08:00", comments="Source field: permission.id")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.940+08:00", comments="Source field: permission.id")
     public static final SqlColumn<Integer> id = permission.id;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.866+08:00", comments="Source field: permission.parent_id")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.940+08:00", comments="Source field: permission.parent_id")
     public static final SqlColumn<Integer> parentId = permission.parentId;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.866+08:00", comments="Source field: permission.name")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.940+08:00", comments="Source field: permission.name")
     public static final SqlColumn<String> name = permission.name;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.866+08:00", comments="Source field: permission.describe")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.940+08:00", comments="Source field: permission.describe")
     public static final SqlColumn<String> describe = permission.describe;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.866+08:00", comments="Source field: permission.url")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.941+08:00", comments="Source field: permission.url")
     public static final SqlColumn<String> url = permission.url;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.866+08:00", comments="Source field: permission.icon")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.941+08:00", comments="Source field: permission.icon")
     public static final SqlColumn<String> icon = permission.icon;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.866+08:00", comments="Source field: permission.num")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.941+08:00", comments="Source field: permission.num")
     public static final SqlColumn<Integer> num = permission.num;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.866+08:00", comments="Source field: permission.code")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.941+08:00", comments="Source field: permission.code")
     public static final SqlColumn<String> code = permission.code;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.866+08:00", comments="Source field: permission.spread")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.941+08:00", comments="Source field: permission.spread")
     public static final SqlColumn<String> spread = permission.spread;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.866+08:00", comments="Source field: permission.attribute")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.941+08:00", comments="Source field: permission.attribute")
     public static final SqlColumn<Integer> attribute = permission.attribute;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.866+08:00", comments="Source field: permission.type")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.941+08:00", comments="Source field: permission.type")
     public static final SqlColumn<Integer> type = permission.type;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.866+08:00", comments="Source field: permission.level")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.941+08:00", comments="Source field: permission.level")
     public static final SqlColumn<Integer> level = permission.level;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.866+08:00", comments="Source field: permission.time")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.941+08:00", comments="Source field: permission.time")
     public static final SqlColumn<String> time = permission.time;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.866+08:00", comments="Source field: permission.checked")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.941+08:00", comments="Source field: permission.checked")
     public static final SqlColumn<Integer> checked = permission.checked;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.866+08:00", comments="Source Table: permission")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.940+08:00", comments="Source Table: permission")
     public static final class Permission extends SqlTable {
         public final SqlColumn<Integer> id = column("id", JDBCType.INTEGER);
 

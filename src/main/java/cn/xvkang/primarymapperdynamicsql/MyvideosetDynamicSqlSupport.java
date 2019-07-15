@@ -6,31 +6,31 @@ import org.mybatis.dynamic.sql.SqlColumn;
 import org.mybatis.dynamic.sql.SqlTable;
 
 public final class MyvideosetDynamicSqlSupport {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.668+08:00", comments="Source Table: MYVideoSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.802+08:00", comments="Source Table: MYVideoSet")
     public static final Myvideoset myvideoset = new Myvideoset();
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.668+08:00", comments="Source field: MYVideoSet.ID")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.802+08:00", comments="Source field: MYVideoSet.ID")
     public static final SqlColumn<Integer> id = myvideoset.id;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.668+08:00", comments="Source field: MYVideoSet.VideoIP")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.802+08:00", comments="Source field: MYVideoSet.VideoIP")
     public static final SqlColumn<String> videoip = myvideoset.videoip;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.668+08:00", comments="Source field: MYVideoSet.VideoPort")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.802+08:00", comments="Source field: MYVideoSet.VideoPort")
     public static final SqlColumn<String> videoport = myvideoset.videoport;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.668+08:00", comments="Source field: MYVideoSet.VideoUserName")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.802+08:00", comments="Source field: MYVideoSet.VideoUserName")
     public static final SqlColumn<String> videousername = myvideoset.videousername;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.668+08:00", comments="Source field: MYVideoSet.VideoPassWord")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.802+08:00", comments="Source field: MYVideoSet.VideoPassWord")
     public static final SqlColumn<String> videopassword = myvideoset.videopassword;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.668+08:00", comments="Source field: MYVideoSet.PCName")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.802+08:00", comments="Source field: MYVideoSet.PCName")
     public static final SqlColumn<String> pcname = myvideoset.pcname;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.668+08:00", comments="Source field: MYVideoSet.VideoType")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.802+08:00", comments="Source field: MYVideoSet.VideoType")
     public static final SqlColumn<String> videotype = myvideoset.videotype;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.668+08:00", comments="Source Table: MYVideoSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.802+08:00", comments="Source Table: MYVideoSet")
     public static final class Myvideoset extends SqlTable {
         public final SqlColumn<Integer> id = column("ID", JDBCType.INTEGER);
 

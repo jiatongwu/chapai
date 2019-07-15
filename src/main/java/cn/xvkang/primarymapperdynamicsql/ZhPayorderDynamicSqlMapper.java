@@ -31,20 +31,20 @@ import org.mybatis.dynamic.sql.util.SqlProviderAdapter;
 
 @Mapper
 public interface ZhPayorderDynamicSqlMapper {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.909+08:00", comments="Source Table: zh_PayOrder")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.966+08:00", comments="Source Table: zh_PayOrder")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     long count(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.909+08:00", comments="Source Table: zh_PayOrder")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.966+08:00", comments="Source Table: zh_PayOrder")
     @DeleteProvider(type=SqlProviderAdapter.class, method="delete")
     int delete(DeleteStatementProvider deleteStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.909+08:00", comments="Source Table: zh_PayOrder")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.967+08:00", comments="Source Table: zh_PayOrder")
     @InsertProvider(type=SqlProviderAdapter.class, method="insert")
     @SelectKey(statement="SELECT SCOPE_IDENTITY()", keyProperty="record.id", before=false, resultType=Integer.class)
     int insert(InsertStatementProvider<ZhPayorder> insertStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.909+08:00", comments="Source Table: zh_PayOrder")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.967+08:00", comments="Source Table: zh_PayOrder")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @Results(id="ZhPayorderResult", value = {
         @Result(column="id", property="id", jdbcType=JdbcType.INTEGER),
@@ -60,22 +60,22 @@ public interface ZhPayorderDynamicSqlMapper {
     })
     List<ZhPayorder> selectMany(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.909+08:00", comments="Source Table: zh_PayOrder")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.967+08:00", comments="Source Table: zh_PayOrder")
     @UpdateProvider(type=SqlProviderAdapter.class, method="update")
     int update(UpdateStatementProvider updateStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.909+08:00", comments="Source Table: zh_PayOrder")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.967+08:00", comments="Source Table: zh_PayOrder")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<Long>> countByExample() {
         return SelectDSL.selectWithMapper(this::count, SqlBuilder.count())
                 .from(zhPayorder);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.909+08:00", comments="Source Table: zh_PayOrder")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.967+08:00", comments="Source Table: zh_PayOrder")
     default DeleteDSL<MyBatis3DeleteModelAdapter<Integer>> deleteByExample() {
         return DeleteDSL.deleteFromWithMapper(this::delete, zhPayorder);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.909+08:00", comments="Source Table: zh_PayOrder")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.967+08:00", comments="Source Table: zh_PayOrder")
     default int insert(ZhPayorder record) {
         return insert(SqlBuilder.insert(record)
                 .into(zhPayorder)
@@ -92,7 +92,7 @@ public interface ZhPayorderDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.909+08:00", comments="Source Table: zh_PayOrder")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.967+08:00", comments="Source Table: zh_PayOrder")
     default int insertSelective(ZhPayorder record) {
         return insert(SqlBuilder.insert(record)
                 .into(zhPayorder)
@@ -109,19 +109,19 @@ public interface ZhPayorderDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.909+08:00", comments="Source Table: zh_PayOrder")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.967+08:00", comments="Source Table: zh_PayOrder")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<ZhPayorder>>> selectByExample() {
         return SelectDSL.selectWithMapper(this::selectMany, id, payorderno, orderno, carno, cartype, paytime, paymoney, paytype, entertime, synflag)
                 .from(zhPayorder);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.909+08:00", comments="Source Table: zh_PayOrder")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.967+08:00", comments="Source Table: zh_PayOrder")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<ZhPayorder>>> selectDistinctByExample() {
         return SelectDSL.selectDistinctWithMapper(this::selectMany, id, payorderno, orderno, carno, cartype, paytime, paymoney, paytype, entertime, synflag)
                 .from(zhPayorder);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.909+08:00", comments="Source Table: zh_PayOrder")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.967+08:00", comments="Source Table: zh_PayOrder")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExample(ZhPayorder record) {
         return UpdateDSL.updateWithMapper(this::update, zhPayorder)
                 .set(payorderno).equalTo(record::getPayorderno)
@@ -135,7 +135,7 @@ public interface ZhPayorderDynamicSqlMapper {
                 .set(synflag).equalTo(record::getSynflag);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.909+08:00", comments="Source Table: zh_PayOrder")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.967+08:00", comments="Source Table: zh_PayOrder")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExampleSelective(ZhPayorder record) {
         return UpdateDSL.updateWithMapper(this::update, zhPayorder)
                 .set(payorderno).equalToWhenPresent(record::getPayorderno)

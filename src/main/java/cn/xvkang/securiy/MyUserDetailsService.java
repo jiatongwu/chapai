@@ -27,7 +27,7 @@ public class MyUserDetailsService implements UserDetailsService {
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 		// cn.xvkang.entitydynamicsql.User findByUsername =
 		// userService.findByUsername(username);
-		System.out.println("123456的密码是:"+passwordEncoder.encode("123456"));
+		System.out.println("123456的密码是:" + passwordEncoder.encode("123456"));
 		UserDto userDto = userService.loginFindByUsername(username);
 		if (userDto != null) {
 			List<String> authorityList = new ArrayList<>();
@@ -35,7 +35,8 @@ public class MyUserDetailsService implements UserDetailsService {
 			authorityList.addAll(userDto.getPermissionCodes());
 			String join = StringUtils.join(authorityList, ',');
 			MyUserDetails myUserDetails = new MyUserDetails(username, userDto.getUser().getPassword(), true, true, true,
-					true, AuthorityUtils.commaSeparatedStringToAuthorityList(join));
+					userDto.getUser().getDisabled().intValue() == 1 ? false : true,
+					AuthorityUtils.commaSeparatedStringToAuthorityList(join));
 			userDto.getUser().setPassword(null);
 			userDto.getUser().setSalt(null);
 			myUserDetails.setMySystemUser(userDto.getUser());

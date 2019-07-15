@@ -7,43 +7,43 @@ import org.mybatis.dynamic.sql.SqlColumn;
 import org.mybatis.dynamic.sql.SqlTable;
 
 public final class ZhCouponDynamicSqlSupport {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.880+08:00", comments="Source Table: zh_Coupon")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.955+08:00", comments="Source Table: zh_Coupon")
     public static final ZhCoupon zhCoupon = new ZhCoupon();
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.880+08:00", comments="Source field: zh_Coupon.id")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.955+08:00", comments="Source field: zh_Coupon.id")
     public static final SqlColumn<Integer> id = zhCoupon.id;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.880+08:00", comments="Source field: zh_Coupon.orderNo")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.955+08:00", comments="Source field: zh_Coupon.orderNo")
     public static final SqlColumn<String> orderno = zhCoupon.orderno;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.880+08:00", comments="Source field: zh_Coupon.carNo")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.955+08:00", comments="Source field: zh_Coupon.carNo")
     public static final SqlColumn<String> carno = zhCoupon.carno;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.880+08:00", comments="Source field: zh_Coupon.couponType")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.955+08:00", comments="Source field: zh_Coupon.couponType")
     public static final SqlColumn<String> coupontype = zhCoupon.coupontype;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.880+08:00", comments="Source field: zh_Coupon.couponValue")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.955+08:00", comments="Source field: zh_Coupon.couponValue")
     public static final SqlColumn<String> couponvalue = zhCoupon.couponvalue;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.880+08:00", comments="Source field: zh_Coupon.invalidTime")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.955+08:00", comments="Source field: zh_Coupon.invalidTime")
     public static final SqlColumn<Date> invalidtime = zhCoupon.invalidtime;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.880+08:00", comments="Source field: zh_Coupon.couponId")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.955+08:00", comments="Source field: zh_Coupon.couponId")
     public static final SqlColumn<String> couponid = zhCoupon.couponid;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.880+08:00", comments="Source field: zh_Coupon.merchantId")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.955+08:00", comments="Source field: zh_Coupon.merchantId")
     public static final SqlColumn<String> merchantid = zhCoupon.merchantid;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.880+08:00", comments="Source field: zh_Coupon.merchantName")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.955+08:00", comments="Source field: zh_Coupon.merchantName")
     public static final SqlColumn<String> merchantname = zhCoupon.merchantname;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.880+08:00", comments="Source field: zh_Coupon.couponStatus")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.955+08:00", comments="Source field: zh_Coupon.couponStatus")
     public static final SqlColumn<Integer> couponstatus = zhCoupon.couponstatus;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.880+08:00", comments="Source field: zh_Coupon.alterTime")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.955+08:00", comments="Source field: zh_Coupon.alterTime")
     public static final SqlColumn<String> altertime = zhCoupon.altertime;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.880+08:00", comments="Source Table: zh_Coupon")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.955+08:00", comments="Source Table: zh_Coupon")
     public static final class ZhCoupon extends SqlTable {
         public final SqlColumn<Integer> id = column("id", JDBCType.INTEGER);
 

@@ -6,25 +6,25 @@ import org.mybatis.dynamic.sql.SqlColumn;
 import org.mybatis.dynamic.sql.SqlTable;
 
 public final class TblconstantDynamicSqlSupport {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.874+08:00", comments="Source Table: tblConstant")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.948+08:00", comments="Source Table: tblConstant")
     public static final Tblconstant tblconstant = new Tblconstant();
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.874+08:00", comments="Source field: tblConstant.Types")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.948+08:00", comments="Source field: tblConstant.Types")
     public static final SqlColumn<String> types = tblconstant.types;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.874+08:00", comments="Source field: tblConstant.OrderNO")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.948+08:00", comments="Source field: tblConstant.OrderNO")
     public static final SqlColumn<Short> orderno = tblconstant.orderno;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.874+08:00", comments="Source field: tblConstant.Keys")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.948+08:00", comments="Source field: tblConstant.Keys")
     public static final SqlColumn<String> keys = tblconstant.keys;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.874+08:00", comments="Source field: tblConstant.Value")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.948+08:00", comments="Source field: tblConstant.Value")
     public static final SqlColumn<String> value = tblconstant.value;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.874+08:00", comments="Source field: tblConstant.Flag")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.948+08:00", comments="Source field: tblConstant.Flag")
     public static final SqlColumn<Byte> flag = tblconstant.flag;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.874+08:00", comments="Source Table: tblConstant")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.948+08:00", comments="Source Table: tblConstant")
     public static final class Tblconstant extends SqlTable {
         public final SqlColumn<String> types = column("Types", JDBCType.VARCHAR);
 

@@ -59,6 +59,7 @@ public class PrimaryDataSourceConfig {
 		List<Resource> resourceList = new ArrayList<>();
 		Arrays.asList(resources1, resources2);
 		sessionFactory.setMapperLocations(resourceList.toArray(new Resource[resourceList.size()]));
+		sessionFactory.setTypeAliasesPackage("cn.xvkang.primaryentity");
 		sessionFactory.setDataSource(primaryDataSource);
 		return sessionFactory.getObject();
 	}

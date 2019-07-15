@@ -33,25 +33,25 @@ import org.mybatis.dynamic.sql.util.SqlProviderAdapter;
 
 @Mapper
 public interface SelectlossschemeDynamicSqlMapper {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.799+08:00", comments="Source Table: SelectLossScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.912+08:00", comments="Source Table: SelectLossScheme")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     long count(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.799+08:00", comments="Source Table: SelectLossScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.912+08:00", comments="Source Table: SelectLossScheme")
     @DeleteProvider(type=SqlProviderAdapter.class, method="delete")
     int delete(DeleteStatementProvider deleteStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.799+08:00", comments="Source Table: SelectLossScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.912+08:00", comments="Source Table: SelectLossScheme")
     @InsertProvider(type=SqlProviderAdapter.class, method="insert")
     @SelectKey(statement="SELECT SCOPE_IDENTITY()", keyProperty="record.schid", before=false, resultType=Integer.class)
     int insert(InsertStatementProvider<Selectlossscheme> insertStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.799+08:00", comments="Source Table: SelectLossScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.912+08:00", comments="Source Table: SelectLossScheme")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @ResultMap("SelectlossschemeResult")
     Selectlossscheme selectOne(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.799+08:00", comments="Source Table: SelectLossScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.912+08:00", comments="Source Table: SelectLossScheme")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @Results(id="SelectlossschemeResult", value = {
         @Result(column="SchId", property="schid", jdbcType=JdbcType.INTEGER, id=true),
@@ -64,22 +64,22 @@ public interface SelectlossschemeDynamicSqlMapper {
     })
     List<Selectlossscheme> selectMany(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.799+08:00", comments="Source Table: SelectLossScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.912+08:00", comments="Source Table: SelectLossScheme")
     @UpdateProvider(type=SqlProviderAdapter.class, method="update")
     int update(UpdateStatementProvider updateStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.799+08:00", comments="Source Table: SelectLossScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.912+08:00", comments="Source Table: SelectLossScheme")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<Long>> countByExample() {
         return SelectDSL.selectWithMapper(this::count, SqlBuilder.count())
                 .from(selectlossscheme);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.799+08:00", comments="Source Table: SelectLossScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.912+08:00", comments="Source Table: SelectLossScheme")
     default DeleteDSL<MyBatis3DeleteModelAdapter<Integer>> deleteByExample() {
         return DeleteDSL.deleteFromWithMapper(this::delete, selectlossscheme);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.799+08:00", comments="Source Table: SelectLossScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.912+08:00", comments="Source Table: SelectLossScheme")
     default int deleteByPrimaryKey(Integer schid_) {
         return DeleteDSL.deleteFromWithMapper(this::delete, selectlossscheme)
                 .where(schid, isEqualTo(schid_))
@@ -87,7 +87,7 @@ public interface SelectlossschemeDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.799+08:00", comments="Source Table: SelectLossScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.912+08:00", comments="Source Table: SelectLossScheme")
     default int insert(Selectlossscheme record) {
         return insert(SqlBuilder.insert(record)
                 .into(selectlossscheme)
@@ -101,7 +101,7 @@ public interface SelectlossschemeDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.799+08:00", comments="Source Table: SelectLossScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.912+08:00", comments="Source Table: SelectLossScheme")
     default int insertSelective(Selectlossscheme record) {
         return insert(SqlBuilder.insert(record)
                 .into(selectlossscheme)
@@ -115,19 +115,19 @@ public interface SelectlossschemeDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.799+08:00", comments="Source Table: SelectLossScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.913+08:00", comments="Source Table: SelectLossScheme")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Selectlossscheme>>> selectByExample() {
         return SelectDSL.selectWithMapper(this::selectMany, schid, schname, fieldname, operators, selectvalues, startime, endtime)
                 .from(selectlossscheme);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.799+08:00", comments="Source Table: SelectLossScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.913+08:00", comments="Source Table: SelectLossScheme")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Selectlossscheme>>> selectDistinctByExample() {
         return SelectDSL.selectDistinctWithMapper(this::selectMany, schid, schname, fieldname, operators, selectvalues, startime, endtime)
                 .from(selectlossscheme);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.799+08:00", comments="Source Table: SelectLossScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.913+08:00", comments="Source Table: SelectLossScheme")
     default Selectlossscheme selectByPrimaryKey(Integer schid_) {
         return SelectDSL.selectWithMapper(this::selectOne, schid, schname, fieldname, operators, selectvalues, startime, endtime)
                 .from(selectlossscheme)
@@ -136,7 +136,7 @@ public interface SelectlossschemeDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.799+08:00", comments="Source Table: SelectLossScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.913+08:00", comments="Source Table: SelectLossScheme")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExample(Selectlossscheme record) {
         return UpdateDSL.updateWithMapper(this::update, selectlossscheme)
                 .set(schname).equalTo(record::getSchname)
@@ -147,7 +147,7 @@ public interface SelectlossschemeDynamicSqlMapper {
                 .set(endtime).equalTo(record::getEndtime);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.799+08:00", comments="Source Table: SelectLossScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.913+08:00", comments="Source Table: SelectLossScheme")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExampleSelective(Selectlossscheme record) {
         return UpdateDSL.updateWithMapper(this::update, selectlossscheme)
                 .set(schname).equalToWhenPresent(record::getSchname)
@@ -158,7 +158,7 @@ public interface SelectlossschemeDynamicSqlMapper {
                 .set(endtime).equalToWhenPresent(record::getEndtime);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.799+08:00", comments="Source Table: SelectLossScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.913+08:00", comments="Source Table: SelectLossScheme")
     default int updateByPrimaryKey(Selectlossscheme record) {
         return UpdateDSL.updateWithMapper(this::update, selectlossscheme)
                 .set(schname).equalTo(record::getSchname)
@@ -172,7 +172,7 @@ public interface SelectlossschemeDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.799+08:00", comments="Source Table: SelectLossScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.913+08:00", comments="Source Table: SelectLossScheme")
     default int updateByPrimaryKeySelective(Selectlossscheme record) {
         return UpdateDSL.updateWithMapper(this::update, selectlossscheme)
                 .set(schname).equalToWhenPresent(record::getSchname)

@@ -40,6 +40,7 @@
                     <dd>
                         <a href="javascript:;">修改密码</a>
                     </dd> -->
+                    <dd><a href="javascript:;" onclick="modifyPwd();">修改密码</a></dd>
                     <dd>
                         <a href="javascript:logout();">安全退出</a>
                     </dd>
@@ -62,7 +63,7 @@
                 </a></li>
 
 
-                <sec:authorize access="hasRole('super_admin')">
+                <sec:authorize access="hasAnyRole('super_admin','admin_user','normal_user')">
                     <li class="lau-nav-item"><a class="lau-nav-header"><i
                             class="layui-icon layui-icon-right"></i><cite>车牌系统</cite></a>
                         <dl class="lau-nav-child">
@@ -78,6 +79,8 @@
                             </dd>
                         </dl>
                     </li>
+                </sec:authorize>
+                <sec:authorize access="hasAnyRole('super_admin','admin_user')">
                     <li class="lau-nav-item"><a class="lau-nav-header"><i
                             class="layui-icon layui-icon-right"></i><cite>管理中心</cite></a>
                         <dl class="lau-nav-child">

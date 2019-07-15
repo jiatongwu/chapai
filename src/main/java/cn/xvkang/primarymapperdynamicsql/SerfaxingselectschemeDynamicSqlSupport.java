@@ -6,31 +6,31 @@ import org.mybatis.dynamic.sql.SqlColumn;
 import org.mybatis.dynamic.sql.SqlTable;
 
 public final class SerfaxingselectschemeDynamicSqlSupport {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.802+08:00", comments="Source Table: SerFaxingSelectScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.915+08:00", comments="Source Table: SerFaxingSelectScheme")
     public static final Serfaxingselectscheme serfaxingselectscheme = new Serfaxingselectscheme();
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.802+08:00", comments="Source field: SerFaxingSelectScheme.SchId")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.915+08:00", comments="Source field: SerFaxingSelectScheme.SchId")
     public static final SqlColumn<Integer> schid = serfaxingselectscheme.schid;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.802+08:00", comments="Source field: SerFaxingSelectScheme.SchName")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.915+08:00", comments="Source field: SerFaxingSelectScheme.SchName")
     public static final SqlColumn<String> schname = serfaxingselectscheme.schname;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.802+08:00", comments="Source field: SerFaxingSelectScheme.FieldName")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.915+08:00", comments="Source field: SerFaxingSelectScheme.FieldName")
     public static final SqlColumn<String> fieldname = serfaxingselectscheme.fieldname;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.802+08:00", comments="Source field: SerFaxingSelectScheme.Operators")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.915+08:00", comments="Source field: SerFaxingSelectScheme.Operators")
     public static final SqlColumn<String> operators = serfaxingselectscheme.operators;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.802+08:00", comments="Source field: SerFaxingSelectScheme.Selectvalues")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.915+08:00", comments="Source field: SerFaxingSelectScheme.Selectvalues")
     public static final SqlColumn<String> selectvalues = serfaxingselectscheme.selectvalues;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.802+08:00", comments="Source field: SerFaxingSelectScheme.startime")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.915+08:00", comments="Source field: SerFaxingSelectScheme.startime")
     public static final SqlColumn<String> startime = serfaxingselectscheme.startime;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.802+08:00", comments="Source field: SerFaxingSelectScheme.endtime")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.915+08:00", comments="Source field: SerFaxingSelectScheme.endtime")
     public static final SqlColumn<String> endtime = serfaxingselectscheme.endtime;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.802+08:00", comments="Source Table: SerFaxingSelectScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.915+08:00", comments="Source Table: SerFaxingSelectScheme")
     public static final class Serfaxingselectscheme extends SqlTable {
         public final SqlColumn<Integer> schid = column("SchId", JDBCType.INTEGER);
 

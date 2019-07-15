@@ -30,19 +30,19 @@ import org.mybatis.dynamic.sql.util.SqlProviderAdapter;
 
 @Mapper
 public interface MyscancodepayDynamicSqlMapper {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.775+08:00", comments="Source Table: MyScanCodePay")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.888+08:00", comments="Source Table: MyScanCodePay")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     long count(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.775+08:00", comments="Source Table: MyScanCodePay")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.888+08:00", comments="Source Table: MyScanCodePay")
     @DeleteProvider(type=SqlProviderAdapter.class, method="delete")
     int delete(DeleteStatementProvider deleteStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.775+08:00", comments="Source Table: MyScanCodePay")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.889+08:00", comments="Source Table: MyScanCodePay")
     @InsertProvider(type=SqlProviderAdapter.class, method="insert")
     int insert(InsertStatementProvider<Myscancodepay> insertStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.775+08:00", comments="Source Table: MyScanCodePay")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.889+08:00", comments="Source Table: MyScanCodePay")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @Results(id="MyscancodepayResult", value = {
         @Result(column="SMPayment", property="smpayment", jdbcType=JdbcType.BIT),
@@ -59,22 +59,22 @@ public interface MyscancodepayDynamicSqlMapper {
     })
     List<Myscancodepay> selectMany(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.775+08:00", comments="Source Table: MyScanCodePay")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.889+08:00", comments="Source Table: MyScanCodePay")
     @UpdateProvider(type=SqlProviderAdapter.class, method="update")
     int update(UpdateStatementProvider updateStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.775+08:00", comments="Source Table: MyScanCodePay")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.889+08:00", comments="Source Table: MyScanCodePay")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<Long>> countByExample() {
         return SelectDSL.selectWithMapper(this::count, SqlBuilder.count())
                 .from(myscancodepay);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.775+08:00", comments="Source Table: MyScanCodePay")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.889+08:00", comments="Source Table: MyScanCodePay")
     default DeleteDSL<MyBatis3DeleteModelAdapter<Integer>> deleteByExample() {
         return DeleteDSL.deleteFromWithMapper(this::delete, myscancodepay);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.775+08:00", comments="Source Table: MyScanCodePay")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.889+08:00", comments="Source Table: MyScanCodePay")
     default int insert(Myscancodepay record) {
         return insert(SqlBuilder.insert(record)
                 .into(myscancodepay)
@@ -93,7 +93,7 @@ public interface MyscancodepayDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.775+08:00", comments="Source Table: MyScanCodePay")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.889+08:00", comments="Source Table: MyScanCodePay")
     default int insertSelective(Myscancodepay record) {
         return insert(SqlBuilder.insert(record)
                 .into(myscancodepay)
@@ -112,19 +112,19 @@ public interface MyscancodepayDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.775+08:00", comments="Source Table: MyScanCodePay")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.889+08:00", comments="Source Table: MyScanCodePay")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Myscancodepay>>> selectByExample() {
         return SelectDSL.selectWithMapper(this::selectMany, smpayment, wxappid, wxmchid, wxkey, zfbappid, zfbpid, strtemp1, strtemp2, strtemp3, strtemp4, strtemp5)
                 .from(myscancodepay);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.775+08:00", comments="Source Table: MyScanCodePay")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.889+08:00", comments="Source Table: MyScanCodePay")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Myscancodepay>>> selectDistinctByExample() {
         return SelectDSL.selectDistinctWithMapper(this::selectMany, smpayment, wxappid, wxmchid, wxkey, zfbappid, zfbpid, strtemp1, strtemp2, strtemp3, strtemp4, strtemp5)
                 .from(myscancodepay);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.775+08:00", comments="Source Table: MyScanCodePay")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.889+08:00", comments="Source Table: MyScanCodePay")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExample(Myscancodepay record) {
         return UpdateDSL.updateWithMapper(this::update, myscancodepay)
                 .set(smpayment).equalTo(record::getSmpayment)
@@ -140,7 +140,7 @@ public interface MyscancodepayDynamicSqlMapper {
                 .set(strtemp5).equalTo(record::getStrtemp5);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.775+08:00", comments="Source Table: MyScanCodePay")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.889+08:00", comments="Source Table: MyScanCodePay")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExampleSelective(Myscancodepay record) {
         return UpdateDSL.updateWithMapper(this::update, myscancodepay)
                 .set(smpayment).equalToWhenPresent(record::getSmpayment)

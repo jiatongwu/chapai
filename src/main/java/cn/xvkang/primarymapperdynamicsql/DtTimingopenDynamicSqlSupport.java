@@ -6,49 +6,49 @@ import org.mybatis.dynamic.sql.SqlColumn;
 import org.mybatis.dynamic.sql.SqlTable;
 
 public final class DtTimingopenDynamicSqlSupport {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.418+08:00", comments="Source Table: Dt_TimingOpen")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.653+08:00", comments="Source Table: Dt_TimingOpen")
     public static final DtTimingopen dtTimingopen = new DtTimingopen();
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.418+08:00", comments="Source field: Dt_TimingOpen.id")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.653+08:00", comments="Source field: Dt_TimingOpen.id")
     public static final SqlColumn<Integer> id = dtTimingopen.id;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.418+08:00", comments="Source field: Dt_TimingOpen.DevcNum")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.653+08:00", comments="Source field: Dt_TimingOpen.DevcNum")
     public static final SqlColumn<Integer> devcnum = dtTimingopen.devcnum;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.419+08:00", comments="Source field: Dt_TimingOpen.NoMalSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.653+08:00", comments="Source field: Dt_TimingOpen.NoMalSet")
     public static final SqlColumn<Integer> nomalset = dtTimingopen.nomalset;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.419+08:00", comments="Source field: Dt_TimingOpen.Week")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.653+08:00", comments="Source field: Dt_TimingOpen.Week")
     public static final SqlColumn<Integer> week = dtTimingopen.week;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.419+08:00", comments="Source field: Dt_TimingOpen.star1")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.653+08:00", comments="Source field: Dt_TimingOpen.star1")
     public static final SqlColumn<String> star1 = dtTimingopen.star1;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.419+08:00", comments="Source field: Dt_TimingOpen.end1")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.653+08:00", comments="Source field: Dt_TimingOpen.end1")
     public static final SqlColumn<String> end1 = dtTimingopen.end1;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.419+08:00", comments="Source field: Dt_TimingOpen.star2")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.653+08:00", comments="Source field: Dt_TimingOpen.star2")
     public static final SqlColumn<String> star2 = dtTimingopen.star2;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.419+08:00", comments="Source field: Dt_TimingOpen.end2")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.654+08:00", comments="Source field: Dt_TimingOpen.end2")
     public static final SqlColumn<String> end2 = dtTimingopen.end2;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.419+08:00", comments="Source field: Dt_TimingOpen.star3")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.654+08:00", comments="Source field: Dt_TimingOpen.star3")
     public static final SqlColumn<String> star3 = dtTimingopen.star3;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.419+08:00", comments="Source field: Dt_TimingOpen.end3")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.654+08:00", comments="Source field: Dt_TimingOpen.end3")
     public static final SqlColumn<String> end3 = dtTimingopen.end3;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.419+08:00", comments="Source field: Dt_TimingOpen.star4")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.654+08:00", comments="Source field: Dt_TimingOpen.star4")
     public static final SqlColumn<String> star4 = dtTimingopen.star4;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.420+08:00", comments="Source field: Dt_TimingOpen.end4")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.654+08:00", comments="Source field: Dt_TimingOpen.end4")
     public static final SqlColumn<String> end4 = dtTimingopen.end4;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.420+08:00", comments="Source field: Dt_TimingOpen.FoorInfo")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.654+08:00", comments="Source field: Dt_TimingOpen.FoorInfo")
     public static final SqlColumn<String> foorinfo = dtTimingopen.foorinfo;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.418+08:00", comments="Source Table: Dt_TimingOpen")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.653+08:00", comments="Source Table: Dt_TimingOpen")
     public static final class DtTimingopen extends SqlTable {
         public final SqlColumn<Integer> id = column("id", JDBCType.INTEGER);
 

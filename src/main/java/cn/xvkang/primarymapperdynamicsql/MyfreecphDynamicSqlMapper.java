@@ -30,19 +30,19 @@ import org.mybatis.dynamic.sql.util.SqlProviderAdapter;
 
 @Mapper
 public interface MyfreecphDynamicSqlMapper {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.766+08:00", comments="Source Table: MyFreeCPH")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.882+08:00", comments="Source Table: MyFreeCPH")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     long count(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.766+08:00", comments="Source Table: MyFreeCPH")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.882+08:00", comments="Source Table: MyFreeCPH")
     @DeleteProvider(type=SqlProviderAdapter.class, method="delete")
     int delete(DeleteStatementProvider deleteStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.766+08:00", comments="Source Table: MyFreeCPH")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.882+08:00", comments="Source Table: MyFreeCPH")
     @InsertProvider(type=SqlProviderAdapter.class, method="insert")
     int insert(InsertStatementProvider<Myfreecph> insertStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.767+08:00", comments="Source Table: MyFreeCPH")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.882+08:00", comments="Source Table: MyFreeCPH")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @Results(id="MyfreecphResult", value = {
         @Result(column="ID", property="id", jdbcType=JdbcType.BIGINT),
@@ -57,22 +57,22 @@ public interface MyfreecphDynamicSqlMapper {
     })
     List<Myfreecph> selectMany(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.767+08:00", comments="Source Table: MyFreeCPH")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.882+08:00", comments="Source Table: MyFreeCPH")
     @UpdateProvider(type=SqlProviderAdapter.class, method="update")
     int update(UpdateStatementProvider updateStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.767+08:00", comments="Source Table: MyFreeCPH")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.882+08:00", comments="Source Table: MyFreeCPH")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<Long>> countByExample() {
         return SelectDSL.selectWithMapper(this::count, SqlBuilder.count())
                 .from(myfreecph);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.767+08:00", comments="Source Table: MyFreeCPH")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.882+08:00", comments="Source Table: MyFreeCPH")
     default DeleteDSL<MyBatis3DeleteModelAdapter<Integer>> deleteByExample() {
         return DeleteDSL.deleteFromWithMapper(this::delete, myfreecph);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.767+08:00", comments="Source Table: MyFreeCPH")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.882+08:00", comments="Source Table: MyFreeCPH")
     default int insert(Myfreecph record) {
         return insert(SqlBuilder.insert(record)
                 .into(myfreecph)
@@ -89,7 +89,7 @@ public interface MyfreecphDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.767+08:00", comments="Source Table: MyFreeCPH")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.882+08:00", comments="Source Table: MyFreeCPH")
     default int insertSelective(Myfreecph record) {
         return insert(SqlBuilder.insert(record)
                 .into(myfreecph)
@@ -106,19 +106,19 @@ public interface MyfreecphDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.767+08:00", comments="Source Table: MyFreeCPH")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.882+08:00", comments="Source Table: MyFreeCPH")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Myfreecph>>> selectByExample() {
         return SelectDSL.selectWithMapper(this::selectMany, id, cph, freestarttime, sign, remarks, freeendtime, addtime, operator, pcname)
                 .from(myfreecph);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.767+08:00", comments="Source Table: MyFreeCPH")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.882+08:00", comments="Source Table: MyFreeCPH")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Myfreecph>>> selectDistinctByExample() {
         return SelectDSL.selectDistinctWithMapper(this::selectMany, id, cph, freestarttime, sign, remarks, freeendtime, addtime, operator, pcname)
                 .from(myfreecph);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.767+08:00", comments="Source Table: MyFreeCPH")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.882+08:00", comments="Source Table: MyFreeCPH")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExample(Myfreecph record) {
         return UpdateDSL.updateWithMapper(this::update, myfreecph)
                 .set(id).equalTo(record::getId)
@@ -132,7 +132,7 @@ public interface MyfreecphDynamicSqlMapper {
                 .set(pcname).equalTo(record::getPcname);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.767+08:00", comments="Source Table: MyFreeCPH")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.882+08:00", comments="Source Table: MyFreeCPH")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExampleSelective(Myfreecph record) {
         return UpdateDSL.updateWithMapper(this::update, myfreecph)
                 .set(id).equalToWhenPresent(record::getId)

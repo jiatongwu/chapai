@@ -7,31 +7,31 @@ import org.mybatis.dynamic.sql.SqlColumn;
 import org.mybatis.dynamic.sql.SqlTable;
 
 public final class MyblacklistDynamicSqlSupport {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.467+08:00", comments="Source Table: MYBlacklist")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.698+08:00", comments="Source Table: MYBlacklist")
     public static final Myblacklist myblacklist = new Myblacklist();
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.467+08:00", comments="Source field: MYBlacklist.ID")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.698+08:00", comments="Source field: MYBlacklist.ID")
     public static final SqlColumn<Integer> id = myblacklist.id;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.467+08:00", comments="Source field: MYBlacklist.CPH")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.698+08:00", comments="Source field: MYBlacklist.CPH")
     public static final SqlColumn<String> cph = myblacklist.cph;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.467+08:00", comments="Source field: MYBlacklist.StartTime")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.698+08:00", comments="Source field: MYBlacklist.StartTime")
     public static final SqlColumn<Date> starttime = myblacklist.starttime;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.468+08:00", comments="Source field: MYBlacklist.EndTime")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.699+08:00", comments="Source field: MYBlacklist.EndTime")
     public static final SqlColumn<Date> endtime = myblacklist.endtime;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.468+08:00", comments="Source field: MYBlacklist.Reason")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.699+08:00", comments="Source field: MYBlacklist.Reason")
     public static final SqlColumn<String> reason = myblacklist.reason;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.468+08:00", comments="Source field: MYBlacklist.DownloadSignal")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.699+08:00", comments="Source field: MYBlacklist.DownloadSignal")
     public static final SqlColumn<String> downloadsignal = myblacklist.downloadsignal;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.468+08:00", comments="Source field: MYBlacklist.AddDelete")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.699+08:00", comments="Source field: MYBlacklist.AddDelete")
     public static final SqlColumn<Integer> adddelete = myblacklist.adddelete;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.467+08:00", comments="Source Table: MYBlacklist")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.698+08:00", comments="Source Table: MYBlacklist")
     public static final class Myblacklist extends SqlTable {
         public final SqlColumn<Integer> id = column("ID", JDBCType.INTEGER);
 

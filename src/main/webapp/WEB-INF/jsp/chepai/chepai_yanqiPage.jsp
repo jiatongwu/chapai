@@ -35,7 +35,7 @@
             <label class="layui-form-label">联系人手机号</label>
             <div class="layui-input-inline">
                 <input type="text" name="phone"
-                       value="${person.mobnumber}" lay-verify="required" readonly
+                       value="${person.mobnumber}" readonly
                        autocomplete="off" class="layui-input"/>
             </div>
         </div>
@@ -60,7 +60,7 @@
             <label class="layui-form-label">车型</label>
             <div class="layui-input-inline">
                 <input type="text" name="chexing"
-                       value="${car.cartype}" lay-verify="required" readonly
+                       value="${car.cartype}" readonly
                        autocomplete="off" class="layui-input"/>
             </div>
         </div>

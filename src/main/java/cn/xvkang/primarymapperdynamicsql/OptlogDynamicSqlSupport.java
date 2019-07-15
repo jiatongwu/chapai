@@ -7,28 +7,28 @@ import org.mybatis.dynamic.sql.SqlColumn;
 import org.mybatis.dynamic.sql.SqlTable;
 
 public final class OptlogDynamicSqlSupport {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.782+08:00", comments="Source Table: OptLog")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.896+08:00", comments="Source Table: OptLog")
     public static final Optlog optlog = new Optlog();
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.782+08:00", comments="Source field: OptLog.OptCardNO")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.897+08:00", comments="Source field: OptLog.OptCardNO")
     public static final SqlColumn<String> optcardno = optlog.optcardno;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.782+08:00", comments="Source field: OptLog.UserName")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.897+08:00", comments="Source field: OptLog.UserName")
     public static final SqlColumn<String> username = optlog.username;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.782+08:00", comments="Source field: OptLog.OptMenu")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.897+08:00", comments="Source field: OptLog.OptMenu")
     public static final SqlColumn<String> optmenu = optlog.optmenu;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.782+08:00", comments="Source field: OptLog.OptContent")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.897+08:00", comments="Source field: OptLog.OptContent")
     public static final SqlColumn<String> optcontent = optlog.optcontent;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.782+08:00", comments="Source field: OptLog.PCName")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.897+08:00", comments="Source field: OptLog.PCName")
     public static final SqlColumn<String> pcname = optlog.pcname;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.782+08:00", comments="Source field: OptLog.OptTime")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.897+08:00", comments="Source field: OptLog.OptTime")
     public static final SqlColumn<Date> opttime = optlog.opttime;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.782+08:00", comments="Source Table: OptLog")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.897+08:00", comments="Source Table: OptLog")
     public static final class Optlog extends SqlTable {
         public final SqlColumn<String> optcardno = column("OptCardNO", JDBCType.VARCHAR);
 

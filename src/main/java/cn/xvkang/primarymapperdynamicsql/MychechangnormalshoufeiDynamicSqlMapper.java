@@ -30,19 +30,19 @@ import org.mybatis.dynamic.sql.util.SqlProviderAdapter;
 
 @Mapper
 public interface MychechangnormalshoufeiDynamicSqlMapper {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.504+08:00", comments="Source Table: MYCHECHANGNORMALSHOUFEI")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.725+08:00", comments="Source Table: MYCHECHANGNORMALSHOUFEI")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     long count(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.504+08:00", comments="Source Table: MYCHECHANGNORMALSHOUFEI")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.725+08:00", comments="Source Table: MYCHECHANGNORMALSHOUFEI")
     @DeleteProvider(type=SqlProviderAdapter.class, method="delete")
     int delete(DeleteStatementProvider deleteStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.504+08:00", comments="Source Table: MYCHECHANGNORMALSHOUFEI")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.726+08:00", comments="Source Table: MYCHECHANGNORMALSHOUFEI")
     @InsertProvider(type=SqlProviderAdapter.class, method="insert")
     int insert(InsertStatementProvider<Mychechangnormalshoufei> insertStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.504+08:00", comments="Source Table: MYCHECHANGNORMALSHOUFEI")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.726+08:00", comments="Source Table: MYCHECHANGNORMALSHOUFEI")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @Results(id="MychechangnormalshoufeiResult", value = {
         @Result(column="CardType", property="cardtype", jdbcType=JdbcType.VARCHAR),
@@ -53,22 +53,22 @@ public interface MychechangnormalshoufeiDynamicSqlMapper {
     })
     List<Mychechangnormalshoufei> selectMany(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.504+08:00", comments="Source Table: MYCHECHANGNORMALSHOUFEI")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.726+08:00", comments="Source Table: MYCHECHANGNORMALSHOUFEI")
     @UpdateProvider(type=SqlProviderAdapter.class, method="update")
     int update(UpdateStatementProvider updateStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.504+08:00", comments="Source Table: MYCHECHANGNORMALSHOUFEI")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.726+08:00", comments="Source Table: MYCHECHANGNORMALSHOUFEI")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<Long>> countByExample() {
         return SelectDSL.selectWithMapper(this::count, SqlBuilder.count())
                 .from(mychechangnormalshoufei);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.504+08:00", comments="Source Table: MYCHECHANGNORMALSHOUFEI")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.726+08:00", comments="Source Table: MYCHECHANGNORMALSHOUFEI")
     default DeleteDSL<MyBatis3DeleteModelAdapter<Integer>> deleteByExample() {
         return DeleteDSL.deleteFromWithMapper(this::delete, mychechangnormalshoufei);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.504+08:00", comments="Source Table: MYCHECHANGNORMALSHOUFEI")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.726+08:00", comments="Source Table: MYCHECHANGNORMALSHOUFEI")
     default int insert(Mychechangnormalshoufei record) {
         return insert(SqlBuilder.insert(record)
                 .into(mychechangnormalshoufei)
@@ -81,7 +81,7 @@ public interface MychechangnormalshoufeiDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.504+08:00", comments="Source Table: MYCHECHANGNORMALSHOUFEI")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.726+08:00", comments="Source Table: MYCHECHANGNORMALSHOUFEI")
     default int insertSelective(Mychechangnormalshoufei record) {
         return insert(SqlBuilder.insert(record)
                 .into(mychechangnormalshoufei)
@@ -94,19 +94,19 @@ public interface MychechangnormalshoufeiDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.504+08:00", comments="Source Table: MYCHECHANGNORMALSHOUFEI")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.726+08:00", comments="Source Table: MYCHECHANGNORMALSHOUFEI")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Mychechangnormalshoufei>>> selectByExample() {
         return SelectDSL.selectWithMapper(this::selectMany, cardtype, freeminute, topsf, hours, je)
                 .from(mychechangnormalshoufei);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.504+08:00", comments="Source Table: MYCHECHANGNORMALSHOUFEI")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.726+08:00", comments="Source Table: MYCHECHANGNORMALSHOUFEI")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Mychechangnormalshoufei>>> selectDistinctByExample() {
         return SelectDSL.selectDistinctWithMapper(this::selectMany, cardtype, freeminute, topsf, hours, je)
                 .from(mychechangnormalshoufei);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.504+08:00", comments="Source Table: MYCHECHANGNORMALSHOUFEI")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.726+08:00", comments="Source Table: MYCHECHANGNORMALSHOUFEI")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExample(Mychechangnormalshoufei record) {
         return UpdateDSL.updateWithMapper(this::update, mychechangnormalshoufei)
                 .set(cardtype).equalTo(record::getCardtype)
@@ -116,7 +116,7 @@ public interface MychechangnormalshoufeiDynamicSqlMapper {
                 .set(je).equalTo(record::getJe);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.504+08:00", comments="Source Table: MYCHECHANGNORMALSHOUFEI")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.726+08:00", comments="Source Table: MYCHECHANGNORMALSHOUFEI")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExampleSelective(Mychechangnormalshoufei record) {
         return UpdateDSL.updateWithMapper(this::update, mychechangnormalshoufei)
                 .set(cardtype).equalToWhenPresent(record::getCardtype)

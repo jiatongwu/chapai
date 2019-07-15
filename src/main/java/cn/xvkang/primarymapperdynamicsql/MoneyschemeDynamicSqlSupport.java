@@ -6,31 +6,31 @@ import org.mybatis.dynamic.sql.SqlColumn;
 import org.mybatis.dynamic.sql.SqlTable;
 
 public final class MoneyschemeDynamicSqlSupport {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.760+08:00", comments="Source Table: MoneyScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.875+08:00", comments="Source Table: MoneyScheme")
     public static final Moneyscheme moneyscheme = new Moneyscheme();
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.760+08:00", comments="Source field: MoneyScheme.SchId")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.876+08:00", comments="Source field: MoneyScheme.SchId")
     public static final SqlColumn<Integer> schid = moneyscheme.schid;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.760+08:00", comments="Source field: MoneyScheme.SchName")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.876+08:00", comments="Source field: MoneyScheme.SchName")
     public static final SqlColumn<String> schname = moneyscheme.schname;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.760+08:00", comments="Source field: MoneyScheme.FieldName")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.876+08:00", comments="Source field: MoneyScheme.FieldName")
     public static final SqlColumn<String> fieldname = moneyscheme.fieldname;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.760+08:00", comments="Source field: MoneyScheme.Operators")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.876+08:00", comments="Source field: MoneyScheme.Operators")
     public static final SqlColumn<String> operators = moneyscheme.operators;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.760+08:00", comments="Source field: MoneyScheme.Selectvalues")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.876+08:00", comments="Source field: MoneyScheme.Selectvalues")
     public static final SqlColumn<String> selectvalues = moneyscheme.selectvalues;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.760+08:00", comments="Source field: MoneyScheme.startime")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.876+08:00", comments="Source field: MoneyScheme.startime")
     public static final SqlColumn<String> startime = moneyscheme.startime;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.760+08:00", comments="Source field: MoneyScheme.endtime")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.876+08:00", comments="Source field: MoneyScheme.endtime")
     public static final SqlColumn<String> endtime = moneyscheme.endtime;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.760+08:00", comments="Source Table: MoneyScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.875+08:00", comments="Source Table: MoneyScheme")
     public static final class Moneyscheme extends SqlTable {
         public final SqlColumn<Integer> schid = column("SchId", JDBCType.INTEGER);
 

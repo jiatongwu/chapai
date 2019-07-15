@@ -6,13 +6,13 @@ import org.mybatis.dynamic.sql.SqlColumn;
 import org.mybatis.dynamic.sql.SqlTable;
 
 public final class MyAuthorizationDynamicSqlSupport {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.779+08:00", comments="Source Table: My_Authorization")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.893+08:00", comments="Source Table: My_Authorization")
     public static final MyAuthorization myAuthorization = new MyAuthorization();
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.779+08:00", comments="Source field: My_Authorization.bAuthorization")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.893+08:00", comments="Source field: My_Authorization.bAuthorization")
     public static final SqlColumn<Boolean> bauthorization = myAuthorization.bauthorization;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.779+08:00", comments="Source Table: My_Authorization")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.893+08:00", comments="Source Table: My_Authorization")
     public static final class MyAuthorization extends SqlTable {
         public final SqlColumn<Boolean> bauthorization = column("bAuthorization", JDBCType.BIT);
 

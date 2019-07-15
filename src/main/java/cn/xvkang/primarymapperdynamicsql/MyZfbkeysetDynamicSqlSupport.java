@@ -6,28 +6,28 @@ import org.mybatis.dynamic.sql.SqlColumn;
 import org.mybatis.dynamic.sql.SqlTable;
 
 public final class MyZfbkeysetDynamicSqlSupport {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.780+08:00", comments="Source Table: My_ZFBKeySet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.894+08:00", comments="Source Table: My_ZFBKeySet")
     public static final MyZfbkeyset myZfbkeyset = new MyZfbkeyset();
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.780+08:00", comments="Source field: My_ZFBKeySet.ID")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.894+08:00", comments="Source field: My_ZFBKeySet.ID")
     public static final SqlColumn<Integer> id = myZfbkeyset.id;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.780+08:00", comments="Source field: My_ZFBKeySet.alipay_rsa_public_key")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.894+08:00", comments="Source field: My_ZFBKeySet.alipay_rsa_public_key")
     public static final SqlColumn<String> alipayRsaPublicKey = myZfbkeyset.alipayRsaPublicKey;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.780+08:00", comments="Source field: My_ZFBKeySet.rsa_private_key")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.894+08:00", comments="Source field: My_ZFBKeySet.rsa_private_key")
     public static final SqlColumn<String> rsaPrivateKey = myZfbkeyset.rsaPrivateKey;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.780+08:00", comments="Source field: My_ZFBKeySet.Rs1")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.894+08:00", comments="Source field: My_ZFBKeySet.Rs1")
     public static final SqlColumn<String> rs1 = myZfbkeyset.rs1;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.780+08:00", comments="Source field: My_ZFBKeySet.Rs2")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.894+08:00", comments="Source field: My_ZFBKeySet.Rs2")
     public static final SqlColumn<String> rs2 = myZfbkeyset.rs2;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.780+08:00", comments="Source field: My_ZFBKeySet.Rs3")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.894+08:00", comments="Source field: My_ZFBKeySet.Rs3")
     public static final SqlColumn<String> rs3 = myZfbkeyset.rs3;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.780+08:00", comments="Source Table: My_ZFBKeySet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.894+08:00", comments="Source Table: My_ZFBKeySet")
     public static final class MyZfbkeyset extends SqlTable {
         public final SqlColumn<Integer> id = column("ID", JDBCType.INTEGER);
 

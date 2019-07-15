@@ -33,25 +33,25 @@ import org.mybatis.dynamic.sql.util.SqlProviderAdapter;
 
 @Mapper
 public interface DtYantimesetDynamicSqlMapper {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.422+08:00", comments="Source Table: Dt_YanTimeSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.656+08:00", comments="Source Table: Dt_YanTimeSet")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     long count(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.423+08:00", comments="Source Table: Dt_YanTimeSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.656+08:00", comments="Source Table: Dt_YanTimeSet")
     @DeleteProvider(type=SqlProviderAdapter.class, method="delete")
     int delete(DeleteStatementProvider deleteStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.423+08:00", comments="Source Table: Dt_YanTimeSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.656+08:00", comments="Source Table: Dt_YanTimeSet")
     @InsertProvider(type=SqlProviderAdapter.class, method="insert")
     @SelectKey(statement="SELECT SCOPE_IDENTITY()", keyProperty="record.id", before=false, resultType=Integer.class)
     int insert(InsertStatementProvider<DtYantimeset> insertStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.423+08:00", comments="Source Table: Dt_YanTimeSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.656+08:00", comments="Source Table: Dt_YanTimeSet")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @ResultMap("DtYantimesetResult")
     DtYantimeset selectOne(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.423+08:00", comments="Source Table: Dt_YanTimeSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.657+08:00", comments="Source Table: Dt_YanTimeSet")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @Results(id="DtYantimesetResult", value = {
         @Result(column="id", property="id", jdbcType=JdbcType.INTEGER, id=true),
@@ -60,22 +60,22 @@ public interface DtYantimesetDynamicSqlMapper {
     })
     List<DtYantimeset> selectMany(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.423+08:00", comments="Source Table: Dt_YanTimeSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.657+08:00", comments="Source Table: Dt_YanTimeSet")
     @UpdateProvider(type=SqlProviderAdapter.class, method="update")
     int update(UpdateStatementProvider updateStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.423+08:00", comments="Source Table: Dt_YanTimeSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.657+08:00", comments="Source Table: Dt_YanTimeSet")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<Long>> countByExample() {
         return SelectDSL.selectWithMapper(this::count, SqlBuilder.count())
                 .from(dtYantimeset);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.423+08:00", comments="Source Table: Dt_YanTimeSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.657+08:00", comments="Source Table: Dt_YanTimeSet")
     default DeleteDSL<MyBatis3DeleteModelAdapter<Integer>> deleteByExample() {
         return DeleteDSL.deleteFromWithMapper(this::delete, dtYantimeset);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.423+08:00", comments="Source Table: Dt_YanTimeSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.657+08:00", comments="Source Table: Dt_YanTimeSet")
     default int deleteByPrimaryKey(Integer id_) {
         return DeleteDSL.deleteFromWithMapper(this::delete, dtYantimeset)
                 .where(id, isEqualTo(id_))
@@ -83,7 +83,7 @@ public interface DtYantimesetDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.423+08:00", comments="Source Table: Dt_YanTimeSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.657+08:00", comments="Source Table: Dt_YanTimeSet")
     default int insert(DtYantimeset record) {
         return insert(SqlBuilder.insert(record)
                 .into(dtYantimeset)
@@ -93,7 +93,7 @@ public interface DtYantimesetDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.423+08:00", comments="Source Table: Dt_YanTimeSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.657+08:00", comments="Source Table: Dt_YanTimeSet")
     default int insertSelective(DtYantimeset record) {
         return insert(SqlBuilder.insert(record)
                 .into(dtYantimeset)
@@ -103,19 +103,19 @@ public interface DtYantimesetDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.423+08:00", comments="Source Table: Dt_YanTimeSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.657+08:00", comments="Source Table: Dt_YanTimeSet")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<DtYantimeset>>> selectByExample() {
         return SelectDSL.selectWithMapper(this::selectMany, id, devcnum, yanshi)
                 .from(dtYantimeset);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.423+08:00", comments="Source Table: Dt_YanTimeSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.657+08:00", comments="Source Table: Dt_YanTimeSet")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<DtYantimeset>>> selectDistinctByExample() {
         return SelectDSL.selectDistinctWithMapper(this::selectMany, id, devcnum, yanshi)
                 .from(dtYantimeset);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.423+08:00", comments="Source Table: Dt_YanTimeSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.657+08:00", comments="Source Table: Dt_YanTimeSet")
     default DtYantimeset selectByPrimaryKey(Integer id_) {
         return SelectDSL.selectWithMapper(this::selectOne, id, devcnum, yanshi)
                 .from(dtYantimeset)
@@ -124,21 +124,21 @@ public interface DtYantimesetDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.423+08:00", comments="Source Table: Dt_YanTimeSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.657+08:00", comments="Source Table: Dt_YanTimeSet")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExample(DtYantimeset record) {
         return UpdateDSL.updateWithMapper(this::update, dtYantimeset)
                 .set(devcnum).equalTo(record::getDevcnum)
                 .set(yanshi).equalTo(record::getYanshi);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.423+08:00", comments="Source Table: Dt_YanTimeSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.657+08:00", comments="Source Table: Dt_YanTimeSet")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExampleSelective(DtYantimeset record) {
         return UpdateDSL.updateWithMapper(this::update, dtYantimeset)
                 .set(devcnum).equalToWhenPresent(record::getDevcnum)
                 .set(yanshi).equalToWhenPresent(record::getYanshi);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.423+08:00", comments="Source Table: Dt_YanTimeSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.657+08:00", comments="Source Table: Dt_YanTimeSet")
     default int updateByPrimaryKey(DtYantimeset record) {
         return UpdateDSL.updateWithMapper(this::update, dtYantimeset)
                 .set(devcnum).equalTo(record::getDevcnum)
@@ -148,7 +148,7 @@ public interface DtYantimesetDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.424+08:00", comments="Source Table: Dt_YanTimeSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.657+08:00", comments="Source Table: Dt_YanTimeSet")
     default int updateByPrimaryKeySelective(DtYantimeset record) {
         return UpdateDSL.updateWithMapper(this::update, dtYantimeset)
                 .set(devcnum).equalToWhenPresent(record::getDevcnum)

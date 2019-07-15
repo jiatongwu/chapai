@@ -31,20 +31,20 @@ import org.mybatis.dynamic.sql.util.SqlProviderAdapter;
 
 @Mapper
 public interface ZhSentryboxDynamicSqlMapper {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.924+08:00", comments="Source Table: zh_SentryBox")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.970+08:00", comments="Source Table: zh_SentryBox")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     long count(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.924+08:00", comments="Source Table: zh_SentryBox")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.970+08:00", comments="Source Table: zh_SentryBox")
     @DeleteProvider(type=SqlProviderAdapter.class, method="delete")
     int delete(DeleteStatementProvider deleteStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.924+08:00", comments="Source Table: zh_SentryBox")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.970+08:00", comments="Source Table: zh_SentryBox")
     @InsertProvider(type=SqlProviderAdapter.class, method="insert")
     @SelectKey(statement="SELECT SCOPE_IDENTITY()", keyProperty="record.id", before=false, resultType=Integer.class)
     int insert(InsertStatementProvider<ZhSentrybox> insertStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.924+08:00", comments="Source Table: zh_SentryBox")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.970+08:00", comments="Source Table: zh_SentryBox")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @Results(id="ZhSentryboxResult", value = {
         @Result(column="id", property="id", jdbcType=JdbcType.INTEGER),
@@ -55,22 +55,22 @@ public interface ZhSentryboxDynamicSqlMapper {
     })
     List<ZhSentrybox> selectMany(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.924+08:00", comments="Source Table: zh_SentryBox")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.970+08:00", comments="Source Table: zh_SentryBox")
     @UpdateProvider(type=SqlProviderAdapter.class, method="update")
     int update(UpdateStatementProvider updateStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.924+08:00", comments="Source Table: zh_SentryBox")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.971+08:00", comments="Source Table: zh_SentryBox")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<Long>> countByExample() {
         return SelectDSL.selectWithMapper(this::count, SqlBuilder.count())
                 .from(zhSentrybox);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.924+08:00", comments="Source Table: zh_SentryBox")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.971+08:00", comments="Source Table: zh_SentryBox")
     default DeleteDSL<MyBatis3DeleteModelAdapter<Integer>> deleteByExample() {
         return DeleteDSL.deleteFromWithMapper(this::delete, zhSentrybox);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.924+08:00", comments="Source Table: zh_SentryBox")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.971+08:00", comments="Source Table: zh_SentryBox")
     default int insert(ZhSentrybox record) {
         return insert(SqlBuilder.insert(record)
                 .into(zhSentrybox)
@@ -82,7 +82,7 @@ public interface ZhSentryboxDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.924+08:00", comments="Source Table: zh_SentryBox")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.971+08:00", comments="Source Table: zh_SentryBox")
     default int insertSelective(ZhSentrybox record) {
         return insert(SqlBuilder.insert(record)
                 .into(zhSentrybox)
@@ -94,19 +94,19 @@ public interface ZhSentryboxDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.924+08:00", comments="Source Table: zh_SentryBox")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.971+08:00", comments="Source Table: zh_SentryBox")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<ZhSentrybox>>> selectByExample() {
         return SelectDSL.selectWithMapper(this::selectMany, id, sentryboxNo, vehichlejson, eidttime, synflag)
                 .from(zhSentrybox);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.924+08:00", comments="Source Table: zh_SentryBox")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.971+08:00", comments="Source Table: zh_SentryBox")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<ZhSentrybox>>> selectDistinctByExample() {
         return SelectDSL.selectDistinctWithMapper(this::selectMany, id, sentryboxNo, vehichlejson, eidttime, synflag)
                 .from(zhSentrybox);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.924+08:00", comments="Source Table: zh_SentryBox")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.971+08:00", comments="Source Table: zh_SentryBox")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExample(ZhSentrybox record) {
         return UpdateDSL.updateWithMapper(this::update, zhSentrybox)
                 .set(sentryboxNo).equalTo(record::getSentryboxNo)
@@ -115,7 +115,7 @@ public interface ZhSentryboxDynamicSqlMapper {
                 .set(synflag).equalTo(record::getSynflag);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.924+08:00", comments="Source Table: zh_SentryBox")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.971+08:00", comments="Source Table: zh_SentryBox")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExampleSelective(ZhSentrybox record) {
         return UpdateDSL.updateWithMapper(this::update, zhSentrybox)
                 .set(sentryboxNo).equalToWhenPresent(record::getSentryboxNo)

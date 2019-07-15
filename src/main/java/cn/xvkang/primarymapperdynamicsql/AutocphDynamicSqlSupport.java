@@ -6,13 +6,13 @@ import org.mybatis.dynamic.sql.SqlColumn;
 import org.mybatis.dynamic.sql.SqlTable;
 
 public final class AutocphDynamicSqlSupport {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.302+08:00", comments="Source Table: AutoCPH")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.544+08:00", comments="Source Table: AutoCPH")
     public static final Autocph autocph = new Autocph();
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.302+08:00", comments="Source field: AutoCPH.CPH")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.546+08:00", comments="Source field: AutoCPH.CPH")
     public static final SqlColumn<String> cph = autocph.cph;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.302+08:00", comments="Source Table: AutoCPH")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.546+08:00", comments="Source Table: AutoCPH")
     public static final class Autocph extends SqlTable {
         public final SqlColumn<String> cph = column("CPH", JDBCType.VARCHAR);
 

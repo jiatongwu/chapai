@@ -7,22 +7,22 @@ import org.mybatis.dynamic.sql.SqlColumn;
 import org.mybatis.dynamic.sql.SqlTable;
 
 public final class MSenddataDynamicSqlSupport {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.753+08:00", comments="Source Table: M_SendData")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.870+08:00", comments="Source Table: M_SendData")
     public static final MSenddata MSenddata = new MSenddata();
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.753+08:00", comments="Source field: M_SendData.Id")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.870+08:00", comments="Source field: M_SendData.Id")
     public static final SqlColumn<Integer> id = MSenddata.id;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.753+08:00", comments="Source field: M_SendData.DevcNum")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.870+08:00", comments="Source field: M_SendData.DevcNum")
     public static final SqlColumn<Integer> devcnum = MSenddata.devcnum;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.753+08:00", comments="Source field: M_SendData.InseDate")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.870+08:00", comments="Source field: M_SendData.InseDate")
     public static final SqlColumn<Date> insedate = MSenddata.insedate;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.753+08:00", comments="Source field: M_SendData.SendData")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.870+08:00", comments="Source field: M_SendData.SendData")
     public static final SqlColumn<byte[]> senddata = MSenddata.senddata;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.753+08:00", comments="Source Table: M_SendData")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.870+08:00", comments="Source Table: M_SendData")
     public static final class MSenddata extends SqlTable {
         public final SqlColumn<Integer> id = column("Id", JDBCType.INTEGER);
 

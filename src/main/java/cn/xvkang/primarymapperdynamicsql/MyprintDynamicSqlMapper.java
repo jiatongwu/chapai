@@ -30,19 +30,19 @@ import org.mybatis.dynamic.sql.util.SqlProviderAdapter;
 
 @Mapper
 public interface MyprintDynamicSqlMapper {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.607+08:00", comments="Source Table: MYPrint")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.781+08:00", comments="Source Table: MYPrint")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     long count(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.607+08:00", comments="Source Table: MYPrint")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.781+08:00", comments="Source Table: MYPrint")
     @DeleteProvider(type=SqlProviderAdapter.class, method="delete")
     int delete(DeleteStatementProvider deleteStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.607+08:00", comments="Source Table: MYPrint")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.781+08:00", comments="Source Table: MYPrint")
     @InsertProvider(type=SqlProviderAdapter.class, method="insert")
     int insert(InsertStatementProvider<Myprint> insertStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.607+08:00", comments="Source Table: MYPrint")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.781+08:00", comments="Source Table: MYPrint")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @Results(id="MyprintResult", value = {
         @Result(column="Title", property="title", jdbcType=JdbcType.VARCHAR),
@@ -51,22 +51,22 @@ public interface MyprintDynamicSqlMapper {
     })
     List<Myprint> selectMany(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.607+08:00", comments="Source Table: MYPrint")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.781+08:00", comments="Source Table: MYPrint")
     @UpdateProvider(type=SqlProviderAdapter.class, method="update")
     int update(UpdateStatementProvider updateStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.607+08:00", comments="Source Table: MYPrint")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.781+08:00", comments="Source Table: MYPrint")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<Long>> countByExample() {
         return SelectDSL.selectWithMapper(this::count, SqlBuilder.count())
                 .from(myprint);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.607+08:00", comments="Source Table: MYPrint")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.781+08:00", comments="Source Table: MYPrint")
     default DeleteDSL<MyBatis3DeleteModelAdapter<Integer>> deleteByExample() {
         return DeleteDSL.deleteFromWithMapper(this::delete, myprint);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.607+08:00", comments="Source Table: MYPrint")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.781+08:00", comments="Source Table: MYPrint")
     default int insert(Myprint record) {
         return insert(SqlBuilder.insert(record)
                 .into(myprint)
@@ -77,7 +77,7 @@ public interface MyprintDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.607+08:00", comments="Source Table: MYPrint")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.781+08:00", comments="Source Table: MYPrint")
     default int insertSelective(Myprint record) {
         return insert(SqlBuilder.insert(record)
                 .into(myprint)
@@ -88,19 +88,19 @@ public interface MyprintDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.608+08:00", comments="Source Table: MYPrint")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.781+08:00", comments="Source Table: MYPrint")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Myprint>>> selectByExample() {
         return SelectDSL.selectWithMapper(this::selectMany, title, ftitle, footer)
                 .from(myprint);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.608+08:00", comments="Source Table: MYPrint")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.781+08:00", comments="Source Table: MYPrint")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Myprint>>> selectDistinctByExample() {
         return SelectDSL.selectDistinctWithMapper(this::selectMany, title, ftitle, footer)
                 .from(myprint);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.608+08:00", comments="Source Table: MYPrint")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.781+08:00", comments="Source Table: MYPrint")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExample(Myprint record) {
         return UpdateDSL.updateWithMapper(this::update, myprint)
                 .set(title).equalTo(record::getTitle)
@@ -108,7 +108,7 @@ public interface MyprintDynamicSqlMapper {
                 .set(footer).equalTo(record::getFooter);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-05T20:12:44.608+08:00", comments="Source Table: MYPrint")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.781+08:00", comments="Source Table: MYPrint")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExampleSelective(Myprint record) {
         return UpdateDSL.updateWithMapper(this::update, myprint)
                 .set(title).equalToWhenPresent(record::getTitle)

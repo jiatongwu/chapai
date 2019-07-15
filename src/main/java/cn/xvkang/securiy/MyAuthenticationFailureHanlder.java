@@ -14,6 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.authentication.BadCredentialsException;
+import org.springframework.security.authentication.LockedException;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.web.authentication.SimpleUrlAuthenticationFailureHandler;
@@ -62,15 +63,17 @@ public class MyAuthenticationFailureHanlder extends SimpleUrlAuthenticationFailu
 		} else if (exception instanceof UsernameNotFoundException) {
 			result.put("code", Constants.ReturnCode.账号不存在.getCode());
 			message.add("用户名或密码错误");
-		} else  if (exception instanceof BadCredentialsException) {
+		} else if (exception instanceof BadCredentialsException) {
 			result.put("code", Constants.ReturnCode.账号不存在.getCode());
 			message.add("用户名或密码错误");
-		} else{
+		} else if (exception instanceof LockedException) {
+			result.put("code", Constants.ReturnCode.账号被禁用.getCode());
+			message.add("账号被禁用");
+		} else {
 			result.put("code", Constants.ReturnCode.登录失败.getCode());
 			message.add(exception.getMessage());
 		}
-		
-		
+
 		out.println(objectMapper.writeValueAsString(result));
 		exception.printStackTrace();
 		out.flush();
