@@ -6,28 +6,28 @@ import org.mybatis.dynamic.sql.SqlColumn;
 import org.mybatis.dynamic.sql.SqlTable;
 
 public final class QrcodecontrolDynamicSqlSupport {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.901+08:00", comments="Source Table: QRCodeControl")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.892+08:00", comments="Source Table: QRCodeControl")
     public static final Qrcodecontrol qrcodecontrol = new Qrcodecontrol();
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.901+08:00", comments="Source field: QRCodeControl.ID")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.892+08:00", comments="Source field: QRCodeControl.ID")
     public static final SqlColumn<Integer> id = qrcodecontrol.id;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.901+08:00", comments="Source field: QRCodeControl.MachineNo")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.892+08:00", comments="Source field: QRCodeControl.MachineNo")
     public static final SqlColumn<String> machineno = qrcodecontrol.machineno;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.901+08:00", comments="Source field: QRCodeControl.ControlIP")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.892+08:00", comments="Source field: QRCodeControl.ControlIP")
     public static final SqlColumn<String> controlip = qrcodecontrol.controlip;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.901+08:00", comments="Source field: QRCodeControl.HostIP")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.892+08:00", comments="Source field: QRCodeControl.HostIP")
     public static final SqlColumn<String> hostip = qrcodecontrol.hostip;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.901+08:00", comments="Source field: QRCodeControl.InOutFlag")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.892+08:00", comments="Source field: QRCodeControl.InOutFlag")
     public static final SqlColumn<String> inoutflag = qrcodecontrol.inoutflag;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.901+08:00", comments="Source field: QRCodeControl.BoundedControlID")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.892+08:00", comments="Source field: QRCodeControl.BoundedControlID")
     public static final SqlColumn<String> boundedcontrolid = qrcodecontrol.boundedcontrolid;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.901+08:00", comments="Source Table: QRCodeControl")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.892+08:00", comments="Source Table: QRCodeControl")
     public static final class Qrcodecontrol extends SqlTable {
         public final SqlColumn<Integer> id = column("ID", JDBCType.INTEGER);
 

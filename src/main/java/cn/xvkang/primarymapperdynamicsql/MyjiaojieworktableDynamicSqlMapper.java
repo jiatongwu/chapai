@@ -30,19 +30,19 @@ import org.mybatis.dynamic.sql.util.SqlProviderAdapter;
 
 @Mapper
 public interface MyjiaojieworktableDynamicSqlMapper {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.840+08:00", comments="Source Table: MYjiaojieWorkTable")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.826+08:00", comments="Source Table: MYjiaojieWorkTable")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     long count(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.841+08:00", comments="Source Table: MYjiaojieWorkTable")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.826+08:00", comments="Source Table: MYjiaojieWorkTable")
     @DeleteProvider(type=SqlProviderAdapter.class, method="delete")
     int delete(DeleteStatementProvider deleteStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.841+08:00", comments="Source Table: MYjiaojieWorkTable")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.826+08:00", comments="Source Table: MYjiaojieWorkTable")
     @InsertProvider(type=SqlProviderAdapter.class, method="insert")
     int insert(InsertStatementProvider<Myjiaojieworktable> insertStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.841+08:00", comments="Source Table: MYjiaojieWorkTable")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.826+08:00", comments="Source Table: MYjiaojieWorkTable")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @Results(id="MyjiaojieworktableResult", value = {
         @Result(column="JiaoWorkName", property="jiaoworkname", jdbcType=JdbcType.VARCHAR),
@@ -81,22 +81,22 @@ public interface MyjiaojieworktableDynamicSqlMapper {
     })
     List<Myjiaojieworktable> selectMany(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.841+08:00", comments="Source Table: MYjiaojieWorkTable")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.827+08:00", comments="Source Table: MYjiaojieWorkTable")
     @UpdateProvider(type=SqlProviderAdapter.class, method="update")
     int update(UpdateStatementProvider updateStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.841+08:00", comments="Source Table: MYjiaojieWorkTable")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.827+08:00", comments="Source Table: MYjiaojieWorkTable")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<Long>> countByExample() {
         return SelectDSL.selectWithMapper(this::count, SqlBuilder.count())
                 .from(myjiaojieworktable);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.841+08:00", comments="Source Table: MYjiaojieWorkTable")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.827+08:00", comments="Source Table: MYjiaojieWorkTable")
     default DeleteDSL<MyBatis3DeleteModelAdapter<Integer>> deleteByExample() {
         return DeleteDSL.deleteFromWithMapper(this::delete, myjiaojieworktable);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.841+08:00", comments="Source Table: MYjiaojieWorkTable")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.827+08:00", comments="Source Table: MYjiaojieWorkTable")
     default int insert(Myjiaojieworktable record) {
         return insert(SqlBuilder.insert(record)
                 .into(myjiaojieworktable)
@@ -137,7 +137,7 @@ public interface MyjiaojieworktableDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.841+08:00", comments="Source Table: MYjiaojieWorkTable")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.827+08:00", comments="Source Table: MYjiaojieWorkTable")
     default int insertSelective(Myjiaojieworktable record) {
         return insert(SqlBuilder.insert(record)
                 .into(myjiaojieworktable)
@@ -178,19 +178,19 @@ public interface MyjiaojieworktableDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.841+08:00", comments="Source Table: MYjiaojieWorkTable")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.827+08:00", comments="Source Table: MYjiaojieWorkTable")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Myjiaojieworktable>>> selectByExample() {
         return SelectDSL.selectWithMapper(this::selectMany, jiaoworkname, jieworkname, goworktime, afterworktime, stopyingsf, stopshisf, valuecarddeduct, atypesf, btypesf, ctypesf, dtypesf, etypesf, ftypesf, gtypesf, htypesf, sendcard, retrievecard, inzongnumber, outzongnumber, atypecarnum, btypecarnum, ctypecarnum, dtypecarnum, etypecarnum, ftypecarnum, gtypecarnum, htypecarnum, rengopen, shougopen, sfcarnum, mfcarnum, happensfcarnum, remarks)
                 .from(myjiaojieworktable);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.841+08:00", comments="Source Table: MYjiaojieWorkTable")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.827+08:00", comments="Source Table: MYjiaojieWorkTable")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Myjiaojieworktable>>> selectDistinctByExample() {
         return SelectDSL.selectDistinctWithMapper(this::selectMany, jiaoworkname, jieworkname, goworktime, afterworktime, stopyingsf, stopshisf, valuecarddeduct, atypesf, btypesf, ctypesf, dtypesf, etypesf, ftypesf, gtypesf, htypesf, sendcard, retrievecard, inzongnumber, outzongnumber, atypecarnum, btypecarnum, ctypecarnum, dtypecarnum, etypecarnum, ftypecarnum, gtypecarnum, htypecarnum, rengopen, shougopen, sfcarnum, mfcarnum, happensfcarnum, remarks)
                 .from(myjiaojieworktable);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.842+08:00", comments="Source Table: MYjiaojieWorkTable")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.827+08:00", comments="Source Table: MYjiaojieWorkTable")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExample(Myjiaojieworktable record) {
         return UpdateDSL.updateWithMapper(this::update, myjiaojieworktable)
                 .set(jiaoworkname).equalTo(record::getJiaoworkname)
@@ -228,7 +228,7 @@ public interface MyjiaojieworktableDynamicSqlMapper {
                 .set(remarks).equalTo(record::getRemarks);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.842+08:00", comments="Source Table: MYjiaojieWorkTable")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.827+08:00", comments="Source Table: MYjiaojieWorkTable")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExampleSelective(Myjiaojieworktable record) {
         return UpdateDSL.updateWithMapper(this::update, myjiaojieworktable)
                 .set(jiaoworkname).equalToWhenPresent(record::getJiaoworkname)

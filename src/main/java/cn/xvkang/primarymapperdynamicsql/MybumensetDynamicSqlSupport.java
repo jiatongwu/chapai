@@ -6,25 +6,25 @@ import org.mybatis.dynamic.sql.SqlColumn;
 import org.mybatis.dynamic.sql.SqlTable;
 
 public final class MybumensetDynamicSqlSupport {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.696+08:00", comments="Source Table: MYBUMENSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.624+08:00", comments="Source Table: MYBUMENSET")
     public static final Mybumenset mybumenset = new Mybumenset();
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.696+08:00", comments="Source field: MYBUMENSET.ID")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.624+08:00", comments="Source field: MYBUMENSET.ID")
     public static final SqlColumn<Integer> id = mybumenset.id;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.696+08:00", comments="Source field: MYBUMENSET.DeptNO")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.624+08:00", comments="Source field: MYBUMENSET.DeptNO")
     public static final SqlColumn<String> deptno = mybumenset.deptno;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.696+08:00", comments="Source field: MYBUMENSET.DeptName")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.624+08:00", comments="Source field: MYBUMENSET.DeptName")
     public static final SqlColumn<String> deptname = mybumenset.deptname;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.696+08:00", comments="Source field: MYBUMENSET.DeptSymbol")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.624+08:00", comments="Source field: MYBUMENSET.DeptSymbol")
     public static final SqlColumn<String> deptsymbol = mybumenset.deptsymbol;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.696+08:00", comments="Source field: MYBUMENSET.PID")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.624+08:00", comments="Source field: MYBUMENSET.PID")
     public static final SqlColumn<Integer> pid = mybumenset.pid;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.696+08:00", comments="Source Table: MYBUMENSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.624+08:00", comments="Source Table: MYBUMENSET")
     public static final class Mybumenset extends SqlTable {
         public final SqlColumn<Integer> id = column("ID", JDBCType.INTEGER);
 

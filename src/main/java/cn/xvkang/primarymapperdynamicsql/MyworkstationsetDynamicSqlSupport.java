@@ -6,109 +6,109 @@ import org.mybatis.dynamic.sql.SqlColumn;
 import org.mybatis.dynamic.sql.SqlTable;
 
 public final class MyworkstationsetDynamicSqlSupport {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.805+08:00", comments="Source Table: MYWORKSTATIONSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.815+08:00", comments="Source Table: MYWORKSTATIONSET")
     public static final Myworkstationset myworkstationset = new Myworkstationset();
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.805+08:00", comments="Source field: MYWORKSTATIONSET.CompanyName")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.815+08:00", comments="Source field: MYWORKSTATIONSET.CompanyName")
     public static final SqlColumn<String> companyname = myworkstationset.companyname;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.805+08:00", comments="Source field: MYWORKSTATIONSET.ComPort")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.815+08:00", comments="Source field: MYWORKSTATIONSET.ComPort")
     public static final SqlColumn<Short> comport = myworkstationset.comport;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.805+08:00", comments="Source field: MYWORKSTATIONSET.CarparkZone")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.815+08:00", comments="Source field: MYWORKSTATIONSET.CarparkZone")
     public static final SqlColumn<Integer> carparkzone = myworkstationset.carparkzone;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.805+08:00", comments="Source field: MYWORKSTATIONSET.MJZone")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.815+08:00", comments="Source field: MYWORKSTATIONSET.MJZone")
     public static final SqlColumn<Integer> mjzone = myworkstationset.mjzone;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.805+08:00", comments="Source field: MYWORKSTATIONSET.ParkSectorEnable")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.815+08:00", comments="Source field: MYWORKSTATIONSET.ParkSectorEnable")
     public static final SqlColumn<Byte> parksectorenable = myworkstationset.parksectorenable;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.805+08:00", comments="Source field: MYWORKSTATIONSET.DoorSectorEnable")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.815+08:00", comments="Source field: MYWORKSTATIONSET.DoorSectorEnable")
     public static final SqlColumn<Byte> doorsectorenable = myworkstationset.doorsectorenable;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.805+08:00", comments="Source field: MYWORKSTATIONSET.MJType")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.815+08:00", comments="Source field: MYWORKSTATIONSET.MJType")
     public static final SqlColumn<Integer> mjtype = myworkstationset.mjtype;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.805+08:00", comments="Source field: MYWORKSTATIONSET.SysConfig")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.815+08:00", comments="Source field: MYWORKSTATIONSET.SysConfig")
     public static final SqlColumn<String> sysconfig = myworkstationset.sysconfig;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.805+08:00", comments="Source field: MYWORKSTATIONSET.SysSize")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.815+08:00", comments="Source field: MYWORKSTATIONSET.SysSize")
     public static final SqlColumn<Short> syssize = myworkstationset.syssize;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.805+08:00", comments="Source field: MYWORKSTATIONSET.LoginType")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.815+08:00", comments="Source field: MYWORKSTATIONSET.LoginType")
     public static final SqlColumn<Short> logintype = myworkstationset.logintype;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.805+08:00", comments="Source field: MYWORKSTATIONSET.PersonPicCatch")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.815+08:00", comments="Source field: MYWORKSTATIONSET.PersonPicCatch")
     public static final SqlColumn<Byte> personpiccatch = myworkstationset.personpiccatch;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.805+08:00", comments="Source field: MYWORKSTATIONSET.FXMachine")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.815+08:00", comments="Source field: MYWORKSTATIONSET.FXMachine")
     public static final SqlColumn<Byte> fxmachine = myworkstationset.fxmachine;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.805+08:00", comments="Source field: MYWORKSTATIONSET.FXMachineID")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.815+08:00", comments="Source field: MYWORKSTATIONSET.FXMachineID")
     public static final SqlColumn<Byte> fxmachineid = myworkstationset.fxmachineid;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.805+08:00", comments="Source field: MYWORKSTATIONSET.PCName")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.815+08:00", comments="Source field: MYWORKSTATIONSET.PCName")
     public static final SqlColumn<String> pcname = myworkstationset.pcname;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.805+08:00", comments="Source field: MYWORKSTATIONSET.CtrIP")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.815+08:00", comments="Source field: MYWORKSTATIONSET.CtrIP")
     public static final SqlColumn<String> ctrip = myworkstationset.ctrip;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.805+08:00", comments="Source field: MYWORKSTATIONSET.Language")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.815+08:00", comments="Source field: MYWORKSTATIONSET.Language")
     public static final SqlColumn<String> language = myworkstationset.language;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.805+08:00", comments="Source field: MYWORKSTATIONSET.ComParkPort")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.815+08:00", comments="Source field: MYWORKSTATIONSET.ComParkPort")
     public static final SqlColumn<Short> comparkport = myworkstationset.comparkport;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.805+08:00", comments="Source field: MYWORKSTATIONSET.MJPort")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.815+08:00", comments="Source field: MYWORKSTATIONSET.MJPort")
     public static final SqlColumn<Short> mjport = myworkstationset.mjport;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.805+08:00", comments="Source field: MYWORKSTATIONSET.ComMode")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.815+08:00", comments="Source field: MYWORKSTATIONSET.ComMode")
     public static final SqlColumn<Integer> commode = myworkstationset.commode;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.805+08:00", comments="Source field: MYWORKSTATIONSET.AutotoCheMointor")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.815+08:00", comments="Source field: MYWORKSTATIONSET.AutotoCheMointor")
     public static final SqlColumn<Boolean> autotochemointor = myworkstationset.autotochemointor;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.805+08:00", comments="Source field: MYWORKSTATIONSET.Helpflag")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.815+08:00", comments="Source field: MYWORKSTATIONSET.Helpflag")
     public static final SqlColumn<Boolean> helpflag = myworkstationset.helpflag;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.805+08:00", comments="Source field: MYWORKSTATIONSET.DtZone")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.815+08:00", comments="Source field: MYWORKSTATIONSET.DtZone")
     public static final SqlColumn<Integer> dtzone = myworkstationset.dtzone;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.805+08:00", comments="Source field: MYWORKSTATIONSET.DtSectorEnable")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.815+08:00", comments="Source field: MYWORKSTATIONSET.DtSectorEnable")
     public static final SqlColumn<Boolean> dtsectorenable = myworkstationset.dtsectorenable;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.805+08:00", comments="Source field: MYWORKSTATIONSET.FsectorEnable")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.815+08:00", comments="Source field: MYWORKSTATIONSET.FsectorEnable")
     public static final SqlColumn<Boolean> fsectorenable = myworkstationset.fsectorenable;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.805+08:00", comments="Source field: MYWORKSTATIONSET.DoorfZone")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.815+08:00", comments="Source field: MYWORKSTATIONSET.DoorfZone")
     public static final SqlColumn<Integer> doorfzone = myworkstationset.doorfzone;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.805+08:00", comments="Source field: MYWORKSTATIONSET.AppEnable")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.815+08:00", comments="Source field: MYWORKSTATIONSET.AppEnable")
     public static final SqlColumn<Boolean> appenable = myworkstationset.appenable;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.805+08:00", comments="Source field: MYWORKSTATIONSET.TXXieYi")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.815+08:00", comments="Source field: MYWORKSTATIONSET.TXXieYi")
     public static final SqlColumn<String> txxieyi = myworkstationset.txxieyi;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.806+08:00", comments="Source field: MYWORKSTATIONSET.SystemModel")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.815+08:00", comments="Source field: MYWORKSTATIONSET.SystemModel")
     public static final SqlColumn<Boolean> systemmodel = myworkstationset.systemmodel;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.806+08:00", comments="Source field: MYWORKSTATIONSET.TraditionReport")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.815+08:00", comments="Source field: MYWORKSTATIONSET.TraditionReport")
     public static final SqlColumn<Boolean> traditionreport = myworkstationset.traditionreport;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.806+08:00", comments="Source field: MYWORKSTATIONSET.Res1")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.815+08:00", comments="Source field: MYWORKSTATIONSET.Res1")
     public static final SqlColumn<String> res1 = myworkstationset.res1;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.806+08:00", comments="Source field: MYWORKSTATIONSET.Res2")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.815+08:00", comments="Source field: MYWORKSTATIONSET.Res2")
     public static final SqlColumn<String> res2 = myworkstationset.res2;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.806+08:00", comments="Source field: MYWORKSTATIONSET.Res3")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.816+08:00", comments="Source field: MYWORKSTATIONSET.Res3")
     public static final SqlColumn<String> res3 = myworkstationset.res3;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.806+08:00", comments="Source field: MYWORKSTATIONSET.CouldPark")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.816+08:00", comments="Source field: MYWORKSTATIONSET.CouldPark")
     public static final SqlColumn<Boolean> couldpark = myworkstationset.couldpark;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.805+08:00", comments="Source Table: MYWORKSTATIONSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.815+08:00", comments="Source Table: MYWORKSTATIONSET")
     public static final class Myworkstationset extends SqlTable {
         public final SqlColumn<String> companyname = column("CompanyName", JDBCType.VARCHAR);
 

@@ -4,15 +4,49 @@ Navicat SQL Server Data Transfer
 Source Server         : localhost
 Source Server Version : 105000
 Source Host           : 127.0.0.1:1433
-Source Database       : chepai
+Source Database       : chepai_prod
 Source Schema         : dbo
 
 Target Server Type    : SQL Server
 Target Server Version : 105000
 File Encoding         : 65001
 
-Date: 2019-07-09 20:01:02
+Date: 2019-07-15 16:36:08
 */
+
+
+-- ----------------------------
+-- Table structure for log
+-- ----------------------------
+DROP TABLE [dbo].[log]
+GO
+CREATE TABLE [dbo].[log] (
+[user_id] int NOT NULL ,
+[operate_name] varchar(500) NOT NULL ,
+[createtime] datetime NULL DEFAULT NULL ,
+[id] int NOT NULL IDENTITY(1,1) ,
+[user_agent] varchar(1000) NULL DEFAULT NULL ,
+[client_ip] varchar(500) NULL DEFAULT NULL ,
+[operate_username] varchar(100) NULL ,
+[operate_user_phone] varchar(100) NULL ,
+[operate_cph] varchar(100) NULL ,
+[validEnd] datetime NULL 
+)
+
+
+GO
+DBCC CHECKIDENT(N'[dbo].[log]', RESEED, 17)
+GO
+
+-- ----------------------------
+-- Indexes structure for table log
+-- ----------------------------
+
+-- ----------------------------
+-- Primary Key structure for table log
+-- ----------------------------
+ALTER TABLE [dbo].[log] ADD PRIMARY KEY ([id])
+GO
 
 
 -- ----------------------------
@@ -232,6 +266,8 @@ CREATE TABLE [dbo].[role] (
 
 
 GO
+DBCC CHECKIDENT(N'[dbo].[role]', RESEED, 3)
+GO
 IF ((SELECT COUNT(*) from fn_listextendedproperty('MS_Description', 
 'SCHEMA', N'dbo', 
 'TABLE', N'role', 
@@ -325,6 +361,12 @@ GO
 INSERT INTO [dbo].[role] ([id], [name], [code], [describe], [time], [state]) VALUES (N'1', N'超级管理员', N'super_admin', null, null, N'1')
 GO
 GO
+INSERT INTO [dbo].[role] ([id], [name], [code], [describe], [time], [state]) VALUES (N'2', N'管理员', N'admin_user', null, null, N'1')
+GO
+GO
+INSERT INTO [dbo].[role] ([id], [name], [code], [describe], [time], [state]) VALUES (N'3', N'普通用户', N'normal_user', null, null, N'1')
+GO
+GO
 SET IDENTITY_INSERT [dbo].[role] OFF
 GO
 
@@ -407,6 +449,56 @@ SET IDENTITY_INSERT [dbo].[shenpi_detail] OFF
 GO
 
 -- ----------------------------
+-- Table structure for user_car_create
+-- ----------------------------
+DROP TABLE [dbo].[user_car_create]
+GO
+CREATE TABLE [dbo].[user_car_create] (
+[user_id] int NOT NULL ,
+[car_id] int NOT NULL ,
+[createtime] datetime NOT NULL ,
+[id] int NOT NULL IDENTITY(1,1) 
+)
+
+
+GO
+DBCC CHECKIDENT(N'[dbo].[user_car_create]', RESEED, 20)
+GO
+
+-- ----------------------------
+-- Records of user_car_create
+-- ----------------------------
+SET IDENTITY_INSERT [dbo].[user_car_create] ON
+GO
+SET IDENTITY_INSERT [dbo].[user_car_create] OFF
+GO
+
+-- ----------------------------
+-- Table structure for user_person_create
+-- ----------------------------
+DROP TABLE [dbo].[user_person_create]
+GO
+CREATE TABLE [dbo].[user_person_create] (
+[user_id] int NOT NULL ,
+[person_id] int NOT NULL ,
+[createtime] datetime NOT NULL ,
+[id] int NOT NULL IDENTITY(1,1) 
+)
+
+
+GO
+DBCC CHECKIDENT(N'[dbo].[user_person_create]', RESEED, 20)
+GO
+
+-- ----------------------------
+-- Records of user_person_create
+-- ----------------------------
+SET IDENTITY_INSERT [dbo].[user_person_create] ON
+GO
+SET IDENTITY_INSERT [dbo].[user_person_create] OFF
+GO
+
+-- ----------------------------
 -- Table structure for user_role
 -- ----------------------------
 DROP TABLE [dbo].[user_role]
@@ -419,6 +511,8 @@ CREATE TABLE [dbo].[user_role] (
 
 
 GO
+DBCC CHECKIDENT(N'[dbo].[user_role]', RESEED, 5)
+GO
 
 -- ----------------------------
 -- Records of user_role
@@ -426,6 +520,9 @@ GO
 SET IDENTITY_INSERT [dbo].[user_role] ON
 GO
 INSERT INTO [dbo].[user_role] ([id], [user_id], [role_id]) VALUES (N'1', N'2', N'1')
+GO
+GO
+INSERT INTO [dbo].[user_role] ([id], [user_id], [role_id]) VALUES (N'5', N'6', N'2')
 GO
 GO
 SET IDENTITY_INSERT [dbo].[user_role] OFF
@@ -443,12 +540,14 @@ CREATE TABLE [dbo].[user_table] (
 [name] nvarchar(16) NULL ,
 [extend] nvarchar(32) NULL ,
 [type] int NULL ,
-[salt] nvarchar(100) NOT NULL 
+[salt] nvarchar(100) NOT NULL ,
+[create_time] datetime NULL ,
+[disabled] int NOT NULL DEFAULT ((0)) 
 )
 
 
 GO
-DBCC CHECKIDENT(N'[dbo].[user_table]', RESEED, 2)
+DBCC CHECKIDENT(N'[dbo].[user_table]', RESEED, 6)
 GO
 
 -- ----------------------------
@@ -456,10 +555,23 @@ GO
 -- ----------------------------
 SET IDENTITY_INSERT [dbo].[user_table] ON
 GO
-INSERT INTO [dbo].[user_table] ([id], [username], [password], [name], [extend], [type], [salt]) VALUES (N'2', N'admin', N'$2a$10$J.md7X7CydBhygnusWkNGOjokdyWrxBOw7ltAQkzRqvQKJogfq4He', N'超级管理员', null, null, N'123456')
+INSERT INTO [dbo].[user_table] ([id], [username], [password], [name], [extend], [type], [salt], [create_time], [disabled]) VALUES (N'2', N'admin', N'$2a$10$cPAK3QMTBci9Xbv/beEwk.krKhhF389JuVF3jZKwep9iNCgwjtsDi', N'超级管理员', null, null, N'123456', N'2019-07-14 15:36:05.063', N'0')
+GO
+GO
+INSERT INTO [dbo].[user_table] ([id], [username], [password], [name], [extend], [type], [salt], [create_time], [disabled]) VALUES (N'6', N'管理员', N'$2a$10$J.md7X7CydBhygnusWkNGOjokdyWrxBOw7ltAQkzRqvQKJogfq4He', N'管理员', null, null, N'123456', N'2019-07-14 15:36:00.007', N'0')
 GO
 GO
 SET IDENTITY_INSERT [dbo].[user_table] OFF
+GO
+
+-- ----------------------------
+-- Indexes structure for table log
+-- ----------------------------
+
+-- ----------------------------
+-- Primary Key structure for table log
+-- ----------------------------
+ALTER TABLE [dbo].[log] ADD PRIMARY KEY NONCLUSTERED ([id])
 GO
 
 -- ----------------------------
@@ -518,6 +630,38 @@ GO
 -- Primary Key structure for table shenpi_detail
 -- ----------------------------
 ALTER TABLE [dbo].[shenpi_detail] ADD PRIMARY KEY NONCLUSTERED ([ID])
+GO
+
+-- ----------------------------
+-- Indexes structure for table user_car_create
+-- ----------------------------
+
+-- ----------------------------
+-- Primary Key structure for table user_car_create
+-- ----------------------------
+ALTER TABLE [dbo].[user_car_create] ADD PRIMARY KEY NONCLUSTERED ([id])
+GO
+
+-- ----------------------------
+-- Uniques structure for table user_car_create
+-- ----------------------------
+ALTER TABLE [dbo].[user_car_create] ADD UNIQUE ([user_id] ASC, [car_id] ASC)
+GO
+
+-- ----------------------------
+-- Indexes structure for table user_person_create
+-- ----------------------------
+
+-- ----------------------------
+-- Primary Key structure for table user_person_create
+-- ----------------------------
+ALTER TABLE [dbo].[user_person_create] ADD PRIMARY KEY NONCLUSTERED ([id])
+GO
+
+-- ----------------------------
+-- Uniques structure for table user_person_create
+-- ----------------------------
+ALTER TABLE [dbo].[user_person_create] ADD UNIQUE ([user_id] ASC, [person_id] ASC)
 GO
 
 -- ----------------------------

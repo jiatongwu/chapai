@@ -33,25 +33,25 @@ import org.mybatis.dynamic.sql.util.SqlProviderAdapter;
 
 @Mapper
 public interface MynocphDynamicSqlMapper {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.885+08:00", comments="Source Table: MyNoCPH")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.874+08:00", comments="Source Table: MyNoCPH")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     long count(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.885+08:00", comments="Source Table: MyNoCPH")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.874+08:00", comments="Source Table: MyNoCPH")
     @DeleteProvider(type=SqlProviderAdapter.class, method="delete")
     int delete(DeleteStatementProvider deleteStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.885+08:00", comments="Source Table: MyNoCPH")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.874+08:00", comments="Source Table: MyNoCPH")
     @InsertProvider(type=SqlProviderAdapter.class, method="insert")
     @SelectKey(statement="SELECT SCOPE_IDENTITY()", keyProperty="record.id", before=false, resultType=Integer.class)
     int insert(InsertStatementProvider<Mynocph> insertStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.885+08:00", comments="Source Table: MyNoCPH")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.874+08:00", comments="Source Table: MyNoCPH")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @ResultMap("MynocphResult")
     Mynocph selectOne(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.885+08:00", comments="Source Table: MyNoCPH")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.874+08:00", comments="Source Table: MyNoCPH")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @Results(id="MynocphResult", value = {
         @Result(column="ID", property="id", jdbcType=JdbcType.INTEGER, id=true),
@@ -61,22 +61,22 @@ public interface MynocphDynamicSqlMapper {
     })
     List<Mynocph> selectMany(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.885+08:00", comments="Source Table: MyNoCPH")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.874+08:00", comments="Source Table: MyNoCPH")
     @UpdateProvider(type=SqlProviderAdapter.class, method="update")
     int update(UpdateStatementProvider updateStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.885+08:00", comments="Source Table: MyNoCPH")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.874+08:00", comments="Source Table: MyNoCPH")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<Long>> countByExample() {
         return SelectDSL.selectWithMapper(this::count, SqlBuilder.count())
                 .from(mynocph);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.885+08:00", comments="Source Table: MyNoCPH")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.874+08:00", comments="Source Table: MyNoCPH")
     default DeleteDSL<MyBatis3DeleteModelAdapter<Integer>> deleteByExample() {
         return DeleteDSL.deleteFromWithMapper(this::delete, mynocph);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.885+08:00", comments="Source Table: MyNoCPH")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.874+08:00", comments="Source Table: MyNoCPH")
     default int deleteByPrimaryKey(Integer id_) {
         return DeleteDSL.deleteFromWithMapper(this::delete, mynocph)
                 .where(id, isEqualTo(id_))
@@ -84,7 +84,7 @@ public interface MynocphDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.885+08:00", comments="Source Table: MyNoCPH")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.874+08:00", comments="Source Table: MyNoCPH")
     default int insert(Mynocph record) {
         return insert(SqlBuilder.insert(record)
                 .into(mynocph)
@@ -95,7 +95,7 @@ public interface MynocphDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.885+08:00", comments="Source Table: MyNoCPH")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.874+08:00", comments="Source Table: MyNoCPH")
     default int insertSelective(Mynocph record) {
         return insert(SqlBuilder.insert(record)
                 .into(mynocph)
@@ -106,19 +106,19 @@ public interface MynocphDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.885+08:00", comments="Source Table: MyNoCPH")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.874+08:00", comments="Source Table: MyNoCPH")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Mynocph>>> selectByExample() {
         return SelectDSL.selectWithMapper(this::selectMany, id, intime, inpic, ingatename)
                 .from(mynocph);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.885+08:00", comments="Source Table: MyNoCPH")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.874+08:00", comments="Source Table: MyNoCPH")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Mynocph>>> selectDistinctByExample() {
         return SelectDSL.selectDistinctWithMapper(this::selectMany, id, intime, inpic, ingatename)
                 .from(mynocph);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.885+08:00", comments="Source Table: MyNoCPH")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.875+08:00", comments="Source Table: MyNoCPH")
     default Mynocph selectByPrimaryKey(Integer id_) {
         return SelectDSL.selectWithMapper(this::selectOne, id, intime, inpic, ingatename)
                 .from(mynocph)
@@ -127,7 +127,7 @@ public interface MynocphDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.885+08:00", comments="Source Table: MyNoCPH")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.875+08:00", comments="Source Table: MyNoCPH")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExample(Mynocph record) {
         return UpdateDSL.updateWithMapper(this::update, mynocph)
                 .set(intime).equalTo(record::getIntime)
@@ -135,7 +135,7 @@ public interface MynocphDynamicSqlMapper {
                 .set(ingatename).equalTo(record::getIngatename);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.885+08:00", comments="Source Table: MyNoCPH")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.875+08:00", comments="Source Table: MyNoCPH")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExampleSelective(Mynocph record) {
         return UpdateDSL.updateWithMapper(this::update, mynocph)
                 .set(intime).equalToWhenPresent(record::getIntime)
@@ -143,7 +143,7 @@ public interface MynocphDynamicSqlMapper {
                 .set(ingatename).equalToWhenPresent(record::getIngatename);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.885+08:00", comments="Source Table: MyNoCPH")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.875+08:00", comments="Source Table: MyNoCPH")
     default int updateByPrimaryKey(Mynocph record) {
         return UpdateDSL.updateWithMapper(this::update, mynocph)
                 .set(intime).equalTo(record::getIntime)
@@ -154,7 +154,7 @@ public interface MynocphDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.885+08:00", comments="Source Table: MyNoCPH")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.875+08:00", comments="Source Table: MyNoCPH")
     default int updateByPrimaryKeySelective(Mynocph record) {
         return UpdateDSL.updateWithMapper(this::update, mynocph)
                 .set(intime).equalToWhenPresent(record::getIntime)

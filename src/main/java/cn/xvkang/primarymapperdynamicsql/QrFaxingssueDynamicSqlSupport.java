@@ -6,49 +6,49 @@ import org.mybatis.dynamic.sql.SqlColumn;
 import org.mybatis.dynamic.sql.SqlTable;
 
 public final class QrFaxingssueDynamicSqlSupport {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.906+08:00", comments="Source Table: Qr_FaxingSsue")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.899+08:00", comments="Source Table: Qr_FaxingSsue")
     public static final QrFaxingssue qrFaxingssue = new QrFaxingssue();
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.906+08:00", comments="Source field: Qr_FaxingSsue.Id")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.899+08:00", comments="Source field: Qr_FaxingSsue.Id")
     public static final SqlColumn<Integer> id = qrFaxingssue.id;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.906+08:00", comments="Source field: Qr_FaxingSsue.Cardno")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.899+08:00", comments="Source field: Qr_FaxingSsue.Cardno")
     public static final SqlColumn<String> cardno = qrFaxingssue.cardno;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.906+08:00", comments="Source field: Qr_FaxingSsue.Userno")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.899+08:00", comments="Source field: Qr_FaxingSsue.Userno")
     public static final SqlColumn<String> userno = qrFaxingssue.userno;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.906+08:00", comments="Source field: Qr_FaxingSsue.Cardstuat")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.899+08:00", comments="Source field: Qr_FaxingSsue.Cardstuat")
     public static final SqlColumn<String> cardstuat = qrFaxingssue.cardstuat;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.906+08:00", comments="Source field: Qr_FaxingSsue.Cardtype")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.899+08:00", comments="Source field: Qr_FaxingSsue.Cardtype")
     public static final SqlColumn<String> cardtype = qrFaxingssue.cardtype;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.906+08:00", comments="Source field: Qr_FaxingSsue.Pasword")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.899+08:00", comments="Source field: Qr_FaxingSsue.Pasword")
     public static final SqlColumn<String> pasword = qrFaxingssue.pasword;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.906+08:00", comments="Source field: Qr_FaxingSsue.EndTime")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.899+08:00", comments="Source field: Qr_FaxingSsue.EndTime")
     public static final SqlColumn<String> endtime = qrFaxingssue.endtime;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.906+08:00", comments="Source field: Qr_FaxingSsue.StarHour")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.899+08:00", comments="Source field: Qr_FaxingSsue.StarHour")
     public static final SqlColumn<String> starhour = qrFaxingssue.starhour;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.906+08:00", comments="Source field: Qr_FaxingSsue.EndHour")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.899+08:00", comments="Source field: Qr_FaxingSsue.EndHour")
     public static final SqlColumn<String> endhour = qrFaxingssue.endhour;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.906+08:00", comments="Source field: Qr_FaxingSsue.CardExitflag")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.899+08:00", comments="Source field: Qr_FaxingSsue.CardExitflag")
     public static final SqlColumn<String> cardexitflag = qrFaxingssue.cardexitflag;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.906+08:00", comments="Source field: Qr_FaxingSsue.Mark")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.899+08:00", comments="Source field: Qr_FaxingSsue.Mark")
     public static final SqlColumn<String> mark = qrFaxingssue.mark;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.906+08:00", comments="Source field: Qr_FaxingSsue.DevcInfo")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.899+08:00", comments="Source field: Qr_FaxingSsue.DevcInfo")
     public static final SqlColumn<String> devcinfo = qrFaxingssue.devcinfo;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.906+08:00", comments="Source field: Qr_FaxingSsue.IssDate")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.899+08:00", comments="Source field: Qr_FaxingSsue.IssDate")
     public static final SqlColumn<String> issdate = qrFaxingssue.issdate;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.906+08:00", comments="Source Table: Qr_FaxingSsue")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.899+08:00", comments="Source Table: Qr_FaxingSsue")
     public static final class QrFaxingssue extends SqlTable {
         public final SqlColumn<Integer> id = column("Id", JDBCType.INTEGER);
 

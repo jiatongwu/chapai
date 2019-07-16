@@ -5,6 +5,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
@@ -35,6 +36,7 @@ import org.springframework.stereotype.Service;
 
 import com.github.pagehelper.PageHelper;
 
+import cn.xvkang.middle.LogServiceMiddle;
 import cn.xvkang.primarycustommapper.BaseCustomMapper;
 import cn.xvkang.primaryentity.Myfaxingssue;
 import cn.xvkang.primaryentity.Myjibenziliao;
@@ -46,11 +48,16 @@ import cn.xvkang.primarymapperdynamicsql.MyicvalidDynamicSqlMapper;
 import cn.xvkang.primarymapperdynamicsql.MyicvalidDynamicSqlSupport;
 import cn.xvkang.primarymapperdynamicsql.MyjibenziliaoDynamicSqlMapper;
 import cn.xvkang.primarymapperdynamicsql.MyjibenziliaoDynamicSqlSupport;
+import cn.xvkang.primarymapperdynamicsql.UserPersonCreateDynamicSqlSupport;
+import cn.xvkang.primarymapperdynamicsql.UserTableDynamicSqlSupport;
 import cn.xvkang.service.PersonService;
+import cn.xvkang.utils.Constants;
 import cn.xvkang.utils.MyPageImpl;
 
 @Service
 public class PersonServiceImpl implements PersonService {
+	@Autowired
+	private LogServiceMiddle logServiceMiddle;
 	@Autowired
 	private BaseCustomMapper baseCustomMapper;
 	@Autowired
@@ -76,8 +83,16 @@ public class PersonServiceImpl implements PersonService {
 		 * ='',@PersonPhoto=NULL,@CarPhoto=NULL
 		 */
 		QueryExpressionDSL<SelectModel>.QueryExpressionWhereBuilder where = SqlBuilder
-				.select(MyjibenziliaoDynamicSqlSupport.myjibenziliao.allColumns())
-				.from(MyjibenziliaoDynamicSqlSupport.myjibenziliao, "myjibenziliao").where();
+				.select(MyjibenziliaoDynamicSqlSupport.myjibenziliao.allColumns(), UserTableDynamicSqlSupport.name,
+						UserTableDynamicSqlSupport.username.as("createUsername"))
+				.from(MyjibenziliaoDynamicSqlSupport.myjibenziliao, "myjibenziliao")
+				.leftJoin(UserPersonCreateDynamicSqlSupport.userPersonCreate, "userPersonCreate")
+				.on(UserPersonCreateDynamicSqlSupport.userPersonCreate.personId,
+						SqlBuilder.equalTo(MyjibenziliaoDynamicSqlSupport.myjibenziliao.id))
+				.leftJoin(UserTableDynamicSqlSupport.userTable, "userTable")
+				.on(UserPersonCreateDynamicSqlSupport.userPersonCreate.userId,
+						SqlBuilder.equalTo(UserTableDynamicSqlSupport.userTable.id))
+				.where();
 		/*
 		 * 
 		 * personName personPhone cheBianma chexing chepaihao isInDate createTimeAsc
@@ -86,6 +101,12 @@ public class PersonServiceImpl implements PersonService {
 		if (StringUtils.isNotBlank(personName)) {
 			params.put("personName", "%" + personName + "%");
 			where.and(MyjibenziliaoDynamicSqlSupport.username, SqlBuilder.isLike((String) params.get("personName")));
+		}
+
+		String createUserName = (String) params.get("createUserName");
+		if (StringUtils.isNotBlank(createUserName)) {
+			params.put("createUserName", "%" + createUserName + "%");
+			where.and(UserTableDynamicSqlSupport.name, SqlBuilder.isLike((String) params.get("createUserName")));
 		}
 		String personPhone = (String) params.get("personPhone");
 		if (StringUtils.isNotBlank(personPhone)) {
@@ -116,7 +137,6 @@ public class PersonServiceImpl implements PersonService {
 				where.orderBy(MyjibenziliaoDynamicSqlSupport.myjibenziliao.worktime.descending());
 			}
 		}
-
 		SelectStatementProvider render = where.build().render(RenderingStrategy.MYBATIS3);
 		PageHelper.startPage(pageNum, pageSize);
 		List<Map<String, Object>> selectByExample = baseCustomMapper.selectMany(render);// findAll(params);//
@@ -297,9 +317,19 @@ public class PersonServiceImpl implements PersonService {
 		// myjibenziliaoDynamicSqlMapper.selectByExample()
 		// .where(MyjibenziliaoDynamicSqlSupport.userno,
 		// SqlBuilder.isEqualTo(userno)).build().execute();
+		List<String> messages = new ArrayList<>();
 		List<Myfaxingssue> myfaxingssues = myfaxingssueDynamicSqlMapper.selectByExample()
 				.where(MyfaxingssueDynamicSqlSupport.userno, SqlBuilder.isEqualTo(userno)).build().execute();
+		List<Myjibenziliao> myjibenziliaos = myjibenziliaoDynamicSqlMapper.selectByExample()
+				.where(MyjibenziliaoDynamicSqlSupport.userno, SqlBuilder.isEqualTo(userno)).build().execute();
+		if (myjibenziliaos.size() > 0) {
+			Myjibenziliao myjibenziliao = myjibenziliaos.get(0);
+			messages.add("删除人员：" + myjibenziliao.getUsername() + ",手机号：" + myjibenziliao.getMobnumber());
+		}
+		List<String> cphs = new ArrayList<>();
 		for (Myfaxingssue myfaxingssue : myfaxingssues) {
+			messages.add("删除此人员的车牌：" + myfaxingssue.getCph());
+			cphs.add(myfaxingssue.getCph());
 			String cardno = myfaxingssue.getCardno();
 			myicmoneyDynamicSqlMapper.deleteByExample()
 					.where(MyicmoneyDynamicSqlSupport.cardno, SqlBuilder.isEqualTo(cardno)).build().execute();
@@ -308,8 +338,16 @@ public class PersonServiceImpl implements PersonService {
 			myfaxingssueDynamicSqlMapper.deleteByExample()
 					.where(MyfaxingssueDynamicSqlSupport.cardno, SqlBuilder.isEqualTo(cardno)).build().execute();
 		}
-		myjibenziliaoDynamicSqlMapper.deleteByExample()
+		Integer deleteResult = myjibenziliaoDynamicSqlMapper.deleteByExample()
 				.where(MyjibenziliaoDynamicSqlSupport.userno, SqlBuilder.isEqualTo(userno)).build().execute();
+		// 记录删除人员日志
+		if (deleteResult.intValue() > 0) {
+			if (myjibenziliaos.size() > 0) {
+				Myjibenziliao myjibenziliao = myjibenziliaos.get(0);
+				logServiceMiddle.insertOperateLog(Constants.LOG_MESSAGE_KEY_ENUM.人员删除.getName(),
+						myjibenziliao.getUsername(), myjibenziliao.getMobnumber(), StringUtils.join(cphs, ","), null);
+			}
+		}
 		return 1;
 	}
 

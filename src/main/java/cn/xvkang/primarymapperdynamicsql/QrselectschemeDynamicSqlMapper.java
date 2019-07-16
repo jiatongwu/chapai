@@ -33,25 +33,25 @@ import org.mybatis.dynamic.sql.util.SqlProviderAdapter;
 
 @Mapper
 public interface QrselectschemeDynamicSqlMapper {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.904+08:00", comments="Source Table: QrSelectScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.896+08:00", comments="Source Table: QrSelectScheme")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     long count(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.904+08:00", comments="Source Table: QrSelectScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.896+08:00", comments="Source Table: QrSelectScheme")
     @DeleteProvider(type=SqlProviderAdapter.class, method="delete")
     int delete(DeleteStatementProvider deleteStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.904+08:00", comments="Source Table: QrSelectScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.896+08:00", comments="Source Table: QrSelectScheme")
     @InsertProvider(type=SqlProviderAdapter.class, method="insert")
     @SelectKey(statement="SELECT SCOPE_IDENTITY()", keyProperty="record.schid", before=false, resultType=Integer.class)
     int insert(InsertStatementProvider<Qrselectscheme> insertStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.904+08:00", comments="Source Table: QrSelectScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.896+08:00", comments="Source Table: QrSelectScheme")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @ResultMap("QrselectschemeResult")
     Qrselectscheme selectOne(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.904+08:00", comments="Source Table: QrSelectScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.896+08:00", comments="Source Table: QrSelectScheme")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @Results(id="QrselectschemeResult", value = {
         @Result(column="SchId", property="schid", jdbcType=JdbcType.INTEGER, id=true),
@@ -64,22 +64,22 @@ public interface QrselectschemeDynamicSqlMapper {
     })
     List<Qrselectscheme> selectMany(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.904+08:00", comments="Source Table: QrSelectScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.897+08:00", comments="Source Table: QrSelectScheme")
     @UpdateProvider(type=SqlProviderAdapter.class, method="update")
     int update(UpdateStatementProvider updateStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.904+08:00", comments="Source Table: QrSelectScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.897+08:00", comments="Source Table: QrSelectScheme")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<Long>> countByExample() {
         return SelectDSL.selectWithMapper(this::count, SqlBuilder.count())
                 .from(qrselectscheme);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.904+08:00", comments="Source Table: QrSelectScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.897+08:00", comments="Source Table: QrSelectScheme")
     default DeleteDSL<MyBatis3DeleteModelAdapter<Integer>> deleteByExample() {
         return DeleteDSL.deleteFromWithMapper(this::delete, qrselectscheme);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.904+08:00", comments="Source Table: QrSelectScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.897+08:00", comments="Source Table: QrSelectScheme")
     default int deleteByPrimaryKey(Integer schid_) {
         return DeleteDSL.deleteFromWithMapper(this::delete, qrselectscheme)
                 .where(schid, isEqualTo(schid_))
@@ -87,7 +87,7 @@ public interface QrselectschemeDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.904+08:00", comments="Source Table: QrSelectScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.897+08:00", comments="Source Table: QrSelectScheme")
     default int insert(Qrselectscheme record) {
         return insert(SqlBuilder.insert(record)
                 .into(qrselectscheme)
@@ -101,7 +101,7 @@ public interface QrselectschemeDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.904+08:00", comments="Source Table: QrSelectScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.897+08:00", comments="Source Table: QrSelectScheme")
     default int insertSelective(Qrselectscheme record) {
         return insert(SqlBuilder.insert(record)
                 .into(qrselectscheme)
@@ -115,19 +115,19 @@ public interface QrselectschemeDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.904+08:00", comments="Source Table: QrSelectScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.897+08:00", comments="Source Table: QrSelectScheme")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Qrselectscheme>>> selectByExample() {
         return SelectDSL.selectWithMapper(this::selectMany, schid, schname, fieldname, operators, selectvalues, startime, endtime)
                 .from(qrselectscheme);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.904+08:00", comments="Source Table: QrSelectScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.897+08:00", comments="Source Table: QrSelectScheme")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Qrselectscheme>>> selectDistinctByExample() {
         return SelectDSL.selectDistinctWithMapper(this::selectMany, schid, schname, fieldname, operators, selectvalues, startime, endtime)
                 .from(qrselectscheme);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.904+08:00", comments="Source Table: QrSelectScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.897+08:00", comments="Source Table: QrSelectScheme")
     default Qrselectscheme selectByPrimaryKey(Integer schid_) {
         return SelectDSL.selectWithMapper(this::selectOne, schid, schname, fieldname, operators, selectvalues, startime, endtime)
                 .from(qrselectscheme)
@@ -136,7 +136,7 @@ public interface QrselectschemeDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.904+08:00", comments="Source Table: QrSelectScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.897+08:00", comments="Source Table: QrSelectScheme")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExample(Qrselectscheme record) {
         return UpdateDSL.updateWithMapper(this::update, qrselectscheme)
                 .set(schname).equalTo(record::getSchname)
@@ -147,7 +147,7 @@ public interface QrselectschemeDynamicSqlMapper {
                 .set(endtime).equalTo(record::getEndtime);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.904+08:00", comments="Source Table: QrSelectScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.897+08:00", comments="Source Table: QrSelectScheme")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExampleSelective(Qrselectscheme record) {
         return UpdateDSL.updateWithMapper(this::update, qrselectscheme)
                 .set(schname).equalToWhenPresent(record::getSchname)
@@ -158,7 +158,7 @@ public interface QrselectschemeDynamicSqlMapper {
                 .set(endtime).equalToWhenPresent(record::getEndtime);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.904+08:00", comments="Source Table: QrSelectScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.897+08:00", comments="Source Table: QrSelectScheme")
     default int updateByPrimaryKey(Qrselectscheme record) {
         return UpdateDSL.updateWithMapper(this::update, qrselectscheme)
                 .set(schname).equalTo(record::getSchname)
@@ -172,7 +172,7 @@ public interface QrselectschemeDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.904+08:00", comments="Source Table: QrSelectScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.897+08:00", comments="Source Table: QrSelectScheme")
     default int updateByPrimaryKeySelective(Qrselectscheme record) {
         return UpdateDSL.updateWithMapper(this::update, qrselectscheme)
                 .set(schname).equalToWhenPresent(record::getSchname)

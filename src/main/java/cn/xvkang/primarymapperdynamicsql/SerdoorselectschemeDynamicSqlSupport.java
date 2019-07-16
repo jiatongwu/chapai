@@ -6,31 +6,31 @@ import org.mybatis.dynamic.sql.SqlColumn;
 import org.mybatis.dynamic.sql.SqlTable;
 
 public final class SerdoorselectschemeDynamicSqlSupport {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.913+08:00", comments="Source Table: SerDoorSelectScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.906+08:00", comments="Source Table: SerDoorSelectScheme")
     public static final Serdoorselectscheme serdoorselectscheme = new Serdoorselectscheme();
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.913+08:00", comments="Source field: SerDoorSelectScheme.SchId")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.906+08:00", comments="Source field: SerDoorSelectScheme.SchId")
     public static final SqlColumn<Integer> schid = serdoorselectscheme.schid;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.914+08:00", comments="Source field: SerDoorSelectScheme.SchName")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.906+08:00", comments="Source field: SerDoorSelectScheme.SchName")
     public static final SqlColumn<String> schname = serdoorselectscheme.schname;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.914+08:00", comments="Source field: SerDoorSelectScheme.FieldName")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.906+08:00", comments="Source field: SerDoorSelectScheme.FieldName")
     public static final SqlColumn<String> fieldname = serdoorselectscheme.fieldname;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.914+08:00", comments="Source field: SerDoorSelectScheme.Operators")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.906+08:00", comments="Source field: SerDoorSelectScheme.Operators")
     public static final SqlColumn<String> operators = serdoorselectscheme.operators;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.914+08:00", comments="Source field: SerDoorSelectScheme.Selectvalues")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.906+08:00", comments="Source field: SerDoorSelectScheme.Selectvalues")
     public static final SqlColumn<String> selectvalues = serdoorselectscheme.selectvalues;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.914+08:00", comments="Source field: SerDoorSelectScheme.startime")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.906+08:00", comments="Source field: SerDoorSelectScheme.startime")
     public static final SqlColumn<String> startime = serdoorselectscheme.startime;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.914+08:00", comments="Source field: SerDoorSelectScheme.endtime")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.906+08:00", comments="Source field: SerDoorSelectScheme.endtime")
     public static final SqlColumn<String> endtime = serdoorselectscheme.endtime;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.913+08:00", comments="Source Table: SerDoorSelectScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.906+08:00", comments="Source Table: SerDoorSelectScheme")
     public static final class Serdoorselectscheme extends SqlTable {
         public final SqlColumn<Integer> schid = column("SchId", JDBCType.INTEGER);
 

@@ -30,19 +30,19 @@ import org.mybatis.dynamic.sql.util.SqlProviderAdapter;
 
 @Mapper
 public interface TblopentypeDynamicSqlMapper {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.949+08:00", comments="Source Table: tblOpenType")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.962+08:00", comments="Source Table: tblOpenType")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     long count(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.950+08:00", comments="Source Table: tblOpenType")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.962+08:00", comments="Source Table: tblOpenType")
     @DeleteProvider(type=SqlProviderAdapter.class, method="delete")
     int delete(DeleteStatementProvider deleteStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.950+08:00", comments="Source Table: tblOpenType")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.962+08:00", comments="Source Table: tblOpenType")
     @InsertProvider(type=SqlProviderAdapter.class, method="insert")
     int insert(InsertStatementProvider<Tblopentype> insertStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.950+08:00", comments="Source Table: tblOpenType")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.962+08:00", comments="Source Table: tblOpenType")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @Results(id="TblopentypeResult", value = {
         @Result(column="ID", property="id", jdbcType=JdbcType.SMALLINT),
@@ -50,22 +50,22 @@ public interface TblopentypeDynamicSqlMapper {
     })
     List<Tblopentype> selectMany(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.950+08:00", comments="Source Table: tblOpenType")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.962+08:00", comments="Source Table: tblOpenType")
     @UpdateProvider(type=SqlProviderAdapter.class, method="update")
     int update(UpdateStatementProvider updateStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.950+08:00", comments="Source Table: tblOpenType")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.962+08:00", comments="Source Table: tblOpenType")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<Long>> countByExample() {
         return SelectDSL.selectWithMapper(this::count, SqlBuilder.count())
                 .from(tblopentype);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.950+08:00", comments="Source Table: tblOpenType")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.962+08:00", comments="Source Table: tblOpenType")
     default DeleteDSL<MyBatis3DeleteModelAdapter<Integer>> deleteByExample() {
         return DeleteDSL.deleteFromWithMapper(this::delete, tblopentype);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.950+08:00", comments="Source Table: tblOpenType")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.962+08:00", comments="Source Table: tblOpenType")
     default int insert(Tblopentype record) {
         return insert(SqlBuilder.insert(record)
                 .into(tblopentype)
@@ -75,7 +75,7 @@ public interface TblopentypeDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.950+08:00", comments="Source Table: tblOpenType")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.962+08:00", comments="Source Table: tblOpenType")
     default int insertSelective(Tblopentype record) {
         return insert(SqlBuilder.insert(record)
                 .into(tblopentype)
@@ -85,26 +85,26 @@ public interface TblopentypeDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.950+08:00", comments="Source Table: tblOpenType")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.962+08:00", comments="Source Table: tblOpenType")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Tblopentype>>> selectByExample() {
         return SelectDSL.selectWithMapper(this::selectMany, id, opentype)
                 .from(tblopentype);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.950+08:00", comments="Source Table: tblOpenType")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.962+08:00", comments="Source Table: tblOpenType")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Tblopentype>>> selectDistinctByExample() {
         return SelectDSL.selectDistinctWithMapper(this::selectMany, id, opentype)
                 .from(tblopentype);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.950+08:00", comments="Source Table: tblOpenType")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.962+08:00", comments="Source Table: tblOpenType")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExample(Tblopentype record) {
         return UpdateDSL.updateWithMapper(this::update, tblopentype)
                 .set(id).equalTo(record::getId)
                 .set(opentype).equalTo(record::getOpentype);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.950+08:00", comments="Source Table: tblOpenType")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.963+08:00", comments="Source Table: tblOpenType")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExampleSelective(Tblopentype record) {
         return UpdateDSL.updateWithMapper(this::update, tblopentype)
                 .set(id).equalToWhenPresent(record::getId)

@@ -6,19 +6,19 @@ import org.mybatis.dynamic.sql.SqlColumn;
 import org.mybatis.dynamic.sql.SqlTable;
 
 public final class MycaozuoyuangroupDynamicSqlSupport {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.703+08:00", comments="Source Table: MYCAOZUOYUANGROUP")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.647+08:00", comments="Source Table: MYCAOZUOYUANGROUP")
     public static final Mycaozuoyuangroup mycaozuoyuangroup = new Mycaozuoyuangroup();
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.704+08:00", comments="Source field: MYCAOZUOYUANGROUP.GroupNo")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.647+08:00", comments="Source field: MYCAOZUOYUANGROUP.GroupNo")
     public static final SqlColumn<Integer> groupno = mycaozuoyuangroup.groupno;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.704+08:00", comments="Source field: MYCAOZUOYUANGROUP.GroupName")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.648+08:00", comments="Source field: MYCAOZUOYUANGROUP.GroupName")
     public static final SqlColumn<String> groupname = mycaozuoyuangroup.groupname;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.704+08:00", comments="Source field: MYCAOZUOYUANGROUP.Remarks")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.648+08:00", comments="Source field: MYCAOZUOYUANGROUP.Remarks")
     public static final SqlColumn<String> remarks = mycaozuoyuangroup.remarks;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.703+08:00", comments="Source Table: MYCAOZUOYUANGROUP")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.647+08:00", comments="Source Table: MYCAOZUOYUANGROUP")
     public static final class Mycaozuoyuangroup extends SqlTable {
         public final SqlColumn<Integer> groupno = column("GroupNo", JDBCType.INTEGER);
 

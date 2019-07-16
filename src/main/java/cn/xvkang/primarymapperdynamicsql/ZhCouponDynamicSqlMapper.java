@@ -31,20 +31,20 @@ import org.mybatis.dynamic.sql.util.SqlProviderAdapter;
 
 @Mapper
 public interface ZhCouponDynamicSqlMapper {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.955+08:00", comments="Source Table: zh_Coupon")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.968+08:00", comments="Source Table: zh_Coupon")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     long count(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.955+08:00", comments="Source Table: zh_Coupon")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.968+08:00", comments="Source Table: zh_Coupon")
     @DeleteProvider(type=SqlProviderAdapter.class, method="delete")
     int delete(DeleteStatementProvider deleteStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.955+08:00", comments="Source Table: zh_Coupon")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.968+08:00", comments="Source Table: zh_Coupon")
     @InsertProvider(type=SqlProviderAdapter.class, method="insert")
     @SelectKey(statement="SELECT SCOPE_IDENTITY()", keyProperty="record.id", before=false, resultType=Integer.class)
     int insert(InsertStatementProvider<ZhCoupon> insertStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.955+08:00", comments="Source Table: zh_Coupon")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.968+08:00", comments="Source Table: zh_Coupon")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @Results(id="ZhCouponResult", value = {
         @Result(column="id", property="id", jdbcType=JdbcType.INTEGER),
@@ -61,22 +61,22 @@ public interface ZhCouponDynamicSqlMapper {
     })
     List<ZhCoupon> selectMany(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.955+08:00", comments="Source Table: zh_Coupon")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.968+08:00", comments="Source Table: zh_Coupon")
     @UpdateProvider(type=SqlProviderAdapter.class, method="update")
     int update(UpdateStatementProvider updateStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.955+08:00", comments="Source Table: zh_Coupon")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.968+08:00", comments="Source Table: zh_Coupon")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<Long>> countByExample() {
         return SelectDSL.selectWithMapper(this::count, SqlBuilder.count())
                 .from(zhCoupon);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.955+08:00", comments="Source Table: zh_Coupon")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.968+08:00", comments="Source Table: zh_Coupon")
     default DeleteDSL<MyBatis3DeleteModelAdapter<Integer>> deleteByExample() {
         return DeleteDSL.deleteFromWithMapper(this::delete, zhCoupon);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.955+08:00", comments="Source Table: zh_Coupon")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.968+08:00", comments="Source Table: zh_Coupon")
     default int insert(ZhCoupon record) {
         return insert(SqlBuilder.insert(record)
                 .into(zhCoupon)
@@ -94,7 +94,7 @@ public interface ZhCouponDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.955+08:00", comments="Source Table: zh_Coupon")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.968+08:00", comments="Source Table: zh_Coupon")
     default int insertSelective(ZhCoupon record) {
         return insert(SqlBuilder.insert(record)
                 .into(zhCoupon)
@@ -112,19 +112,19 @@ public interface ZhCouponDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.956+08:00", comments="Source Table: zh_Coupon")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.969+08:00", comments="Source Table: zh_Coupon")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<ZhCoupon>>> selectByExample() {
         return SelectDSL.selectWithMapper(this::selectMany, id, orderno, carno, coupontype, couponvalue, invalidtime, couponid, merchantid, merchantname, couponstatus, altertime)
                 .from(zhCoupon);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.956+08:00", comments="Source Table: zh_Coupon")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.969+08:00", comments="Source Table: zh_Coupon")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<ZhCoupon>>> selectDistinctByExample() {
         return SelectDSL.selectDistinctWithMapper(this::selectMany, id, orderno, carno, coupontype, couponvalue, invalidtime, couponid, merchantid, merchantname, couponstatus, altertime)
                 .from(zhCoupon);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.956+08:00", comments="Source Table: zh_Coupon")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.969+08:00", comments="Source Table: zh_Coupon")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExample(ZhCoupon record) {
         return UpdateDSL.updateWithMapper(this::update, zhCoupon)
                 .set(orderno).equalTo(record::getOrderno)
@@ -139,7 +139,7 @@ public interface ZhCouponDynamicSqlMapper {
                 .set(altertime).equalTo(record::getAltertime);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.956+08:00", comments="Source Table: zh_Coupon")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.969+08:00", comments="Source Table: zh_Coupon")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExampleSelective(ZhCoupon record) {
         return UpdateDSL.updateWithMapper(this::update, zhCoupon)
                 .set(orderno).equalToWhenPresent(record::getOrderno)

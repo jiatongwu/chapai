@@ -6,37 +6,37 @@ import org.mybatis.dynamic.sql.SqlColumn;
 import org.mybatis.dynamic.sql.SqlTable;
 
 public final class MycaozuoyuanDynamicSqlSupport {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.701+08:00", comments="Source Table: MYCAOZUOYUAN")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.645+08:00", comments="Source Table: MYCAOZUOYUAN")
     public static final Mycaozuoyuan mycaozuoyuan = new Mycaozuoyuan();
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.701+08:00", comments="Source field: MYCAOZUOYUAN.CardNO")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.645+08:00", comments="Source field: MYCAOZUOYUAN.CardNO")
     public static final SqlColumn<String> cardno = mycaozuoyuan.cardno;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.701+08:00", comments="Source field: MYCAOZUOYUAN.ID")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.645+08:00", comments="Source field: MYCAOZUOYUAN.ID")
     public static final SqlColumn<Integer> id = mycaozuoyuan.id;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.701+08:00", comments="Source field: MYCAOZUOYUAN.CardType")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.645+08:00", comments="Source field: MYCAOZUOYUAN.CardType")
     public static final SqlColumn<String> cardtype = mycaozuoyuan.cardtype;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.701+08:00", comments="Source field: MYCAOZUOYUAN.UserNO")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.645+08:00", comments="Source field: MYCAOZUOYUAN.UserNO")
     public static final SqlColumn<String> userno = mycaozuoyuan.userno;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.701+08:00", comments="Source field: MYCAOZUOYUAN.UserName")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.645+08:00", comments="Source field: MYCAOZUOYUAN.UserName")
     public static final SqlColumn<String> username = mycaozuoyuan.username;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.702+08:00", comments="Source field: MYCAOZUOYUAN.DeptName")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.645+08:00", comments="Source field: MYCAOZUOYUAN.DeptName")
     public static final SqlColumn<String> deptname = mycaozuoyuan.deptname;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.702+08:00", comments="Source field: MYCAOZUOYUAN.Pwd")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.645+08:00", comments="Source field: MYCAOZUOYUAN.Pwd")
     public static final SqlColumn<String> pwd = mycaozuoyuan.pwd;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.702+08:00", comments="Source field: MYCAOZUOYUAN.CardState")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.646+08:00", comments="Source field: MYCAOZUOYUAN.CardState")
     public static final SqlColumn<Integer> cardstate = mycaozuoyuan.cardstate;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.702+08:00", comments="Source field: MYCAOZUOYUAN.UserLevel")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.646+08:00", comments="Source field: MYCAOZUOYUAN.UserLevel")
     public static final SqlColumn<Integer> userlevel = mycaozuoyuan.userlevel;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.701+08:00", comments="Source Table: MYCAOZUOYUAN")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.645+08:00", comments="Source Table: MYCAOZUOYUAN")
     public static final class Mycaozuoyuan extends SqlTable {
         public final SqlColumn<String> cardno = column("CardNO", JDBCType.VARCHAR);
 

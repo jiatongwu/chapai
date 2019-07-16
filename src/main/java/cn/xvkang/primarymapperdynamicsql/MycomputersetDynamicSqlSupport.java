@@ -6,16 +6,16 @@ import org.mybatis.dynamic.sql.SqlColumn;
 import org.mybatis.dynamic.sql.SqlTable;
 
 public final class MycomputersetDynamicSqlSupport {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.746+08:00", comments="Source Table: MYCOMPUTERSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.722+08:00", comments="Source Table: MYCOMPUTERSET")
     public static final Mycomputerset mycomputerset = new Mycomputerset();
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.746+08:00", comments="Source field: MYCOMPUTERSET.PCName")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.722+08:00", comments="Source field: MYCOMPUTERSET.PCName")
     public static final SqlColumn<String> pcname = mycomputerset.pcname;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.746+08:00", comments="Source field: MYCOMPUTERSET.CtrlNumber")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.722+08:00", comments="Source field: MYCOMPUTERSET.CtrlNumber")
     public static final SqlColumn<Integer> ctrlnumber = mycomputerset.ctrlnumber;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.746+08:00", comments="Source Table: MYCOMPUTERSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.722+08:00", comments="Source Table: MYCOMPUTERSET")
     public static final class Mycomputerset extends SqlTable {
         public final SqlColumn<String> pcname = column("PCName", JDBCType.VARCHAR);
 

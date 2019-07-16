@@ -347,7 +347,7 @@
 		<table tableName="MYFAXINGSSUE"
 			mapperName="MyfaxingssueDynamicSqlMapper">
 			<property name="useActualColumnNames" value="false" />
-			<generatedKey column="id" sqlStatement="SqlServer"
+			<generatedKey column="id" sqlStatement="JDBC"
 				type="post" identity="true" />
 		</table>
 		<table tableName="MYGANGWEIKOUSET"
@@ -383,7 +383,7 @@
 		<table tableName="MYJIBENZILIAO"
 			mapperName="MyjibenziliaoDynamicSqlMapper">
 			<property name="useActualColumnNames" value="false" />
-			<generatedKey column="id" sqlStatement="SqlServer"
+			<generatedKey column="id" sqlStatement="JDBC"
 				type="post" identity="true" />
 		</table>
 		<table tableName="MYMENJINRECORD"
@@ -1012,19 +1012,19 @@
 		<table tableName="user_person_create"
 			mapperName="UserPersonCreateDynamicSqlMapper">
 			<property name="useActualColumnNames" value="false" />
-			<generatedKey column="id" sqlStatement="SqlServer"
+			<generatedKey column="id" sqlStatement="JDBC"
 				type="post" identity="true" />
 		</table>
 		<table tableName="user_car_create"
 			mapperName="UserCarCreateDynamicSqlMapper">
 			<property name="useActualColumnNames" value="false" />
-			<generatedKey column="id" sqlStatement="SqlServer"
+			<generatedKey column="id" sqlStatement="JDBC"
 				type="post" identity="true" />
 		</table>
 		<table tableName="log"
 			mapperName="LogDynamicSqlMapper">
 			<property name="useActualColumnNames" value="false" />
-			<generatedKey column="id" sqlStatement="SqlServer"
+			<generatedKey column="id" sqlStatement="JDBC"
 				type="post" identity="true" />
 		</table>
 

@@ -30,19 +30,19 @@ import org.mybatis.dynamic.sql.util.SqlProviderAdapter;
 
 @Mapper
 public interface MyparkinggreetingDynamicSqlMapper {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.886+08:00", comments="Source Table: MyParkingGreeting")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.875+08:00", comments="Source Table: MyParkingGreeting")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     long count(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.886+08:00", comments="Source Table: MyParkingGreeting")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.875+08:00", comments="Source Table: MyParkingGreeting")
     @DeleteProvider(type=SqlProviderAdapter.class, method="delete")
     int delete(DeleteStatementProvider deleteStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.886+08:00", comments="Source Table: MyParkingGreeting")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.876+08:00", comments="Source Table: MyParkingGreeting")
     @InsertProvider(type=SqlProviderAdapter.class, method="insert")
     int insert(InsertStatementProvider<Myparkinggreeting> insertStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.886+08:00", comments="Source Table: MyParkingGreeting")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.876+08:00", comments="Source Table: MyParkingGreeting")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @Results(id="MyparkinggreetingResult", value = {
         @Result(column="CtrlNumber", property="ctrlnumber", jdbcType=JdbcType.INTEGER),
@@ -53,22 +53,22 @@ public interface MyparkinggreetingDynamicSqlMapper {
     })
     List<Myparkinggreeting> selectMany(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.886+08:00", comments="Source Table: MyParkingGreeting")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.876+08:00", comments="Source Table: MyParkingGreeting")
     @UpdateProvider(type=SqlProviderAdapter.class, method="update")
     int update(UpdateStatementProvider updateStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.886+08:00", comments="Source Table: MyParkingGreeting")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.877+08:00", comments="Source Table: MyParkingGreeting")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<Long>> countByExample() {
         return SelectDSL.selectWithMapper(this::count, SqlBuilder.count())
                 .from(myparkinggreeting);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.886+08:00", comments="Source Table: MyParkingGreeting")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.877+08:00", comments="Source Table: MyParkingGreeting")
     default DeleteDSL<MyBatis3DeleteModelAdapter<Integer>> deleteByExample() {
         return DeleteDSL.deleteFromWithMapper(this::delete, myparkinggreeting);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.886+08:00", comments="Source Table: MyParkingGreeting")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.877+08:00", comments="Source Table: MyParkingGreeting")
     default int insert(Myparkinggreeting record) {
         return insert(SqlBuilder.insert(record)
                 .into(myparkinggreeting)
@@ -81,7 +81,7 @@ public interface MyparkinggreetingDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.886+08:00", comments="Source Table: MyParkingGreeting")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.877+08:00", comments="Source Table: MyParkingGreeting")
     default int insertSelective(Myparkinggreeting record) {
         return insert(SqlBuilder.insert(record)
                 .into(myparkinggreeting)
@@ -94,19 +94,19 @@ public interface MyparkinggreetingDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.886+08:00", comments="Source Table: MyParkingGreeting")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.877+08:00", comments="Source Table: MyParkingGreeting")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Myparkinggreeting>>> selectByExample() {
         return SelectDSL.selectWithMapper(this::selectMany, ctrlnumber, voice, starttime, endtime, dredgevoice)
                 .from(myparkinggreeting);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.886+08:00", comments="Source Table: MyParkingGreeting")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.877+08:00", comments="Source Table: MyParkingGreeting")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Myparkinggreeting>>> selectDistinctByExample() {
         return SelectDSL.selectDistinctWithMapper(this::selectMany, ctrlnumber, voice, starttime, endtime, dredgevoice)
                 .from(myparkinggreeting);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.886+08:00", comments="Source Table: MyParkingGreeting")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.877+08:00", comments="Source Table: MyParkingGreeting")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExample(Myparkinggreeting record) {
         return UpdateDSL.updateWithMapper(this::update, myparkinggreeting)
                 .set(ctrlnumber).equalTo(record::getCtrlnumber)
@@ -116,7 +116,7 @@ public interface MyparkinggreetingDynamicSqlMapper {
                 .set(dredgevoice).equalTo(record::getDredgevoice);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.886+08:00", comments="Source Table: MyParkingGreeting")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.877+08:00", comments="Source Table: MyParkingGreeting")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExampleSelective(Myparkinggreeting record) {
         return UpdateDSL.updateWithMapper(this::update, myparkinggreeting)
                 .set(ctrlnumber).equalToWhenPresent(record::getCtrlnumber)

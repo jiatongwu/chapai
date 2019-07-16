@@ -329,7 +329,7 @@ layui.config({
         height: 'full-300',
         url: contextPath + '/chepai/selectAll',
         where: {
-            name: ''
+            createTimeAsc:0
         },
         page: {
             layout: ['prev', 'page', 'next', 'skip', 'count', 'limit', 'refresh'],
@@ -427,7 +427,10 @@ layui.config({
             // return new Date(createTime).Format("yyyy-MM-dd hh:mm:ss");
             // }
             // },
-             {
+            {
+                field: 'name',
+                title: '创建人姓名'
+            },  {
                 title: '操作',
                 toolbar: '#bar',
                 width:300

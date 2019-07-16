@@ -30,19 +30,19 @@ import org.mybatis.dynamic.sql.util.SqlProviderAdapter;
 
 @Mapper
 public interface TblqueryDynamicSqlMapper {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.951+08:00", comments="Source Table: tblQuery")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.964+08:00", comments="Source Table: tblQuery")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     long count(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.951+08:00", comments="Source Table: tblQuery")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.964+08:00", comments="Source Table: tblQuery")
     @DeleteProvider(type=SqlProviderAdapter.class, method="delete")
     int delete(DeleteStatementProvider deleteStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.951+08:00", comments="Source Table: tblQuery")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.964+08:00", comments="Source Table: tblQuery")
     @InsertProvider(type=SqlProviderAdapter.class, method="insert")
     int insert(InsertStatementProvider<Tblquery> insertStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.951+08:00", comments="Source Table: tblQuery")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.964+08:00", comments="Source Table: tblQuery")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @Results(id="TblqueryResult", value = {
         @Result(column="Window", property="window", jdbcType=JdbcType.VARCHAR),
@@ -58,22 +58,22 @@ public interface TblqueryDynamicSqlMapper {
     })
     List<Tblquery> selectMany(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.951+08:00", comments="Source Table: tblQuery")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.964+08:00", comments="Source Table: tblQuery")
     @UpdateProvider(type=SqlProviderAdapter.class, method="update")
     int update(UpdateStatementProvider updateStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.951+08:00", comments="Source Table: tblQuery")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.964+08:00", comments="Source Table: tblQuery")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<Long>> countByExample() {
         return SelectDSL.selectWithMapper(this::count, SqlBuilder.count())
                 .from(tblquery);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.951+08:00", comments="Source Table: tblQuery")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.965+08:00", comments="Source Table: tblQuery")
     default DeleteDSL<MyBatis3DeleteModelAdapter<Integer>> deleteByExample() {
         return DeleteDSL.deleteFromWithMapper(this::delete, tblquery);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.951+08:00", comments="Source Table: tblQuery")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.965+08:00", comments="Source Table: tblQuery")
     default int insert(Tblquery record) {
         return insert(SqlBuilder.insert(record)
                 .into(tblquery)
@@ -91,7 +91,7 @@ public interface TblqueryDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.951+08:00", comments="Source Table: tblQuery")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.965+08:00", comments="Source Table: tblQuery")
     default int insertSelective(Tblquery record) {
         return insert(SqlBuilder.insert(record)
                 .into(tblquery)
@@ -109,19 +109,19 @@ public interface TblqueryDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.951+08:00", comments="Source Table: tblQuery")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.965+08:00", comments="Source Table: tblQuery")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Tblquery>>> selectByExample() {
         return SelectDSL.selectWithMapper(this::selectMany, window, savename, showfieldCn, showfieldEn, realfield, op, searchvalue, datatype, selected, currentshow)
                 .from(tblquery);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.951+08:00", comments="Source Table: tblQuery")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.965+08:00", comments="Source Table: tblQuery")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Tblquery>>> selectDistinctByExample() {
         return SelectDSL.selectDistinctWithMapper(this::selectMany, window, savename, showfieldCn, showfieldEn, realfield, op, searchvalue, datatype, selected, currentshow)
                 .from(tblquery);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.951+08:00", comments="Source Table: tblQuery")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.965+08:00", comments="Source Table: tblQuery")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExample(Tblquery record) {
         return UpdateDSL.updateWithMapper(this::update, tblquery)
                 .set(window).equalTo(record::getWindow)
@@ -136,7 +136,7 @@ public interface TblqueryDynamicSqlMapper {
                 .set(currentshow).equalTo(record::getCurrentshow);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.951+08:00", comments="Source Table: tblQuery")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.965+08:00", comments="Source Table: tblQuery")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExampleSelective(Tblquery record) {
         return UpdateDSL.updateWithMapper(this::update, tblquery)
                 .set(window).equalToWhenPresent(record::getWindow)

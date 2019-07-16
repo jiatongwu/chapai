@@ -33,25 +33,25 @@ import org.mybatis.dynamic.sql.util.SqlProviderAdapter;
 
 @Mapper
 public interface MCardtypeDynamicSqlMapper {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.845+08:00", comments="Source Table: M_CardType")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.829+08:00", comments="Source Table: M_CardType")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     long count(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.845+08:00", comments="Source Table: M_CardType")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.829+08:00", comments="Source Table: M_CardType")
     @DeleteProvider(type=SqlProviderAdapter.class, method="delete")
     int delete(DeleteStatementProvider deleteStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.845+08:00", comments="Source Table: M_CardType")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.829+08:00", comments="Source Table: M_CardType")
     @InsertProvider(type=SqlProviderAdapter.class, method="insert")
     @SelectKey(statement="SELECT SCOPE_IDENTITY()", keyProperty="record.carid", before=true, resultType=Integer.class)
     int insert(InsertStatementProvider<MCardtype> insertStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.845+08:00", comments="Source Table: M_CardType")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.829+08:00", comments="Source Table: M_CardType")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @ResultMap("MCardtypeResult")
     MCardtype selectOne(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.845+08:00", comments="Source Table: M_CardType")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.829+08:00", comments="Source Table: M_CardType")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @Results(id="MCardtypeResult", value = {
         @Result(column="carid", property="carid", jdbcType=JdbcType.INTEGER, id=true),
@@ -61,22 +61,22 @@ public interface MCardtypeDynamicSqlMapper {
     })
     List<MCardtype> selectMany(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.846+08:00", comments="Source Table: M_CardType")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.829+08:00", comments="Source Table: M_CardType")
     @UpdateProvider(type=SqlProviderAdapter.class, method="update")
     int update(UpdateStatementProvider updateStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.846+08:00", comments="Source Table: M_CardType")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.829+08:00", comments="Source Table: M_CardType")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<Long>> countByExample() {
         return SelectDSL.selectWithMapper(this::count, SqlBuilder.count())
                 .from(MCardtype);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.846+08:00", comments="Source Table: M_CardType")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.829+08:00", comments="Source Table: M_CardType")
     default DeleteDSL<MyBatis3DeleteModelAdapter<Integer>> deleteByExample() {
         return DeleteDSL.deleteFromWithMapper(this::delete, MCardtype);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.846+08:00", comments="Source Table: M_CardType")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.829+08:00", comments="Source Table: M_CardType")
     default int deleteByPrimaryKey(Integer carid_) {
         return DeleteDSL.deleteFromWithMapper(this::delete, MCardtype)
                 .where(carid, isEqualTo(carid_))
@@ -84,7 +84,7 @@ public interface MCardtypeDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.846+08:00", comments="Source Table: M_CardType")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.829+08:00", comments="Source Table: M_CardType")
     default int insert(MCardtype record) {
         return insert(SqlBuilder.insert(record)
                 .into(MCardtype)
@@ -96,7 +96,7 @@ public interface MCardtypeDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.846+08:00", comments="Source Table: M_CardType")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.829+08:00", comments="Source Table: M_CardType")
     default int insertSelective(MCardtype record) {
         return insert(SqlBuilder.insert(record)
                 .into(MCardtype)
@@ -108,19 +108,19 @@ public interface MCardtypeDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.846+08:00", comments="Source Table: M_CardType")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.829+08:00", comments="Source Table: M_CardType")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<MCardtype>>> selectByExample() {
         return SelectDSL.selectWithMapper(this::selectMany, carid, carcname, carename, carmark)
                 .from(MCardtype);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.846+08:00", comments="Source Table: M_CardType")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.829+08:00", comments="Source Table: M_CardType")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<MCardtype>>> selectDistinctByExample() {
         return SelectDSL.selectDistinctWithMapper(this::selectMany, carid, carcname, carename, carmark)
                 .from(MCardtype);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.846+08:00", comments="Source Table: M_CardType")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.829+08:00", comments="Source Table: M_CardType")
     default MCardtype selectByPrimaryKey(Integer carid_) {
         return SelectDSL.selectWithMapper(this::selectOne, carid, carcname, carename, carmark)
                 .from(MCardtype)
@@ -129,7 +129,7 @@ public interface MCardtypeDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.846+08:00", comments="Source Table: M_CardType")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.829+08:00", comments="Source Table: M_CardType")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExample(MCardtype record) {
         return UpdateDSL.updateWithMapper(this::update, MCardtype)
                 .set(carid).equalTo(record::getCarid)
@@ -138,7 +138,7 @@ public interface MCardtypeDynamicSqlMapper {
                 .set(carmark).equalTo(record::getCarmark);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.846+08:00", comments="Source Table: M_CardType")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.829+08:00", comments="Source Table: M_CardType")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExampleSelective(MCardtype record) {
         return UpdateDSL.updateWithMapper(this::update, MCardtype)
                 .set(carid).equalToWhenPresent(record::getCarid)
@@ -147,7 +147,7 @@ public interface MCardtypeDynamicSqlMapper {
                 .set(carmark).equalToWhenPresent(record::getCarmark);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.846+08:00", comments="Source Table: M_CardType")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.830+08:00", comments="Source Table: M_CardType")
     default int updateByPrimaryKey(MCardtype record) {
         return UpdateDSL.updateWithMapper(this::update, MCardtype)
                 .set(carcname).equalTo(record::getCarcname)
@@ -158,7 +158,7 @@ public interface MCardtypeDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.846+08:00", comments="Source Table: M_CardType")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.830+08:00", comments="Source Table: M_CardType")
     default int updateByPrimaryKeySelective(MCardtype record) {
         return UpdateDSL.updateWithMapper(this::update, MCardtype)
                 .set(carcname).equalToWhenPresent(record::getCarcname)

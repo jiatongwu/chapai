@@ -44,15 +44,21 @@ import org.springframework.core.io.InputStreamResource;
 import org.springframework.core.io.Resource;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
 import com.github.pagehelper.PageHelper;
 
+import cn.xvkang.dto.MyUserDetails;
+import cn.xvkang.middle.LogServiceMiddle;
 import cn.xvkang.primarycustommapper.ChepaiCustomMapper;
 import cn.xvkang.primarycustommapper.PersonCustomMapper;
 import cn.xvkang.primaryentity.Myfaxingssue;
 import cn.xvkang.primaryentity.Myicvalid;
 import cn.xvkang.primaryentity.Myjibenziliao;
+import cn.xvkang.primaryentity.UserCarCreate;
+import cn.xvkang.primaryentity.UserPersonCreate;
 import cn.xvkang.primarymapperdynamicsql.MycardtypeDynamicSqlSupport;
 import cn.xvkang.primarymapperdynamicsql.MyfaxingssueDynamicSqlMapper;
 import cn.xvkang.primarymapperdynamicsql.MyfaxingssueDynamicSqlSupport;
@@ -62,12 +68,21 @@ import cn.xvkang.primarymapperdynamicsql.MyicvalidDynamicSqlMapper;
 import cn.xvkang.primarymapperdynamicsql.MyicvalidDynamicSqlSupport;
 import cn.xvkang.primarymapperdynamicsql.MyjibenziliaoDynamicSqlMapper;
 import cn.xvkang.primarymapperdynamicsql.MyjibenziliaoDynamicSqlSupport;
+import cn.xvkang.primarymapperdynamicsql.UserCarCreateDynamicSqlMapper;
+import cn.xvkang.primarymapperdynamicsql.UserCarCreateDynamicSqlSupport;
+import cn.xvkang.primarymapperdynamicsql.UserPersonCreateDynamicSqlMapper;
+import cn.xvkang.primarymapperdynamicsql.UserPersonCreateDynamicSqlSupport;
+import cn.xvkang.primarymapperdynamicsql.UserTableDynamicSqlSupport;
 import cn.xvkang.service.ChepaiService;
+import cn.xvkang.utils.Constants;
 import cn.xvkang.utils.MyPageImpl;
 import cn.xvkang.utils.WordExcelUtils;
 
 @Service
 public class ChepaiServiceImpl implements ChepaiService {
+	private static ThreadLocal<List<String>> importOkMessages = new ThreadLocal<List<String>>();
+	@Autowired
+	private LogServiceMiddle logServiceMiddle;
 	@Autowired
 	private ChepaiCustomMapper chepaiCustomMapper;
 	@Autowired
@@ -80,6 +95,10 @@ public class ChepaiServiceImpl implements ChepaiService {
 	private MyicmoneyDynamicSqlMapper myicmoneyDynamicSqlMapper;
 	@Autowired
 	private PersonCustomMapper personCustomMapper;
+	@Autowired
+	private UserCarCreateDynamicSqlMapper userCarCreateDynamicSqlMapper;
+	@Autowired
+	private UserPersonCreateDynamicSqlMapper userPersonCreateDynamicSqlMapper;
 	// @Autowired
 	// private BaseCustomMapper baseCustomMapper;
 	public static String startPersonNo = "Z40001";
@@ -109,7 +128,8 @@ public class ChepaiServiceImpl implements ChepaiService {
 						MyfaxingssueDynamicSqlSupport.myfaxingssue.carvalidenddate,
 						MyfaxingssueDynamicSqlSupport.myfaxingssue.id,
 						MyfaxingssueDynamicSqlSupport.myfaxingssue.cartype,
-						MyfaxingssueDynamicSqlSupport.myfaxingssue.carissuedate)
+						MyfaxingssueDynamicSqlSupport.myfaxingssue.carissuedate, UserTableDynamicSqlSupport.name,
+						UserTableDynamicSqlSupport.username.as("createUsername"))
 				.from(MyfaxingssueDynamicSqlSupport.myfaxingssue, "myfaxingssue")
 				.leftJoin(MyjibenziliaoDynamicSqlSupport.myjibenziliao, "myjibenziliao")
 				.on(MyfaxingssueDynamicSqlSupport.myfaxingssue.userno,
@@ -117,11 +137,22 @@ public class ChepaiServiceImpl implements ChepaiService {
 				.leftJoin(MycardtypeDynamicSqlSupport.mycardtype, "mycardtype")
 				.on(MyfaxingssueDynamicSqlSupport.myfaxingssue.carcardtype,
 						SqlBuilder.equalTo(MycardtypeDynamicSqlSupport.mycardtype.identifying))
+				.leftJoin(UserCarCreateDynamicSqlSupport.userCarCreate, "userCarCreate")
+				.on(UserCarCreateDynamicSqlSupport.userCarCreate.carId,
+						SqlBuilder.equalTo(MyfaxingssueDynamicSqlSupport.myfaxingssue.id))
+				.leftJoin(UserTableDynamicSqlSupport.userTable, "userTable")
+				.on(UserCarCreateDynamicSqlSupport.userCarCreate.userId,
+						SqlBuilder.equalTo(UserTableDynamicSqlSupport.userTable.id))
 				.where();
 		/*
 		 * 
 		 * personName personPhone cheBianma chexing chepaihao isInDate createTimeAsc
 		 */
+		String createUserName = (String) params.get("createUserName");
+		if (StringUtils.isNotBlank(createUserName)) {
+			params.put("createUserName", "%" + createUserName + "%");
+			where.and(UserTableDynamicSqlSupport.name, SqlBuilder.isLike((String) params.get("createUserName")));
+		}
 		String personName = (String) params.get("personName");
 		if (StringUtils.isNotBlank(personName)) {
 			params.put("personName", "%" + personName + "%");
@@ -488,6 +519,16 @@ public class ChepaiServiceImpl implements ChepaiService {
 		myicvalid.setOpttype("t");
 		int saveOrUpdateMyIcvalid = saveOrUpdateMyIcvalid(myicvalid);
 		if (saveOrUpdateChepaiByChepaihao > 0 && saveOrUpdatePersonByPhone > 0 && saveOrUpdateMyIcvalid > 0) {
+			// List<String> messages = new ArrayList<>();
+			List<String> list = importOkMessages.get();
+			// messages.add("车牌号：" + myfaxingssue.getCph() + ",人员姓名：" +
+			// myjibenziliao.getUsername() + ",手机：" + myjibenziliao.getMobnumber() +
+			// ",车牌有效时间截止：" + validEnd);
+			if (list == null) {
+				logServiceMiddle.insertOperateLog(Constants.LOG_MESSAGE_KEY_ENUM.添加车牌.getName(),
+						myjibenziliao.getUsername(), myjibenziliao.getMobnumber(), myjibenziliao.getCph(),
+						validEndDate);
+			}
 			return 1;
 		}
 		return 0;
@@ -557,7 +598,13 @@ public class ChepaiServiceImpl implements ChepaiService {
 					.where(MyjibenziliaoDynamicSqlSupport.mobnumber, SqlBuilder.isEqualTo(mobnumber)).build().execute();
 		}
 		// 新增
-		return myjibenziliaoDynamicSqlMapper.insert(myjibenziliao);
+		int insertResult = myjibenziliaoDynamicSqlMapper.insert(myjibenziliao);
+		if (insertResult > 0) {
+			Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+			MyUserDetails myUserDetails = (MyUserDetails) authentication.getPrincipal();
+			saveUserPersonCreateData(myUserDetails.getMySystemUser().getId(), myjibenziliao.getId());
+		}
+		return insertResult;
 	}
 
 	public String getNextCarNo() {
@@ -618,22 +665,44 @@ public class ChepaiServiceImpl implements ChepaiService {
 					.where(MyfaxingssueDynamicSqlSupport.cph, SqlBuilder.isEqualTo(cph)).build().execute();
 		}
 		// 新增
-		return myfaxingssueDynamicSqlMapper.insert(myfaxingssue);
+		int insertResult = myfaxingssueDynamicSqlMapper.insert(myfaxingssue);
+		if (insertResult > 0) {
+			Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+			MyUserDetails myUserDetails = (MyUserDetails) authentication.getPrincipal();
+			saveUserCarCreateData(myUserDetails.getMySystemUser().getId(), myfaxingssue.getId());
+		}
+		return insertResult;
 	}
 
 	@Override
 	public int delete(String id) {
 		Myfaxingssue myfaxingssue = myfaxingssueDynamicSqlMapper.selectByPrimaryKey(Integer.parseInt(id));
 		if (myfaxingssue != null) {
+			List<Myjibenziliao> myjibenziliaos = myjibenziliaoDynamicSqlMapper.selectByExample()
+					.where(MyjibenziliaoDynamicSqlSupport.userno, SqlBuilder.isEqualTo(myfaxingssue.getUserno()))
+					.build().execute();
 			myicmoneyDynamicSqlMapper.deleteByExample()
 					.where(MyicmoneyDynamicSqlSupport.cardno, SqlBuilder.isEqualTo(myfaxingssue.getCardno())).build()
 					.execute();
 			myicvalidDynamicSqlMapper.deleteByExample()
 					.where(MyicvalidDynamicSqlSupport.cardno, SqlBuilder.isEqualTo(myfaxingssue.getCardno())).build()
 					.execute();
-			myfaxingssueDynamicSqlMapper.deleteByExample()
+			Integer deleteResult = myfaxingssueDynamicSqlMapper.deleteByExample()
 					.where(MyfaxingssueDynamicSqlSupport.cardno, SqlBuilder.isEqualTo(myfaxingssue.getCardno())).build()
 					.execute();
+			if (deleteResult.intValue() > 0) {
+				List<String> messages = new ArrayList<>();
+				messages.add("车牌号：" + myfaxingssue.getCph());
+				String operateUsername = "";
+				String operateUserPhone = "";
+				if (myjibenziliaos.size() > 0) {
+					Myjibenziliao myjibenziliao = myjibenziliaos.get(0);
+					operateUsername = myjibenziliao.getUsername();
+					operateUserPhone = myjibenziliao.getMobnumber();
+				}
+				logServiceMiddle.insertOperateLog(Constants.LOG_MESSAGE_KEY_ENUM.车牌删除.getName(), operateUsername,
+						operateUserPhone, myfaxingssue.getCph(), myfaxingssue.getCarvalidenddate());
+			}
 			return 1;
 		}
 		return 1;
@@ -679,6 +748,9 @@ public class ChepaiServiceImpl implements ChepaiService {
 		 */
 		Myfaxingssue myfaxingssue = myfaxingssueDynamicSqlMapper.selectByPrimaryKey(Integer.parseInt(id));
 		if (myfaxingssue != null) {
+			List<Myjibenziliao> myjibenziliaos = myjibenziliaoDynamicSqlMapper.selectByExample()
+					.where(MyjibenziliaoDynamicSqlSupport.userno, SqlBuilder.isEqualTo(myfaxingssue.getUserno()))
+					.build().execute();
 			SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 			try {
 				UpdateStatementProvider updateStatement = SqlBuilder.update(MyfaxingssueDynamicSqlSupport.myfaxingssue)
@@ -689,11 +761,26 @@ public class ChepaiServiceImpl implements ChepaiService {
 						.equalTo("00000000000000000000000000000000000000000000000000")
 						.where(MyfaxingssueDynamicSqlSupport.id, SqlBuilder.isEqualTo(Integer.parseInt(id))).build()
 						.render(RenderingStrategy.MYBATIS3);
-				return myfaxingssueDynamicSqlMapper.update(updateStatement);
+				int updateResult = myfaxingssueDynamicSqlMapper.update(updateStatement);
+				if (updateResult > 0) {
+					List<String> messages = new ArrayList<>();
+					messages.add("车牌号：" + myfaxingssue.getCph() + ",延期到：" + endDate);
+					String operateUsername = "";
+					String operateUserPhone = "";
+
+					if (myjibenziliaos.size() > 0) {
+						Myjibenziliao myjibenziliao = myjibenziliaos.get(0);
+						operateUsername = myjibenziliao.getUsername();
+						operateUserPhone = myjibenziliao.getMobnumber();
+
+					}
+					logServiceMiddle.insertOperateLog(Constants.LOG_MESSAGE_KEY_ENUM.车牌延期.getName(), operateUsername,
+							operateUserPhone, myfaxingssue.getCph(), myfaxingssue.getCarvalidenddate());
+				}
+				return updateResult;
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
-
 		}
 		return 0;
 	}
@@ -701,16 +788,15 @@ public class ChepaiServiceImpl implements ChepaiService {
 	@SuppressWarnings("unused")
 	@Override
 	public Map<String, Object> importExcel(InputStream inputStream) {
-
+		importOkMessages.remove();
+		importOkMessages.set(new ArrayList<String>());
 		Date now = new Date();
 		List<String> errorMessages = new ArrayList<String>();
 		List<Map<String, Object>> datas = new ArrayList<>();
-		// List<String> messageList = new ArrayList<>();
 		Set<String> tmpUniqueKeyUniqueSet = new HashSet<>();
 		long errorCount = 0l;
 		long successCount = 0l;
 		XSSFWorkbook xssfWorkbook;
-
 		try {
 			xssfWorkbook = new XSSFWorkbook(inputStream);
 			XSSFSheet sheetAt = xssfWorkbook.getSheetAt(0);
@@ -727,7 +813,6 @@ public class ChepaiServiceImpl implements ChepaiService {
 					// 最后一行了，终止处理。
 					break;
 				}
-
 				XSSFCell phoneCell = row.getCell(1);
 				XSSFCell cphCell = row.getCell(2);
 				XSSFCell chexingCell = row.getCell(3);
@@ -782,14 +867,13 @@ public class ChepaiServiceImpl implements ChepaiService {
 				}
 				if (StringUtils.isBlank(validEndCellString)) {
 					isDataFormatOk = false;
-					errorMsgStringBuilder.append(" 有效期起始日不能为空 ");
+					errorMsgStringBuilder.append(" 有效期止日不能为空 ");
 				} else {
-					if (!(validStartCellString.matches("^\\d{4}-\\d{1,2}-\\d{1,2}$")
-							|| validStartCellString.matches("^\\d{4}年\\d{1,2}月\\d{1,2}日$"))) {
+					if (!(validEndCellString.matches("^\\d{4}-\\d{1,2}-\\d{1,2}$")
+							|| validEndCellString.matches("^\\d{4}年\\d{1,2}月\\d{1,2}日$"))) {
 						isDataFormatOk = false;
-						errorMsgStringBuilder.append(" 有效期起始日格式不正确 ");
+						errorMsgStringBuilder.append(" 有效期止日格式不正确 ");
 					}
-
 				}
 				if (isDataFormatOk) {
 					Map<String, Object> tmpData = new HashMap<String, Object>();
@@ -798,6 +882,20 @@ public class ChepaiServiceImpl implements ChepaiService {
 					tmpData.put("homeAddress", " ");
 					tmpData.put("chepaihao", cphCellString);
 					tmpData.put("chexing", chexingCellString);
+					SimpleDateFormat sdf = new SimpleDateFormat("yyyy年MM月dd日");
+					SimpleDateFormat sdf2 = new SimpleDateFormat("yyyy-MM-dd");
+					if (validStartCellString.matches("^\\d{4}年\\d{1,2}月\\d{1,2}日$")) {
+						try {
+							validStartCellString = sdf2.format(sdf.parse(validStartCellString));
+						} catch (Exception e) {
+						}
+					}
+					if (validEndCellString.matches("^\\d{4}年\\d{1,2}月\\d{1,2}日$")) {
+						try {
+							validEndCellString = sdf2.format(sdf.parse(validEndCellString));
+						} catch (Exception e) {
+						}
+					}
 					tmpData.put("validStart", validStartCellString);
 					tmpData.put("validEnd", validEndCellString);
 					tmpData.put("cheRemark", cheRemarkCellString);
@@ -806,12 +904,10 @@ public class ChepaiServiceImpl implements ChepaiService {
 					// 有格式不正确的行 ，提示给用户
 					errorMessages.add(errorMsgStringBuilder.toString());
 				}
-
 			}
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-
 		// 批量插入学生信息
 		List<Map<String, String>> batchImportExcelStudent = batchImportExcel(datas);
 		successCount = datas.size() - batchImportExcelStudent.size();
@@ -825,10 +921,13 @@ public class ChepaiServiceImpl implements ChepaiService {
 		Map<String, Object> result = new HashMap<>();
 		result.put("state", "ok");
 		result.put("msg", "导入成功" + successCount + "个学生");
-
 		result.put("errorMessages", errorMessages);
 		result.put("successCount", successCount);
 		result.put("errorCount", errorCount);
+		// 插入日志
+		// List<String> messageLists = importOkMessages.get();
+
+		importOkMessages.remove();
 		return result;
 	}
 
@@ -841,9 +940,61 @@ public class ChepaiServiceImpl implements ChepaiService {
 				errorStudent.put("phone", (String) s.get("phone"));
 				errorStudent.put("chepaihao", (String) s.get("chepaihao"));
 				result.add(errorStudent);
+			} else {
+				// 导入一个成功记录日志
+				String personName = (String) s.get("personName");
+				String phone = (String) s.get("phone");
+				String chepaihao = (String) s.get("chepaihao");
+				// messages.add("人员姓名：" + personName + ",手机：" + phone + ",家庭住址：" + homeAddress +
+				// ",车牌号：" + chepaihao + ",车型：" + chexing + ",有效时间起日：" + validStart + ",有效时间止日："
+				// + validEnd + ",车牌备注：" + cheRemark);
+				String validStart = (String) s.get("validStart");
+				SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+				Date validStartDate = null;
+				try {
+					validStartDate = sdf.parse(validStart);
+				} catch (Exception e) {
+				}
+				logServiceMiddle.insertOperateLog(Constants.LOG_MESSAGE_KEY_ENUM.批量导入车牌.getName(), personName, phone,
+						chepaihao, validStartDate);
 			}
 		}
 		return result;
 	}
 
+	private void saveUserCarCreateData(Integer userId, Integer carId) {
+		List<UserCarCreate> userCarCreates = userCarCreateDynamicSqlMapper.selectByExample()
+				.where(UserCarCreateDynamicSqlSupport.userId, SqlBuilder.isEqualTo(userId))
+				.and(UserCarCreateDynamicSqlSupport.carId, SqlBuilder.isEqualTo(carId)).build().execute();
+		if (userCarCreates.size() > 0) {
+			// 更新时间
+			UserCarCreate userCarCreate = userCarCreates.get(0);
+			userCarCreate.setCreatetime(new Date());
+			userCarCreateDynamicSqlMapper.updateByPrimaryKey(userCarCreate);
+		} else {
+			UserCarCreate userCarCreate = new UserCarCreate();
+			userCarCreate.setCarId(carId);
+			userCarCreate.setUserId(userId);
+			userCarCreate.setCreatetime(new Date());
+			userCarCreateDynamicSqlMapper.insert(userCarCreate);
+		}
+	}
+
+	private void saveUserPersonCreateData(Integer userId, Integer personId) {
+		List<UserPersonCreate> userPersonCreates = userPersonCreateDynamicSqlMapper.selectByExample()
+				.where(UserPersonCreateDynamicSqlSupport.userId, SqlBuilder.isEqualTo(userId))
+				.and(UserPersonCreateDynamicSqlSupport.personId, SqlBuilder.isEqualTo(personId)).build().execute();
+		if (userPersonCreates.size() > 0) {
+			// 更新时间
+			UserPersonCreate userPersonCreate = userPersonCreates.get(0);
+			userPersonCreate.setCreatetime(new Date());
+			userPersonCreateDynamicSqlMapper.updateByPrimaryKey(userPersonCreate);
+		} else {
+			UserPersonCreate userPersonCreate = new UserPersonCreate();
+			userPersonCreate.setUserId(userId);
+			userPersonCreate.setPersonId(personId);
+			userPersonCreate.setCreatetime(new Date());
+			userPersonCreateDynamicSqlMapper.insert(userPersonCreate);
+		}
+	}
 }

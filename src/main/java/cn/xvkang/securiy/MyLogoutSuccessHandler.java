@@ -16,7 +16,7 @@ public class MyLogoutSuccessHandler implements LogoutSuccessHandler {
 	@Override
 	public void onLogoutSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication)
 			throws IOException, ServletException {
-		response.sendRedirect("/loginPage.html");
+		response.sendRedirect(request.getContextPath() + "/loginPage.html");
 
 	}
 

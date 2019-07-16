@@ -83,7 +83,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 						"/getValidateCode/*", "/static/**", "/app/isPhoneCanLogin", "/app/signupAndRegisterUser",
 						"/getZhaoShengTime", "/app/isRegCodeEmptyByPhone", "/webjars/**", "/swagger-ui.html",
 						"/v2/api-docs", "/swagger-resources", "/swagger-resources/**", "/configuration/ui",
-						"/configuration/security", applicationProperties.getAppauth().getAppUrlPrefix() + "/**")
+						"/configuration/security", applicationProperties.getAppauth().getAppUrlPrefix() + "/**",
+						"/chepaiphone/**")
 				.permitAll().anyRequest().authenticated()
 				// .and().rememberMe()
 				// .tokenRepository(persistentTokenRepository()).tokenValiditySeconds(86400)

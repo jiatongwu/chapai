@@ -33,25 +33,25 @@ import org.mybatis.dynamic.sql.util.SqlProviderAdapter;
 
 @Mapper
 public interface MyzbparkautocphDynamicSqlMapper {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.810+08:00", comments="Source Table: MYZBPARKAutoCPH")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.819+08:00", comments="Source Table: MYZBPARKAutoCPH")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     long count(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.810+08:00", comments="Source Table: MYZBPARKAutoCPH")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.819+08:00", comments="Source Table: MYZBPARKAutoCPH")
     @DeleteProvider(type=SqlProviderAdapter.class, method="delete")
     int delete(DeleteStatementProvider deleteStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.810+08:00", comments="Source Table: MYZBPARKAutoCPH")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.819+08:00", comments="Source Table: MYZBPARKAutoCPH")
     @InsertProvider(type=SqlProviderAdapter.class, method="insert")
     @SelectKey(statement="SELECT SCOPE_IDENTITY()", keyProperty="record.id", before=false, resultType=Integer.class)
     int insert(InsertStatementProvider<Myzbparkautocph> insertStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.810+08:00", comments="Source Table: MYZBPARKAutoCPH")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.819+08:00", comments="Source Table: MYZBPARKAutoCPH")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @ResultMap("MyzbparkautocphResult")
     Myzbparkautocph selectOne(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.810+08:00", comments="Source Table: MYZBPARKAutoCPH")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.819+08:00", comments="Source Table: MYZBPARKAutoCPH")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @Results(id="MyzbparkautocphResult", value = {
         @Result(column="ID", property="id", jdbcType=JdbcType.INTEGER, id=true),
@@ -68,22 +68,22 @@ public interface MyzbparkautocphDynamicSqlMapper {
     })
     List<Myzbparkautocph> selectMany(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.810+08:00", comments="Source Table: MYZBPARKAutoCPH")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.819+08:00", comments="Source Table: MYZBPARKAutoCPH")
     @UpdateProvider(type=SqlProviderAdapter.class, method="update")
     int update(UpdateStatementProvider updateStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.810+08:00", comments="Source Table: MYZBPARKAutoCPH")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.819+08:00", comments="Source Table: MYZBPARKAutoCPH")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<Long>> countByExample() {
         return SelectDSL.selectWithMapper(this::count, SqlBuilder.count())
                 .from(myzbparkautocph);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.810+08:00", comments="Source Table: MYZBPARKAutoCPH")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.819+08:00", comments="Source Table: MYZBPARKAutoCPH")
     default DeleteDSL<MyBatis3DeleteModelAdapter<Integer>> deleteByExample() {
         return DeleteDSL.deleteFromWithMapper(this::delete, myzbparkautocph);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.810+08:00", comments="Source Table: MYZBPARKAutoCPH")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.819+08:00", comments="Source Table: MYZBPARKAutoCPH")
     default int deleteByPrimaryKey(Integer id_) {
         return DeleteDSL.deleteFromWithMapper(this::delete, myzbparkautocph)
                 .where(id, isEqualTo(id_))
@@ -91,7 +91,7 @@ public interface MyzbparkautocphDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.810+08:00", comments="Source Table: MYZBPARKAutoCPH")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.819+08:00", comments="Source Table: MYZBPARKAutoCPH")
     default int insert(Myzbparkautocph record) {
         return insert(SqlBuilder.insert(record)
                 .into(myzbparkautocph)
@@ -109,7 +109,7 @@ public interface MyzbparkautocphDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.810+08:00", comments="Source Table: MYZBPARKAutoCPH")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.819+08:00", comments="Source Table: MYZBPARKAutoCPH")
     default int insertSelective(Myzbparkautocph record) {
         return insert(SqlBuilder.insert(record)
                 .into(myzbparkautocph)
@@ -127,19 +127,19 @@ public interface MyzbparkautocphDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.810+08:00", comments="Source Table: MYZBPARKAutoCPH")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.819+08:00", comments="Source Table: MYZBPARKAutoCPH")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Myzbparkautocph>>> selectByExample() {
         return SelectDSL.selectWithMapper(this::selectMany, id, cph, address, favorable, manner, outhour, outdayno, enable, pcname, opttime, operator)
                 .from(myzbparkautocph);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.810+08:00", comments="Source Table: MYZBPARKAutoCPH")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.820+08:00", comments="Source Table: MYZBPARKAutoCPH")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Myzbparkautocph>>> selectDistinctByExample() {
         return SelectDSL.selectDistinctWithMapper(this::selectMany, id, cph, address, favorable, manner, outhour, outdayno, enable, pcname, opttime, operator)
                 .from(myzbparkautocph);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.810+08:00", comments="Source Table: MYZBPARKAutoCPH")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.820+08:00", comments="Source Table: MYZBPARKAutoCPH")
     default Myzbparkautocph selectByPrimaryKey(Integer id_) {
         return SelectDSL.selectWithMapper(this::selectOne, id, cph, address, favorable, manner, outhour, outdayno, enable, pcname, opttime, operator)
                 .from(myzbparkautocph)
@@ -148,7 +148,7 @@ public interface MyzbparkautocphDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.810+08:00", comments="Source Table: MYZBPARKAutoCPH")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.821+08:00", comments="Source Table: MYZBPARKAutoCPH")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExample(Myzbparkautocph record) {
         return UpdateDSL.updateWithMapper(this::update, myzbparkautocph)
                 .set(cph).equalTo(record::getCph)
@@ -163,7 +163,7 @@ public interface MyzbparkautocphDynamicSqlMapper {
                 .set(operator).equalTo(record::getOperator);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.811+08:00", comments="Source Table: MYZBPARKAutoCPH")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.821+08:00", comments="Source Table: MYZBPARKAutoCPH")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExampleSelective(Myzbparkautocph record) {
         return UpdateDSL.updateWithMapper(this::update, myzbparkautocph)
                 .set(cph).equalToWhenPresent(record::getCph)
@@ -178,7 +178,7 @@ public interface MyzbparkautocphDynamicSqlMapper {
                 .set(operator).equalToWhenPresent(record::getOperator);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.811+08:00", comments="Source Table: MYZBPARKAutoCPH")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.821+08:00", comments="Source Table: MYZBPARKAutoCPH")
     default int updateByPrimaryKey(Myzbparkautocph record) {
         return UpdateDSL.updateWithMapper(this::update, myzbparkautocph)
                 .set(cph).equalTo(record::getCph)
@@ -196,7 +196,7 @@ public interface MyzbparkautocphDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.811+08:00", comments="Source Table: MYZBPARKAutoCPH")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.821+08:00", comments="Source Table: MYZBPARKAutoCPH")
     default int updateByPrimaryKeySelective(Myzbparkautocph record) {
         return UpdateDSL.updateWithMapper(this::update, myzbparkautocph)
                 .set(cph).equalToWhenPresent(record::getCph)

@@ -30,41 +30,41 @@ import org.mybatis.dynamic.sql.util.SqlProviderAdapter;
 
 @Mapper
 public interface AutocphDynamicSqlMapper {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.549+08:00", comments="Source Table: AutoCPH")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.471+08:00", comments="Source Table: AutoCPH")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     long count(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.551+08:00", comments="Source Table: AutoCPH")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.473+08:00", comments="Source Table: AutoCPH")
     @DeleteProvider(type=SqlProviderAdapter.class, method="delete")
     int delete(DeleteStatementProvider deleteStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.553+08:00", comments="Source Table: AutoCPH")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.473+08:00", comments="Source Table: AutoCPH")
     @InsertProvider(type=SqlProviderAdapter.class, method="insert")
     int insert(InsertStatementProvider<Autocph> insertStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.557+08:00", comments="Source Table: AutoCPH")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.476+08:00", comments="Source Table: AutoCPH")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @Results(id="AutocphResult", value = {
         @Result(column="CPH", property="cph", jdbcType=JdbcType.VARCHAR)
     })
     List<Autocph> selectMany(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.559+08:00", comments="Source Table: AutoCPH")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.477+08:00", comments="Source Table: AutoCPH")
     @UpdateProvider(type=SqlProviderAdapter.class, method="update")
     int update(UpdateStatementProvider updateStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.561+08:00", comments="Source Table: AutoCPH")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.478+08:00", comments="Source Table: AutoCPH")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<Long>> countByExample() {
         return SelectDSL.selectWithMapper(this::count, SqlBuilder.count())
                 .from(autocph);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.562+08:00", comments="Source Table: AutoCPH")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.479+08:00", comments="Source Table: AutoCPH")
     default DeleteDSL<MyBatis3DeleteModelAdapter<Integer>> deleteByExample() {
         return DeleteDSL.deleteFromWithMapper(this::delete, autocph);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.564+08:00", comments="Source Table: AutoCPH")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.481+08:00", comments="Source Table: AutoCPH")
     default int insert(Autocph record) {
         return insert(SqlBuilder.insert(record)
                 .into(autocph)
@@ -73,7 +73,7 @@ public interface AutocphDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.566+08:00", comments="Source Table: AutoCPH")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.482+08:00", comments="Source Table: AutoCPH")
     default int insertSelective(Autocph record) {
         return insert(SqlBuilder.insert(record)
                 .into(autocph)
@@ -82,25 +82,25 @@ public interface AutocphDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.568+08:00", comments="Source Table: AutoCPH")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.483+08:00", comments="Source Table: AutoCPH")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Autocph>>> selectByExample() {
         return SelectDSL.selectWithMapper(this::selectMany, cph)
                 .from(autocph);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.569+08:00", comments="Source Table: AutoCPH")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.484+08:00", comments="Source Table: AutoCPH")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Autocph>>> selectDistinctByExample() {
         return SelectDSL.selectDistinctWithMapper(this::selectMany, cph)
                 .from(autocph);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.571+08:00", comments="Source Table: AutoCPH")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.485+08:00", comments="Source Table: AutoCPH")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExample(Autocph record) {
         return UpdateDSL.updateWithMapper(this::update, autocph)
                 .set(cph).equalTo(record::getCph);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.573+08:00", comments="Source Table: AutoCPH")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.486+08:00", comments="Source Table: AutoCPH")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExampleSelective(Autocph record) {
         return UpdateDSL.updateWithMapper(this::update, autocph)
                 .set(cph).equalToWhenPresent(record::getCph);

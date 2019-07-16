@@ -33,25 +33,25 @@ import org.mybatis.dynamic.sql.util.SqlProviderAdapter;
 
 @Mapper
 public interface DtTimingopenDynamicSqlMapper {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.654+08:00", comments="Source Table: Dt_TimingOpen")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.585+08:00", comments="Source Table: Dt_TimingOpen")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     long count(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.654+08:00", comments="Source Table: Dt_TimingOpen")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.586+08:00", comments="Source Table: Dt_TimingOpen")
     @DeleteProvider(type=SqlProviderAdapter.class, method="delete")
     int delete(DeleteStatementProvider deleteStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.654+08:00", comments="Source Table: Dt_TimingOpen")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.586+08:00", comments="Source Table: Dt_TimingOpen")
     @InsertProvider(type=SqlProviderAdapter.class, method="insert")
     @SelectKey(statement="SELECT SCOPE_IDENTITY()", keyProperty="record.id", before=false, resultType=Integer.class)
     int insert(InsertStatementProvider<DtTimingopen> insertStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.654+08:00", comments="Source Table: Dt_TimingOpen")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.586+08:00", comments="Source Table: Dt_TimingOpen")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @ResultMap("DtTimingopenResult")
     DtTimingopen selectOne(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.654+08:00", comments="Source Table: Dt_TimingOpen")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.586+08:00", comments="Source Table: Dt_TimingOpen")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @Results(id="DtTimingopenResult", value = {
         @Result(column="id", property="id", jdbcType=JdbcType.INTEGER, id=true),
@@ -70,22 +70,22 @@ public interface DtTimingopenDynamicSqlMapper {
     })
     List<DtTimingopen> selectMany(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.654+08:00", comments="Source Table: Dt_TimingOpen")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.586+08:00", comments="Source Table: Dt_TimingOpen")
     @UpdateProvider(type=SqlProviderAdapter.class, method="update")
     int update(UpdateStatementProvider updateStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.654+08:00", comments="Source Table: Dt_TimingOpen")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.586+08:00", comments="Source Table: Dt_TimingOpen")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<Long>> countByExample() {
         return SelectDSL.selectWithMapper(this::count, SqlBuilder.count())
                 .from(dtTimingopen);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.655+08:00", comments="Source Table: Dt_TimingOpen")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.586+08:00", comments="Source Table: Dt_TimingOpen")
     default DeleteDSL<MyBatis3DeleteModelAdapter<Integer>> deleteByExample() {
         return DeleteDSL.deleteFromWithMapper(this::delete, dtTimingopen);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.655+08:00", comments="Source Table: Dt_TimingOpen")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.586+08:00", comments="Source Table: Dt_TimingOpen")
     default int deleteByPrimaryKey(Integer id_) {
         return DeleteDSL.deleteFromWithMapper(this::delete, dtTimingopen)
                 .where(id, isEqualTo(id_))
@@ -93,7 +93,7 @@ public interface DtTimingopenDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.655+08:00", comments="Source Table: Dt_TimingOpen")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.586+08:00", comments="Source Table: Dt_TimingOpen")
     default int insert(DtTimingopen record) {
         return insert(SqlBuilder.insert(record)
                 .into(dtTimingopen)
@@ -113,7 +113,7 @@ public interface DtTimingopenDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.655+08:00", comments="Source Table: Dt_TimingOpen")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.586+08:00", comments="Source Table: Dt_TimingOpen")
     default int insertSelective(DtTimingopen record) {
         return insert(SqlBuilder.insert(record)
                 .into(dtTimingopen)
@@ -133,19 +133,19 @@ public interface DtTimingopenDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.655+08:00", comments="Source Table: Dt_TimingOpen")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.586+08:00", comments="Source Table: Dt_TimingOpen")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<DtTimingopen>>> selectByExample() {
         return SelectDSL.selectWithMapper(this::selectMany, id, devcnum, nomalset, week, star1, end1, star2, end2, star3, end3, star4, end4, foorinfo)
                 .from(dtTimingopen);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.655+08:00", comments="Source Table: Dt_TimingOpen")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.586+08:00", comments="Source Table: Dt_TimingOpen")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<DtTimingopen>>> selectDistinctByExample() {
         return SelectDSL.selectDistinctWithMapper(this::selectMany, id, devcnum, nomalset, week, star1, end1, star2, end2, star3, end3, star4, end4, foorinfo)
                 .from(dtTimingopen);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.655+08:00", comments="Source Table: Dt_TimingOpen")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.586+08:00", comments="Source Table: Dt_TimingOpen")
     default DtTimingopen selectByPrimaryKey(Integer id_) {
         return SelectDSL.selectWithMapper(this::selectOne, id, devcnum, nomalset, week, star1, end1, star2, end2, star3, end3, star4, end4, foorinfo)
                 .from(dtTimingopen)
@@ -154,7 +154,7 @@ public interface DtTimingopenDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.655+08:00", comments="Source Table: Dt_TimingOpen")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.586+08:00", comments="Source Table: Dt_TimingOpen")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExample(DtTimingopen record) {
         return UpdateDSL.updateWithMapper(this::update, dtTimingopen)
                 .set(devcnum).equalTo(record::getDevcnum)
@@ -171,7 +171,7 @@ public interface DtTimingopenDynamicSqlMapper {
                 .set(foorinfo).equalTo(record::getFoorinfo);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.655+08:00", comments="Source Table: Dt_TimingOpen")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.586+08:00", comments="Source Table: Dt_TimingOpen")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExampleSelective(DtTimingopen record) {
         return UpdateDSL.updateWithMapper(this::update, dtTimingopen)
                 .set(devcnum).equalToWhenPresent(record::getDevcnum)
@@ -188,7 +188,7 @@ public interface DtTimingopenDynamicSqlMapper {
                 .set(foorinfo).equalToWhenPresent(record::getFoorinfo);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.655+08:00", comments="Source Table: Dt_TimingOpen")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.587+08:00", comments="Source Table: Dt_TimingOpen")
     default int updateByPrimaryKey(DtTimingopen record) {
         return UpdateDSL.updateWithMapper(this::update, dtTimingopen)
                 .set(devcnum).equalTo(record::getDevcnum)
@@ -208,7 +208,7 @@ public interface DtTimingopenDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.655+08:00", comments="Source Table: Dt_TimingOpen")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.587+08:00", comments="Source Table: Dt_TimingOpen")
     default int updateByPrimaryKeySelective(DtTimingopen record) {
         return UpdateDSL.updateWithMapper(this::update, dtTimingopen)
                 .set(devcnum).equalToWhenPresent(record::getDevcnum)

@@ -6,25 +6,25 @@ import org.mybatis.dynamic.sql.SqlColumn;
 import org.mybatis.dynamic.sql.SqlTable;
 
 public final class MycardtypeDynamicSqlSupport {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.843+08:00", comments="Source Table: MYCardType")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.828+08:00", comments="Source Table: MYCardType")
     public static final Mycardtype mycardtype = new Mycardtype();
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.843+08:00", comments="Source field: MYCardType.ID")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.828+08:00", comments="Source field: MYCardType.ID")
     public static final SqlColumn<Integer> id = mycardtype.id;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.843+08:00", comments="Source field: MYCardType.CardType")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.828+08:00", comments="Source field: MYCardType.CardType")
     public static final SqlColumn<String> cardtype = mycardtype.cardtype;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.843+08:00", comments="Source field: MYCardType.Identifying")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.828+08:00", comments="Source field: MYCardType.Identifying")
     public static final SqlColumn<String> identifying = mycardtype.identifying;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.843+08:00", comments="Source field: MYCardType.Enabled")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.828+08:00", comments="Source field: MYCardType.Enabled")
     public static final SqlColumn<Boolean> enabled = mycardtype.enabled;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.843+08:00", comments="Source field: MYCardType.Reamrks")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.828+08:00", comments="Source field: MYCardType.Reamrks")
     public static final SqlColumn<String> reamrks = mycardtype.reamrks;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.843+08:00", comments="Source Table: MYCardType")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.828+08:00", comments="Source Table: MYCardType")
     public static final class Mycardtype extends SqlTable {
         public final SqlColumn<Integer> id = column("ID", JDBCType.INTEGER);
 

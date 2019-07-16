@@ -131,6 +131,33 @@ public class Constants {
 		}
 	}
 
+	public static enum LOG_MESSAGE_KEY_ENUM {
+		人员删除("人员删除"), 添加车牌("添加车牌"), 批量导入车牌("批量导入车牌"), 车牌延期("车牌延期"), 车牌删除("车牌删除");
+		private String name;
+
+		LOG_MESSAGE_KEY_ENUM(String name) {
+
+			this.name = name;
+		}
+
+		public String getName() {
+			return name;
+		}
+
+		public void setName(String name) {
+			this.name = name;
+		}
+
+		public static List<String> getAll() {
+			List<String> result = new ArrayList<>();
+			LOG_MESSAGE_KEY_ENUM[] values = LOG_MESSAGE_KEY_ENUM.values();
+			for (LOG_MESSAGE_KEY_ENUM value : values) {
+				result.add(value.getName());
+			}
+			return result;
+		}
+	}
+
 	public static enum ReturnCode {
 		成功(0, "执行成功"), 参数错误(1, "参数错误"), 未认证(2, "未认证"), 未授权(3, "未授权"), 服务器内部错误(5, "服务器内部错误"), 其他错误(4, "其他错误"),
 		账号不存在(6, "账号不存在"), 密码错误(7, "密码错误"), 您已经登录了不能再次登录(8, "您已经登录了不能再次登录"), 该用户已注册(9, "该用户已注册"),

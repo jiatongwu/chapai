@@ -6,19 +6,19 @@ import org.mybatis.dynamic.sql.SqlColumn;
 import org.mybatis.dynamic.sql.SqlTable;
 
 public final class SerOuttimebaojingrecDynamicSqlSupport {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.929+08:00", comments="Source Table: Ser_OutTimeBaoJingRec")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.941+08:00", comments="Source Table: Ser_OutTimeBaoJingRec")
     public static final SerOuttimebaojingrec serOuttimebaojingrec = new SerOuttimebaojingrec();
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.929+08:00", comments="Source field: Ser_OutTimeBaoJingRec.id")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.941+08:00", comments="Source field: Ser_OutTimeBaoJingRec.id")
     public static final SqlColumn<Integer> id = serOuttimebaojingrec.id;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.929+08:00", comments="Source field: Ser_OutTimeBaoJingRec.DevcNum")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.941+08:00", comments="Source field: Ser_OutTimeBaoJingRec.DevcNum")
     public static final SqlColumn<Integer> devcnum = serOuttimebaojingrec.devcnum;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.929+08:00", comments="Source field: Ser_OutTimeBaoJingRec.Baojin")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.942+08:00", comments="Source field: Ser_OutTimeBaoJingRec.Baojin")
     public static final SqlColumn<String> baojin = serOuttimebaojingrec.baojin;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.929+08:00", comments="Source Table: Ser_OutTimeBaoJingRec")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.941+08:00", comments="Source Table: Ser_OutTimeBaoJingRec")
     public static final class SerOuttimebaojingrec extends SqlTable {
         public final SqlColumn<Integer> id = column("id", JDBCType.INTEGER);
 

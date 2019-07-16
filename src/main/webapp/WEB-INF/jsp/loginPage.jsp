@@ -29,7 +29,7 @@
 	<input type="text" hidden id="contextPath" value="${pageContext.request.contextPath }" />
 	<div class="box">
 		<div class="logo">
-			<!-- <img src="/static/img/logo.png" /> -->体检系统</div>
+			<!-- <img src="/static/img/logo.png" /> -->车牌系统</div>
 		<form class="layui-form layui-form-pane"  style="width:350px;">
 			<div class="layui-form-item">
 				<label class="layui-form-label">用户名</label>

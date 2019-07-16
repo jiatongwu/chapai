@@ -173,6 +173,7 @@ public class UserServiceImpl implements UserService {
 
 		UserTable userTable = new UserTable();
 		userTable.setUsername(username);
+		userTable.setDisabled(0);
 		userTable.setCreateTime(new Date());
 		userTable.setPassword(passwordEncoder.encode(password));
 		userTable.setSalt("");

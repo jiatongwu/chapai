@@ -76,8 +76,14 @@
                             <select name="createTimeAsc" id="createTimeAsc">
                                 <option value=""></option>
                                 <option value="1">升序</option>
-                                <option value="0">降序</option>
+                                <option value="0" selected>降序</option>
                             </select>
+                        </div>
+                    </div>
+                    <div class="layui-inline">
+                        <label class="layui-form-label">创建人姓名</label>
+                        <div class="layui-input-inline">
+                            <input type="text" class="layui-input" id="createUserName" name="createUserName"/>
                         </div>
                     </div>
                     <div class="layui-inline">

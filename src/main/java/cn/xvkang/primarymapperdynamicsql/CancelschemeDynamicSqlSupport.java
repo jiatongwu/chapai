@@ -6,31 +6,31 @@ import org.mybatis.dynamic.sql.SqlColumn;
 import org.mybatis.dynamic.sql.SqlTable;
 
 public final class CancelschemeDynamicSqlSupport {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.577+08:00", comments="Source Table: CancelScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.490+08:00", comments="Source Table: CancelScheme")
     public static final Cancelscheme cancelscheme = new Cancelscheme();
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.578+08:00", comments="Source field: CancelScheme.SchId")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.490+08:00", comments="Source field: CancelScheme.SchId")
     public static final SqlColumn<Integer> schid = cancelscheme.schid;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.578+08:00", comments="Source field: CancelScheme.SchName")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.490+08:00", comments="Source field: CancelScheme.SchName")
     public static final SqlColumn<String> schname = cancelscheme.schname;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.578+08:00", comments="Source field: CancelScheme.FieldName")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.491+08:00", comments="Source field: CancelScheme.FieldName")
     public static final SqlColumn<String> fieldname = cancelscheme.fieldname;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.578+08:00", comments="Source field: CancelScheme.Operators")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.491+08:00", comments="Source field: CancelScheme.Operators")
     public static final SqlColumn<String> operators = cancelscheme.operators;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.578+08:00", comments="Source field: CancelScheme.Selectvalues")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.491+08:00", comments="Source field: CancelScheme.Selectvalues")
     public static final SqlColumn<String> selectvalues = cancelscheme.selectvalues;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.578+08:00", comments="Source field: CancelScheme.startime")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.491+08:00", comments="Source field: CancelScheme.startime")
     public static final SqlColumn<String> startime = cancelscheme.startime;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.579+08:00", comments="Source field: CancelScheme.endtime")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.491+08:00", comments="Source field: CancelScheme.endtime")
     public static final SqlColumn<String> endtime = cancelscheme.endtime;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.577+08:00", comments="Source Table: CancelScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.490+08:00", comments="Source Table: CancelScheme")
     public static final class Cancelscheme extends SqlTable {
         public final SqlColumn<Integer> schid = column("SchId", JDBCType.INTEGER);
 

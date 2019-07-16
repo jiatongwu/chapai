@@ -33,25 +33,25 @@ import org.mybatis.dynamic.sql.util.SqlProviderAdapter;
 
 @Mapper
 public interface IssueschemeDynamicSqlMapper {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.671+08:00", comments="Source Table: IssueScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.603+08:00", comments="Source Table: IssueScheme")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     long count(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.671+08:00", comments="Source Table: IssueScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.603+08:00", comments="Source Table: IssueScheme")
     @DeleteProvider(type=SqlProviderAdapter.class, method="delete")
     int delete(DeleteStatementProvider deleteStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.671+08:00", comments="Source Table: IssueScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.603+08:00", comments="Source Table: IssueScheme")
     @InsertProvider(type=SqlProviderAdapter.class, method="insert")
     @SelectKey(statement="SELECT SCOPE_IDENTITY()", keyProperty="record.schid", before=false, resultType=Integer.class)
     int insert(InsertStatementProvider<Issuescheme> insertStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.671+08:00", comments="Source Table: IssueScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.604+08:00", comments="Source Table: IssueScheme")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @ResultMap("IssueschemeResult")
     Issuescheme selectOne(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.671+08:00", comments="Source Table: IssueScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.604+08:00", comments="Source Table: IssueScheme")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @Results(id="IssueschemeResult", value = {
         @Result(column="SchId", property="schid", jdbcType=JdbcType.INTEGER, id=true),
@@ -64,22 +64,22 @@ public interface IssueschemeDynamicSqlMapper {
     })
     List<Issuescheme> selectMany(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.671+08:00", comments="Source Table: IssueScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.604+08:00", comments="Source Table: IssueScheme")
     @UpdateProvider(type=SqlProviderAdapter.class, method="update")
     int update(UpdateStatementProvider updateStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.671+08:00", comments="Source Table: IssueScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.604+08:00", comments="Source Table: IssueScheme")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<Long>> countByExample() {
         return SelectDSL.selectWithMapper(this::count, SqlBuilder.count())
                 .from(issuescheme);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.672+08:00", comments="Source Table: IssueScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.604+08:00", comments="Source Table: IssueScheme")
     default DeleteDSL<MyBatis3DeleteModelAdapter<Integer>> deleteByExample() {
         return DeleteDSL.deleteFromWithMapper(this::delete, issuescheme);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.672+08:00", comments="Source Table: IssueScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.604+08:00", comments="Source Table: IssueScheme")
     default int deleteByPrimaryKey(Integer schid_) {
         return DeleteDSL.deleteFromWithMapper(this::delete, issuescheme)
                 .where(schid, isEqualTo(schid_))
@@ -87,7 +87,7 @@ public interface IssueschemeDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.672+08:00", comments="Source Table: IssueScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.604+08:00", comments="Source Table: IssueScheme")
     default int insert(Issuescheme record) {
         return insert(SqlBuilder.insert(record)
                 .into(issuescheme)
@@ -101,7 +101,7 @@ public interface IssueschemeDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.672+08:00", comments="Source Table: IssueScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.604+08:00", comments="Source Table: IssueScheme")
     default int insertSelective(Issuescheme record) {
         return insert(SqlBuilder.insert(record)
                 .into(issuescheme)
@@ -115,19 +115,19 @@ public interface IssueschemeDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.672+08:00", comments="Source Table: IssueScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.604+08:00", comments="Source Table: IssueScheme")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Issuescheme>>> selectByExample() {
         return SelectDSL.selectWithMapper(this::selectMany, schid, schname, fieldname, operators, selectvalues, startime, endtime)
                 .from(issuescheme);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.672+08:00", comments="Source Table: IssueScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.604+08:00", comments="Source Table: IssueScheme")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Issuescheme>>> selectDistinctByExample() {
         return SelectDSL.selectDistinctWithMapper(this::selectMany, schid, schname, fieldname, operators, selectvalues, startime, endtime)
                 .from(issuescheme);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.672+08:00", comments="Source Table: IssueScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.604+08:00", comments="Source Table: IssueScheme")
     default Issuescheme selectByPrimaryKey(Integer schid_) {
         return SelectDSL.selectWithMapper(this::selectOne, schid, schname, fieldname, operators, selectvalues, startime, endtime)
                 .from(issuescheme)
@@ -136,7 +136,7 @@ public interface IssueschemeDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.672+08:00", comments="Source Table: IssueScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.604+08:00", comments="Source Table: IssueScheme")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExample(Issuescheme record) {
         return UpdateDSL.updateWithMapper(this::update, issuescheme)
                 .set(schname).equalTo(record::getSchname)
@@ -147,7 +147,7 @@ public interface IssueschemeDynamicSqlMapper {
                 .set(endtime).equalTo(record::getEndtime);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.672+08:00", comments="Source Table: IssueScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.604+08:00", comments="Source Table: IssueScheme")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExampleSelective(Issuescheme record) {
         return UpdateDSL.updateWithMapper(this::update, issuescheme)
                 .set(schname).equalToWhenPresent(record::getSchname)
@@ -158,7 +158,7 @@ public interface IssueschemeDynamicSqlMapper {
                 .set(endtime).equalToWhenPresent(record::getEndtime);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.672+08:00", comments="Source Table: IssueScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.604+08:00", comments="Source Table: IssueScheme")
     default int updateByPrimaryKey(Issuescheme record) {
         return UpdateDSL.updateWithMapper(this::update, issuescheme)
                 .set(schname).equalTo(record::getSchname)
@@ -172,7 +172,7 @@ public interface IssueschemeDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.672+08:00", comments="Source Table: IssueScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.604+08:00", comments="Source Table: IssueScheme")
     default int updateByPrimaryKeySelective(Issuescheme record) {
         return UpdateDSL.updateWithMapper(this::update, issuescheme)
                 .set(schname).equalToWhenPresent(record::getSchname)

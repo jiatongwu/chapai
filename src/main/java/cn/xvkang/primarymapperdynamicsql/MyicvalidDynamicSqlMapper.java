@@ -30,19 +30,19 @@ import org.mybatis.dynamic.sql.util.SqlProviderAdapter;
 
 @Mapper
 public interface MyicvalidDynamicSqlMapper {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.771+08:00", comments="Source Table: MYICVALID")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.761+08:00", comments="Source Table: MYICVALID")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     long count(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.771+08:00", comments="Source Table: MYICVALID")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.761+08:00", comments="Source Table: MYICVALID")
     @DeleteProvider(type=SqlProviderAdapter.class, method="delete")
     int delete(DeleteStatementProvider deleteStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.771+08:00", comments="Source Table: MYICVALID")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.761+08:00", comments="Source Table: MYICVALID")
     @InsertProvider(type=SqlProviderAdapter.class, method="insert")
     int insert(InsertStatementProvider<Myicvalid> insertStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.771+08:00", comments="Source Table: MYICVALID")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.761+08:00", comments="Source Table: MYICVALID")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @Results(id="MyicvalidResult", value = {
         @Result(column="CardNO", property="cardno", jdbcType=JdbcType.VARCHAR),
@@ -57,22 +57,22 @@ public interface MyicvalidDynamicSqlMapper {
     })
     List<Myicvalid> selectMany(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.771+08:00", comments="Source Table: MYICVALID")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.761+08:00", comments="Source Table: MYICVALID")
     @UpdateProvider(type=SqlProviderAdapter.class, method="update")
     int update(UpdateStatementProvider updateStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.771+08:00", comments="Source Table: MYICVALID")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.761+08:00", comments="Source Table: MYICVALID")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<Long>> countByExample() {
         return SelectDSL.selectWithMapper(this::count, SqlBuilder.count())
                 .from(myicvalid);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.771+08:00", comments="Source Table: MYICVALID")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.761+08:00", comments="Source Table: MYICVALID")
     default DeleteDSL<MyBatis3DeleteModelAdapter<Integer>> deleteByExample() {
         return DeleteDSL.deleteFromWithMapper(this::delete, myicvalid);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.771+08:00", comments="Source Table: MYICVALID")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.761+08:00", comments="Source Table: MYICVALID")
     default int insert(Myicvalid record) {
         return insert(SqlBuilder.insert(record)
                 .into(myicvalid)
@@ -89,7 +89,7 @@ public interface MyicvalidDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.771+08:00", comments="Source Table: MYICVALID")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.761+08:00", comments="Source Table: MYICVALID")
     default int insertSelective(Myicvalid record) {
         return insert(SqlBuilder.insert(record)
                 .into(myicvalid)
@@ -106,19 +106,19 @@ public interface MyicvalidDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.771+08:00", comments="Source Table: MYICVALID")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.761+08:00", comments="Source Table: MYICVALID")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Myicvalid>>> selectByExample() {
         return SelectDSL.selectWithMapper(this::selectMany, cardno, optdate, newstartdate, newenddate, neweachdaystarttime, neweachdayendtime, validmachineid, operatorcardno, opttype)
                 .from(myicvalid);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.771+08:00", comments="Source Table: MYICVALID")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.761+08:00", comments="Source Table: MYICVALID")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Myicvalid>>> selectDistinctByExample() {
         return SelectDSL.selectDistinctWithMapper(this::selectMany, cardno, optdate, newstartdate, newenddate, neweachdaystarttime, neweachdayendtime, validmachineid, operatorcardno, opttype)
                 .from(myicvalid);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.771+08:00", comments="Source Table: MYICVALID")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.762+08:00", comments="Source Table: MYICVALID")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExample(Myicvalid record) {
         return UpdateDSL.updateWithMapper(this::update, myicvalid)
                 .set(cardno).equalTo(record::getCardno)
@@ -132,7 +132,7 @@ public interface MyicvalidDynamicSqlMapper {
                 .set(opttype).equalTo(record::getOpttype);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.771+08:00", comments="Source Table: MYICVALID")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.762+08:00", comments="Source Table: MYICVALID")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExampleSelective(Myicvalid record) {
         return UpdateDSL.updateWithMapper(this::update, myicvalid)
                 .set(cardno).equalToWhenPresent(record::getCardno)

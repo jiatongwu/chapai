@@ -89,6 +89,11 @@
                                    lau-href="${pageContext.request.contextPath }/user/listPage.html"><i
                                         class="layui-icon layui-icon-circle"></i><cite>用户列表</cite></a>
                             </dd>
+                            <dd style="">
+                                <a style="padding-left: 20px;"
+                                   lau-href="${pageContext.request.contextPath }/log/listPage.html"><i
+                                        class="layui-icon layui-icon-circle"></i><cite>日志列表</cite></a>
+                            </dd>
                         </dl>
                     </li>
                 </sec:authorize>
@@ -281,8 +286,10 @@
         src="${pageContext.request.contextPath }/static/js/jquery.fileDownload.js"></script>
 
 <script>
+var contextPath1=$("#contextPath").val();
+
     function logout() {
-        location.href = "/logout.html";
+        location.href = contextPath1+"/logout.html";
     }
 
     layui

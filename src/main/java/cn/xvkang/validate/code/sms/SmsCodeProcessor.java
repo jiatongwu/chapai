@@ -31,9 +31,7 @@ public class SmsCodeProcessor extends AbstractValidateCodeProcessor<ValidateCode
 	protected void send(ServletWebRequest request, ValidateCode validateCode) throws Exception {
 		String paramName = Constants.DEFAULT_PARAMETER_NAME_MOBILE;
 		String mobile = ServletRequestUtils.getRequiredStringParameter(request.getRequest(), paramName);
-
 		smsCodeSender.send(request, mobile, validateCode.getCode());
-
 	}
 
 }

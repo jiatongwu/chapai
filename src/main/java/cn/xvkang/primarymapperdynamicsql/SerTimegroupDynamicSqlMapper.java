@@ -30,19 +30,19 @@ import org.mybatis.dynamic.sql.util.SqlProviderAdapter;
 
 @Mapper
 public interface SerTimegroupDynamicSqlMapper {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.935+08:00", comments="Source Table: Ser_TimeGroup")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.949+08:00", comments="Source Table: Ser_TimeGroup")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     long count(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.935+08:00", comments="Source Table: Ser_TimeGroup")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.949+08:00", comments="Source Table: Ser_TimeGroup")
     @DeleteProvider(type=SqlProviderAdapter.class, method="delete")
     int delete(DeleteStatementProvider deleteStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.935+08:00", comments="Source Table: Ser_TimeGroup")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.949+08:00", comments="Source Table: Ser_TimeGroup")
     @InsertProvider(type=SqlProviderAdapter.class, method="insert")
     int insert(InsertStatementProvider<SerTimegroup> insertStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.935+08:00", comments="Source Table: Ser_TimeGroup")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.949+08:00", comments="Source Table: Ser_TimeGroup")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @Results(id="SerTimegroupResult", value = {
         @Result(column="GroupID", property="groupid", jdbcType=JdbcType.INTEGER),
@@ -84,22 +84,22 @@ public interface SerTimegroupDynamicSqlMapper {
     })
     List<SerTimegroup> selectMany(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.936+08:00", comments="Source Table: Ser_TimeGroup")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.949+08:00", comments="Source Table: Ser_TimeGroup")
     @UpdateProvider(type=SqlProviderAdapter.class, method="update")
     int update(UpdateStatementProvider updateStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.936+08:00", comments="Source Table: Ser_TimeGroup")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.949+08:00", comments="Source Table: Ser_TimeGroup")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<Long>> countByExample() {
         return SelectDSL.selectWithMapper(this::count, SqlBuilder.count())
                 .from(serTimegroup);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.936+08:00", comments="Source Table: Ser_TimeGroup")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.949+08:00", comments="Source Table: Ser_TimeGroup")
     default DeleteDSL<MyBatis3DeleteModelAdapter<Integer>> deleteByExample() {
         return DeleteDSL.deleteFromWithMapper(this::delete, serTimegroup);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.936+08:00", comments="Source Table: Ser_TimeGroup")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.949+08:00", comments="Source Table: Ser_TimeGroup")
     default int insert(SerTimegroup record) {
         return insert(SqlBuilder.insert(record)
                 .into(serTimegroup)
@@ -143,7 +143,7 @@ public interface SerTimegroupDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.936+08:00", comments="Source Table: Ser_TimeGroup")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.949+08:00", comments="Source Table: Ser_TimeGroup")
     default int insertSelective(SerTimegroup record) {
         return insert(SqlBuilder.insert(record)
                 .into(serTimegroup)
@@ -187,19 +187,19 @@ public interface SerTimegroupDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.936+08:00", comments="Source Table: Ser_TimeGroup")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.950+08:00", comments="Source Table: Ser_TimeGroup")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<SerTimegroup>>> selectByExample() {
         return SelectDSL.selectWithMapper(this::selectMany, groupid, groupname, week, firstbegintime, firstendtime, openmodel1, status1, secondbegintime, secondendtime, openmodel2, status2, thirdbegintime, thirdendtime, openmodel3, status3, fourbegintime, fourendtime, openmodel4, status4, fivebegintime, fiveendtime, openmodel5, status5, sixbegintime, sixendtime, openmodel6, status6, sevenbegintime, sevenendtime, openmodel7, status7, eightbegintime, eightendtime, openmodel8, status8, timcount)
                 .from(serTimegroup);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.936+08:00", comments="Source Table: Ser_TimeGroup")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.950+08:00", comments="Source Table: Ser_TimeGroup")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<SerTimegroup>>> selectDistinctByExample() {
         return SelectDSL.selectDistinctWithMapper(this::selectMany, groupid, groupname, week, firstbegintime, firstendtime, openmodel1, status1, secondbegintime, secondendtime, openmodel2, status2, thirdbegintime, thirdendtime, openmodel3, status3, fourbegintime, fourendtime, openmodel4, status4, fivebegintime, fiveendtime, openmodel5, status5, sixbegintime, sixendtime, openmodel6, status6, sevenbegintime, sevenendtime, openmodel7, status7, eightbegintime, eightendtime, openmodel8, status8, timcount)
                 .from(serTimegroup);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.936+08:00", comments="Source Table: Ser_TimeGroup")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.950+08:00", comments="Source Table: Ser_TimeGroup")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExample(SerTimegroup record) {
         return UpdateDSL.updateWithMapper(this::update, serTimegroup)
                 .set(groupid).equalTo(record::getGroupid)
@@ -240,7 +240,7 @@ public interface SerTimegroupDynamicSqlMapper {
                 .set(timcount).equalTo(record::getTimcount);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.936+08:00", comments="Source Table: Ser_TimeGroup")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.950+08:00", comments="Source Table: Ser_TimeGroup")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExampleSelective(SerTimegroup record) {
         return UpdateDSL.updateWithMapper(this::update, serTimegroup)
                 .set(groupid).equalToWhenPresent(record::getGroupid)

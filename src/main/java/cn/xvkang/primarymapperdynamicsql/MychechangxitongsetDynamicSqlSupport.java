@@ -7,346 +7,346 @@ import org.mybatis.dynamic.sql.SqlColumn;
 import org.mybatis.dynamic.sql.SqlTable;
 
 public final class MychechangxitongsetDynamicSqlSupport {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.736+08:00", comments="Source Table: MYCHECHANGXITONGSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.709+08:00", comments="Source Table: MYCHECHANGXITONGSET")
     public static final Mychechangxitongset mychechangxitongset = new Mychechangxitongset();
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.736+08:00", comments="Source field: MYCHECHANGXITONGSET.StationNO")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.710+08:00", comments="Source field: MYCHECHANGXITONGSET.StationNO")
     public static final SqlColumn<Integer> stationno = mychechangxitongset.stationno;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.736+08:00", comments="Source field: MYCHECHANGXITONGSET.CarparkNO")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.710+08:00", comments="Source field: MYCHECHANGXITONGSET.CarparkNO")
     public static final SqlColumn<Integer> carparkno = mychechangxitongset.carparkno;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.736+08:00", comments="Source field: MYCHECHANGXITONGSET.HasImage")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.710+08:00", comments="Source field: MYCHECHANGXITONGSET.HasImage")
     public static final SqlColumn<Integer> hasimage = mychechangxitongset.hasimage;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.736+08:00", comments="Source field: MYCHECHANGXITONGSET.ImageSave")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.710+08:00", comments="Source field: MYCHECHANGXITONGSET.ImageSave")
     public static final SqlColumn<Integer> imagesave = mychechangxitongset.imagesave;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.736+08:00", comments="Source field: MYCHECHANGXITONGSET.SaveDays")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.710+08:00", comments="Source field: MYCHECHANGXITONGSET.SaveDays")
     public static final SqlColumn<Integer> savedays = mychechangxitongset.savedays;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.736+08:00", comments="Source field: MYCHECHANGXITONGSET.ImagePath")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.710+08:00", comments="Source field: MYCHECHANGXITONGSET.ImagePath")
     public static final SqlColumn<String> imagepath = mychechangxitongset.imagepath;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.736+08:00", comments="Source field: MYCHECHANGXITONGSET.TotalCarSpace")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.710+08:00", comments="Source field: MYCHECHANGXITONGSET.TotalCarSpace")
     public static final SqlColumn<Integer> totalcarspace = mychechangxitongset.totalcarspace;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.737+08:00", comments="Source field: MYCHECHANGXITONGSET.CarSpaceScreen")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.710+08:00", comments="Source field: MYCHECHANGXITONGSET.CarSpaceScreen")
     public static final SqlColumn<Integer> carspacescreen = mychechangxitongset.carspacescreen;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.737+08:00", comments="Source field: MYCHECHANGXITONGSET.CarSpaceScreenNumber")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.710+08:00", comments="Source field: MYCHECHANGXITONGSET.CarSpaceScreenNumber")
     public static final SqlColumn<Integer> carspacescreennumber = mychechangxitongset.carspacescreennumber;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.737+08:00", comments="Source field: MYCHECHANGXITONGSET.CarSpaceScreenCom")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.710+08:00", comments="Source field: MYCHECHANGXITONGSET.CarSpaceScreenCom")
     public static final SqlColumn<Integer> carspacescreencom = mychechangxitongset.carspacescreencom;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.737+08:00", comments="Source field: MYCHECHANGXITONGSET.FullSpaceLight")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.710+08:00", comments="Source field: MYCHECHANGXITONGSET.FullSpaceLight")
     public static final SqlColumn<Integer> fullspacelight = mychechangxitongset.fullspacelight;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.737+08:00", comments="Source field: MYCHECHANGXITONGSET.FullSpaceLightNumber")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.710+08:00", comments="Source field: MYCHECHANGXITONGSET.FullSpaceLightNumber")
     public static final SqlColumn<Integer> fullspacelightnumber = mychechangxitongset.fullspacelightnumber;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.737+08:00", comments="Source field: MYCHECHANGXITONGSET.FullSpaceLightCom")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.710+08:00", comments="Source field: MYCHECHANGXITONGSET.FullSpaceLightCom")
     public static final SqlColumn<Integer> fullspacelightcom = mychechangxitongset.fullspacelightcom;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.737+08:00", comments="Source field: MYCHECHANGXITONGSET.MoneyScreen")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.710+08:00", comments="Source field: MYCHECHANGXITONGSET.MoneyScreen")
     public static final SqlColumn<Integer> moneyscreen = mychechangxitongset.moneyscreen;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.737+08:00", comments="Source field: MYCHECHANGXITONGSET.MoneyScreenCom")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.710+08:00", comments="Source field: MYCHECHANGXITONGSET.MoneyScreenCom")
     public static final SqlColumn<Integer> moneyscreencom = mychechangxitongset.moneyscreencom;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.737+08:00", comments="Source field: MYCHECHANGXITONGSET.BillPrint")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.710+08:00", comments="Source field: MYCHECHANGXITONGSET.BillPrint")
     public static final SqlColumn<Integer> billprint = mychechangxitongset.billprint;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.737+08:00", comments="Source field: MYCHECHANGXITONGSET.Monitor01")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.710+08:00", comments="Source field: MYCHECHANGXITONGSET.Monitor01")
     public static final SqlColumn<Integer> monitor01 = mychechangxitongset.monitor01;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.737+08:00", comments="Source field: MYCHECHANGXITONGSET.Monitor02")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.710+08:00", comments="Source field: MYCHECHANGXITONGSET.Monitor02")
     public static final SqlColumn<Integer> monitor02 = mychechangxitongset.monitor02;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.737+08:00", comments="Source field: MYCHECHANGXITONGSET.FreeCarOK")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.710+08:00", comments="Source field: MYCHECHANGXITONGSET.FreeCarOK")
     public static final SqlColumn<Integer> freecarok = mychechangxitongset.freecarok;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.737+08:00", comments="Source field: MYCHECHANGXITONGSET.TempFreeCarOK")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.710+08:00", comments="Source field: MYCHECHANGXITONGSET.TempFreeCarOK")
     public static final SqlColumn<Integer> tempfreecarok = mychechangxitongset.tempfreecarok;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.737+08:00", comments="Source field: MYCHECHANGXITONGSET.ZJZP")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.710+08:00", comments="Source field: MYCHECHANGXITONGSET.ZJZP")
     public static final SqlColumn<Integer> zjzp = mychechangxitongset.zjzp;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.738+08:00", comments="Source field: MYCHECHANGXITONGSET.ZPID")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.710+08:00", comments="Source field: MYCHECHANGXITONGSET.ZPID")
     public static final SqlColumn<Integer> zpid = mychechangxitongset.zpid;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.738+08:00", comments="Source field: MYCHECHANGXITONGSET.YKCSSF")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.711+08:00", comments="Source field: MYCHECHANGXITONGSET.YKCSSF")
     public static final SqlColumn<Integer> ykcssf = mychechangxitongset.ykcssf;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.738+08:00", comments="Source field: MYCHECHANGXITONGSET.CenterSFCS")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.711+08:00", comments="Source field: MYCHECHANGXITONGSET.CenterSFCS")
     public static final SqlColumn<Integer> centersfcs = mychechangxitongset.centersfcs;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.738+08:00", comments="Source field: MYCHECHANGXITONGSET.CenterCSJE")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.711+08:00", comments="Source field: MYCHECHANGXITONGSET.CenterCSJE")
     public static final SqlColumn<BigDecimal> centercsje = mychechangxitongset.centercsje;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.738+08:00", comments="Source field: MYCHECHANGXITONGSET.SFOption")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.711+08:00", comments="Source field: MYCHECHANGXITONGSET.SFOption")
     public static final SqlColumn<Integer> sfoption = mychechangxitongset.sfoption;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.738+08:00", comments="Source field: MYCHECHANGXITONGSET.SFMode")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.711+08:00", comments="Source field: MYCHECHANGXITONGSET.SFMode")
     public static final SqlColumn<Integer> sfmode = mychechangxitongset.sfmode;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.738+08:00", comments="Source field: MYCHECHANGXITONGSET.HasPoint")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.711+08:00", comments="Source field: MYCHECHANGXITONGSET.HasPoint")
     public static final SqlColumn<Integer> haspoint = mychechangxitongset.haspoint;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.738+08:00", comments="Source field: MYCHECHANGXITONGSET.PointNum")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.711+08:00", comments="Source field: MYCHECHANGXITONGSET.PointNum")
     public static final SqlColumn<Integer> pointnum = mychechangxitongset.pointnum;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.738+08:00", comments="Source field: MYCHECHANGXITONGSET.Discount")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.711+08:00", comments="Source field: MYCHECHANGXITONGSET.Discount")
     public static final SqlColumn<Integer> discount = mychechangxitongset.discount;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.738+08:00", comments="Source field: MYCHECHANGXITONGSET.RealtimeDownload")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.711+08:00", comments="Source field: MYCHECHANGXITONGSET.RealtimeDownload")
     public static final SqlColumn<Integer> realtimedownload = mychechangxitongset.realtimedownload;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.738+08:00", comments="Source field: MYCHECHANGXITONGSET.DownloadCardValid")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.711+08:00", comments="Source field: MYCHECHANGXITONGSET.DownloadCardValid")
     public static final SqlColumn<Integer> downloadcardvalid = mychechangxitongset.downloadcardvalid;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.738+08:00", comments="Source field: MYCHECHANGXITONGSET.TimeLoadMode")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.711+08:00", comments="Source field: MYCHECHANGXITONGSET.TimeLoadMode")
     public static final SqlColumn<Integer> timeloadmode = mychechangxitongset.timeloadmode;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.738+08:00", comments="Source field: MYCHECHANGXITONGSET.TimeLoadInterval")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.711+08:00", comments="Source field: MYCHECHANGXITONGSET.TimeLoadInterval")
     public static final SqlColumn<Integer> timeloadinterval = mychechangxitongset.timeloadinterval;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.738+08:00", comments="Source field: MYCHECHANGXITONGSET.InOutTimeInterval")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.711+08:00", comments="Source field: MYCHECHANGXITONGSET.InOutTimeInterval")
     public static final SqlColumn<Integer> inouttimeinterval = mychechangxitongset.inouttimeinterval;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.738+08:00", comments="Source field: MYCHECHANGXITONGSET.PwdCheck")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.711+08:00", comments="Source field: MYCHECHANGXITONGSET.PwdCheck")
     public static final SqlColumn<Integer> pwdcheck = mychechangxitongset.pwdcheck;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.739+08:00", comments="Source field: MYCHECHANGXITONGSET.ShowDZState")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.711+08:00", comments="Source field: MYCHECHANGXITONGSET.ShowDZState")
     public static final SqlColumn<Integer> showdzstate = mychechangxitongset.showdzstate;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.739+08:00", comments="Source field: MYCHECHANGXITONGSET.ShowReceiveCardBox")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.711+08:00", comments="Source field: MYCHECHANGXITONGSET.ShowReceiveCardBox")
     public static final SqlColumn<Integer> showreceivecardbox = mychechangxitongset.showreceivecardbox;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.739+08:00", comments="Source field: MYCHECHANGXITONGSET.CompareAccuracy")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.711+08:00", comments="Source field: MYCHECHANGXITONGSET.CompareAccuracy")
     public static final SqlColumn<Integer> compareaccuracy = mychechangxitongset.compareaccuracy;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.739+08:00", comments="Source field: MYCHECHANGXITONGSET.ControlInOut")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.711+08:00", comments="Source field: MYCHECHANGXITONGSET.ControlInOut")
     public static final SqlColumn<Integer> controlinout = mychechangxitongset.controlinout;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.739+08:00", comments="Source field: MYCHECHANGXITONGSET.VideoCardType")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.711+08:00", comments="Source field: MYCHECHANGXITONGSET.VideoCardType")
     public static final SqlColumn<Integer> videocardtype = mychechangxitongset.videocardtype;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.739+08:00", comments="Source field: MYCHECHANGXITONGSET.LoadCharge")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.711+08:00", comments="Source field: MYCHECHANGXITONGSET.LoadCharge")
     public static final SqlColumn<Integer> loadcharge = mychechangxitongset.loadcharge;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.739+08:00", comments="Source field: MYCHECHANGXITONGSET.ReadCardLogin")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.711+08:00", comments="Source field: MYCHECHANGXITONGSET.ReadCardLogin")
     public static final SqlColumn<Integer> readcardlogin = mychechangxitongset.readcardlogin;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.739+08:00", comments="Source field: MYCHECHANGXITONGSET.PCName")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.711+08:00", comments="Source field: MYCHECHANGXITONGSET.PCName")
     public static final SqlColumn<String> pcname = mychechangxitongset.pcname;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.739+08:00", comments="Source field: MYCHECHANGXITONGSET.DisplayTime")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.711+08:00", comments="Source field: MYCHECHANGXITONGSET.DisplayTime")
     public static final SqlColumn<Integer> displaytime = mychechangxitongset.displaytime;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.739+08:00", comments="Source field: MYCHECHANGXITONGSET.VideoShiftTime")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.711+08:00", comments="Source field: MYCHECHANGXITONGSET.VideoShiftTime")
     public static final SqlColumn<Integer> videoshifttime = mychechangxitongset.videoshifttime;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.739+08:00", comments="Source field: MYCHECHANGXITONGSET.VideoBrightness")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.712+08:00", comments="Source field: MYCHECHANGXITONGSET.VideoBrightness")
     public static final SqlColumn<Integer> videobrightness = mychechangxitongset.videobrightness;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.739+08:00", comments="Source field: MYCHECHANGXITONGSET.VideoResolution")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.712+08:00", comments="Source field: MYCHECHANGXITONGSET.VideoResolution")
     public static final SqlColumn<Integer> videoresolution = mychechangxitongset.videoresolution;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.740+08:00", comments="Source field: MYCHECHANGXITONGSET.VideoFour")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.712+08:00", comments="Source field: MYCHECHANGXITONGSET.VideoFour")
     public static final SqlColumn<Integer> videofour = mychechangxitongset.videofour;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.740+08:00", comments="Source field: MYCHECHANGXITONGSET.PersonVideo")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.712+08:00", comments="Source field: MYCHECHANGXITONGSET.PersonVideo")
     public static final SqlColumn<Integer> personvideo = mychechangxitongset.personvideo;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.740+08:00", comments="Source field: MYCHECHANGXITONGSET.CtrlVolume")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.712+08:00", comments="Source field: MYCHECHANGXITONGSET.CtrlVolume")
     public static final SqlColumn<String> ctrlvolume = mychechangxitongset.ctrlvolume;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.740+08:00", comments="Source field: MYCHECHANGXITONGSET.PrintFontSize")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.712+08:00", comments="Source field: MYCHECHANGXITONGSET.PrintFontSize")
     public static final SqlColumn<Integer> printfontsize = mychechangxitongset.printfontsize;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.740+08:00", comments="Source field: MYCHECHANGXITONGSET.BillPrintAuto")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.712+08:00", comments="Source field: MYCHECHANGXITONGSET.BillPrintAuto")
     public static final SqlColumn<Integer> billprintauto = mychechangxitongset.billprintauto;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.740+08:00", comments="Source field: MYCHECHANGXITONGSET.TempCardPrePlate")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.712+08:00", comments="Source field: MYCHECHANGXITONGSET.TempCardPrePlate")
     public static final SqlColumn<Integer> tempcardpreplate = mychechangxitongset.tempcardpreplate;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.740+08:00", comments="Source field: MYCHECHANGXITONGSET.AutoPrePlate")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.712+08:00", comments="Source field: MYCHECHANGXITONGSET.AutoPrePlate")
     public static final SqlColumn<Integer> autopreplate = mychechangxitongset.autopreplate;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.740+08:00", comments="Source field: MYCHECHANGXITONGSET.SetTempCardType")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.712+08:00", comments="Source field: MYCHECHANGXITONGSET.SetTempCardType")
     public static final SqlColumn<Integer> settempcardtype = mychechangxitongset.settempcardtype;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.740+08:00", comments="Source field: MYCHECHANGXITONGSET.SetTempMoney")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.712+08:00", comments="Source field: MYCHECHANGXITONGSET.SetTempMoney")
     public static final SqlColumn<Integer> settempmoney = mychechangxitongset.settempmoney;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.740+08:00", comments="Source field: MYCHECHANGXITONGSET.TempTypeDefineOK")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.712+08:00", comments="Source field: MYCHECHANGXITONGSET.TempTypeDefineOK")
     public static final SqlColumn<Integer> temptypedefineok = mychechangxitongset.temptypedefineok;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.740+08:00", comments="Source field: MYCHECHANGXITONGSET.TempTypeDefineString")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.712+08:00", comments="Source field: MYCHECHANGXITONGSET.TempTypeDefineString")
     public static final SqlColumn<String> temptypedefinestring = mychechangxitongset.temptypedefinestring;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.740+08:00", comments="Source field: MYCHECHANGXITONGSET.IDSoftOpen")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.712+08:00", comments="Source field: MYCHECHANGXITONGSET.IDSoftOpen")
     public static final SqlColumn<Integer> idsoftopen = mychechangxitongset.idsoftopen;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.740+08:00", comments="Source field: MYCHECHANGXITONGSET.IDNoticeDay")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.712+08:00", comments="Source field: MYCHECHANGXITONGSET.IDNoticeDay")
     public static final SqlColumn<Integer> idnoticeday = mychechangxitongset.idnoticeday;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.740+08:00", comments="Source field: MYCHECHANGXITONGSET.IdSfCancel")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.712+08:00", comments="Source field: MYCHECHANGXITONGSET.IdSfCancel")
     public static final SqlColumn<Integer> idsfcancel = mychechangxitongset.idsfcancel;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.740+08:00", comments="Source field: MYCHECHANGXITONGSET.IdReReadHandle")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.712+08:00", comments="Source field: MYCHECHANGXITONGSET.IdReReadHandle")
     public static final SqlColumn<Integer> idrereadhandle = mychechangxitongset.idrereadhandle;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.740+08:00", comments="Source field: MYCHECHANGXITONGSET.IdPlateDownLoad")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.712+08:00", comments="Source field: MYCHECHANGXITONGSET.IdPlateDownLoad")
     public static final SqlColumn<Integer> idplatedownload = mychechangxitongset.idplatedownload;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.741+08:00", comments="Source field: MYCHECHANGXITONGSET.ID1In1OutCardType")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.712+08:00", comments="Source field: MYCHECHANGXITONGSET.ID1In1OutCardType")
     public static final SqlColumn<String> id1in1outcardtype = mychechangxitongset.id1in1outcardtype;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.741+08:00", comments="Source field: MYCHECHANGXITONGSET.IDComfirmOpenEnable")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.712+08:00", comments="Source field: MYCHECHANGXITONGSET.IDComfirmOpenEnable")
     public static final SqlColumn<Integer> idcomfirmopenenable = mychechangxitongset.idcomfirmopenenable;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.741+08:00", comments="Source field: MYCHECHANGXITONGSET.IDComfirmOpenCardType")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.712+08:00", comments="Source field: MYCHECHANGXITONGSET.IDComfirmOpenCardType")
     public static final SqlColumn<String> idcomfirmopencardtype = mychechangxitongset.idcomfirmopencardtype;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.741+08:00", comments="Source field: MYCHECHANGXITONGSET.ForbidSamePosition")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.712+08:00", comments="Source field: MYCHECHANGXITONGSET.ForbidSamePosition")
     public static final SqlColumn<Integer> forbidsameposition = mychechangxitongset.forbidsameposition;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.741+08:00", comments="Source field: MYCHECHANGXITONGSET.MonthYQRule")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.712+08:00", comments="Source field: MYCHECHANGXITONGSET.MonthYQRule")
     public static final SqlColumn<Integer> monthyqrule = mychechangxitongset.monthyqrule;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.741+08:00", comments="Source field: MYCHECHANGXITONGSET.CtrlVoiceLedVersion")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.712+08:00", comments="Source field: MYCHECHANGXITONGSET.CtrlVoiceLedVersion")
     public static final SqlColumn<Integer> ctrlvoiceledversion = mychechangxitongset.ctrlvoiceledversion;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.741+08:00", comments="Source field: MYCHECHANGXITONGSET.CtrlVoiceMode")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.712+08:00", comments="Source field: MYCHECHANGXITONGSET.CtrlVoiceMode")
     public static final SqlColumn<Integer> ctrlvoicemode = mychechangxitongset.ctrlvoicemode;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.741+08:00", comments="Source field: MYCHECHANGXITONGSET.PcTalkPlate")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.713+08:00", comments="Source field: MYCHECHANGXITONGSET.PcTalkPlate")
     public static final SqlColumn<Integer> pctalkplate = mychechangxitongset.pctalkplate;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.741+08:00", comments="Source field: MYCHECHANGXITONGSET.CtrlShowPlate")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.713+08:00", comments="Source field: MYCHECHANGXITONGSET.CtrlShowPlate")
     public static final SqlColumn<Integer> ctrlshowplate = mychechangxitongset.ctrlshowplate;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.741+08:00", comments="Source field: MYCHECHANGXITONGSET.CtrlShowStayTime")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.713+08:00", comments="Source field: MYCHECHANGXITONGSET.CtrlShowStayTime")
     public static final SqlColumn<Integer> ctrlshowstaytime = mychechangxitongset.ctrlshowstaytime;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.741+08:00", comments="Source field: MYCHECHANGXITONGSET.CtrlShowRemainPos")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.713+08:00", comments="Source field: MYCHECHANGXITONGSET.CtrlShowRemainPos")
     public static final SqlColumn<Integer> ctrlshowremainpos = mychechangxitongset.ctrlshowremainpos;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.741+08:00", comments="Source field: MYCHECHANGXITONGSET.CtrlShowInfo")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.713+08:00", comments="Source field: MYCHECHANGXITONGSET.CtrlShowInfo")
     public static final SqlColumn<Integer> ctrlshowinfo = mychechangxitongset.ctrlshowinfo;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.741+08:00", comments="Source field: MYCHECHANGXITONGSET.CtrlShowCW")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.713+08:00", comments="Source field: MYCHECHANGXITONGSET.CtrlShowCW")
     public static final SqlColumn<Integer> ctrlshowcw = mychechangxitongset.ctrlshowcw;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.741+08:00", comments="Source field: MYCHECHANGXITONGSET.RemainPosLedShowInfo")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.713+08:00", comments="Source field: MYCHECHANGXITONGSET.RemainPosLedShowInfo")
     public static final SqlColumn<Integer> remainposledshowinfo = mychechangxitongset.remainposledshowinfo;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.741+08:00", comments="Source field: MYCHECHANGXITONGSET.RemainPosLedShowPlate")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.713+08:00", comments="Source field: MYCHECHANGXITONGSET.RemainPosLedShowPlate")
     public static final SqlColumn<Integer> remainposledshowplate = mychechangxitongset.remainposledshowplate;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.741+08:00", comments="Source field: MYCHECHANGXITONGSET.CarPosLedLen")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.713+08:00", comments="Source field: MYCHECHANGXITONGSET.CarPosLedLen")
     public static final SqlColumn<Integer> carposledlen = mychechangxitongset.carposledlen;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.741+08:00", comments="Source field: MYCHECHANGXITONGSET.SFLedType")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.713+08:00", comments="Source field: MYCHECHANGXITONGSET.SFLedType")
     public static final SqlColumn<Integer> sfledtype = mychechangxitongset.sfledtype;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.742+08:00", comments="Source field: MYCHECHANGXITONGSET.SumMoneyHide")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.713+08:00", comments="Source field: MYCHECHANGXITONGSET.SumMoneyHide")
     public static final SqlColumn<Integer> summoneyhide = mychechangxitongset.summoneyhide;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.742+08:00", comments="Source field: MYCHECHANGXITONGSET.ExitOnlineByPwd")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.713+08:00", comments="Source field: MYCHECHANGXITONGSET.ExitOnlineByPwd")
     public static final SqlColumn<Integer> exitonlinebypwd = mychechangxitongset.exitonlinebypwd;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.742+08:00", comments="Source field: MYCHECHANGXITONGSET.CtrlSetHasPwd")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.713+08:00", comments="Source field: MYCHECHANGXITONGSET.CtrlSetHasPwd")
     public static final SqlColumn<Integer> ctrlsethaspwd = mychechangxitongset.ctrlsethaspwd;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.742+08:00", comments="Source field: MYCHECHANGXITONGSET.SoftOpenNoPlate")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.713+08:00", comments="Source field: MYCHECHANGXITONGSET.SoftOpenNoPlate")
     public static final SqlColumn<Integer> softopennoplate = mychechangxitongset.softopennoplate;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.742+08:00", comments="Source field: MYCHECHANGXITONGSET.AreaDefault")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.713+08:00", comments="Source field: MYCHECHANGXITONGSET.AreaDefault")
     public static final SqlColumn<String> areadefault = mychechangxitongset.areadefault;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.742+08:00", comments="Source field: MYCHECHANGXITONGSET.OneKeyShortCut")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.713+08:00", comments="Source field: MYCHECHANGXITONGSET.OneKeyShortCut")
     public static final SqlColumn<Integer> onekeyshortcut = mychechangxitongset.onekeyshortcut;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.742+08:00", comments="Source field: MYCHECHANGXITONGSET.CheDuiMode")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.713+08:00", comments="Source field: MYCHECHANGXITONGSET.CheDuiMode")
     public static final SqlColumn<Integer> cheduimode = mychechangxitongset.cheduimode;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.742+08:00", comments="Source field: MYCHECHANGXITONGSET.InOutQueryName")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.713+08:00", comments="Source field: MYCHECHANGXITONGSET.InOutQueryName")
     public static final SqlColumn<Integer> inoutqueryname = mychechangxitongset.inoutqueryname;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.742+08:00", comments="Source field: MYCHECHANGXITONGSET.ExceptionHandle")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.713+08:00", comments="Source field: MYCHECHANGXITONGSET.ExceptionHandle")
     public static final SqlColumn<Integer> exceptionhandle = mychechangxitongset.exceptionhandle;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.742+08:00", comments="Source field: MYCHECHANGXITONGSET.ShowTempCardNum")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.713+08:00", comments="Source field: MYCHECHANGXITONGSET.ShowTempCardNum")
     public static final SqlColumn<Integer> showtempcardnum = mychechangxitongset.showtempcardnum;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.742+08:00", comments="Source field: MYCHECHANGXITONGSET.ReLoginPrint")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.713+08:00", comments="Source field: MYCHECHANGXITONGSET.ReLoginPrint")
     public static final SqlColumn<Integer> reloginprint = mychechangxitongset.reloginprint;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.742+08:00", comments="Source field: MYCHECHANGXITONGSET.FreeCardNoInPlace")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.713+08:00", comments="Source field: MYCHECHANGXITONGSET.FreeCardNoInPlace")
     public static final SqlColumn<Integer> freecardnoinplace = mychechangxitongset.freecardnoinplace;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.742+08:00", comments="Source field: MYCHECHANGXITONGSET.CheckPortFirst")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.713+08:00", comments="Source field: MYCHECHANGXITONGSET.CheckPortFirst")
     public static final SqlColumn<Integer> checkportfirst = mychechangxitongset.checkportfirst;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.742+08:00", comments="Source field: MYCHECHANGXITONGSET.SaveDetailLog")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.713+08:00", comments="Source field: MYCHECHANGXITONGSET.SaveDetailLog")
     public static final SqlColumn<Integer> savedetaillog = mychechangxitongset.savedetaillog;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.742+08:00", comments="Source field: MYCHECHANGXITONGSET.OnlyShowThisRemainPos")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.713+08:00", comments="Source field: MYCHECHANGXITONGSET.OnlyShowThisRemainPos")
     public static final SqlColumn<Integer> onlyshowthisremainpos = mychechangxitongset.onlyshowthisremainpos;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.742+08:00", comments="Source field: MYCHECHANGXITONGSET.TempCarPlaceNum")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.713+08:00", comments="Source field: MYCHECHANGXITONGSET.TempCarPlaceNum")
     public static final SqlColumn<Integer> tempcarplacenum = mychechangxitongset.tempcarplacenum;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.742+08:00", comments="Source field: MYCHECHANGXITONGSET.MonthCarPlaceNum")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.713+08:00", comments="Source field: MYCHECHANGXITONGSET.MonthCarPlaceNum")
     public static final SqlColumn<Integer> monthcarplacenum = mychechangxitongset.monthcarplacenum;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.743+08:00", comments="Source field: MYCHECHANGXITONGSET.MoneyCarPlaceNum")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.713+08:00", comments="Source field: MYCHECHANGXITONGSET.MoneyCarPlaceNum")
     public static final SqlColumn<Integer> moneycarplacenum = mychechangxitongset.moneycarplacenum;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.743+08:00", comments="Source field: MYCHECHANGXITONGSET.bBarCodePrint")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.713+08:00", comments="Source field: MYCHECHANGXITONGSET.bBarCodePrint")
     public static final SqlColumn<Integer> bbarcodeprint = mychechangxitongset.bbarcodeprint;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.743+08:00", comments="Source field: MYCHECHANGXITONGSET.NetWorkVideo")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.714+08:00", comments="Source field: MYCHECHANGXITONGSET.NetWorkVideo")
     public static final SqlColumn<Integer> networkvideo = mychechangxitongset.networkvideo;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.743+08:00", comments="Source field: MYCHECHANGXITONGSET.NetWorkVideoType")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.714+08:00", comments="Source field: MYCHECHANGXITONGSET.NetWorkVideoType")
     public static final SqlColumn<Integer> networkvideotype = mychechangxitongset.networkvideotype;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.743+08:00", comments="Source field: MYCHECHANGXITONGSET.IsCPHAuto")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.714+08:00", comments="Source field: MYCHECHANGXITONGSET.IsCPHAuto")
     public static final SqlColumn<Integer> iscphauto = mychechangxitongset.iscphauto;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.743+08:00", comments="Source field: MYCHECHANGXITONGSET.ZGXE")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.714+08:00", comments="Source field: MYCHECHANGXITONGSET.ZGXE")
     public static final SqlColumn<Integer> zgxe = mychechangxitongset.zgxe;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.743+08:00", comments="Source field: MYCHECHANGXITONGSET.ZGXEType")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.714+08:00", comments="Source field: MYCHECHANGXITONGSET.ZGXEType")
     public static final SqlColumn<Integer> zgxetype = mychechangxitongset.zgxetype;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.743+08:00", comments="Source field: MYCHECHANGXITONGSET.bMonthFdSf")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.714+08:00", comments="Source field: MYCHECHANGXITONGSET.bMonthFdSf")
     public static final SqlColumn<Integer> bmonthfdsf = mychechangxitongset.bmonthfdsf;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.743+08:00", comments="Source field: MYCHECHANGXITONGSET.ImageAutoDel")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.714+08:00", comments="Source field: MYCHECHANGXITONGSET.ImageAutoDel")
     public static final SqlColumn<Integer> imageautodel = mychechangxitongset.imageautodel;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.743+08:00", comments="Source field: MYCHECHANGXITONGSET.ImageAutoDelTime")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.714+08:00", comments="Source field: MYCHECHANGXITONGSET.ImageAutoDelTime")
     public static final SqlColumn<Integer> imageautodeltime = mychechangxitongset.imageautodeltime;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.743+08:00", comments="Source field: MYCHECHANGXITONGSET.MonthOutChargeType")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.714+08:00", comments="Source field: MYCHECHANGXITONGSET.MonthOutChargeType")
     public static final SqlColumn<String> monthoutchargetype = mychechangxitongset.monthoutchargetype;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.743+08:00", comments="Source field: MYCHECHANGXITONGSET.MothRetentionTemp")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.714+08:00", comments="Source field: MYCHECHANGXITONGSET.MothRetentionTemp")
     public static final SqlColumn<String> mothretentiontemp = mychechangxitongset.mothretentiontemp;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.743+08:00", comments="Source field: MYCHECHANGXITONGSET.TempFirstRecord")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.714+08:00", comments="Source field: MYCHECHANGXITONGSET.TempFirstRecord")
     public static final SqlColumn<Boolean> tempfirstrecord = mychechangxitongset.tempfirstrecord;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.743+08:00", comments="Source field: MYCHECHANGXITONGSET.bStartReservation")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.720+08:00", comments="Source field: MYCHECHANGXITONGSET.bStartReservation")
     public static final SqlColumn<Boolean> bstartreservation = mychechangxitongset.bstartreservation;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.736+08:00", comments="Source Table: MYCHECHANGXITONGSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.710+08:00", comments="Source Table: MYCHECHANGXITONGSET")
     public static final class Mychechangxitongset extends SqlTable {
         public final SqlColumn<Integer> stationno = column("StationNO", JDBCType.INTEGER);
 

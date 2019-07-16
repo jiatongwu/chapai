@@ -30,19 +30,19 @@ import org.mybatis.dynamic.sql.util.SqlProviderAdapter;
 
 @Mapper
 public interface MychechangxitongsetDynamicSqlMapper {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.743+08:00", comments="Source Table: MYCHECHANGXITONGSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.720+08:00", comments="Source Table: MYCHECHANGXITONGSET")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     long count(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.743+08:00", comments="Source Table: MYCHECHANGXITONGSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.720+08:00", comments="Source Table: MYCHECHANGXITONGSET")
     @DeleteProvider(type=SqlProviderAdapter.class, method="delete")
     int delete(DeleteStatementProvider deleteStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.744+08:00", comments="Source Table: MYCHECHANGXITONGSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.720+08:00", comments="Source Table: MYCHECHANGXITONGSET")
     @InsertProvider(type=SqlProviderAdapter.class, method="insert")
     int insert(InsertStatementProvider<Mychechangxitongset> insertStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.744+08:00", comments="Source Table: MYCHECHANGXITONGSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.720+08:00", comments="Source Table: MYCHECHANGXITONGSET")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @Results(id="MychechangxitongsetResult", value = {
         @Result(column="StationNO", property="stationno", jdbcType=JdbcType.INTEGER),
@@ -160,22 +160,22 @@ public interface MychechangxitongsetDynamicSqlMapper {
     })
     List<Mychechangxitongset> selectMany(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.744+08:00", comments="Source Table: MYCHECHANGXITONGSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.720+08:00", comments="Source Table: MYCHECHANGXITONGSET")
     @UpdateProvider(type=SqlProviderAdapter.class, method="update")
     int update(UpdateStatementProvider updateStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.744+08:00", comments="Source Table: MYCHECHANGXITONGSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.720+08:00", comments="Source Table: MYCHECHANGXITONGSET")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<Long>> countByExample() {
         return SelectDSL.selectWithMapper(this::count, SqlBuilder.count())
                 .from(mychechangxitongset);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.744+08:00", comments="Source Table: MYCHECHANGXITONGSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.720+08:00", comments="Source Table: MYCHECHANGXITONGSET")
     default DeleteDSL<MyBatis3DeleteModelAdapter<Integer>> deleteByExample() {
         return DeleteDSL.deleteFromWithMapper(this::delete, mychechangxitongset);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.744+08:00", comments="Source Table: MYCHECHANGXITONGSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.720+08:00", comments="Source Table: MYCHECHANGXITONGSET")
     default int insert(Mychechangxitongset record) {
         return insert(SqlBuilder.insert(record)
                 .into(mychechangxitongset)
@@ -295,7 +295,7 @@ public interface MychechangxitongsetDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.744+08:00", comments="Source Table: MYCHECHANGXITONGSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.720+08:00", comments="Source Table: MYCHECHANGXITONGSET")
     default int insertSelective(Mychechangxitongset record) {
         return insert(SqlBuilder.insert(record)
                 .into(mychechangxitongset)
@@ -415,19 +415,19 @@ public interface MychechangxitongsetDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.744+08:00", comments="Source Table: MYCHECHANGXITONGSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.721+08:00", comments="Source Table: MYCHECHANGXITONGSET")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Mychechangxitongset>>> selectByExample() {
         return SelectDSL.selectWithMapper(this::selectMany, stationno, carparkno, hasimage, imagesave, savedays, imagepath, totalcarspace, carspacescreen, carspacescreennumber, carspacescreencom, fullspacelight, fullspacelightnumber, fullspacelightcom, moneyscreen, moneyscreencom, billprint, monitor01, monitor02, freecarok, tempfreecarok, zjzp, zpid, ykcssf, centersfcs, centercsje, sfoption, sfmode, haspoint, pointnum, discount, realtimedownload, downloadcardvalid, timeloadmode, timeloadinterval, inouttimeinterval, pwdcheck, showdzstate, showreceivecardbox, compareaccuracy, controlinout, videocardtype, loadcharge, readcardlogin, pcname, displaytime, videoshifttime, videobrightness, videoresolution, videofour, personvideo, ctrlvolume, printfontsize, billprintauto, tempcardpreplate, autopreplate, settempcardtype, settempmoney, temptypedefineok, temptypedefinestring, idsoftopen, idnoticeday, idsfcancel, idrereadhandle, idplatedownload, id1in1outcardtype, idcomfirmopenenable, idcomfirmopencardtype, forbidsameposition, monthyqrule, ctrlvoiceledversion, ctrlvoicemode, pctalkplate, ctrlshowplate, ctrlshowstaytime, ctrlshowremainpos, ctrlshowinfo, ctrlshowcw, remainposledshowinfo, remainposledshowplate, carposledlen, sfledtype, summoneyhide, exitonlinebypwd, ctrlsethaspwd, softopennoplate, areadefault, onekeyshortcut, cheduimode, inoutqueryname, exceptionhandle, showtempcardnum, reloginprint, freecardnoinplace, checkportfirst, savedetaillog, onlyshowthisremainpos, tempcarplacenum, monthcarplacenum, moneycarplacenum, bbarcodeprint, networkvideo, networkvideotype, iscphauto, zgxe, zgxetype, bmonthfdsf, imageautodel, imageautodeltime, monthoutchargetype, mothretentiontemp, tempfirstrecord, bstartreservation)
                 .from(mychechangxitongset);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.744+08:00", comments="Source Table: MYCHECHANGXITONGSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.721+08:00", comments="Source Table: MYCHECHANGXITONGSET")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Mychechangxitongset>>> selectDistinctByExample() {
         return SelectDSL.selectDistinctWithMapper(this::selectMany, stationno, carparkno, hasimage, imagesave, savedays, imagepath, totalcarspace, carspacescreen, carspacescreennumber, carspacescreencom, fullspacelight, fullspacelightnumber, fullspacelightcom, moneyscreen, moneyscreencom, billprint, monitor01, monitor02, freecarok, tempfreecarok, zjzp, zpid, ykcssf, centersfcs, centercsje, sfoption, sfmode, haspoint, pointnum, discount, realtimedownload, downloadcardvalid, timeloadmode, timeloadinterval, inouttimeinterval, pwdcheck, showdzstate, showreceivecardbox, compareaccuracy, controlinout, videocardtype, loadcharge, readcardlogin, pcname, displaytime, videoshifttime, videobrightness, videoresolution, videofour, personvideo, ctrlvolume, printfontsize, billprintauto, tempcardpreplate, autopreplate, settempcardtype, settempmoney, temptypedefineok, temptypedefinestring, idsoftopen, idnoticeday, idsfcancel, idrereadhandle, idplatedownload, id1in1outcardtype, idcomfirmopenenable, idcomfirmopencardtype, forbidsameposition, monthyqrule, ctrlvoiceledversion, ctrlvoicemode, pctalkplate, ctrlshowplate, ctrlshowstaytime, ctrlshowremainpos, ctrlshowinfo, ctrlshowcw, remainposledshowinfo, remainposledshowplate, carposledlen, sfledtype, summoneyhide, exitonlinebypwd, ctrlsethaspwd, softopennoplate, areadefault, onekeyshortcut, cheduimode, inoutqueryname, exceptionhandle, showtempcardnum, reloginprint, freecardnoinplace, checkportfirst, savedetaillog, onlyshowthisremainpos, tempcarplacenum, monthcarplacenum, moneycarplacenum, bbarcodeprint, networkvideo, networkvideotype, iscphauto, zgxe, zgxetype, bmonthfdsf, imageautodel, imageautodeltime, monthoutchargetype, mothretentiontemp, tempfirstrecord, bstartreservation)
                 .from(mychechangxitongset);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.744+08:00", comments="Source Table: MYCHECHANGXITONGSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.721+08:00", comments="Source Table: MYCHECHANGXITONGSET")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExample(Mychechangxitongset record) {
         return UpdateDSL.updateWithMapper(this::update, mychechangxitongset)
                 .set(stationno).equalTo(record::getStationno)
@@ -544,7 +544,7 @@ public interface MychechangxitongsetDynamicSqlMapper {
                 .set(bstartreservation).equalTo(record::getBstartreservation);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.745+08:00", comments="Source Table: MYCHECHANGXITONGSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.721+08:00", comments="Source Table: MYCHECHANGXITONGSET")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExampleSelective(Mychechangxitongset record) {
         return UpdateDSL.updateWithMapper(this::update, mychechangxitongset)
                 .set(stationno).equalToWhenPresent(record::getStationno)

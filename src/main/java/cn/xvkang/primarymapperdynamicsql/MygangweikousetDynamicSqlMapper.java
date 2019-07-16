@@ -30,19 +30,19 @@ import org.mybatis.dynamic.sql.util.SqlProviderAdapter;
 
 @Mapper
 public interface MygangweikousetDynamicSqlMapper {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.763+08:00", comments="Source Table: MYGANGWEIKOUSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.745+08:00", comments="Source Table: MYGANGWEIKOUSET")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     long count(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.763+08:00", comments="Source Table: MYGANGWEIKOUSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.745+08:00", comments="Source Table: MYGANGWEIKOUSET")
     @DeleteProvider(type=SqlProviderAdapter.class, method="delete")
     int delete(DeleteStatementProvider deleteStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.763+08:00", comments="Source Table: MYGANGWEIKOUSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.745+08:00", comments="Source Table: MYGANGWEIKOUSET")
     @InsertProvider(type=SqlProviderAdapter.class, method="insert")
     int insert(InsertStatementProvider<Mygangweikouset> insertStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.763+08:00", comments="Source Table: MYGANGWEIKOUSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.745+08:00", comments="Source Table: MYGANGWEIKOUSET")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @Results(id="MygangweikousetResult", value = {
         @Result(column="CarChannel", property="carchannel", jdbcType=JdbcType.INTEGER),
@@ -68,22 +68,22 @@ public interface MygangweikousetDynamicSqlMapper {
     })
     List<Mygangweikouset> selectMany(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.763+08:00", comments="Source Table: MYGANGWEIKOUSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.745+08:00", comments="Source Table: MYGANGWEIKOUSET")
     @UpdateProvider(type=SqlProviderAdapter.class, method="update")
     int update(UpdateStatementProvider updateStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.763+08:00", comments="Source Table: MYGANGWEIKOUSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.745+08:00", comments="Source Table: MYGANGWEIKOUSET")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<Long>> countByExample() {
         return SelectDSL.selectWithMapper(this::count, SqlBuilder.count())
                 .from(mygangweikouset);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.763+08:00", comments="Source Table: MYGANGWEIKOUSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.745+08:00", comments="Source Table: MYGANGWEIKOUSET")
     default DeleteDSL<MyBatis3DeleteModelAdapter<Integer>> deleteByExample() {
         return DeleteDSL.deleteFromWithMapper(this::delete, mygangweikouset);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.763+08:00", comments="Source Table: MYGANGWEIKOUSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.745+08:00", comments="Source Table: MYGANGWEIKOUSET")
     default int insert(Mygangweikouset record) {
         return insert(SqlBuilder.insert(record)
                 .into(mygangweikouset)
@@ -111,7 +111,7 @@ public interface MygangweikousetDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.763+08:00", comments="Source Table: MYGANGWEIKOUSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.746+08:00", comments="Source Table: MYGANGWEIKOUSET")
     default int insertSelective(Mygangweikouset record) {
         return insert(SqlBuilder.insert(record)
                 .into(mygangweikouset)
@@ -139,19 +139,19 @@ public interface MygangweikousetDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.763+08:00", comments="Source Table: MYGANGWEIKOUSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.746+08:00", comments="Source Table: MYGANGWEIKOUSET")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Mygangweikouset>>> selectByExample() {
         return SelectDSL.selectWithMapper(this::selectMany, carchannel, inout, inoutname, ctrlnumber, openid, opentype, videocardid, personvideo, bigsmall, checkportid, tempin, tempout, hasoutcard, identifyaddress, identifysignal, subjh, xieyi, ip, pcname, androidip)
                 .from(mygangweikouset);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.763+08:00", comments="Source Table: MYGANGWEIKOUSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.746+08:00", comments="Source Table: MYGANGWEIKOUSET")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Mygangweikouset>>> selectDistinctByExample() {
         return SelectDSL.selectDistinctWithMapper(this::selectMany, carchannel, inout, inoutname, ctrlnumber, openid, opentype, videocardid, personvideo, bigsmall, checkportid, tempin, tempout, hasoutcard, identifyaddress, identifysignal, subjh, xieyi, ip, pcname, androidip)
                 .from(mygangweikouset);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.763+08:00", comments="Source Table: MYGANGWEIKOUSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.746+08:00", comments="Source Table: MYGANGWEIKOUSET")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExample(Mygangweikouset record) {
         return UpdateDSL.updateWithMapper(this::update, mygangweikouset)
                 .set(carchannel).equalTo(record::getCarchannel)
@@ -176,7 +176,7 @@ public interface MygangweikousetDynamicSqlMapper {
                 .set(androidip).equalTo(record::getAndroidip);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.763+08:00", comments="Source Table: MYGANGWEIKOUSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.746+08:00", comments="Source Table: MYGANGWEIKOUSET")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExampleSelective(Mygangweikouset record) {
         return UpdateDSL.updateWithMapper(this::update, mygangweikouset)
                 .set(carchannel).equalToWhenPresent(record::getCarchannel)

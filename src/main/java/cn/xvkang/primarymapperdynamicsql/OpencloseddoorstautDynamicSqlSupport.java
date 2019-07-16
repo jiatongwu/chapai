@@ -6,19 +6,19 @@ import org.mybatis.dynamic.sql.SqlColumn;
 import org.mybatis.dynamic.sql.SqlTable;
 
 public final class OpencloseddoorstautDynamicSqlSupport {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.895+08:00", comments="Source Table: OpenClosedDoorStaut")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.887+08:00", comments="Source Table: OpenClosedDoorStaut")
     public static final Opencloseddoorstaut opencloseddoorstaut = new Opencloseddoorstaut();
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.895+08:00", comments="Source field: OpenClosedDoorStaut.id")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.887+08:00", comments="Source field: OpenClosedDoorStaut.id")
     public static final SqlColumn<Integer> id = opencloseddoorstaut.id;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.895+08:00", comments="Source field: OpenClosedDoorStaut.DevcNo")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.887+08:00", comments="Source field: OpenClosedDoorStaut.DevcNo")
     public static final SqlColumn<Integer> devcno = opencloseddoorstaut.devcno;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.895+08:00", comments="Source field: OpenClosedDoorStaut.Stuat")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.887+08:00", comments="Source field: OpenClosedDoorStaut.Stuat")
     public static final SqlColumn<String> stuat = opencloseddoorstaut.stuat;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.895+08:00", comments="Source Table: OpenClosedDoorStaut")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.887+08:00", comments="Source Table: OpenClosedDoorStaut")
     public static final class Opencloseddoorstaut extends SqlTable {
         public final SqlColumn<Integer> id = column("id", JDBCType.INTEGER);
 

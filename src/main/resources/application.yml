@@ -3,6 +3,10 @@ spring:
     active: dev
 
 ---
+thrift:
+  port: 8899
+  minWorkerThreads: 20
+  maxWorkerThreads: 4000
 isRealySendSms: false
 logging:
   level:
@@ -80,6 +84,10 @@ ymlPath: /tmp/config.yml
 
 
 ---
+thrift:
+  port: 8899
+  minWorkerThreads: 20
+  maxWorkerThreads: 4000
 isRealySendSms: true
 logging:
   level:

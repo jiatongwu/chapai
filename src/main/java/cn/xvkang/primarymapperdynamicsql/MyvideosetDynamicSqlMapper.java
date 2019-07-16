@@ -33,25 +33,25 @@ import org.mybatis.dynamic.sql.util.SqlProviderAdapter;
 
 @Mapper
 public interface MyvideosetDynamicSqlMapper {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.802+08:00", comments="Source Table: MYVideoSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.812+08:00", comments="Source Table: MYVideoSet")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     long count(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.802+08:00", comments="Source Table: MYVideoSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.812+08:00", comments="Source Table: MYVideoSet")
     @DeleteProvider(type=SqlProviderAdapter.class, method="delete")
     int delete(DeleteStatementProvider deleteStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.802+08:00", comments="Source Table: MYVideoSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.812+08:00", comments="Source Table: MYVideoSet")
     @InsertProvider(type=SqlProviderAdapter.class, method="insert")
     @SelectKey(statement="SELECT SCOPE_IDENTITY()", keyProperty="record.id", before=false, resultType=Integer.class)
     int insert(InsertStatementProvider<Myvideoset> insertStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.802+08:00", comments="Source Table: MYVideoSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.812+08:00", comments="Source Table: MYVideoSet")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @ResultMap("MyvideosetResult")
     Myvideoset selectOne(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.802+08:00", comments="Source Table: MYVideoSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.812+08:00", comments="Source Table: MYVideoSet")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @Results(id="MyvideosetResult", value = {
         @Result(column="ID", property="id", jdbcType=JdbcType.INTEGER, id=true),
@@ -64,22 +64,22 @@ public interface MyvideosetDynamicSqlMapper {
     })
     List<Myvideoset> selectMany(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.802+08:00", comments="Source Table: MYVideoSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.812+08:00", comments="Source Table: MYVideoSet")
     @UpdateProvider(type=SqlProviderAdapter.class, method="update")
     int update(UpdateStatementProvider updateStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.802+08:00", comments="Source Table: MYVideoSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.812+08:00", comments="Source Table: MYVideoSet")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<Long>> countByExample() {
         return SelectDSL.selectWithMapper(this::count, SqlBuilder.count())
                 .from(myvideoset);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.802+08:00", comments="Source Table: MYVideoSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.812+08:00", comments="Source Table: MYVideoSet")
     default DeleteDSL<MyBatis3DeleteModelAdapter<Integer>> deleteByExample() {
         return DeleteDSL.deleteFromWithMapper(this::delete, myvideoset);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.802+08:00", comments="Source Table: MYVideoSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.812+08:00", comments="Source Table: MYVideoSet")
     default int deleteByPrimaryKey(Integer id_) {
         return DeleteDSL.deleteFromWithMapper(this::delete, myvideoset)
                 .where(id, isEqualTo(id_))
@@ -87,7 +87,7 @@ public interface MyvideosetDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.802+08:00", comments="Source Table: MYVideoSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.812+08:00", comments="Source Table: MYVideoSet")
     default int insert(Myvideoset record) {
         return insert(SqlBuilder.insert(record)
                 .into(myvideoset)
@@ -101,7 +101,7 @@ public interface MyvideosetDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.802+08:00", comments="Source Table: MYVideoSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.813+08:00", comments="Source Table: MYVideoSet")
     default int insertSelective(Myvideoset record) {
         return insert(SqlBuilder.insert(record)
                 .into(myvideoset)
@@ -115,19 +115,19 @@ public interface MyvideosetDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.802+08:00", comments="Source Table: MYVideoSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.813+08:00", comments="Source Table: MYVideoSet")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Myvideoset>>> selectByExample() {
         return SelectDSL.selectWithMapper(this::selectMany, id, videoip, videoport, videousername, videopassword, pcname, videotype)
                 .from(myvideoset);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.802+08:00", comments="Source Table: MYVideoSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.813+08:00", comments="Source Table: MYVideoSet")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Myvideoset>>> selectDistinctByExample() {
         return SelectDSL.selectDistinctWithMapper(this::selectMany, id, videoip, videoport, videousername, videopassword, pcname, videotype)
                 .from(myvideoset);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.802+08:00", comments="Source Table: MYVideoSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.813+08:00", comments="Source Table: MYVideoSet")
     default Myvideoset selectByPrimaryKey(Integer id_) {
         return SelectDSL.selectWithMapper(this::selectOne, id, videoip, videoport, videousername, videopassword, pcname, videotype)
                 .from(myvideoset)
@@ -136,7 +136,7 @@ public interface MyvideosetDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.803+08:00", comments="Source Table: MYVideoSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.813+08:00", comments="Source Table: MYVideoSet")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExample(Myvideoset record) {
         return UpdateDSL.updateWithMapper(this::update, myvideoset)
                 .set(videoip).equalTo(record::getVideoip)
@@ -147,7 +147,7 @@ public interface MyvideosetDynamicSqlMapper {
                 .set(videotype).equalTo(record::getVideotype);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.803+08:00", comments="Source Table: MYVideoSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.813+08:00", comments="Source Table: MYVideoSet")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExampleSelective(Myvideoset record) {
         return UpdateDSL.updateWithMapper(this::update, myvideoset)
                 .set(videoip).equalToWhenPresent(record::getVideoip)
@@ -158,7 +158,7 @@ public interface MyvideosetDynamicSqlMapper {
                 .set(videotype).equalToWhenPresent(record::getVideotype);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.803+08:00", comments="Source Table: MYVideoSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.813+08:00", comments="Source Table: MYVideoSet")
     default int updateByPrimaryKey(Myvideoset record) {
         return UpdateDSL.updateWithMapper(this::update, myvideoset)
                 .set(videoip).equalTo(record::getVideoip)
@@ -172,7 +172,7 @@ public interface MyvideosetDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.803+08:00", comments="Source Table: MYVideoSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.813+08:00", comments="Source Table: MYVideoSet")
     default int updateByPrimaryKeySelective(Myvideoset record) {
         return UpdateDSL.updateWithMapper(this::update, myvideoset)
                 .set(videoip).equalToWhenPresent(record::getVideoip)

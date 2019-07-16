@@ -6,31 +6,31 @@ import org.mybatis.dynamic.sql.SqlColumn;
 import org.mybatis.dynamic.sql.SqlTable;
 
 public final class QrselectschemeDynamicSqlSupport {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.904+08:00", comments="Source Table: QrSelectScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.896+08:00", comments="Source Table: QrSelectScheme")
     public static final Qrselectscheme qrselectscheme = new Qrselectscheme();
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.904+08:00", comments="Source field: QrSelectScheme.SchId")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.896+08:00", comments="Source field: QrSelectScheme.SchId")
     public static final SqlColumn<Integer> schid = qrselectscheme.schid;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.904+08:00", comments="Source field: QrSelectScheme.SchName")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.896+08:00", comments="Source field: QrSelectScheme.SchName")
     public static final SqlColumn<String> schname = qrselectscheme.schname;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.904+08:00", comments="Source field: QrSelectScheme.FieldName")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.896+08:00", comments="Source field: QrSelectScheme.FieldName")
     public static final SqlColumn<String> fieldname = qrselectscheme.fieldname;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.904+08:00", comments="Source field: QrSelectScheme.Operators")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.896+08:00", comments="Source field: QrSelectScheme.Operators")
     public static final SqlColumn<String> operators = qrselectscheme.operators;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.904+08:00", comments="Source field: QrSelectScheme.Selectvalues")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.896+08:00", comments="Source field: QrSelectScheme.Selectvalues")
     public static final SqlColumn<String> selectvalues = qrselectscheme.selectvalues;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.904+08:00", comments="Source field: QrSelectScheme.startime")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.896+08:00", comments="Source field: QrSelectScheme.startime")
     public static final SqlColumn<String> startime = qrselectscheme.startime;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.904+08:00", comments="Source field: QrSelectScheme.endtime")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.896+08:00", comments="Source field: QrSelectScheme.endtime")
     public static final SqlColumn<String> endtime = qrselectscheme.endtime;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.904+08:00", comments="Source Table: QrSelectScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.896+08:00", comments="Source Table: QrSelectScheme")
     public static final class Qrselectscheme extends SqlTable {
         public final SqlColumn<Integer> schid = column("SchId", JDBCType.INTEGER);
 

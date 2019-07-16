@@ -30,19 +30,19 @@ import org.mybatis.dynamic.sql.util.SqlProviderAdapter;
 
 @Mapper
 public interface SerRecordsDynamicSqlMapper {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.931+08:00", comments="Source Table: Ser_Records")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.943+08:00", comments="Source Table: Ser_Records")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     long count(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.931+08:00", comments="Source Table: Ser_Records")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.943+08:00", comments="Source Table: Ser_Records")
     @DeleteProvider(type=SqlProviderAdapter.class, method="delete")
     int delete(DeleteStatementProvider deleteStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.931+08:00", comments="Source Table: Ser_Records")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.943+08:00", comments="Source Table: Ser_Records")
     @InsertProvider(type=SqlProviderAdapter.class, method="insert")
     int insert(InsertStatementProvider<SerRecords> insertStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.931+08:00", comments="Source Table: Ser_Records")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.943+08:00", comments="Source Table: Ser_Records")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @Results(id="SerRecordsResult", value = {
         @Result(column="CardID", property="cardid", jdbcType=JdbcType.VARCHAR),
@@ -58,22 +58,22 @@ public interface SerRecordsDynamicSqlMapper {
     })
     List<SerRecords> selectMany(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.931+08:00", comments="Source Table: Ser_Records")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.943+08:00", comments="Source Table: Ser_Records")
     @UpdateProvider(type=SqlProviderAdapter.class, method="update")
     int update(UpdateStatementProvider updateStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.931+08:00", comments="Source Table: Ser_Records")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.943+08:00", comments="Source Table: Ser_Records")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<Long>> countByExample() {
         return SelectDSL.selectWithMapper(this::count, SqlBuilder.count())
                 .from(serRecords);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.931+08:00", comments="Source Table: Ser_Records")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.943+08:00", comments="Source Table: Ser_Records")
     default DeleteDSL<MyBatis3DeleteModelAdapter<Integer>> deleteByExample() {
         return DeleteDSL.deleteFromWithMapper(this::delete, serRecords);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.931+08:00", comments="Source Table: Ser_Records")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.943+08:00", comments="Source Table: Ser_Records")
     default int insert(SerRecords record) {
         return insert(SqlBuilder.insert(record)
                 .into(serRecords)
@@ -91,7 +91,7 @@ public interface SerRecordsDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.931+08:00", comments="Source Table: Ser_Records")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.943+08:00", comments="Source Table: Ser_Records")
     default int insertSelective(SerRecords record) {
         return insert(SqlBuilder.insert(record)
                 .into(serRecords)
@@ -109,19 +109,19 @@ public interface SerRecordsDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.931+08:00", comments="Source Table: Ser_Records")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.943+08:00", comments="Source Table: Ser_Records")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<SerRecords>>> selectByExample() {
         return SelectDSL.selectWithMapper(this::selectMany, cardid, userno, machno, machplace, doorno, doorplace, events, opentime, password, passwordtype)
                 .from(serRecords);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.931+08:00", comments="Source Table: Ser_Records")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.943+08:00", comments="Source Table: Ser_Records")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<SerRecords>>> selectDistinctByExample() {
         return SelectDSL.selectDistinctWithMapper(this::selectMany, cardid, userno, machno, machplace, doorno, doorplace, events, opentime, password, passwordtype)
                 .from(serRecords);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.931+08:00", comments="Source Table: Ser_Records")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.944+08:00", comments="Source Table: Ser_Records")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExample(SerRecords record) {
         return UpdateDSL.updateWithMapper(this::update, serRecords)
                 .set(cardid).equalTo(record::getCardid)
@@ -136,7 +136,7 @@ public interface SerRecordsDynamicSqlMapper {
                 .set(passwordtype).equalTo(record::getPasswordtype);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.931+08:00", comments="Source Table: Ser_Records")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.944+08:00", comments="Source Table: Ser_Records")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExampleSelective(SerRecords record) {
         return UpdateDSL.updateWithMapper(this::update, serRecords)
                 .set(cardid).equalToWhenPresent(record::getCardid)

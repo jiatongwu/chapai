@@ -6,16 +6,16 @@ import org.mybatis.dynamic.sql.SqlColumn;
 import org.mybatis.dynamic.sql.SqlTable;
 
 public final class MyicidstatusDynamicSqlSupport {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.764+08:00", comments="Source Table: MYICIDSTATUS")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.746+08:00", comments="Source Table: MYICIDSTATUS")
     public static final Myicidstatus myicidstatus = new Myicidstatus();
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.764+08:00", comments="Source field: MYICIDSTATUS.CardState")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.746+08:00", comments="Source field: MYICIDSTATUS.CardState")
     public static final SqlColumn<String> cardstate = myicidstatus.cardstate;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.764+08:00", comments="Source field: MYICIDSTATUS.CardState2")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.746+08:00", comments="Source field: MYICIDSTATUS.CardState2")
     public static final SqlColumn<String> cardstate2 = myicidstatus.cardstate2;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.764+08:00", comments="Source Table: MYICIDSTATUS")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.746+08:00", comments="Source Table: MYICIDSTATUS")
     public static final class Myicidstatus extends SqlTable {
         public final SqlColumn<String> cardstate = column("CardState", JDBCType.VARCHAR);
 

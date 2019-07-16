@@ -33,25 +33,25 @@ import org.mybatis.dynamic.sql.util.SqlProviderAdapter;
 
 @Mapper
 public interface MysurpluscarscreenDynamicSqlMapper {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.797+08:00", comments="Source Table: MYSurplusCarScreen")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.808+08:00", comments="Source Table: MYSurplusCarScreen")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     long count(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.797+08:00", comments="Source Table: MYSurplusCarScreen")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.808+08:00", comments="Source Table: MYSurplusCarScreen")
     @DeleteProvider(type=SqlProviderAdapter.class, method="delete")
     int delete(DeleteStatementProvider deleteStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.798+08:00", comments="Source Table: MYSurplusCarScreen")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.808+08:00", comments="Source Table: MYSurplusCarScreen")
     @InsertProvider(type=SqlProviderAdapter.class, method="insert")
     @SelectKey(statement="SELECT SCOPE_IDENTITY()", keyProperty="record.id", before=false, resultType=Integer.class)
     int insert(InsertStatementProvider<Mysurpluscarscreen> insertStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.798+08:00", comments="Source Table: MYSurplusCarScreen")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.808+08:00", comments="Source Table: MYSurplusCarScreen")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @ResultMap("MysurpluscarscreenResult")
     Mysurpluscarscreen selectOne(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.798+08:00", comments="Source Table: MYSurplusCarScreen")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.808+08:00", comments="Source Table: MYSurplusCarScreen")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @Results(id="MysurpluscarscreenResult", value = {
         @Result(column="ID", property="id", jdbcType=JdbcType.INTEGER, id=true),
@@ -69,22 +69,22 @@ public interface MysurpluscarscreenDynamicSqlMapper {
     })
     List<Mysurpluscarscreen> selectMany(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.798+08:00", comments="Source Table: MYSurplusCarScreen")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.808+08:00", comments="Source Table: MYSurplusCarScreen")
     @UpdateProvider(type=SqlProviderAdapter.class, method="update")
     int update(UpdateStatementProvider updateStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.798+08:00", comments="Source Table: MYSurplusCarScreen")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.808+08:00", comments="Source Table: MYSurplusCarScreen")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<Long>> countByExample() {
         return SelectDSL.selectWithMapper(this::count, SqlBuilder.count())
                 .from(mysurpluscarscreen);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.798+08:00", comments="Source Table: MYSurplusCarScreen")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.808+08:00", comments="Source Table: MYSurplusCarScreen")
     default DeleteDSL<MyBatis3DeleteModelAdapter<Integer>> deleteByExample() {
         return DeleteDSL.deleteFromWithMapper(this::delete, mysurpluscarscreen);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.798+08:00", comments="Source Table: MYSurplusCarScreen")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.808+08:00", comments="Source Table: MYSurplusCarScreen")
     default int deleteByPrimaryKey(Integer id_) {
         return DeleteDSL.deleteFromWithMapper(this::delete, mysurpluscarscreen)
                 .where(id, isEqualTo(id_))
@@ -92,7 +92,7 @@ public interface MysurpluscarscreenDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.798+08:00", comments="Source Table: MYSurplusCarScreen")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.808+08:00", comments="Source Table: MYSurplusCarScreen")
     default int insert(Mysurpluscarscreen record) {
         return insert(SqlBuilder.insert(record)
                 .into(mysurpluscarscreen)
@@ -111,7 +111,7 @@ public interface MysurpluscarscreenDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.798+08:00", comments="Source Table: MYSurplusCarScreen")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.808+08:00", comments="Source Table: MYSurplusCarScreen")
     default int insertSelective(Mysurpluscarscreen record) {
         return insert(SqlBuilder.insert(record)
                 .into(mysurpluscarscreen)
@@ -130,19 +130,19 @@ public interface MysurpluscarscreenDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.798+08:00", comments="Source Table: MYSurplusCarScreen")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.808+08:00", comments="Source Table: MYSurplusCarScreen")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Mysurpluscarscreen>>> selectByExample() {
         return SelectDSL.selectWithMapper(this::selectMany, id, ctrid, surplusid, speed, stoptime, color, sumtime, pcname, cphendstr, showway, move, pattern)
                 .from(mysurpluscarscreen);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.798+08:00", comments="Source Table: MYSurplusCarScreen")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.808+08:00", comments="Source Table: MYSurplusCarScreen")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Mysurpluscarscreen>>> selectDistinctByExample() {
         return SelectDSL.selectDistinctWithMapper(this::selectMany, id, ctrid, surplusid, speed, stoptime, color, sumtime, pcname, cphendstr, showway, move, pattern)
                 .from(mysurpluscarscreen);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.798+08:00", comments="Source Table: MYSurplusCarScreen")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.808+08:00", comments="Source Table: MYSurplusCarScreen")
     default Mysurpluscarscreen selectByPrimaryKey(Integer id_) {
         return SelectDSL.selectWithMapper(this::selectOne, id, ctrid, surplusid, speed, stoptime, color, sumtime, pcname, cphendstr, showway, move, pattern)
                 .from(mysurpluscarscreen)
@@ -151,7 +151,7 @@ public interface MysurpluscarscreenDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.798+08:00", comments="Source Table: MYSurplusCarScreen")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.808+08:00", comments="Source Table: MYSurplusCarScreen")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExample(Mysurpluscarscreen record) {
         return UpdateDSL.updateWithMapper(this::update, mysurpluscarscreen)
                 .set(ctrid).equalTo(record::getCtrid)
@@ -167,7 +167,7 @@ public interface MysurpluscarscreenDynamicSqlMapper {
                 .set(pattern).equalTo(record::getPattern);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.798+08:00", comments="Source Table: MYSurplusCarScreen")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.808+08:00", comments="Source Table: MYSurplusCarScreen")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExampleSelective(Mysurpluscarscreen record) {
         return UpdateDSL.updateWithMapper(this::update, mysurpluscarscreen)
                 .set(ctrid).equalToWhenPresent(record::getCtrid)
@@ -183,7 +183,7 @@ public interface MysurpluscarscreenDynamicSqlMapper {
                 .set(pattern).equalToWhenPresent(record::getPattern);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.798+08:00", comments="Source Table: MYSurplusCarScreen")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.808+08:00", comments="Source Table: MYSurplusCarScreen")
     default int updateByPrimaryKey(Mysurpluscarscreen record) {
         return UpdateDSL.updateWithMapper(this::update, mysurpluscarscreen)
                 .set(ctrid).equalTo(record::getCtrid)
@@ -202,7 +202,7 @@ public interface MysurpluscarscreenDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.798+08:00", comments="Source Table: MYSurplusCarScreen")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.809+08:00", comments="Source Table: MYSurplusCarScreen")
     default int updateByPrimaryKeySelective(Mysurpluscarscreen record) {
         return UpdateDSL.updateWithMapper(this::update, mysurpluscarscreen)
                 .set(ctrid).equalToWhenPresent(record::getCtrid)

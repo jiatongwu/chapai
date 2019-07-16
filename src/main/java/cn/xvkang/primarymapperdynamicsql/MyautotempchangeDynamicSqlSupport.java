@@ -7,34 +7,34 @@ import org.mybatis.dynamic.sql.SqlColumn;
 import org.mybatis.dynamic.sql.SqlTable;
 
 public final class MyautotempchangeDynamicSqlSupport {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.689+08:00", comments="Source Table: MYAutoTempChange")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.618+08:00", comments="Source Table: MYAutoTempChange")
     public static final Myautotempchange myautotempchange = new Myautotempchange();
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.690+08:00", comments="Source field: MYAutoTempChange.ID")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.618+08:00", comments="Source field: MYAutoTempChange.ID")
     public static final SqlColumn<Integer> id = myautotempchange.id;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.690+08:00", comments="Source field: MYAutoTempChange.CPH")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.618+08:00", comments="Source field: MYAutoTempChange.CPH")
     public static final SqlColumn<String> cph = myautotempchange.cph;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.690+08:00", comments="Source field: MYAutoTempChange.CarCardType")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.619+08:00", comments="Source field: MYAutoTempChange.CarCardType")
     public static final SqlColumn<String> carcardtype = myautotempchange.carcardtype;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.690+08:00", comments="Source field: MYAutoTempChange.InTime")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.619+08:00", comments="Source field: MYAutoTempChange.InTime")
     public static final SqlColumn<Date> intime = myautotempchange.intime;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.690+08:00", comments="Source field: MYAutoTempChange.CarValidStartDate")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.619+08:00", comments="Source field: MYAutoTempChange.CarValidStartDate")
     public static final SqlColumn<Date> carvalidstartdate = myautotempchange.carvalidstartdate;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.690+08:00", comments="Source field: MYAutoTempChange.CarValidEndDate")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.619+08:00", comments="Source field: MYAutoTempChange.CarValidEndDate")
     public static final SqlColumn<Date> carvalidenddate = myautotempchange.carvalidenddate;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.690+08:00", comments="Source field: MYAutoTempChange.DownloadSignal")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.619+08:00", comments="Source field: MYAutoTempChange.DownloadSignal")
     public static final SqlColumn<String> downloadsignal = myautotempchange.downloadsignal;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.690+08:00", comments="Source field: MYAutoTempChange.InOut")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.619+08:00", comments="Source field: MYAutoTempChange.InOut")
     public static final SqlColumn<Integer> inout = myautotempchange.inout;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-14T17:27:27.690+08:00", comments="Source Table: MYAutoTempChange")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.618+08:00", comments="Source Table: MYAutoTempChange")
     public static final class Myautotempchange extends SqlTable {
         public final SqlColumn<Integer> id = column("ID", JDBCType.INTEGER);
 
