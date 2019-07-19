@@ -37,6 +37,7 @@ import cn.xvkang.primarymapperdynamicsql.UserTableDynamicSqlSupport;
 import cn.xvkang.service.UserService;
 import cn.xvkang.utils.Constants;
 import cn.xvkang.utils.MyPageImpl;
+import cn.xvkang.utils.SpringUtils;
 
 @Service
 public class UserServiceImpl implements UserService {
@@ -48,7 +49,7 @@ public class UserServiceImpl implements UserService {
 	private PermissionDynamicSqlMapper permissionDynamicSqlMapper;
 	@Autowired
 	private UserRoleDynamicSqlMapper userRoleDynamicSqlMapper;
-	@Autowired
+
 	private PasswordEncoder passwordEncoder;
 
 	@Override
@@ -175,6 +176,9 @@ public class UserServiceImpl implements UserService {
 		userTable.setUsername(username);
 		userTable.setDisabled(0);
 		userTable.setCreateTime(new Date());
+		if (passwordEncoder == null) {
+			passwordEncoder = SpringUtils.ac.getBean(PasswordEncoder.class);
+		}
 		userTable.setPassword(passwordEncoder.encode(password));
 		userTable.setSalt("");
 		userTable.setName(name);
@@ -218,7 +222,7 @@ public class UserServiceImpl implements UserService {
 
 	@Override
 	public Resource exportUser(Map<String, Object> params) {
-		// TODO Auto-generated method stub
+
 		return null;
 	}
 
@@ -227,6 +231,9 @@ public class UserServiceImpl implements UserService {
 		if (StringUtils.isNotBlank(newPassword)) {
 			UserTable user = new UserTable();
 			user.setId(userId);
+			if (passwordEncoder == null) {
+				passwordEncoder = SpringUtils.ac.getBean(PasswordEncoder.class);
+			}
 			user.setPassword(passwordEncoder.encode(newPassword));
 			return userTableDynamicSqlMapper.updateByPrimaryKeySelective(user);
 		}
@@ -238,6 +245,9 @@ public class UserServiceImpl implements UserService {
 		if (StringUtils.isNotBlank(newPassword)) {
 			UserTable user = new UserTable();
 			user.setId(userId);
+			if (passwordEncoder == null) {
+				passwordEncoder = SpringUtils.ac.getBean(PasswordEncoder.class);
+			}
 			user.setPassword(passwordEncoder.encode(newPassword));
 			return userTableDynamicSqlMapper.updateByPrimaryKeySelective(user);
 		}

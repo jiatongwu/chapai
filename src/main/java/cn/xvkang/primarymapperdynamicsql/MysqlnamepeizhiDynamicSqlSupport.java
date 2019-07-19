@@ -6,22 +6,22 @@ import org.mybatis.dynamic.sql.SqlColumn;
 import org.mybatis.dynamic.sql.SqlTable;
 
 public final class MysqlnamepeizhiDynamicSqlSupport {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.804+08:00", comments="Source Table: MYSQLNAMEPEIZHI")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.751+08:00", comments="Source Table: MYSQLNAMEPEIZHI")
     public static final Mysqlnamepeizhi mysqlnamepeizhi = new Mysqlnamepeizhi();
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.805+08:00", comments="Source field: MYSQLNAMEPEIZHI.ID")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.751+08:00", comments="Source field: MYSQLNAMEPEIZHI.ID")
     public static final SqlColumn<Integer> id = mysqlnamepeizhi.id;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.805+08:00", comments="Source field: MYSQLNAMEPEIZHI.EN_Name")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.751+08:00", comments="Source field: MYSQLNAMEPEIZHI.EN_Name")
     public static final SqlColumn<String> enName = mysqlnamepeizhi.enName;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.805+08:00", comments="Source field: MYSQLNAMEPEIZHI.CH_Name")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.752+08:00", comments="Source field: MYSQLNAMEPEIZHI.CH_Name")
     public static final SqlColumn<String> chName = mysqlnamepeizhi.chName;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.805+08:00", comments="Source field: MYSQLNAMEPEIZHI.Type")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.752+08:00", comments="Source field: MYSQLNAMEPEIZHI.Type")
     public static final SqlColumn<String> type = mysqlnamepeizhi.type;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.805+08:00", comments="Source Table: MYSQLNAMEPEIZHI")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.751+08:00", comments="Source Table: MYSQLNAMEPEIZHI")
     public static final class Mysqlnamepeizhi extends SqlTable {
         public final SqlColumn<Integer> id = column("ID", JDBCType.INTEGER);
 

@@ -6,19 +6,19 @@ import org.mybatis.dynamic.sql.SqlColumn;
 import org.mybatis.dynamic.sql.SqlTable;
 
 public final class DtQrsdoordevcsetDynamicSqlSupport {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.594+08:00", comments="Source Table: Dt_qrsDoorDevcSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.604+08:00", comments="Source Table: Dt_qrsDoorDevcSet")
     public static final DtQrsdoordevcset dtQrsdoordevcset = new DtQrsdoordevcset();
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.594+08:00", comments="Source field: Dt_qrsDoorDevcSet.DevcNum")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.604+08:00", comments="Source field: Dt_qrsDoorDevcSet.DevcNum")
     public static final SqlColumn<Integer> devcnum = dtQrsdoordevcset.devcnum;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.595+08:00", comments="Source field: Dt_qrsDoorDevcSet.DoorNum")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.604+08:00", comments="Source field: Dt_qrsDoorDevcSet.DoorNum")
     public static final SqlColumn<Integer> doornum = dtQrsdoordevcset.doornum;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.595+08:00", comments="Source field: Dt_qrsDoorDevcSet.DoorPace")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.605+08:00", comments="Source field: Dt_qrsDoorDevcSet.DoorPace")
     public static final SqlColumn<String> doorpace = dtQrsdoordevcset.doorpace;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.594+08:00", comments="Source Table: Dt_qrsDoorDevcSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.604+08:00", comments="Source Table: Dt_qrsDoorDevcSet")
     public static final class DtQrsdoordevcset extends SqlTable {
         public final SqlColumn<Integer> devcnum = column("DevcNum", JDBCType.INTEGER);
 

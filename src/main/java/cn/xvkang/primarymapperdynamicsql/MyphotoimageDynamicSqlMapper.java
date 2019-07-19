@@ -30,19 +30,19 @@ import org.mybatis.dynamic.sql.util.SqlProviderAdapter;
 
 @Mapper
 public interface MyphotoimageDynamicSqlMapper {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.784+08:00", comments="Source Table: MYPHOTOIMAGE")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.736+08:00", comments="Source Table: MYPHOTOIMAGE")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     long count(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.784+08:00", comments="Source Table: MYPHOTOIMAGE")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.736+08:00", comments="Source Table: MYPHOTOIMAGE")
     @DeleteProvider(type=SqlProviderAdapter.class, method="delete")
     int delete(DeleteStatementProvider deleteStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.784+08:00", comments="Source Table: MYPHOTOIMAGE")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.736+08:00", comments="Source Table: MYPHOTOIMAGE")
     @InsertProvider(type=SqlProviderAdapter.class, method="insert")
     int insert(InsertStatementProvider<Myphotoimage> insertStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.784+08:00", comments="Source Table: MYPHOTOIMAGE")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.736+08:00", comments="Source Table: MYPHOTOIMAGE")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @Results(id="MyphotoimageResult", value = {
         @Result(column="PicIndex", property="picindex", jdbcType=JdbcType.VARCHAR),
@@ -51,22 +51,22 @@ public interface MyphotoimageDynamicSqlMapper {
     })
     List<Myphotoimage> selectMany(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.784+08:00", comments="Source Table: MYPHOTOIMAGE")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.736+08:00", comments="Source Table: MYPHOTOIMAGE")
     @UpdateProvider(type=SqlProviderAdapter.class, method="update")
     int update(UpdateStatementProvider updateStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.784+08:00", comments="Source Table: MYPHOTOIMAGE")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.736+08:00", comments="Source Table: MYPHOTOIMAGE")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<Long>> countByExample() {
         return SelectDSL.selectWithMapper(this::count, SqlBuilder.count())
                 .from(myphotoimage);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.784+08:00", comments="Source Table: MYPHOTOIMAGE")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.737+08:00", comments="Source Table: MYPHOTOIMAGE")
     default DeleteDSL<MyBatis3DeleteModelAdapter<Integer>> deleteByExample() {
         return DeleteDSL.deleteFromWithMapper(this::delete, myphotoimage);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.784+08:00", comments="Source Table: MYPHOTOIMAGE")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.737+08:00", comments="Source Table: MYPHOTOIMAGE")
     default int insert(Myphotoimage record) {
         return insert(SqlBuilder.insert(record)
                 .into(myphotoimage)
@@ -77,7 +77,7 @@ public interface MyphotoimageDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.784+08:00", comments="Source Table: MYPHOTOIMAGE")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.737+08:00", comments="Source Table: MYPHOTOIMAGE")
     default int insertSelective(Myphotoimage record) {
         return insert(SqlBuilder.insert(record)
                 .into(myphotoimage)
@@ -88,19 +88,19 @@ public interface MyphotoimageDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.784+08:00", comments="Source Table: MYPHOTOIMAGE")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.737+08:00", comments="Source Table: MYPHOTOIMAGE")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Myphotoimage>>> selectByExample() {
         return SelectDSL.selectWithMapper(this::selectMany, picindex, pictime, piccontent)
                 .from(myphotoimage);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.784+08:00", comments="Source Table: MYPHOTOIMAGE")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.737+08:00", comments="Source Table: MYPHOTOIMAGE")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Myphotoimage>>> selectDistinctByExample() {
         return SelectDSL.selectDistinctWithMapper(this::selectMany, picindex, pictime, piccontent)
                 .from(myphotoimage);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.784+08:00", comments="Source Table: MYPHOTOIMAGE")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.737+08:00", comments="Source Table: MYPHOTOIMAGE")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExample(Myphotoimage record) {
         return UpdateDSL.updateWithMapper(this::update, myphotoimage)
                 .set(picindex).equalTo(record::getPicindex)
@@ -108,7 +108,7 @@ public interface MyphotoimageDynamicSqlMapper {
                 .set(piccontent).equalTo(record::getPiccontent);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.784+08:00", comments="Source Table: MYPHOTOIMAGE")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.737+08:00", comments="Source Table: MYPHOTOIMAGE")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExampleSelective(Myphotoimage record) {
         return UpdateDSL.updateWithMapper(this::update, myphotoimage)
                 .set(picindex).equalToWhenPresent(record::getPicindex)

@@ -1,5 +1,7 @@
 package cn.xvkang.phone;
 
+import javax.annotation.PreDestroy;
+
 import org.apache.thrift.TProcessorFactory;
 import org.apache.thrift.protocol.TCompactProtocol;
 import org.apache.thrift.server.THsHaServer;
@@ -19,6 +21,19 @@ import cn.xvkang.phone.thrift.ChepaiPhoneService;
 public class ThriftServer {
 	protected final Logger logger = LoggerFactory.getLogger(this.getClass());
 
+	@PreDestroy
+	public void destory() {
+		if (tServer != null) {
+			try {
+				tServer.stop();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			logger.debug("thrift停止 ");
+		}
+	}
+
+	private TServer tServer;
 	@Value("${thrift.port}")
 	private int port;
 	@Value("${thrift.minWorkerThreads}")
@@ -56,8 +71,9 @@ public class ThriftServer {
 			// TServer server = new TSimpleServer(tArgs);
 			logger.info("thrift服务启动成功, 端口={}", port);
 			// server.serve();
-			TServer tServer = new THsHaServer(args1);
+			tServer = new THsHaServer(args1);
 			tServer.serve();
+
 		} catch (Exception e) {
 			logger.error("thrift服务启动失败", e);
 		}

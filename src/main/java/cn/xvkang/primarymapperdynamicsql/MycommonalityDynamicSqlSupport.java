@@ -7,13 +7,13 @@ import org.mybatis.dynamic.sql.SqlColumn;
 import org.mybatis.dynamic.sql.SqlTable;
 
 public final class MycommonalityDynamicSqlSupport {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.868+08:00", comments="Source Table: MyCommonality")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.801+08:00", comments="Source Table: MyCommonality")
     public static final Mycommonality mycommonality = new Mycommonality();
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.868+08:00", comments="Source field: MyCommonality.FileDate")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.801+08:00", comments="Source field: MyCommonality.FileDate")
     public static final SqlColumn<Date> filedate = mycommonality.filedate;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.868+08:00", comments="Source Table: MyCommonality")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.801+08:00", comments="Source Table: MyCommonality")
     public static final class Mycommonality extends SqlTable {
         public final SqlColumn<Date> filedate = column("FileDate", JDBCType.TIMESTAMP);
 

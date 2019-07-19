@@ -4,7 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Constants {
-
+	// 车牌巡逻人员android登录
+	public static final String REDIS_JWT_XUNLUO_RENYUAN_PREFIX = "jwt_xunluorenyuan:";
 	// 所有redis存放的值前缀
 	// public static final String REDIS_PREFIX = "fuxing:";
 	// jwt相关的redis key 前缘
@@ -163,7 +164,7 @@ public class Constants {
 		账号不存在(6, "账号不存在"), 密码错误(7, "密码错误"), 您已经登录了不能再次登录(8, "您已经登录了不能再次登录"), 该用户已注册(9, "该用户已注册"),
 		扫码登录时_登录失败提示信息_这种情况不应该出现(10, "扫码登录失败,这种情况不应该出现，因为如果超时了前端就应该提示重新获取验证码，让用户重新扫"), 刚注册的用户不允许登录(11, "刚注册的用户不允许登录"),
 		验证码错误(12, "验证码错误"), 登录失败(15, "登录失败"), 短信验证码发送失败(16, "短信验证码发送失败"), 找不到(404, "迷路了"), 您被挤掉线了(17, "您被挤掉线了"),
-		用户名或密码错误(18, "用户名或密码错误"), 用户名或短信验证码错误(18, "用户名或短信验证码错误"), 账号被禁用(19, "账号被禁用"),;
+		用户名或密码错误(18, "用户名或密码错误"), 用户名或短信验证码错误(18, "用户名或短信验证码错误"), 账号被禁用(19, "账号被禁用");
 
 		private Integer code;
 		private String message;
@@ -201,7 +202,7 @@ public class Constants {
 	}
 
 	public static enum DEFAULT_ROLES_ENUM {
-		管理员("admin_user"), 普通用户("normal_user"), 超级管理员("super_admin");
+		管理员("admin_user"), 普通用户("normal_user"), 超级管理员("super_admin"), 巡逻人员("xuluo_user");
 		private String code;
 
 		DEFAULT_ROLES_ENUM(String code) {

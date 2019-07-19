@@ -33,25 +33,25 @@ import org.mybatis.dynamic.sql.util.SqlProviderAdapter;
 
 @Mapper
 public interface MyZfbkeysetDynamicSqlMapper {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.886+08:00", comments="Source Table: My_ZFBKeySet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.815+08:00", comments="Source Table: My_ZFBKeySet")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     long count(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.886+08:00", comments="Source Table: My_ZFBKeySet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.815+08:00", comments="Source Table: My_ZFBKeySet")
     @DeleteProvider(type=SqlProviderAdapter.class, method="delete")
     int delete(DeleteStatementProvider deleteStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.886+08:00", comments="Source Table: My_ZFBKeySet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.815+08:00", comments="Source Table: My_ZFBKeySet")
     @InsertProvider(type=SqlProviderAdapter.class, method="insert")
     @SelectKey(statement="SELECT SCOPE_IDENTITY()", keyProperty="record.id", before=false, resultType=Integer.class)
     int insert(InsertStatementProvider<MyZfbkeyset> insertStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.886+08:00", comments="Source Table: My_ZFBKeySet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.815+08:00", comments="Source Table: My_ZFBKeySet")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @ResultMap("MyZfbkeysetResult")
     MyZfbkeyset selectOne(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.886+08:00", comments="Source Table: My_ZFBKeySet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.815+08:00", comments="Source Table: My_ZFBKeySet")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @Results(id="MyZfbkeysetResult", value = {
         @Result(column="ID", property="id", jdbcType=JdbcType.INTEGER, id=true),
@@ -63,22 +63,22 @@ public interface MyZfbkeysetDynamicSqlMapper {
     })
     List<MyZfbkeyset> selectMany(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.886+08:00", comments="Source Table: My_ZFBKeySet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.815+08:00", comments="Source Table: My_ZFBKeySet")
     @UpdateProvider(type=SqlProviderAdapter.class, method="update")
     int update(UpdateStatementProvider updateStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.886+08:00", comments="Source Table: My_ZFBKeySet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.815+08:00", comments="Source Table: My_ZFBKeySet")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<Long>> countByExample() {
         return SelectDSL.selectWithMapper(this::count, SqlBuilder.count())
                 .from(myZfbkeyset);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.886+08:00", comments="Source Table: My_ZFBKeySet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.815+08:00", comments="Source Table: My_ZFBKeySet")
     default DeleteDSL<MyBatis3DeleteModelAdapter<Integer>> deleteByExample() {
         return DeleteDSL.deleteFromWithMapper(this::delete, myZfbkeyset);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.886+08:00", comments="Source Table: My_ZFBKeySet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.815+08:00", comments="Source Table: My_ZFBKeySet")
     default int deleteByPrimaryKey(Integer id_) {
         return DeleteDSL.deleteFromWithMapper(this::delete, myZfbkeyset)
                 .where(id, isEqualTo(id_))
@@ -86,7 +86,7 @@ public interface MyZfbkeysetDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.886+08:00", comments="Source Table: My_ZFBKeySet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.815+08:00", comments="Source Table: My_ZFBKeySet")
     default int insert(MyZfbkeyset record) {
         return insert(SqlBuilder.insert(record)
                 .into(myZfbkeyset)
@@ -99,7 +99,7 @@ public interface MyZfbkeysetDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.886+08:00", comments="Source Table: My_ZFBKeySet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.815+08:00", comments="Source Table: My_ZFBKeySet")
     default int insertSelective(MyZfbkeyset record) {
         return insert(SqlBuilder.insert(record)
                 .into(myZfbkeyset)
@@ -112,19 +112,19 @@ public interface MyZfbkeysetDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.886+08:00", comments="Source Table: My_ZFBKeySet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.815+08:00", comments="Source Table: My_ZFBKeySet")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<MyZfbkeyset>>> selectByExample() {
         return SelectDSL.selectWithMapper(this::selectMany, id, alipayRsaPublicKey, rsaPrivateKey, rs1, rs2, rs3)
                 .from(myZfbkeyset);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.886+08:00", comments="Source Table: My_ZFBKeySet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.815+08:00", comments="Source Table: My_ZFBKeySet")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<MyZfbkeyset>>> selectDistinctByExample() {
         return SelectDSL.selectDistinctWithMapper(this::selectMany, id, alipayRsaPublicKey, rsaPrivateKey, rs1, rs2, rs3)
                 .from(myZfbkeyset);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.886+08:00", comments="Source Table: My_ZFBKeySet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.816+08:00", comments="Source Table: My_ZFBKeySet")
     default MyZfbkeyset selectByPrimaryKey(Integer id_) {
         return SelectDSL.selectWithMapper(this::selectOne, id, alipayRsaPublicKey, rsaPrivateKey, rs1, rs2, rs3)
                 .from(myZfbkeyset)
@@ -133,7 +133,7 @@ public interface MyZfbkeysetDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.886+08:00", comments="Source Table: My_ZFBKeySet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.816+08:00", comments="Source Table: My_ZFBKeySet")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExample(MyZfbkeyset record) {
         return UpdateDSL.updateWithMapper(this::update, myZfbkeyset)
                 .set(alipayRsaPublicKey).equalTo(record::getAlipayRsaPublicKey)
@@ -143,7 +143,7 @@ public interface MyZfbkeysetDynamicSqlMapper {
                 .set(rs3).equalTo(record::getRs3);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.886+08:00", comments="Source Table: My_ZFBKeySet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.816+08:00", comments="Source Table: My_ZFBKeySet")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExampleSelective(MyZfbkeyset record) {
         return UpdateDSL.updateWithMapper(this::update, myZfbkeyset)
                 .set(alipayRsaPublicKey).equalToWhenPresent(record::getAlipayRsaPublicKey)
@@ -153,7 +153,7 @@ public interface MyZfbkeysetDynamicSqlMapper {
                 .set(rs3).equalToWhenPresent(record::getRs3);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.886+08:00", comments="Source Table: My_ZFBKeySet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.816+08:00", comments="Source Table: My_ZFBKeySet")
     default int updateByPrimaryKey(MyZfbkeyset record) {
         return UpdateDSL.updateWithMapper(this::update, myZfbkeyset)
                 .set(alipayRsaPublicKey).equalTo(record::getAlipayRsaPublicKey)
@@ -166,7 +166,7 @@ public interface MyZfbkeysetDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.886+08:00", comments="Source Table: My_ZFBKeySet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.816+08:00", comments="Source Table: My_ZFBKeySet")
     default int updateByPrimaryKeySelective(MyZfbkeyset record) {
         return UpdateDSL.updateWithMapper(this::update, myZfbkeyset)
                 .set(alipayRsaPublicKey).equalToWhenPresent(record::getAlipayRsaPublicKey)

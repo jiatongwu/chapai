@@ -30,19 +30,19 @@ import org.mybatis.dynamic.sql.util.SqlProviderAdapter;
 
 @Mapper
 public interface TbldbversionDynamicSqlMapper {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.961+08:00", comments="Source Table: tblDBVersion")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.886+08:00", comments="Source Table: tblDBVersion")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     long count(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.961+08:00", comments="Source Table: tblDBVersion")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.886+08:00", comments="Source Table: tblDBVersion")
     @DeleteProvider(type=SqlProviderAdapter.class, method="delete")
     int delete(DeleteStatementProvider deleteStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.961+08:00", comments="Source Table: tblDBVersion")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.886+08:00", comments="Source Table: tblDBVersion")
     @InsertProvider(type=SqlProviderAdapter.class, method="insert")
     int insert(InsertStatementProvider<Tbldbversion> insertStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.961+08:00", comments="Source Table: tblDBVersion")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.886+08:00", comments="Source Table: tblDBVersion")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @Results(id="TbldbversionResult", value = {
         @Result(column="DBVer", property="dbver", jdbcType=JdbcType.INTEGER),
@@ -50,22 +50,22 @@ public interface TbldbversionDynamicSqlMapper {
     })
     List<Tbldbversion> selectMany(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.961+08:00", comments="Source Table: tblDBVersion")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.887+08:00", comments="Source Table: tblDBVersion")
     @UpdateProvider(type=SqlProviderAdapter.class, method="update")
     int update(UpdateStatementProvider updateStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.961+08:00", comments="Source Table: tblDBVersion")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.887+08:00", comments="Source Table: tblDBVersion")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<Long>> countByExample() {
         return SelectDSL.selectWithMapper(this::count, SqlBuilder.count())
                 .from(tbldbversion);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.962+08:00", comments="Source Table: tblDBVersion")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.887+08:00", comments="Source Table: tblDBVersion")
     default DeleteDSL<MyBatis3DeleteModelAdapter<Integer>> deleteByExample() {
         return DeleteDSL.deleteFromWithMapper(this::delete, tbldbversion);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.962+08:00", comments="Source Table: tblDBVersion")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.887+08:00", comments="Source Table: tblDBVersion")
     default int insert(Tbldbversion record) {
         return insert(SqlBuilder.insert(record)
                 .into(tbldbversion)
@@ -75,7 +75,7 @@ public interface TbldbversionDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.962+08:00", comments="Source Table: tblDBVersion")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.887+08:00", comments="Source Table: tblDBVersion")
     default int insertSelective(Tbldbversion record) {
         return insert(SqlBuilder.insert(record)
                 .into(tbldbversion)
@@ -85,26 +85,26 @@ public interface TbldbversionDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.962+08:00", comments="Source Table: tblDBVersion")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.887+08:00", comments="Source Table: tblDBVersion")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Tbldbversion>>> selectByExample() {
         return SelectDSL.selectWithMapper(this::selectMany, dbver, updTime)
                 .from(tbldbversion);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.962+08:00", comments="Source Table: tblDBVersion")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.887+08:00", comments="Source Table: tblDBVersion")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Tbldbversion>>> selectDistinctByExample() {
         return SelectDSL.selectDistinctWithMapper(this::selectMany, dbver, updTime)
                 .from(tbldbversion);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.962+08:00", comments="Source Table: tblDBVersion")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.887+08:00", comments="Source Table: tblDBVersion")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExample(Tbldbversion record) {
         return UpdateDSL.updateWithMapper(this::update, tbldbversion)
                 .set(dbver).equalTo(record::getDbver)
                 .set(updTime).equalTo(record::getUpdTime);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.962+08:00", comments="Source Table: tblDBVersion")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.887+08:00", comments="Source Table: tblDBVersion")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExampleSelective(Tbldbversion record) {
         return UpdateDSL.updateWithMapper(this::update, tbldbversion)
                 .set(dbver).equalToWhenPresent(record::getDbver)

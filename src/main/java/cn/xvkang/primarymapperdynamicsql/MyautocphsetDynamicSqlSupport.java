@@ -6,121 +6,121 @@ import org.mybatis.dynamic.sql.SqlColumn;
 import org.mybatis.dynamic.sql.SqlTable;
 
 public final class MyautocphsetDynamicSqlSupport {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.865+08:00", comments="Source Table: MyAutoCPHSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.800+08:00", comments="Source Table: MyAutoCPHSet")
     public static final Myautocphset myautocphset = new Myautocphset();
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.865+08:00", comments="Source field: MyAutoCPHSet.AutoPlateEn")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.800+08:00", comments="Source field: MyAutoCPHSet.AutoPlateEn")
     public static final SqlColumn<Boolean> autoplateen = myautocphset.autoplateen;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.866+08:00", comments="Source field: MyAutoCPHSet.AutoPlateDBJD")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.800+08:00", comments="Source field: MyAutoCPHSet.AutoPlateDBJD")
     public static final SqlColumn<Integer> autoplatedbjd = myautocphset.autoplatedbjd;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.866+08:00", comments="Source field: MyAutoCPHSet.InAutoOpenModel")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.800+08:00", comments="Source field: MyAutoCPHSet.InAutoOpenModel")
     public static final SqlColumn<Integer> inautoopenmodel = myautocphset.inautoopenmodel;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.866+08:00", comments="Source field: MyAutoCPHSet.OutAutoOpenModel")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.800+08:00", comments="Source field: MyAutoCPHSet.OutAutoOpenModel")
     public static final SqlColumn<Integer> outautoopenmodel = myautocphset.outautoopenmodel;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.866+08:00", comments="Source field: MyAutoCPHSet.CphDelay")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.800+08:00", comments="Source field: MyAutoCPHSet.CphDelay")
     public static final SqlColumn<String> cphdelay = myautocphset.cphdelay;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.866+08:00", comments="Source field: MyAutoCPHSet.SameCphDelay")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.800+08:00", comments="Source field: MyAutoCPHSet.SameCphDelay")
     public static final SqlColumn<String> samecphdelay = myautocphset.samecphdelay;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.866+08:00", comments="Source field: MyAutoCPHSet.AutoSetMinutes")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.800+08:00", comments="Source field: MyAutoCPHSet.AutoSetMinutes")
     public static final SqlColumn<Integer> autosetminutes = myautocphset.autosetminutes;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.866+08:00", comments="Source field: MyAutoCPHSet.AutoMinutes")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.800+08:00", comments="Source field: MyAutoCPHSet.AutoMinutes")
     public static final SqlColumn<Boolean> autominutes = myautocphset.autominutes;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.866+08:00", comments="Source field: MyAutoCPHSet.AutoColorSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.800+08:00", comments="Source field: MyAutoCPHSet.AutoColorSet")
     public static final SqlColumn<Integer> autocolorset = myautocphset.autocolorset;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.866+08:00", comments="Source field: MyAutoCPHSet.AutoDeleteImg")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.800+08:00", comments="Source field: MyAutoCPHSet.AutoDeleteImg")
     public static final SqlColumn<Integer> autodeleteimg = myautocphset.autodeleteimg;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.866+08:00", comments="Source field: MyAutoCPHSet.AutoPattern")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.800+08:00", comments="Source field: MyAutoCPHSet.AutoPattern")
     public static final SqlColumn<Integer> autopattern = myautocphset.autopattern;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.866+08:00", comments="Source field: MyAutoCPHSet.AutoKZ")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.800+08:00", comments="Source field: MyAutoCPHSet.AutoKZ")
     public static final SqlColumn<Boolean> autokz = myautocphset.autokz;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.866+08:00", comments="Source field: MyAutoCPHSet.AutoYTime")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.800+08:00", comments="Source field: MyAutoCPHSet.AutoYTime")
     public static final SqlColumn<Integer> autoytime = myautocphset.autoytime;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.866+08:00", comments="Source field: MyAutoCPHSet.ReadCardTime")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.800+08:00", comments="Source field: MyAutoCPHSet.ReadCardTime")
     public static final SqlColumn<Integer> readcardtime = myautocphset.readcardtime;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.866+08:00", comments="Source field: MyAutoCPHSet.MaxPlateWidth")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.800+08:00", comments="Source field: MyAutoCPHSet.MaxPlateWidth")
     public static final SqlColumn<Integer> maxplatewidth = myautocphset.maxplatewidth;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.866+08:00", comments="Source field: MyAutoCPHSet.MinPlateWidth")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.800+08:00", comments="Source field: MyAutoCPHSet.MinPlateWidth")
     public static final SqlColumn<Integer> minplatewidth = myautocphset.minplatewidth;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.866+08:00", comments="Source field: MyAutoCPHSet.OnlyLocation")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.800+08:00", comments="Source field: MyAutoCPHSet.OnlyLocation")
     public static final SqlColumn<Boolean> onlylocation = myautocphset.onlylocation;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.866+08:00", comments="Source field: MyAutoCPHSet.Darmpolice")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.800+08:00", comments="Source field: MyAutoCPHSet.Darmpolice")
     public static final SqlColumn<Boolean> darmpolice = myautocphset.darmpolice;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.866+08:00", comments="Source field: MyAutoCPHSet.Embassy")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.800+08:00", comments="Source field: MyAutoCPHSet.Embassy")
     public static final SqlColumn<Boolean> embassy = myautocphset.embassy;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.866+08:00", comments="Source field: MyAutoCPHSet.OnlyDyellow")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.800+08:00", comments="Source field: MyAutoCPHSet.OnlyDyellow")
     public static final SqlColumn<Boolean> onlydyellow = myautocphset.onlydyellow;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.866+08:00", comments="Source field: MyAutoCPHSet.Tractor")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.800+08:00", comments="Source field: MyAutoCPHSet.Tractor")
     public static final SqlColumn<Boolean> tractor = myautocphset.tractor;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.866+08:00", comments="Source field: MyAutoCPHSet.Army2")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.800+08:00", comments="Source field: MyAutoCPHSet.Army2")
     public static final SqlColumn<Boolean> army2 = myautocphset.army2;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.866+08:00", comments="Source field: MyAutoCPHSet.ArmPol")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.800+08:00", comments="Source field: MyAutoCPHSet.ArmPol")
     public static final SqlColumn<Boolean> armpol = myautocphset.armpol;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.866+08:00", comments="Source field: MyAutoCPHSet.Indivi")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.800+08:00", comments="Source field: MyAutoCPHSet.Indivi")
     public static final SqlColumn<Boolean> indivi = myautocphset.indivi;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.866+08:00", comments="Source field: MyAutoCPHSet.Yellow2")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.800+08:00", comments="Source field: MyAutoCPHSet.Yellow2")
     public static final SqlColumn<Boolean> yellow2 = myautocphset.yellow2;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.866+08:00", comments="Source field: MyAutoCPHSet.PCName")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.800+08:00", comments="Source field: MyAutoCPHSet.PCName")
     public static final SqlColumn<String> pcname = myautocphset.pcname;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.866+08:00", comments="Source field: MyAutoCPHSet.LocalProvince")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.800+08:00", comments="Source field: MyAutoCPHSet.LocalProvince")
     public static final SqlColumn<String> localprovince = myautocphset.localprovince;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.866+08:00", comments="Source field: MyAutoCPHSet.YImageSave")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.800+08:00", comments="Source field: MyAutoCPHSet.YImageSave")
     public static final SqlColumn<String> yimagesave = myautocphset.yimagesave;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.866+08:00", comments="Source field: MyAutoCPHSet.Night")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.800+08:00", comments="Source field: MyAutoCPHSet.Night")
     public static final SqlColumn<Boolean> night = myautocphset.night;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.866+08:00", comments="Source field: MyAutoCPHSet.InMothOpenModel")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.800+08:00", comments="Source field: MyAutoCPHSet.InMothOpenModel")
     public static final SqlColumn<Integer> inmothopenmodel = myautocphset.inmothopenmodel;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.866+08:00", comments="Source field: MyAutoCPHSet.OutMothOpenModel")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.800+08:00", comments="Source field: MyAutoCPHSet.OutMothOpenModel")
     public static final SqlColumn<Integer> outmothopenmodel = myautocphset.outmothopenmodel;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.866+08:00", comments="Source field: MyAutoCPHSet.InOutConfirm")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.800+08:00", comments="Source field: MyAutoCPHSet.InOutConfirm")
     public static final SqlColumn<Boolean> inoutconfirm = myautocphset.inoutconfirm;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.866+08:00", comments="Source field: MyAutoCPHSet.OutConfirm")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.800+08:00", comments="Source field: MyAutoCPHSet.OutConfirm")
     public static final SqlColumn<Boolean> outconfirm = myautocphset.outconfirm;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.866+08:00", comments="Source field: MyAutoCPHSet.CarInGate")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.800+08:00", comments="Source field: MyAutoCPHSet.CarInGate")
     public static final SqlColumn<Boolean> caringate = myautocphset.caringate;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.866+08:00", comments="Source field: MyAutoCPHSet.CarOutGate")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.800+08:00", comments="Source field: MyAutoCPHSet.CarOutGate")
     public static final SqlColumn<Boolean> caroutgate = myautocphset.caroutgate;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.866+08:00", comments="Source field: MyAutoCPHSet.CarYellowTmp")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.800+08:00", comments="Source field: MyAutoCPHSet.CarYellowTmp")
     public static final SqlColumn<Boolean> caryellowtmp = myautocphset.caryellowtmp;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.866+08:00", comments="Source field: MyAutoCPHSet.CarYellowTmpType")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.800+08:00", comments="Source field: MyAutoCPHSet.CarYellowTmpType")
     public static final SqlColumn<String> caryellowtmptype = myautocphset.caryellowtmptype;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.865+08:00", comments="Source Table: MyAutoCPHSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.800+08:00", comments="Source Table: MyAutoCPHSet")
     public static final class Myautocphset extends SqlTable {
         public final SqlColumn<Boolean> autoplateen = column("AutoPlateEn", JDBCType.BIT);
 

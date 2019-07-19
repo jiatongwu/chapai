@@ -6,118 +6,118 @@ import org.mybatis.dynamic.sql.SqlColumn;
 import org.mybatis.dynamic.sql.SqlTable;
 
 public final class MTimegroupDynamicSqlSupport {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.857+08:00", comments="Source Table: M_TimeGroup")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.794+08:00", comments="Source Table: M_TimeGroup")
     public static final MTimegroup MTimegroup = new MTimegroup();
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.857+08:00", comments="Source field: M_TimeGroup.GroupID")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.794+08:00", comments="Source field: M_TimeGroup.GroupID")
     public static final SqlColumn<Integer> groupid = MTimegroup.groupid;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.857+08:00", comments="Source field: M_TimeGroup.GroupName")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.794+08:00", comments="Source field: M_TimeGroup.GroupName")
     public static final SqlColumn<String> groupname = MTimegroup.groupname;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.857+08:00", comments="Source field: M_TimeGroup.week")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.794+08:00", comments="Source field: M_TimeGroup.week")
     public static final SqlColumn<Integer> week = MTimegroup.week;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.857+08:00", comments="Source field: M_TimeGroup.FirstBeginTime")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.794+08:00", comments="Source field: M_TimeGroup.FirstBeginTime")
     public static final SqlColumn<String> firstbegintime = MTimegroup.firstbegintime;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.857+08:00", comments="Source field: M_TimeGroup.FirstEndTime")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.794+08:00", comments="Source field: M_TimeGroup.FirstEndTime")
     public static final SqlColumn<String> firstendtime = MTimegroup.firstendtime;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.857+08:00", comments="Source field: M_TimeGroup.OpenModel1")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.794+08:00", comments="Source field: M_TimeGroup.OpenModel1")
     public static final SqlColumn<String> openmodel1 = MTimegroup.openmodel1;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.857+08:00", comments="Source field: M_TimeGroup.Status1")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.794+08:00", comments="Source field: M_TimeGroup.Status1")
     public static final SqlColumn<String> status1 = MTimegroup.status1;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.857+08:00", comments="Source field: M_TimeGroup.SecondBeginTime")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.794+08:00", comments="Source field: M_TimeGroup.SecondBeginTime")
     public static final SqlColumn<String> secondbegintime = MTimegroup.secondbegintime;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.857+08:00", comments="Source field: M_TimeGroup.SecondEndTime")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.794+08:00", comments="Source field: M_TimeGroup.SecondEndTime")
     public static final SqlColumn<String> secondendtime = MTimegroup.secondendtime;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.857+08:00", comments="Source field: M_TimeGroup.OpenModel2")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.794+08:00", comments="Source field: M_TimeGroup.OpenModel2")
     public static final SqlColumn<String> openmodel2 = MTimegroup.openmodel2;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.857+08:00", comments="Source field: M_TimeGroup.Status2")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.794+08:00", comments="Source field: M_TimeGroup.Status2")
     public static final SqlColumn<String> status2 = MTimegroup.status2;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.857+08:00", comments="Source field: M_TimeGroup.ThirdBeginTime")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.794+08:00", comments="Source field: M_TimeGroup.ThirdBeginTime")
     public static final SqlColumn<String> thirdbegintime = MTimegroup.thirdbegintime;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.857+08:00", comments="Source field: M_TimeGroup.ThirdEndTime")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.794+08:00", comments="Source field: M_TimeGroup.ThirdEndTime")
     public static final SqlColumn<String> thirdendtime = MTimegroup.thirdendtime;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.858+08:00", comments="Source field: M_TimeGroup.OpenModel3")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.794+08:00", comments="Source field: M_TimeGroup.OpenModel3")
     public static final SqlColumn<String> openmodel3 = MTimegroup.openmodel3;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.858+08:00", comments="Source field: M_TimeGroup.Status3")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.794+08:00", comments="Source field: M_TimeGroup.Status3")
     public static final SqlColumn<String> status3 = MTimegroup.status3;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.858+08:00", comments="Source field: M_TimeGroup.FourBeginTime")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.794+08:00", comments="Source field: M_TimeGroup.FourBeginTime")
     public static final SqlColumn<String> fourbegintime = MTimegroup.fourbegintime;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.858+08:00", comments="Source field: M_TimeGroup.FourEndTime")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.794+08:00", comments="Source field: M_TimeGroup.FourEndTime")
     public static final SqlColumn<String> fourendtime = MTimegroup.fourendtime;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.858+08:00", comments="Source field: M_TimeGroup.OpenModel4")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.794+08:00", comments="Source field: M_TimeGroup.OpenModel4")
     public static final SqlColumn<String> openmodel4 = MTimegroup.openmodel4;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.858+08:00", comments="Source field: M_TimeGroup.Status4")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.794+08:00", comments="Source field: M_TimeGroup.Status4")
     public static final SqlColumn<String> status4 = MTimegroup.status4;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.858+08:00", comments="Source field: M_TimeGroup.FiveBeginTime")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.794+08:00", comments="Source field: M_TimeGroup.FiveBeginTime")
     public static final SqlColumn<String> fivebegintime = MTimegroup.fivebegintime;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.858+08:00", comments="Source field: M_TimeGroup.FiveEndTime")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.794+08:00", comments="Source field: M_TimeGroup.FiveEndTime")
     public static final SqlColumn<String> fiveendtime = MTimegroup.fiveendtime;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.858+08:00", comments="Source field: M_TimeGroup.OpenModel5")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.794+08:00", comments="Source field: M_TimeGroup.OpenModel5")
     public static final SqlColumn<String> openmodel5 = MTimegroup.openmodel5;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.858+08:00", comments="Source field: M_TimeGroup.Status5")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.794+08:00", comments="Source field: M_TimeGroup.Status5")
     public static final SqlColumn<String> status5 = MTimegroup.status5;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.858+08:00", comments="Source field: M_TimeGroup.SixBeginTime")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.794+08:00", comments="Source field: M_TimeGroup.SixBeginTime")
     public static final SqlColumn<String> sixbegintime = MTimegroup.sixbegintime;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.858+08:00", comments="Source field: M_TimeGroup.SixEndTime")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.794+08:00", comments="Source field: M_TimeGroup.SixEndTime")
     public static final SqlColumn<String> sixendtime = MTimegroup.sixendtime;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.858+08:00", comments="Source field: M_TimeGroup.OpenModel6")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.794+08:00", comments="Source field: M_TimeGroup.OpenModel6")
     public static final SqlColumn<String> openmodel6 = MTimegroup.openmodel6;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.858+08:00", comments="Source field: M_TimeGroup.Status6")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.794+08:00", comments="Source field: M_TimeGroup.Status6")
     public static final SqlColumn<String> status6 = MTimegroup.status6;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.858+08:00", comments="Source field: M_TimeGroup.SevenBeginTime")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.794+08:00", comments="Source field: M_TimeGroup.SevenBeginTime")
     public static final SqlColumn<String> sevenbegintime = MTimegroup.sevenbegintime;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.858+08:00", comments="Source field: M_TimeGroup.SevenEndTime")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.794+08:00", comments="Source field: M_TimeGroup.SevenEndTime")
     public static final SqlColumn<String> sevenendtime = MTimegroup.sevenendtime;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.858+08:00", comments="Source field: M_TimeGroup.OpenModel7")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.794+08:00", comments="Source field: M_TimeGroup.OpenModel7")
     public static final SqlColumn<String> openmodel7 = MTimegroup.openmodel7;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.858+08:00", comments="Source field: M_TimeGroup.Status7")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.794+08:00", comments="Source field: M_TimeGroup.Status7")
     public static final SqlColumn<String> status7 = MTimegroup.status7;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.858+08:00", comments="Source field: M_TimeGroup.EightBeginTime")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.794+08:00", comments="Source field: M_TimeGroup.EightBeginTime")
     public static final SqlColumn<String> eightbegintime = MTimegroup.eightbegintime;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.858+08:00", comments="Source field: M_TimeGroup.EightEndTime")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.795+08:00", comments="Source field: M_TimeGroup.EightEndTime")
     public static final SqlColumn<String> eightendtime = MTimegroup.eightendtime;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.858+08:00", comments="Source field: M_TimeGroup.OpenModel8")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.795+08:00", comments="Source field: M_TimeGroup.OpenModel8")
     public static final SqlColumn<String> openmodel8 = MTimegroup.openmodel8;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.858+08:00", comments="Source field: M_TimeGroup.Status8")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.795+08:00", comments="Source field: M_TimeGroup.Status8")
     public static final SqlColumn<String> status8 = MTimegroup.status8;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.858+08:00", comments="Source field: M_TimeGroup.TimCount")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.795+08:00", comments="Source field: M_TimeGroup.TimCount")
     public static final SqlColumn<String> timcount = MTimegroup.timcount;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.857+08:00", comments="Source Table: M_TimeGroup")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.794+08:00", comments="Source Table: M_TimeGroup")
     public static final class MTimegroup extends SqlTable {
         public final SqlColumn<Integer> groupid = column("GroupID", JDBCType.INTEGER);
 

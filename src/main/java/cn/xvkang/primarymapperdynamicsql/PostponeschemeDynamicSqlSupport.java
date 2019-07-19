@@ -6,31 +6,31 @@ import org.mybatis.dynamic.sql.SqlColumn;
 import org.mybatis.dynamic.sql.SqlTable;
 
 public final class PostponeschemeDynamicSqlSupport {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.891+08:00", comments="Source Table: PostPoneScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.818+08:00", comments="Source Table: PostPoneScheme")
     public static final Postponescheme postponescheme = new Postponescheme();
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.891+08:00", comments="Source field: PostPoneScheme.SchId")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.819+08:00", comments="Source field: PostPoneScheme.SchId")
     public static final SqlColumn<Integer> schid = postponescheme.schid;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.891+08:00", comments="Source field: PostPoneScheme.SchName")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.819+08:00", comments="Source field: PostPoneScheme.SchName")
     public static final SqlColumn<String> schname = postponescheme.schname;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.891+08:00", comments="Source field: PostPoneScheme.FieldName")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.819+08:00", comments="Source field: PostPoneScheme.FieldName")
     public static final SqlColumn<String> fieldname = postponescheme.fieldname;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.891+08:00", comments="Source field: PostPoneScheme.Operators")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.819+08:00", comments="Source field: PostPoneScheme.Operators")
     public static final SqlColumn<String> operators = postponescheme.operators;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.891+08:00", comments="Source field: PostPoneScheme.Selectvalues")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.819+08:00", comments="Source field: PostPoneScheme.Selectvalues")
     public static final SqlColumn<String> selectvalues = postponescheme.selectvalues;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.891+08:00", comments="Source field: PostPoneScheme.startime")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.819+08:00", comments="Source field: PostPoneScheme.startime")
     public static final SqlColumn<String> startime = postponescheme.startime;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.891+08:00", comments="Source field: PostPoneScheme.endtime")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.819+08:00", comments="Source field: PostPoneScheme.endtime")
     public static final SqlColumn<String> endtime = postponescheme.endtime;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.891+08:00", comments="Source Table: PostPoneScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.819+08:00", comments="Source Table: PostPoneScheme")
     public static final class Postponescheme extends SqlTable {
         public final SqlColumn<Integer> schid = column("SchId", JDBCType.INTEGER);
 

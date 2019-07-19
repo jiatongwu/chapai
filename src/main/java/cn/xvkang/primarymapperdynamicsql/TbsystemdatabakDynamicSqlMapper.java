@@ -33,25 +33,25 @@ import org.mybatis.dynamic.sql.util.SqlProviderAdapter;
 
 @Mapper
 public interface TbsystemdatabakDynamicSqlMapper {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.959+08:00", comments="Source Table: tbSystemDataBak")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.884+08:00", comments="Source Table: tbSystemDataBak")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     long count(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.959+08:00", comments="Source Table: tbSystemDataBak")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.884+08:00", comments="Source Table: tbSystemDataBak")
     @DeleteProvider(type=SqlProviderAdapter.class, method="delete")
     int delete(DeleteStatementProvider deleteStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.959+08:00", comments="Source Table: tbSystemDataBak")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.884+08:00", comments="Source Table: tbSystemDataBak")
     @InsertProvider(type=SqlProviderAdapter.class, method="insert")
     @SelectKey(statement="SELECT SCOPE_IDENTITY()", keyProperty="record.id", before=false, resultType=Integer.class)
     int insert(InsertStatementProvider<Tbsystemdatabak> insertStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.959+08:00", comments="Source Table: tbSystemDataBak")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.884+08:00", comments="Source Table: tbSystemDataBak")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @ResultMap("TbsystemdatabakResult")
     Tbsystemdatabak selectOne(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.959+08:00", comments="Source Table: tbSystemDataBak")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.884+08:00", comments="Source Table: tbSystemDataBak")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @Results(id="TbsystemdatabakResult", value = {
         @Result(column="id", property="id", jdbcType=JdbcType.INTEGER, id=true),
@@ -61,22 +61,22 @@ public interface TbsystemdatabakDynamicSqlMapper {
     })
     List<Tbsystemdatabak> selectMany(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.959+08:00", comments="Source Table: tbSystemDataBak")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.884+08:00", comments="Source Table: tbSystemDataBak")
     @UpdateProvider(type=SqlProviderAdapter.class, method="update")
     int update(UpdateStatementProvider updateStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.959+08:00", comments="Source Table: tbSystemDataBak")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.884+08:00", comments="Source Table: tbSystemDataBak")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<Long>> countByExample() {
         return SelectDSL.selectWithMapper(this::count, SqlBuilder.count())
                 .from(tbsystemdatabak);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.959+08:00", comments="Source Table: tbSystemDataBak")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.884+08:00", comments="Source Table: tbSystemDataBak")
     default DeleteDSL<MyBatis3DeleteModelAdapter<Integer>> deleteByExample() {
         return DeleteDSL.deleteFromWithMapper(this::delete, tbsystemdatabak);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.959+08:00", comments="Source Table: tbSystemDataBak")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.884+08:00", comments="Source Table: tbSystemDataBak")
     default int deleteByPrimaryKey(Integer id_) {
         return DeleteDSL.deleteFromWithMapper(this::delete, tbsystemdatabak)
                 .where(id, isEqualTo(id_))
@@ -84,7 +84,7 @@ public interface TbsystemdatabakDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.960+08:00", comments="Source Table: tbSystemDataBak")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.884+08:00", comments="Source Table: tbSystemDataBak")
     default int insert(Tbsystemdatabak record) {
         return insert(SqlBuilder.insert(record)
                 .into(tbsystemdatabak)
@@ -95,7 +95,7 @@ public interface TbsystemdatabakDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.960+08:00", comments="Source Table: tbSystemDataBak")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.884+08:00", comments="Source Table: tbSystemDataBak")
     default int insertSelective(Tbsystemdatabak record) {
         return insert(SqlBuilder.insert(record)
                 .into(tbsystemdatabak)
@@ -106,19 +106,19 @@ public interface TbsystemdatabakDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.960+08:00", comments="Source Table: tbSystemDataBak")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.884+08:00", comments="Source Table: tbSystemDataBak")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Tbsystemdatabak>>> selectByExample() {
         return SelectDSL.selectWithMapper(this::selectMany, id, isenld, loadroute, baktime)
                 .from(tbsystemdatabak);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.960+08:00", comments="Source Table: tbSystemDataBak")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.884+08:00", comments="Source Table: tbSystemDataBak")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Tbsystemdatabak>>> selectDistinctByExample() {
         return SelectDSL.selectDistinctWithMapper(this::selectMany, id, isenld, loadroute, baktime)
                 .from(tbsystemdatabak);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.960+08:00", comments="Source Table: tbSystemDataBak")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.884+08:00", comments="Source Table: tbSystemDataBak")
     default Tbsystemdatabak selectByPrimaryKey(Integer id_) {
         return SelectDSL.selectWithMapper(this::selectOne, id, isenld, loadroute, baktime)
                 .from(tbsystemdatabak)
@@ -127,7 +127,7 @@ public interface TbsystemdatabakDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.960+08:00", comments="Source Table: tbSystemDataBak")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.885+08:00", comments="Source Table: tbSystemDataBak")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExample(Tbsystemdatabak record) {
         return UpdateDSL.updateWithMapper(this::update, tbsystemdatabak)
                 .set(isenld).equalTo(record::getIsenld)
@@ -135,7 +135,7 @@ public interface TbsystemdatabakDynamicSqlMapper {
                 .set(baktime).equalTo(record::getBaktime);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.960+08:00", comments="Source Table: tbSystemDataBak")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.885+08:00", comments="Source Table: tbSystemDataBak")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExampleSelective(Tbsystemdatabak record) {
         return UpdateDSL.updateWithMapper(this::update, tbsystemdatabak)
                 .set(isenld).equalToWhenPresent(record::getIsenld)
@@ -143,7 +143,7 @@ public interface TbsystemdatabakDynamicSqlMapper {
                 .set(baktime).equalToWhenPresent(record::getBaktime);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.960+08:00", comments="Source Table: tbSystemDataBak")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.885+08:00", comments="Source Table: tbSystemDataBak")
     default int updateByPrimaryKey(Tbsystemdatabak record) {
         return UpdateDSL.updateWithMapper(this::update, tbsystemdatabak)
                 .set(isenld).equalTo(record::getIsenld)
@@ -154,7 +154,7 @@ public interface TbsystemdatabakDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.960+08:00", comments="Source Table: tbSystemDataBak")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.885+08:00", comments="Source Table: tbSystemDataBak")
     default int updateByPrimaryKeySelective(Tbsystemdatabak record) {
         return UpdateDSL.updateWithMapper(this::update, tbsystemdatabak)
                 .set(isenld).equalToWhenPresent(record::getIsenld)

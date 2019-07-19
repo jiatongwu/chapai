@@ -15,6 +15,7 @@ public class ApplicationProperties {
 	private String name;
 	private SmsCodeValidateProperties sms = new SmsCodeValidateProperties();
 	private ImageCodeValidateProperties imageCode = new ImageCodeValidateProperties();
+	private XunluoRenyuanProperties xunluoRenyuan = new XunluoRenyuanProperties();
 	private String imageCodeRequireValidateUrls;
 	private String smsCodeRequireValidateUrls;
 	private String birthdayStart;
@@ -136,6 +137,14 @@ public class ApplicationProperties {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	public XunluoRenyuanProperties getXunluoRenyuan() {
+		return xunluoRenyuan;
+	}
+
+	public void setXunluoRenyuan(XunluoRenyuanProperties xunluoRenyuan) {
+		this.xunluoRenyuan = xunluoRenyuan;
 	}
 
 }

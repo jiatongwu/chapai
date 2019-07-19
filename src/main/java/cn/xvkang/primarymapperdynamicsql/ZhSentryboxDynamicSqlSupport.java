@@ -6,25 +6,25 @@ import org.mybatis.dynamic.sql.SqlColumn;
 import org.mybatis.dynamic.sql.SqlTable;
 
 public final class ZhSentryboxDynamicSqlSupport {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.986+08:00", comments="Source Table: zh_SentryBox")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.909+08:00", comments="Source Table: zh_SentryBox")
     public static final ZhSentrybox zhSentrybox = new ZhSentrybox();
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.986+08:00", comments="Source field: zh_SentryBox.id")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.910+08:00", comments="Source field: zh_SentryBox.id")
     public static final SqlColumn<Integer> id = zhSentrybox.id;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.986+08:00", comments="Source field: zh_SentryBox.sentrybox_No")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.910+08:00", comments="Source field: zh_SentryBox.sentrybox_No")
     public static final SqlColumn<String> sentryboxNo = zhSentrybox.sentryboxNo;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.986+08:00", comments="Source field: zh_SentryBox.vehichlejson")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.910+08:00", comments="Source field: zh_SentryBox.vehichlejson")
     public static final SqlColumn<String> vehichlejson = zhSentrybox.vehichlejson;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.986+08:00", comments="Source field: zh_SentryBox.eidtTime")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.910+08:00", comments="Source field: zh_SentryBox.eidtTime")
     public static final SqlColumn<String> eidttime = zhSentrybox.eidttime;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.986+08:00", comments="Source field: zh_SentryBox.synflag")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.910+08:00", comments="Source field: zh_SentryBox.synflag")
     public static final SqlColumn<Integer> synflag = zhSentrybox.synflag;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.986+08:00", comments="Source Table: zh_SentryBox")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.910+08:00", comments="Source Table: zh_SentryBox")
     public static final class ZhSentrybox extends SqlTable {
         public final SqlColumn<Integer> id = column("id", JDBCType.INTEGER);
 

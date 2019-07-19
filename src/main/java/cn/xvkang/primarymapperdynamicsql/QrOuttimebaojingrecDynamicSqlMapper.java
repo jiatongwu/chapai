@@ -33,25 +33,25 @@ import org.mybatis.dynamic.sql.util.SqlProviderAdapter;
 
 @Mapper
 public interface QrOuttimebaojingrecDynamicSqlMapper {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.900+08:00", comments="Source Table: Qr_OutTimeBaoJingRec")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.825+08:00", comments="Source Table: Qr_OutTimeBaoJingRec")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     long count(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.900+08:00", comments="Source Table: Qr_OutTimeBaoJingRec")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.825+08:00", comments="Source Table: Qr_OutTimeBaoJingRec")
     @DeleteProvider(type=SqlProviderAdapter.class, method="delete")
     int delete(DeleteStatementProvider deleteStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.900+08:00", comments="Source Table: Qr_OutTimeBaoJingRec")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.825+08:00", comments="Source Table: Qr_OutTimeBaoJingRec")
     @InsertProvider(type=SqlProviderAdapter.class, method="insert")
     @SelectKey(statement="SELECT SCOPE_IDENTITY()", keyProperty="record.id", before=false, resultType=Integer.class)
     int insert(InsertStatementProvider<QrOuttimebaojingrec> insertStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.900+08:00", comments="Source Table: Qr_OutTimeBaoJingRec")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.825+08:00", comments="Source Table: Qr_OutTimeBaoJingRec")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @ResultMap("QrOuttimebaojingrecResult")
     QrOuttimebaojingrec selectOne(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.900+08:00", comments="Source Table: Qr_OutTimeBaoJingRec")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.826+08:00", comments="Source Table: Qr_OutTimeBaoJingRec")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @Results(id="QrOuttimebaojingrecResult", value = {
         @Result(column="id", property="id", jdbcType=JdbcType.INTEGER, id=true),
@@ -60,22 +60,22 @@ public interface QrOuttimebaojingrecDynamicSqlMapper {
     })
     List<QrOuttimebaojingrec> selectMany(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.900+08:00", comments="Source Table: Qr_OutTimeBaoJingRec")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.826+08:00", comments="Source Table: Qr_OutTimeBaoJingRec")
     @UpdateProvider(type=SqlProviderAdapter.class, method="update")
     int update(UpdateStatementProvider updateStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.900+08:00", comments="Source Table: Qr_OutTimeBaoJingRec")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.826+08:00", comments="Source Table: Qr_OutTimeBaoJingRec")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<Long>> countByExample() {
         return SelectDSL.selectWithMapper(this::count, SqlBuilder.count())
                 .from(qrOuttimebaojingrec);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.901+08:00", comments="Source Table: Qr_OutTimeBaoJingRec")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.826+08:00", comments="Source Table: Qr_OutTimeBaoJingRec")
     default DeleteDSL<MyBatis3DeleteModelAdapter<Integer>> deleteByExample() {
         return DeleteDSL.deleteFromWithMapper(this::delete, qrOuttimebaojingrec);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.901+08:00", comments="Source Table: Qr_OutTimeBaoJingRec")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.826+08:00", comments="Source Table: Qr_OutTimeBaoJingRec")
     default int deleteByPrimaryKey(Integer id_) {
         return DeleteDSL.deleteFromWithMapper(this::delete, qrOuttimebaojingrec)
                 .where(id, isEqualTo(id_))
@@ -83,7 +83,7 @@ public interface QrOuttimebaojingrecDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.901+08:00", comments="Source Table: Qr_OutTimeBaoJingRec")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.826+08:00", comments="Source Table: Qr_OutTimeBaoJingRec")
     default int insert(QrOuttimebaojingrec record) {
         return insert(SqlBuilder.insert(record)
                 .into(qrOuttimebaojingrec)
@@ -93,7 +93,7 @@ public interface QrOuttimebaojingrecDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.901+08:00", comments="Source Table: Qr_OutTimeBaoJingRec")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.826+08:00", comments="Source Table: Qr_OutTimeBaoJingRec")
     default int insertSelective(QrOuttimebaojingrec record) {
         return insert(SqlBuilder.insert(record)
                 .into(qrOuttimebaojingrec)
@@ -103,19 +103,19 @@ public interface QrOuttimebaojingrecDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.901+08:00", comments="Source Table: Qr_OutTimeBaoJingRec")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.826+08:00", comments="Source Table: Qr_OutTimeBaoJingRec")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<QrOuttimebaojingrec>>> selectByExample() {
         return SelectDSL.selectWithMapper(this::selectMany, id, devcnum, baojin)
                 .from(qrOuttimebaojingrec);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.901+08:00", comments="Source Table: Qr_OutTimeBaoJingRec")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.826+08:00", comments="Source Table: Qr_OutTimeBaoJingRec")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<QrOuttimebaojingrec>>> selectDistinctByExample() {
         return SelectDSL.selectDistinctWithMapper(this::selectMany, id, devcnum, baojin)
                 .from(qrOuttimebaojingrec);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.901+08:00", comments="Source Table: Qr_OutTimeBaoJingRec")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.826+08:00", comments="Source Table: Qr_OutTimeBaoJingRec")
     default QrOuttimebaojingrec selectByPrimaryKey(Integer id_) {
         return SelectDSL.selectWithMapper(this::selectOne, id, devcnum, baojin)
                 .from(qrOuttimebaojingrec)
@@ -124,21 +124,21 @@ public interface QrOuttimebaojingrecDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.901+08:00", comments="Source Table: Qr_OutTimeBaoJingRec")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.826+08:00", comments="Source Table: Qr_OutTimeBaoJingRec")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExample(QrOuttimebaojingrec record) {
         return UpdateDSL.updateWithMapper(this::update, qrOuttimebaojingrec)
                 .set(devcnum).equalTo(record::getDevcnum)
                 .set(baojin).equalTo(record::getBaojin);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.901+08:00", comments="Source Table: Qr_OutTimeBaoJingRec")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.826+08:00", comments="Source Table: Qr_OutTimeBaoJingRec")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExampleSelective(QrOuttimebaojingrec record) {
         return UpdateDSL.updateWithMapper(this::update, qrOuttimebaojingrec)
                 .set(devcnum).equalToWhenPresent(record::getDevcnum)
                 .set(baojin).equalToWhenPresent(record::getBaojin);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.901+08:00", comments="Source Table: Qr_OutTimeBaoJingRec")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.826+08:00", comments="Source Table: Qr_OutTimeBaoJingRec")
     default int updateByPrimaryKey(QrOuttimebaojingrec record) {
         return UpdateDSL.updateWithMapper(this::update, qrOuttimebaojingrec)
                 .set(devcnum).equalTo(record::getDevcnum)
@@ -148,7 +148,7 @@ public interface QrOuttimebaojingrecDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.901+08:00", comments="Source Table: Qr_OutTimeBaoJingRec")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.826+08:00", comments="Source Table: Qr_OutTimeBaoJingRec")
     default int updateByPrimaryKeySelective(QrOuttimebaojingrec record) {
         return UpdateDSL.updateWithMapper(this::update, qrOuttimebaojingrec)
                 .set(devcnum).equalToWhenPresent(record::getDevcnum)

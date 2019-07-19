@@ -30,19 +30,19 @@ import org.mybatis.dynamic.sql.util.SqlProviderAdapter;
 
 @Mapper
 public interface MyautocphsetDynamicSqlMapper {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.866+08:00", comments="Source Table: MyAutoCPHSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.800+08:00", comments="Source Table: MyAutoCPHSet")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     long count(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.866+08:00", comments="Source Table: MyAutoCPHSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.800+08:00", comments="Source Table: MyAutoCPHSet")
     @DeleteProvider(type=SqlProviderAdapter.class, method="delete")
     int delete(DeleteStatementProvider deleteStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.866+08:00", comments="Source Table: MyAutoCPHSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.800+08:00", comments="Source Table: MyAutoCPHSet")
     @InsertProvider(type=SqlProviderAdapter.class, method="insert")
     int insert(InsertStatementProvider<Myautocphset> insertStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.866+08:00", comments="Source Table: MyAutoCPHSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.801+08:00", comments="Source Table: MyAutoCPHSet")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @Results(id="MyautocphsetResult", value = {
         @Result(column="AutoPlateEn", property="autoplateen", jdbcType=JdbcType.BIT),
@@ -85,22 +85,22 @@ public interface MyautocphsetDynamicSqlMapper {
     })
     List<Myautocphset> selectMany(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.867+08:00", comments="Source Table: MyAutoCPHSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.801+08:00", comments="Source Table: MyAutoCPHSet")
     @UpdateProvider(type=SqlProviderAdapter.class, method="update")
     int update(UpdateStatementProvider updateStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.867+08:00", comments="Source Table: MyAutoCPHSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.801+08:00", comments="Source Table: MyAutoCPHSet")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<Long>> countByExample() {
         return SelectDSL.selectWithMapper(this::count, SqlBuilder.count())
                 .from(myautocphset);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.867+08:00", comments="Source Table: MyAutoCPHSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.801+08:00", comments="Source Table: MyAutoCPHSet")
     default DeleteDSL<MyBatis3DeleteModelAdapter<Integer>> deleteByExample() {
         return DeleteDSL.deleteFromWithMapper(this::delete, myautocphset);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.867+08:00", comments="Source Table: MyAutoCPHSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.801+08:00", comments="Source Table: MyAutoCPHSet")
     default int insert(Myautocphset record) {
         return insert(SqlBuilder.insert(record)
                 .into(myautocphset)
@@ -145,7 +145,7 @@ public interface MyautocphsetDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.867+08:00", comments="Source Table: MyAutoCPHSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.801+08:00", comments="Source Table: MyAutoCPHSet")
     default int insertSelective(Myautocphset record) {
         return insert(SqlBuilder.insert(record)
                 .into(myautocphset)
@@ -190,19 +190,19 @@ public interface MyautocphsetDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.867+08:00", comments="Source Table: MyAutoCPHSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.801+08:00", comments="Source Table: MyAutoCPHSet")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Myautocphset>>> selectByExample() {
         return SelectDSL.selectWithMapper(this::selectMany, autoplateen, autoplatedbjd, inautoopenmodel, outautoopenmodel, cphdelay, samecphdelay, autosetminutes, autominutes, autocolorset, autodeleteimg, autopattern, autokz, autoytime, readcardtime, maxplatewidth, minplatewidth, onlylocation, darmpolice, embassy, onlydyellow, tractor, army2, armpol, indivi, yellow2, pcname, localprovince, yimagesave, night, inmothopenmodel, outmothopenmodel, inoutconfirm, outconfirm, caringate, caroutgate, caryellowtmp, caryellowtmptype)
                 .from(myautocphset);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.867+08:00", comments="Source Table: MyAutoCPHSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.801+08:00", comments="Source Table: MyAutoCPHSet")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Myautocphset>>> selectDistinctByExample() {
         return SelectDSL.selectDistinctWithMapper(this::selectMany, autoplateen, autoplatedbjd, inautoopenmodel, outautoopenmodel, cphdelay, samecphdelay, autosetminutes, autominutes, autocolorset, autodeleteimg, autopattern, autokz, autoytime, readcardtime, maxplatewidth, minplatewidth, onlylocation, darmpolice, embassy, onlydyellow, tractor, army2, armpol, indivi, yellow2, pcname, localprovince, yimagesave, night, inmothopenmodel, outmothopenmodel, inoutconfirm, outconfirm, caringate, caroutgate, caryellowtmp, caryellowtmptype)
                 .from(myautocphset);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.867+08:00", comments="Source Table: MyAutoCPHSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.801+08:00", comments="Source Table: MyAutoCPHSet")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExample(Myautocphset record) {
         return UpdateDSL.updateWithMapper(this::update, myautocphset)
                 .set(autoplateen).equalTo(record::getAutoplateen)
@@ -244,7 +244,7 @@ public interface MyautocphsetDynamicSqlMapper {
                 .set(caryellowtmptype).equalTo(record::getCaryellowtmptype);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.867+08:00", comments="Source Table: MyAutoCPHSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.801+08:00", comments="Source Table: MyAutoCPHSet")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExampleSelective(Myautocphset record) {
         return UpdateDSL.updateWithMapper(this::update, myautocphset)
                 .set(autoplateen).equalToWhenPresent(record::getAutoplateen)

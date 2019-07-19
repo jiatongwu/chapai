@@ -33,25 +33,25 @@ import org.mybatis.dynamic.sql.util.SqlProviderAdapter;
 
 @Mapper
 public interface MyautotempdownloadDynamicSqlMapper {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.622+08:00", comments="Source Table: MYAutoTempDownLoad")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.638+08:00", comments="Source Table: MYAutoTempDownLoad")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     long count(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.622+08:00", comments="Source Table: MYAutoTempDownLoad")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.638+08:00", comments="Source Table: MYAutoTempDownLoad")
     @DeleteProvider(type=SqlProviderAdapter.class, method="delete")
     int delete(DeleteStatementProvider deleteStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.622+08:00", comments="Source Table: MYAutoTempDownLoad")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.638+08:00", comments="Source Table: MYAutoTempDownLoad")
     @InsertProvider(type=SqlProviderAdapter.class, method="insert")
     @SelectKey(statement="SELECT SCOPE_IDENTITY()", keyProperty="record.id", before=false, resultType=Integer.class)
     int insert(InsertStatementProvider<Myautotempdownload> insertStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.622+08:00", comments="Source Table: MYAutoTempDownLoad")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.638+08:00", comments="Source Table: MYAutoTempDownLoad")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @ResultMap("MyautotempdownloadResult")
     Myautotempdownload selectOne(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.622+08:00", comments="Source Table: MYAutoTempDownLoad")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.638+08:00", comments="Source Table: MYAutoTempDownLoad")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @Results(id="MyautotempdownloadResult", value = {
         @Result(column="ID", property="id", jdbcType=JdbcType.INTEGER, id=true),
@@ -63,22 +63,22 @@ public interface MyautotempdownloadDynamicSqlMapper {
     })
     List<Myautotempdownload> selectMany(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.623+08:00", comments="Source Table: MYAutoTempDownLoad")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.638+08:00", comments="Source Table: MYAutoTempDownLoad")
     @UpdateProvider(type=SqlProviderAdapter.class, method="update")
     int update(UpdateStatementProvider updateStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.623+08:00", comments="Source Table: MYAutoTempDownLoad")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.638+08:00", comments="Source Table: MYAutoTempDownLoad")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<Long>> countByExample() {
         return SelectDSL.selectWithMapper(this::count, SqlBuilder.count())
                 .from(myautotempdownload);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.623+08:00", comments="Source Table: MYAutoTempDownLoad")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.638+08:00", comments="Source Table: MYAutoTempDownLoad")
     default DeleteDSL<MyBatis3DeleteModelAdapter<Integer>> deleteByExample() {
         return DeleteDSL.deleteFromWithMapper(this::delete, myautotempdownload);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.623+08:00", comments="Source Table: MYAutoTempDownLoad")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.638+08:00", comments="Source Table: MYAutoTempDownLoad")
     default int deleteByPrimaryKey(Integer id_) {
         return DeleteDSL.deleteFromWithMapper(this::delete, myautotempdownload)
                 .where(id, isEqualTo(id_))
@@ -86,7 +86,7 @@ public interface MyautotempdownloadDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.623+08:00", comments="Source Table: MYAutoTempDownLoad")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.638+08:00", comments="Source Table: MYAutoTempDownLoad")
     default int insert(Myautotempdownload record) {
         return insert(SqlBuilder.insert(record)
                 .into(myautotempdownload)
@@ -99,7 +99,7 @@ public interface MyautotempdownloadDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.623+08:00", comments="Source Table: MYAutoTempDownLoad")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.638+08:00", comments="Source Table: MYAutoTempDownLoad")
     default int insertSelective(Myautotempdownload record) {
         return insert(SqlBuilder.insert(record)
                 .into(myautotempdownload)
@@ -112,19 +112,19 @@ public interface MyautotempdownloadDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.623+08:00", comments="Source Table: MYAutoTempDownLoad")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.638+08:00", comments="Source Table: MYAutoTempDownLoad")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Myautotempdownload>>> selectByExample() {
         return SelectDSL.selectWithMapper(this::selectMany, id, cph, intime, downloadsignal, inout, ibigsmall)
                 .from(myautotempdownload);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.623+08:00", comments="Source Table: MYAutoTempDownLoad")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.638+08:00", comments="Source Table: MYAutoTempDownLoad")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Myautotempdownload>>> selectDistinctByExample() {
         return SelectDSL.selectDistinctWithMapper(this::selectMany, id, cph, intime, downloadsignal, inout, ibigsmall)
                 .from(myautotempdownload);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.623+08:00", comments="Source Table: MYAutoTempDownLoad")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.639+08:00", comments="Source Table: MYAutoTempDownLoad")
     default Myautotempdownload selectByPrimaryKey(Integer id_) {
         return SelectDSL.selectWithMapper(this::selectOne, id, cph, intime, downloadsignal, inout, ibigsmall)
                 .from(myautotempdownload)
@@ -133,7 +133,7 @@ public interface MyautotempdownloadDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.623+08:00", comments="Source Table: MYAutoTempDownLoad")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.639+08:00", comments="Source Table: MYAutoTempDownLoad")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExample(Myautotempdownload record) {
         return UpdateDSL.updateWithMapper(this::update, myautotempdownload)
                 .set(cph).equalTo(record::getCph)
@@ -143,7 +143,7 @@ public interface MyautotempdownloadDynamicSqlMapper {
                 .set(ibigsmall).equalTo(record::getIbigsmall);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.623+08:00", comments="Source Table: MYAutoTempDownLoad")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.639+08:00", comments="Source Table: MYAutoTempDownLoad")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExampleSelective(Myautotempdownload record) {
         return UpdateDSL.updateWithMapper(this::update, myautotempdownload)
                 .set(cph).equalToWhenPresent(record::getCph)
@@ -153,7 +153,7 @@ public interface MyautotempdownloadDynamicSqlMapper {
                 .set(ibigsmall).equalToWhenPresent(record::getIbigsmall);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.623+08:00", comments="Source Table: MYAutoTempDownLoad")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.639+08:00", comments="Source Table: MYAutoTempDownLoad")
     default int updateByPrimaryKey(Myautotempdownload record) {
         return UpdateDSL.updateWithMapper(this::update, myautotempdownload)
                 .set(cph).equalTo(record::getCph)
@@ -166,7 +166,7 @@ public interface MyautotempdownloadDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.623+08:00", comments="Source Table: MYAutoTempDownLoad")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.639+08:00", comments="Source Table: MYAutoTempDownLoad")
     default int updateByPrimaryKeySelective(Myautotempdownload record) {
         return UpdateDSL.updateWithMapper(this::update, myautotempdownload)
                 .set(cph).equalToWhenPresent(record::getCph)

@@ -33,25 +33,25 @@ import org.mybatis.dynamic.sql.util.SqlProviderAdapter;
 
 @Mapper
 public interface MTimeoutsetDynamicSqlMapper {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.860+08:00", comments="Source Table: M_TimeOutSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.797+08:00", comments="Source Table: M_TimeOutSet")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     long count(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.860+08:00", comments="Source Table: M_TimeOutSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.797+08:00", comments="Source Table: M_TimeOutSet")
     @DeleteProvider(type=SqlProviderAdapter.class, method="delete")
     int delete(DeleteStatementProvider deleteStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.860+08:00", comments="Source Table: M_TimeOutSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.797+08:00", comments="Source Table: M_TimeOutSet")
     @InsertProvider(type=SqlProviderAdapter.class, method="insert")
     @SelectKey(statement="SELECT SCOPE_IDENTITY()", keyProperty="record.id", before=false, resultType=Integer.class)
     int insert(InsertStatementProvider<MTimeoutset> insertStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.860+08:00", comments="Source Table: M_TimeOutSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.797+08:00", comments="Source Table: M_TimeOutSet")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @ResultMap("MTimeoutsetResult")
     MTimeoutset selectOne(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.860+08:00", comments="Source Table: M_TimeOutSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.797+08:00", comments="Source Table: M_TimeOutSet")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @Results(id="MTimeoutsetResult", value = {
         @Result(column="id", property="id", jdbcType=JdbcType.INTEGER, id=true),
@@ -61,22 +61,22 @@ public interface MTimeoutsetDynamicSqlMapper {
     })
     List<MTimeoutset> selectMany(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.860+08:00", comments="Source Table: M_TimeOutSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.797+08:00", comments="Source Table: M_TimeOutSet")
     @UpdateProvider(type=SqlProviderAdapter.class, method="update")
     int update(UpdateStatementProvider updateStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.860+08:00", comments="Source Table: M_TimeOutSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.797+08:00", comments="Source Table: M_TimeOutSet")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<Long>> countByExample() {
         return SelectDSL.selectWithMapper(this::count, SqlBuilder.count())
                 .from(MTimeoutset);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.860+08:00", comments="Source Table: M_TimeOutSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.797+08:00", comments="Source Table: M_TimeOutSet")
     default DeleteDSL<MyBatis3DeleteModelAdapter<Integer>> deleteByExample() {
         return DeleteDSL.deleteFromWithMapper(this::delete, MTimeoutset);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.860+08:00", comments="Source Table: M_TimeOutSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.797+08:00", comments="Source Table: M_TimeOutSet")
     default int deleteByPrimaryKey(Integer id_) {
         return DeleteDSL.deleteFromWithMapper(this::delete, MTimeoutset)
                 .where(id, isEqualTo(id_))
@@ -84,7 +84,7 @@ public interface MTimeoutsetDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.860+08:00", comments="Source Table: M_TimeOutSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.797+08:00", comments="Source Table: M_TimeOutSet")
     default int insert(MTimeoutset record) {
         return insert(SqlBuilder.insert(record)
                 .into(MTimeoutset)
@@ -95,7 +95,7 @@ public interface MTimeoutsetDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.860+08:00", comments="Source Table: M_TimeOutSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.797+08:00", comments="Source Table: M_TimeOutSet")
     default int insertSelective(MTimeoutset record) {
         return insert(SqlBuilder.insert(record)
                 .into(MTimeoutset)
@@ -106,19 +106,19 @@ public interface MTimeoutsetDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.860+08:00", comments="Source Table: M_TimeOutSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.797+08:00", comments="Source Table: M_TimeOutSet")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<MTimeoutset>>> selectByExample() {
         return SelectDSL.selectWithMapper(this::selectMany, id, devcnum, doornum, times)
                 .from(MTimeoutset);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.860+08:00", comments="Source Table: M_TimeOutSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.797+08:00", comments="Source Table: M_TimeOutSet")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<MTimeoutset>>> selectDistinctByExample() {
         return SelectDSL.selectDistinctWithMapper(this::selectMany, id, devcnum, doornum, times)
                 .from(MTimeoutset);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.860+08:00", comments="Source Table: M_TimeOutSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.797+08:00", comments="Source Table: M_TimeOutSet")
     default MTimeoutset selectByPrimaryKey(Integer id_) {
         return SelectDSL.selectWithMapper(this::selectOne, id, devcnum, doornum, times)
                 .from(MTimeoutset)
@@ -127,7 +127,7 @@ public interface MTimeoutsetDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.862+08:00", comments="Source Table: M_TimeOutSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.797+08:00", comments="Source Table: M_TimeOutSet")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExample(MTimeoutset record) {
         return UpdateDSL.updateWithMapper(this::update, MTimeoutset)
                 .set(devcnum).equalTo(record::getDevcnum)
@@ -135,7 +135,7 @@ public interface MTimeoutsetDynamicSqlMapper {
                 .set(times).equalTo(record::getTimes);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.862+08:00", comments="Source Table: M_TimeOutSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.797+08:00", comments="Source Table: M_TimeOutSet")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExampleSelective(MTimeoutset record) {
         return UpdateDSL.updateWithMapper(this::update, MTimeoutset)
                 .set(devcnum).equalToWhenPresent(record::getDevcnum)
@@ -143,7 +143,7 @@ public interface MTimeoutsetDynamicSqlMapper {
                 .set(times).equalToWhenPresent(record::getTimes);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.862+08:00", comments="Source Table: M_TimeOutSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.797+08:00", comments="Source Table: M_TimeOutSet")
     default int updateByPrimaryKey(MTimeoutset record) {
         return UpdateDSL.updateWithMapper(this::update, MTimeoutset)
                 .set(devcnum).equalTo(record::getDevcnum)
@@ -154,7 +154,7 @@ public interface MTimeoutsetDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.862+08:00", comments="Source Table: M_TimeOutSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.797+08:00", comments="Source Table: M_TimeOutSet")
     default int updateByPrimaryKeySelective(MTimeoutset record) {
         return UpdateDSL.updateWithMapper(this::update, MTimeoutset)
                 .set(devcnum).equalToWhenPresent(record::getDevcnum)

@@ -33,25 +33,25 @@ import org.mybatis.dynamic.sql.util.SqlProviderAdapter;
 
 @Mapper
 public interface MyjibenziliaoDynamicSqlMapper {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.764+08:00", comments="Source Table: MYJIBENZILIAO")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.730+08:00", comments="Source Table: MYJIBENZILIAO")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     long count(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.764+08:00", comments="Source Table: MYJIBENZILIAO")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.730+08:00", comments="Source Table: MYJIBENZILIAO")
     @DeleteProvider(type=SqlProviderAdapter.class, method="delete")
     int delete(DeleteStatementProvider deleteStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.764+08:00", comments="Source Table: MYJIBENZILIAO")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.731+08:00", comments="Source Table: MYJIBENZILIAO")
     @InsertProvider(type=SqlProviderAdapter.class, method="insert")
     @Options(useGeneratedKeys=true,keyProperty="record.id")
     int insert(InsertStatementProvider<Myjibenziliao> insertStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.764+08:00", comments="Source Table: MYJIBENZILIAO")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.731+08:00", comments="Source Table: MYJIBENZILIAO")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @ResultMap("MyjibenziliaoResult")
     Myjibenziliao selectOne(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.764+08:00", comments="Source Table: MYJIBENZILIAO")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.731+08:00", comments="Source Table: MYJIBENZILIAO")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @Results(id="MyjibenziliaoResult", value = {
         @Result(column="ID", property="id", jdbcType=JdbcType.INTEGER, id=true),
@@ -86,22 +86,22 @@ public interface MyjibenziliaoDynamicSqlMapper {
     })
     List<Myjibenziliao> selectMany(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.764+08:00", comments="Source Table: MYJIBENZILIAO")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.731+08:00", comments="Source Table: MYJIBENZILIAO")
     @UpdateProvider(type=SqlProviderAdapter.class, method="update")
     int update(UpdateStatementProvider updateStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.772+08:00", comments="Source Table: MYJIBENZILIAO")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.731+08:00", comments="Source Table: MYJIBENZILIAO")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<Long>> countByExample() {
         return SelectDSL.selectWithMapper(this::count, SqlBuilder.count())
                 .from(myjibenziliao);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.772+08:00", comments="Source Table: MYJIBENZILIAO")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.731+08:00", comments="Source Table: MYJIBENZILIAO")
     default DeleteDSL<MyBatis3DeleteModelAdapter<Integer>> deleteByExample() {
         return DeleteDSL.deleteFromWithMapper(this::delete, myjibenziliao);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.772+08:00", comments="Source Table: MYJIBENZILIAO")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.731+08:00", comments="Source Table: MYJIBENZILIAO")
     default int deleteByPrimaryKey(Integer id_) {
         return DeleteDSL.deleteFromWithMapper(this::delete, myjibenziliao)
                 .where(id, isEqualTo(id_))
@@ -109,7 +109,7 @@ public interface MyjibenziliaoDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.772+08:00", comments="Source Table: MYJIBENZILIAO")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.731+08:00", comments="Source Table: MYJIBENZILIAO")
     default int insert(Myjibenziliao record) {
         return insert(SqlBuilder.insert(record)
                 .into(myjibenziliao)
@@ -145,7 +145,7 @@ public interface MyjibenziliaoDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.772+08:00", comments="Source Table: MYJIBENZILIAO")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.731+08:00", comments="Source Table: MYJIBENZILIAO")
     default int insertSelective(Myjibenziliao record) {
         return insert(SqlBuilder.insert(record)
                 .into(myjibenziliao)
@@ -181,19 +181,19 @@ public interface MyjibenziliaoDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.772+08:00", comments="Source Table: MYJIBENZILIAO")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.731+08:00", comments="Source Table: MYJIBENZILIAO")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Myjibenziliao>>> selectByExample() {
         return SelectDSL.selectWithMapper(this::selectMany, id, userno, username, sex, homeaddress, deptname, job, worktime, birthdate, idcard, maritalstatus, highestdegree, politicalstatus, picpath, school, speciality, foreignlanguage, skill, telnumber, mobnumber, zipcode, nativeplace, cph, cartype, carcolor, carpic, carplace, personphoto, carphoto)
                 .from(myjibenziliao);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.772+08:00", comments="Source Table: MYJIBENZILIAO")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.731+08:00", comments="Source Table: MYJIBENZILIAO")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Myjibenziliao>>> selectDistinctByExample() {
         return SelectDSL.selectDistinctWithMapper(this::selectMany, id, userno, username, sex, homeaddress, deptname, job, worktime, birthdate, idcard, maritalstatus, highestdegree, politicalstatus, picpath, school, speciality, foreignlanguage, skill, telnumber, mobnumber, zipcode, nativeplace, cph, cartype, carcolor, carpic, carplace, personphoto, carphoto)
                 .from(myjibenziliao);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.772+08:00", comments="Source Table: MYJIBENZILIAO")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.731+08:00", comments="Source Table: MYJIBENZILIAO")
     default Myjibenziliao selectByPrimaryKey(Integer id_) {
         return SelectDSL.selectWithMapper(this::selectOne, id, userno, username, sex, homeaddress, deptname, job, worktime, birthdate, idcard, maritalstatus, highestdegree, politicalstatus, picpath, school, speciality, foreignlanguage, skill, telnumber, mobnumber, zipcode, nativeplace, cph, cartype, carcolor, carpic, carplace, personphoto, carphoto)
                 .from(myjibenziliao)
@@ -202,7 +202,7 @@ public interface MyjibenziliaoDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.772+08:00", comments="Source Table: MYJIBENZILIAO")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.731+08:00", comments="Source Table: MYJIBENZILIAO")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExample(Myjibenziliao record) {
         return UpdateDSL.updateWithMapper(this::update, myjibenziliao)
                 .set(userno).equalTo(record::getUserno)
@@ -235,7 +235,7 @@ public interface MyjibenziliaoDynamicSqlMapper {
                 .set(carphoto).equalTo(record::getCarphoto);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.773+08:00", comments="Source Table: MYJIBENZILIAO")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.731+08:00", comments="Source Table: MYJIBENZILIAO")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExampleSelective(Myjibenziliao record) {
         return UpdateDSL.updateWithMapper(this::update, myjibenziliao)
                 .set(userno).equalToWhenPresent(record::getUserno)
@@ -268,7 +268,7 @@ public interface MyjibenziliaoDynamicSqlMapper {
                 .set(carphoto).equalToWhenPresent(record::getCarphoto);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.773+08:00", comments="Source Table: MYJIBENZILIAO")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.732+08:00", comments="Source Table: MYJIBENZILIAO")
     default int updateByPrimaryKey(Myjibenziliao record) {
         return UpdateDSL.updateWithMapper(this::update, myjibenziliao)
                 .set(userno).equalTo(record::getUserno)
@@ -304,7 +304,7 @@ public interface MyjibenziliaoDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.773+08:00", comments="Source Table: MYJIBENZILIAO")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.732+08:00", comments="Source Table: MYJIBENZILIAO")
     default int updateByPrimaryKeySelective(Myjibenziliao record) {
         return UpdateDSL.updateWithMapper(this::update, myjibenziliao)
                 .set(userno).equalToWhenPresent(record::getUserno)

@@ -7,22 +7,22 @@ import org.mybatis.dynamic.sql.SqlColumn;
 import org.mybatis.dynamic.sql.SqlTable;
 
 public final class MymenjinrecordDynamicSqlSupport {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.773+08:00", comments="Source Table: MYMENJINRECORD")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.733+08:00", comments="Source Table: MYMENJINRECORD")
     public static final Mymenjinrecord mymenjinrecord = new Mymenjinrecord();
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.773+08:00", comments="Source field: MYMENJINRECORD.CtrlNumber")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.733+08:00", comments="Source field: MYMENJINRECORD.CtrlNumber")
     public static final SqlColumn<Integer> ctrlnumber = mymenjinrecord.ctrlnumber;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.773+08:00", comments="Source field: MYMENJINRECORD.CardNO")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.733+08:00", comments="Source field: MYMENJINRECORD.CardNO")
     public static final SqlColumn<String> cardno = mymenjinrecord.cardno;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.774+08:00", comments="Source field: MYMENJINRECORD.OpenDoorTime")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.733+08:00", comments="Source field: MYMENJINRECORD.OpenDoorTime")
     public static final SqlColumn<Date> opendoortime = mymenjinrecord.opendoortime;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.775+08:00", comments="Source field: MYMENJINRECORD.CardType")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.733+08:00", comments="Source field: MYMENJINRECORD.CardType")
     public static final SqlColumn<String> cardtype = mymenjinrecord.cardtype;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.773+08:00", comments="Source Table: MYMENJINRECORD")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.733+08:00", comments="Source Table: MYMENJINRECORD")
     public static final class Mymenjinrecord extends SqlTable {
         public final SqlColumn<Integer> ctrlnumber = column("CtrlNumber", JDBCType.INTEGER);
 

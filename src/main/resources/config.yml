@@ -1,6 +1,6 @@
 cn:
-  xvkang:
-    redisNameSpace: template
+  xvkang: 
+    redisNameSpace: chepai
     maxRegStudent: 500
     smsCodeRequireValidateUrls: /app/signupAndRegisterUser
     nongyeStartRegCode: 2019001            
@@ -35,5 +35,7 @@ cn:
         - /appauth/logout
         - /appauth/phoneLogin
         - /appauth/sendSms
+    xunluoRenyuan:
+      jwtExpireTime: 604800
       
       

@@ -526,8 +526,7 @@ public class ChepaiServiceImpl implements ChepaiService {
 			// ",车牌有效时间截止：" + validEnd);
 			if (list == null) {
 				logServiceMiddle.insertOperateLog(Constants.LOG_MESSAGE_KEY_ENUM.添加车牌.getName(),
-						myjibenziliao.getUsername(), myjibenziliao.getMobnumber(), myjibenziliao.getCph(),
-						validEndDate);
+						myjibenziliao.getUsername(), myjibenziliao.getMobnumber(), myfaxingssue.getCph(), validEndDate);
 			}
 			return 1;
 		}
@@ -996,5 +995,20 @@ public class ChepaiServiceImpl implements ChepaiService {
 			userPersonCreate.setCreatetime(new Date());
 			userPersonCreateDynamicSqlMapper.insert(userPersonCreate);
 		}
+	}
+
+	@Override
+	public Myjibenziliao findByChp(String cph) {
+		SelectStatementProvider render = SqlBuilder.select(MyjibenziliaoDynamicSqlSupport.myjibenziliao.allColumns())
+				.from(MyjibenziliaoDynamicSqlSupport.myjibenziliao, "myjibenziliao")
+				.leftJoin(MyfaxingssueDynamicSqlSupport.myfaxingssue, "myfaxingssue")
+				.on(MyjibenziliaoDynamicSqlSupport.userno, SqlBuilder.equalTo(MyfaxingssueDynamicSqlSupport.userno))
+				.where(MyfaxingssueDynamicSqlSupport.cph, SqlBuilder.isEqualTo(cph)).build()
+				.render(RenderingStrategy.MYBATIS3);
+		List<Myjibenziliao> myjibenziliaos = myjibenziliaoDynamicSqlMapper.selectMany(render);
+		if (myjibenziliaos.size() > 0) {
+			return myjibenziliaos.get(0);
+		}
+		return null;
 	}
 }

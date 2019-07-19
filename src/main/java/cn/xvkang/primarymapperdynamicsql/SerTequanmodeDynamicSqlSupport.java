@@ -6,22 +6,22 @@ import org.mybatis.dynamic.sql.SqlColumn;
 import org.mybatis.dynamic.sql.SqlTable;
 
 public final class SerTequanmodeDynamicSqlSupport {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.946+08:00", comments="Source Table: Ser_TeQuanMode")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.870+08:00", comments="Source Table: Ser_TeQuanMode")
     public static final SerTequanmode serTequanmode = new SerTequanmode();
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.946+08:00", comments="Source field: Ser_TeQuanMode.id")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.870+08:00", comments="Source field: Ser_TeQuanMode.id")
     public static final SqlColumn<Integer> id = serTequanmode.id;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.946+08:00", comments="Source field: Ser_TeQuanMode.Devcid")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.870+08:00", comments="Source field: Ser_TeQuanMode.Devcid")
     public static final SqlColumn<Integer> devcid = serTequanmode.devcid;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.946+08:00", comments="Source field: Ser_TeQuanMode.Doorid")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.870+08:00", comments="Source field: Ser_TeQuanMode.Doorid")
     public static final SqlColumn<Integer> doorid = serTequanmode.doorid;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.946+08:00", comments="Source field: Ser_TeQuanMode.DoorMode")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.870+08:00", comments="Source field: Ser_TeQuanMode.DoorMode")
     public static final SqlColumn<String> doormode = serTequanmode.doormode;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.946+08:00", comments="Source Table: Ser_TeQuanMode")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.870+08:00", comments="Source Table: Ser_TeQuanMode")
     public static final class SerTequanmode extends SqlTable {
         public final SqlColumn<Integer> id = column("id", JDBCType.INTEGER);
 

@@ -6,16 +6,16 @@ import org.mybatis.dynamic.sql.SqlColumn;
 import org.mybatis.dynamic.sql.SqlTable;
 
 public final class MyvoicecardnosetDynamicSqlSupport {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.883+08:00", comments="Source Table: MyVoiceCardNOSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.813+08:00", comments="Source Table: MyVoiceCardNOSET")
     public static final Myvoicecardnoset myvoicecardnoset = new Myvoicecardnoset();
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.883+08:00", comments="Source field: MyVoiceCardNOSET.CtrlNumber")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.813+08:00", comments="Source field: MyVoiceCardNOSET.CtrlNumber")
     public static final SqlColumn<Integer> ctrlnumber = myvoicecardnoset.ctrlnumber;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.884+08:00", comments="Source field: MyVoiceCardNOSET.Voice")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.813+08:00", comments="Source field: MyVoiceCardNOSET.Voice")
     public static final SqlColumn<String> voice = myvoicecardnoset.voice;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.883+08:00", comments="Source Table: MyVoiceCardNOSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.813+08:00", comments="Source Table: MyVoiceCardNOSET")
     public static final class Myvoicecardnoset extends SqlTable {
         public final SqlColumn<Integer> ctrlnumber = column("CtrlNumber", JDBCType.INTEGER);
 

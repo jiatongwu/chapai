@@ -33,25 +33,25 @@ import org.mybatis.dynamic.sql.util.SqlProviderAdapter;
 
 @Mapper
 public interface CancelschemeDynamicSqlMapper {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.492+08:00", comments="Source Table: CancelScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.497+08:00", comments="Source Table: CancelScheme")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     long count(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.492+08:00", comments="Source Table: CancelScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.497+08:00", comments="Source Table: CancelScheme")
     @DeleteProvider(type=SqlProviderAdapter.class, method="delete")
     int delete(DeleteStatementProvider deleteStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.492+08:00", comments="Source Table: CancelScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.498+08:00", comments="Source Table: CancelScheme")
     @InsertProvider(type=SqlProviderAdapter.class, method="insert")
     @SelectKey(statement="SELECT SCOPE_IDENTITY()", keyProperty="record.schid", before=false, resultType=Integer.class)
     int insert(InsertStatementProvider<Cancelscheme> insertStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.492+08:00", comments="Source Table: CancelScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.498+08:00", comments="Source Table: CancelScheme")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @ResultMap("CancelschemeResult")
     Cancelscheme selectOne(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.492+08:00", comments="Source Table: CancelScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.498+08:00", comments="Source Table: CancelScheme")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @Results(id="CancelschemeResult", value = {
         @Result(column="SchId", property="schid", jdbcType=JdbcType.INTEGER, id=true),
@@ -64,22 +64,22 @@ public interface CancelschemeDynamicSqlMapper {
     })
     List<Cancelscheme> selectMany(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.492+08:00", comments="Source Table: CancelScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.498+08:00", comments="Source Table: CancelScheme")
     @UpdateProvider(type=SqlProviderAdapter.class, method="update")
     int update(UpdateStatementProvider updateStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.492+08:00", comments="Source Table: CancelScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.498+08:00", comments="Source Table: CancelScheme")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<Long>> countByExample() {
         return SelectDSL.selectWithMapper(this::count, SqlBuilder.count())
                 .from(cancelscheme);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.492+08:00", comments="Source Table: CancelScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.498+08:00", comments="Source Table: CancelScheme")
     default DeleteDSL<MyBatis3DeleteModelAdapter<Integer>> deleteByExample() {
         return DeleteDSL.deleteFromWithMapper(this::delete, cancelscheme);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.492+08:00", comments="Source Table: CancelScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.498+08:00", comments="Source Table: CancelScheme")
     default int deleteByPrimaryKey(Integer schid_) {
         return DeleteDSL.deleteFromWithMapper(this::delete, cancelscheme)
                 .where(schid, isEqualTo(schid_))
@@ -87,7 +87,7 @@ public interface CancelschemeDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.493+08:00", comments="Source Table: CancelScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.498+08:00", comments="Source Table: CancelScheme")
     default int insert(Cancelscheme record) {
         return insert(SqlBuilder.insert(record)
                 .into(cancelscheme)
@@ -101,7 +101,7 @@ public interface CancelschemeDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.493+08:00", comments="Source Table: CancelScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.498+08:00", comments="Source Table: CancelScheme")
     default int insertSelective(Cancelscheme record) {
         return insert(SqlBuilder.insert(record)
                 .into(cancelscheme)
@@ -115,19 +115,19 @@ public interface CancelschemeDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.493+08:00", comments="Source Table: CancelScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.499+08:00", comments="Source Table: CancelScheme")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Cancelscheme>>> selectByExample() {
         return SelectDSL.selectWithMapper(this::selectMany, schid, schname, fieldname, operators, selectvalues, startime, endtime)
                 .from(cancelscheme);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.493+08:00", comments="Source Table: CancelScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.499+08:00", comments="Source Table: CancelScheme")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Cancelscheme>>> selectDistinctByExample() {
         return SelectDSL.selectDistinctWithMapper(this::selectMany, schid, schname, fieldname, operators, selectvalues, startime, endtime)
                 .from(cancelscheme);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.493+08:00", comments="Source Table: CancelScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.499+08:00", comments="Source Table: CancelScheme")
     default Cancelscheme selectByPrimaryKey(Integer schid_) {
         return SelectDSL.selectWithMapper(this::selectOne, schid, schname, fieldname, operators, selectvalues, startime, endtime)
                 .from(cancelscheme)
@@ -136,7 +136,7 @@ public interface CancelschemeDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.493+08:00", comments="Source Table: CancelScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.499+08:00", comments="Source Table: CancelScheme")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExample(Cancelscheme record) {
         return UpdateDSL.updateWithMapper(this::update, cancelscheme)
                 .set(schname).equalTo(record::getSchname)
@@ -147,7 +147,7 @@ public interface CancelschemeDynamicSqlMapper {
                 .set(endtime).equalTo(record::getEndtime);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.494+08:00", comments="Source Table: CancelScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.499+08:00", comments="Source Table: CancelScheme")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExampleSelective(Cancelscheme record) {
         return UpdateDSL.updateWithMapper(this::update, cancelscheme)
                 .set(schname).equalToWhenPresent(record::getSchname)
@@ -158,7 +158,7 @@ public interface CancelschemeDynamicSqlMapper {
                 .set(endtime).equalToWhenPresent(record::getEndtime);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.494+08:00", comments="Source Table: CancelScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.499+08:00", comments="Source Table: CancelScheme")
     default int updateByPrimaryKey(Cancelscheme record) {
         return UpdateDSL.updateWithMapper(this::update, cancelscheme)
                 .set(schname).equalTo(record::getSchname)
@@ -172,7 +172,7 @@ public interface CancelschemeDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.494+08:00", comments="Source Table: CancelScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.499+08:00", comments="Source Table: CancelScheme")
     default int updateByPrimaryKeySelective(Cancelscheme record) {
         return UpdateDSL.updateWithMapper(this::update, cancelscheme)
                 .set(schname).equalToWhenPresent(record::getSchname)

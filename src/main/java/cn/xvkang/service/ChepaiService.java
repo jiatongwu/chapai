@@ -6,6 +6,7 @@ import java.util.Map;
 import org.springframework.data.domain.PageImpl;
 
 import cn.xvkang.primaryentity.Myfaxingssue;
+import cn.xvkang.primaryentity.Myjibenziliao;
 
 public interface ChepaiService {
 
@@ -20,4 +21,6 @@ public interface ChepaiService {
 	public int yaqi(String id, String endDate);
 
 	public Map<String, Object> importExcel(InputStream inputStream);
+
+	public Myjibenziliao findByChp(String cph);
 }

@@ -8,64 +8,64 @@ import org.mybatis.dynamic.sql.SqlColumn;
 import org.mybatis.dynamic.sql.SqlTable;
 
 public final class MycarcanceltableDynamicSqlSupport {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.723+08:00", comments="Source Table: MYCarCancelTable")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.706+08:00", comments="Source Table: MYCarCancelTable")
     public static final Mycarcanceltable mycarcanceltable = new Mycarcanceltable();
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.724+08:00", comments="Source field: MYCarCancelTable.UserNO")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.706+08:00", comments="Source field: MYCarCancelTable.UserNO")
     public static final SqlColumn<String> userno = mycarcanceltable.userno;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.724+08:00", comments="Source field: MYCarCancelTable.CardNO")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.706+08:00", comments="Source field: MYCarCancelTable.CardNO")
     public static final SqlColumn<String> cardno = mycarcanceltable.cardno;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.724+08:00", comments="Source field: MYCarCancelTable.UserName")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.706+08:00", comments="Source field: MYCarCancelTable.UserName")
     public static final SqlColumn<String> username = mycarcanceltable.username;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.724+08:00", comments="Source field: MYCarCancelTable.Sex")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.706+08:00", comments="Source field: MYCarCancelTable.Sex")
     public static final SqlColumn<String> sex = mycarcanceltable.sex;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.724+08:00", comments="Source field: MYCarCancelTable.HomeAddress")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.706+08:00", comments="Source field: MYCarCancelTable.HomeAddress")
     public static final SqlColumn<String> homeaddress = mycarcanceltable.homeaddress;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.724+08:00", comments="Source field: MYCarCancelTable.DeptName")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.706+08:00", comments="Source field: MYCarCancelTable.DeptName")
     public static final SqlColumn<String> deptname = mycarcanceltable.deptname;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.724+08:00", comments="Source field: MYCarCancelTable.TelNumber")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.706+08:00", comments="Source field: MYCarCancelTable.TelNumber")
     public static final SqlColumn<String> telnumber = mycarcanceltable.telnumber;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.724+08:00", comments="Source field: MYCarCancelTable.MobNumber")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.706+08:00", comments="Source field: MYCarCancelTable.MobNumber")
     public static final SqlColumn<String> mobnumber = mycarcanceltable.mobnumber;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.724+08:00", comments="Source field: MYCarCancelTable.IssueUserCard")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.706+08:00", comments="Source field: MYCarCancelTable.IssueUserCard")
     public static final SqlColumn<String> issueusercard = mycarcanceltable.issueusercard;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.724+08:00", comments="Source field: MYCarCancelTable.CPH")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.706+08:00", comments="Source field: MYCarCancelTable.CPH")
     public static final SqlColumn<String> cph = mycarcanceltable.cph;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.724+08:00", comments="Source field: MYCarCancelTable.CarCardType")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.706+08:00", comments="Source field: MYCarCancelTable.CarCardType")
     public static final SqlColumn<String> carcardtype = mycarcanceltable.carcardtype;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.724+08:00", comments="Source field: MYCarCancelTable.CarIssueDate")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.706+08:00", comments="Source field: MYCarCancelTable.CarIssueDate")
     public static final SqlColumn<String> carissuedate = mycarcanceltable.carissuedate;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.724+08:00", comments="Source field: MYCarCancelTable.Balance")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.707+08:00", comments="Source field: MYCarCancelTable.Balance")
     public static final SqlColumn<BigDecimal> balance = mycarcanceltable.balance;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.724+08:00", comments="Source field: MYCarCancelTable.CarValidStartDate")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.707+08:00", comments="Source field: MYCarCancelTable.CarValidStartDate")
     public static final SqlColumn<Date> carvalidstartdate = mycarcanceltable.carvalidstartdate;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.724+08:00", comments="Source field: MYCarCancelTable.CarValidEndDate")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.707+08:00", comments="Source field: MYCarCancelTable.CarValidEndDate")
     public static final SqlColumn<Date> carvalidenddate = mycarcanceltable.carvalidenddate;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.724+08:00", comments="Source field: MYCarCancelTable.CancelCardNO")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.707+08:00", comments="Source field: MYCarCancelTable.CancelCardNO")
     public static final SqlColumn<String> cancelcardno = mycarcanceltable.cancelcardno;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.724+08:00", comments="Source field: MYCarCancelTable.CancelTime")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.707+08:00", comments="Source field: MYCarCancelTable.CancelTime")
     public static final SqlColumn<Date> canceltime = mycarcanceltable.canceltime;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.724+08:00", comments="Source field: MYCarCancelTable.CancelUserName")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.707+08:00", comments="Source field: MYCarCancelTable.CancelUserName")
     public static final SqlColumn<String> cancelusername = mycarcanceltable.cancelusername;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.724+08:00", comments="Source Table: MYCarCancelTable")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.706+08:00", comments="Source Table: MYCarCancelTable")
     public static final class Mycarcanceltable extends SqlTable {
         public final SqlColumn<String> userno = column("UserNO", JDBCType.VARCHAR);
 

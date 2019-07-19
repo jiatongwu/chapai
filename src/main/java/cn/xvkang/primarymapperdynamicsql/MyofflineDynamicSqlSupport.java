@@ -7,22 +7,22 @@ import org.mybatis.dynamic.sql.SqlColumn;
 import org.mybatis.dynamic.sql.SqlTable;
 
 public final class MyofflineDynamicSqlSupport {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.783+08:00", comments="Source Table: MYOffLine")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.735+08:00", comments="Source Table: MYOffLine")
     public static final Myoffline myoffline = new Myoffline();
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.783+08:00", comments="Source field: MYOffLine.CardNO")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.735+08:00", comments="Source field: MYOffLine.CardNO")
     public static final SqlColumn<String> cardno = myoffline.cardno;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.783+08:00", comments="Source field: MYOffLine.CPHCardNO")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.735+08:00", comments="Source field: MYOffLine.CPHCardNO")
     public static final SqlColumn<String> cphcardno = myoffline.cphcardno;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.783+08:00", comments="Source field: MYOffLine.DownLoadTime")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.735+08:00", comments="Source field: MYOffLine.DownLoadTime")
     public static final SqlColumn<Date> downloadtime = myoffline.downloadtime;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.783+08:00", comments="Source field: MYOffLine.State")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.735+08:00", comments="Source field: MYOffLine.State")
     public static final SqlColumn<Integer> state = myoffline.state;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.783+08:00", comments="Source Table: MYOffLine")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.735+08:00", comments="Source Table: MYOffLine")
     public static final class Myoffline extends SqlTable {
         public final SqlColumn<String> cardno = column("CardNO", JDBCType.VARCHAR);
 

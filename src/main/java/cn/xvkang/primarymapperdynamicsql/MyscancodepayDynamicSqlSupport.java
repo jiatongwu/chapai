@@ -6,43 +6,43 @@ import org.mybatis.dynamic.sql.SqlColumn;
 import org.mybatis.dynamic.sql.SqlTable;
 
 public final class MyscancodepayDynamicSqlSupport {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.880+08:00", comments="Source Table: MyScanCodePay")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.808+08:00", comments="Source Table: MyScanCodePay")
     public static final Myscancodepay myscancodepay = new Myscancodepay();
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.880+08:00", comments="Source field: MyScanCodePay.SMPayment")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.808+08:00", comments="Source field: MyScanCodePay.SMPayment")
     public static final SqlColumn<Boolean> smpayment = myscancodepay.smpayment;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.880+08:00", comments="Source field: MyScanCodePay.WXAppID")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.808+08:00", comments="Source field: MyScanCodePay.WXAppID")
     public static final SqlColumn<String> wxappid = myscancodepay.wxappid;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.880+08:00", comments="Source field: MyScanCodePay.WXMCHID")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.808+08:00", comments="Source field: MyScanCodePay.WXMCHID")
     public static final SqlColumn<String> wxmchid = myscancodepay.wxmchid;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.880+08:00", comments="Source field: MyScanCodePay.WXKEY")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.808+08:00", comments="Source field: MyScanCodePay.WXKEY")
     public static final SqlColumn<String> wxkey = myscancodepay.wxkey;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.880+08:00", comments="Source field: MyScanCodePay.ZFBAppID")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.808+08:00", comments="Source field: MyScanCodePay.ZFBAppID")
     public static final SqlColumn<String> zfbappid = myscancodepay.zfbappid;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.880+08:00", comments="Source field: MyScanCodePay.ZFBPID")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.808+08:00", comments="Source field: MyScanCodePay.ZFBPID")
     public static final SqlColumn<String> zfbpid = myscancodepay.zfbpid;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.880+08:00", comments="Source field: MyScanCodePay.StrTemp1")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.808+08:00", comments="Source field: MyScanCodePay.StrTemp1")
     public static final SqlColumn<String> strtemp1 = myscancodepay.strtemp1;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.880+08:00", comments="Source field: MyScanCodePay.StrTemp2")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.808+08:00", comments="Source field: MyScanCodePay.StrTemp2")
     public static final SqlColumn<String> strtemp2 = myscancodepay.strtemp2;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.880+08:00", comments="Source field: MyScanCodePay.StrTemp3")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.808+08:00", comments="Source field: MyScanCodePay.StrTemp3")
     public static final SqlColumn<String> strtemp3 = myscancodepay.strtemp3;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.880+08:00", comments="Source field: MyScanCodePay.StrTemp4")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.808+08:00", comments="Source field: MyScanCodePay.StrTemp4")
     public static final SqlColumn<String> strtemp4 = myscancodepay.strtemp4;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.880+08:00", comments="Source field: MyScanCodePay.StrTemp5")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.808+08:00", comments="Source field: MyScanCodePay.StrTemp5")
     public static final SqlColumn<String> strtemp5 = myscancodepay.strtemp5;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.880+08:00", comments="Source Table: MyScanCodePay")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.808+08:00", comments="Source Table: MyScanCodePay")
     public static final class Myscancodepay extends SqlTable {
         public final SqlColumn<Boolean> smpayment = column("SMPayment", JDBCType.BIT);
 

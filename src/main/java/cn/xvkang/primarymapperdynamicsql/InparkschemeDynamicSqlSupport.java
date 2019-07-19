@@ -6,31 +6,31 @@ import org.mybatis.dynamic.sql.SqlColumn;
 import org.mybatis.dynamic.sql.SqlTable;
 
 public final class InparkschemeDynamicSqlSupport {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.600+08:00", comments="Source Table: InParkScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.611+08:00", comments="Source Table: InParkScheme")
     public static final Inparkscheme inparkscheme = new Inparkscheme();
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.600+08:00", comments="Source field: InParkScheme.SchId")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.611+08:00", comments="Source field: InParkScheme.SchId")
     public static final SqlColumn<Integer> schid = inparkscheme.schid;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.600+08:00", comments="Source field: InParkScheme.SchName")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.611+08:00", comments="Source field: InParkScheme.SchName")
     public static final SqlColumn<String> schname = inparkscheme.schname;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.600+08:00", comments="Source field: InParkScheme.FieldName")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.611+08:00", comments="Source field: InParkScheme.FieldName")
     public static final SqlColumn<String> fieldname = inparkscheme.fieldname;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.600+08:00", comments="Source field: InParkScheme.Operators")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.612+08:00", comments="Source field: InParkScheme.Operators")
     public static final SqlColumn<String> operators = inparkscheme.operators;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.600+08:00", comments="Source field: InParkScheme.Selectvalues")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.612+08:00", comments="Source field: InParkScheme.Selectvalues")
     public static final SqlColumn<String> selectvalues = inparkscheme.selectvalues;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.601+08:00", comments="Source field: InParkScheme.startime")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.612+08:00", comments="Source field: InParkScheme.startime")
     public static final SqlColumn<String> startime = inparkscheme.startime;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.601+08:00", comments="Source field: InParkScheme.endtime")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.612+08:00", comments="Source field: InParkScheme.endtime")
     public static final SqlColumn<String> endtime = inparkscheme.endtime;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.600+08:00", comments="Source Table: InParkScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.611+08:00", comments="Source Table: InParkScheme")
     public static final class Inparkscheme extends SqlTable {
         public final SqlColumn<Integer> schid = column("SchId", JDBCType.INTEGER);
 

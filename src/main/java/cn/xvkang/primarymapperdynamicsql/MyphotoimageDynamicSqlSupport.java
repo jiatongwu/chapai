@@ -7,19 +7,19 @@ import org.mybatis.dynamic.sql.SqlColumn;
 import org.mybatis.dynamic.sql.SqlTable;
 
 public final class MyphotoimageDynamicSqlSupport {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.784+08:00", comments="Source Table: MYPHOTOIMAGE")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.736+08:00", comments="Source Table: MYPHOTOIMAGE")
     public static final Myphotoimage myphotoimage = new Myphotoimage();
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.784+08:00", comments="Source field: MYPHOTOIMAGE.PicIndex")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.736+08:00", comments="Source field: MYPHOTOIMAGE.PicIndex")
     public static final SqlColumn<String> picindex = myphotoimage.picindex;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.784+08:00", comments="Source field: MYPHOTOIMAGE.PicTime")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.736+08:00", comments="Source field: MYPHOTOIMAGE.PicTime")
     public static final SqlColumn<Date> pictime = myphotoimage.pictime;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.784+08:00", comments="Source field: MYPHOTOIMAGE.PicContent")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.736+08:00", comments="Source field: MYPHOTOIMAGE.PicContent")
     public static final SqlColumn<byte[]> piccontent = myphotoimage.piccontent;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.784+08:00", comments="Source Table: MYPHOTOIMAGE")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.736+08:00", comments="Source Table: MYPHOTOIMAGE")
     public static final class Myphotoimage extends SqlTable {
         public final SqlColumn<String> picindex = column("PicIndex", JDBCType.VARCHAR);
 

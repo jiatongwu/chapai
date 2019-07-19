@@ -30,19 +30,19 @@ import org.mybatis.dynamic.sql.util.SqlProviderAdapter;
 
 @Mapper
 public interface TspecialcphDynamicSqlMapper {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.958+08:00", comments="Source Table: tSpecialCPH")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.883+08:00", comments="Source Table: tSpecialCPH")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     long count(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.958+08:00", comments="Source Table: tSpecialCPH")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.883+08:00", comments="Source Table: tSpecialCPH")
     @DeleteProvider(type=SqlProviderAdapter.class, method="delete")
     int delete(DeleteStatementProvider deleteStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.958+08:00", comments="Source Table: tSpecialCPH")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.883+08:00", comments="Source Table: tSpecialCPH")
     @InsertProvider(type=SqlProviderAdapter.class, method="insert")
     int insert(InsertStatementProvider<Tspecialcph> insertStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.958+08:00", comments="Source Table: tSpecialCPH")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.883+08:00", comments="Source Table: tSpecialCPH")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @Results(id="TspecialcphResult", value = {
         @Result(column="ID", property="id", jdbcType=JdbcType.BIGINT),
@@ -53,22 +53,22 @@ public interface TspecialcphDynamicSqlMapper {
     })
     List<Tspecialcph> selectMany(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.958+08:00", comments="Source Table: tSpecialCPH")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.883+08:00", comments="Source Table: tSpecialCPH")
     @UpdateProvider(type=SqlProviderAdapter.class, method="update")
     int update(UpdateStatementProvider updateStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.958+08:00", comments="Source Table: tSpecialCPH")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.883+08:00", comments="Source Table: tSpecialCPH")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<Long>> countByExample() {
         return SelectDSL.selectWithMapper(this::count, SqlBuilder.count())
                 .from(tspecialcph);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.958+08:00", comments="Source Table: tSpecialCPH")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.883+08:00", comments="Source Table: tSpecialCPH")
     default DeleteDSL<MyBatis3DeleteModelAdapter<Integer>> deleteByExample() {
         return DeleteDSL.deleteFromWithMapper(this::delete, tspecialcph);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.958+08:00", comments="Source Table: tSpecialCPH")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.883+08:00", comments="Source Table: tSpecialCPH")
     default int insert(Tspecialcph record) {
         return insert(SqlBuilder.insert(record)
                 .into(tspecialcph)
@@ -81,7 +81,7 @@ public interface TspecialcphDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.958+08:00", comments="Source Table: tSpecialCPH")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.883+08:00", comments="Source Table: tSpecialCPH")
     default int insertSelective(Tspecialcph record) {
         return insert(SqlBuilder.insert(record)
                 .into(tspecialcph)
@@ -94,19 +94,19 @@ public interface TspecialcphDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.958+08:00", comments="Source Table: tSpecialCPH")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.883+08:00", comments="Source Table: tSpecialCPH")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Tspecialcph>>> selectByExample() {
         return SelectDSL.selectWithMapper(this::selectMany, id, type, cph, mode, show)
                 .from(tspecialcph);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.958+08:00", comments="Source Table: tSpecialCPH")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.883+08:00", comments="Source Table: tSpecialCPH")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Tspecialcph>>> selectDistinctByExample() {
         return SelectDSL.selectDistinctWithMapper(this::selectMany, id, type, cph, mode, show)
                 .from(tspecialcph);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.958+08:00", comments="Source Table: tSpecialCPH")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.883+08:00", comments="Source Table: tSpecialCPH")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExample(Tspecialcph record) {
         return UpdateDSL.updateWithMapper(this::update, tspecialcph)
                 .set(id).equalTo(record::getId)
@@ -116,7 +116,7 @@ public interface TspecialcphDynamicSqlMapper {
                 .set(show).equalTo(record::getShow);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.958+08:00", comments="Source Table: tSpecialCPH")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.883+08:00", comments="Source Table: tSpecialCPH")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExampleSelective(Tspecialcph record) {
         return UpdateDSL.updateWithMapper(this::update, tspecialcph)
                 .set(id).equalToWhenPresent(record::getId)

@@ -7,37 +7,37 @@ import org.mybatis.dynamic.sql.SqlColumn;
 import org.mybatis.dynamic.sql.SqlTable;
 
 public final class MyfreecphDynamicSqlSupport {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.871+08:00", comments="Source Table: MyFreeCPH")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.802+08:00", comments="Source Table: MyFreeCPH")
     public static final Myfreecph myfreecph = new Myfreecph();
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.871+08:00", comments="Source field: MyFreeCPH.ID")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.802+08:00", comments="Source field: MyFreeCPH.ID")
     public static final SqlColumn<Long> id = myfreecph.id;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.871+08:00", comments="Source field: MyFreeCPH.CPH")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.802+08:00", comments="Source field: MyFreeCPH.CPH")
     public static final SqlColumn<String> cph = myfreecph.cph;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.871+08:00", comments="Source field: MyFreeCPH.FreeStartTime")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.802+08:00", comments="Source field: MyFreeCPH.FreeStartTime")
     public static final SqlColumn<Date> freestarttime = myfreecph.freestarttime;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.871+08:00", comments="Source field: MyFreeCPH.Sign")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.802+08:00", comments="Source field: MyFreeCPH.Sign")
     public static final SqlColumn<Short> sign = myfreecph.sign;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.871+08:00", comments="Source field: MyFreeCPH.Remarks")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.802+08:00", comments="Source field: MyFreeCPH.Remarks")
     public static final SqlColumn<String> remarks = myfreecph.remarks;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.871+08:00", comments="Source field: MyFreeCPH.FreeEndTime")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.802+08:00", comments="Source field: MyFreeCPH.FreeEndTime")
     public static final SqlColumn<Date> freeendtime = myfreecph.freeendtime;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.871+08:00", comments="Source field: MyFreeCPH.AddTime")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.802+08:00", comments="Source field: MyFreeCPH.AddTime")
     public static final SqlColumn<Date> addtime = myfreecph.addtime;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.871+08:00", comments="Source field: MyFreeCPH.Operator")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.802+08:00", comments="Source field: MyFreeCPH.Operator")
     public static final SqlColumn<String> operator = myfreecph.operator;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.871+08:00", comments="Source field: MyFreeCPH.PCName")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.802+08:00", comments="Source field: MyFreeCPH.PCName")
     public static final SqlColumn<String> pcname = myfreecph.pcname;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.871+08:00", comments="Source Table: MyFreeCPH")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.802+08:00", comments="Source Table: MyFreeCPH")
     public static final class Myfreecph extends SqlTable {
         public final SqlColumn<Long> id = column("ID", JDBCType.BIGINT);
 

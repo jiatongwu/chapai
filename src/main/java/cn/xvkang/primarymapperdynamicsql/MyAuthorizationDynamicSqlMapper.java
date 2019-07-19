@@ -30,41 +30,41 @@ import org.mybatis.dynamic.sql.util.SqlProviderAdapter;
 
 @Mapper
 public interface MyAuthorizationDynamicSqlMapper {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.885+08:00", comments="Source Table: My_Authorization")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.814+08:00", comments="Source Table: My_Authorization")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     long count(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.885+08:00", comments="Source Table: My_Authorization")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.814+08:00", comments="Source Table: My_Authorization")
     @DeleteProvider(type=SqlProviderAdapter.class, method="delete")
     int delete(DeleteStatementProvider deleteStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.885+08:00", comments="Source Table: My_Authorization")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.814+08:00", comments="Source Table: My_Authorization")
     @InsertProvider(type=SqlProviderAdapter.class, method="insert")
     int insert(InsertStatementProvider<MyAuthorization> insertStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.885+08:00", comments="Source Table: My_Authorization")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.814+08:00", comments="Source Table: My_Authorization")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @Results(id="MyAuthorizationResult", value = {
         @Result(column="bAuthorization", property="bauthorization", jdbcType=JdbcType.BIT)
     })
     List<MyAuthorization> selectMany(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.885+08:00", comments="Source Table: My_Authorization")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.814+08:00", comments="Source Table: My_Authorization")
     @UpdateProvider(type=SqlProviderAdapter.class, method="update")
     int update(UpdateStatementProvider updateStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.885+08:00", comments="Source Table: My_Authorization")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.814+08:00", comments="Source Table: My_Authorization")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<Long>> countByExample() {
         return SelectDSL.selectWithMapper(this::count, SqlBuilder.count())
                 .from(myAuthorization);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.885+08:00", comments="Source Table: My_Authorization")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.814+08:00", comments="Source Table: My_Authorization")
     default DeleteDSL<MyBatis3DeleteModelAdapter<Integer>> deleteByExample() {
         return DeleteDSL.deleteFromWithMapper(this::delete, myAuthorization);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.885+08:00", comments="Source Table: My_Authorization")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.814+08:00", comments="Source Table: My_Authorization")
     default int insert(MyAuthorization record) {
         return insert(SqlBuilder.insert(record)
                 .into(myAuthorization)
@@ -73,7 +73,7 @@ public interface MyAuthorizationDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.885+08:00", comments="Source Table: My_Authorization")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.814+08:00", comments="Source Table: My_Authorization")
     default int insertSelective(MyAuthorization record) {
         return insert(SqlBuilder.insert(record)
                 .into(myAuthorization)
@@ -82,25 +82,25 @@ public interface MyAuthorizationDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.885+08:00", comments="Source Table: My_Authorization")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.814+08:00", comments="Source Table: My_Authorization")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<MyAuthorization>>> selectByExample() {
         return SelectDSL.selectWithMapper(this::selectMany, bauthorization)
                 .from(myAuthorization);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.885+08:00", comments="Source Table: My_Authorization")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.814+08:00", comments="Source Table: My_Authorization")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<MyAuthorization>>> selectDistinctByExample() {
         return SelectDSL.selectDistinctWithMapper(this::selectMany, bauthorization)
                 .from(myAuthorization);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.885+08:00", comments="Source Table: My_Authorization")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.814+08:00", comments="Source Table: My_Authorization")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExample(MyAuthorization record) {
         return UpdateDSL.updateWithMapper(this::update, myAuthorization)
                 .set(bauthorization).equalTo(record::getBauthorization);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.885+08:00", comments="Source Table: My_Authorization")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.814+08:00", comments="Source Table: My_Authorization")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExampleSelective(MyAuthorization record) {
         return UpdateDSL.updateWithMapper(this::update, myAuthorization)
                 .set(bauthorization).equalToWhenPresent(record::getBauthorization);

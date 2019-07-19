@@ -6,34 +6,34 @@ import org.mybatis.dynamic.sql.SqlColumn;
 import org.mybatis.dynamic.sql.SqlTable;
 
 public final class ZhPersonDynamicSqlSupport {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.983+08:00", comments="Source Table: zh_Person")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.907+08:00", comments="Source Table: zh_Person")
     public static final ZhPerson zhPerson = new ZhPerson();
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.984+08:00", comments="Source field: zh_Person.id")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.907+08:00", comments="Source field: zh_Person.id")
     public static final SqlColumn<Integer> id = zhPerson.id;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.984+08:00", comments="Source field: zh_Person.userNo")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.907+08:00", comments="Source field: zh_Person.userNo")
     public static final SqlColumn<String> userno = zhPerson.userno;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.984+08:00", comments="Source field: zh_Person.userName")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.907+08:00", comments="Source field: zh_Person.userName")
     public static final SqlColumn<String> username = zhPerson.username;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.984+08:00", comments="Source field: zh_Person.sex")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.907+08:00", comments="Source field: zh_Person.sex")
     public static final SqlColumn<String> sex = zhPerson.sex;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.984+08:00", comments="Source field: zh_Person.homeAddress")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.907+08:00", comments="Source field: zh_Person.homeAddress")
     public static final SqlColumn<String> homeaddress = zhPerson.homeaddress;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.984+08:00", comments="Source field: zh_Person.mobNumber")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.907+08:00", comments="Source field: zh_Person.mobNumber")
     public static final SqlColumn<String> mobnumber = zhPerson.mobnumber;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.984+08:00", comments="Source field: zh_Person.carSpalcesNum")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.907+08:00", comments="Source field: zh_Person.carSpalcesNum")
     public static final SqlColumn<String> carspalcesnum = zhPerson.carspalcesnum;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.984+08:00", comments="Source field: zh_Person.synflag")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.907+08:00", comments="Source field: zh_Person.synflag")
     public static final SqlColumn<Integer> synflag = zhPerson.synflag;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.984+08:00", comments="Source Table: zh_Person")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.907+08:00", comments="Source Table: zh_Person")
     public static final class ZhPerson extends SqlTable {
         public final SqlColumn<Integer> id = column("id", JDBCType.INTEGER);
 

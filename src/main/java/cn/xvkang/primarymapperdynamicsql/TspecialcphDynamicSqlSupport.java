@@ -6,25 +6,25 @@ import org.mybatis.dynamic.sql.SqlColumn;
 import org.mybatis.dynamic.sql.SqlTable;
 
 public final class TspecialcphDynamicSqlSupport {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.958+08:00", comments="Source Table: tSpecialCPH")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.883+08:00", comments="Source Table: tSpecialCPH")
     public static final Tspecialcph tspecialcph = new Tspecialcph();
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.958+08:00", comments="Source field: tSpecialCPH.ID")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.883+08:00", comments="Source field: tSpecialCPH.ID")
     public static final SqlColumn<Long> id = tspecialcph.id;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.958+08:00", comments="Source field: tSpecialCPH.Type")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.883+08:00", comments="Source field: tSpecialCPH.Type")
     public static final SqlColumn<Integer> type = tspecialcph.type;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.958+08:00", comments="Source field: tSpecialCPH.CPH")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.883+08:00", comments="Source field: tSpecialCPH.CPH")
     public static final SqlColumn<String> cph = tspecialcph.cph;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.958+08:00", comments="Source field: tSpecialCPH.Mode")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.883+08:00", comments="Source field: tSpecialCPH.Mode")
     public static final SqlColumn<String> mode = tspecialcph.mode;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.958+08:00", comments="Source field: tSpecialCPH.Show")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.883+08:00", comments="Source field: tSpecialCPH.Show")
     public static final SqlColumn<String> show = tspecialcph.show;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.958+08:00", comments="Source Table: tSpecialCPH")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.883+08:00", comments="Source Table: tSpecialCPH")
     public static final class Tspecialcph extends SqlTable {
         public final SqlColumn<Long> id = column("ID", JDBCType.BIGINT);
 

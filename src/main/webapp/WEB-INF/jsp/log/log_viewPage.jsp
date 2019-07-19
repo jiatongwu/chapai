@@ -28,63 +28,64 @@
     <legend style="width:220px;border-bottom:none;">日志信息-${person.username}</legend>
     <div class="layui-field-box">
         <div class="layui-row">
-            <div class="layui-col-xs1">
+            <div class="layui-col-xs3">
                 操作:
             </div>
-            <div class="layui-col-xs5">
+            <div class="layui-col-xs3">
                 ${log.operate_name}
             </div>
-            <div class="layui-col-xs1">
+            <div class="layui-col-xs3">
                 操作人:
             </div>
-            <div class="layui-col-xs5">
+            <div class="layui-col-xs3">
                 ${log.name}
             </div>
         </div>
         <br/>
         <div class="layui-row">
-            <div class="layui-col-xs1">
+            <div class="layui-col-xs3">
                 操作时间:
             </div>
-            <div class="layui-col-xs5">
+            <div class="layui-col-xs3">
                 <fmt:formatDate pattern="yyyy-MM-dd HH:mm:ss" value="${log.createtime}"/>
             </div>
-            <div class="layui-col-xs1">
+            <div class="layui-col-xs3">
                 客户端ip:
             </div>
-            <div class="layui-col-xs5">
+            <div class="layui-col-xs3">
                 ${log.client_ip}
             </div>
         </div>
+        <br/>
         <div class="layui-row">
-            <div class="layui-col-xs1">
+            <div class="layui-col-xs3">
                 车牌号所有人姓名:
             </div>
-            <div class="layui-col-xs5">
+            <div class="layui-col-xs3">
                 ${log.operate_username}
             </div>
-            <div class="layui-col-xs1">
+            <div class="layui-col-xs3">
                 车牌号所有人手机:
             </div>
-            <div class="layui-col-xs5">
+            <div class="layui-col-xs3">
                 ${log.operate_user_phone}
             </div>
         </div>
+        <br/>
         <div class="layui-row">
-            <div class="layui-col-xs1">
+            <div class="layui-col-xs3">
                 车牌号:
             </div>
-            <div class="layui-col-xs5">
+            <div class="layui-col-xs3">
                 ${log.operate_cph}
             </div>
-            <div class="layui-col-xs1">
+            <div class="layui-col-xs3">
               有效时间止日:
             </div>
-            <div class="layui-col-xs5">
+            <div class="layui-col-xs3">
                 <fmt:formatDate pattern="yyyy-MM-dd" value="${log.validEnd}"/>
             </div>
         </div>
-        <br/>
         <br/>
         <div class="layui-row">
             <div class="layui-col-xs1">

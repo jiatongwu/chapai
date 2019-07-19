@@ -6,19 +6,19 @@ import org.mybatis.dynamic.sql.SqlColumn;
 import org.mybatis.dynamic.sql.SqlTable;
 
 public final class DtBaojinsetDynamicSqlSupport {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.516+08:00", comments="Source Table: Dt_BaoJinSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.532+08:00", comments="Source Table: Dt_BaoJinSet")
     public static final DtBaojinset dtBaojinset = new DtBaojinset();
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.516+08:00", comments="Source field: Dt_BaoJinSet.id")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.532+08:00", comments="Source field: Dt_BaoJinSet.id")
     public static final SqlColumn<Integer> id = dtBaojinset.id;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.516+08:00", comments="Source field: Dt_BaoJinSet.DevcNum")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.533+08:00", comments="Source field: Dt_BaoJinSet.DevcNum")
     public static final SqlColumn<Integer> devcnum = dtBaojinset.devcnum;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.516+08:00", comments="Source field: Dt_BaoJinSet.BaoJin")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.533+08:00", comments="Source field: Dt_BaoJinSet.BaoJin")
     public static final SqlColumn<Integer> baojin = dtBaojinset.baojin;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.516+08:00", comments="Source Table: Dt_BaoJinSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.532+08:00", comments="Source Table: Dt_BaoJinSet")
     public static final class DtBaojinset extends SqlTable {
         public final SqlColumn<Integer> id = column("id", JDBCType.INTEGER);
 

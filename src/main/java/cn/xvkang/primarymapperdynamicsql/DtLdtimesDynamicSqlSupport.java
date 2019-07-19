@@ -6,19 +6,19 @@ import org.mybatis.dynamic.sql.SqlColumn;
 import org.mybatis.dynamic.sql.SqlTable;
 
 public final class DtLdtimesDynamicSqlSupport {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.592+08:00", comments="Source Table: Dt_ldTimes")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.602+08:00", comments="Source Table: Dt_ldTimes")
     public static final DtLdtimes dtLdtimes = new DtLdtimes();
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.592+08:00", comments="Source field: Dt_ldTimes.id")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.602+08:00", comments="Source field: Dt_ldTimes.id")
     public static final SqlColumn<Integer> id = dtLdtimes.id;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.592+08:00", comments="Source field: Dt_ldTimes.DevcNo")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.602+08:00", comments="Source field: Dt_ldTimes.DevcNo")
     public static final SqlColumn<Integer> devcno = dtLdtimes.devcno;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.593+08:00", comments="Source field: Dt_ldTimes.times")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.602+08:00", comments="Source field: Dt_ldTimes.times")
     public static final SqlColumn<String> times = dtLdtimes.times;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.592+08:00", comments="Source Table: Dt_ldTimes")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.602+08:00", comments="Source Table: Dt_ldTimes")
     public static final class DtLdtimes extends SqlTable {
         public final SqlColumn<Integer> id = column("id", JDBCType.INTEGER);
 

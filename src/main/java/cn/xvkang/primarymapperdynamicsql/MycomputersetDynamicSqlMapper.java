@@ -30,19 +30,19 @@ import org.mybatis.dynamic.sql.util.SqlProviderAdapter;
 
 @Mapper
 public interface MycomputersetDynamicSqlMapper {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.722+08:00", comments="Source Table: MYCOMPUTERSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.704+08:00", comments="Source Table: MYCOMPUTERSET")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     long count(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.722+08:00", comments="Source Table: MYCOMPUTERSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.704+08:00", comments="Source Table: MYCOMPUTERSET")
     @DeleteProvider(type=SqlProviderAdapter.class, method="delete")
     int delete(DeleteStatementProvider deleteStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.722+08:00", comments="Source Table: MYCOMPUTERSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.704+08:00", comments="Source Table: MYCOMPUTERSET")
     @InsertProvider(type=SqlProviderAdapter.class, method="insert")
     int insert(InsertStatementProvider<Mycomputerset> insertStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.722+08:00", comments="Source Table: MYCOMPUTERSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.704+08:00", comments="Source Table: MYCOMPUTERSET")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @Results(id="MycomputersetResult", value = {
         @Result(column="PCName", property="pcname", jdbcType=JdbcType.VARCHAR),
@@ -50,22 +50,22 @@ public interface MycomputersetDynamicSqlMapper {
     })
     List<Mycomputerset> selectMany(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.722+08:00", comments="Source Table: MYCOMPUTERSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.704+08:00", comments="Source Table: MYCOMPUTERSET")
     @UpdateProvider(type=SqlProviderAdapter.class, method="update")
     int update(UpdateStatementProvider updateStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.722+08:00", comments="Source Table: MYCOMPUTERSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.704+08:00", comments="Source Table: MYCOMPUTERSET")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<Long>> countByExample() {
         return SelectDSL.selectWithMapper(this::count, SqlBuilder.count())
                 .from(mycomputerset);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.722+08:00", comments="Source Table: MYCOMPUTERSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.704+08:00", comments="Source Table: MYCOMPUTERSET")
     default DeleteDSL<MyBatis3DeleteModelAdapter<Integer>> deleteByExample() {
         return DeleteDSL.deleteFromWithMapper(this::delete, mycomputerset);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.722+08:00", comments="Source Table: MYCOMPUTERSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.704+08:00", comments="Source Table: MYCOMPUTERSET")
     default int insert(Mycomputerset record) {
         return insert(SqlBuilder.insert(record)
                 .into(mycomputerset)
@@ -75,7 +75,7 @@ public interface MycomputersetDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.722+08:00", comments="Source Table: MYCOMPUTERSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.704+08:00", comments="Source Table: MYCOMPUTERSET")
     default int insertSelective(Mycomputerset record) {
         return insert(SqlBuilder.insert(record)
                 .into(mycomputerset)
@@ -85,26 +85,26 @@ public interface MycomputersetDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.722+08:00", comments="Source Table: MYCOMPUTERSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.704+08:00", comments="Source Table: MYCOMPUTERSET")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Mycomputerset>>> selectByExample() {
         return SelectDSL.selectWithMapper(this::selectMany, pcname, ctrlnumber)
                 .from(mycomputerset);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.722+08:00", comments="Source Table: MYCOMPUTERSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.704+08:00", comments="Source Table: MYCOMPUTERSET")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Mycomputerset>>> selectDistinctByExample() {
         return SelectDSL.selectDistinctWithMapper(this::selectMany, pcname, ctrlnumber)
                 .from(mycomputerset);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.722+08:00", comments="Source Table: MYCOMPUTERSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.704+08:00", comments="Source Table: MYCOMPUTERSET")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExample(Mycomputerset record) {
         return UpdateDSL.updateWithMapper(this::update, mycomputerset)
                 .set(pcname).equalTo(record::getPcname)
                 .set(ctrlnumber).equalTo(record::getCtrlnumber);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-16T10:08:57.722+08:00", comments="Source Table: MYCOMPUTERSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.705+08:00", comments="Source Table: MYCOMPUTERSET")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExampleSelective(Mycomputerset record) {
         return UpdateDSL.updateWithMapper(this::update, mycomputerset)
                 .set(pcname).equalToWhenPresent(record::getPcname)
