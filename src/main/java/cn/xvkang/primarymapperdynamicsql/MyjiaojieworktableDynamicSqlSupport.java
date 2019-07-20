@@ -8,109 +8,109 @@ import org.mybatis.dynamic.sql.SqlColumn;
 import org.mybatis.dynamic.sql.SqlTable;
 
 public final class MyjiaojieworktableDynamicSqlSupport {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.770+08:00", comments="Source Table: MYjiaojieWorkTable")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.354+08:00", comments="Source Table: MYjiaojieWorkTable")
     public static final Myjiaojieworktable myjiaojieworktable = new Myjiaojieworktable();
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.770+08:00", comments="Source field: MYjiaojieWorkTable.JiaoWorkName")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.354+08:00", comments="Source field: MYjiaojieWorkTable.JiaoWorkName")
     public static final SqlColumn<String> jiaoworkname = myjiaojieworktable.jiaoworkname;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.770+08:00", comments="Source field: MYjiaojieWorkTable.JieWorkName")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.354+08:00", comments="Source field: MYjiaojieWorkTable.JieWorkName")
     public static final SqlColumn<String> jieworkname = myjiaojieworktable.jieworkname;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.770+08:00", comments="Source field: MYjiaojieWorkTable.GoWorkTime")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.354+08:00", comments="Source field: MYjiaojieWorkTable.GoWorkTime")
     public static final SqlColumn<Date> goworktime = myjiaojieworktable.goworktime;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.770+08:00", comments="Source field: MYjiaojieWorkTable.AfterWorkTime")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.354+08:00", comments="Source field: MYjiaojieWorkTable.AfterWorkTime")
     public static final SqlColumn<Date> afterworktime = myjiaojieworktable.afterworktime;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.770+08:00", comments="Source field: MYjiaojieWorkTable.StopYingSF")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.354+08:00", comments="Source field: MYjiaojieWorkTable.StopYingSF")
     public static final SqlColumn<BigDecimal> stopyingsf = myjiaojieworktable.stopyingsf;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.770+08:00", comments="Source field: MYjiaojieWorkTable.StopShiSF")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.354+08:00", comments="Source field: MYjiaojieWorkTable.StopShiSF")
     public static final SqlColumn<BigDecimal> stopshisf = myjiaojieworktable.stopshisf;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.770+08:00", comments="Source field: MYjiaojieWorkTable.ValueCardDeduct")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.354+08:00", comments="Source field: MYjiaojieWorkTable.ValueCardDeduct")
     public static final SqlColumn<BigDecimal> valuecarddeduct = myjiaojieworktable.valuecarddeduct;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.770+08:00", comments="Source field: MYjiaojieWorkTable.ATypeSF")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.354+08:00", comments="Source field: MYjiaojieWorkTable.ATypeSF")
     public static final SqlColumn<BigDecimal> atypesf = myjiaojieworktable.atypesf;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.770+08:00", comments="Source field: MYjiaojieWorkTable.BTypeSF")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.354+08:00", comments="Source field: MYjiaojieWorkTable.BTypeSF")
     public static final SqlColumn<BigDecimal> btypesf = myjiaojieworktable.btypesf;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.770+08:00", comments="Source field: MYjiaojieWorkTable.CTypeSF")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.354+08:00", comments="Source field: MYjiaojieWorkTable.CTypeSF")
     public static final SqlColumn<BigDecimal> ctypesf = myjiaojieworktable.ctypesf;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.770+08:00", comments="Source field: MYjiaojieWorkTable.DTypeSF")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.354+08:00", comments="Source field: MYjiaojieWorkTable.DTypeSF")
     public static final SqlColumn<BigDecimal> dtypesf = myjiaojieworktable.dtypesf;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.770+08:00", comments="Source field: MYjiaojieWorkTable.ETypeSF")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.354+08:00", comments="Source field: MYjiaojieWorkTable.ETypeSF")
     public static final SqlColumn<BigDecimal> etypesf = myjiaojieworktable.etypesf;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.770+08:00", comments="Source field: MYjiaojieWorkTable.FTypeSF")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.354+08:00", comments="Source field: MYjiaojieWorkTable.FTypeSF")
     public static final SqlColumn<BigDecimal> ftypesf = myjiaojieworktable.ftypesf;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.770+08:00", comments="Source field: MYjiaojieWorkTable.GTypeSF")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.354+08:00", comments="Source field: MYjiaojieWorkTable.GTypeSF")
     public static final SqlColumn<BigDecimal> gtypesf = myjiaojieworktable.gtypesf;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.770+08:00", comments="Source field: MYjiaojieWorkTable.HTypeSF")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.354+08:00", comments="Source field: MYjiaojieWorkTable.HTypeSF")
     public static final SqlColumn<BigDecimal> htypesf = myjiaojieworktable.htypesf;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.770+08:00", comments="Source field: MYjiaojieWorkTable.SendCard")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.354+08:00", comments="Source field: MYjiaojieWorkTable.SendCard")
     public static final SqlColumn<Integer> sendcard = myjiaojieworktable.sendcard;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.770+08:00", comments="Source field: MYjiaojieWorkTable.RetrieveCard")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.354+08:00", comments="Source field: MYjiaojieWorkTable.RetrieveCard")
     public static final SqlColumn<Integer> retrievecard = myjiaojieworktable.retrievecard;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.770+08:00", comments="Source field: MYjiaojieWorkTable.InZongNumber")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.354+08:00", comments="Source field: MYjiaojieWorkTable.InZongNumber")
     public static final SqlColumn<Integer> inzongnumber = myjiaojieworktable.inzongnumber;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.770+08:00", comments="Source field: MYjiaojieWorkTable.OutZongNumber")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.354+08:00", comments="Source field: MYjiaojieWorkTable.OutZongNumber")
     public static final SqlColumn<Integer> outzongnumber = myjiaojieworktable.outzongnumber;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.770+08:00", comments="Source field: MYjiaojieWorkTable.ATypeCarNum")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.354+08:00", comments="Source field: MYjiaojieWorkTable.ATypeCarNum")
     public static final SqlColumn<Integer> atypecarnum = myjiaojieworktable.atypecarnum;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.770+08:00", comments="Source field: MYjiaojieWorkTable.BTypeCarNum")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.354+08:00", comments="Source field: MYjiaojieWorkTable.BTypeCarNum")
     public static final SqlColumn<Integer> btypecarnum = myjiaojieworktable.btypecarnum;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.770+08:00", comments="Source field: MYjiaojieWorkTable.CTypeCarNum")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.355+08:00", comments="Source field: MYjiaojieWorkTable.CTypeCarNum")
     public static final SqlColumn<Integer> ctypecarnum = myjiaojieworktable.ctypecarnum;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.770+08:00", comments="Source field: MYjiaojieWorkTable.DTypeCarNum")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.355+08:00", comments="Source field: MYjiaojieWorkTable.DTypeCarNum")
     public static final SqlColumn<Integer> dtypecarnum = myjiaojieworktable.dtypecarnum;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.770+08:00", comments="Source field: MYjiaojieWorkTable.ETypeCarNum")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.355+08:00", comments="Source field: MYjiaojieWorkTable.ETypeCarNum")
     public static final SqlColumn<Integer> etypecarnum = myjiaojieworktable.etypecarnum;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.770+08:00", comments="Source field: MYjiaojieWorkTable.FTypeCarNum")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.355+08:00", comments="Source field: MYjiaojieWorkTable.FTypeCarNum")
     public static final SqlColumn<Integer> ftypecarnum = myjiaojieworktable.ftypecarnum;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.770+08:00", comments="Source field: MYjiaojieWorkTable.GTypeCarNum")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.355+08:00", comments="Source field: MYjiaojieWorkTable.GTypeCarNum")
     public static final SqlColumn<Integer> gtypecarnum = myjiaojieworktable.gtypecarnum;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.771+08:00", comments="Source field: MYjiaojieWorkTable.HTypeCarNum")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.355+08:00", comments="Source field: MYjiaojieWorkTable.HTypeCarNum")
     public static final SqlColumn<Integer> htypecarnum = myjiaojieworktable.htypecarnum;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.771+08:00", comments="Source field: MYjiaojieWorkTable.RenGOpen")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.355+08:00", comments="Source field: MYjiaojieWorkTable.RenGOpen")
     public static final SqlColumn<Integer> rengopen = myjiaojieworktable.rengopen;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.771+08:00", comments="Source field: MYjiaojieWorkTable.ShouGOpen")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.355+08:00", comments="Source field: MYjiaojieWorkTable.ShouGOpen")
     public static final SqlColumn<Integer> shougopen = myjiaojieworktable.shougopen;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.771+08:00", comments="Source field: MYjiaojieWorkTable.SFCarNum")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.355+08:00", comments="Source field: MYjiaojieWorkTable.SFCarNum")
     public static final SqlColumn<Integer> sfcarnum = myjiaojieworktable.sfcarnum;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.771+08:00", comments="Source field: MYjiaojieWorkTable.MFCarNum")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.355+08:00", comments="Source field: MYjiaojieWorkTable.MFCarNum")
     public static final SqlColumn<Integer> mfcarnum = myjiaojieworktable.mfcarnum;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.771+08:00", comments="Source field: MYjiaojieWorkTable.HappenSFCarNum")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.355+08:00", comments="Source field: MYjiaojieWorkTable.HappenSFCarNum")
     public static final SqlColumn<Integer> happensfcarnum = myjiaojieworktable.happensfcarnum;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.771+08:00", comments="Source field: MYjiaojieWorkTable.Remarks")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.355+08:00", comments="Source field: MYjiaojieWorkTable.Remarks")
     public static final SqlColumn<String> remarks = myjiaojieworktable.remarks;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.770+08:00", comments="Source Table: MYjiaojieWorkTable")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.354+08:00", comments="Source Table: MYjiaojieWorkTable")
     public static final class Myjiaojieworktable extends SqlTable {
         public final SqlColumn<String> jiaoworkname = column("JiaoWorkName", JDBCType.VARCHAR);
 

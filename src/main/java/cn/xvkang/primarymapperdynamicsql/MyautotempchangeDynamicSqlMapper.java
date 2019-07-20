@@ -33,25 +33,25 @@ import org.mybatis.dynamic.sql.util.SqlProviderAdapter;
 
 @Mapper
 public interface MyautotempchangeDynamicSqlMapper {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.635+08:00", comments="Source Table: MYAutoTempChange")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.138+08:00", comments="Source Table: MYAutoTempChange")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     long count(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.635+08:00", comments="Source Table: MYAutoTempChange")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.138+08:00", comments="Source Table: MYAutoTempChange")
     @DeleteProvider(type=SqlProviderAdapter.class, method="delete")
     int delete(DeleteStatementProvider deleteStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.635+08:00", comments="Source Table: MYAutoTempChange")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.138+08:00", comments="Source Table: MYAutoTempChange")
     @InsertProvider(type=SqlProviderAdapter.class, method="insert")
     @SelectKey(statement="SELECT SCOPE_IDENTITY()", keyProperty="record.id", before=false, resultType=Integer.class)
     int insert(InsertStatementProvider<Myautotempchange> insertStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.635+08:00", comments="Source Table: MYAutoTempChange")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.138+08:00", comments="Source Table: MYAutoTempChange")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @ResultMap("MyautotempchangeResult")
     Myautotempchange selectOne(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.635+08:00", comments="Source Table: MYAutoTempChange")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.138+08:00", comments="Source Table: MYAutoTempChange")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @Results(id="MyautotempchangeResult", value = {
         @Result(column="ID", property="id", jdbcType=JdbcType.INTEGER, id=true),
@@ -65,22 +65,22 @@ public interface MyautotempchangeDynamicSqlMapper {
     })
     List<Myautotempchange> selectMany(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.635+08:00", comments="Source Table: MYAutoTempChange")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.138+08:00", comments="Source Table: MYAutoTempChange")
     @UpdateProvider(type=SqlProviderAdapter.class, method="update")
     int update(UpdateStatementProvider updateStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.635+08:00", comments="Source Table: MYAutoTempChange")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.138+08:00", comments="Source Table: MYAutoTempChange")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<Long>> countByExample() {
         return SelectDSL.selectWithMapper(this::count, SqlBuilder.count())
                 .from(myautotempchange);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.635+08:00", comments="Source Table: MYAutoTempChange")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.138+08:00", comments="Source Table: MYAutoTempChange")
     default DeleteDSL<MyBatis3DeleteModelAdapter<Integer>> deleteByExample() {
         return DeleteDSL.deleteFromWithMapper(this::delete, myautotempchange);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.635+08:00", comments="Source Table: MYAutoTempChange")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.138+08:00", comments="Source Table: MYAutoTempChange")
     default int deleteByPrimaryKey(Integer id_) {
         return DeleteDSL.deleteFromWithMapper(this::delete, myautotempchange)
                 .where(id, isEqualTo(id_))
@@ -88,7 +88,7 @@ public interface MyautotempchangeDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.635+08:00", comments="Source Table: MYAutoTempChange")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.138+08:00", comments="Source Table: MYAutoTempChange")
     default int insert(Myautotempchange record) {
         return insert(SqlBuilder.insert(record)
                 .into(myautotempchange)
@@ -103,7 +103,7 @@ public interface MyautotempchangeDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.635+08:00", comments="Source Table: MYAutoTempChange")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.138+08:00", comments="Source Table: MYAutoTempChange")
     default int insertSelective(Myautotempchange record) {
         return insert(SqlBuilder.insert(record)
                 .into(myautotempchange)
@@ -118,19 +118,19 @@ public interface MyautotempchangeDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.635+08:00", comments="Source Table: MYAutoTempChange")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.138+08:00", comments="Source Table: MYAutoTempChange")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Myautotempchange>>> selectByExample() {
         return SelectDSL.selectWithMapper(this::selectMany, id, cph, carcardtype, intime, carvalidstartdate, carvalidenddate, downloadsignal, inout)
                 .from(myautotempchange);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.635+08:00", comments="Source Table: MYAutoTempChange")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.138+08:00", comments="Source Table: MYAutoTempChange")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Myautotempchange>>> selectDistinctByExample() {
         return SelectDSL.selectDistinctWithMapper(this::selectMany, id, cph, carcardtype, intime, carvalidstartdate, carvalidenddate, downloadsignal, inout)
                 .from(myautotempchange);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.636+08:00", comments="Source Table: MYAutoTempChange")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.138+08:00", comments="Source Table: MYAutoTempChange")
     default Myautotempchange selectByPrimaryKey(Integer id_) {
         return SelectDSL.selectWithMapper(this::selectOne, id, cph, carcardtype, intime, carvalidstartdate, carvalidenddate, downloadsignal, inout)
                 .from(myautotempchange)
@@ -139,7 +139,7 @@ public interface MyautotempchangeDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.636+08:00", comments="Source Table: MYAutoTempChange")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.138+08:00", comments="Source Table: MYAutoTempChange")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExample(Myautotempchange record) {
         return UpdateDSL.updateWithMapper(this::update, myautotempchange)
                 .set(cph).equalTo(record::getCph)
@@ -151,7 +151,7 @@ public interface MyautotempchangeDynamicSqlMapper {
                 .set(inout).equalTo(record::getInout);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.636+08:00", comments="Source Table: MYAutoTempChange")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.138+08:00", comments="Source Table: MYAutoTempChange")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExampleSelective(Myautotempchange record) {
         return UpdateDSL.updateWithMapper(this::update, myautotempchange)
                 .set(cph).equalToWhenPresent(record::getCph)
@@ -163,7 +163,7 @@ public interface MyautotempchangeDynamicSqlMapper {
                 .set(inout).equalToWhenPresent(record::getInout);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.636+08:00", comments="Source Table: MYAutoTempChange")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.138+08:00", comments="Source Table: MYAutoTempChange")
     default int updateByPrimaryKey(Myautotempchange record) {
         return UpdateDSL.updateWithMapper(this::update, myautotempchange)
                 .set(cph).equalTo(record::getCph)
@@ -178,7 +178,7 @@ public interface MyautotempchangeDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.636+08:00", comments="Source Table: MYAutoTempChange")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.138+08:00", comments="Source Table: MYAutoTempChange")
     default int updateByPrimaryKeySelective(Myautotempchange record) {
         return UpdateDSL.updateWithMapper(this::update, myautotempchange)
                 .set(cph).equalToWhenPresent(record::getCph)

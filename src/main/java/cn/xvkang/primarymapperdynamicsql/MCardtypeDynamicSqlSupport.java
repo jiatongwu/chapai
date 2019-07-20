@@ -6,22 +6,22 @@ import org.mybatis.dynamic.sql.SqlColumn;
 import org.mybatis.dynamic.sql.SqlTable;
 
 public final class MCardtypeDynamicSqlSupport {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.773+08:00", comments="Source Table: M_CardType")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.360+08:00", comments="Source Table: M_CardType")
     public static final MCardtype MCardtype = new MCardtype();
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.773+08:00", comments="Source field: M_CardType.carid")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.360+08:00", comments="Source field: M_CardType.carid")
     public static final SqlColumn<Integer> carid = MCardtype.carid;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.773+08:00", comments="Source field: M_CardType.carCname")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.360+08:00", comments="Source field: M_CardType.carCname")
     public static final SqlColumn<String> carcname = MCardtype.carcname;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.773+08:00", comments="Source field: M_CardType.carEname")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.360+08:00", comments="Source field: M_CardType.carEname")
     public static final SqlColumn<String> carename = MCardtype.carename;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.773+08:00", comments="Source field: M_CardType.carMark")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.360+08:00", comments="Source field: M_CardType.carMark")
     public static final SqlColumn<String> carmark = MCardtype.carmark;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.773+08:00", comments="Source Table: M_CardType")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.360+08:00", comments="Source Table: M_CardType")
     public static final class MCardtype extends SqlTable {
         public final SqlColumn<Integer> carid = column("carid", JDBCType.INTEGER);
 

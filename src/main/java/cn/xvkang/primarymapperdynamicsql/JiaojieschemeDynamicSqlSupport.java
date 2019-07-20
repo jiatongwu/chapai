@@ -6,31 +6,31 @@ import org.mybatis.dynamic.sql.SqlColumn;
 import org.mybatis.dynamic.sql.SqlTable;
 
 public final class JiaojieschemeDynamicSqlSupport {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.625+08:00", comments="Source Table: JiaoJieScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.130+08:00", comments="Source Table: JiaoJieScheme")
     public static final Jiaojiescheme jiaojiescheme = new Jiaojiescheme();
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.625+08:00", comments="Source field: JiaoJieScheme.SchId")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.131+08:00", comments="Source field: JiaoJieScheme.SchId")
     public static final SqlColumn<Integer> schid = jiaojiescheme.schid;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.625+08:00", comments="Source field: JiaoJieScheme.SchName")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.131+08:00", comments="Source field: JiaoJieScheme.SchName")
     public static final SqlColumn<String> schname = jiaojiescheme.schname;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.625+08:00", comments="Source field: JiaoJieScheme.FieldName")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.131+08:00", comments="Source field: JiaoJieScheme.FieldName")
     public static final SqlColumn<String> fieldname = jiaojiescheme.fieldname;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.625+08:00", comments="Source field: JiaoJieScheme.Operators")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.131+08:00", comments="Source field: JiaoJieScheme.Operators")
     public static final SqlColumn<String> operators = jiaojiescheme.operators;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.625+08:00", comments="Source field: JiaoJieScheme.Selectvalues")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.131+08:00", comments="Source field: JiaoJieScheme.Selectvalues")
     public static final SqlColumn<String> selectvalues = jiaojiescheme.selectvalues;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.626+08:00", comments="Source field: JiaoJieScheme.startime")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.131+08:00", comments="Source field: JiaoJieScheme.startime")
     public static final SqlColumn<String> startime = jiaojiescheme.startime;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.626+08:00", comments="Source field: JiaoJieScheme.endtime")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.131+08:00", comments="Source field: JiaoJieScheme.endtime")
     public static final SqlColumn<String> endtime = jiaojiescheme.endtime;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.625+08:00", comments="Source Table: JiaoJieScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.131+08:00", comments="Source Table: JiaoJieScheme")
     public static final class Jiaojiescheme extends SqlTable {
         public final SqlColumn<Integer> schid = column("SchId", JDBCType.INTEGER);
 

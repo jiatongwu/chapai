@@ -6,25 +6,25 @@ import org.mybatis.dynamic.sql.SqlColumn;
 import org.mybatis.dynamic.sql.SqlTable;
 
 public final class MyquanxiansetDynamicSqlSupport {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.739+08:00", comments="Source Table: MYQUANXIANSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.299+08:00", comments="Source Table: MYQUANXIANSET")
     public static final Myquanxianset myquanxianset = new Myquanxianset();
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.739+08:00", comments="Source field: MYQUANXIANSET.FormName")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.300+08:00", comments="Source field: MYQUANXIANSET.FormName")
     public static final SqlColumn<String> formname = myquanxianset.formname;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.739+08:00", comments="Source field: MYQUANXIANSET.MenuName")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.300+08:00", comments="Source field: MYQUANXIANSET.MenuName")
     public static final SqlColumn<String> menuname = myquanxianset.menuname;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.739+08:00", comments="Source field: MYQUANXIANSET.MenuText")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.300+08:00", comments="Source field: MYQUANXIANSET.MenuText")
     public static final SqlColumn<String> menutext = myquanxianset.menutext;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.739+08:00", comments="Source field: MYQUANXIANSET.ValidMark")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.300+08:00", comments="Source field: MYQUANXIANSET.ValidMark")
     public static final SqlColumn<String> validmark = myquanxianset.validmark;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.739+08:00", comments="Source field: MYQUANXIANSET.KEYVALUE")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.300+08:00", comments="Source field: MYQUANXIANSET.KEYVALUE")
     public static final SqlColumn<String> keyvalue = myquanxianset.keyvalue;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.739+08:00", comments="Source Table: MYQUANXIANSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.299+08:00", comments="Source Table: MYQUANXIANSET")
     public static final class Myquanxianset extends SqlTable {
         public final SqlColumn<String> formname = column("FormName", JDBCType.VARCHAR);
 

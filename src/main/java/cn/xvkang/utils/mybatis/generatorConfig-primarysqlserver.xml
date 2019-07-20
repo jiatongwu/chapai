@@ -11,22 +11,19 @@
 		<!-- <commentGenerator type="com.xvkang.ssm.utils.mybatisgenerator.CustomRemarksCommentGenerator"> 
 			<property name="suppressDate" value="true" /> 是否去除自动生成的注释 true：是 ： false:否 
 			<property name="suppressAllComments" value="true" /> </commentGenerator> -->
-<!--数据库驱动 -->
-	<!-- <property name="autoDelimitKeywords" value="false"/> -->
+		<!--数据库驱动 -->
+		<!-- <property name="autoDelimitKeywords" value="false"/> -->
 
-   <!-- 自动识别数据库关键字，默认false，如果设置为true -->
-   <!-- sqlserver -->
-   	
-        <property name="autoDelimitKeywords" value="false" />
+		<!-- 自动识别数据库关键字，默认false，如果设置为true -->
+		<!-- sqlserver -->
+
+		<property name="autoDelimitKeywords" value="false" />
 		<property name="beginningDelimiter" value="[" />
-		<property name="endingDelimiter" value="]" /> 
-		  <!-- 	
-        <property name="autoDelimitKeywords" value="true" />
-		<property name="beginningDelimiter" value="`" />
-		<property name="endingDelimiter" value="`" /> 
-    -->
-    
-		
+		<property name="endingDelimiter" value="]" />
+		<!-- <property name="autoDelimitKeywords" value="true" /> <property name="beginningDelimiter" 
+			value="`" /> <property name="endingDelimiter" value="`" /> -->
+
+
 		<plugin type="org.mybatis.generator.plugins.SerializablePlugin" />
 		<jdbcConnection
 			driverClass="net.sourceforge.jtds.jdbc.Driver"
@@ -34,7 +31,7 @@
 			userId="sa" password="wujiatong">
 			<property name="remarksReporting" value="true"></property>
 		</jdbcConnection>
-	
+
 
 		<javaTypeResolver>
 			<property name="forceBigDecimals" value="false" />
@@ -113,8 +110,8 @@
 		<table tableName="Dt_DoorData"
 			mapperName="DtDoordataDynamicSqlMapper">
 			<property name="useActualColumnNames" value="false" />
-			<!-- <generatedKey column="id" sqlStatement="SqlServer"
-				type="post" identity="true" /> -->
+			<!-- <generatedKey column="id" sqlStatement="SqlServer" type="post" identity="true" 
+				/> -->
 		</table>
 		<table tableName="Dt_Door_Holiday"
 			mapperName="DtDoorHolidayDynamicSqlMapper">
@@ -131,8 +128,8 @@
 		<table tableName="Dt_FlootSet"
 			mapperName="DtFlootsetDynamicSqlMapper">
 			<property name="useActualColumnNames" value="false" />
-			<!-- <generatedKey column="id" sqlStatement="SqlServer"
-				type="post" identity="true" /> -->
+			<!-- <generatedKey column="id" sqlStatement="SqlServer" type="post" identity="true" 
+				/> -->
 		</table>
 		<table tableName="Dt_FoorOutSet"
 			mapperName="DtFooroutsetDynamicSqlMapper">
@@ -161,8 +158,8 @@
 		<table tableName="Dt_Record"
 			mapperName="DtRecordDynamicSqlMapper">
 			<property name="useActualColumnNames" value="false" />
-			<!-- <generatedKey column="id" sqlStatement="SqlServer"
-				type="post" identity="true" /> -->
+			<!-- <generatedKey column="id" sqlStatement="SqlServer" type="post" identity="true" 
+				/> -->
 		</table>
 		<table tableName="Dt_SendData"
 			mapperName="DtSenddataDynamicSqlMapper">
@@ -173,8 +170,8 @@
 		<table tableName="Dt_TimeGroup"
 			mapperName="DtTimegroupDynamicSqlMapper">
 			<property name="useActualColumnNames" value="false" />
-			<!-- <generatedKey column="id" sqlStatement="SqlServer"
-				type="post" identity="true" /> -->
+			<!-- <generatedKey column="id" sqlStatement="SqlServer" type="post" identity="true" 
+				/> -->
 		</table>
 		<table tableName="Dt_TimingOpen"
 			mapperName="DtTimingopenDynamicSqlMapper">
@@ -227,8 +224,8 @@
 		<table tableName="JJCNEWSHENZHEN"
 			mapperName="JjcnewshenzhenDynamicSqlMapper">
 			<property name="useActualColumnNames" value="false" />
-			<!-- <generatedKey column="id" sqlStatement="SqlServer"
-				type="post" identity="true" /> -->
+			<!-- <generatedKey column="id" sqlStatement="SqlServer" type="post" identity="true" 
+				/> -->
 		</table>
 		<table tableName="JiaoJieScheme"
 			mapperName="JiaojieschemeDynamicSqlMapper">
@@ -239,8 +236,8 @@
 		<table tableName="MJDownCardOutTimeSettb"
 			mapperName="MjdowncardouttimesettbDynamicSqlMapper">
 			<property name="useActualColumnNames" value="false" />
-			<!-- <generatedKey column="id" sqlStatement="SqlServer"
-				type="post" identity="true" /> -->
+			<!-- <generatedKey column="id" sqlStatement="SqlServer" type="post" identity="true" 
+				/> -->
 		</table>
 		<table tableName="MJSelectScheme"
 			mapperName="MjselectschemeDynamicSqlMapper">
@@ -299,44 +296,44 @@
 		<table tableName="MYCARGOOUTRECORDREPORT"
 			mapperName="MycargooutrecordreportDynamicSqlMapper">
 			<property name="useActualColumnNames" value="false" />
-			<!-- <generatedKey column="id" sqlStatement="SqlServer"
-				type="post" identity="true" /> -->
+			<!-- <generatedKey column="id" sqlStatement="SqlServer" type="post" identity="true" 
+				/> -->
 		</table>
 		<table tableName="MYCHECHANGNORMALSHOUFEI"
 			mapperName="MychechangnormalshoufeiDynamicSqlMapper">
 			<property name="useActualColumnNames" value="false" />
-			<!-- <generatedKey column="id" sqlStatement="SqlServer"
-				type="post" identity="true" /> -->
+			<!-- <generatedKey column="id" sqlStatement="SqlServer" type="post" identity="true" 
+				/> -->
 		</table>
 		<table tableName="MYCHECHANGPASS"
 			mapperName="MychechangpassDynamicSqlMapper">
 			<property name="useActualColumnNames" value="false" />
-			<!-- <generatedKey column="id" sqlStatement="SqlServer"
-				type="post" identity="true" /> -->
+			<!-- <generatedKey column="id" sqlStatement="SqlServer" type="post" identity="true" 
+				/> -->
 		</table>
 		<table tableName="MYCHECHANGSTATUS"
 			mapperName="MychechangstatusDynamicSqlMapper">
 			<property name="useActualColumnNames" value="false" />
-			<!-- <generatedKey column="id" sqlStatement="SqlServer"
-				type="post" identity="true" /> -->
+			<!-- <generatedKey column="id" sqlStatement="SqlServer" type="post" identity="true" 
+				/> -->
 		</table>
 		<table tableName="MYCHECHANGXITONGSET"
 			mapperName="MychechangxitongsetDynamicSqlMapper">
 			<property name="useActualColumnNames" value="false" />
-			<!-- <generatedKey column="id" sqlStatement="SqlServer"
-				type="post" identity="true" /> -->
+			<!-- <generatedKey column="id" sqlStatement="SqlServer" type="post" identity="true" 
+				/> -->
 		</table>
 		<table tableName="MYCOMPUTERSET"
 			mapperName="MycomputersetDynamicSqlMapper">
 			<property name="useActualColumnNames" value="false" />
-			<!-- <generatedKey column="id" sqlStatement="SqlServer"
-				type="post" identity="true" /> -->
+			<!-- <generatedKey column="id" sqlStatement="SqlServer" type="post" identity="true" 
+				/> -->
 		</table>
 		<table tableName="MYCarCancelTable"
 			mapperName="MycarcanceltableDynamicSqlMapper">
 			<property name="useActualColumnNames" value="false" />
-			<!-- <generatedKey column="id" sqlStatement="SqlServer"
-				type="post" identity="true" /> -->
+			<!-- <generatedKey column="id" sqlStatement="SqlServer" type="post" identity="true" 
+				/> -->
 		</table>
 		<table tableName="MYCardType"
 			mapperName="MycardtypeDynamicSqlMapper">
@@ -353,20 +350,20 @@
 		<table tableName="MYGANGWEIKOUSET"
 			mapperName="MygangweikousetDynamicSqlMapper">
 			<property name="useActualColumnNames" value="false" />
-			<!-- <generatedKey column="id" sqlStatement="SqlServer"
-				type="post" identity="true" /> -->
+			<!-- <generatedKey column="id" sqlStatement="SqlServer" type="post" identity="true" 
+				/> -->
 		</table>
 		<table tableName="MYICIDSTATUS"
 			mapperName="MyicidstatusDynamicSqlMapper">
 			<property name="useActualColumnNames" value="false" />
-			<!-- <generatedKey column="id" sqlStatement="SqlServer"
-				type="post" identity="true" /> -->
+			<!-- <generatedKey column="id" sqlStatement="SqlServer" type="post" identity="true" 
+				/> -->
 		</table>
 		<table tableName="MYICLOST"
 			mapperName="MyiclostDynamicSqlMapper">
 			<property name="useActualColumnNames" value="false" />
-			<!-- <generatedKey column="id" sqlStatement="SqlServer"
-				type="post" identity="true" /> -->
+			<!-- <generatedKey column="id" sqlStatement="SqlServer" type="post" identity="true" 
+				/> -->
 		</table>
 		<table tableName="MYICMONEY"
 			mapperName="MyicmoneyDynamicSqlMapper">
@@ -377,8 +374,8 @@
 		<table tableName="MYICVALID"
 			mapperName="MyicvalidDynamicSqlMapper">
 			<property name="useActualColumnNames" value="false" />
-			<!-- <generatedKey column="id" sqlStatement="SqlServer"
-				type="post" identity="true" /> -->
+			<!-- <generatedKey column="id" sqlStatement="SqlServer" type="post" identity="true" 
+				/> -->
 		</table>
 		<table tableName="MYJIBENZILIAO"
 			mapperName="MyjibenziliaoDynamicSqlMapper">
@@ -389,37 +386,37 @@
 		<table tableName="MYMENJINRECORD"
 			mapperName="MymenjinrecordDynamicSqlMapper">
 			<property name="useActualColumnNames" value="false" />
-			<!-- <generatedKey column="id" sqlStatement="SqlServer"
-				type="post" identity="true" /> -->
+			<!-- <generatedKey column="id" sqlStatement="SqlServer" type="post" identity="true" 
+				/> -->
 		</table>
 		<table tableName="MYMIANFEISHIYOU"
 			mapperName="MymianfeishiyouDynamicSqlMapper">
 			<property name="useActualColumnNames" value="false" />
-			<!-- <generatedKey column="id" sqlStatement="SqlServer"
-				type="post" identity="true" /> -->
+			<!-- <generatedKey column="id" sqlStatement="SqlServer" type="post" identity="true" 
+				/> -->
 		</table>
 		<table tableName="MYOffLine"
 			mapperName="MyofflineDynamicSqlMapper">
 			<property name="useActualColumnNames" value="false" />
-			<!-- <generatedKey column="id" sqlStatement="SqlServer"
-				type="post" identity="true" /> -->
+			<!-- <generatedKey column="id" sqlStatement="SqlServer" type="post" identity="true" 
+				/> -->
 		</table>
 		<table tableName="MYPHOTOIMAGE"
 			mapperName="MyphotoimageDynamicSqlMapper">
 			<property name="useActualColumnNames" value="false" />
-			<!-- <generatedKey column="id" sqlStatement="SqlServer"
-				type="post" identity="true" /> -->
+			<!-- <generatedKey column="id" sqlStatement="SqlServer" type="post" identity="true" 
+				/> -->
 		</table>
 		<table tableName="MYPrint" mapperName="MyprintDynamicSqlMapper">
 			<property name="useActualColumnNames" value="false" />
-			<!-- <generatedKey column="id" sqlStatement="SqlServer"
-				type="post" identity="true" /> -->
+			<!-- <generatedKey column="id" sqlStatement="SqlServer" type="post" identity="true" 
+				/> -->
 		</table>
 		<table tableName="MYQUANXIANSET"
 			mapperName="MyquanxiansetDynamicSqlMapper">
 			<property name="useActualColumnNames" value="false" />
-		<!-- 	<generatedKey column="id" sqlStatement="SqlServer"
-				type="post" identity="true" /> -->
+			<!-- <generatedKey column="id" sqlStatement="SqlServer" type="post" identity="true" 
+				/> -->
 		</table>
 		<table tableName="MYRECORDMEMORY"
 			mapperName="MyrecordmemoryDynamicSqlMapper">
@@ -454,14 +451,14 @@
 		<table tableName="MYTBMEISHUOSET"
 			mapperName="MytbmeishuosetDynamicSqlMapper">
 			<property name="useActualColumnNames" value="false" />
-			<generatedKey column="CtrlNumber" sqlStatement="SqlServer"
-				 />
+			<generatedKey column="CtrlNumber"
+				sqlStatement="SqlServer" />
 		</table>
 		<table tableName="MYTEMPISSUE"
 			mapperName="MytempissueDynamicSqlMapper">
 			<property name="useActualColumnNames" value="false" />
-			<!-- <generatedKey column="id" sqlStatement="SqlServer"
-				type="post" identity="true" /> -->
+			<!-- <generatedKey column="id" sqlStatement="SqlServer" type="post" identity="true" 
+				/> -->
 		</table>
 		<table tableName="MYVideoSet"
 			mapperName="MyvideosetDynamicSqlMapper">
@@ -472,20 +469,20 @@
 		<table tableName="MYWORKSTATIONSET"
 			mapperName="MyworkstationsetDynamicSqlMapper">
 			<property name="useActualColumnNames" value="false" />
-			<!-- <generatedKey column="id" sqlStatement="SqlServer"
-				type="post" identity="true" /> -->
+			<!-- <generatedKey column="id" sqlStatement="SqlServer" type="post" identity="true" 
+				/> -->
 		</table>
 		<table tableName="MYZBPARK"
 			mapperName="MyzbparkDynamicSqlMapper">
 			<property name="useActualColumnNames" value="false" />
-		<!-- 	<generatedKey column="id" sqlStatement="SqlServer"
-				type="post" identity="true" /> -->
+			<!-- <generatedKey column="id" sqlStatement="SqlServer" type="post" identity="true" 
+				/> -->
 		</table>
 		<table tableName="MYZBPARK2"
 			mapperName="Myzbpark2DynamicSqlMapper">
 			<property name="useActualColumnNames" value="false" />
-		<!-- 	<generatedKey column="id" sqlStatement="SqlServer"
-				type="post" identity="true" /> -->
+			<!-- <generatedKey column="id" sqlStatement="SqlServer" type="post" identity="true" 
+				/> -->
 		</table>
 		<table tableName="MYZBPARKAutoCPH"
 			mapperName="MyzbparkautocphDynamicSqlMapper">
@@ -502,20 +499,18 @@
 		<table tableName="MYjiaojieWorkTable"
 			mapperName="MyjiaojieworktableDynamicSqlMapper">
 			<property name="useActualColumnNames" value="false" />
-		<!-- 	<generatedKey column="id" sqlStatement="SqlServer"
-				type="post" identity="true" /> -->
+			<!-- <generatedKey column="id" sqlStatement="SqlServer" type="post" identity="true" 
+				/> -->
 		</table>
 		<table tableName="M_CardType"
 			mapperName="MCardtypeDynamicSqlMapper">
 			<property name="useActualColumnNames" value="false" />
-			<generatedKey column="carid" sqlStatement="SqlServer"
-				  />
+			<generatedKey column="carid" sqlStatement="SqlServer" />
 		</table>
 		<table tableName="M_DoorData"
 			mapperName="MDoordataDynamicSqlMapper">
 			<property name="useActualColumnNames" value="false" />
-			<generatedKey column="MachNo" sqlStatement="SqlServer"
-				  />
+			<generatedKey column="MachNo" sqlStatement="SqlServer" />
 		</table>
 		<table tableName="M_DoorMapsB"
 			mapperName="MDoormapsbDynamicSqlMapper">
@@ -532,8 +527,7 @@
 		<table tableName="M_DoorTypeName"
 			mapperName="MDoortypenameDynamicSqlMapper">
 			<property name="useActualColumnNames" value="false" />
-			<generatedKey column="DoorID" sqlStatement="SqlServer"
-				 />
+			<generatedKey column="DoorID" sqlStatement="SqlServer" />
 		</table>
 		<table tableName="M_Door_Holiday"
 			mapperName="MDoorHolidayDynamicSqlMapper">
@@ -567,20 +561,20 @@
 		</table>
 		<table tableName="M_Record" mapperName="MRecordDynamicSqlMapper">
 			<property name="useActualColumnNames" value="false" />
-		<!-- 	<generatedKey column="id" sqlStatement="SqlServer"
-				type="post" identity="true" /> -->
+			<!-- <generatedKey column="id" sqlStatement="SqlServer" type="post" identity="true" 
+				/> -->
 		</table>
 		<table tableName="M_Records"
 			mapperName="MRecordsDynamicSqlMapper">
 			<property name="useActualColumnNames" value="false" />
-			<!-- <generatedKey column="id" sqlStatement="SqlServer"
-				type="post" identity="true" /> -->
+			<!-- <generatedKey column="id" sqlStatement="SqlServer" type="post" identity="true" 
+				/> -->
 		</table>
 		<table tableName="M_Rrecords_Filer"
 			mapperName="MRrecordsFilerDynamicSqlMapper">
 			<property name="useActualColumnNames" value="false" />
-			<!-- <generatedKey column="id" sqlStatement="SqlServer"
-				type="post" identity="true" /> -->
+			<!-- <generatedKey column="id" sqlStatement="SqlServer" type="post" identity="true" 
+				/> -->
 		</table>
 		<table tableName="M_SendData"
 			mapperName="MSenddataDynamicSqlMapper">
@@ -591,8 +585,8 @@
 		<table tableName="M_TimeGroup"
 			mapperName="MTimegroupDynamicSqlMapper">
 			<property name="useActualColumnNames" value="false" />
-			<!-- <generatedKey column="id" sqlStatement="SqlServer"
-				type="post" identity="true" /> -->
+			<!-- <generatedKey column="id" sqlStatement="SqlServer" type="post" identity="true" 
+				/> -->
 		</table>
 		<table tableName="M_TimeOutSet"
 			mapperName="MTimeoutsetDynamicSqlMapper">
@@ -609,38 +603,38 @@
 		<table tableName="MyAutoCPHSet"
 			mapperName="MyautocphsetDynamicSqlMapper">
 			<property name="useActualColumnNames" value="false" />
-			<!-- <generatedKey column="id" sqlStatement="SqlServer"
-				type="post" identity="true" / >-->
+			<!-- <generatedKey column="id" sqlStatement="SqlServer" type="post" identity="true" 
+				/ > -->
 		</table>
 		<table tableName="MyCommonality"
 			mapperName="MycommonalityDynamicSqlMapper">
 			<property name="useActualColumnNames" value="false" />
-			<!-- <generatedKey column="id" sqlStatement="SqlServer"
-				type="post" identity="true" /> -->
+			<!-- <generatedKey column="id" sqlStatement="SqlServer" type="post" identity="true" 
+				/> -->
 		</table>
 		<table tableName="MyEncryption"
 			mapperName="MyencryptionDynamicSqlMapper">
 			<property name="useActualColumnNames" value="false" />
-			<!-- <generatedKey column="id" sqlStatement="SqlServer"
-				type="post" identity="true" /> -->
+			<!-- <generatedKey column="id" sqlStatement="SqlServer" type="post" identity="true" 
+				/> -->
 		</table>
 		<table tableName="MyFreeCPH"
 			mapperName="MyfreecphDynamicSqlMapper">
 			<property name="useActualColumnNames" value="false" />
-		<!-- 	<generatedKey column="id" sqlStatement="SqlServer"
-				type="post" identity="true" /> -->
+			<!-- <generatedKey column="id" sqlStatement="SqlServer" type="post" identity="true" 
+				/> -->
 		</table>
 		<table tableName="MyHoliday"
 			mapperName="MyholidayDynamicSqlMapper">
 			<property name="useActualColumnNames" value="false" />
-		<!-- 	<generatedKey column="id" sqlStatement="SqlServer"
-				type="post" identity="true" /> -->
+			<!-- <generatedKey column="id" sqlStatement="SqlServer" type="post" identity="true" 
+				/> -->
 		</table>
 		<table tableName="MyHolidays"
 			mapperName="MyholidaysDynamicSqlMapper">
 			<property name="useActualColumnNames" value="false" />
-			<generatedKey column="HolidaysTime" sqlStatement="SqlServer"
-				/>
+			<generatedKey column="HolidaysTime"
+				sqlStatement="SqlServer" />
 		</table>
 		<table tableName="MyNoCPH" mapperName="MynocphDynamicSqlMapper">
 			<property name="useActualColumnNames" value="false" />
@@ -650,43 +644,42 @@
 		<table tableName="MyParkingGreeting"
 			mapperName="MyparkinggreetingDynamicSqlMapper">
 			<property name="useActualColumnNames" value="false" />
-			<!-- <generatedKey column="id" sqlStatement="SqlServer"
-				type="post" identity="true" /> -->
+			<!-- <generatedKey column="id" sqlStatement="SqlServer" type="post" identity="true" 
+				/> -->
 		</table>
 		<table tableName="MyParkingRecover"
 			mapperName="MyparkingrecoverDynamicSqlMapper">
 			<property name="useActualColumnNames" value="false" />
-		<!-- 	<generatedKey column="id" sqlStatement="SqlServer"
-				type="post" identity="true" /> -->
+			<!-- <generatedKey column="id" sqlStatement="SqlServer" type="post" identity="true" 
+				/> -->
 		</table>
 		<table tableName="MyScanCodePay"
 			mapperName="MyscancodepayDynamicSqlMapper">
 			<property name="useActualColumnNames" value="false" />
-			<!-- <generatedKey column="id" sqlStatement="SqlServer"
-				type="post" identity="true" /> -->
+			<!-- <generatedKey column="id" sqlStatement="SqlServer" type="post" identity="true" 
+				/> -->
 		</table>
 		<table tableName="MyVoice" mapperName="MyvoiceDynamicSqlMapper">
 			<property name="useActualColumnNames" value="false" />
-			<generatedKey column="Number" sqlStatement="SqlServer"
-				 />
+			<generatedKey column="Number" sqlStatement="SqlServer" />
 		</table>
 		<table tableName="MyVoiceCardNO"
 			mapperName="MyvoicecardnoDynamicSqlMapper">
 			<property name="useActualColumnNames" value="false" />
-			<!-- <generatedKey column="id" sqlStatement="SqlServer"
-				type="post" identity="true" /> -->
+			<!-- <generatedKey column="id" sqlStatement="SqlServer" type="post" identity="true" 
+				/> -->
 		</table>
 		<table tableName="MyVoiceCardNOSET"
 			mapperName="MyvoicecardnosetDynamicSqlMapper">
 			<property name="useActualColumnNames" value="false" />
-			<generatedKey column="CtrlNumber" sqlStatement="SqlServer"
-				 />
+			<generatedKey column="CtrlNumber"
+				sqlStatement="SqlServer" />
 		</table>
 		<table tableName="My_Authorization"
 			mapperName="MyAuthorizationDynamicSqlMapper">
 			<property name="useActualColumnNames" value="false" />
-			<!-- <generatedKey column="id" sqlStatement="SqlServer"
-				type="post" identity="true" /> -->
+			<!-- <generatedKey column="id" sqlStatement="SqlServer" type="post" identity="true" 
+				/> -->
 		</table>
 		<table tableName="My_ZFBKeySet"
 			mapperName="MyZfbkeysetDynamicSqlMapper">
@@ -702,14 +695,14 @@
 		</table>
 		<table tableName="OptLog" mapperName="OptlogDynamicSqlMapper">
 			<property name="useActualColumnNames" value="false" />
-			<!-- <generatedKey column="id" sqlStatement="SqlServer"
-				type="post" identity="true" /> -->
+			<!-- <generatedKey column="id" sqlStatement="SqlServer" type="post" identity="true" 
+				/> -->
 		</table>
 		<table tableName="OptStateLog"
 			mapperName="OptstatelogDynamicSqlMapper">
 			<property name="useActualColumnNames" value="false" />
-			<!-- <generatedKey column="id" sqlStatement="SqlServer"
-				type="post" identity="true" /> -->
+			<!-- <generatedKey column="id" sqlStatement="SqlServer" type="post" identity="true" 
+				/> -->
 		</table>
 		<table tableName="PostPoneScheme"
 			mapperName="PostponeschemeDynamicSqlMapper">
@@ -720,8 +713,8 @@
 		<table tableName="QRCodeControl"
 			mapperName="QrcodecontrolDynamicSqlMapper">
 			<property name="useActualColumnNames" value="false" />
-			<!-- <generatedKey column="id" sqlStatement="SqlServer"
-				type="post" identity="true" /> -->
+			<!-- <generatedKey column="id" sqlStatement="SqlServer" type="post" identity="true" 
+				/> -->
 		</table>
 		<table tableName="QrFxSelectScheme"
 			mapperName="QrfxselectschemeDynamicSqlMapper">
@@ -738,8 +731,8 @@
 		<table tableName="Qr_ComSet"
 			mapperName="QrComsetDynamicSqlMapper">
 			<property name="useActualColumnNames" value="false" />
-			<!-- <generatedKey column="id" sqlStatement="SqlServer"
-				type="post" identity="true" /> -->
+			<!-- <generatedKey column="id" sqlStatement="SqlServer" type="post" identity="true" 
+				/> -->
 		</table>
 		<table tableName="Qr_FaxingSsue"
 			mapperName="QrFaxingssueDynamicSqlMapper">
@@ -756,8 +749,8 @@
 		<table tableName="Qr_Record"
 			mapperName="QrRecordDynamicSqlMapper">
 			<property name="useActualColumnNames" value="false" />
-			<!-- <generatedKey column="id" sqlStatement="SqlServer"
-				type="post" identity="true" /> -->
+			<!-- <generatedKey column="id" sqlStatement="SqlServer" type="post" identity="true" 
+				/> -->
 		</table>
 		<table tableName="Qr_YanTimeSet"
 			mapperName="QrYantimesetDynamicSqlMapper">
@@ -798,8 +791,8 @@
 		<table tableName="Ser_DoorData"
 			mapperName="SerDoordataDynamicSqlMapper">
 			<property name="useActualColumnNames" value="false" />
-			<!-- <generatedKey column="id" sqlStatement="SqlServer"
-				type="post" identity="true" /> -->
+			<!-- <generatedKey column="id" sqlStatement="SqlServer" type="post" identity="true" 
+				/> -->
 		</table>
 		<table tableName="Ser_DoorMapsB"
 			mapperName="SerDoormapsbDynamicSqlMapper">
@@ -828,8 +821,8 @@
 		<table tableName="Ser_FaxingSsue"
 			mapperName="SerFaxingssueDynamicSqlMapper">
 			<property name="useActualColumnNames" value="false" />
-			<!-- <generatedKey column="id" sqlStatement="SqlServer"
-				type="post" identity="true" /> -->
+			<!-- <generatedKey column="id" sqlStatement="SqlServer" type="post" identity="true" 
+				/> -->
 		</table>
 		<table tableName="Ser_OpenDoorMode"
 			mapperName="SerOpendoormodeDynamicSqlMapper">
@@ -846,8 +839,8 @@
 		<table tableName="Ser_Records"
 			mapperName="SerRecordsDynamicSqlMapper">
 			<property name="useActualColumnNames" value="false" />
-			<!-- <generatedKey column="id" sqlStatement="SqlServer"
-				type="post" identity="true" /> -->
+			<!-- <generatedKey column="id" sqlStatement="SqlServer" type="post" identity="true" 
+				/> -->
 		</table>
 		<table tableName="Ser_TeQuanMode"
 			mapperName="SerTequanmodeDynamicSqlMapper">
@@ -858,8 +851,8 @@
 		<table tableName="Ser_TimeGroup"
 			mapperName="SerTimegroupDynamicSqlMapper">
 			<property name="useActualColumnNames" value="false" />
-		<!-- 	<generatedKey column="id" sqlStatement="SqlServer"
-				type="post" identity="true" /> -->
+			<!-- <generatedKey column="id" sqlStatement="SqlServer" type="post" identity="true" 
+				/> -->
 		</table>
 		<table tableName="Ser_TimingOpen"
 			mapperName="SerTimingopenDynamicSqlMapper">
@@ -893,8 +886,8 @@
 		<table tableName="tSpecialCPH"
 			mapperName="TspecialcphDynamicSqlMapper">
 			<property name="useActualColumnNames" value="false" />
-			<!-- <generatedKey column="id" sqlStatement="SqlServer"
-				type="post" identity="true" /> -->
+			<!-- <generatedKey column="id" sqlStatement="SqlServer" type="post" identity="true" 
+				/> -->
 		</table>
 		<table tableName="tbSystemDataBak"
 			mapperName="TbsystemdatabakDynamicSqlMapper">
@@ -905,28 +898,29 @@
 		<table tableName="tblConstant"
 			mapperName="TblconstantDynamicSqlMapper">
 			<property name="useActualColumnNames" value="false" />
-			<!-- <generatedKey column="id" sqlStatement="SqlServer"
-				type="post" identity="true" /> -->
+			<!-- <generatedKey column="id" sqlStatement="SqlServer" type="post" identity="true" 
+				/> -->
 		</table>
 		<table tableName="tblDBVersion"
 			mapperName="TbldbversionDynamicSqlMapper">
 			<property name="useActualColumnNames" value="false" />
-		<!-- 	<generatedKey column="id" sqlStatement="SqlServer"
-				type="post" identity="true" /> -->
+			<!-- <generatedKey column="id" sqlStatement="SqlServer" type="post" identity="true" 
+				/> -->
 		</table>
 		<table tableName="tblOpenType"
 			mapperName="TblopentypeDynamicSqlMapper">
 			<property name="useActualColumnNames" value="false" />
-			<!-- <generatedKey column="id" sqlStatement="SqlServer"
-				type="post" identity="true" /> -->
+			<!-- <generatedKey column="id" sqlStatement="SqlServer" type="post" identity="true" 
+				/> -->
 		</table>
 		<table tableName="tblQuery"
 			mapperName="TblqueryDynamicSqlMapper">
 			<property name="useActualColumnNames" value="false" />
-			<!-- <generatedKey column="id" sqlStatement="SqlServer"
-				type="post" identity="true" /> -->
+			<!-- <generatedKey column="id" sqlStatement="SqlServer" type="post" identity="true" 
+				/> -->
 		</table>
-		<table tableName="user_table" mapperName="UserTableDynamicSqlMapper">
+		<table tableName="user_table"
+			mapperName="UserTableDynamicSqlMapper">
 			<property name="useActualColumnNames" value="false" />
 			<generatedKey column="id" sqlStatement="JDBC"
 				type="post" identity="true" />
@@ -1027,14 +1021,23 @@
 			<generatedKey column="id" sqlStatement="JDBC"
 				type="post" identity="true" />
 		</table>
-		
-		
-		<table tableName="log"
-			mapperName="LogDynamicSqlMapper">
+
+
+		<table tableName="log" mapperName="LogDynamicSqlMapper">
 			<property name="useActualColumnNames" value="false" />
 			<generatedKey column="id" sqlStatement="JDBC"
 				type="post" identity="true" />
 		</table>
+
+
+
+		<table tableName="sms_template"
+			mapperName="SmsTemplateDynamicSqlMapper">
+			<property name="useActualColumnNames" value="false" />
+			<generatedKey column="id" sqlStatement="JDBC"
+				type="post" identity="true" />
+		</table>
+
 
 	</context>
 </generatorConfiguration>

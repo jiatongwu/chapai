@@ -6,49 +6,49 @@ import org.mybatis.dynamic.sql.SqlColumn;
 import org.mybatis.dynamic.sql.SqlTable;
 
 public final class ZhMthcarDynamicSqlSupport {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.900+08:00", comments="Source Table: zh_MthCar")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.543+08:00", comments="Source Table: zh_MthCar")
     public static final ZhMthcar zhMthcar = new ZhMthcar();
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.901+08:00", comments="Source field: zh_MthCar.id")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.543+08:00", comments="Source field: zh_MthCar.id")
     public static final SqlColumn<Integer> id = zhMthcar.id;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.901+08:00", comments="Source field: zh_MthCar.carNo")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.543+08:00", comments="Source field: zh_MthCar.carNo")
     public static final SqlColumn<String> carno = zhMthcar.carno;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.901+08:00", comments="Source field: zh_MthCar.carType")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.543+08:00", comments="Source field: zh_MthCar.carType")
     public static final SqlColumn<String> cartype = zhMthcar.cartype;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.901+08:00", comments="Source field: zh_MthCar.beginTime")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.543+08:00", comments="Source field: zh_MthCar.beginTime")
     public static final SqlColumn<String> begintime = zhMthcar.begintime;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.901+08:00", comments="Source field: zh_MthCar.endTime")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.543+08:00", comments="Source field: zh_MthCar.endTime")
     public static final SqlColumn<String> endtime = zhMthcar.endtime;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.901+08:00", comments="Source field: zh_MthCar.iusseTime")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.543+08:00", comments="Source field: zh_MthCar.iusseTime")
     public static final SqlColumn<String> iussetime = zhMthcar.iussetime;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.901+08:00", comments="Source field: zh_MthCar.userNo")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.543+08:00", comments="Source field: zh_MthCar.userNo")
     public static final SqlColumn<String> userno = zhMthcar.userno;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.901+08:00", comments="Source field: zh_MthCar.userName")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.543+08:00", comments="Source field: zh_MthCar.userName")
     public static final SqlColumn<String> username = zhMthcar.username;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.901+08:00", comments="Source field: zh_MthCar.homeAddress")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.543+08:00", comments="Source field: zh_MthCar.homeAddress")
     public static final SqlColumn<String> homeaddress = zhMthcar.homeaddress;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.901+08:00", comments="Source field: zh_MthCar.mobNumber")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.543+08:00", comments="Source field: zh_MthCar.mobNumber")
     public static final SqlColumn<String> mobnumber = zhMthcar.mobnumber;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.901+08:00", comments="Source field: zh_MthCar.carSpalcesNum")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.544+08:00", comments="Source field: zh_MthCar.carSpalcesNum")
     public static final SqlColumn<String> carspalcesnum = zhMthcar.carspalcesnum;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.901+08:00", comments="Source field: zh_MthCar.stuat")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.544+08:00", comments="Source field: zh_MthCar.stuat")
     public static final SqlColumn<Integer> stuat = zhMthcar.stuat;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.901+08:00", comments="Source field: zh_MthCar.synflag")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.544+08:00", comments="Source field: zh_MthCar.synflag")
     public static final SqlColumn<Integer> synflag = zhMthcar.synflag;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.901+08:00", comments="Source Table: zh_MthCar")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.543+08:00", comments="Source Table: zh_MthCar")
     public static final class ZhMthcar extends SqlTable {
         public final SqlColumn<Integer> id = column("id", JDBCType.INTEGER);
 

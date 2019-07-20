@@ -6,22 +6,22 @@ import org.mybatis.dynamic.sql.SqlColumn;
 import org.mybatis.dynamic.sql.SqlTable;
 
 public final class MDoortypenameDynamicSqlSupport {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.780+08:00", comments="Source Table: M_DoorTypeName")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.367+08:00", comments="Source Table: M_DoorTypeName")
     public static final MDoortypename MDoortypename = new MDoortypename();
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.780+08:00", comments="Source field: M_DoorTypeName.DoorID")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.367+08:00", comments="Source field: M_DoorTypeName.DoorID")
     public static final SqlColumn<Integer> doorid = MDoortypename.doorid;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.780+08:00", comments="Source field: M_DoorTypeName.DoorTypeC")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.367+08:00", comments="Source field: M_DoorTypeName.DoorTypeC")
     public static final SqlColumn<String> doortypec = MDoortypename.doortypec;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.780+08:00", comments="Source field: M_DoorTypeName.DoorTypeE")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.367+08:00", comments="Source field: M_DoorTypeName.DoorTypeE")
     public static final SqlColumn<String> doortypee = MDoortypename.doortypee;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.780+08:00", comments="Source field: M_DoorTypeName.DoorMark")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.367+08:00", comments="Source field: M_DoorTypeName.DoorMark")
     public static final SqlColumn<String> doormark = MDoortypename.doormark;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.780+08:00", comments="Source Table: M_DoorTypeName")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.367+08:00", comments="Source Table: M_DoorTypeName")
     public static final class MDoortypename extends SqlTable {
         public final SqlColumn<Integer> doorid = column("DoorID", JDBCType.INTEGER);
 

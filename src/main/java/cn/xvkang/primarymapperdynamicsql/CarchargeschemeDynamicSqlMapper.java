@@ -33,25 +33,25 @@ import org.mybatis.dynamic.sql.util.SqlProviderAdapter;
 
 @Mapper
 public interface CarchargeschemeDynamicSqlMapper {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.503+08:00", comments="Source Table: CarChargeScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:21.946+08:00", comments="Source Table: CarChargeScheme")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     long count(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.503+08:00", comments="Source Table: CarChargeScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:21.946+08:00", comments="Source Table: CarChargeScheme")
     @DeleteProvider(type=SqlProviderAdapter.class, method="delete")
     int delete(DeleteStatementProvider deleteStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.504+08:00", comments="Source Table: CarChargeScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:21.946+08:00", comments="Source Table: CarChargeScheme")
     @InsertProvider(type=SqlProviderAdapter.class, method="insert")
     @SelectKey(statement="SELECT SCOPE_IDENTITY()", keyProperty="record.schid", before=false, resultType=Integer.class)
     int insert(InsertStatementProvider<Carchargescheme> insertStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.504+08:00", comments="Source Table: CarChargeScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:21.946+08:00", comments="Source Table: CarChargeScheme")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @ResultMap("CarchargeschemeResult")
     Carchargescheme selectOne(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.504+08:00", comments="Source Table: CarChargeScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:21.946+08:00", comments="Source Table: CarChargeScheme")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @Results(id="CarchargeschemeResult", value = {
         @Result(column="SchId", property="schid", jdbcType=JdbcType.INTEGER, id=true),
@@ -64,22 +64,22 @@ public interface CarchargeschemeDynamicSqlMapper {
     })
     List<Carchargescheme> selectMany(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.504+08:00", comments="Source Table: CarChargeScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:21.946+08:00", comments="Source Table: CarChargeScheme")
     @UpdateProvider(type=SqlProviderAdapter.class, method="update")
     int update(UpdateStatementProvider updateStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.504+08:00", comments="Source Table: CarChargeScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:21.946+08:00", comments="Source Table: CarChargeScheme")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<Long>> countByExample() {
         return SelectDSL.selectWithMapper(this::count, SqlBuilder.count())
                 .from(carchargescheme);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.504+08:00", comments="Source Table: CarChargeScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:21.947+08:00", comments="Source Table: CarChargeScheme")
     default DeleteDSL<MyBatis3DeleteModelAdapter<Integer>> deleteByExample() {
         return DeleteDSL.deleteFromWithMapper(this::delete, carchargescheme);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.504+08:00", comments="Source Table: CarChargeScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:21.947+08:00", comments="Source Table: CarChargeScheme")
     default int deleteByPrimaryKey(Integer schid_) {
         return DeleteDSL.deleteFromWithMapper(this::delete, carchargescheme)
                 .where(schid, isEqualTo(schid_))
@@ -87,7 +87,7 @@ public interface CarchargeschemeDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.504+08:00", comments="Source Table: CarChargeScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:21.947+08:00", comments="Source Table: CarChargeScheme")
     default int insert(Carchargescheme record) {
         return insert(SqlBuilder.insert(record)
                 .into(carchargescheme)
@@ -101,7 +101,7 @@ public interface CarchargeschemeDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.504+08:00", comments="Source Table: CarChargeScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:21.947+08:00", comments="Source Table: CarChargeScheme")
     default int insertSelective(Carchargescheme record) {
         return insert(SqlBuilder.insert(record)
                 .into(carchargescheme)
@@ -115,19 +115,19 @@ public interface CarchargeschemeDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.504+08:00", comments="Source Table: CarChargeScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:21.947+08:00", comments="Source Table: CarChargeScheme")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Carchargescheme>>> selectByExample() {
         return SelectDSL.selectWithMapper(this::selectMany, schid, schname, fieldname, operators, selectvalues, startime, endtime)
                 .from(carchargescheme);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.505+08:00", comments="Source Table: CarChargeScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:21.947+08:00", comments="Source Table: CarChargeScheme")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Carchargescheme>>> selectDistinctByExample() {
         return SelectDSL.selectDistinctWithMapper(this::selectMany, schid, schname, fieldname, operators, selectvalues, startime, endtime)
                 .from(carchargescheme);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.505+08:00", comments="Source Table: CarChargeScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:21.947+08:00", comments="Source Table: CarChargeScheme")
     default Carchargescheme selectByPrimaryKey(Integer schid_) {
         return SelectDSL.selectWithMapper(this::selectOne, schid, schname, fieldname, operators, selectvalues, startime, endtime)
                 .from(carchargescheme)
@@ -136,7 +136,7 @@ public interface CarchargeschemeDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.505+08:00", comments="Source Table: CarChargeScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:21.947+08:00", comments="Source Table: CarChargeScheme")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExample(Carchargescheme record) {
         return UpdateDSL.updateWithMapper(this::update, carchargescheme)
                 .set(schname).equalTo(record::getSchname)
@@ -147,7 +147,7 @@ public interface CarchargeschemeDynamicSqlMapper {
                 .set(endtime).equalTo(record::getEndtime);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.505+08:00", comments="Source Table: CarChargeScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:21.947+08:00", comments="Source Table: CarChargeScheme")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExampleSelective(Carchargescheme record) {
         return UpdateDSL.updateWithMapper(this::update, carchargescheme)
                 .set(schname).equalToWhenPresent(record::getSchname)
@@ -158,7 +158,7 @@ public interface CarchargeschemeDynamicSqlMapper {
                 .set(endtime).equalToWhenPresent(record::getEndtime);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.511+08:00", comments="Source Table: CarChargeScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:21.948+08:00", comments="Source Table: CarChargeScheme")
     default int updateByPrimaryKey(Carchargescheme record) {
         return UpdateDSL.updateWithMapper(this::update, carchargescheme)
                 .set(schname).equalTo(record::getSchname)
@@ -172,7 +172,7 @@ public interface CarchargeschemeDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.512+08:00", comments="Source Table: CarChargeScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:21.948+08:00", comments="Source Table: CarChargeScheme")
     default int updateByPrimaryKeySelective(Carchargescheme record) {
         return UpdateDSL.updateWithMapper(this::update, carchargescheme)
                 .set(schname).equalToWhenPresent(record::getSchname)

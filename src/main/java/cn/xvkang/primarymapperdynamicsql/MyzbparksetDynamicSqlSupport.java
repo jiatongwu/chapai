@@ -7,31 +7,31 @@ import org.mybatis.dynamic.sql.SqlColumn;
 import org.mybatis.dynamic.sql.SqlTable;
 
 public final class MyzbparksetDynamicSqlSupport {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.767+08:00", comments="Source Table: MYZBPARKSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.349+08:00", comments="Source Table: MYZBPARKSet")
     public static final Myzbparkset myzbparkset = new Myzbparkset();
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.767+08:00", comments="Source field: MYZBPARKSet.ID")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.349+08:00", comments="Source field: MYZBPARKSet.ID")
     public static final SqlColumn<Integer> id = myzbparkset.id;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.767+08:00", comments="Source field: MYZBPARKSet.Address")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.349+08:00", comments="Source field: MYZBPARKSet.Address")
     public static final SqlColumn<String> address = myzbparkset.address;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.767+08:00", comments="Source field: MYZBPARKSet.Favorable")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.349+08:00", comments="Source field: MYZBPARKSet.Favorable")
     public static final SqlColumn<BigDecimal> favorable = myzbparkset.favorable;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.767+08:00", comments="Source field: MYZBPARKSet.Manner")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.349+08:00", comments="Source field: MYZBPARKSet.Manner")
     public static final SqlColumn<String> manner = myzbparkset.manner;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.767+08:00", comments="Source field: MYZBPARKSet.OutHour")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.349+08:00", comments="Source field: MYZBPARKSet.OutHour")
     public static final SqlColumn<BigDecimal> outhour = myzbparkset.outhour;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.767+08:00", comments="Source field: MYZBPARKSet.OutDayNo")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.349+08:00", comments="Source field: MYZBPARKSet.OutDayNo")
     public static final SqlColumn<BigDecimal> outdayno = myzbparkset.outdayno;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.767+08:00", comments="Source field: MYZBPARKSet.PCName")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.349+08:00", comments="Source field: MYZBPARKSet.PCName")
     public static final SqlColumn<String> pcname = myzbparkset.pcname;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.767+08:00", comments="Source Table: MYZBPARKSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.349+08:00", comments="Source Table: MYZBPARKSet")
     public static final class Myzbparkset extends SqlTable {
         public final SqlColumn<Integer> id = column("ID", JDBCType.INTEGER);
 

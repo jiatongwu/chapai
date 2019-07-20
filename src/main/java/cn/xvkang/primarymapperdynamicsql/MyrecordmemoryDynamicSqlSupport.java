@@ -8,127 +8,127 @@ import org.mybatis.dynamic.sql.SqlColumn;
 import org.mybatis.dynamic.sql.SqlTable;
 
 public final class MyrecordmemoryDynamicSqlSupport {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.742+08:00", comments="Source Table: MYRECORDMEMORY")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.310+08:00", comments="Source Table: MYRECORDMEMORY")
     public static final Myrecordmemory myrecordmemory = new Myrecordmemory();
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.742+08:00", comments="Source field: MYRECORDMEMORY.ID")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.310+08:00", comments="Source field: MYRECORDMEMORY.ID")
     public static final SqlColumn<Long> id = myrecordmemory.id;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.742+08:00", comments="Source field: MYRECORDMEMORY.CardNO")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.310+08:00", comments="Source field: MYRECORDMEMORY.CardNO")
     public static final SqlColumn<String> cardno = myrecordmemory.cardno;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.742+08:00", comments="Source field: MYRECORDMEMORY.CPH")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.310+08:00", comments="Source field: MYRECORDMEMORY.CPH")
     public static final SqlColumn<String> cph = myrecordmemory.cph;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.742+08:00", comments="Source field: MYRECORDMEMORY.CardType")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.310+08:00", comments="Source field: MYRECORDMEMORY.CardType")
     public static final SqlColumn<String> cardtype = myrecordmemory.cardtype;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.742+08:00", comments="Source field: MYRECORDMEMORY.InTime")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.310+08:00", comments="Source field: MYRECORDMEMORY.InTime")
     public static final SqlColumn<Date> intime = myrecordmemory.intime;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.742+08:00", comments="Source field: MYRECORDMEMORY.OutTime")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.310+08:00", comments="Source field: MYRECORDMEMORY.OutTime")
     public static final SqlColumn<Date> outtime = myrecordmemory.outtime;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.742+08:00", comments="Source field: MYRECORDMEMORY.InGateName")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.310+08:00", comments="Source field: MYRECORDMEMORY.InGateName")
     public static final SqlColumn<String> ingatename = myrecordmemory.ingatename;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.742+08:00", comments="Source field: MYRECORDMEMORY.OutGateName")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.311+08:00", comments="Source field: MYRECORDMEMORY.OutGateName")
     public static final SqlColumn<String> outgatename = myrecordmemory.outgatename;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.742+08:00", comments="Source field: MYRECORDMEMORY.InOperatorCard")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.311+08:00", comments="Source field: MYRECORDMEMORY.InOperatorCard")
     public static final SqlColumn<String> inoperatorcard = myrecordmemory.inoperatorcard;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.742+08:00", comments="Source field: MYRECORDMEMORY.OutOperatorCard")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.311+08:00", comments="Source field: MYRECORDMEMORY.OutOperatorCard")
     public static final SqlColumn<String> outoperatorcard = myrecordmemory.outoperatorcard;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.742+08:00", comments="Source field: MYRECORDMEMORY.InOperator")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.311+08:00", comments="Source field: MYRECORDMEMORY.InOperator")
     public static final SqlColumn<String> inoperator = myrecordmemory.inoperator;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.742+08:00", comments="Source field: MYRECORDMEMORY.OutOperator")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.311+08:00", comments="Source field: MYRECORDMEMORY.OutOperator")
     public static final SqlColumn<String> outoperator = myrecordmemory.outoperator;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.742+08:00", comments="Source field: MYRECORDMEMORY.InPic")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.311+08:00", comments="Source field: MYRECORDMEMORY.InPic")
     public static final SqlColumn<String> inpic = myrecordmemory.inpic;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.742+08:00", comments="Source field: MYRECORDMEMORY.InUser")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.311+08:00", comments="Source field: MYRECORDMEMORY.InUser")
     public static final SqlColumn<String> inuser = myrecordmemory.inuser;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.742+08:00", comments="Source field: MYRECORDMEMORY.OutPic")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.311+08:00", comments="Source field: MYRECORDMEMORY.OutPic")
     public static final SqlColumn<String> outpic = myrecordmemory.outpic;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.742+08:00", comments="Source field: MYRECORDMEMORY.OutUser")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.311+08:00", comments="Source field: MYRECORDMEMORY.OutUser")
     public static final SqlColumn<String> outuser = myrecordmemory.outuser;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.742+08:00", comments="Source field: MYRECORDMEMORY.ZJPic")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.311+08:00", comments="Source field: MYRECORDMEMORY.ZJPic")
     public static final SqlColumn<String> zjpic = myrecordmemory.zjpic;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.742+08:00", comments="Source field: MYRECORDMEMORY.SFJE")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.311+08:00", comments="Source field: MYRECORDMEMORY.SFJE")
     public static final SqlColumn<BigDecimal> sfje = myrecordmemory.sfje;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.742+08:00", comments="Source field: MYRECORDMEMORY.Balance")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.311+08:00", comments="Source field: MYRECORDMEMORY.Balance")
     public static final SqlColumn<BigDecimal> balance = myrecordmemory.balance;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.743+08:00", comments="Source field: MYRECORDMEMORY.YSJE")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.311+08:00", comments="Source field: MYRECORDMEMORY.YSJE")
     public static final SqlColumn<BigDecimal> ysje = myrecordmemory.ysje;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.743+08:00", comments="Source field: MYRECORDMEMORY.SFTime")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.311+08:00", comments="Source field: MYRECORDMEMORY.SFTime")
     public static final SqlColumn<Date> sftime = myrecordmemory.sftime;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.743+08:00", comments="Source field: MYRECORDMEMORY.SFOperator")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.311+08:00", comments="Source field: MYRECORDMEMORY.SFOperator")
     public static final SqlColumn<String> sfoperator = myrecordmemory.sfoperator;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.743+08:00", comments="Source field: MYRECORDMEMORY.SFOperatorCard")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.311+08:00", comments="Source field: MYRECORDMEMORY.SFOperatorCard")
     public static final SqlColumn<String> sfoperatorcard = myrecordmemory.sfoperatorcard;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.743+08:00", comments="Source field: MYRECORDMEMORY.SFGate")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.311+08:00", comments="Source field: MYRECORDMEMORY.SFGate")
     public static final SqlColumn<String> sfgate = myrecordmemory.sfgate;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.743+08:00", comments="Source field: MYRECORDMEMORY.OvertimeSymbol")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.311+08:00", comments="Source field: MYRECORDMEMORY.OvertimeSymbol")
     public static final SqlColumn<String> overtimesymbol = myrecordmemory.overtimesymbol;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.743+08:00", comments="Source field: MYRECORDMEMORY.OvertimeSFTime")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.311+08:00", comments="Source field: MYRECORDMEMORY.OvertimeSFTime")
     public static final SqlColumn<Date> overtimesftime = myrecordmemory.overtimesftime;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.743+08:00", comments="Source field: MYRECORDMEMORY.OvertimeSFJE")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.311+08:00", comments="Source field: MYRECORDMEMORY.OvertimeSFJE")
     public static final SqlColumn<BigDecimal> overtimesfje = myrecordmemory.overtimesfje;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.743+08:00", comments="Source field: MYRECORDMEMORY.CarparkNO")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.311+08:00", comments="Source field: MYRECORDMEMORY.CarparkNO")
     public static final SqlColumn<Integer> carparkno = myrecordmemory.carparkno;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.743+08:00", comments="Source field: MYRECORDMEMORY.BigSmall")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.311+08:00", comments="Source field: MYRECORDMEMORY.BigSmall")
     public static final SqlColumn<Integer> bigsmall = myrecordmemory.bigsmall;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.743+08:00", comments="Source field: MYRECORDMEMORY.FreeReason")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.311+08:00", comments="Source field: MYRECORDMEMORY.FreeReason")
     public static final SqlColumn<String> freereason = myrecordmemory.freereason;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.743+08:00", comments="Source field: MYRECORDMEMORY.StayTime")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.311+08:00", comments="Source field: MYRECORDMEMORY.StayTime")
     public static final SqlColumn<String> staytime = myrecordmemory.staytime;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.743+08:00", comments="Source field: MYRECORDMEMORY.Temp1")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.311+08:00", comments="Source field: MYRECORDMEMORY.Temp1")
     public static final SqlColumn<String> temp1 = myrecordmemory.temp1;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.743+08:00", comments="Source field: MYRECORDMEMORY.Temp2")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.311+08:00", comments="Source field: MYRECORDMEMORY.Temp2")
     public static final SqlColumn<String> temp2 = myrecordmemory.temp2;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.743+08:00", comments="Source field: MYRECORDMEMORY.Temp3")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.311+08:00", comments="Source field: MYRECORDMEMORY.Temp3")
     public static final SqlColumn<String> temp3 = myrecordmemory.temp3;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.743+08:00", comments="Source field: MYRECORDMEMORY.Temp4")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.311+08:00", comments="Source field: MYRECORDMEMORY.Temp4")
     public static final SqlColumn<String> temp4 = myrecordmemory.temp4;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.743+08:00", comments="Source field: MYRECORDMEMORY.Temp5")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.311+08:00", comments="Source field: MYRECORDMEMORY.Temp5")
     public static final SqlColumn<String> temp5 = myrecordmemory.temp5;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.743+08:00", comments="Source field: MYRECORDMEMORY.bMorePaingCar")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.311+08:00", comments="Source field: MYRECORDMEMORY.bMorePaingCar")
     public static final SqlColumn<Boolean> bmorepaingcar = myrecordmemory.bmorepaingcar;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.743+08:00", comments="Source field: MYRECORDMEMORY.bDZ")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.311+08:00", comments="Source field: MYRECORDMEMORY.bDZ")
     public static final SqlColumn<Boolean> bdz = myrecordmemory.bdz;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.743+08:00", comments="Source field: MYRECORDMEMORY.strDZ")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.311+08:00", comments="Source field: MYRECORDMEMORY.strDZ")
     public static final SqlColumn<String> strdz = myrecordmemory.strdz;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.742+08:00", comments="Source Table: MYRECORDMEMORY")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.310+08:00", comments="Source Table: MYRECORDMEMORY")
     public static final class Myrecordmemory extends SqlTable {
         public final SqlColumn<Long> id = column("ID", JDBCType.BIGINT);
 

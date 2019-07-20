@@ -30,19 +30,19 @@ import org.mybatis.dynamic.sql.util.SqlProviderAdapter;
 
 @Mapper
 public interface MyworkstationsetDynamicSqlMapper {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.761+08:00", comments="Source Table: MYWORKSTATIONSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.342+08:00", comments="Source Table: MYWORKSTATIONSET")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     long count(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.761+08:00", comments="Source Table: MYWORKSTATIONSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.342+08:00", comments="Source Table: MYWORKSTATIONSET")
     @DeleteProvider(type=SqlProviderAdapter.class, method="delete")
     int delete(DeleteStatementProvider deleteStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.761+08:00", comments="Source Table: MYWORKSTATIONSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.342+08:00", comments="Source Table: MYWORKSTATIONSET")
     @InsertProvider(type=SqlProviderAdapter.class, method="insert")
     int insert(InsertStatementProvider<Myworkstationset> insertStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.761+08:00", comments="Source Table: MYWORKSTATIONSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.342+08:00", comments="Source Table: MYWORKSTATIONSET")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @Results(id="MyworkstationsetResult", value = {
         @Result(column="CompanyName", property="companyname", jdbcType=JdbcType.VARCHAR),
@@ -81,22 +81,22 @@ public interface MyworkstationsetDynamicSqlMapper {
     })
     List<Myworkstationset> selectMany(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.761+08:00", comments="Source Table: MYWORKSTATIONSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.343+08:00", comments="Source Table: MYWORKSTATIONSET")
     @UpdateProvider(type=SqlProviderAdapter.class, method="update")
     int update(UpdateStatementProvider updateStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.761+08:00", comments="Source Table: MYWORKSTATIONSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.343+08:00", comments="Source Table: MYWORKSTATIONSET")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<Long>> countByExample() {
         return SelectDSL.selectWithMapper(this::count, SqlBuilder.count())
                 .from(myworkstationset);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.761+08:00", comments="Source Table: MYWORKSTATIONSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.343+08:00", comments="Source Table: MYWORKSTATIONSET")
     default DeleteDSL<MyBatis3DeleteModelAdapter<Integer>> deleteByExample() {
         return DeleteDSL.deleteFromWithMapper(this::delete, myworkstationset);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.761+08:00", comments="Source Table: MYWORKSTATIONSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.343+08:00", comments="Source Table: MYWORKSTATIONSET")
     default int insert(Myworkstationset record) {
         return insert(SqlBuilder.insert(record)
                 .into(myworkstationset)
@@ -137,7 +137,7 @@ public interface MyworkstationsetDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.761+08:00", comments="Source Table: MYWORKSTATIONSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.343+08:00", comments="Source Table: MYWORKSTATIONSET")
     default int insertSelective(Myworkstationset record) {
         return insert(SqlBuilder.insert(record)
                 .into(myworkstationset)
@@ -178,19 +178,19 @@ public interface MyworkstationsetDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.761+08:00", comments="Source Table: MYWORKSTATIONSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.343+08:00", comments="Source Table: MYWORKSTATIONSET")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Myworkstationset>>> selectByExample() {
         return SelectDSL.selectWithMapper(this::selectMany, companyname, comport, carparkzone, mjzone, parksectorenable, doorsectorenable, mjtype, sysconfig, syssize, logintype, personpiccatch, fxmachine, fxmachineid, pcname, ctrip, language, comparkport, mjport, commode, autotochemointor, helpflag, dtzone, dtsectorenable, fsectorenable, doorfzone, appenable, txxieyi, systemmodel, traditionreport, res1, res2, res3, couldpark)
                 .from(myworkstationset);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.761+08:00", comments="Source Table: MYWORKSTATIONSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.343+08:00", comments="Source Table: MYWORKSTATIONSET")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Myworkstationset>>> selectDistinctByExample() {
         return SelectDSL.selectDistinctWithMapper(this::selectMany, companyname, comport, carparkzone, mjzone, parksectorenable, doorsectorenable, mjtype, sysconfig, syssize, logintype, personpiccatch, fxmachine, fxmachineid, pcname, ctrip, language, comparkport, mjport, commode, autotochemointor, helpflag, dtzone, dtsectorenable, fsectorenable, doorfzone, appenable, txxieyi, systemmodel, traditionreport, res1, res2, res3, couldpark)
                 .from(myworkstationset);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.761+08:00", comments="Source Table: MYWORKSTATIONSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.343+08:00", comments="Source Table: MYWORKSTATIONSET")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExample(Myworkstationset record) {
         return UpdateDSL.updateWithMapper(this::update, myworkstationset)
                 .set(companyname).equalTo(record::getCompanyname)
@@ -228,7 +228,7 @@ public interface MyworkstationsetDynamicSqlMapper {
                 .set(couldpark).equalTo(record::getCouldpark);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.761+08:00", comments="Source Table: MYWORKSTATIONSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.343+08:00", comments="Source Table: MYWORKSTATIONSET")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExampleSelective(Myworkstationset record) {
         return UpdateDSL.updateWithMapper(this::update, myworkstationset)
                 .set(companyname).equalToWhenPresent(record::getCompanyname)

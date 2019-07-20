@@ -33,25 +33,25 @@ import org.mybatis.dynamic.sql.util.SqlProviderAdapter;
 
 @Mapper
 public interface PermissionDynamicSqlMapper {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.879+08:00", comments="Source Table: permission")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.523+08:00", comments="Source Table: permission")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     long count(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.879+08:00", comments="Source Table: permission")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.523+08:00", comments="Source Table: permission")
     @DeleteProvider(type=SqlProviderAdapter.class, method="delete")
     int delete(DeleteStatementProvider deleteStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.879+08:00", comments="Source Table: permission")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.523+08:00", comments="Source Table: permission")
     @InsertProvider(type=SqlProviderAdapter.class, method="insert")
     @SelectKey(statement="SELECT SCOPE_IDENTITY()", keyProperty="record.id", before=false, resultType=Integer.class)
     int insert(InsertStatementProvider<Permission> insertStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.879+08:00", comments="Source Table: permission")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.523+08:00", comments="Source Table: permission")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @ResultMap("PermissionResult")
     Permission selectOne(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.879+08:00", comments="Source Table: permission")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.523+08:00", comments="Source Table: permission")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @Results(id="PermissionResult", value = {
         @Result(column="id", property="id", jdbcType=JdbcType.INTEGER, id=true),
@@ -71,22 +71,22 @@ public interface PermissionDynamicSqlMapper {
     })
     List<Permission> selectMany(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.879+08:00", comments="Source Table: permission")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.523+08:00", comments="Source Table: permission")
     @UpdateProvider(type=SqlProviderAdapter.class, method="update")
     int update(UpdateStatementProvider updateStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.879+08:00", comments="Source Table: permission")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.523+08:00", comments="Source Table: permission")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<Long>> countByExample() {
         return SelectDSL.selectWithMapper(this::count, SqlBuilder.count())
                 .from(permission);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.879+08:00", comments="Source Table: permission")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.523+08:00", comments="Source Table: permission")
     default DeleteDSL<MyBatis3DeleteModelAdapter<Integer>> deleteByExample() {
         return DeleteDSL.deleteFromWithMapper(this::delete, permission);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.880+08:00", comments="Source Table: permission")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.523+08:00", comments="Source Table: permission")
     default int deleteByPrimaryKey(Integer id_) {
         return DeleteDSL.deleteFromWithMapper(this::delete, permission)
                 .where(id, isEqualTo(id_))
@@ -94,7 +94,7 @@ public interface PermissionDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.880+08:00", comments="Source Table: permission")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.523+08:00", comments="Source Table: permission")
     default int insert(Permission record) {
         return insert(SqlBuilder.insert(record)
                 .into(permission)
@@ -115,7 +115,7 @@ public interface PermissionDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.880+08:00", comments="Source Table: permission")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.523+08:00", comments="Source Table: permission")
     default int insertSelective(Permission record) {
         return insert(SqlBuilder.insert(record)
                 .into(permission)
@@ -136,19 +136,19 @@ public interface PermissionDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.880+08:00", comments="Source Table: permission")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.523+08:00", comments="Source Table: permission")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Permission>>> selectByExample() {
         return SelectDSL.selectWithMapper(this::selectMany, id, parentId, name, describe, url, icon, num, code, spread, attribute, type, level, time, checked)
                 .from(permission);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.880+08:00", comments="Source Table: permission")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.523+08:00", comments="Source Table: permission")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Permission>>> selectDistinctByExample() {
         return SelectDSL.selectDistinctWithMapper(this::selectMany, id, parentId, name, describe, url, icon, num, code, spread, attribute, type, level, time, checked)
                 .from(permission);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.880+08:00", comments="Source Table: permission")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.523+08:00", comments="Source Table: permission")
     default Permission selectByPrimaryKey(Integer id_) {
         return SelectDSL.selectWithMapper(this::selectOne, id, parentId, name, describe, url, icon, num, code, spread, attribute, type, level, time, checked)
                 .from(permission)
@@ -157,7 +157,7 @@ public interface PermissionDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.880+08:00", comments="Source Table: permission")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.523+08:00", comments="Source Table: permission")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExample(Permission record) {
         return UpdateDSL.updateWithMapper(this::update, permission)
                 .set(parentId).equalTo(record::getParentId)
@@ -175,7 +175,7 @@ public interface PermissionDynamicSqlMapper {
                 .set(checked).equalTo(record::getChecked);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.880+08:00", comments="Source Table: permission")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.523+08:00", comments="Source Table: permission")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExampleSelective(Permission record) {
         return UpdateDSL.updateWithMapper(this::update, permission)
                 .set(parentId).equalToWhenPresent(record::getParentId)
@@ -193,7 +193,7 @@ public interface PermissionDynamicSqlMapper {
                 .set(checked).equalToWhenPresent(record::getChecked);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.880+08:00", comments="Source Table: permission")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.523+08:00", comments="Source Table: permission")
     default int updateByPrimaryKey(Permission record) {
         return UpdateDSL.updateWithMapper(this::update, permission)
                 .set(parentId).equalTo(record::getParentId)
@@ -214,7 +214,7 @@ public interface PermissionDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.880+08:00", comments="Source Table: permission")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.523+08:00", comments="Source Table: permission")
     default int updateByPrimaryKeySelective(Permission record) {
         return UpdateDSL.updateWithMapper(this::update, permission)
                 .set(parentId).equalToWhenPresent(record::getParentId)

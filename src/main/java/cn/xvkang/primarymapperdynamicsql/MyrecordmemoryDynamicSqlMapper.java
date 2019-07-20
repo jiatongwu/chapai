@@ -31,20 +31,20 @@ import org.mybatis.dynamic.sql.util.SqlProviderAdapter;
 
 @Mapper
 public interface MyrecordmemoryDynamicSqlMapper {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.743+08:00", comments="Source Table: MYRECORDMEMORY")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.311+08:00", comments="Source Table: MYRECORDMEMORY")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     long count(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.743+08:00", comments="Source Table: MYRECORDMEMORY")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.311+08:00", comments="Source Table: MYRECORDMEMORY")
     @DeleteProvider(type=SqlProviderAdapter.class, method="delete")
     int delete(DeleteStatementProvider deleteStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.743+08:00", comments="Source Table: MYRECORDMEMORY")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.312+08:00", comments="Source Table: MYRECORDMEMORY")
     @InsertProvider(type=SqlProviderAdapter.class, method="insert")
     @SelectKey(statement="SELECT SCOPE_IDENTITY()", keyProperty="record.id", before=false, resultType=Long.class)
     int insert(InsertStatementProvider<Myrecordmemory> insertStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.743+08:00", comments="Source Table: MYRECORDMEMORY")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.312+08:00", comments="Source Table: MYRECORDMEMORY")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @Results(id="MyrecordmemoryResult", value = {
         @Result(column="ID", property="id", jdbcType=JdbcType.BIGINT),
@@ -89,22 +89,22 @@ public interface MyrecordmemoryDynamicSqlMapper {
     })
     List<Myrecordmemory> selectMany(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.743+08:00", comments="Source Table: MYRECORDMEMORY")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.312+08:00", comments="Source Table: MYRECORDMEMORY")
     @UpdateProvider(type=SqlProviderAdapter.class, method="update")
     int update(UpdateStatementProvider updateStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.743+08:00", comments="Source Table: MYRECORDMEMORY")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.312+08:00", comments="Source Table: MYRECORDMEMORY")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<Long>> countByExample() {
         return SelectDSL.selectWithMapper(this::count, SqlBuilder.count())
                 .from(myrecordmemory);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.743+08:00", comments="Source Table: MYRECORDMEMORY")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.312+08:00", comments="Source Table: MYRECORDMEMORY")
     default DeleteDSL<MyBatis3DeleteModelAdapter<Integer>> deleteByExample() {
         return DeleteDSL.deleteFromWithMapper(this::delete, myrecordmemory);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.743+08:00", comments="Source Table: MYRECORDMEMORY")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.312+08:00", comments="Source Table: MYRECORDMEMORY")
     default int insert(Myrecordmemory record) {
         return insert(SqlBuilder.insert(record)
                 .into(myrecordmemory)
@@ -150,7 +150,7 @@ public interface MyrecordmemoryDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.743+08:00", comments="Source Table: MYRECORDMEMORY")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.312+08:00", comments="Source Table: MYRECORDMEMORY")
     default int insertSelective(Myrecordmemory record) {
         return insert(SqlBuilder.insert(record)
                 .into(myrecordmemory)
@@ -196,19 +196,19 @@ public interface MyrecordmemoryDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.744+08:00", comments="Source Table: MYRECORDMEMORY")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.312+08:00", comments="Source Table: MYRECORDMEMORY")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Myrecordmemory>>> selectByExample() {
         return SelectDSL.selectWithMapper(this::selectMany, id, cardno, cph, cardtype, intime, outtime, ingatename, outgatename, inoperatorcard, outoperatorcard, inoperator, outoperator, inpic, inuser, outpic, outuser, zjpic, sfje, balance, ysje, sftime, sfoperator, sfoperatorcard, sfgate, overtimesymbol, overtimesftime, overtimesfje, carparkno, bigsmall, freereason, staytime, temp1, temp2, temp3, temp4, temp5, bmorepaingcar, bdz, strdz)
                 .from(myrecordmemory);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.744+08:00", comments="Source Table: MYRECORDMEMORY")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.312+08:00", comments="Source Table: MYRECORDMEMORY")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Myrecordmemory>>> selectDistinctByExample() {
         return SelectDSL.selectDistinctWithMapper(this::selectMany, id, cardno, cph, cardtype, intime, outtime, ingatename, outgatename, inoperatorcard, outoperatorcard, inoperator, outoperator, inpic, inuser, outpic, outuser, zjpic, sfje, balance, ysje, sftime, sfoperator, sfoperatorcard, sfgate, overtimesymbol, overtimesftime, overtimesfje, carparkno, bigsmall, freereason, staytime, temp1, temp2, temp3, temp4, temp5, bmorepaingcar, bdz, strdz)
                 .from(myrecordmemory);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.744+08:00", comments="Source Table: MYRECORDMEMORY")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.312+08:00", comments="Source Table: MYRECORDMEMORY")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExample(Myrecordmemory record) {
         return UpdateDSL.updateWithMapper(this::update, myrecordmemory)
                 .set(cardno).equalTo(record::getCardno)
@@ -251,7 +251,7 @@ public interface MyrecordmemoryDynamicSqlMapper {
                 .set(strdz).equalTo(record::getStrdz);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.744+08:00", comments="Source Table: MYRECORDMEMORY")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.312+08:00", comments="Source Table: MYRECORDMEMORY")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExampleSelective(Myrecordmemory record) {
         return UpdateDSL.updateWithMapper(this::update, myrecordmemory)
                 .set(cardno).equalToWhenPresent(record::getCardno)

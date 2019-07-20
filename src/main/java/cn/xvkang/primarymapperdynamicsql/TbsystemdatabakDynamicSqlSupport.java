@@ -6,22 +6,22 @@ import org.mybatis.dynamic.sql.SqlColumn;
 import org.mybatis.dynamic.sql.SqlTable;
 
 public final class TbsystemdatabakDynamicSqlSupport {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.884+08:00", comments="Source Table: tbSystemDataBak")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.528+08:00", comments="Source Table: tbSystemDataBak")
     public static final Tbsystemdatabak tbsystemdatabak = new Tbsystemdatabak();
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.884+08:00", comments="Source field: tbSystemDataBak.id")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.528+08:00", comments="Source field: tbSystemDataBak.id")
     public static final SqlColumn<Integer> id = tbsystemdatabak.id;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.884+08:00", comments="Source field: tbSystemDataBak.IsEnld")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.528+08:00", comments="Source field: tbSystemDataBak.IsEnld")
     public static final SqlColumn<Boolean> isenld = tbsystemdatabak.isenld;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.884+08:00", comments="Source field: tbSystemDataBak.LoadRoute")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.528+08:00", comments="Source field: tbSystemDataBak.LoadRoute")
     public static final SqlColumn<String> loadroute = tbsystemdatabak.loadroute;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.884+08:00", comments="Source field: tbSystemDataBak.BakTime")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.528+08:00", comments="Source field: tbSystemDataBak.BakTime")
     public static final SqlColumn<String> baktime = tbsystemdatabak.baktime;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.884+08:00", comments="Source Table: tbSystemDataBak")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.528+08:00", comments="Source Table: tbSystemDataBak")
     public static final class Tbsystemdatabak extends SqlTable {
         public final SqlColumn<Integer> id = column("id", JDBCType.INTEGER);
 

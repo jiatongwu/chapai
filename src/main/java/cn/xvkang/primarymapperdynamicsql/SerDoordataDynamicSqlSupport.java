@@ -6,25 +6,25 @@ import org.mybatis.dynamic.sql.SqlColumn;
 import org.mybatis.dynamic.sql.SqlTable;
 
 public final class SerDoordataDynamicSqlSupport {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.852+08:00", comments="Source Table: Ser_DoorData")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.502+08:00", comments="Source Table: Ser_DoorData")
     public static final SerDoordata serDoordata = new SerDoordata();
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.852+08:00", comments="Source field: Ser_DoorData.DevcNo")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.502+08:00", comments="Source field: Ser_DoorData.DevcNo")
     public static final SqlColumn<Integer> devcno = serDoordata.devcno;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.852+08:00", comments="Source field: Ser_DoorData.Place")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.502+08:00", comments="Source field: Ser_DoorData.Place")
     public static final SqlColumn<String> place = serDoordata.place;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.852+08:00", comments="Source field: Ser_DoorData.DevcType")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.502+08:00", comments="Source field: Ser_DoorData.DevcType")
     public static final SqlColumn<Integer> devctype = serDoordata.devctype;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.852+08:00", comments="Source field: Ser_DoorData.Com")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.502+08:00", comments="Source field: Ser_DoorData.Com")
     public static final SqlColumn<Integer> com = serDoordata.com;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.852+08:00", comments="Source field: Ser_DoorData.DoorInfo")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.502+08:00", comments="Source field: Ser_DoorData.DoorInfo")
     public static final SqlColumn<String> doorinfo = serDoordata.doorinfo;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.852+08:00", comments="Source Table: Ser_DoorData")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.502+08:00", comments="Source Table: Ser_DoorData")
     public static final class SerDoordata extends SqlTable {
         public final SqlColumn<Integer> devcno = column("DevcNo", JDBCType.INTEGER);
 

@@ -23,7 +23,6 @@ public class StarterApplication implements CommandLineRunner {
 
 	public static void main(String[] args) {
 		SpringApplication.run(StarterApplication.class, args);
-
 	}
 
 	@Override
@@ -32,9 +31,7 @@ public class StarterApplication implements CommandLineRunner {
 			for (int i = 0; i < args.length; i++) {
 				System.out.println(args[i] + ",");
 			}
-			System.out.println("CommandLineRunner run");
 			try {
-				// thriftServer = context.getBean(ThriftServer.class);
 				thriftServer.start();
 			} catch (Exception e) {
 				e.printStackTrace();

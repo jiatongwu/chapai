@@ -32,11 +32,26 @@ struct Person{
 
 struct SendPhotoRequestData{
 1:optional String jwt,
-2:optional String base64image
+2:optional String base64image,
+3:optional int smsTemplateId
 }
 struct SendPhotoResponseData{
 1: optional Result_Code code,
 2: optional UploadPhotoResultEnum uploadPhotoResultEnum
+}
+
+
+struct GetAllSmsTemplateRequest{
+
+}
+struct GetAllSmsTemplateOneItem{
+1:optional int id,
+2:optional String name,
+3:optional String content
+}
+struct GetAllSmsTemplateResponse{
+1:optional list<GetAllSmsTemplateOneItem> smsTemplates,
+2:optional int count
 }
 
 exception DataException{
@@ -46,12 +61,16 @@ exception DataException{
 
 
 
+
+
 service ChepaiPhoneService{
 
 //Person getByUsername(1:required String username) throws (1: DataException dataException),
 //void saveOne(1: required Person person) throws (1: DataException daaException)
 String say(1:required String msg)throws (1:DataException dataException),
+String autologin(1:required String jwt)throws (1:DataException dataException),
 SendPhotoResponseData uploadPhoto(1:required SendPhotoRequestData request)throws (1:DataException dataException),
+GetAllSmsTemplateResponse GetAllsmsTemplateResponse(1:required GetAllSmsTemplateRequest request)throws (1:DataException dataException),
 
 
 

@@ -33,25 +33,25 @@ import org.mybatis.dynamic.sql.util.SqlProviderAdapter;
 
 @Mapper
 public interface InoutpermitionDynamicSqlMapper {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.608+08:00", comments="Source Table: InOutPermition")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.109+08:00", comments="Source Table: InOutPermition")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     long count(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.608+08:00", comments="Source Table: InOutPermition")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.109+08:00", comments="Source Table: InOutPermition")
     @DeleteProvider(type=SqlProviderAdapter.class, method="delete")
     int delete(DeleteStatementProvider deleteStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.608+08:00", comments="Source Table: InOutPermition")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.109+08:00", comments="Source Table: InOutPermition")
     @InsertProvider(type=SqlProviderAdapter.class, method="insert")
     @SelectKey(statement="SELECT SCOPE_IDENTITY()", keyProperty="record.id", before=false, resultType=Integer.class)
     int insert(InsertStatementProvider<Inoutpermition> insertStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.608+08:00", comments="Source Table: InOutPermition")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.109+08:00", comments="Source Table: InOutPermition")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @ResultMap("InoutpermitionResult")
     Inoutpermition selectOne(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.608+08:00", comments="Source Table: InOutPermition")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.109+08:00", comments="Source Table: InOutPermition")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @Results(id="InoutpermitionResult", value = {
         @Result(column="ID", property="id", jdbcType=JdbcType.INTEGER, id=true),
@@ -63,22 +63,22 @@ public interface InoutpermitionDynamicSqlMapper {
     })
     List<Inoutpermition> selectMany(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.609+08:00", comments="Source Table: InOutPermition")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.109+08:00", comments="Source Table: InOutPermition")
     @UpdateProvider(type=SqlProviderAdapter.class, method="update")
     int update(UpdateStatementProvider updateStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.609+08:00", comments="Source Table: InOutPermition")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.109+08:00", comments="Source Table: InOutPermition")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<Long>> countByExample() {
         return SelectDSL.selectWithMapper(this::count, SqlBuilder.count())
                 .from(inoutpermition);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.609+08:00", comments="Source Table: InOutPermition")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.109+08:00", comments="Source Table: InOutPermition")
     default DeleteDSL<MyBatis3DeleteModelAdapter<Integer>> deleteByExample() {
         return DeleteDSL.deleteFromWithMapper(this::delete, inoutpermition);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.609+08:00", comments="Source Table: InOutPermition")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.109+08:00", comments="Source Table: InOutPermition")
     default int deleteByPrimaryKey(Integer id_) {
         return DeleteDSL.deleteFromWithMapper(this::delete, inoutpermition)
                 .where(id, isEqualTo(id_))
@@ -86,7 +86,7 @@ public interface InoutpermitionDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.609+08:00", comments="Source Table: InOutPermition")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.109+08:00", comments="Source Table: InOutPermition")
     default int insert(Inoutpermition record) {
         return insert(SqlBuilder.insert(record)
                 .into(inoutpermition)
@@ -99,7 +99,7 @@ public interface InoutpermitionDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.609+08:00", comments="Source Table: InOutPermition")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.109+08:00", comments="Source Table: InOutPermition")
     default int insertSelective(Inoutpermition record) {
         return insert(SqlBuilder.insert(record)
                 .into(inoutpermition)
@@ -112,19 +112,19 @@ public interface InoutpermitionDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.609+08:00", comments="Source Table: InOutPermition")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.109+08:00", comments="Source Table: InOutPermition")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Inoutpermition>>> selectByExample() {
         return SelectDSL.selectWithMapper(this::selectMany, id, ctrlnumbers, cardtypes, weekdays, timebegin, timeend)
                 .from(inoutpermition);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.609+08:00", comments="Source Table: InOutPermition")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.109+08:00", comments="Source Table: InOutPermition")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Inoutpermition>>> selectDistinctByExample() {
         return SelectDSL.selectDistinctWithMapper(this::selectMany, id, ctrlnumbers, cardtypes, weekdays, timebegin, timeend)
                 .from(inoutpermition);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.609+08:00", comments="Source Table: InOutPermition")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.109+08:00", comments="Source Table: InOutPermition")
     default Inoutpermition selectByPrimaryKey(Integer id_) {
         return SelectDSL.selectWithMapper(this::selectOne, id, ctrlnumbers, cardtypes, weekdays, timebegin, timeend)
                 .from(inoutpermition)
@@ -133,7 +133,7 @@ public interface InoutpermitionDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.609+08:00", comments="Source Table: InOutPermition")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.109+08:00", comments="Source Table: InOutPermition")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExample(Inoutpermition record) {
         return UpdateDSL.updateWithMapper(this::update, inoutpermition)
                 .set(ctrlnumbers).equalTo(record::getCtrlnumbers)
@@ -143,7 +143,7 @@ public interface InoutpermitionDynamicSqlMapper {
                 .set(timeend).equalTo(record::getTimeend);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.609+08:00", comments="Source Table: InOutPermition")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.109+08:00", comments="Source Table: InOutPermition")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExampleSelective(Inoutpermition record) {
         return UpdateDSL.updateWithMapper(this::update, inoutpermition)
                 .set(ctrlnumbers).equalToWhenPresent(record::getCtrlnumbers)
@@ -153,7 +153,7 @@ public interface InoutpermitionDynamicSqlMapper {
                 .set(timeend).equalToWhenPresent(record::getTimeend);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.609+08:00", comments="Source Table: InOutPermition")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.109+08:00", comments="Source Table: InOutPermition")
     default int updateByPrimaryKey(Inoutpermition record) {
         return UpdateDSL.updateWithMapper(this::update, inoutpermition)
                 .set(ctrlnumbers).equalTo(record::getCtrlnumbers)
@@ -166,7 +166,7 @@ public interface InoutpermitionDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.609+08:00", comments="Source Table: InOutPermition")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.110+08:00", comments="Source Table: InOutPermition")
     default int updateByPrimaryKeySelective(Inoutpermition record) {
         return UpdateDSL.updateWithMapper(this::update, inoutpermition)
                 .set(ctrlnumbers).equalToWhenPresent(record::getCtrlnumbers)

@@ -6,19 +6,19 @@ import org.mybatis.dynamic.sql.SqlColumn;
 import org.mybatis.dynamic.sql.SqlTable;
 
 public final class MyprintDynamicSqlSupport {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.737+08:00", comments="Source Table: MYPrint")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.298+08:00", comments="Source Table: MYPrint")
     public static final Myprint myprint = new Myprint();
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.737+08:00", comments="Source field: MYPrint.Title")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.298+08:00", comments="Source field: MYPrint.Title")
     public static final SqlColumn<String> title = myprint.title;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.737+08:00", comments="Source field: MYPrint.FTitle")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.298+08:00", comments="Source field: MYPrint.FTitle")
     public static final SqlColumn<String> ftitle = myprint.ftitle;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.738+08:00", comments="Source field: MYPrint.Footer")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.298+08:00", comments="Source field: MYPrint.Footer")
     public static final SqlColumn<String> footer = myprint.footer;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.737+08:00", comments="Source Table: MYPrint")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.298+08:00", comments="Source Table: MYPrint")
     public static final class Myprint extends SqlTable {
         public final SqlColumn<String> title = column("Title", JDBCType.VARCHAR);
 

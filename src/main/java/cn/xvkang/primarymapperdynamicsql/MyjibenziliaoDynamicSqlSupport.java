@@ -7,97 +7,97 @@ import org.mybatis.dynamic.sql.SqlColumn;
 import org.mybatis.dynamic.sql.SqlTable;
 
 public final class MyjibenziliaoDynamicSqlSupport {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.729+08:00", comments="Source Table: MYJIBENZILIAO")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.291+08:00", comments="Source Table: MYJIBENZILIAO")
     public static final Myjibenziliao myjibenziliao = new Myjibenziliao();
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.729+08:00", comments="Source field: MYJIBENZILIAO.ID")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.291+08:00", comments="Source field: MYJIBENZILIAO.ID")
     public static final SqlColumn<Integer> id = myjibenziliao.id;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.729+08:00", comments="Source field: MYJIBENZILIAO.UserNO")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.292+08:00", comments="Source field: MYJIBENZILIAO.UserNO")
     public static final SqlColumn<String> userno = myjibenziliao.userno;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.729+08:00", comments="Source field: MYJIBENZILIAO.UserName")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.292+08:00", comments="Source field: MYJIBENZILIAO.UserName")
     public static final SqlColumn<String> username = myjibenziliao.username;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.729+08:00", comments="Source field: MYJIBENZILIAO.Sex")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.292+08:00", comments="Source field: MYJIBENZILIAO.Sex")
     public static final SqlColumn<String> sex = myjibenziliao.sex;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.729+08:00", comments="Source field: MYJIBENZILIAO.HomeAddress")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.292+08:00", comments="Source field: MYJIBENZILIAO.HomeAddress")
     public static final SqlColumn<String> homeaddress = myjibenziliao.homeaddress;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.730+08:00", comments="Source field: MYJIBENZILIAO.DeptName")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.292+08:00", comments="Source field: MYJIBENZILIAO.DeptName")
     public static final SqlColumn<String> deptname = myjibenziliao.deptname;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.730+08:00", comments="Source field: MYJIBENZILIAO.Job")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.292+08:00", comments="Source field: MYJIBENZILIAO.Job")
     public static final SqlColumn<String> job = myjibenziliao.job;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.730+08:00", comments="Source field: MYJIBENZILIAO.WorkTime")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.292+08:00", comments="Source field: MYJIBENZILIAO.WorkTime")
     public static final SqlColumn<Date> worktime = myjibenziliao.worktime;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.730+08:00", comments="Source field: MYJIBENZILIAO.BirthDate")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.292+08:00", comments="Source field: MYJIBENZILIAO.BirthDate")
     public static final SqlColumn<Date> birthdate = myjibenziliao.birthdate;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.730+08:00", comments="Source field: MYJIBENZILIAO.IDCard")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.292+08:00", comments="Source field: MYJIBENZILIAO.IDCard")
     public static final SqlColumn<String> idcard = myjibenziliao.idcard;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.730+08:00", comments="Source field: MYJIBENZILIAO.MaritalStatus")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.292+08:00", comments="Source field: MYJIBENZILIAO.MaritalStatus")
     public static final SqlColumn<String> maritalstatus = myjibenziliao.maritalstatus;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.730+08:00", comments="Source field: MYJIBENZILIAO.HighestDegree")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.292+08:00", comments="Source field: MYJIBENZILIAO.HighestDegree")
     public static final SqlColumn<String> highestdegree = myjibenziliao.highestdegree;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.730+08:00", comments="Source field: MYJIBENZILIAO.PoliticalStatus")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.292+08:00", comments="Source field: MYJIBENZILIAO.PoliticalStatus")
     public static final SqlColumn<String> politicalstatus = myjibenziliao.politicalstatus;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.730+08:00", comments="Source field: MYJIBENZILIAO.PicPath")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.292+08:00", comments="Source field: MYJIBENZILIAO.PicPath")
     public static final SqlColumn<String> picpath = myjibenziliao.picpath;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.730+08:00", comments="Source field: MYJIBENZILIAO.School")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.292+08:00", comments="Source field: MYJIBENZILIAO.School")
     public static final SqlColumn<String> school = myjibenziliao.school;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.730+08:00", comments="Source field: MYJIBENZILIAO.Speciality")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.292+08:00", comments="Source field: MYJIBENZILIAO.Speciality")
     public static final SqlColumn<String> speciality = myjibenziliao.speciality;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.730+08:00", comments="Source field: MYJIBENZILIAO.ForeignLanguage")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.292+08:00", comments="Source field: MYJIBENZILIAO.ForeignLanguage")
     public static final SqlColumn<String> foreignlanguage = myjibenziliao.foreignlanguage;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.730+08:00", comments="Source field: MYJIBENZILIAO.Skill")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.292+08:00", comments="Source field: MYJIBENZILIAO.Skill")
     public static final SqlColumn<String> skill = myjibenziliao.skill;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.730+08:00", comments="Source field: MYJIBENZILIAO.TelNumber")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.292+08:00", comments="Source field: MYJIBENZILIAO.TelNumber")
     public static final SqlColumn<String> telnumber = myjibenziliao.telnumber;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.730+08:00", comments="Source field: MYJIBENZILIAO.MobNumber")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.292+08:00", comments="Source field: MYJIBENZILIAO.MobNumber")
     public static final SqlColumn<String> mobnumber = myjibenziliao.mobnumber;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.730+08:00", comments="Source field: MYJIBENZILIAO.ZipCode")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.292+08:00", comments="Source field: MYJIBENZILIAO.ZipCode")
     public static final SqlColumn<String> zipcode = myjibenziliao.zipcode;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.730+08:00", comments="Source field: MYJIBENZILIAO.NativePlace")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.292+08:00", comments="Source field: MYJIBENZILIAO.NativePlace")
     public static final SqlColumn<String> nativeplace = myjibenziliao.nativeplace;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.730+08:00", comments="Source field: MYJIBENZILIAO.CPH")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.292+08:00", comments="Source field: MYJIBENZILIAO.CPH")
     public static final SqlColumn<String> cph = myjibenziliao.cph;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.730+08:00", comments="Source field: MYJIBENZILIAO.CarType")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.292+08:00", comments="Source field: MYJIBENZILIAO.CarType")
     public static final SqlColumn<String> cartype = myjibenziliao.cartype;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.730+08:00", comments="Source field: MYJIBENZILIAO.CarColor")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.292+08:00", comments="Source field: MYJIBENZILIAO.CarColor")
     public static final SqlColumn<String> carcolor = myjibenziliao.carcolor;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.730+08:00", comments="Source field: MYJIBENZILIAO.CarPic")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.292+08:00", comments="Source field: MYJIBENZILIAO.CarPic")
     public static final SqlColumn<String> carpic = myjibenziliao.carpic;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.730+08:00", comments="Source field: MYJIBENZILIAO.CarPlace")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.292+08:00", comments="Source field: MYJIBENZILIAO.CarPlace")
     public static final SqlColumn<String> carplace = myjibenziliao.carplace;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.730+08:00", comments="Source field: MYJIBENZILIAO.PersonPhoto")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.292+08:00", comments="Source field: MYJIBENZILIAO.PersonPhoto")
     public static final SqlColumn<byte[]> personphoto = myjibenziliao.personphoto;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.730+08:00", comments="Source field: MYJIBENZILIAO.CarPhoto")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.292+08:00", comments="Source field: MYJIBENZILIAO.CarPhoto")
     public static final SqlColumn<byte[]> carphoto = myjibenziliao.carphoto;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.729+08:00", comments="Source Table: MYJIBENZILIAO")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.291+08:00", comments="Source Table: MYJIBENZILIAO")
     public static final class Myjibenziliao extends SqlTable {
         public final SqlColumn<Integer> id = column("ID", JDBCType.INTEGER);
 

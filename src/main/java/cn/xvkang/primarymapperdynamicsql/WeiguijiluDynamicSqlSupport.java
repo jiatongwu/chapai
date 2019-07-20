@@ -7,28 +7,28 @@ import org.mybatis.dynamic.sql.SqlColumn;
 import org.mybatis.dynamic.sql.SqlTable;
 
 public final class WeiguijiluDynamicSqlSupport {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.915+08:00", comments="Source Table: weiguijilu")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.557+08:00", comments="Source Table: weiguijilu")
     public static final Weiguijilu weiguijilu = new Weiguijilu();
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.915+08:00", comments="Source field: weiguijilu.id")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.557+08:00", comments="Source field: weiguijilu.id")
     public static final SqlColumn<Integer> id = weiguijilu.id;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.915+08:00", comments="Source field: weiguijilu.user_id")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.557+08:00", comments="Source field: weiguijilu.user_id")
     public static final SqlColumn<Integer> userId = weiguijilu.userId;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.915+08:00", comments="Source field: weiguijilu.remark")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.557+08:00", comments="Source field: weiguijilu.remark")
     public static final SqlColumn<String> remark = weiguijilu.remark;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.915+08:00", comments="Source field: weiguijilu.cph")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.557+08:00", comments="Source field: weiguijilu.cph")
     public static final SqlColumn<String> cph = weiguijilu.cph;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.915+08:00", comments="Source field: weiguijilu.createtime")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.557+08:00", comments="Source field: weiguijilu.createtime")
     public static final SqlColumn<Date> createtime = weiguijilu.createtime;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.915+08:00", comments="Source field: weiguijilu.base64image")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.557+08:00", comments="Source field: weiguijilu.base64image")
     public static final SqlColumn<String> base64image = weiguijilu.base64image;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.915+08:00", comments="Source Table: weiguijilu")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.557+08:00", comments="Source Table: weiguijilu")
     public static final class Weiguijilu extends SqlTable {
         public final SqlColumn<Integer> id = column("id", JDBCType.INTEGER);
 

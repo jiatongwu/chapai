@@ -33,25 +33,25 @@ import org.mybatis.dynamic.sql.util.SqlProviderAdapter;
 
 @Mapper
 public interface MDoorHolidayDynamicSqlMapper {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.781+08:00", comments="Source Table: M_Door_Holiday")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.368+08:00", comments="Source Table: M_Door_Holiday")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     long count(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.781+08:00", comments="Source Table: M_Door_Holiday")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.368+08:00", comments="Source Table: M_Door_Holiday")
     @DeleteProvider(type=SqlProviderAdapter.class, method="delete")
     int delete(DeleteStatementProvider deleteStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.781+08:00", comments="Source Table: M_Door_Holiday")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.368+08:00", comments="Source Table: M_Door_Holiday")
     @InsertProvider(type=SqlProviderAdapter.class, method="insert")
     @SelectKey(statement="SELECT SCOPE_IDENTITY()", keyProperty="record.id", before=false, resultType=Integer.class)
     int insert(InsertStatementProvider<MDoorHoliday> insertStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.781+08:00", comments="Source Table: M_Door_Holiday")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.368+08:00", comments="Source Table: M_Door_Holiday")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @ResultMap("MDoorHolidayResult")
     MDoorHoliday selectOne(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.781+08:00", comments="Source Table: M_Door_Holiday")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.369+08:00", comments="Source Table: M_Door_Holiday")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @Results(id="MDoorHolidayResult", value = {
         @Result(column="id", property="id", jdbcType=JdbcType.INTEGER, id=true),
@@ -61,22 +61,22 @@ public interface MDoorHolidayDynamicSqlMapper {
     })
     List<MDoorHoliday> selectMany(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.781+08:00", comments="Source Table: M_Door_Holiday")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.369+08:00", comments="Source Table: M_Door_Holiday")
     @UpdateProvider(type=SqlProviderAdapter.class, method="update")
     int update(UpdateStatementProvider updateStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.781+08:00", comments="Source Table: M_Door_Holiday")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.369+08:00", comments="Source Table: M_Door_Holiday")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<Long>> countByExample() {
         return SelectDSL.selectWithMapper(this::count, SqlBuilder.count())
                 .from(MDoorHoliday);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.781+08:00", comments="Source Table: M_Door_Holiday")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.369+08:00", comments="Source Table: M_Door_Holiday")
     default DeleteDSL<MyBatis3DeleteModelAdapter<Integer>> deleteByExample() {
         return DeleteDSL.deleteFromWithMapper(this::delete, MDoorHoliday);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.781+08:00", comments="Source Table: M_Door_Holiday")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.369+08:00", comments="Source Table: M_Door_Holiday")
     default int deleteByPrimaryKey(Integer id_) {
         return DeleteDSL.deleteFromWithMapper(this::delete, MDoorHoliday)
                 .where(id, isEqualTo(id_))
@@ -84,7 +84,7 @@ public interface MDoorHolidayDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.781+08:00", comments="Source Table: M_Door_Holiday")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.369+08:00", comments="Source Table: M_Door_Holiday")
     default int insert(MDoorHoliday record) {
         return insert(SqlBuilder.insert(record)
                 .into(MDoorHoliday)
@@ -95,7 +95,7 @@ public interface MDoorHolidayDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.781+08:00", comments="Source Table: M_Door_Holiday")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.369+08:00", comments="Source Table: M_Door_Holiday")
     default int insertSelective(MDoorHoliday record) {
         return insert(SqlBuilder.insert(record)
                 .into(MDoorHoliday)
@@ -106,19 +106,19 @@ public interface MDoorHolidayDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.781+08:00", comments="Source Table: M_Door_Holiday")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.369+08:00", comments="Source Table: M_Door_Holiday")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<MDoorHoliday>>> selectByExample() {
         return SelectDSL.selectWithMapper(this::selectMany, id, sdate, devcnum, doorlei)
                 .from(MDoorHoliday);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.781+08:00", comments="Source Table: M_Door_Holiday")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.369+08:00", comments="Source Table: M_Door_Holiday")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<MDoorHoliday>>> selectDistinctByExample() {
         return SelectDSL.selectDistinctWithMapper(this::selectMany, id, sdate, devcnum, doorlei)
                 .from(MDoorHoliday);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.782+08:00", comments="Source Table: M_Door_Holiday")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.369+08:00", comments="Source Table: M_Door_Holiday")
     default MDoorHoliday selectByPrimaryKey(Integer id_) {
         return SelectDSL.selectWithMapper(this::selectOne, id, sdate, devcnum, doorlei)
                 .from(MDoorHoliday)
@@ -127,7 +127,7 @@ public interface MDoorHolidayDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.782+08:00", comments="Source Table: M_Door_Holiday")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.370+08:00", comments="Source Table: M_Door_Holiday")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExample(MDoorHoliday record) {
         return UpdateDSL.updateWithMapper(this::update, MDoorHoliday)
                 .set(sdate).equalTo(record::getSdate)
@@ -135,7 +135,7 @@ public interface MDoorHolidayDynamicSqlMapper {
                 .set(doorlei).equalTo(record::getDoorlei);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.782+08:00", comments="Source Table: M_Door_Holiday")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.370+08:00", comments="Source Table: M_Door_Holiday")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExampleSelective(MDoorHoliday record) {
         return UpdateDSL.updateWithMapper(this::update, MDoorHoliday)
                 .set(sdate).equalToWhenPresent(record::getSdate)
@@ -143,7 +143,7 @@ public interface MDoorHolidayDynamicSqlMapper {
                 .set(doorlei).equalToWhenPresent(record::getDoorlei);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.782+08:00", comments="Source Table: M_Door_Holiday")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.370+08:00", comments="Source Table: M_Door_Holiday")
     default int updateByPrimaryKey(MDoorHoliday record) {
         return UpdateDSL.updateWithMapper(this::update, MDoorHoliday)
                 .set(sdate).equalTo(record::getSdate)
@@ -154,7 +154,7 @@ public interface MDoorHolidayDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.782+08:00", comments="Source Table: M_Door_Holiday")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.370+08:00", comments="Source Table: M_Door_Holiday")
     default int updateByPrimaryKeySelective(MDoorHoliday record) {
         return UpdateDSL.updateWithMapper(this::update, MDoorHoliday)
                 .set(sdate).equalToWhenPresent(record::getSdate)

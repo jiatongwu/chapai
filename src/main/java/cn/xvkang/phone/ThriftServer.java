@@ -29,7 +29,7 @@ public class ThriftServer {
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
-			logger.debug("thrift停止 ");
+			// logger.debug("thrift停止 ");
 		}
 	}
 
@@ -49,7 +49,7 @@ public class ThriftServer {
 
 	public void init() {
 		protocolFactory = new TCompactProtocol.Factory();// new TBinaryProtocol.Factory();
-		transportFactory = new TFramedTransport.Factory();// new TTransportFactory();
+		transportFactory = new TFramedTransport.Factory(999999999);// new TTransportFactory();
 	}
 
 	@SuppressWarnings("rawtypes")
@@ -65,11 +65,12 @@ public class ThriftServer {
 			THsHaServer.Args args1 = new THsHaServer.Args(tNonblockingServerSocket).minWorkerThreads(minThreads)
 					.maxWorkerThreads(maxThreads);
 			args1.protocolFactory(protocolFactory);
+
 			args1.transportFactory(transportFactory);
 			args1.processorFactory(new TProcessorFactory(processor));
 			// TServer server = new TThreadPoolServer(tArgs);
 			// TServer server = new TSimpleServer(tArgs);
-			logger.info("thrift服务启动成功, 端口={}", port);
+			// logger.info("thrift服务启动成功, 端口={}", port);
 			// server.serve();
 			tServer = new THsHaServer(args1);
 			tServer.serve();

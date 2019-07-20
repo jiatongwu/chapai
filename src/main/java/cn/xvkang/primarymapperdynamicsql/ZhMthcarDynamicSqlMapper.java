@@ -31,20 +31,20 @@ import org.mybatis.dynamic.sql.util.SqlProviderAdapter;
 
 @Mapper
 public interface ZhMthcarDynamicSqlMapper {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.901+08:00", comments="Source Table: zh_MthCar")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.544+08:00", comments="Source Table: zh_MthCar")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     long count(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.901+08:00", comments="Source Table: zh_MthCar")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.544+08:00", comments="Source Table: zh_MthCar")
     @DeleteProvider(type=SqlProviderAdapter.class, method="delete")
     int delete(DeleteStatementProvider deleteStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.901+08:00", comments="Source Table: zh_MthCar")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.544+08:00", comments="Source Table: zh_MthCar")
     @InsertProvider(type=SqlProviderAdapter.class, method="insert")
     @SelectKey(statement="SELECT SCOPE_IDENTITY()", keyProperty="record.id", before=false, resultType=Integer.class)
     int insert(InsertStatementProvider<ZhMthcar> insertStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.901+08:00", comments="Source Table: zh_MthCar")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.544+08:00", comments="Source Table: zh_MthCar")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @Results(id="ZhMthcarResult", value = {
         @Result(column="id", property="id", jdbcType=JdbcType.INTEGER),
@@ -63,22 +63,22 @@ public interface ZhMthcarDynamicSqlMapper {
     })
     List<ZhMthcar> selectMany(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.901+08:00", comments="Source Table: zh_MthCar")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.544+08:00", comments="Source Table: zh_MthCar")
     @UpdateProvider(type=SqlProviderAdapter.class, method="update")
     int update(UpdateStatementProvider updateStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.901+08:00", comments="Source Table: zh_MthCar")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.544+08:00", comments="Source Table: zh_MthCar")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<Long>> countByExample() {
         return SelectDSL.selectWithMapper(this::count, SqlBuilder.count())
                 .from(zhMthcar);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.901+08:00", comments="Source Table: zh_MthCar")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.544+08:00", comments="Source Table: zh_MthCar")
     default DeleteDSL<MyBatis3DeleteModelAdapter<Integer>> deleteByExample() {
         return DeleteDSL.deleteFromWithMapper(this::delete, zhMthcar);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.901+08:00", comments="Source Table: zh_MthCar")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.544+08:00", comments="Source Table: zh_MthCar")
     default int insert(ZhMthcar record) {
         return insert(SqlBuilder.insert(record)
                 .into(zhMthcar)
@@ -98,7 +98,7 @@ public interface ZhMthcarDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.901+08:00", comments="Source Table: zh_MthCar")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.544+08:00", comments="Source Table: zh_MthCar")
     default int insertSelective(ZhMthcar record) {
         return insert(SqlBuilder.insert(record)
                 .into(zhMthcar)
@@ -118,19 +118,19 @@ public interface ZhMthcarDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.901+08:00", comments="Source Table: zh_MthCar")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.544+08:00", comments="Source Table: zh_MthCar")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<ZhMthcar>>> selectByExample() {
         return SelectDSL.selectWithMapper(this::selectMany, id, carno, cartype, begintime, endtime, iussetime, userno, username, homeaddress, mobnumber, carspalcesnum, stuat, synflag)
                 .from(zhMthcar);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.901+08:00", comments="Source Table: zh_MthCar")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.544+08:00", comments="Source Table: zh_MthCar")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<ZhMthcar>>> selectDistinctByExample() {
         return SelectDSL.selectDistinctWithMapper(this::selectMany, id, carno, cartype, begintime, endtime, iussetime, userno, username, homeaddress, mobnumber, carspalcesnum, stuat, synflag)
                 .from(zhMthcar);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.901+08:00", comments="Source Table: zh_MthCar")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.544+08:00", comments="Source Table: zh_MthCar")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExample(ZhMthcar record) {
         return UpdateDSL.updateWithMapper(this::update, zhMthcar)
                 .set(carno).equalTo(record::getCarno)
@@ -147,7 +147,7 @@ public interface ZhMthcarDynamicSqlMapper {
                 .set(synflag).equalTo(record::getSynflag);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.901+08:00", comments="Source Table: zh_MthCar")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.544+08:00", comments="Source Table: zh_MthCar")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExampleSelective(ZhMthcar record) {
         return UpdateDSL.updateWithMapper(this::update, zhMthcar)
                 .set(carno).equalToWhenPresent(record::getCarno)

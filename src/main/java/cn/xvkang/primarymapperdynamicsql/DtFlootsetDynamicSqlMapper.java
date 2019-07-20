@@ -30,41 +30,41 @@ import org.mybatis.dynamic.sql.util.SqlProviderAdapter;
 
 @Mapper
 public interface DtFlootsetDynamicSqlMapper {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.562+08:00", comments="Source Table: Dt_FlootSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:21.996+08:00", comments="Source Table: Dt_FlootSet")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     long count(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.562+08:00", comments="Source Table: Dt_FlootSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:21.996+08:00", comments="Source Table: Dt_FlootSet")
     @DeleteProvider(type=SqlProviderAdapter.class, method="delete")
     int delete(DeleteStatementProvider deleteStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.562+08:00", comments="Source Table: Dt_FlootSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:21.996+08:00", comments="Source Table: Dt_FlootSet")
     @InsertProvider(type=SqlProviderAdapter.class, method="insert")
     int insert(InsertStatementProvider<DtFlootset> insertStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.562+08:00", comments="Source Table: Dt_FlootSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:21.996+08:00", comments="Source Table: Dt_FlootSet")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @Results(id="DtFlootsetResult", value = {
         @Result(column="Floot", property="floot", jdbcType=JdbcType.INTEGER)
     })
     List<DtFlootset> selectMany(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.562+08:00", comments="Source Table: Dt_FlootSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:21.997+08:00", comments="Source Table: Dt_FlootSet")
     @UpdateProvider(type=SqlProviderAdapter.class, method="update")
     int update(UpdateStatementProvider updateStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.562+08:00", comments="Source Table: Dt_FlootSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:21.997+08:00", comments="Source Table: Dt_FlootSet")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<Long>> countByExample() {
         return SelectDSL.selectWithMapper(this::count, SqlBuilder.count())
                 .from(dtFlootset);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.562+08:00", comments="Source Table: Dt_FlootSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:21.997+08:00", comments="Source Table: Dt_FlootSet")
     default DeleteDSL<MyBatis3DeleteModelAdapter<Integer>> deleteByExample() {
         return DeleteDSL.deleteFromWithMapper(this::delete, dtFlootset);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.563+08:00", comments="Source Table: Dt_FlootSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:21.997+08:00", comments="Source Table: Dt_FlootSet")
     default int insert(DtFlootset record) {
         return insert(SqlBuilder.insert(record)
                 .into(dtFlootset)
@@ -73,7 +73,7 @@ public interface DtFlootsetDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.563+08:00", comments="Source Table: Dt_FlootSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:21.997+08:00", comments="Source Table: Dt_FlootSet")
     default int insertSelective(DtFlootset record) {
         return insert(SqlBuilder.insert(record)
                 .into(dtFlootset)
@@ -82,25 +82,25 @@ public interface DtFlootsetDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.563+08:00", comments="Source Table: Dt_FlootSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:21.997+08:00", comments="Source Table: Dt_FlootSet")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<DtFlootset>>> selectByExample() {
         return SelectDSL.selectWithMapper(this::selectMany, floot)
                 .from(dtFlootset);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.563+08:00", comments="Source Table: Dt_FlootSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:21.997+08:00", comments="Source Table: Dt_FlootSet")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<DtFlootset>>> selectDistinctByExample() {
         return SelectDSL.selectDistinctWithMapper(this::selectMany, floot)
                 .from(dtFlootset);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.563+08:00", comments="Source Table: Dt_FlootSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:21.997+08:00", comments="Source Table: Dt_FlootSet")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExample(DtFlootset record) {
         return UpdateDSL.updateWithMapper(this::update, dtFlootset)
                 .set(floot).equalTo(record::getFloot);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.563+08:00", comments="Source Table: Dt_FlootSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:21.997+08:00", comments="Source Table: Dt_FlootSet")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExampleSelective(DtFlootset record) {
         return UpdateDSL.updateWithMapper(this::update, dtFlootset)
                 .set(floot).equalToWhenPresent(record::getFloot);

@@ -33,25 +33,25 @@ import org.mybatis.dynamic.sql.util.SqlProviderAdapter;
 
 @Mapper
 public interface OpencloseddoorstautDynamicSqlMapper {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.816+08:00", comments="Source Table: OpenClosedDoorStaut")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.449+08:00", comments="Source Table: OpenClosedDoorStaut")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     long count(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.816+08:00", comments="Source Table: OpenClosedDoorStaut")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.449+08:00", comments="Source Table: OpenClosedDoorStaut")
     @DeleteProvider(type=SqlProviderAdapter.class, method="delete")
     int delete(DeleteStatementProvider deleteStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.816+08:00", comments="Source Table: OpenClosedDoorStaut")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.449+08:00", comments="Source Table: OpenClosedDoorStaut")
     @InsertProvider(type=SqlProviderAdapter.class, method="insert")
     @SelectKey(statement="SELECT SCOPE_IDENTITY()", keyProperty="record.id", before=false, resultType=Integer.class)
     int insert(InsertStatementProvider<Opencloseddoorstaut> insertStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.816+08:00", comments="Source Table: OpenClosedDoorStaut")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.449+08:00", comments="Source Table: OpenClosedDoorStaut")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @ResultMap("OpencloseddoorstautResult")
     Opencloseddoorstaut selectOne(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.816+08:00", comments="Source Table: OpenClosedDoorStaut")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.449+08:00", comments="Source Table: OpenClosedDoorStaut")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @Results(id="OpencloseddoorstautResult", value = {
         @Result(column="id", property="id", jdbcType=JdbcType.INTEGER, id=true),
@@ -60,22 +60,22 @@ public interface OpencloseddoorstautDynamicSqlMapper {
     })
     List<Opencloseddoorstaut> selectMany(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.816+08:00", comments="Source Table: OpenClosedDoorStaut")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.449+08:00", comments="Source Table: OpenClosedDoorStaut")
     @UpdateProvider(type=SqlProviderAdapter.class, method="update")
     int update(UpdateStatementProvider updateStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.816+08:00", comments="Source Table: OpenClosedDoorStaut")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.449+08:00", comments="Source Table: OpenClosedDoorStaut")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<Long>> countByExample() {
         return SelectDSL.selectWithMapper(this::count, SqlBuilder.count())
                 .from(opencloseddoorstaut);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.816+08:00", comments="Source Table: OpenClosedDoorStaut")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.449+08:00", comments="Source Table: OpenClosedDoorStaut")
     default DeleteDSL<MyBatis3DeleteModelAdapter<Integer>> deleteByExample() {
         return DeleteDSL.deleteFromWithMapper(this::delete, opencloseddoorstaut);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.816+08:00", comments="Source Table: OpenClosedDoorStaut")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.449+08:00", comments="Source Table: OpenClosedDoorStaut")
     default int deleteByPrimaryKey(Integer id_) {
         return DeleteDSL.deleteFromWithMapper(this::delete, opencloseddoorstaut)
                 .where(id, isEqualTo(id_))
@@ -83,7 +83,7 @@ public interface OpencloseddoorstautDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.816+08:00", comments="Source Table: OpenClosedDoorStaut")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.449+08:00", comments="Source Table: OpenClosedDoorStaut")
     default int insert(Opencloseddoorstaut record) {
         return insert(SqlBuilder.insert(record)
                 .into(opencloseddoorstaut)
@@ -93,7 +93,7 @@ public interface OpencloseddoorstautDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.816+08:00", comments="Source Table: OpenClosedDoorStaut")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.449+08:00", comments="Source Table: OpenClosedDoorStaut")
     default int insertSelective(Opencloseddoorstaut record) {
         return insert(SqlBuilder.insert(record)
                 .into(opencloseddoorstaut)
@@ -103,19 +103,19 @@ public interface OpencloseddoorstautDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.816+08:00", comments="Source Table: OpenClosedDoorStaut")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.449+08:00", comments="Source Table: OpenClosedDoorStaut")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Opencloseddoorstaut>>> selectByExample() {
         return SelectDSL.selectWithMapper(this::selectMany, id, devcno, stuat)
                 .from(opencloseddoorstaut);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.816+08:00", comments="Source Table: OpenClosedDoorStaut")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.449+08:00", comments="Source Table: OpenClosedDoorStaut")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Opencloseddoorstaut>>> selectDistinctByExample() {
         return SelectDSL.selectDistinctWithMapper(this::selectMany, id, devcno, stuat)
                 .from(opencloseddoorstaut);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.816+08:00", comments="Source Table: OpenClosedDoorStaut")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.449+08:00", comments="Source Table: OpenClosedDoorStaut")
     default Opencloseddoorstaut selectByPrimaryKey(Integer id_) {
         return SelectDSL.selectWithMapper(this::selectOne, id, devcno, stuat)
                 .from(opencloseddoorstaut)
@@ -124,21 +124,21 @@ public interface OpencloseddoorstautDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.816+08:00", comments="Source Table: OpenClosedDoorStaut")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.449+08:00", comments="Source Table: OpenClosedDoorStaut")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExample(Opencloseddoorstaut record) {
         return UpdateDSL.updateWithMapper(this::update, opencloseddoorstaut)
                 .set(devcno).equalTo(record::getDevcno)
                 .set(stuat).equalTo(record::getStuat);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.816+08:00", comments="Source Table: OpenClosedDoorStaut")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.450+08:00", comments="Source Table: OpenClosedDoorStaut")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExampleSelective(Opencloseddoorstaut record) {
         return UpdateDSL.updateWithMapper(this::update, opencloseddoorstaut)
                 .set(devcno).equalToWhenPresent(record::getDevcno)
                 .set(stuat).equalToWhenPresent(record::getStuat);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.816+08:00", comments="Source Table: OpenClosedDoorStaut")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.450+08:00", comments="Source Table: OpenClosedDoorStaut")
     default int updateByPrimaryKey(Opencloseddoorstaut record) {
         return UpdateDSL.updateWithMapper(this::update, opencloseddoorstaut)
                 .set(devcno).equalTo(record::getDevcno)
@@ -148,7 +148,7 @@ public interface OpencloseddoorstautDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.816+08:00", comments="Source Table: OpenClosedDoorStaut")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.450+08:00", comments="Source Table: OpenClosedDoorStaut")
     default int updateByPrimaryKeySelective(Opencloseddoorstaut record) {
         return UpdateDSL.updateWithMapper(this::update, opencloseddoorstaut)
                 .set(devcno).equalToWhenPresent(record::getDevcno)

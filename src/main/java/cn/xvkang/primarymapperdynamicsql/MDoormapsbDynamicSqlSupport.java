@@ -7,22 +7,22 @@ import org.mybatis.dynamic.sql.SqlColumn;
 import org.mybatis.dynamic.sql.SqlTable;
 
 public final class MDoormapsbDynamicSqlSupport {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.777+08:00", comments="Source Table: M_DoorMapsB")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.363+08:00", comments="Source Table: M_DoorMapsB")
     public static final MDoormapsb MDoormapsb = new MDoormapsb();
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.777+08:00", comments="Source field: M_DoorMapsB.Mapid")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.363+08:00", comments="Source field: M_DoorMapsB.Mapid")
     public static final SqlColumn<Integer> mapid = MDoormapsb.mapid;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.777+08:00", comments="Source field: M_DoorMapsB.MapName")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.363+08:00", comments="Source field: M_DoorMapsB.MapName")
     public static final SqlColumn<String> mapname = MDoormapsb.mapname;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.777+08:00", comments="Source field: M_DoorMapsB.AltDate")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.364+08:00", comments="Source field: M_DoorMapsB.AltDate")
     public static final SqlColumn<Date> altdate = MDoormapsb.altdate;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.777+08:00", comments="Source field: M_DoorMapsB.MapLiu")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.364+08:00", comments="Source field: M_DoorMapsB.MapLiu")
     public static final SqlColumn<byte[]> mapliu = MDoormapsb.mapliu;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.777+08:00", comments="Source Table: M_DoorMapsB")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.363+08:00", comments="Source Table: M_DoorMapsB")
     public static final class MDoormapsb extends SqlTable {
         public final SqlColumn<Integer> mapid = column("Mapid", JDBCType.INTEGER);
 

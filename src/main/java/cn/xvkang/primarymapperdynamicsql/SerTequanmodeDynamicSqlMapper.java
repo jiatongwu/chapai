@@ -33,25 +33,25 @@ import org.mybatis.dynamic.sql.util.SqlProviderAdapter;
 
 @Mapper
 public interface SerTequanmodeDynamicSqlMapper {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.870+08:00", comments="Source Table: Ser_TeQuanMode")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.515+08:00", comments="Source Table: Ser_TeQuanMode")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     long count(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.870+08:00", comments="Source Table: Ser_TeQuanMode")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.515+08:00", comments="Source Table: Ser_TeQuanMode")
     @DeleteProvider(type=SqlProviderAdapter.class, method="delete")
     int delete(DeleteStatementProvider deleteStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.870+08:00", comments="Source Table: Ser_TeQuanMode")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.515+08:00", comments="Source Table: Ser_TeQuanMode")
     @InsertProvider(type=SqlProviderAdapter.class, method="insert")
     @SelectKey(statement="SELECT SCOPE_IDENTITY()", keyProperty="record.id", before=false, resultType=Integer.class)
     int insert(InsertStatementProvider<SerTequanmode> insertStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.870+08:00", comments="Source Table: Ser_TeQuanMode")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.515+08:00", comments="Source Table: Ser_TeQuanMode")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @ResultMap("SerTequanmodeResult")
     SerTequanmode selectOne(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.870+08:00", comments="Source Table: Ser_TeQuanMode")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.515+08:00", comments="Source Table: Ser_TeQuanMode")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @Results(id="SerTequanmodeResult", value = {
         @Result(column="id", property="id", jdbcType=JdbcType.INTEGER, id=true),
@@ -61,22 +61,22 @@ public interface SerTequanmodeDynamicSqlMapper {
     })
     List<SerTequanmode> selectMany(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.870+08:00", comments="Source Table: Ser_TeQuanMode")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.515+08:00", comments="Source Table: Ser_TeQuanMode")
     @UpdateProvider(type=SqlProviderAdapter.class, method="update")
     int update(UpdateStatementProvider updateStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.870+08:00", comments="Source Table: Ser_TeQuanMode")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.515+08:00", comments="Source Table: Ser_TeQuanMode")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<Long>> countByExample() {
         return SelectDSL.selectWithMapper(this::count, SqlBuilder.count())
                 .from(serTequanmode);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.870+08:00", comments="Source Table: Ser_TeQuanMode")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.515+08:00", comments="Source Table: Ser_TeQuanMode")
     default DeleteDSL<MyBatis3DeleteModelAdapter<Integer>> deleteByExample() {
         return DeleteDSL.deleteFromWithMapper(this::delete, serTequanmode);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.870+08:00", comments="Source Table: Ser_TeQuanMode")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.515+08:00", comments="Source Table: Ser_TeQuanMode")
     default int deleteByPrimaryKey(Integer id_) {
         return DeleteDSL.deleteFromWithMapper(this::delete, serTequanmode)
                 .where(id, isEqualTo(id_))
@@ -84,7 +84,7 @@ public interface SerTequanmodeDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.870+08:00", comments="Source Table: Ser_TeQuanMode")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.515+08:00", comments="Source Table: Ser_TeQuanMode")
     default int insert(SerTequanmode record) {
         return insert(SqlBuilder.insert(record)
                 .into(serTequanmode)
@@ -95,7 +95,7 @@ public interface SerTequanmodeDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.870+08:00", comments="Source Table: Ser_TeQuanMode")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.515+08:00", comments="Source Table: Ser_TeQuanMode")
     default int insertSelective(SerTequanmode record) {
         return insert(SqlBuilder.insert(record)
                 .into(serTequanmode)
@@ -106,19 +106,19 @@ public interface SerTequanmodeDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.871+08:00", comments="Source Table: Ser_TeQuanMode")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.515+08:00", comments="Source Table: Ser_TeQuanMode")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<SerTequanmode>>> selectByExample() {
         return SelectDSL.selectWithMapper(this::selectMany, id, devcid, doorid, doormode)
                 .from(serTequanmode);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.871+08:00", comments="Source Table: Ser_TeQuanMode")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.515+08:00", comments="Source Table: Ser_TeQuanMode")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<SerTequanmode>>> selectDistinctByExample() {
         return SelectDSL.selectDistinctWithMapper(this::selectMany, id, devcid, doorid, doormode)
                 .from(serTequanmode);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.871+08:00", comments="Source Table: Ser_TeQuanMode")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.515+08:00", comments="Source Table: Ser_TeQuanMode")
     default SerTequanmode selectByPrimaryKey(Integer id_) {
         return SelectDSL.selectWithMapper(this::selectOne, id, devcid, doorid, doormode)
                 .from(serTequanmode)
@@ -127,7 +127,7 @@ public interface SerTequanmodeDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.871+08:00", comments="Source Table: Ser_TeQuanMode")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.516+08:00", comments="Source Table: Ser_TeQuanMode")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExample(SerTequanmode record) {
         return UpdateDSL.updateWithMapper(this::update, serTequanmode)
                 .set(devcid).equalTo(record::getDevcid)
@@ -135,7 +135,7 @@ public interface SerTequanmodeDynamicSqlMapper {
                 .set(doormode).equalTo(record::getDoormode);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.871+08:00", comments="Source Table: Ser_TeQuanMode")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.516+08:00", comments="Source Table: Ser_TeQuanMode")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExampleSelective(SerTequanmode record) {
         return UpdateDSL.updateWithMapper(this::update, serTequanmode)
                 .set(devcid).equalToWhenPresent(record::getDevcid)
@@ -143,7 +143,7 @@ public interface SerTequanmodeDynamicSqlMapper {
                 .set(doormode).equalToWhenPresent(record::getDoormode);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.871+08:00", comments="Source Table: Ser_TeQuanMode")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.516+08:00", comments="Source Table: Ser_TeQuanMode")
     default int updateByPrimaryKey(SerTequanmode record) {
         return UpdateDSL.updateWithMapper(this::update, serTequanmode)
                 .set(devcid).equalTo(record::getDevcid)
@@ -154,7 +154,7 @@ public interface SerTequanmodeDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.871+08:00", comments="Source Table: Ser_TeQuanMode")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.516+08:00", comments="Source Table: Ser_TeQuanMode")
     default int updateByPrimaryKeySelective(SerTequanmode record) {
         return UpdateDSL.updateWithMapper(this::update, serTequanmode)
                 .set(devcid).equalToWhenPresent(record::getDevcid)

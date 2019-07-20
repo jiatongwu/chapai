@@ -6,6 +6,9 @@ import java.util.List;
 public class Constants {
 	// 车牌巡逻人员android登录
 	public static final String REDIS_JWT_XUNLUO_RENYUAN_PREFIX = "jwt_xunluorenyuan:";
+	public static final String BAIDU_AI_CHEPAI_SHIBIE_PREFIX = "baidu_ai_chepai_shibie:";
+	public static final String BAIDU_AI_CHEPAI_SHIBIE_TODAY_COUNT_PREFIX = "baidu_ai_chepai_shibie_today_count:";
+
 	// 所有redis存放的值前缀
 	// public static final String REDIS_PREFIX = "fuxing:";
 	// jwt相关的redis key 前缘

@@ -6,31 +6,31 @@ import org.mybatis.dynamic.sql.SqlColumn;
 import org.mybatis.dynamic.sql.SqlTable;
 
 public final class DtfxreportselectschemeDynamicSqlSupport {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.519+08:00", comments="Source Table: DtFxReportSelectScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:21.953+08:00", comments="Source Table: DtFxReportSelectScheme")
     public static final Dtfxreportselectscheme dtfxreportselectscheme = new Dtfxreportselectscheme();
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.520+08:00", comments="Source field: DtFxReportSelectScheme.SchId")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:21.953+08:00", comments="Source field: DtFxReportSelectScheme.SchId")
     public static final SqlColumn<Integer> schid = dtfxreportselectscheme.schid;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.520+08:00", comments="Source field: DtFxReportSelectScheme.SchName")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:21.953+08:00", comments="Source field: DtFxReportSelectScheme.SchName")
     public static final SqlColumn<String> schname = dtfxreportselectscheme.schname;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.520+08:00", comments="Source field: DtFxReportSelectScheme.FieldName")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:21.953+08:00", comments="Source field: DtFxReportSelectScheme.FieldName")
     public static final SqlColumn<String> fieldname = dtfxreportselectscheme.fieldname;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.520+08:00", comments="Source field: DtFxReportSelectScheme.Operators")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:21.953+08:00", comments="Source field: DtFxReportSelectScheme.Operators")
     public static final SqlColumn<String> operators = dtfxreportselectscheme.operators;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.521+08:00", comments="Source field: DtFxReportSelectScheme.Selectvalues")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:21.954+08:00", comments="Source field: DtFxReportSelectScheme.Selectvalues")
     public static final SqlColumn<String> selectvalues = dtfxreportselectscheme.selectvalues;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.521+08:00", comments="Source field: DtFxReportSelectScheme.startime")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:21.954+08:00", comments="Source field: DtFxReportSelectScheme.startime")
     public static final SqlColumn<String> startime = dtfxreportselectscheme.startime;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.521+08:00", comments="Source field: DtFxReportSelectScheme.endtime")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:21.954+08:00", comments="Source field: DtFxReportSelectScheme.endtime")
     public static final SqlColumn<String> endtime = dtfxreportselectscheme.endtime;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.520+08:00", comments="Source Table: DtFxReportSelectScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:21.953+08:00", comments="Source Table: DtFxReportSelectScheme")
     public static final class Dtfxreportselectscheme extends SqlTable {
         public final SqlColumn<Integer> schid = column("SchId", JDBCType.INTEGER);
 

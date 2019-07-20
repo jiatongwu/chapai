@@ -61,8 +61,6 @@
                                             lau-href="${pageContext.request.contextPath }/welcome.html"> <i
                         class="layui-icon layui-icon-home"></i><cite>首页</cite>
                 </a></li>
-
-
                 <sec:authorize access="hasAnyRole('super_admin','admin_user','normal_user')">
                     <li class="lau-nav-item"><a class="lau-nav-header"><i
                             class="layui-icon layui-icon-right"></i><cite>车牌系统</cite></a>
@@ -76,6 +74,11 @@
                                 <a style="padding-left: 20px;"
                                    lau-href="${pageContext.request.contextPath }/chepai/listPage.html"><i
                                         class="layui-icon layui-icon-circle"></i><cite>车牌列表</cite></a>
+                            </dd>
+                            <dd style="">
+                                <a style="padding-left: 20px;"
+                                   lau-href="${pageContext.request.contextPath }/smsTemplate/listPage.html"><i
+                                        class="layui-icon layui-icon-circle"></i><cite>短信模板列表</cite></a>
                             </dd>
                         </dl>
                     </li>

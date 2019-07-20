@@ -30,19 +30,19 @@ import org.mybatis.dynamic.sql.util.SqlProviderAdapter;
 
 @Mapper
 public interface MychechangpassDynamicSqlMapper {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.686+08:00", comments="Source Table: MYCHECHANGPASS")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.214+08:00", comments="Source Table: MYCHECHANGPASS")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     long count(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.686+08:00", comments="Source Table: MYCHECHANGPASS")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.214+08:00", comments="Source Table: MYCHECHANGPASS")
     @DeleteProvider(type=SqlProviderAdapter.class, method="delete")
     int delete(DeleteStatementProvider deleteStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.686+08:00", comments="Source Table: MYCHECHANGPASS")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.214+08:00", comments="Source Table: MYCHECHANGPASS")
     @InsertProvider(type=SqlProviderAdapter.class, method="insert")
     int insert(InsertStatementProvider<Mychechangpass> insertStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.686+08:00", comments="Source Table: MYCHECHANGPASS")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.214+08:00", comments="Source Table: MYCHECHANGPASS")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @Results(id="MychechangpassResult", value = {
         @Result(column="Pwd", property="pwd", jdbcType=JdbcType.VARCHAR),
@@ -51,22 +51,22 @@ public interface MychechangpassDynamicSqlMapper {
     })
     List<Mychechangpass> selectMany(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.686+08:00", comments="Source Table: MYCHECHANGPASS")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.215+08:00", comments="Source Table: MYCHECHANGPASS")
     @UpdateProvider(type=SqlProviderAdapter.class, method="update")
     int update(UpdateStatementProvider updateStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.686+08:00", comments="Source Table: MYCHECHANGPASS")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.215+08:00", comments="Source Table: MYCHECHANGPASS")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<Long>> countByExample() {
         return SelectDSL.selectWithMapper(this::count, SqlBuilder.count())
                 .from(mychechangpass);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.686+08:00", comments="Source Table: MYCHECHANGPASS")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.215+08:00", comments="Source Table: MYCHECHANGPASS")
     default DeleteDSL<MyBatis3DeleteModelAdapter<Integer>> deleteByExample() {
         return DeleteDSL.deleteFromWithMapper(this::delete, mychechangpass);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.686+08:00", comments="Source Table: MYCHECHANGPASS")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.215+08:00", comments="Source Table: MYCHECHANGPASS")
     default int insert(Mychechangpass record) {
         return insert(SqlBuilder.insert(record)
                 .into(mychechangpass)
@@ -77,7 +77,7 @@ public interface MychechangpassDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.686+08:00", comments="Source Table: MYCHECHANGPASS")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.221+08:00", comments="Source Table: MYCHECHANGPASS")
     default int insertSelective(Mychechangpass record) {
         return insert(SqlBuilder.insert(record)
                 .into(mychechangpass)
@@ -88,19 +88,19 @@ public interface MychechangpassDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.687+08:00", comments="Source Table: MYCHECHANGPASS")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.221+08:00", comments="Source Table: MYCHECHANGPASS")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Mychechangpass>>> selectByExample() {
         return SelectDSL.selectWithMapper(this::selectMany, pwd, pcname, bakeuptime)
                 .from(mychechangpass);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.687+08:00", comments="Source Table: MYCHECHANGPASS")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.221+08:00", comments="Source Table: MYCHECHANGPASS")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Mychechangpass>>> selectDistinctByExample() {
         return SelectDSL.selectDistinctWithMapper(this::selectMany, pwd, pcname, bakeuptime)
                 .from(mychechangpass);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.687+08:00", comments="Source Table: MYCHECHANGPASS")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.221+08:00", comments="Source Table: MYCHECHANGPASS")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExample(Mychechangpass record) {
         return UpdateDSL.updateWithMapper(this::update, mychechangpass)
                 .set(pwd).equalTo(record::getPwd)
@@ -108,7 +108,7 @@ public interface MychechangpassDynamicSqlMapper {
                 .set(bakeuptime).equalTo(record::getBakeuptime);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.687+08:00", comments="Source Table: MYCHECHANGPASS")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.221+08:00", comments="Source Table: MYCHECHANGPASS")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExampleSelective(Mychechangpass record) {
         return UpdateDSL.updateWithMapper(this::update, mychechangpass)
                 .set(pwd).equalToWhenPresent(record::getPwd)

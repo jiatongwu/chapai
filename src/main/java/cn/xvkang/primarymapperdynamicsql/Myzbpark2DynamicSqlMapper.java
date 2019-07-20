@@ -30,19 +30,19 @@ import org.mybatis.dynamic.sql.util.SqlProviderAdapter;
 
 @Mapper
 public interface Myzbpark2DynamicSqlMapper {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.764+08:00", comments="Source Table: MYZBPARK2")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.345+08:00", comments="Source Table: MYZBPARK2")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     long count(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.764+08:00", comments="Source Table: MYZBPARK2")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.345+08:00", comments="Source Table: MYZBPARK2")
     @DeleteProvider(type=SqlProviderAdapter.class, method="delete")
     int delete(DeleteStatementProvider deleteStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.764+08:00", comments="Source Table: MYZBPARK2")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.345+08:00", comments="Source Table: MYZBPARK2")
     @InsertProvider(type=SqlProviderAdapter.class, method="insert")
     int insert(InsertStatementProvider<Myzbpark2> insertStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.764+08:00", comments="Source Table: MYZBPARK2")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.345+08:00", comments="Source Table: MYZBPARK2")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @Results(id="Myzbpark2Result", value = {
         @Result(column="CtrlNumber", property="ctrlnumber", jdbcType=JdbcType.INTEGER),
@@ -54,22 +54,22 @@ public interface Myzbpark2DynamicSqlMapper {
     })
     List<Myzbpark2> selectMany(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.764+08:00", comments="Source Table: MYZBPARK2")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.345+08:00", comments="Source Table: MYZBPARK2")
     @UpdateProvider(type=SqlProviderAdapter.class, method="update")
     int update(UpdateStatementProvider updateStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.764+08:00", comments="Source Table: MYZBPARK2")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.345+08:00", comments="Source Table: MYZBPARK2")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<Long>> countByExample() {
         return SelectDSL.selectWithMapper(this::count, SqlBuilder.count())
                 .from(myzbpark2);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.764+08:00", comments="Source Table: MYZBPARK2")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.345+08:00", comments="Source Table: MYZBPARK2")
     default DeleteDSL<MyBatis3DeleteModelAdapter<Integer>> deleteByExample() {
         return DeleteDSL.deleteFromWithMapper(this::delete, myzbpark2);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.764+08:00", comments="Source Table: MYZBPARK2")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.345+08:00", comments="Source Table: MYZBPARK2")
     default int insert(Myzbpark2 record) {
         return insert(SqlBuilder.insert(record)
                 .into(myzbpark2)
@@ -83,7 +83,7 @@ public interface Myzbpark2DynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.764+08:00", comments="Source Table: MYZBPARK2")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.345+08:00", comments="Source Table: MYZBPARK2")
     default int insertSelective(Myzbpark2 record) {
         return insert(SqlBuilder.insert(record)
                 .into(myzbpark2)
@@ -97,19 +97,19 @@ public interface Myzbpark2DynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.764+08:00", comments="Source Table: MYZBPARK2")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.345+08:00", comments="Source Table: MYZBPARK2")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Myzbpark2>>> selectByExample() {
         return SelectDSL.selectWithMapper(this::selectMany, ctrlnumber, address, favorable, manner, outhour, outdayno)
                 .from(myzbpark2);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.764+08:00", comments="Source Table: MYZBPARK2")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.345+08:00", comments="Source Table: MYZBPARK2")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Myzbpark2>>> selectDistinctByExample() {
         return SelectDSL.selectDistinctWithMapper(this::selectMany, ctrlnumber, address, favorable, manner, outhour, outdayno)
                 .from(myzbpark2);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.764+08:00", comments="Source Table: MYZBPARK2")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.345+08:00", comments="Source Table: MYZBPARK2")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExample(Myzbpark2 record) {
         return UpdateDSL.updateWithMapper(this::update, myzbpark2)
                 .set(ctrlnumber).equalTo(record::getCtrlnumber)
@@ -120,7 +120,7 @@ public interface Myzbpark2DynamicSqlMapper {
                 .set(outdayno).equalTo(record::getOutdayno);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.764+08:00", comments="Source Table: MYZBPARK2")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.345+08:00", comments="Source Table: MYZBPARK2")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExampleSelective(Myzbpark2 record) {
         return UpdateDSL.updateWithMapper(this::update, myzbpark2)
                 .set(ctrlnumber).equalToWhenPresent(record::getCtrlnumber)

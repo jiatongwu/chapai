@@ -33,25 +33,25 @@ import org.mybatis.dynamic.sql.util.SqlProviderAdapter;
 
 @Mapper
 public interface MyblacklistDynamicSqlMapper {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.660+08:00", comments="Source Table: MYBlacklist")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.164+08:00", comments="Source Table: MYBlacklist")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     long count(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.660+08:00", comments="Source Table: MYBlacklist")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.164+08:00", comments="Source Table: MYBlacklist")
     @DeleteProvider(type=SqlProviderAdapter.class, method="delete")
     int delete(DeleteStatementProvider deleteStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.660+08:00", comments="Source Table: MYBlacklist")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.164+08:00", comments="Source Table: MYBlacklist")
     @InsertProvider(type=SqlProviderAdapter.class, method="insert")
     @SelectKey(statement="SELECT SCOPE_IDENTITY()", keyProperty="record.id", before=false, resultType=Integer.class)
     int insert(InsertStatementProvider<Myblacklist> insertStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.660+08:00", comments="Source Table: MYBlacklist")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.164+08:00", comments="Source Table: MYBlacklist")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @ResultMap("MyblacklistResult")
     Myblacklist selectOne(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.660+08:00", comments="Source Table: MYBlacklist")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.164+08:00", comments="Source Table: MYBlacklist")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @Results(id="MyblacklistResult", value = {
         @Result(column="ID", property="id", jdbcType=JdbcType.INTEGER, id=true),
@@ -64,22 +64,22 @@ public interface MyblacklistDynamicSqlMapper {
     })
     List<Myblacklist> selectMany(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.660+08:00", comments="Source Table: MYBlacklist")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.164+08:00", comments="Source Table: MYBlacklist")
     @UpdateProvider(type=SqlProviderAdapter.class, method="update")
     int update(UpdateStatementProvider updateStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.660+08:00", comments="Source Table: MYBlacklist")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.164+08:00", comments="Source Table: MYBlacklist")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<Long>> countByExample() {
         return SelectDSL.selectWithMapper(this::count, SqlBuilder.count())
                 .from(myblacklist);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.660+08:00", comments="Source Table: MYBlacklist")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.164+08:00", comments="Source Table: MYBlacklist")
     default DeleteDSL<MyBatis3DeleteModelAdapter<Integer>> deleteByExample() {
         return DeleteDSL.deleteFromWithMapper(this::delete, myblacklist);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.660+08:00", comments="Source Table: MYBlacklist")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.164+08:00", comments="Source Table: MYBlacklist")
     default int deleteByPrimaryKey(Integer id_) {
         return DeleteDSL.deleteFromWithMapper(this::delete, myblacklist)
                 .where(id, isEqualTo(id_))
@@ -87,7 +87,7 @@ public interface MyblacklistDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.660+08:00", comments="Source Table: MYBlacklist")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.164+08:00", comments="Source Table: MYBlacklist")
     default int insert(Myblacklist record) {
         return insert(SqlBuilder.insert(record)
                 .into(myblacklist)
@@ -101,7 +101,7 @@ public interface MyblacklistDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.660+08:00", comments="Source Table: MYBlacklist")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.164+08:00", comments="Source Table: MYBlacklist")
     default int insertSelective(Myblacklist record) {
         return insert(SqlBuilder.insert(record)
                 .into(myblacklist)
@@ -115,19 +115,19 @@ public interface MyblacklistDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.660+08:00", comments="Source Table: MYBlacklist")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.164+08:00", comments="Source Table: MYBlacklist")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Myblacklist>>> selectByExample() {
         return SelectDSL.selectWithMapper(this::selectMany, id, cph, starttime, endtime, reason, downloadsignal, adddelete)
                 .from(myblacklist);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.660+08:00", comments="Source Table: MYBlacklist")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.164+08:00", comments="Source Table: MYBlacklist")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Myblacklist>>> selectDistinctByExample() {
         return SelectDSL.selectDistinctWithMapper(this::selectMany, id, cph, starttime, endtime, reason, downloadsignal, adddelete)
                 .from(myblacklist);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.660+08:00", comments="Source Table: MYBlacklist")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.164+08:00", comments="Source Table: MYBlacklist")
     default Myblacklist selectByPrimaryKey(Integer id_) {
         return SelectDSL.selectWithMapper(this::selectOne, id, cph, starttime, endtime, reason, downloadsignal, adddelete)
                 .from(myblacklist)
@@ -136,7 +136,7 @@ public interface MyblacklistDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.660+08:00", comments="Source Table: MYBlacklist")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.164+08:00", comments="Source Table: MYBlacklist")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExample(Myblacklist record) {
         return UpdateDSL.updateWithMapper(this::update, myblacklist)
                 .set(cph).equalTo(record::getCph)
@@ -147,7 +147,7 @@ public interface MyblacklistDynamicSqlMapper {
                 .set(adddelete).equalTo(record::getAdddelete);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.660+08:00", comments="Source Table: MYBlacklist")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.164+08:00", comments="Source Table: MYBlacklist")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExampleSelective(Myblacklist record) {
         return UpdateDSL.updateWithMapper(this::update, myblacklist)
                 .set(cph).equalToWhenPresent(record::getCph)
@@ -158,7 +158,7 @@ public interface MyblacklistDynamicSqlMapper {
                 .set(adddelete).equalToWhenPresent(record::getAdddelete);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.660+08:00", comments="Source Table: MYBlacklist")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.164+08:00", comments="Source Table: MYBlacklist")
     default int updateByPrimaryKey(Myblacklist record) {
         return UpdateDSL.updateWithMapper(this::update, myblacklist)
                 .set(cph).equalTo(record::getCph)
@@ -172,7 +172,7 @@ public interface MyblacklistDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.661+08:00", comments="Source Table: MYBlacklist")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.164+08:00", comments="Source Table: MYBlacklist")
     default int updateByPrimaryKeySelective(Myblacklist record) {
         return UpdateDSL.updateWithMapper(this::update, myblacklist)
                 .set(cph).equalToWhenPresent(record::getCph)

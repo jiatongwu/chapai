@@ -30,41 +30,41 @@ import org.mybatis.dynamic.sql.util.SqlProviderAdapter;
 
 @Mapper
 public interface MyencryptionDynamicSqlMapper {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.802+08:00", comments="Source Table: MyEncryption")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.428+08:00", comments="Source Table: MyEncryption")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     long count(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.802+08:00", comments="Source Table: MyEncryption")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.428+08:00", comments="Source Table: MyEncryption")
     @DeleteProvider(type=SqlProviderAdapter.class, method="delete")
     int delete(DeleteStatementProvider deleteStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.802+08:00", comments="Source Table: MyEncryption")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.428+08:00", comments="Source Table: MyEncryption")
     @InsertProvider(type=SqlProviderAdapter.class, method="insert")
     int insert(InsertStatementProvider<Myencryption> insertStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.802+08:00", comments="Source Table: MyEncryption")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.428+08:00", comments="Source Table: MyEncryption")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @Results(id="MyencryptionResult", value = {
         @Result(column="SQLkey", property="sqlkey", jdbcType=JdbcType.VARCHAR)
     })
     List<Myencryption> selectMany(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.802+08:00", comments="Source Table: MyEncryption")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.428+08:00", comments="Source Table: MyEncryption")
     @UpdateProvider(type=SqlProviderAdapter.class, method="update")
     int update(UpdateStatementProvider updateStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.802+08:00", comments="Source Table: MyEncryption")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.428+08:00", comments="Source Table: MyEncryption")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<Long>> countByExample() {
         return SelectDSL.selectWithMapper(this::count, SqlBuilder.count())
                 .from(myencryption);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.802+08:00", comments="Source Table: MyEncryption")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.428+08:00", comments="Source Table: MyEncryption")
     default DeleteDSL<MyBatis3DeleteModelAdapter<Integer>> deleteByExample() {
         return DeleteDSL.deleteFromWithMapper(this::delete, myencryption);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.802+08:00", comments="Source Table: MyEncryption")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.428+08:00", comments="Source Table: MyEncryption")
     default int insert(Myencryption record) {
         return insert(SqlBuilder.insert(record)
                 .into(myencryption)
@@ -73,7 +73,7 @@ public interface MyencryptionDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.802+08:00", comments="Source Table: MyEncryption")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.428+08:00", comments="Source Table: MyEncryption")
     default int insertSelective(Myencryption record) {
         return insert(SqlBuilder.insert(record)
                 .into(myencryption)
@@ -82,25 +82,25 @@ public interface MyencryptionDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.802+08:00", comments="Source Table: MyEncryption")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.428+08:00", comments="Source Table: MyEncryption")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Myencryption>>> selectByExample() {
         return SelectDSL.selectWithMapper(this::selectMany, sqlkey)
                 .from(myencryption);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.802+08:00", comments="Source Table: MyEncryption")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.428+08:00", comments="Source Table: MyEncryption")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Myencryption>>> selectDistinctByExample() {
         return SelectDSL.selectDistinctWithMapper(this::selectMany, sqlkey)
                 .from(myencryption);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.802+08:00", comments="Source Table: MyEncryption")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.428+08:00", comments="Source Table: MyEncryption")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExample(Myencryption record) {
         return UpdateDSL.updateWithMapper(this::update, myencryption)
                 .set(sqlkey).equalTo(record::getSqlkey);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-18T14:55:17.802+08:00", comments="Source Table: MyEncryption")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.428+08:00", comments="Source Table: MyEncryption")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExampleSelective(Myencryption record) {
         return UpdateDSL.updateWithMapper(this::update, myencryption)
                 .set(sqlkey).equalToWhenPresent(record::getSqlkey);
