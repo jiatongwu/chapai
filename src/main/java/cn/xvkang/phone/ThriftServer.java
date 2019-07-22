@@ -25,7 +25,9 @@ public class ThriftServer {
 	public void destory() {
 		if (tServer != null) {
 			try {
+				logger.info("thrift停止 ");
 				tServer.stop();
+
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
@@ -54,6 +56,7 @@ public class ThriftServer {
 
 	@SuppressWarnings("rawtypes")
 	public void start() {
+		logger.info("thrift服务开始启动, 端口={}", port);
 		// TMultiplexedProcessor processor = new TMultiplexedProcessor();
 		// processor.registerProcessor(JazzService.class.getSimpleName(), new
 		// JazzService.Processor<JazzService.Iface>(hadoopService));
@@ -70,7 +73,7 @@ public class ThriftServer {
 			args1.processorFactory(new TProcessorFactory(processor));
 			// TServer server = new TThreadPoolServer(tArgs);
 			// TServer server = new TSimpleServer(tArgs);
-			// logger.info("thrift服务启动成功, 端口={}", port);
+			logger.info("thrift服务启动成功, 端口={}", port);
 			// server.serve();
 			tServer = new THsHaServer(args1);
 			tServer.serve();
@@ -80,4 +83,13 @@ public class ThriftServer {
 		}
 
 	}
+
+	public TServer gettServer() {
+		return tServer;
+	}
+
+	public void settServer(TServer tServer) {
+		this.tServer = tServer;
+	}
+
 }

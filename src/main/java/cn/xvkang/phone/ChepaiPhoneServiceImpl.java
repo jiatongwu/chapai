@@ -125,7 +125,7 @@ public class ChepaiPhoneServiceImpl implements ChepaiPhoneService.Iface {
 			response.setCode(Result_Code.NOT_LOGIN);
 			return response;
 		}
-		String cph = chepaiShibie(base64image);
+		String cph = request.getCph();// chepaiShibie(base64image);
 		// 车牌识别一次 redis中记录当天发送次数加1
 		// 增加发送次数
 		Date now = new Date();
@@ -144,11 +144,11 @@ public class ChepaiPhoneServiceImpl implements ChepaiPhoneService.Iface {
 		c2.setTime(new Date());
 		c2.add(Calendar.SECOND, 7 * 24 * 60 * 60);
 		redisTemplateInteger.expireAt(baiduChepaiShibieTodaySendCountKey, c2.getTime());
-		if (cph == null) {
-			response.setCode(Result_Code.ERROR);
-			response.setUploadPhotoResultEnum(UploadPhotoResultEnum.SHIBIE_BULIAO);
-			return response;
-		}
+//		if (cph == null) {
+//			response.setCode(Result_Code.ERROR);
+//			response.setUploadPhotoResultEnum(UploadPhotoResultEnum.SHIBIE_BULIAO);
+//			return response;
+//		}
 		// 判断这个车牌号是否在库里存在
 		Myjibenziliao myjibenziliao = chepaiService.findByChp(cph);
 		if (myjibenziliao == null) {
@@ -263,6 +263,7 @@ public class ChepaiPhoneServiceImpl implements ChepaiPhoneService.Iface {
 	@Override
 	public GetAllSmsTemplateResponse GetAllsmsTemplateResponse(GetAllSmsTemplateRequest request)
 			throws DataException, TException {
+
 		QueryExpressionDSL<SelectModel>.QueryExpressionWhereBuilder where = SqlBuilder
 				.select(SmsTemplateDynamicSqlSupport.smsTemplate.allColumns())
 				.from(SmsTemplateDynamicSqlSupport.smsTemplate, "smsTemplate").where();

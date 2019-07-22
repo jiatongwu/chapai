@@ -33,7 +33,8 @@ struct Person{
 struct SendPhotoRequestData{
 1:optional String jwt,
 2:optional String base64image,
-3:optional int smsTemplateId
+3:optional int smsTemplateId,
+4:optional String cph
 }
 struct SendPhotoResponseData{
 1: optional Result_Code code,

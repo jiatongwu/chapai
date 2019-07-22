@@ -138,6 +138,8 @@
           <element id="library" level="project" name="Maven: com.h2database:h2:1.4.199" />
           <element id="library" level="project" name="Maven: org.apache.thrift:libthrift:0.12.0" />
           <element id="library" level="project" name="Maven: org.freemarker:freemarker:2.3.28" />
+          <element id="library" level="project" name="Maven: io.netty:netty-all:4.1.37.Final" />
+          <element id="library" level="project" name="Maven: com.google.protobuf:protobuf-java:3.8.0" />
         </element>
       </element>
       <element id="directory" name="META-INF">

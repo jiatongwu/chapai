@@ -13,6 +13,15 @@ logging:
     cn:
       xvkang: debug
 spring:
+  netty:
+    worker:
+      thread:
+        size: 1000
+    boss:
+      thread:
+        size: 10
+    host:
+      port: 9999
   h2:
     console:
       enabled: true 
@@ -83,6 +92,8 @@ ymlPath: /tmp/config.yml
 
 
 
+
+
 ---
 thrift:
   port: 8899
@@ -94,6 +105,15 @@ logging:
     cn:
       xvkang: debug
 spring:
+  netty:
+    worker:
+      thread:
+        size: 1000
+    boss:
+      thread:
+        size: 10
+    host:
+      port: 9999
   session:
     store-type: redis
     redis:
