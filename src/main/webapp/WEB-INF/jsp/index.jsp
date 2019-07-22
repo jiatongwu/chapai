@@ -80,6 +80,11 @@
                                    lau-href="${pageContext.request.contextPath }/smsTemplate/listPage.html"><i
                                         class="layui-icon layui-icon-circle"></i><cite>短信模板列表</cite></a>
                             </dd>
+                            <dd style="">
+                                <a style="padding-left: 20px;"
+                                   lau-href="${pageContext.request.contextPath }/weiguijilu/listPage.html"><i
+                                        class="layui-icon layui-icon-circle"></i><cite>违规记录列表</cite></a>
+                            </dd>
                         </dl>
                     </li>
                 </sec:authorize>

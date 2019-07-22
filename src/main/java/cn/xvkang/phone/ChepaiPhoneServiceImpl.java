@@ -9,6 +9,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.apache.commons.lang3.StringUtils;
 import org.apache.http.HttpEntity;
 import org.apache.http.NameValuePair;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
@@ -26,6 +27,7 @@ import org.mybatis.dynamic.sql.select.render.SelectStatementProvider;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.PageImpl;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Component;
 
@@ -37,6 +39,8 @@ import cn.xvkang.phone.thrift.DataException;
 import cn.xvkang.phone.thrift.GetAllSmsTemplateOneItem;
 import cn.xvkang.phone.thrift.GetAllSmsTemplateRequest;
 import cn.xvkang.phone.thrift.GetAllSmsTemplateResponse;
+import cn.xvkang.phone.thrift.GetWeiguiRequestData;
+import cn.xvkang.phone.thrift.GetWeiguiResponseData;
 import cn.xvkang.phone.thrift.Result_Code;
 import cn.xvkang.phone.thrift.SendPhotoRequestData;
 import cn.xvkang.phone.thrift.SendPhotoResponseData;
@@ -334,5 +338,71 @@ public class ChepaiPhoneServiceImpl implements ChepaiPhoneService.Iface {
 		redisTemplateString.opsForValue().set(jwtKey, username + "_" + imei);
 		redisTemplateString.expireAt(jwtKey, c.getTime());
 		return jwt;
+	}
+
+	@Override
+	public GetWeiguiResponseData GetWeiguijiluResponse(GetWeiguiRequestData request) throws DataException, TException {
+		int pageSize = 10;
+		GetWeiguiResponseData response = new GetWeiguiResponseData();
+		String cph = request.getCph();
+		String date = request.getDate();
+		String jwt = request.getJwt();
+		int pageNum = request.getPageNum();
+		Claims claims = JjwtUtils.decodeJWT(jwt);
+		boolean errorJwtFormat = false;
+		String usernameImei = null;
+		if (claims == null) {
+			errorJwtFormat = true;
+			// 错误格式的jwt
+			logger.info("=============> 错误的jwt格式　");
+		} else {
+			// 还要判断是否在有效时间内
+			Date now = new Date();
+			Date expiration = claims.getExpiration();
+			if (now.getTime() > expiration.getTime()) {
+				errorJwtFormat = true;
+			} else {
+				// 还要判断是否在redis中存在 如果redis中不存在了说明用户点击退出了，所有的客户端都退出了 所有此用户的jwt都失效
+				usernameImei = redisStringTemplate.opsForValue().get(applicationProperties.getRedisNameSpace() + ":"
+						+ Constants.REDIS_JWT_XUNLUO_RENYUAN_PREFIX + jwt);
+				if (usernameImei == null) {
+					errorJwtFormat = true;
+				}
+			}
+		}
+		if (errorJwtFormat) {
+			response.setCode(Result_Code.NOT_LOGIN);
+			return response;
+		}
+		Map<String, Object> params = new HashMap<>();
+		params.put("createTimeAsc", "0");
+		if (StringUtils.isNotBlank(cph)) {
+			params.put("cph", cph);
+		}
+		if (StringUtils.isNotBlank(date)) {
+			String startTime = date + " 00:00:01";
+			String endTime = date + " 23:59:59";
+			params.put("startTime", startTime);
+			params.put("endTime", endTime);
+		}
+		PageImpl<Map<String, Object>> pages = weiguijiluService.selectAll(params, pageNum, pageSize);
+		List<cn.xvkang.phone.thrift.Weiguijilu> weiguijilus = new ArrayList<>();
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		for (Map<String, Object> map : pages.getContent()) {
+			cn.xvkang.phone.thrift.Weiguijilu weiguijilu = new cn.xvkang.phone.thrift.Weiguijilu();
+			weiguijilu.setCph((String) map.get("cph"));
+			Date createtime = (Date) map.get("createtime");
+			weiguijilu.setCreatetime(sdf.format(createtime));
+			weiguijilu.setPersonName((String) map.get("personName"));
+			weiguijilu.setBase64image((String) map.get("base64image"));
+			weiguijilus.add(weiguijilu);
+		}
+
+		int totalPages = pages.getTotalPages();
+		response.setTotalPage(totalPages);
+		response.setPageNum(pageNum);
+		response.setCode(Result_Code.OK);
+		response.setWeiguijilus(weiguijilus);
+		return response;
 	}
 }

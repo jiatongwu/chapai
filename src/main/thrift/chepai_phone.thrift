@@ -42,6 +42,27 @@ struct SendPhotoResponseData{
 }
 
 
+struct GetWeiguiRequestData{
+1:optional String jwt,
+2:optional String date,
+4:optional String cph,
+5:optional int pageNum
+}
+struct Weiguijilu{
+1: optional String createtime,
+2: optional String personName,
+3: optional String cph,
+4: optional String base64image
+
+}
+struct GetWeiguiResponseData{
+1: optional Result_Code code,
+2: optional list<Weiguijilu> weiguijilus,
+3: optional int totalPage,
+4: optional int pageNum
+}
+
+
 struct GetAllSmsTemplateRequest{
 
 }
@@ -72,6 +93,7 @@ String say(1:required String msg)throws (1:DataException dataException),
 String autologin(1:required String jwt)throws (1:DataException dataException),
 SendPhotoResponseData uploadPhoto(1:required SendPhotoRequestData request)throws (1:DataException dataException),
 GetAllSmsTemplateResponse GetAllsmsTemplateResponse(1:required GetAllSmsTemplateRequest request)throws (1:DataException dataException),
+GetWeiguiResponseData GetWeiguijiluResponse(1:required GetWeiguiRequestData request)throws (1:DataException dataException),
 
 
 

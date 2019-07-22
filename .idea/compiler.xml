@@ -9,8 +9,5 @@
         <module name="chepai" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="chepai" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
 </project>
