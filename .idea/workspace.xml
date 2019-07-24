@@ -3,19 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="b91c95dc-dbd4-405f-981b-f79e21576100" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/xvkang/phone/ChepaiPhoneServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/xvkang/phone/ChepaiPhoneServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/xvkang/phone/thrift/ChepaiPhoneService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/xvkang/phone/thrift/ChepaiPhoneService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/xvkang/phone/thrift/DataException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/xvkang/phone/thrift/DataException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/xvkang/phone/thrift/GetAllSmsTemplateOneItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/xvkang/phone/thrift/GetAllSmsTemplateOneItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/xvkang/phone/thrift/GetAllSmsTemplateRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/xvkang/phone/thrift/GetAllSmsTemplateRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/xvkang/phone/thrift/GetAllSmsTemplateResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/xvkang/phone/thrift/GetAllSmsTemplateResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/xvkang/phone/thrift/GetWeiguiRequestData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/xvkang/phone/thrift/GetWeiguiRequestData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/xvkang/phone/thrift/GetWeiguiResponseData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/xvkang/phone/thrift/GetWeiguiResponseData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/xvkang/phone/thrift/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/xvkang/phone/thrift/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/xvkang/phone/thrift/SendPhotoRequestData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/xvkang/phone/thrift/SendPhotoRequestData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/xvkang/phone/thrift/SendPhotoResponseData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/xvkang/phone/thrift/SendPhotoResponseData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/xvkang/phone/thrift/Weiguijilu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/xvkang/phone/thrift/Weiguijilu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/thrift/chepai_phone.thrift" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/thrift/chepai_phone.thrift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/protobuf/my_message.proto" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/protobuf/my_message.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -29,7 +18,17 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/protobuf/my_message.proto">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="266">
+              <caret line="19" column="1" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -42,11 +41,12 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/weiguijilu/weiguijilu_listPage.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/static/js/weiguijilu/weiguijilu_listPage.js" />
         <option value="$PROJECT_DIR$/src/main/thrift/chepai_phone.thrift" />
+        <option value="$PROJECT_DIR$/src/main/protobuf/my_message.proto" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="1439" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-1" />
     <option name="y" value="-1" />
     <option name="width" value="1922" />
     <option name="height" value="1082" />
@@ -68,6 +68,19 @@
               <item name="chepai" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="chepai" type="b2602c69:ProjectViewProjectNode" />
+              <item name="chepai" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="chepai" type="b2602c69:ProjectViewProjectNode" />
+              <item name="chepai" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="protobuf" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -80,7 +93,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/static/js" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../hetong" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
@@ -120,16 +133,20 @@
       <workItem from="1563802159100" duration="1807000" />
       <workItem from="1563841955242" duration="1312000" />
       <workItem from="1563862280722" duration="4036000" />
+      <workItem from="1563928467226" duration="599000" />
+      <workItem from="1563930222246" duration="628000" />
+      <workItem from="1563978775377" duration="202000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15584000" />
+    <option name="totallyTimeSpent" value="17013000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1439" y="-1" width="1922" height="1082" extended-state="7" />
+    <frame x="-1" y="-1" width="1922" height="1082" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14818764" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15298508" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Web" order="2" side_tool="true" />
       <window_info id="Image Layers" order="3" />
@@ -235,6 +252,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="538">
           <caret line="91" column="21" selection-start-line="91" selection-start-column="21" selection-end-line="91" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/protobuf/my_message.proto">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="19" column="1" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
         </state>
       </provider>
     </entry>
