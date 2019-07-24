@@ -1,5 +1,11 @@
 package cn.xvkang.phone;
 
+import java.awt.Graphics2D;
+import java.awt.RenderingHints;
+import java.awt.Transparency;
+import java.awt.image.BufferedImage;
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -8,6 +14,9 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
+
+import javax.imageio.ImageIO;
 
 import org.apache.commons.lang3.StringUtils;
 import org.apache.http.HttpEntity;
@@ -29,6 +38,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -39,8 +49,11 @@ import cn.xvkang.phone.thrift.DataException;
 import cn.xvkang.phone.thrift.GetAllSmsTemplateOneItem;
 import cn.xvkang.phone.thrift.GetAllSmsTemplateRequest;
 import cn.xvkang.phone.thrift.GetAllSmsTemplateResponse;
+import cn.xvkang.phone.thrift.GetOneWeiguijiluRequest;
 import cn.xvkang.phone.thrift.GetWeiguiRequestData;
 import cn.xvkang.phone.thrift.GetWeiguiResponseData;
+import cn.xvkang.phone.thrift.ResetPwdRequest;
+import cn.xvkang.phone.thrift.ResetPwdResponse;
 import cn.xvkang.phone.thrift.Result_Code;
 import cn.xvkang.phone.thrift.SendPhotoRequestData;
 import cn.xvkang.phone.thrift.SendPhotoResponseData;
@@ -60,6 +73,7 @@ import cn.xvkang.utils.BaiduAuthService;
 import cn.xvkang.utils.Constants;
 import cn.xvkang.utils.FreeMarkerStringUtils;
 import cn.xvkang.utils.JjwtUtils;
+import cn.xvkang.utils.SpringUtils;
 import cn.xvkang.utils.TonglianSmsUtils;
 import io.jsonwebtoken.Claims;
 
@@ -342,7 +356,7 @@ public class ChepaiPhoneServiceImpl implements ChepaiPhoneService.Iface {
 
 	@Override
 	public GetWeiguiResponseData GetWeiguijiluResponse(GetWeiguiRequestData request) throws DataException, TException {
-		int pageSize = 10;
+		int pageSize = 20;
 		GetWeiguiResponseData response = new GetWeiguiResponseData();
 		String cph = request.getCph();
 		String date = request.getDate();
@@ -394,7 +408,29 @@ public class ChepaiPhoneServiceImpl implements ChepaiPhoneService.Iface {
 			Date createtime = (Date) map.get("createtime");
 			weiguijilu.setCreatetime(sdf.format(createtime));
 			weiguijilu.setPersonName((String) map.get("personName"));
-			weiguijilu.setBase64image((String) map.get("base64image"));
+			weiguijilu.setId((Integer) map.get("id"));
+			String originBase64image = (String) map.get("base64image");
+			if (StringUtils.isNotBlank(originBase64image)) {
+
+				byte[] base64bytes = org.apache.commons.codec.binary.Base64.decodeBase64(originBase64image);
+
+				try {
+
+					BufferedImage read = ImageIO.read(new ByteArrayInputStream(base64bytes));
+					BufferedImage outBufferedImage = scale(read, 80, 50);
+
+					ByteArrayOutputStream bos = new ByteArrayOutputStream();
+					ImageIO.write(outBufferedImage, "jpeg", bos);
+					byte[] imageBytes = bos.toByteArray();
+					bos.flush();
+					bos.close();
+					originBase64image = org.apache.commons.codec.binary.Base64.encodeBase64String(imageBytes);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+
+			weiguijilu.setBase64image(originBase64image);
 			weiguijilus.add(weiguijilu);
 		}
 
@@ -404,5 +440,204 @@ public class ChepaiPhoneServiceImpl implements ChepaiPhoneService.Iface {
 		response.setCode(Result_Code.OK);
 		response.setWeiguijilus(weiguijilus);
 		return response;
+	}
+
+	public BufferedImage scale(BufferedImage img, int targetWidth, int targetHeight) {
+		int type = (img.getTransparency() == Transparency.OPAQUE) ? BufferedImage.TYPE_INT_RGB
+				: BufferedImage.TYPE_INT_ARGB;
+		BufferedImage ret = img;
+		BufferedImage scratchImage = null;
+		Graphics2D g2 = null;
+
+		int w = img.getWidth();
+		int h = img.getHeight();
+		int prevW = w;
+		int prevH = h;
+		do {
+			if (w > targetWidth) {
+				w /= 2;
+				w = (w < targetWidth) ? targetWidth : w;
+			}
+			if (h > targetHeight) {
+				h /= 2;
+				h = (h < targetHeight) ? targetHeight : h;
+			}
+			if (scratchImage == null) {
+				scratchImage = new BufferedImage(w, h, type);
+				g2 = scratchImage.createGraphics();
+			}
+			g2.setRenderingHint(RenderingHints.KEY_INTERPOLATION, RenderingHints.VALUE_INTERPOLATION_BILINEAR);
+			g2.drawImage(ret, 0, 0, w, h, 0, 0, prevW, prevH, null);
+
+			prevW = w;
+			prevH = h;
+			ret = scratchImage;
+		} while (w != targetWidth || h != targetHeight);
+		if (g2 != null) {
+			g2.dispose();
+		}
+		if (targetWidth != ret.getWidth() || targetHeight != ret.getHeight()) {
+			scratchImage = new BufferedImage(targetWidth, targetHeight, type);
+			g2 = scratchImage.createGraphics();
+			g2.drawImage(ret, 0, 0, null);
+			g2.dispose();
+			ret = scratchImage;
+		}
+		return ret;
+	}
+
+	@Override
+	public cn.xvkang.phone.thrift.Weiguijilu getOneWeiguijilu(GetOneWeiguijiluRequest request)
+			throws DataException, TException {
+		int id = request.getId();
+		Weiguijilu findById = weiguijiluService.findById(id);
+		cn.xvkang.phone.thrift.Weiguijilu weiguijilu = new cn.xvkang.phone.thrift.Weiguijilu();
+		weiguijilu.setBase64image(findById.getBase64image());
+		weiguijilu.setCph(findById.getCph());
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		weiguijilu.setCreatetime(sdf.format(findById.getCreatetime()));
+		weiguijilu.setId(findById.getId());
+		Integer userId = findById.getUserId();
+		UserTable user = userService.findById(userId);
+		if (user != null) {
+			weiguijilu.setPersonName(user.getName());
+		}
+		return weiguijilu;
+	}
+
+	@Override
+	public ResetPwdResponse resetPwd(ResetPwdRequest request) throws DataException, TException {
+		ResetPwdResponse response = new ResetPwdResponse();
+		String oldPwd = request.getOldPwd();
+		String jwt = request.getJwt();
+		Claims claims = JjwtUtils.decodeJWT(jwt);
+		boolean errorJwtFormat = false;
+		String usernameImei = null;
+		if (claims == null) {
+			errorJwtFormat = true;
+			// 错误格式的jwt
+			logger.info("=============> 错误的jwt格式　");
+		} else {
+			// 还要判断是否在有效时间内
+			Date now = new Date();
+			Date expiration = claims.getExpiration();
+			if (now.getTime() > expiration.getTime()) {
+				errorJwtFormat = true;
+			} else {
+				// 还要判断是否在redis中存在 如果redis中不存在了说明用户点击退出了，所有的客户端都退出了 所有此用户的jwt都失效
+				usernameImei = redisStringTemplate.opsForValue().get(applicationProperties.getRedisNameSpace() + ":"
+						+ Constants.REDIS_JWT_XUNLUO_RENYUAN_PREFIX + jwt);
+				if (usernameImei == null) {
+					errorJwtFormat = true;
+				}
+			}
+		}
+		if (errorJwtFormat) {
+			response.setResult_code(Result_Code.ERROR);
+			return response;
+		}
+		String[] usernameImeiStringArray = usernameImei.split("_");
+		String username = usernameImeiStringArray[0];
+		String imei = usernameImeiStringArray[1];
+		UserTable user = userService.findByUsername(username);
+		String password = user.getPassword();
+		PasswordEncoder passwordEncoder = SpringUtils.ac.getBean(PasswordEncoder.class);
+		if (!passwordEncoder.matches(oldPwd, password)) {
+			response.setResult_code(Result_Code.ERROR);
+			return response;
+		}
+		// 在此设备上重置密码 那么其他设备就不能登录了 只有这台设备能登录
+
+		// 一个人在同一手机上有可能有多个jwt
+		String xunluoRenyuanJwtTokenKeyStartWith = applicationProperties.getRedisNameSpace() + ":"
+				+ Constants.REDIS_JWT_XUNLUO_RENYUAN_PREFIX + username + "_" + imei + "_" + "*";
+
+		// redisTemplateString.opsForValue().set(xunluoRenyuanJwtTokenKey, jwt);
+
+		// 每一个jwt都代表一个人在一个手机上某一时间登录
+		// String currentJwtKey = applicationProperties.getRedisNameSpace() + ":" +
+		// Constants.REDIS_JWT_XUNLUO_RENYUAN_PREFIX + jwt;
+
+		// String phoneJwtSetKey = Constants.REDIS_PREFIX + Constants.REDIS_JWT_PREFIX +
+		// phone + Constants.PHONE_JWT_SET_SUFFIX;
+		// 删除掉此用户所有登录设备上的redis jwt
+		Set<String> redisKeys = redisTemplateString.keys(xunluoRenyuanJwtTokenKeyStartWith);// redisTemplatePhoneJwts.opsForSet().members(phoneJwtSetKey);
+		if (redisKeys != null) {
+			for (String key : redisKeys) {
+				String oneJwt = redisTemplateString.opsForValue().get(key);
+				if ((oneJwt != null) && (!oneJwt.equals(jwt))) {
+					redisStringTemplate.expireAt(applicationProperties.getRedisNameSpace() + ":"
+							+ Constants.REDIS_JWT_XUNLUO_RENYUAN_PREFIX + oneJwt, new Date());
+
+				}
+				if (!jwt.equals(oneJwt)) {
+					redisStringTemplate.expireAt(key, new Date());
+				}
+			}
+		}
+
+		String newPwd = request.getNewPwd();
+		userService.resetPwd(user.getId(), newPwd);
+		response.setResult_code(Result_Code.OK);
+		return response;
+	}
+
+	@Override
+	public void logout(String jwt) throws DataException, TException {
+
+		Claims claims = JjwtUtils.decodeJWT(jwt);
+		boolean errorJwtFormat = false;
+		String usernameImei = null;
+		if (claims == null) {
+			errorJwtFormat = true;
+			// 错误格式的jwt
+			logger.info("=============> 错误的jwt格式　");
+		} else {
+			// 还要判断是否在有效时间内
+			Date now = new Date();
+			Date expiration = claims.getExpiration();
+			if (now.getTime() > expiration.getTime()) {
+				errorJwtFormat = true;
+			} else {
+				// 还要判断是否在redis中存在 如果redis中不存在了说明用户点击退出了，所有的客户端都退出了 所有此用户的jwt都失效
+				usernameImei = redisStringTemplate.opsForValue().get(applicationProperties.getRedisNameSpace() + ":"
+						+ Constants.REDIS_JWT_XUNLUO_RENYUAN_PREFIX + jwt);
+				if (usernameImei == null) {
+					errorJwtFormat = true;
+				}
+			}
+		}
+		if (!errorJwtFormat) {
+			String[] usernameImeiStringArray = usernameImei.split("_");
+			String username = usernameImeiStringArray[0];
+			String imei = usernameImeiStringArray[1];
+
+			// 一个人在同一手机上有可能有多个jwt
+			String xunluoRenyuanJwtTokenKeyStartWith = applicationProperties.getRedisNameSpace() + ":"
+					+ Constants.REDIS_JWT_XUNLUO_RENYUAN_PREFIX + username + "_" + imei + "_" + "*";
+
+			// redisTemplateString.opsForValue().set(xunluoRenyuanJwtTokenKey, jwt);
+
+			// 每一个jwt都代表一个人在一个手机上某一时间登录
+			// String jwtKey = applicationProperties.getRedisNameSpace() + ":" +
+			// Constants.REDIS_JWT_XUNLUO_RENYUAN_PREFIX + jwt;
+
+			// String phoneJwtSetKey = Constants.REDIS_PREFIX + Constants.REDIS_JWT_PREFIX +
+			// phone + Constants.PHONE_JWT_SET_SUFFIX;
+			// 删除掉此用户所有登录设备上的redis jwt
+			Set<String> redisKeys = redisTemplateString.keys(xunluoRenyuanJwtTokenKeyStartWith);// redisTemplatePhoneJwts.opsForSet().members(phoneJwtSetKey);
+			if (redisKeys != null) {
+				for (String key : redisKeys) {
+					String oneJwt = redisTemplateString.opsForValue().get(key);
+					if (oneJwt != null) {
+						redisStringTemplate.expireAt(applicationProperties.getRedisNameSpace() + ":"
+								+ Constants.REDIS_JWT_XUNLUO_RENYUAN_PREFIX + oneJwt, new Date());
+					}
+					redisStringTemplate.expireAt(key, new Date());
+				}
+			}
+
+		}
+
 	}
 }

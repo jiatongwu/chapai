@@ -52,8 +52,8 @@ struct Weiguijilu{
 1: optional String createtime,
 2: optional String personName,
 3: optional String cph,
-4: optional String base64image
-
+4: optional String base64image,
+5: optional int id
 }
 struct GetWeiguiResponseData{
 1: optional Result_Code code,
@@ -82,11 +82,23 @@ exception DataException{
 }
 
 
+struct GetOneWeiguijiluRequest{
+1:optional int id
+}
+
+struct ResetPwdRequest{
+1:optional String oldPwd,
+2:optional String newPwd,
+3:optional String jwt
+}
+struct ResetPwdResponse{
+1:optional Result_Code result_code
+}
+
 
 
 
 service ChepaiPhoneService{
-
 //Person getByUsername(1:required String username) throws (1: DataException dataException),
 //void saveOne(1: required Person person) throws (1: DataException daaException)
 String say(1:required String msg)throws (1:DataException dataException),
@@ -94,62 +106,9 @@ String autologin(1:required String jwt)throws (1:DataException dataException),
 SendPhotoResponseData uploadPhoto(1:required SendPhotoRequestData request)throws (1:DataException dataException),
 GetAllSmsTemplateResponse GetAllsmsTemplateResponse(1:required GetAllSmsTemplateRequest request)throws (1:DataException dataException),
 GetWeiguiResponseData GetWeiguijiluResponse(1:required GetWeiguiRequestData request)throws (1:DataException dataException),
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Weiguijilu getOneWeiguijilu(1:required GetOneWeiguijiluRequest request)throws (1:DataException dataException),
+ResetPwdResponse resetPwd(1:required ResetPwdRequest request)throws (1:DataException dataException),
+void logout(1:required String jwt)throws (1:DataException dataException),
 String login(1:required String username,2:required String password,3:required String imei)throws (1:DataException dataException)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
 
