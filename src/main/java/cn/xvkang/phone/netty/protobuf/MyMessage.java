@@ -53,6 +53,32 @@ public final class MyMessage {
      */
     cn.xvkang.phone.netty.protobuf.MyMessage.CloseOrBuilder getCloseDataOrBuilder();
 
+    /**
+     * <code>optional .tutorial.HeartRequest heartRequest = 4;</code>
+     */
+    boolean hasHeartRequest();
+    /**
+     * <code>optional .tutorial.HeartRequest heartRequest = 4;</code>
+     */
+    cn.xvkang.phone.netty.protobuf.MyMessage.HeartRequest getHeartRequest();
+    /**
+     * <code>optional .tutorial.HeartRequest heartRequest = 4;</code>
+     */
+    cn.xvkang.phone.netty.protobuf.MyMessage.HeartRequestOrBuilder getHeartRequestOrBuilder();
+
+    /**
+     * <code>optional .tutorial.HeartResponse heartResponse = 5;</code>
+     */
+    boolean hasHeartResponse();
+    /**
+     * <code>optional .tutorial.HeartResponse heartResponse = 5;</code>
+     */
+    cn.xvkang.phone.netty.protobuf.MyMessage.HeartResponse getHeartResponse();
+    /**
+     * <code>optional .tutorial.HeartResponse heartResponse = 5;</code>
+     */
+    cn.xvkang.phone.netty.protobuf.MyMessage.HeartResponseOrBuilder getHeartResponseOrBuilder();
+
     public cn.xvkang.phone.netty.protobuf.MyMessage.Data.DataBodyCase getDataBodyCase();
   }
   /**
@@ -69,13 +95,6 @@ public final class MyMessage {
     }
     private Data() {
       dataType_ = 0;
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new Data();
     }
 
     @java.lang.Override
@@ -102,9 +121,15 @@ public final class MyMessage {
             case 0:
               done = true;
               break;
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
             case 8: {
               int rawValue = input.readEnum();
-                @SuppressWarnings("deprecation")
               cn.xvkang.phone.netty.protobuf.MyMessage.Data.DataType value = cn.xvkang.phone.netty.protobuf.MyMessage.Data.DataType.valueOf(rawValue);
               if (value == null) {
                 unknownFields.mergeVarintField(1, rawValue);
@@ -142,11 +167,32 @@ public final class MyMessage {
               dataBodyCase_ = 3;
               break;
             }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
+            case 34: {
+              cn.xvkang.phone.netty.protobuf.MyMessage.HeartRequest.Builder subBuilder = null;
+              if (dataBodyCase_ == 4) {
+                subBuilder = ((cn.xvkang.phone.netty.protobuf.MyMessage.HeartRequest) dataBody_).toBuilder();
               }
+              dataBody_ =
+                  input.readMessage(cn.xvkang.phone.netty.protobuf.MyMessage.HeartRequest.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((cn.xvkang.phone.netty.protobuf.MyMessage.HeartRequest) dataBody_);
+                dataBody_ = subBuilder.buildPartial();
+              }
+              dataBodyCase_ = 4;
+              break;
+            }
+            case 42: {
+              cn.xvkang.phone.netty.protobuf.MyMessage.HeartResponse.Builder subBuilder = null;
+              if (dataBodyCase_ == 5) {
+                subBuilder = ((cn.xvkang.phone.netty.protobuf.MyMessage.HeartResponse) dataBody_).toBuilder();
+              }
+              dataBody_ =
+                  input.readMessage(cn.xvkang.phone.netty.protobuf.MyMessage.HeartResponse.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((cn.xvkang.phone.netty.protobuf.MyMessage.HeartResponse) dataBody_);
+                dataBody_ = subBuilder.buildPartial();
+              }
+              dataBodyCase_ = 5;
               break;
             }
           }
@@ -166,7 +212,6 @@ public final class MyMessage {
       return cn.xvkang.phone.netty.protobuf.MyMessage.internal_static_tutorial_Data_descriptor;
     }
 
-    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return cn.xvkang.phone.netty.protobuf.MyMessage.internal_static_tutorial_Data_fieldAccessorTable
@@ -187,6 +232,14 @@ public final class MyMessage {
        * <code>CLOSE = 1;</code>
        */
       CLOSE(1),
+      /**
+       * <code>HeartRequest = 2;</code>
+       */
+      HeartRequest(2),
+      /**
+       * <code>HeartResponse = 3;</code>
+       */
+      HeartResponse(3),
       ;
 
       /**
@@ -197,6 +250,14 @@ public final class MyMessage {
        * <code>CLOSE = 1;</code>
        */
       public static final int CLOSE_VALUE = 1;
+      /**
+       * <code>HeartRequest = 2;</code>
+       */
+      public static final int HeartRequest_VALUE = 2;
+      /**
+       * <code>HeartResponse = 3;</code>
+       */
+      public static final int HeartResponse_VALUE = 3;
 
 
       public final int getNumber() {
@@ -215,6 +276,8 @@ public final class MyMessage {
         switch (value) {
           case 0: return OPEN;
           case 1: return CLOSE;
+          case 2: return HeartRequest;
+          case 3: return HeartResponse;
           default: return null;
         }
       }
@@ -271,6 +334,8 @@ public final class MyMessage {
         implements com.google.protobuf.Internal.EnumLite {
       OPENDATA(2),
       CLOSEDATA(3),
+      HEARTREQUEST(4),
+      HEARTRESPONSE(5),
       DATABODY_NOT_SET(0);
       private final int value;
       private DataBodyCase(int value) {
@@ -288,6 +353,8 @@ public final class MyMessage {
         switch (value) {
           case 2: return OPENDATA;
           case 3: return CLOSEDATA;
+          case 4: return HEARTREQUEST;
+          case 5: return HEARTRESPONSE;
           case 0: return DATABODY_NOT_SET;
           default: return null;
         }
@@ -309,13 +376,12 @@ public final class MyMessage {
      * <code>required .tutorial.Data.DataType data_type = 1;</code>
      */
     public boolean hasDataType() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
      * <code>required .tutorial.Data.DataType data_type = 1;</code>
      */
     public cn.xvkang.phone.netty.protobuf.MyMessage.Data.DataType getDataType() {
-      @SuppressWarnings("deprecation")
       cn.xvkang.phone.netty.protobuf.MyMessage.Data.DataType result = cn.xvkang.phone.netty.protobuf.MyMessage.Data.DataType.valueOf(dataType_);
       return result == null ? cn.xvkang.phone.netty.protobuf.MyMessage.Data.DataType.OPEN : result;
     }
@@ -372,8 +438,59 @@ public final class MyMessage {
       return cn.xvkang.phone.netty.protobuf.MyMessage.Close.getDefaultInstance();
     }
 
+    public static final int HEARTREQUEST_FIELD_NUMBER = 4;
+    /**
+     * <code>optional .tutorial.HeartRequest heartRequest = 4;</code>
+     */
+    public boolean hasHeartRequest() {
+      return dataBodyCase_ == 4;
+    }
+    /**
+     * <code>optional .tutorial.HeartRequest heartRequest = 4;</code>
+     */
+    public cn.xvkang.phone.netty.protobuf.MyMessage.HeartRequest getHeartRequest() {
+      if (dataBodyCase_ == 4) {
+         return (cn.xvkang.phone.netty.protobuf.MyMessage.HeartRequest) dataBody_;
+      }
+      return cn.xvkang.phone.netty.protobuf.MyMessage.HeartRequest.getDefaultInstance();
+    }
+    /**
+     * <code>optional .tutorial.HeartRequest heartRequest = 4;</code>
+     */
+    public cn.xvkang.phone.netty.protobuf.MyMessage.HeartRequestOrBuilder getHeartRequestOrBuilder() {
+      if (dataBodyCase_ == 4) {
+         return (cn.xvkang.phone.netty.protobuf.MyMessage.HeartRequest) dataBody_;
+      }
+      return cn.xvkang.phone.netty.protobuf.MyMessage.HeartRequest.getDefaultInstance();
+    }
+
+    public static final int HEARTRESPONSE_FIELD_NUMBER = 5;
+    /**
+     * <code>optional .tutorial.HeartResponse heartResponse = 5;</code>
+     */
+    public boolean hasHeartResponse() {
+      return dataBodyCase_ == 5;
+    }
+    /**
+     * <code>optional .tutorial.HeartResponse heartResponse = 5;</code>
+     */
+    public cn.xvkang.phone.netty.protobuf.MyMessage.HeartResponse getHeartResponse() {
+      if (dataBodyCase_ == 5) {
+         return (cn.xvkang.phone.netty.protobuf.MyMessage.HeartResponse) dataBody_;
+      }
+      return cn.xvkang.phone.netty.protobuf.MyMessage.HeartResponse.getDefaultInstance();
+    }
+    /**
+     * <code>optional .tutorial.HeartResponse heartResponse = 5;</code>
+     */
+    public cn.xvkang.phone.netty.protobuf.MyMessage.HeartResponseOrBuilder getHeartResponseOrBuilder() {
+      if (dataBodyCase_ == 5) {
+         return (cn.xvkang.phone.netty.protobuf.MyMessage.HeartResponse) dataBody_;
+      }
+      return cn.xvkang.phone.netty.protobuf.MyMessage.HeartResponse.getDefaultInstance();
+    }
+
     private byte memoizedIsInitialized = -1;
-    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -387,10 +504,9 @@ public final class MyMessage {
       return true;
     }
 
-    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
         output.writeEnum(1, dataType_);
       }
       if (dataBodyCase_ == 2) {
@@ -399,16 +515,21 @@ public final class MyMessage {
       if (dataBodyCase_ == 3) {
         output.writeMessage(3, (cn.xvkang.phone.netty.protobuf.MyMessage.Close) dataBody_);
       }
+      if (dataBodyCase_ == 4) {
+        output.writeMessage(4, (cn.xvkang.phone.netty.protobuf.MyMessage.HeartRequest) dataBody_);
+      }
+      if (dataBodyCase_ == 5) {
+        output.writeMessage(5, (cn.xvkang.phone.netty.protobuf.MyMessage.HeartResponse) dataBody_);
+      }
       unknownFields.writeTo(output);
     }
 
-    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(1, dataType_);
       }
@@ -419,6 +540,14 @@ public final class MyMessage {
       if (dataBodyCase_ == 3) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, (cn.xvkang.phone.netty.protobuf.MyMessage.Close) dataBody_);
+      }
+      if (dataBodyCase_ == 4) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, (cn.xvkang.phone.netty.protobuf.MyMessage.HeartRequest) dataBody_);
+      }
+      if (dataBodyCase_ == 5) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, (cn.xvkang.phone.netty.protobuf.MyMessage.HeartResponse) dataBody_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -435,25 +564,36 @@ public final class MyMessage {
       }
       cn.xvkang.phone.netty.protobuf.MyMessage.Data other = (cn.xvkang.phone.netty.protobuf.MyMessage.Data) obj;
 
-      if (hasDataType() != other.hasDataType()) return false;
+      boolean result = true;
+      result = result && (hasDataType() == other.hasDataType());
       if (hasDataType()) {
-        if (dataType_ != other.dataType_) return false;
+        result = result && dataType_ == other.dataType_;
       }
-      if (!getDataBodyCase().equals(other.getDataBodyCase())) return false;
+      result = result && getDataBodyCase().equals(
+          other.getDataBodyCase());
+      if (!result) return false;
       switch (dataBodyCase_) {
         case 2:
-          if (!getOpenData()
-              .equals(other.getOpenData())) return false;
+          result = result && getOpenData()
+              .equals(other.getOpenData());
           break;
         case 3:
-          if (!getCloseData()
-              .equals(other.getCloseData())) return false;
+          result = result && getCloseData()
+              .equals(other.getCloseData());
+          break;
+        case 4:
+          result = result && getHeartRequest()
+              .equals(other.getHeartRequest());
+          break;
+        case 5:
+          result = result && getHeartResponse()
+              .equals(other.getHeartResponse());
           break;
         case 0:
         default:
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
     }
 
     @java.lang.Override
@@ -475,6 +615,14 @@ public final class MyMessage {
         case 3:
           hash = (37 * hash) + CLOSEDATA_FIELD_NUMBER;
           hash = (53 * hash) + getCloseData().hashCode();
+          break;
+        case 4:
+          hash = (37 * hash) + HEARTREQUEST_FIELD_NUMBER;
+          hash = (53 * hash) + getHeartRequest().hashCode();
+          break;
+        case 5:
+          hash = (37 * hash) + HEARTRESPONSE_FIELD_NUMBER;
+          hash = (53 * hash) + getHeartResponse().hashCode();
           break;
         case 0:
         default:
@@ -554,7 +702,6 @@ public final class MyMessage {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -562,7 +709,6 @@ public final class MyMessage {
     public static Builder newBuilder(cn.xvkang.phone.netty.protobuf.MyMessage.Data prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -586,7 +732,6 @@ public final class MyMessage {
         return cn.xvkang.phone.netty.protobuf.MyMessage.internal_static_tutorial_Data_descriptor;
       }
 
-      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return cn.xvkang.phone.netty.protobuf.MyMessage.internal_static_tutorial_Data_fieldAccessorTable
@@ -609,7 +754,6 @@ public final class MyMessage {
                 .alwaysUseFieldBuilders) {
         }
       }
-      @java.lang.Override
       public Builder clear() {
         super.clear();
         dataType_ = 0;
@@ -619,18 +763,15 @@ public final class MyMessage {
         return this;
       }
 
-      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return cn.xvkang.phone.netty.protobuf.MyMessage.internal_static_tutorial_Data_descriptor;
       }
 
-      @java.lang.Override
       public cn.xvkang.phone.netty.protobuf.MyMessage.Data getDefaultInstanceForType() {
         return cn.xvkang.phone.netty.protobuf.MyMessage.Data.getDefaultInstance();
       }
 
-      @java.lang.Override
       public cn.xvkang.phone.netty.protobuf.MyMessage.Data build() {
         cn.xvkang.phone.netty.protobuf.MyMessage.Data result = buildPartial();
         if (!result.isInitialized()) {
@@ -639,12 +780,11 @@ public final class MyMessage {
         return result;
       }
 
-      @java.lang.Override
       public cn.xvkang.phone.netty.protobuf.MyMessage.Data buildPartial() {
         cn.xvkang.phone.netty.protobuf.MyMessage.Data result = new cn.xvkang.phone.netty.protobuf.MyMessage.Data(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
           to_bitField0_ |= 0x00000001;
         }
         result.dataType_ = dataType_;
@@ -662,45 +802,52 @@ public final class MyMessage {
             result.dataBody_ = closeDataBuilder_.build();
           }
         }
+        if (dataBodyCase_ == 4) {
+          if (heartRequestBuilder_ == null) {
+            result.dataBody_ = dataBody_;
+          } else {
+            result.dataBody_ = heartRequestBuilder_.build();
+          }
+        }
+        if (dataBodyCase_ == 5) {
+          if (heartResponseBuilder_ == null) {
+            result.dataBody_ = dataBody_;
+          } else {
+            result.dataBody_ = heartResponseBuilder_.build();
+          }
+        }
         result.bitField0_ = to_bitField0_;
         result.dataBodyCase_ = dataBodyCase_;
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
       public Builder clone() {
-        return super.clone();
+        return (Builder) super.clone();
       }
-      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.setField(field, value);
+        return (Builder) super.setField(field, value);
       }
-      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
+        return (Builder) super.clearField(field);
       }
-      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
+        return (Builder) super.clearOneof(oneof);
       }
-      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
+        return (Builder) super.setRepeatedField(field, index, value);
       }
-      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.addRepeatedField(field, value);
+        return (Builder) super.addRepeatedField(field, value);
       }
-      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof cn.xvkang.phone.netty.protobuf.MyMessage.Data) {
           return mergeFrom((cn.xvkang.phone.netty.protobuf.MyMessage.Data)other);
@@ -724,6 +871,14 @@ public final class MyMessage {
             mergeCloseData(other.getCloseData());
             break;
           }
+          case HEARTREQUEST: {
+            mergeHeartRequest(other.getHeartRequest());
+            break;
+          }
+          case HEARTRESPONSE: {
+            mergeHeartResponse(other.getHeartResponse());
+            break;
+          }
           case DATABODY_NOT_SET: {
             break;
           }
@@ -733,7 +888,6 @@ public final class MyMessage {
         return this;
       }
 
-      @java.lang.Override
       public final boolean isInitialized() {
         if (!hasDataType()) {
           return false;
@@ -741,7 +895,6 @@ public final class MyMessage {
         return true;
       }
 
-      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -781,13 +934,12 @@ public final class MyMessage {
        * <code>required .tutorial.Data.DataType data_type = 1;</code>
        */
       public boolean hasDataType() {
-        return ((bitField0_ & 0x00000001) != 0);
+        return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
        * <code>required .tutorial.Data.DataType data_type = 1;</code>
        */
       public cn.xvkang.phone.netty.protobuf.MyMessage.Data.DataType getDataType() {
-        @SuppressWarnings("deprecation")
         cn.xvkang.phone.netty.protobuf.MyMessage.Data.DataType result = cn.xvkang.phone.netty.protobuf.MyMessage.Data.DataType.valueOf(dataType_);
         return result == null ? cn.xvkang.phone.netty.protobuf.MyMessage.Data.DataType.OPEN : result;
       }
@@ -1084,13 +1236,283 @@ public final class MyMessage {
         onChanged();;
         return closeDataBuilder_;
       }
-      @java.lang.Override
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          cn.xvkang.phone.netty.protobuf.MyMessage.HeartRequest, cn.xvkang.phone.netty.protobuf.MyMessage.HeartRequest.Builder, cn.xvkang.phone.netty.protobuf.MyMessage.HeartRequestOrBuilder> heartRequestBuilder_;
+      /**
+       * <code>optional .tutorial.HeartRequest heartRequest = 4;</code>
+       */
+      public boolean hasHeartRequest() {
+        return dataBodyCase_ == 4;
+      }
+      /**
+       * <code>optional .tutorial.HeartRequest heartRequest = 4;</code>
+       */
+      public cn.xvkang.phone.netty.protobuf.MyMessage.HeartRequest getHeartRequest() {
+        if (heartRequestBuilder_ == null) {
+          if (dataBodyCase_ == 4) {
+            return (cn.xvkang.phone.netty.protobuf.MyMessage.HeartRequest) dataBody_;
+          }
+          return cn.xvkang.phone.netty.protobuf.MyMessage.HeartRequest.getDefaultInstance();
+        } else {
+          if (dataBodyCase_ == 4) {
+            return heartRequestBuilder_.getMessage();
+          }
+          return cn.xvkang.phone.netty.protobuf.MyMessage.HeartRequest.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>optional .tutorial.HeartRequest heartRequest = 4;</code>
+       */
+      public Builder setHeartRequest(cn.xvkang.phone.netty.protobuf.MyMessage.HeartRequest value) {
+        if (heartRequestBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          dataBody_ = value;
+          onChanged();
+        } else {
+          heartRequestBuilder_.setMessage(value);
+        }
+        dataBodyCase_ = 4;
+        return this;
+      }
+      /**
+       * <code>optional .tutorial.HeartRequest heartRequest = 4;</code>
+       */
+      public Builder setHeartRequest(
+          cn.xvkang.phone.netty.protobuf.MyMessage.HeartRequest.Builder builderForValue) {
+        if (heartRequestBuilder_ == null) {
+          dataBody_ = builderForValue.build();
+          onChanged();
+        } else {
+          heartRequestBuilder_.setMessage(builderForValue.build());
+        }
+        dataBodyCase_ = 4;
+        return this;
+      }
+      /**
+       * <code>optional .tutorial.HeartRequest heartRequest = 4;</code>
+       */
+      public Builder mergeHeartRequest(cn.xvkang.phone.netty.protobuf.MyMessage.HeartRequest value) {
+        if (heartRequestBuilder_ == null) {
+          if (dataBodyCase_ == 4 &&
+              dataBody_ != cn.xvkang.phone.netty.protobuf.MyMessage.HeartRequest.getDefaultInstance()) {
+            dataBody_ = cn.xvkang.phone.netty.protobuf.MyMessage.HeartRequest.newBuilder((cn.xvkang.phone.netty.protobuf.MyMessage.HeartRequest) dataBody_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            dataBody_ = value;
+          }
+          onChanged();
+        } else {
+          if (dataBodyCase_ == 4) {
+            heartRequestBuilder_.mergeFrom(value);
+          }
+          heartRequestBuilder_.setMessage(value);
+        }
+        dataBodyCase_ = 4;
+        return this;
+      }
+      /**
+       * <code>optional .tutorial.HeartRequest heartRequest = 4;</code>
+       */
+      public Builder clearHeartRequest() {
+        if (heartRequestBuilder_ == null) {
+          if (dataBodyCase_ == 4) {
+            dataBodyCase_ = 0;
+            dataBody_ = null;
+            onChanged();
+          }
+        } else {
+          if (dataBodyCase_ == 4) {
+            dataBodyCase_ = 0;
+            dataBody_ = null;
+          }
+          heartRequestBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>optional .tutorial.HeartRequest heartRequest = 4;</code>
+       */
+      public cn.xvkang.phone.netty.protobuf.MyMessage.HeartRequest.Builder getHeartRequestBuilder() {
+        return getHeartRequestFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .tutorial.HeartRequest heartRequest = 4;</code>
+       */
+      public cn.xvkang.phone.netty.protobuf.MyMessage.HeartRequestOrBuilder getHeartRequestOrBuilder() {
+        if ((dataBodyCase_ == 4) && (heartRequestBuilder_ != null)) {
+          return heartRequestBuilder_.getMessageOrBuilder();
+        } else {
+          if (dataBodyCase_ == 4) {
+            return (cn.xvkang.phone.netty.protobuf.MyMessage.HeartRequest) dataBody_;
+          }
+          return cn.xvkang.phone.netty.protobuf.MyMessage.HeartRequest.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>optional .tutorial.HeartRequest heartRequest = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          cn.xvkang.phone.netty.protobuf.MyMessage.HeartRequest, cn.xvkang.phone.netty.protobuf.MyMessage.HeartRequest.Builder, cn.xvkang.phone.netty.protobuf.MyMessage.HeartRequestOrBuilder> 
+          getHeartRequestFieldBuilder() {
+        if (heartRequestBuilder_ == null) {
+          if (!(dataBodyCase_ == 4)) {
+            dataBody_ = cn.xvkang.phone.netty.protobuf.MyMessage.HeartRequest.getDefaultInstance();
+          }
+          heartRequestBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              cn.xvkang.phone.netty.protobuf.MyMessage.HeartRequest, cn.xvkang.phone.netty.protobuf.MyMessage.HeartRequest.Builder, cn.xvkang.phone.netty.protobuf.MyMessage.HeartRequestOrBuilder>(
+                  (cn.xvkang.phone.netty.protobuf.MyMessage.HeartRequest) dataBody_,
+                  getParentForChildren(),
+                  isClean());
+          dataBody_ = null;
+        }
+        dataBodyCase_ = 4;
+        onChanged();;
+        return heartRequestBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          cn.xvkang.phone.netty.protobuf.MyMessage.HeartResponse, cn.xvkang.phone.netty.protobuf.MyMessage.HeartResponse.Builder, cn.xvkang.phone.netty.protobuf.MyMessage.HeartResponseOrBuilder> heartResponseBuilder_;
+      /**
+       * <code>optional .tutorial.HeartResponse heartResponse = 5;</code>
+       */
+      public boolean hasHeartResponse() {
+        return dataBodyCase_ == 5;
+      }
+      /**
+       * <code>optional .tutorial.HeartResponse heartResponse = 5;</code>
+       */
+      public cn.xvkang.phone.netty.protobuf.MyMessage.HeartResponse getHeartResponse() {
+        if (heartResponseBuilder_ == null) {
+          if (dataBodyCase_ == 5) {
+            return (cn.xvkang.phone.netty.protobuf.MyMessage.HeartResponse) dataBody_;
+          }
+          return cn.xvkang.phone.netty.protobuf.MyMessage.HeartResponse.getDefaultInstance();
+        } else {
+          if (dataBodyCase_ == 5) {
+            return heartResponseBuilder_.getMessage();
+          }
+          return cn.xvkang.phone.netty.protobuf.MyMessage.HeartResponse.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>optional .tutorial.HeartResponse heartResponse = 5;</code>
+       */
+      public Builder setHeartResponse(cn.xvkang.phone.netty.protobuf.MyMessage.HeartResponse value) {
+        if (heartResponseBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          dataBody_ = value;
+          onChanged();
+        } else {
+          heartResponseBuilder_.setMessage(value);
+        }
+        dataBodyCase_ = 5;
+        return this;
+      }
+      /**
+       * <code>optional .tutorial.HeartResponse heartResponse = 5;</code>
+       */
+      public Builder setHeartResponse(
+          cn.xvkang.phone.netty.protobuf.MyMessage.HeartResponse.Builder builderForValue) {
+        if (heartResponseBuilder_ == null) {
+          dataBody_ = builderForValue.build();
+          onChanged();
+        } else {
+          heartResponseBuilder_.setMessage(builderForValue.build());
+        }
+        dataBodyCase_ = 5;
+        return this;
+      }
+      /**
+       * <code>optional .tutorial.HeartResponse heartResponse = 5;</code>
+       */
+      public Builder mergeHeartResponse(cn.xvkang.phone.netty.protobuf.MyMessage.HeartResponse value) {
+        if (heartResponseBuilder_ == null) {
+          if (dataBodyCase_ == 5 &&
+              dataBody_ != cn.xvkang.phone.netty.protobuf.MyMessage.HeartResponse.getDefaultInstance()) {
+            dataBody_ = cn.xvkang.phone.netty.protobuf.MyMessage.HeartResponse.newBuilder((cn.xvkang.phone.netty.protobuf.MyMessage.HeartResponse) dataBody_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            dataBody_ = value;
+          }
+          onChanged();
+        } else {
+          if (dataBodyCase_ == 5) {
+            heartResponseBuilder_.mergeFrom(value);
+          }
+          heartResponseBuilder_.setMessage(value);
+        }
+        dataBodyCase_ = 5;
+        return this;
+      }
+      /**
+       * <code>optional .tutorial.HeartResponse heartResponse = 5;</code>
+       */
+      public Builder clearHeartResponse() {
+        if (heartResponseBuilder_ == null) {
+          if (dataBodyCase_ == 5) {
+            dataBodyCase_ = 0;
+            dataBody_ = null;
+            onChanged();
+          }
+        } else {
+          if (dataBodyCase_ == 5) {
+            dataBodyCase_ = 0;
+            dataBody_ = null;
+          }
+          heartResponseBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>optional .tutorial.HeartResponse heartResponse = 5;</code>
+       */
+      public cn.xvkang.phone.netty.protobuf.MyMessage.HeartResponse.Builder getHeartResponseBuilder() {
+        return getHeartResponseFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .tutorial.HeartResponse heartResponse = 5;</code>
+       */
+      public cn.xvkang.phone.netty.protobuf.MyMessage.HeartResponseOrBuilder getHeartResponseOrBuilder() {
+        if ((dataBodyCase_ == 5) && (heartResponseBuilder_ != null)) {
+          return heartResponseBuilder_.getMessageOrBuilder();
+        } else {
+          if (dataBodyCase_ == 5) {
+            return (cn.xvkang.phone.netty.protobuf.MyMessage.HeartResponse) dataBody_;
+          }
+          return cn.xvkang.phone.netty.protobuf.MyMessage.HeartResponse.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>optional .tutorial.HeartResponse heartResponse = 5;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          cn.xvkang.phone.netty.protobuf.MyMessage.HeartResponse, cn.xvkang.phone.netty.protobuf.MyMessage.HeartResponse.Builder, cn.xvkang.phone.netty.protobuf.MyMessage.HeartResponseOrBuilder> 
+          getHeartResponseFieldBuilder() {
+        if (heartResponseBuilder_ == null) {
+          if (!(dataBodyCase_ == 5)) {
+            dataBody_ = cn.xvkang.phone.netty.protobuf.MyMessage.HeartResponse.getDefaultInstance();
+          }
+          heartResponseBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              cn.xvkang.phone.netty.protobuf.MyMessage.HeartResponse, cn.xvkang.phone.netty.protobuf.MyMessage.HeartResponse.Builder, cn.xvkang.phone.netty.protobuf.MyMessage.HeartResponseOrBuilder>(
+                  (cn.xvkang.phone.netty.protobuf.MyMessage.HeartResponse) dataBody_,
+                  getParentForChildren(),
+                  isClean());
+          dataBody_ = null;
+        }
+        dataBodyCase_ = 5;
+        onChanged();;
+        return heartResponseBuilder_;
+      }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFields(unknownFields);
       }
 
-      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -1112,7 +1534,6 @@ public final class MyMessage {
 
     @java.lang.Deprecated public static final com.google.protobuf.Parser<Data>
         PARSER = new com.google.protobuf.AbstractParser<Data>() {
-      @java.lang.Override
       public Data parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1130,7 +1551,6 @@ public final class MyMessage {
       return PARSER;
     }
 
-    @java.lang.Override
     public cn.xvkang.phone.netty.protobuf.MyMessage.Data getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -1187,13 +1607,6 @@ public final class MyMessage {
     }
 
     @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new Open();
-    }
-
-    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -1217,6 +1630,13 @@ public final class MyMessage {
             case 0:
               done = true;
               break;
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
             case 10: {
               com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000001;
@@ -1227,13 +1647,6 @@ public final class MyMessage {
               com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000002;
               email_ = bs;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
               break;
             }
           }
@@ -1253,7 +1666,6 @@ public final class MyMessage {
       return cn.xvkang.phone.netty.protobuf.MyMessage.internal_static_tutorial_Open_descriptor;
     }
 
-    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return cn.xvkang.phone.netty.protobuf.MyMessage.internal_static_tutorial_Open_fieldAccessorTable
@@ -1268,7 +1680,7 @@ public final class MyMessage {
      * <code>optional string name = 1;</code>
      */
     public boolean hasName() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
      * <code>optional string name = 1;</code>
@@ -1310,7 +1722,7 @@ public final class MyMessage {
      * <code>optional string email = 2;</code>
      */
     public boolean hasEmail() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return ((bitField0_ & 0x00000002) == 0x00000002);
     }
     /**
      * <code>optional string email = 2;</code>
@@ -1347,7 +1759,6 @@ public final class MyMessage {
     }
 
     private byte memoizedIsInitialized = -1;
-    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -1357,28 +1768,26 @@ public final class MyMessage {
       return true;
     }
 
-    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, email_);
       }
       unknownFields.writeTo(output);
     }
 
-    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, email_);
       }
       size += unknownFields.getSerializedSize();
@@ -1396,18 +1805,19 @@ public final class MyMessage {
       }
       cn.xvkang.phone.netty.protobuf.MyMessage.Open other = (cn.xvkang.phone.netty.protobuf.MyMessage.Open) obj;
 
-      if (hasName() != other.hasName()) return false;
+      boolean result = true;
+      result = result && (hasName() == other.hasName());
       if (hasName()) {
-        if (!getName()
-            .equals(other.getName())) return false;
+        result = result && getName()
+            .equals(other.getName());
       }
-      if (hasEmail() != other.hasEmail()) return false;
+      result = result && (hasEmail() == other.hasEmail());
       if (hasEmail()) {
-        if (!getEmail()
-            .equals(other.getEmail())) return false;
+        result = result && getEmail()
+            .equals(other.getEmail());
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
     }
 
     @java.lang.Override
@@ -1500,7 +1910,6 @@ public final class MyMessage {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -1508,7 +1917,6 @@ public final class MyMessage {
     public static Builder newBuilder(cn.xvkang.phone.netty.protobuf.MyMessage.Open prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -1532,7 +1940,6 @@ public final class MyMessage {
         return cn.xvkang.phone.netty.protobuf.MyMessage.internal_static_tutorial_Open_descriptor;
       }
 
-      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return cn.xvkang.phone.netty.protobuf.MyMessage.internal_static_tutorial_Open_fieldAccessorTable
@@ -1555,7 +1962,6 @@ public final class MyMessage {
                 .alwaysUseFieldBuilders) {
         }
       }
-      @java.lang.Override
       public Builder clear() {
         super.clear();
         name_ = "";
@@ -1565,18 +1971,15 @@ public final class MyMessage {
         return this;
       }
 
-      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return cn.xvkang.phone.netty.protobuf.MyMessage.internal_static_tutorial_Open_descriptor;
       }
 
-      @java.lang.Override
       public cn.xvkang.phone.netty.protobuf.MyMessage.Open getDefaultInstanceForType() {
         return cn.xvkang.phone.netty.protobuf.MyMessage.Open.getDefaultInstance();
       }
 
-      @java.lang.Override
       public cn.xvkang.phone.netty.protobuf.MyMessage.Open build() {
         cn.xvkang.phone.netty.protobuf.MyMessage.Open result = buildPartial();
         if (!result.isInitialized()) {
@@ -1585,16 +1988,15 @@ public final class MyMessage {
         return result;
       }
 
-      @java.lang.Override
       public cn.xvkang.phone.netty.protobuf.MyMessage.Open buildPartial() {
         cn.xvkang.phone.netty.protobuf.MyMessage.Open result = new cn.xvkang.phone.netty.protobuf.MyMessage.Open(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
           to_bitField0_ |= 0x00000001;
         }
         result.name_ = name_;
-        if (((from_bitField0_ & 0x00000002) != 0)) {
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
           to_bitField0_ |= 0x00000002;
         }
         result.email_ = email_;
@@ -1603,39 +2005,32 @@ public final class MyMessage {
         return result;
       }
 
-      @java.lang.Override
       public Builder clone() {
-        return super.clone();
+        return (Builder) super.clone();
       }
-      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.setField(field, value);
+        return (Builder) super.setField(field, value);
       }
-      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
+        return (Builder) super.clearField(field);
       }
-      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
+        return (Builder) super.clearOneof(oneof);
       }
-      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
+        return (Builder) super.setRepeatedField(field, index, value);
       }
-      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.addRepeatedField(field, value);
+        return (Builder) super.addRepeatedField(field, value);
       }
-      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof cn.xvkang.phone.netty.protobuf.MyMessage.Open) {
           return mergeFrom((cn.xvkang.phone.netty.protobuf.MyMessage.Open)other);
@@ -1662,12 +2057,10 @@ public final class MyMessage {
         return this;
       }
 
-      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
-      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1692,7 +2085,7 @@ public final class MyMessage {
        * <code>optional string name = 1;</code>
        */
       public boolean hasName() {
-        return ((bitField0_ & 0x00000001) != 0);
+        return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
        * <code>optional string name = 1;</code>
@@ -1768,7 +2161,7 @@ public final class MyMessage {
        * <code>optional string email = 2;</code>
        */
       public boolean hasEmail() {
-        return ((bitField0_ & 0x00000002) != 0);
+        return ((bitField0_ & 0x00000002) == 0x00000002);
       }
       /**
        * <code>optional string email = 2;</code>
@@ -1838,13 +2231,11 @@ public final class MyMessage {
         onChanged();
         return this;
       }
-      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFields(unknownFields);
       }
 
-      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -1866,7 +2257,6 @@ public final class MyMessage {
 
     @java.lang.Deprecated public static final com.google.protobuf.Parser<Open>
         PARSER = new com.google.protobuf.AbstractParser<Open>() {
-      @java.lang.Override
       public Open parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1884,7 +2274,6 @@ public final class MyMessage {
       return PARSER;
     }
 
-    @java.lang.Override
     public cn.xvkang.phone.netty.protobuf.MyMessage.Open getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -1926,13 +2315,6 @@ public final class MyMessage {
     }
 
     @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new Close();
-    }
-
-    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -1956,17 +2338,17 @@ public final class MyMessage {
             case 0:
               done = true;
               break;
-            case 10: {
-              com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000001;
-              number_ = bs;
-              break;
-            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
+              break;
+            }
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              number_ = bs;
               break;
             }
           }
@@ -1986,7 +2368,6 @@ public final class MyMessage {
       return cn.xvkang.phone.netty.protobuf.MyMessage.internal_static_tutorial_Close_descriptor;
     }
 
-    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return cn.xvkang.phone.netty.protobuf.MyMessage.internal_static_tutorial_Close_fieldAccessorTable
@@ -2001,7 +2382,7 @@ public final class MyMessage {
      * <code>optional string number = 1;</code>
      */
     public boolean hasNumber() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
      * <code>optional string number = 1;</code>
@@ -2038,7 +2419,6 @@ public final class MyMessage {
     }
 
     private byte memoizedIsInitialized = -1;
-    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -2048,22 +2428,20 @@ public final class MyMessage {
       return true;
     }
 
-    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, number_);
       }
       unknownFields.writeTo(output);
     }
 
-    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, number_);
       }
       size += unknownFields.getSerializedSize();
@@ -2081,13 +2459,14 @@ public final class MyMessage {
       }
       cn.xvkang.phone.netty.protobuf.MyMessage.Close other = (cn.xvkang.phone.netty.protobuf.MyMessage.Close) obj;
 
-      if (hasNumber() != other.hasNumber()) return false;
+      boolean result = true;
+      result = result && (hasNumber() == other.hasNumber());
       if (hasNumber()) {
-        if (!getNumber()
-            .equals(other.getNumber())) return false;
+        result = result && getNumber()
+            .equals(other.getNumber());
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
     }
 
     @java.lang.Override
@@ -2176,7 +2555,6 @@ public final class MyMessage {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -2184,7 +2562,6 @@ public final class MyMessage {
     public static Builder newBuilder(cn.xvkang.phone.netty.protobuf.MyMessage.Close prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -2208,7 +2585,6 @@ public final class MyMessage {
         return cn.xvkang.phone.netty.protobuf.MyMessage.internal_static_tutorial_Close_descriptor;
       }
 
-      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return cn.xvkang.phone.netty.protobuf.MyMessage.internal_static_tutorial_Close_fieldAccessorTable
@@ -2231,7 +2607,6 @@ public final class MyMessage {
                 .alwaysUseFieldBuilders) {
         }
       }
-      @java.lang.Override
       public Builder clear() {
         super.clear();
         number_ = "";
@@ -2239,18 +2614,15 @@ public final class MyMessage {
         return this;
       }
 
-      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return cn.xvkang.phone.netty.protobuf.MyMessage.internal_static_tutorial_Close_descriptor;
       }
 
-      @java.lang.Override
       public cn.xvkang.phone.netty.protobuf.MyMessage.Close getDefaultInstanceForType() {
         return cn.xvkang.phone.netty.protobuf.MyMessage.Close.getDefaultInstance();
       }
 
-      @java.lang.Override
       public cn.xvkang.phone.netty.protobuf.MyMessage.Close build() {
         cn.xvkang.phone.netty.protobuf.MyMessage.Close result = buildPartial();
         if (!result.isInitialized()) {
@@ -2259,12 +2631,11 @@ public final class MyMessage {
         return result;
       }
 
-      @java.lang.Override
       public cn.xvkang.phone.netty.protobuf.MyMessage.Close buildPartial() {
         cn.xvkang.phone.netty.protobuf.MyMessage.Close result = new cn.xvkang.phone.netty.protobuf.MyMessage.Close(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
           to_bitField0_ |= 0x00000001;
         }
         result.number_ = number_;
@@ -2273,39 +2644,32 @@ public final class MyMessage {
         return result;
       }
 
-      @java.lang.Override
       public Builder clone() {
-        return super.clone();
+        return (Builder) super.clone();
       }
-      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.setField(field, value);
+        return (Builder) super.setField(field, value);
       }
-      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
+        return (Builder) super.clearField(field);
       }
-      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
+        return (Builder) super.clearOneof(oneof);
       }
-      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
+        return (Builder) super.setRepeatedField(field, index, value);
       }
-      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.addRepeatedField(field, value);
+        return (Builder) super.addRepeatedField(field, value);
       }
-      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof cn.xvkang.phone.netty.protobuf.MyMessage.Close) {
           return mergeFrom((cn.xvkang.phone.netty.protobuf.MyMessage.Close)other);
@@ -2327,12 +2691,10 @@ public final class MyMessage {
         return this;
       }
 
-      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
-      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2357,7 +2719,7 @@ public final class MyMessage {
        * <code>optional string number = 1;</code>
        */
       public boolean hasNumber() {
-        return ((bitField0_ & 0x00000001) != 0);
+        return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
        * <code>optional string number = 1;</code>
@@ -2427,13 +2789,11 @@ public final class MyMessage {
         onChanged();
         return this;
       }
-      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFields(unknownFields);
       }
 
-      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -2455,7 +2815,6 @@ public final class MyMessage {
 
     @java.lang.Deprecated public static final com.google.protobuf.Parser<Close>
         PARSER = new com.google.protobuf.AbstractParser<Close>() {
-      @java.lang.Override
       public Close parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2473,8 +2832,1123 @@ public final class MyMessage {
       return PARSER;
     }
 
-    @java.lang.Override
     public cn.xvkang.phone.netty.protobuf.MyMessage.Close getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface HeartRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:tutorial.HeartRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional string number = 1;</code>
+     */
+    boolean hasNumber();
+    /**
+     * <code>optional string number = 1;</code>
+     */
+    java.lang.String getNumber();
+    /**
+     * <code>optional string number = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getNumberBytes();
+  }
+  /**
+   * Protobuf type {@code tutorial.HeartRequest}
+   */
+  public  static final class HeartRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:tutorial.HeartRequest)
+      HeartRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use HeartRequest.newBuilder() to construct.
+    private HeartRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private HeartRequest() {
+      number_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private HeartRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              number_ = bs;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return cn.xvkang.phone.netty.protobuf.MyMessage.internal_static_tutorial_HeartRequest_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return cn.xvkang.phone.netty.protobuf.MyMessage.internal_static_tutorial_HeartRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              cn.xvkang.phone.netty.protobuf.MyMessage.HeartRequest.class, cn.xvkang.phone.netty.protobuf.MyMessage.HeartRequest.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int NUMBER_FIELD_NUMBER = 1;
+    private volatile java.lang.Object number_;
+    /**
+     * <code>optional string number = 1;</code>
+     */
+    public boolean hasNumber() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional string number = 1;</code>
+     */
+    public java.lang.String getNumber() {
+      java.lang.Object ref = number_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          number_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string number = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getNumberBytes() {
+      java.lang.Object ref = number_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        number_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, number_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, number_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof cn.xvkang.phone.netty.protobuf.MyMessage.HeartRequest)) {
+        return super.equals(obj);
+      }
+      cn.xvkang.phone.netty.protobuf.MyMessage.HeartRequest other = (cn.xvkang.phone.netty.protobuf.MyMessage.HeartRequest) obj;
+
+      boolean result = true;
+      result = result && (hasNumber() == other.hasNumber());
+      if (hasNumber()) {
+        result = result && getNumber()
+            .equals(other.getNumber());
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasNumber()) {
+        hash = (37 * hash) + NUMBER_FIELD_NUMBER;
+        hash = (53 * hash) + getNumber().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static cn.xvkang.phone.netty.protobuf.MyMessage.HeartRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static cn.xvkang.phone.netty.protobuf.MyMessage.HeartRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static cn.xvkang.phone.netty.protobuf.MyMessage.HeartRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static cn.xvkang.phone.netty.protobuf.MyMessage.HeartRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static cn.xvkang.phone.netty.protobuf.MyMessage.HeartRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static cn.xvkang.phone.netty.protobuf.MyMessage.HeartRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static cn.xvkang.phone.netty.protobuf.MyMessage.HeartRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static cn.xvkang.phone.netty.protobuf.MyMessage.HeartRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static cn.xvkang.phone.netty.protobuf.MyMessage.HeartRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static cn.xvkang.phone.netty.protobuf.MyMessage.HeartRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static cn.xvkang.phone.netty.protobuf.MyMessage.HeartRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static cn.xvkang.phone.netty.protobuf.MyMessage.HeartRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(cn.xvkang.phone.netty.protobuf.MyMessage.HeartRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code tutorial.HeartRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:tutorial.HeartRequest)
+        cn.xvkang.phone.netty.protobuf.MyMessage.HeartRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return cn.xvkang.phone.netty.protobuf.MyMessage.internal_static_tutorial_HeartRequest_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return cn.xvkang.phone.netty.protobuf.MyMessage.internal_static_tutorial_HeartRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                cn.xvkang.phone.netty.protobuf.MyMessage.HeartRequest.class, cn.xvkang.phone.netty.protobuf.MyMessage.HeartRequest.Builder.class);
+      }
+
+      // Construct using cn.xvkang.phone.netty.protobuf.MyMessage.HeartRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        number_ = "";
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return cn.xvkang.phone.netty.protobuf.MyMessage.internal_static_tutorial_HeartRequest_descriptor;
+      }
+
+      public cn.xvkang.phone.netty.protobuf.MyMessage.HeartRequest getDefaultInstanceForType() {
+        return cn.xvkang.phone.netty.protobuf.MyMessage.HeartRequest.getDefaultInstance();
+      }
+
+      public cn.xvkang.phone.netty.protobuf.MyMessage.HeartRequest build() {
+        cn.xvkang.phone.netty.protobuf.MyMessage.HeartRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public cn.xvkang.phone.netty.protobuf.MyMessage.HeartRequest buildPartial() {
+        cn.xvkang.phone.netty.protobuf.MyMessage.HeartRequest result = new cn.xvkang.phone.netty.protobuf.MyMessage.HeartRequest(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.number_ = number_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof cn.xvkang.phone.netty.protobuf.MyMessage.HeartRequest) {
+          return mergeFrom((cn.xvkang.phone.netty.protobuf.MyMessage.HeartRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(cn.xvkang.phone.netty.protobuf.MyMessage.HeartRequest other) {
+        if (other == cn.xvkang.phone.netty.protobuf.MyMessage.HeartRequest.getDefaultInstance()) return this;
+        if (other.hasNumber()) {
+          bitField0_ |= 0x00000001;
+          number_ = other.number_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        cn.xvkang.phone.netty.protobuf.MyMessage.HeartRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (cn.xvkang.phone.netty.protobuf.MyMessage.HeartRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object number_ = "";
+      /**
+       * <code>optional string number = 1;</code>
+       */
+      public boolean hasNumber() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional string number = 1;</code>
+       */
+      public java.lang.String getNumber() {
+        java.lang.Object ref = number_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            number_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string number = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getNumberBytes() {
+        java.lang.Object ref = number_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          number_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string number = 1;</code>
+       */
+      public Builder setNumber(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        number_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string number = 1;</code>
+       */
+      public Builder clearNumber() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        number_ = getDefaultInstance().getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string number = 1;</code>
+       */
+      public Builder setNumberBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        number_ = value;
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:tutorial.HeartRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:tutorial.HeartRequest)
+    private static final cn.xvkang.phone.netty.protobuf.MyMessage.HeartRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new cn.xvkang.phone.netty.protobuf.MyMessage.HeartRequest();
+    }
+
+    public static cn.xvkang.phone.netty.protobuf.MyMessage.HeartRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<HeartRequest>
+        PARSER = new com.google.protobuf.AbstractParser<HeartRequest>() {
+      public HeartRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new HeartRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<HeartRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<HeartRequest> getParserForType() {
+      return PARSER;
+    }
+
+    public cn.xvkang.phone.netty.protobuf.MyMessage.HeartRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface HeartResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:tutorial.HeartResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional string number = 1;</code>
+     */
+    boolean hasNumber();
+    /**
+     * <code>optional string number = 1;</code>
+     */
+    java.lang.String getNumber();
+    /**
+     * <code>optional string number = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getNumberBytes();
+  }
+  /**
+   * Protobuf type {@code tutorial.HeartResponse}
+   */
+  public  static final class HeartResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:tutorial.HeartResponse)
+      HeartResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use HeartResponse.newBuilder() to construct.
+    private HeartResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private HeartResponse() {
+      number_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private HeartResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              number_ = bs;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return cn.xvkang.phone.netty.protobuf.MyMessage.internal_static_tutorial_HeartResponse_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return cn.xvkang.phone.netty.protobuf.MyMessage.internal_static_tutorial_HeartResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              cn.xvkang.phone.netty.protobuf.MyMessage.HeartResponse.class, cn.xvkang.phone.netty.protobuf.MyMessage.HeartResponse.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int NUMBER_FIELD_NUMBER = 1;
+    private volatile java.lang.Object number_;
+    /**
+     * <code>optional string number = 1;</code>
+     */
+    public boolean hasNumber() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional string number = 1;</code>
+     */
+    public java.lang.String getNumber() {
+      java.lang.Object ref = number_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          number_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string number = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getNumberBytes() {
+      java.lang.Object ref = number_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        number_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, number_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, number_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof cn.xvkang.phone.netty.protobuf.MyMessage.HeartResponse)) {
+        return super.equals(obj);
+      }
+      cn.xvkang.phone.netty.protobuf.MyMessage.HeartResponse other = (cn.xvkang.phone.netty.protobuf.MyMessage.HeartResponse) obj;
+
+      boolean result = true;
+      result = result && (hasNumber() == other.hasNumber());
+      if (hasNumber()) {
+        result = result && getNumber()
+            .equals(other.getNumber());
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasNumber()) {
+        hash = (37 * hash) + NUMBER_FIELD_NUMBER;
+        hash = (53 * hash) + getNumber().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static cn.xvkang.phone.netty.protobuf.MyMessage.HeartResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static cn.xvkang.phone.netty.protobuf.MyMessage.HeartResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static cn.xvkang.phone.netty.protobuf.MyMessage.HeartResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static cn.xvkang.phone.netty.protobuf.MyMessage.HeartResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static cn.xvkang.phone.netty.protobuf.MyMessage.HeartResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static cn.xvkang.phone.netty.protobuf.MyMessage.HeartResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static cn.xvkang.phone.netty.protobuf.MyMessage.HeartResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static cn.xvkang.phone.netty.protobuf.MyMessage.HeartResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static cn.xvkang.phone.netty.protobuf.MyMessage.HeartResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static cn.xvkang.phone.netty.protobuf.MyMessage.HeartResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static cn.xvkang.phone.netty.protobuf.MyMessage.HeartResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static cn.xvkang.phone.netty.protobuf.MyMessage.HeartResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(cn.xvkang.phone.netty.protobuf.MyMessage.HeartResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code tutorial.HeartResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:tutorial.HeartResponse)
+        cn.xvkang.phone.netty.protobuf.MyMessage.HeartResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return cn.xvkang.phone.netty.protobuf.MyMessage.internal_static_tutorial_HeartResponse_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return cn.xvkang.phone.netty.protobuf.MyMessage.internal_static_tutorial_HeartResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                cn.xvkang.phone.netty.protobuf.MyMessage.HeartResponse.class, cn.xvkang.phone.netty.protobuf.MyMessage.HeartResponse.Builder.class);
+      }
+
+      // Construct using cn.xvkang.phone.netty.protobuf.MyMessage.HeartResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        number_ = "";
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return cn.xvkang.phone.netty.protobuf.MyMessage.internal_static_tutorial_HeartResponse_descriptor;
+      }
+
+      public cn.xvkang.phone.netty.protobuf.MyMessage.HeartResponse getDefaultInstanceForType() {
+        return cn.xvkang.phone.netty.protobuf.MyMessage.HeartResponse.getDefaultInstance();
+      }
+
+      public cn.xvkang.phone.netty.protobuf.MyMessage.HeartResponse build() {
+        cn.xvkang.phone.netty.protobuf.MyMessage.HeartResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public cn.xvkang.phone.netty.protobuf.MyMessage.HeartResponse buildPartial() {
+        cn.xvkang.phone.netty.protobuf.MyMessage.HeartResponse result = new cn.xvkang.phone.netty.protobuf.MyMessage.HeartResponse(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.number_ = number_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof cn.xvkang.phone.netty.protobuf.MyMessage.HeartResponse) {
+          return mergeFrom((cn.xvkang.phone.netty.protobuf.MyMessage.HeartResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(cn.xvkang.phone.netty.protobuf.MyMessage.HeartResponse other) {
+        if (other == cn.xvkang.phone.netty.protobuf.MyMessage.HeartResponse.getDefaultInstance()) return this;
+        if (other.hasNumber()) {
+          bitField0_ |= 0x00000001;
+          number_ = other.number_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        cn.xvkang.phone.netty.protobuf.MyMessage.HeartResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (cn.xvkang.phone.netty.protobuf.MyMessage.HeartResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object number_ = "";
+      /**
+       * <code>optional string number = 1;</code>
+       */
+      public boolean hasNumber() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional string number = 1;</code>
+       */
+      public java.lang.String getNumber() {
+        java.lang.Object ref = number_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            number_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string number = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getNumberBytes() {
+        java.lang.Object ref = number_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          number_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string number = 1;</code>
+       */
+      public Builder setNumber(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        number_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string number = 1;</code>
+       */
+      public Builder clearNumber() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        number_ = getDefaultInstance().getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string number = 1;</code>
+       */
+      public Builder setNumberBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        number_ = value;
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:tutorial.HeartResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:tutorial.HeartResponse)
+    private static final cn.xvkang.phone.netty.protobuf.MyMessage.HeartResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new cn.xvkang.phone.netty.protobuf.MyMessage.HeartResponse();
+    }
+
+    public static cn.xvkang.phone.netty.protobuf.MyMessage.HeartResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<HeartResponse>
+        PARSER = new com.google.protobuf.AbstractParser<HeartResponse>() {
+      public HeartResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new HeartResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<HeartResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<HeartResponse> getParserForType() {
+      return PARSER;
+    }
+
+    public cn.xvkang.phone.netty.protobuf.MyMessage.HeartResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -2495,6 +3969,16 @@ public final class MyMessage {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_tutorial_Close_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_tutorial_HeartRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_tutorial_HeartRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_tutorial_HeartResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_tutorial_HeartResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -2504,25 +3988,38 @@ public final class MyMessage {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\031protobuf/my_message.proto\022\010tutorial\"\251\001" +
+      "\n\031protobuf/my_message.proto\022\010tutorial\"\260\002" +
       "\n\004Data\022*\n\tdata_type\030\001 \002(\0162\027.tutorial.Dat" +
       "a.DataType\022\"\n\010openData\030\002 \001(\0132\016.tutorial." +
       "OpenH\000\022$\n\tcloseData\030\003 \001(\0132\017.tutorial.Clo" +
-      "seH\000\"\037\n\010DataType\022\010\n\004OPEN\020\000\022\t\n\005CLOSE\020\001B\n\n" +
-      "\010dataBody\"#\n\004Open\022\014\n\004name\030\001 \001(\t\022\r\n\005email" +
-      "\030\002 \001(\t\"\027\n\005Close\022\016\n\006number\030\001 \001(\tB+\n\036cn.xv" +
+      "seH\000\022.\n\014heartRequest\030\004 \001(\0132\026.tutorial.He" +
+      "artRequestH\000\0220\n\rheartResponse\030\005 \001(\0132\027.tu" +
+      "torial.HeartResponseH\000\"D\n\010DataType\022\010\n\004OP" +
+      "EN\020\000\022\t\n\005CLOSE\020\001\022\020\n\014HeartRequest\020\002\022\021\n\rHea" +
+      "rtResponse\020\003B\n\n\010dataBody\"#\n\004Open\022\014\n\004name" +
+      "\030\001 \001(\t\022\r\n\005email\030\002 \001(\t\"\027\n\005Close\022\016\n\006number" +
+      "\030\001 \001(\t\"\036\n\014HeartRequest\022\016\n\006number\030\001 \001(\t\"\037" +
+      "\n\rHeartResponse\022\016\n\006number\030\001 \001(\tB+\n\036cn.xv" +
       "kang.phone.netty.protobufB\tMyMessage"
     };
-    descriptor = com.google.protobuf.Descriptors.FileDescriptor
+    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
+        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
+          public com.google.protobuf.ExtensionRegistry assignDescriptors(
+              com.google.protobuf.Descriptors.FileDescriptor root) {
+            descriptor = root;
+            return null;
+          }
+        };
+    com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-        });
+        }, assigner);
     internal_static_tutorial_Data_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_tutorial_Data_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_tutorial_Data_descriptor,
-        new java.lang.String[] { "DataType", "OpenData", "CloseData", "DataBody", });
+        new java.lang.String[] { "DataType", "OpenData", "CloseData", "HeartRequest", "HeartResponse", "DataBody", });
     internal_static_tutorial_Open_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_tutorial_Open_fieldAccessorTable = new
@@ -2534,6 +4031,18 @@ public final class MyMessage {
     internal_static_tutorial_Close_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_tutorial_Close_descriptor,
+        new java.lang.String[] { "Number", });
+    internal_static_tutorial_HeartRequest_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_tutorial_HeartRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_tutorial_HeartRequest_descriptor,
+        new java.lang.String[] { "Number", });
+    internal_static_tutorial_HeartResponse_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_tutorial_HeartResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_tutorial_HeartResponse_descriptor,
         new java.lang.String[] { "Number", });
   }
 

@@ -58,7 +58,6 @@ public class ChepaiController {
 
 	@GetMapping("/addPage.html")
 	public String chepaiAddPage() {
-
 		return "chepai/chepai_addPage";
 	}
 
@@ -79,7 +78,6 @@ public class ChepaiController {
 //		if (!(firstTrial != null && firstTrial.intValue() == Constants.FIRST_TRIAL_STATUS.初审不通过.getStatus())) {
 //			 
 //		}
-
 		int code = (Integer) result.get("code");
 		if (code == 0) {
 			int i = chepaiService.add(params);
@@ -88,7 +86,6 @@ public class ChepaiController {
 				message.add("操作失败");
 			}
 		}
-
 		return result;
 	}
 
@@ -114,7 +111,6 @@ public class ChepaiController {
 		List<String> message = new ArrayList<String>();
 		result.put("message", message);
 		result.put("code", Constants.ReturnCode.成功.getCode());
-
 		int code = (Integer) result.get("code");
 		if (code == 0) {
 			int i = chepaiService.delete(id);
@@ -123,7 +119,6 @@ public class ChepaiController {
 				message.add("操作失败");
 			}
 		}
-
 		return result;
 
 	}
@@ -156,9 +151,7 @@ public class ChepaiController {
 				message.add("操作失败");
 			}
 		}
-
 		return result;
-
 	}
 
 	// @PermissionAnnotation(code = "student_import", describe = "导入学生", name =

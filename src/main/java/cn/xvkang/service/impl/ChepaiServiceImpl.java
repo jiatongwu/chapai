@@ -766,12 +766,10 @@ public class ChepaiServiceImpl implements ChepaiService {
 					messages.add("车牌号：" + myfaxingssue.getCph() + ",延期到：" + endDate);
 					String operateUsername = "";
 					String operateUserPhone = "";
-
 					if (myjibenziliaos.size() > 0) {
 						Myjibenziliao myjibenziliao = myjibenziliaos.get(0);
 						operateUsername = myjibenziliao.getUsername();
 						operateUserPhone = myjibenziliao.getMobnumber();
-
 					}
 					logServiceMiddle.insertOperateLog(Constants.LOG_MESSAGE_KEY_ENUM.车牌延期.getName(), operateUsername,
 							operateUserPhone, myfaxingssue.getCph(), myfaxingssue.getCarvalidenddate());

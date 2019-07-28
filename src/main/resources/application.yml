@@ -13,6 +13,8 @@ logging:
     cn:
       xvkang: debug
 spring:
+  jmx:
+    default-domain: cheapi.com
   netty:
     worker:
       thread:
@@ -105,6 +107,8 @@ logging:
     cn:
       xvkang: debug
 spring:
+  jmx:
+    default-domain: cheapi.com
   netty:
     worker:
       thread:
