@@ -33,25 +33,25 @@ import org.mybatis.dynamic.sql.util.SqlProviderAdapter;
 
 @Mapper
 public interface DtfxreportselectschemeDynamicSqlMapper {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:21.954+08:00", comments="Source Table: DtFxReportSelectScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.861+08:00", comments="Source Table: DtFxReportSelectScheme")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     long count(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:21.954+08:00", comments="Source Table: DtFxReportSelectScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.861+08:00", comments="Source Table: DtFxReportSelectScheme")
     @DeleteProvider(type=SqlProviderAdapter.class, method="delete")
     int delete(DeleteStatementProvider deleteStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:21.954+08:00", comments="Source Table: DtFxReportSelectScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.861+08:00", comments="Source Table: DtFxReportSelectScheme")
     @InsertProvider(type=SqlProviderAdapter.class, method="insert")
     @SelectKey(statement="SELECT SCOPE_IDENTITY()", keyProperty="record.schid", before=false, resultType=Integer.class)
     int insert(InsertStatementProvider<Dtfxreportselectscheme> insertStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:21.955+08:00", comments="Source Table: DtFxReportSelectScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.861+08:00", comments="Source Table: DtFxReportSelectScheme")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @ResultMap("DtfxreportselectschemeResult")
     Dtfxreportselectscheme selectOne(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:21.955+08:00", comments="Source Table: DtFxReportSelectScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.862+08:00", comments="Source Table: DtFxReportSelectScheme")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @Results(id="DtfxreportselectschemeResult", value = {
         @Result(column="SchId", property="schid", jdbcType=JdbcType.INTEGER, id=true),
@@ -64,22 +64,22 @@ public interface DtfxreportselectschemeDynamicSqlMapper {
     })
     List<Dtfxreportselectscheme> selectMany(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:21.955+08:00", comments="Source Table: DtFxReportSelectScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.862+08:00", comments="Source Table: DtFxReportSelectScheme")
     @UpdateProvider(type=SqlProviderAdapter.class, method="update")
     int update(UpdateStatementProvider updateStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:21.955+08:00", comments="Source Table: DtFxReportSelectScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.862+08:00", comments="Source Table: DtFxReportSelectScheme")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<Long>> countByExample() {
         return SelectDSL.selectWithMapper(this::count, SqlBuilder.count())
                 .from(dtfxreportselectscheme);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:21.955+08:00", comments="Source Table: DtFxReportSelectScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.862+08:00", comments="Source Table: DtFxReportSelectScheme")
     default DeleteDSL<MyBatis3DeleteModelAdapter<Integer>> deleteByExample() {
         return DeleteDSL.deleteFromWithMapper(this::delete, dtfxreportselectscheme);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:21.955+08:00", comments="Source Table: DtFxReportSelectScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.862+08:00", comments="Source Table: DtFxReportSelectScheme")
     default int deleteByPrimaryKey(Integer schid_) {
         return DeleteDSL.deleteFromWithMapper(this::delete, dtfxreportselectscheme)
                 .where(schid, isEqualTo(schid_))
@@ -87,7 +87,7 @@ public interface DtfxreportselectschemeDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:21.955+08:00", comments="Source Table: DtFxReportSelectScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.862+08:00", comments="Source Table: DtFxReportSelectScheme")
     default int insert(Dtfxreportselectscheme record) {
         return insert(SqlBuilder.insert(record)
                 .into(dtfxreportselectscheme)
@@ -101,7 +101,7 @@ public interface DtfxreportselectschemeDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:21.955+08:00", comments="Source Table: DtFxReportSelectScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.862+08:00", comments="Source Table: DtFxReportSelectScheme")
     default int insertSelective(Dtfxreportselectscheme record) {
         return insert(SqlBuilder.insert(record)
                 .into(dtfxreportselectscheme)
@@ -115,19 +115,19 @@ public interface DtfxreportselectschemeDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:21.955+08:00", comments="Source Table: DtFxReportSelectScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.862+08:00", comments="Source Table: DtFxReportSelectScheme")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Dtfxreportselectscheme>>> selectByExample() {
         return SelectDSL.selectWithMapper(this::selectMany, schid, schname, fieldname, operators, selectvalues, startime, endtime)
                 .from(dtfxreportselectscheme);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:21.955+08:00", comments="Source Table: DtFxReportSelectScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.862+08:00", comments="Source Table: DtFxReportSelectScheme")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Dtfxreportselectscheme>>> selectDistinctByExample() {
         return SelectDSL.selectDistinctWithMapper(this::selectMany, schid, schname, fieldname, operators, selectvalues, startime, endtime)
                 .from(dtfxreportselectscheme);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:21.955+08:00", comments="Source Table: DtFxReportSelectScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.862+08:00", comments="Source Table: DtFxReportSelectScheme")
     default Dtfxreportselectscheme selectByPrimaryKey(Integer schid_) {
         return SelectDSL.selectWithMapper(this::selectOne, schid, schname, fieldname, operators, selectvalues, startime, endtime)
                 .from(dtfxreportselectscheme)
@@ -136,7 +136,7 @@ public interface DtfxreportselectschemeDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:21.956+08:00", comments="Source Table: DtFxReportSelectScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.863+08:00", comments="Source Table: DtFxReportSelectScheme")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExample(Dtfxreportselectscheme record) {
         return UpdateDSL.updateWithMapper(this::update, dtfxreportselectscheme)
                 .set(schname).equalTo(record::getSchname)
@@ -147,7 +147,7 @@ public interface DtfxreportselectschemeDynamicSqlMapper {
                 .set(endtime).equalTo(record::getEndtime);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:21.956+08:00", comments="Source Table: DtFxReportSelectScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.863+08:00", comments="Source Table: DtFxReportSelectScheme")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExampleSelective(Dtfxreportselectscheme record) {
         return UpdateDSL.updateWithMapper(this::update, dtfxreportselectscheme)
                 .set(schname).equalToWhenPresent(record::getSchname)
@@ -158,7 +158,7 @@ public interface DtfxreportselectschemeDynamicSqlMapper {
                 .set(endtime).equalToWhenPresent(record::getEndtime);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:21.956+08:00", comments="Source Table: DtFxReportSelectScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.863+08:00", comments="Source Table: DtFxReportSelectScheme")
     default int updateByPrimaryKey(Dtfxreportselectscheme record) {
         return UpdateDSL.updateWithMapper(this::update, dtfxreportselectscheme)
                 .set(schname).equalTo(record::getSchname)
@@ -172,7 +172,7 @@ public interface DtfxreportselectschemeDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:21.956+08:00", comments="Source Table: DtFxReportSelectScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.863+08:00", comments="Source Table: DtFxReportSelectScheme")
     default int updateByPrimaryKeySelective(Dtfxreportselectscheme record) {
         return UpdateDSL.updateWithMapper(this::update, dtfxreportselectscheme)
                 .set(schname).equalToWhenPresent(record::getSchname)

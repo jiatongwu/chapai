@@ -27,6 +27,7 @@ import org.mybatis.dynamic.sql.render.RenderingStrategy;
 import org.mybatis.dynamic.sql.select.QueryExpressionDSL;
 import org.mybatis.dynamic.sql.select.SelectModel;
 import org.mybatis.dynamic.sql.select.render.SelectStatementProvider;
+import org.mybatis.dynamic.sql.update.render.UpdateStatementProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.InputStreamResource;
 import org.springframework.core.io.Resource;
@@ -324,7 +325,8 @@ public class PersonServiceImpl implements PersonService {
 				.where(MyjibenziliaoDynamicSqlSupport.userno, SqlBuilder.isEqualTo(userno)).build().execute();
 		if (myjibenziliaos.size() > 0) {
 			Myjibenziliao myjibenziliao = myjibenziliaos.get(0);
-			messages.add("删除人员：" + myjibenziliao.getUsername() + ",手机号：" + myjibenziliao.getMobnumber());
+			messages.add("删除人员：" + myjibenziliao.getUsername() + ",手机号：" + myjibenziliao.getMobnumber() == null ? ""
+					: myjibenziliao.getMobnumber());
 		}
 		List<String> cphs = new ArrayList<>();
 		for (Myfaxingssue myfaxingssue : myfaxingssues) {
@@ -368,6 +370,21 @@ public class PersonServiceImpl implements PersonService {
 		List<Myfaxingssue> myfaxingssues = myfaxingssueDynamicSqlMapper.selectByExample()
 				.where(MyfaxingssueDynamicSqlSupport.userno, SqlBuilder.isEqualTo(userno)).build().execute();
 		return myfaxingssues;
+	}
+
+	@Override
+	public int modifyPhone(String userno, String phone) {
+		UpdateStatementProvider render = SqlBuilder.update(MyjibenziliaoDynamicSqlSupport.myjibenziliao)
+				.set(MyjibenziliaoDynamicSqlSupport.mobnumber).equalTo(phone == null ? "" : phone)
+				.where(MyjibenziliaoDynamicSqlSupport.userno, SqlBuilder.isEqualTo(userno)).build()
+				.render(RenderingStrategy.MYBATIS3);
+
+		return myjibenziliaoDynamicSqlMapper.update(render);
+	}
+
+	@Override
+	public List<Myjibenziliao> selectByExample(SelectStatementProvider selectStatementProvider) {
+		return myjibenziliaoDynamicSqlMapper.selectMany(selectStatementProvider);
 	}
 
 }

@@ -30,19 +30,19 @@ import org.mybatis.dynamic.sql.util.SqlProviderAdapter;
 
 @Mapper
 public interface OptstatelogDynamicSqlMapper {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.453+08:00", comments="Source Table: OptStateLog")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.158+08:00", comments="Source Table: OptStateLog")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     long count(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.453+08:00", comments="Source Table: OptStateLog")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.158+08:00", comments="Source Table: OptStateLog")
     @DeleteProvider(type=SqlProviderAdapter.class, method="delete")
     int delete(DeleteStatementProvider deleteStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.453+08:00", comments="Source Table: OptStateLog")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.158+08:00", comments="Source Table: OptStateLog")
     @InsertProvider(type=SqlProviderAdapter.class, method="insert")
     int insert(InsertStatementProvider<Optstatelog> insertStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.453+08:00", comments="Source Table: OptStateLog")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.158+08:00", comments="Source Table: OptStateLog")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @Results(id="OptstatelogResult", value = {
         @Result(column="OptCardNO", property="optcardno", jdbcType=JdbcType.VARCHAR),
@@ -54,22 +54,22 @@ public interface OptstatelogDynamicSqlMapper {
     })
     List<Optstatelog> selectMany(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.453+08:00", comments="Source Table: OptStateLog")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.158+08:00", comments="Source Table: OptStateLog")
     @UpdateProvider(type=SqlProviderAdapter.class, method="update")
     int update(UpdateStatementProvider updateStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.453+08:00", comments="Source Table: OptStateLog")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.158+08:00", comments="Source Table: OptStateLog")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<Long>> countByExample() {
         return SelectDSL.selectWithMapper(this::count, SqlBuilder.count())
                 .from(optstatelog);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.453+08:00", comments="Source Table: OptStateLog")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.158+08:00", comments="Source Table: OptStateLog")
     default DeleteDSL<MyBatis3DeleteModelAdapter<Integer>> deleteByExample() {
         return DeleteDSL.deleteFromWithMapper(this::delete, optstatelog);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.453+08:00", comments="Source Table: OptStateLog")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.158+08:00", comments="Source Table: OptStateLog")
     default int insert(Optstatelog record) {
         return insert(SqlBuilder.insert(record)
                 .into(optstatelog)
@@ -83,7 +83,7 @@ public interface OptstatelogDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.453+08:00", comments="Source Table: OptStateLog")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.158+08:00", comments="Source Table: OptStateLog")
     default int insertSelective(Optstatelog record) {
         return insert(SqlBuilder.insert(record)
                 .into(optstatelog)
@@ -97,19 +97,19 @@ public interface OptstatelogDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.453+08:00", comments="Source Table: OptStateLog")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.158+08:00", comments="Source Table: OptStateLog")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Optstatelog>>> selectByExample() {
         return SelectDSL.selectWithMapper(this::selectMany, optcardno, username, optmenu, optcontent, pcname, opttime)
                 .from(optstatelog);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.453+08:00", comments="Source Table: OptStateLog")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.158+08:00", comments="Source Table: OptStateLog")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Optstatelog>>> selectDistinctByExample() {
         return SelectDSL.selectDistinctWithMapper(this::selectMany, optcardno, username, optmenu, optcontent, pcname, opttime)
                 .from(optstatelog);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.453+08:00", comments="Source Table: OptStateLog")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.158+08:00", comments="Source Table: OptStateLog")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExample(Optstatelog record) {
         return UpdateDSL.updateWithMapper(this::update, optstatelog)
                 .set(optcardno).equalTo(record::getOptcardno)
@@ -120,7 +120,7 @@ public interface OptstatelogDynamicSqlMapper {
                 .set(opttime).equalTo(record::getOpttime);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.454+08:00", comments="Source Table: OptStateLog")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.158+08:00", comments="Source Table: OptStateLog")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExampleSelective(Optstatelog record) {
         return UpdateDSL.updateWithMapper(this::update, optstatelog)
                 .set(optcardno).equalToWhenPresent(record::getOptcardno)

@@ -1,6 +1,6 @@
 spring:
   profiles: 
-    active: prod
+    active: dev
 
 ---
 thrift:
@@ -15,6 +15,7 @@ logging:
 spring:
   jmx:
     default-domain: cheapi.com
+    enabled: false    
   netty:
     worker:
       thread:
@@ -109,6 +110,7 @@ logging:
 spring:
   jmx:
     default-domain: cheapi.com
+    enabled: false    
   netty:
     worker:
       thread:

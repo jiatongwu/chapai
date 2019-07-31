@@ -59,12 +59,14 @@ import cn.xvkang.phone.thrift.SendPhotoRequestData;
 import cn.xvkang.phone.thrift.SendPhotoResponseData;
 import cn.xvkang.phone.thrift.UploadPhotoResultEnum;
 import cn.xvkang.primaryentity.Myjibenziliao;
+import cn.xvkang.primaryentity.SendSmsLog;
 import cn.xvkang.primaryentity.SmsTemplate;
 import cn.xvkang.primaryentity.UserTable;
 import cn.xvkang.primaryentity.Weiguijilu;
 import cn.xvkang.primarymapperdynamicsql.SmsTemplateDynamicSqlSupport;
 import cn.xvkang.properties.ApplicationProperties;
 import cn.xvkang.service.ChepaiService;
+import cn.xvkang.service.SendSmsLogService;
 import cn.xvkang.service.SmsTemplateService;
 import cn.xvkang.service.UserService;
 import cn.xvkang.service.WeiguijiluService;
@@ -82,6 +84,8 @@ public class ChepaiPhoneServiceImpl implements ChepaiPhoneService.Iface {
 	private Logger logger = LoggerFactory.getLogger(ChepaiPhoneServiceImpl.class);
 	@Autowired
 	private WeiguijiluService weiguijiluService;
+	@Autowired
+	private SendSmsLogService sendSmsLogService;
 	@Autowired
 	private ObjectMapper objectMapper;
 	@Autowired
@@ -201,11 +205,25 @@ public class ChepaiPhoneServiceImpl implements ChepaiPhoneService.Iface {
 				}
 				// 发送短信通知那个人
 				String mobile = myjibenziliao.getMobnumber();
+				if (StringUtils.isBlank(mobile)) {
+					response.setCode(Result_Code.ERROR);
+					response.setUploadPhotoResultEnum(UploadPhotoResultEnum.SEND_SMS_ERROR);
+					return response;
+				}
 				boolean sendSmsResult = sendSms(mobile, defaultSmsMessage);
 				if (!sendSmsResult) {
 					response.setCode(Result_Code.ERROR);
 					response.setUploadPhotoResultEnum(UploadPhotoResultEnum.SEND_SMS_ERROR);
 					return response;
+				} else {
+					// 发送短信成功做下记录
+					SendSmsLog sendSmsLog = new SendSmsLog();
+					sendSmsLog.setCph(cph);
+					sendSmsLog.setCreatetime(new Date());
+					sendSmsLog.setPhone(mobile);
+					sendSmsLog.setSmsMessage(defaultSmsMessage);
+					sendSmsLog.setUserId(userId);
+					sendSmsLogService.saveOneSendSmsLog(sendSmsLog);
 				}
 			} else {
 				response.setCode(Result_Code.ERROR);

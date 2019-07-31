@@ -7,31 +7,31 @@ import org.mybatis.dynamic.sql.SqlColumn;
 import org.mybatis.dynamic.sql.SqlTable;
 
 public final class MyshoufeiguangzouDynamicSqlSupport {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.317+08:00", comments="Source Table: MYSHOUFEIGUANGZOU")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.054+08:00", comments="Source Table: MYSHOUFEIGUANGZOU")
     public static final Myshoufeiguangzou myshoufeiguangzou = new Myshoufeiguangzou();
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.317+08:00", comments="Source field: MYSHOUFEIGUANGZOU.CardType")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.054+08:00", comments="Source field: MYSHOUFEIGUANGZOU.CardType")
     public static final SqlColumn<String> cardtype = myshoufeiguangzou.cardtype;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.317+08:00", comments="Source field: MYSHOUFEIGUANGZOU.FreeMark")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.054+08:00", comments="Source field: MYSHOUFEIGUANGZOU.FreeMark")
     public static final SqlColumn<Integer> freemark = myshoufeiguangzou.freemark;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.317+08:00", comments="Source field: MYSHOUFEIGUANGZOU.FreeTime")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.054+08:00", comments="Source field: MYSHOUFEIGUANGZOU.FreeTime")
     public static final SqlColumn<Integer> freetime = myshoufeiguangzou.freetime;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.317+08:00", comments="Source field: MYSHOUFEIGUANGZOU.SFCycle")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.054+08:00", comments="Source field: MYSHOUFEIGUANGZOU.SFCycle")
     public static final SqlColumn<Integer> sfcycle = myshoufeiguangzou.sfcycle;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.317+08:00", comments="Source field: MYSHOUFEIGUANGZOU.TimePeriod")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.054+08:00", comments="Source field: MYSHOUFEIGUANGZOU.TimePeriod")
     public static final SqlColumn<Integer> timeperiod = myshoufeiguangzou.timeperiod;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.317+08:00", comments="Source field: MYSHOUFEIGUANGZOU.WithinPeriodSF")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.054+08:00", comments="Source field: MYSHOUFEIGUANGZOU.WithinPeriodSF")
     public static final SqlColumn<BigDecimal> withinperiodsf = myshoufeiguangzou.withinperiodsf;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.317+08:00", comments="Source field: MYSHOUFEIGUANGZOU.WithoutPeriodSF")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.054+08:00", comments="Source field: MYSHOUFEIGUANGZOU.WithoutPeriodSF")
     public static final SqlColumn<BigDecimal> withoutperiodsf = myshoufeiguangzou.withoutperiodsf;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.317+08:00", comments="Source Table: MYSHOUFEIGUANGZOU")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.054+08:00", comments="Source Table: MYSHOUFEIGUANGZOU")
     public static final class Myshoufeiguangzou extends SqlTable {
         public final SqlColumn<String> cardtype = column("CardType", JDBCType.VARCHAR);
 

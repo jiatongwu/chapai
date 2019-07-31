@@ -35,7 +35,7 @@
             <label class="layui-form-label">联系人手机号</label>
             <div class="layui-input-inline">
                 <input type="text" name="phone"
-                       value="" lay-verify="required"
+                       value=""
                        autocomplete="off" class="layui-input"/>
             </div>
         </div>

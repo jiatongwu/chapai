@@ -30,19 +30,19 @@ import org.mybatis.dynamic.sql.util.SqlProviderAdapter;
 
 @Mapper
 public interface MycargooutrecordreportDynamicSqlMapper {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.194+08:00", comments="Source Table: MYCARGOOUTRECORDREPORT")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.994+08:00", comments="Source Table: MYCARGOOUTRECORDREPORT")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     long count(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.194+08:00", comments="Source Table: MYCARGOOUTRECORDREPORT")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.994+08:00", comments="Source Table: MYCARGOOUTRECORDREPORT")
     @DeleteProvider(type=SqlProviderAdapter.class, method="delete")
     int delete(DeleteStatementProvider deleteStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.194+08:00", comments="Source Table: MYCARGOOUTRECORDREPORT")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.994+08:00", comments="Source Table: MYCARGOOUTRECORDREPORT")
     @InsertProvider(type=SqlProviderAdapter.class, method="insert")
     int insert(InsertStatementProvider<Mycargooutrecordreport> insertStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.194+08:00", comments="Source Table: MYCARGOOUTRECORDREPORT")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.994+08:00", comments="Source Table: MYCARGOOUTRECORDREPORT")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @Results(id="MycargooutrecordreportResult", value = {
         @Result(column="CARDSNO", property="cardsno", jdbcType=JdbcType.VARCHAR),
@@ -84,22 +84,22 @@ public interface MycargooutrecordreportDynamicSqlMapper {
     })
     List<Mycargooutrecordreport> selectMany(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.194+08:00", comments="Source Table: MYCARGOOUTRECORDREPORT")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.994+08:00", comments="Source Table: MYCARGOOUTRECORDREPORT")
     @UpdateProvider(type=SqlProviderAdapter.class, method="update")
     int update(UpdateStatementProvider updateStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.194+08:00", comments="Source Table: MYCARGOOUTRECORDREPORT")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.994+08:00", comments="Source Table: MYCARGOOUTRECORDREPORT")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<Long>> countByExample() {
         return SelectDSL.selectWithMapper(this::count, SqlBuilder.count())
                 .from(mycargooutrecordreport);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.194+08:00", comments="Source Table: MYCARGOOUTRECORDREPORT")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.994+08:00", comments="Source Table: MYCARGOOUTRECORDREPORT")
     default DeleteDSL<MyBatis3DeleteModelAdapter<Integer>> deleteByExample() {
         return DeleteDSL.deleteFromWithMapper(this::delete, mycargooutrecordreport);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.194+08:00", comments="Source Table: MYCARGOOUTRECORDREPORT")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.994+08:00", comments="Source Table: MYCARGOOUTRECORDREPORT")
     default int insert(Mycargooutrecordreport record) {
         return insert(SqlBuilder.insert(record)
                 .into(mycargooutrecordreport)
@@ -143,7 +143,7 @@ public interface MycargooutrecordreportDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.195+08:00", comments="Source Table: MYCARGOOUTRECORDREPORT")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.994+08:00", comments="Source Table: MYCARGOOUTRECORDREPORT")
     default int insertSelective(Mycargooutrecordreport record) {
         return insert(SqlBuilder.insert(record)
                 .into(mycargooutrecordreport)
@@ -187,19 +187,19 @@ public interface MycargooutrecordreportDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.195+08:00", comments="Source Table: MYCARGOOUTRECORDREPORT")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.994+08:00", comments="Source Table: MYCARGOOUTRECORDREPORT")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Mycargooutrecordreport>>> selectByExample() {
         return SelectDSL.selectWithMapper(this::selectMany, cardsno, imontha, imonthb, imonthc, imonthd, isummonth, ifreea, ifreeb, isumfree, itempa, itempb, itempc, itempd, itempe, itempf, itempg, itemph, isumtemp, imoneya, imoneyb, imoneyc, imoneyd, isummoney, imoney, zsumcar, zsummoney, itempfree, itempmoney, imonthe, imonthf, imonthg, imonthh, zsumysje, wxpay, zfbpay, cashpay)
                 .from(mycargooutrecordreport);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.195+08:00", comments="Source Table: MYCARGOOUTRECORDREPORT")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.994+08:00", comments="Source Table: MYCARGOOUTRECORDREPORT")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Mycargooutrecordreport>>> selectDistinctByExample() {
         return SelectDSL.selectDistinctWithMapper(this::selectMany, cardsno, imontha, imonthb, imonthc, imonthd, isummonth, ifreea, ifreeb, isumfree, itempa, itempb, itempc, itempd, itempe, itempf, itempg, itemph, isumtemp, imoneya, imoneyb, imoneyc, imoneyd, isummoney, imoney, zsumcar, zsummoney, itempfree, itempmoney, imonthe, imonthf, imonthg, imonthh, zsumysje, wxpay, zfbpay, cashpay)
                 .from(mycargooutrecordreport);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.195+08:00", comments="Source Table: MYCARGOOUTRECORDREPORT")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.994+08:00", comments="Source Table: MYCARGOOUTRECORDREPORT")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExample(Mycargooutrecordreport record) {
         return UpdateDSL.updateWithMapper(this::update, mycargooutrecordreport)
                 .set(cardsno).equalTo(record::getCardsno)
@@ -240,7 +240,7 @@ public interface MycargooutrecordreportDynamicSqlMapper {
                 .set(cashpay).equalTo(record::getCashpay);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.195+08:00", comments="Source Table: MYCARGOOUTRECORDREPORT")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.995+08:00", comments="Source Table: MYCARGOOUTRECORDREPORT")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExampleSelective(Mycargooutrecordreport record) {
         return UpdateDSL.updateWithMapper(this::update, mycargooutrecordreport)
                 .set(cardsno).equalToWhenPresent(record::getCardsno)

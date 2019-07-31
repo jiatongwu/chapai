@@ -33,25 +33,25 @@ import org.mybatis.dynamic.sql.util.SqlProviderAdapter;
 
 @Mapper
 public interface MycaozuoyuangroupDynamicSqlMapper {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.168+08:00", comments="Source Table: MYCAOZUOYUANGROUP")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.977+08:00", comments="Source Table: MYCAOZUOYUANGROUP")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     long count(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.168+08:00", comments="Source Table: MYCAOZUOYUANGROUP")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.977+08:00", comments="Source Table: MYCAOZUOYUANGROUP")
     @DeleteProvider(type=SqlProviderAdapter.class, method="delete")
     int delete(DeleteStatementProvider deleteStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.168+08:00", comments="Source Table: MYCAOZUOYUANGROUP")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.977+08:00", comments="Source Table: MYCAOZUOYUANGROUP")
     @InsertProvider(type=SqlProviderAdapter.class, method="insert")
     @SelectKey(statement="SELECT SCOPE_IDENTITY()", keyProperty="record.groupno", before=false, resultType=Integer.class)
     int insert(InsertStatementProvider<Mycaozuoyuangroup> insertStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.168+08:00", comments="Source Table: MYCAOZUOYUANGROUP")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.977+08:00", comments="Source Table: MYCAOZUOYUANGROUP")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @ResultMap("MycaozuoyuangroupResult")
     Mycaozuoyuangroup selectOne(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.168+08:00", comments="Source Table: MYCAOZUOYUANGROUP")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.977+08:00", comments="Source Table: MYCAOZUOYUANGROUP")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @Results(id="MycaozuoyuangroupResult", value = {
         @Result(column="GroupNo", property="groupno", jdbcType=JdbcType.INTEGER, id=true),
@@ -60,22 +60,22 @@ public interface MycaozuoyuangroupDynamicSqlMapper {
     })
     List<Mycaozuoyuangroup> selectMany(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.168+08:00", comments="Source Table: MYCAOZUOYUANGROUP")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.977+08:00", comments="Source Table: MYCAOZUOYUANGROUP")
     @UpdateProvider(type=SqlProviderAdapter.class, method="update")
     int update(UpdateStatementProvider updateStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.168+08:00", comments="Source Table: MYCAOZUOYUANGROUP")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.977+08:00", comments="Source Table: MYCAOZUOYUANGROUP")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<Long>> countByExample() {
         return SelectDSL.selectWithMapper(this::count, SqlBuilder.count())
                 .from(mycaozuoyuangroup);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.168+08:00", comments="Source Table: MYCAOZUOYUANGROUP")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.977+08:00", comments="Source Table: MYCAOZUOYUANGROUP")
     default DeleteDSL<MyBatis3DeleteModelAdapter<Integer>> deleteByExample() {
         return DeleteDSL.deleteFromWithMapper(this::delete, mycaozuoyuangroup);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.168+08:00", comments="Source Table: MYCAOZUOYUANGROUP")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.977+08:00", comments="Source Table: MYCAOZUOYUANGROUP")
     default int deleteByPrimaryKey(Integer groupno_) {
         return DeleteDSL.deleteFromWithMapper(this::delete, mycaozuoyuangroup)
                 .where(groupno, isEqualTo(groupno_))
@@ -83,7 +83,7 @@ public interface MycaozuoyuangroupDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.168+08:00", comments="Source Table: MYCAOZUOYUANGROUP")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.977+08:00", comments="Source Table: MYCAOZUOYUANGROUP")
     default int insert(Mycaozuoyuangroup record) {
         return insert(SqlBuilder.insert(record)
                 .into(mycaozuoyuangroup)
@@ -93,7 +93,7 @@ public interface MycaozuoyuangroupDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.168+08:00", comments="Source Table: MYCAOZUOYUANGROUP")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.977+08:00", comments="Source Table: MYCAOZUOYUANGROUP")
     default int insertSelective(Mycaozuoyuangroup record) {
         return insert(SqlBuilder.insert(record)
                 .into(mycaozuoyuangroup)
@@ -103,19 +103,19 @@ public interface MycaozuoyuangroupDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.168+08:00", comments="Source Table: MYCAOZUOYUANGROUP")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.977+08:00", comments="Source Table: MYCAOZUOYUANGROUP")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Mycaozuoyuangroup>>> selectByExample() {
         return SelectDSL.selectWithMapper(this::selectMany, groupno, groupname, remarks)
                 .from(mycaozuoyuangroup);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.168+08:00", comments="Source Table: MYCAOZUOYUANGROUP")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.977+08:00", comments="Source Table: MYCAOZUOYUANGROUP")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Mycaozuoyuangroup>>> selectDistinctByExample() {
         return SelectDSL.selectDistinctWithMapper(this::selectMany, groupno, groupname, remarks)
                 .from(mycaozuoyuangroup);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.168+08:00", comments="Source Table: MYCAOZUOYUANGROUP")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.977+08:00", comments="Source Table: MYCAOZUOYUANGROUP")
     default Mycaozuoyuangroup selectByPrimaryKey(Integer groupno_) {
         return SelectDSL.selectWithMapper(this::selectOne, groupno, groupname, remarks)
                 .from(mycaozuoyuangroup)
@@ -124,21 +124,21 @@ public interface MycaozuoyuangroupDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.168+08:00", comments="Source Table: MYCAOZUOYUANGROUP")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.977+08:00", comments="Source Table: MYCAOZUOYUANGROUP")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExample(Mycaozuoyuangroup record) {
         return UpdateDSL.updateWithMapper(this::update, mycaozuoyuangroup)
                 .set(groupname).equalTo(record::getGroupname)
                 .set(remarks).equalTo(record::getRemarks);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.168+08:00", comments="Source Table: MYCAOZUOYUANGROUP")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.978+08:00", comments="Source Table: MYCAOZUOYUANGROUP")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExampleSelective(Mycaozuoyuangroup record) {
         return UpdateDSL.updateWithMapper(this::update, mycaozuoyuangroup)
                 .set(groupname).equalToWhenPresent(record::getGroupname)
                 .set(remarks).equalToWhenPresent(record::getRemarks);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.168+08:00", comments="Source Table: MYCAOZUOYUANGROUP")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.978+08:00", comments="Source Table: MYCAOZUOYUANGROUP")
     default int updateByPrimaryKey(Mycaozuoyuangroup record) {
         return UpdateDSL.updateWithMapper(this::update, mycaozuoyuangroup)
                 .set(groupname).equalTo(record::getGroupname)
@@ -148,7 +148,7 @@ public interface MycaozuoyuangroupDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.168+08:00", comments="Source Table: MYCAOZUOYUANGROUP")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.978+08:00", comments="Source Table: MYCAOZUOYUANGROUP")
     default int updateByPrimaryKeySelective(Mycaozuoyuangroup record) {
         return UpdateDSL.updateWithMapper(this::update, mycaozuoyuangroup)
                 .set(groupname).equalToWhenPresent(record::getGroupname)

@@ -6,19 +6,19 @@ import org.mybatis.dynamic.sql.SqlColumn;
 import org.mybatis.dynamic.sql.SqlTable;
 
 public final class SerYantimesetDynamicSqlSupport {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.521+08:00", comments="Source Table: Ser_YanTimeSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.196+08:00", comments="Source Table: Ser_YanTimeSet")
     public static final SerYantimeset serYantimeset = new SerYantimeset();
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.521+08:00", comments="Source field: Ser_YanTimeSet.id")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.196+08:00", comments="Source field: Ser_YanTimeSet.id")
     public static final SqlColumn<Integer> id = serYantimeset.id;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.521+08:00", comments="Source field: Ser_YanTimeSet.DevcNum")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.196+08:00", comments="Source field: Ser_YanTimeSet.DevcNum")
     public static final SqlColumn<Integer> devcnum = serYantimeset.devcnum;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.521+08:00", comments="Source field: Ser_YanTimeSet.Yanshi")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.196+08:00", comments="Source field: Ser_YanTimeSet.Yanshi")
     public static final SqlColumn<String> yanshi = serYantimeset.yanshi;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.521+08:00", comments="Source Table: Ser_YanTimeSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.196+08:00", comments="Source Table: Ser_YanTimeSet")
     public static final class SerYantimeset extends SqlTable {
         public final SqlColumn<Integer> id = column("id", JDBCType.INTEGER);
 

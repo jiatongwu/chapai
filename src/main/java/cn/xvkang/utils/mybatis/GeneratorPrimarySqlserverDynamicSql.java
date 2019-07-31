@@ -23,7 +23,7 @@ public class GeneratorPrimarySqlserverDynamicSql {
 		// File configFile = new
 		// File("/Volumes/mac-bak/main-workspace/eclipse-workspace/mybatis-generator/generatorConfig-oracle.xml");
 		File configFile = new File(
-				"/home/wu/Documents/workspace-sts-3.9.9.RELEASE/chepai/src/main/java/cn/xvkang/utils/mybatis/generatorConfig-primarysqlserver.xml");
+				"/home/wu/eclipse-workspace/chepai/src/main/java/cn/xvkang/utils/mybatis/generatorConfig-primarysqlserver.xml");
 		ConfigurationParser cp = new ConfigurationParser(warnings);
 		Configuration config = cp.parseConfiguration(configFile);
 		DefaultShellCallback callback = new DefaultShellCallback(overwrite);

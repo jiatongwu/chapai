@@ -33,25 +33,25 @@ import org.mybatis.dynamic.sql.util.SqlProviderAdapter;
 
 @Mapper
 public interface SerOuttimebaojingrecDynamicSqlMapper {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.513+08:00", comments="Source Table: Ser_OutTimeBaoJingRec")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.187+08:00", comments="Source Table: Ser_OutTimeBaoJingRec")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     long count(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.513+08:00", comments="Source Table: Ser_OutTimeBaoJingRec")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.187+08:00", comments="Source Table: Ser_OutTimeBaoJingRec")
     @DeleteProvider(type=SqlProviderAdapter.class, method="delete")
     int delete(DeleteStatementProvider deleteStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.513+08:00", comments="Source Table: Ser_OutTimeBaoJingRec")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.187+08:00", comments="Source Table: Ser_OutTimeBaoJingRec")
     @InsertProvider(type=SqlProviderAdapter.class, method="insert")
     @SelectKey(statement="SELECT SCOPE_IDENTITY()", keyProperty="record.id", before=false, resultType=Integer.class)
     int insert(InsertStatementProvider<SerOuttimebaojingrec> insertStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.513+08:00", comments="Source Table: Ser_OutTimeBaoJingRec")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.188+08:00", comments="Source Table: Ser_OutTimeBaoJingRec")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @ResultMap("SerOuttimebaojingrecResult")
     SerOuttimebaojingrec selectOne(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.513+08:00", comments="Source Table: Ser_OutTimeBaoJingRec")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.188+08:00", comments="Source Table: Ser_OutTimeBaoJingRec")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @Results(id="SerOuttimebaojingrecResult", value = {
         @Result(column="id", property="id", jdbcType=JdbcType.INTEGER, id=true),
@@ -60,22 +60,22 @@ public interface SerOuttimebaojingrecDynamicSqlMapper {
     })
     List<SerOuttimebaojingrec> selectMany(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.513+08:00", comments="Source Table: Ser_OutTimeBaoJingRec")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.188+08:00", comments="Source Table: Ser_OutTimeBaoJingRec")
     @UpdateProvider(type=SqlProviderAdapter.class, method="update")
     int update(UpdateStatementProvider updateStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.513+08:00", comments="Source Table: Ser_OutTimeBaoJingRec")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.188+08:00", comments="Source Table: Ser_OutTimeBaoJingRec")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<Long>> countByExample() {
         return SelectDSL.selectWithMapper(this::count, SqlBuilder.count())
                 .from(serOuttimebaojingrec);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.513+08:00", comments="Source Table: Ser_OutTimeBaoJingRec")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.188+08:00", comments="Source Table: Ser_OutTimeBaoJingRec")
     default DeleteDSL<MyBatis3DeleteModelAdapter<Integer>> deleteByExample() {
         return DeleteDSL.deleteFromWithMapper(this::delete, serOuttimebaojingrec);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.513+08:00", comments="Source Table: Ser_OutTimeBaoJingRec")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.188+08:00", comments="Source Table: Ser_OutTimeBaoJingRec")
     default int deleteByPrimaryKey(Integer id_) {
         return DeleteDSL.deleteFromWithMapper(this::delete, serOuttimebaojingrec)
                 .where(id, isEqualTo(id_))
@@ -83,7 +83,7 @@ public interface SerOuttimebaojingrecDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.513+08:00", comments="Source Table: Ser_OutTimeBaoJingRec")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.188+08:00", comments="Source Table: Ser_OutTimeBaoJingRec")
     default int insert(SerOuttimebaojingrec record) {
         return insert(SqlBuilder.insert(record)
                 .into(serOuttimebaojingrec)
@@ -93,7 +93,7 @@ public interface SerOuttimebaojingrecDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.513+08:00", comments="Source Table: Ser_OutTimeBaoJingRec")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.188+08:00", comments="Source Table: Ser_OutTimeBaoJingRec")
     default int insertSelective(SerOuttimebaojingrec record) {
         return insert(SqlBuilder.insert(record)
                 .into(serOuttimebaojingrec)
@@ -103,19 +103,19 @@ public interface SerOuttimebaojingrecDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.513+08:00", comments="Source Table: Ser_OutTimeBaoJingRec")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.188+08:00", comments="Source Table: Ser_OutTimeBaoJingRec")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<SerOuttimebaojingrec>>> selectByExample() {
         return SelectDSL.selectWithMapper(this::selectMany, id, devcnum, baojin)
                 .from(serOuttimebaojingrec);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.513+08:00", comments="Source Table: Ser_OutTimeBaoJingRec")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.188+08:00", comments="Source Table: Ser_OutTimeBaoJingRec")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<SerOuttimebaojingrec>>> selectDistinctByExample() {
         return SelectDSL.selectDistinctWithMapper(this::selectMany, id, devcnum, baojin)
                 .from(serOuttimebaojingrec);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.513+08:00", comments="Source Table: Ser_OutTimeBaoJingRec")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.188+08:00", comments="Source Table: Ser_OutTimeBaoJingRec")
     default SerOuttimebaojingrec selectByPrimaryKey(Integer id_) {
         return SelectDSL.selectWithMapper(this::selectOne, id, devcnum, baojin)
                 .from(serOuttimebaojingrec)
@@ -124,21 +124,21 @@ public interface SerOuttimebaojingrecDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.513+08:00", comments="Source Table: Ser_OutTimeBaoJingRec")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.188+08:00", comments="Source Table: Ser_OutTimeBaoJingRec")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExample(SerOuttimebaojingrec record) {
         return UpdateDSL.updateWithMapper(this::update, serOuttimebaojingrec)
                 .set(devcnum).equalTo(record::getDevcnum)
                 .set(baojin).equalTo(record::getBaojin);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.513+08:00", comments="Source Table: Ser_OutTimeBaoJingRec")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.188+08:00", comments="Source Table: Ser_OutTimeBaoJingRec")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExampleSelective(SerOuttimebaojingrec record) {
         return UpdateDSL.updateWithMapper(this::update, serOuttimebaojingrec)
                 .set(devcnum).equalToWhenPresent(record::getDevcnum)
                 .set(baojin).equalToWhenPresent(record::getBaojin);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.514+08:00", comments="Source Table: Ser_OutTimeBaoJingRec")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.188+08:00", comments="Source Table: Ser_OutTimeBaoJingRec")
     default int updateByPrimaryKey(SerOuttimebaojingrec record) {
         return UpdateDSL.updateWithMapper(this::update, serOuttimebaojingrec)
                 .set(devcnum).equalTo(record::getDevcnum)
@@ -148,7 +148,7 @@ public interface SerOuttimebaojingrecDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.514+08:00", comments="Source Table: Ser_OutTimeBaoJingRec")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.188+08:00", comments="Source Table: Ser_OutTimeBaoJingRec")
     default int updateByPrimaryKeySelective(SerOuttimebaojingrec record) {
         return UpdateDSL.updateWithMapper(this::update, serOuttimebaojingrec)
                 .set(devcnum).equalToWhenPresent(record::getDevcnum)

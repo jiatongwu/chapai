@@ -7,16 +7,16 @@ import org.mybatis.dynamic.sql.SqlColumn;
 import org.mybatis.dynamic.sql.SqlTable;
 
 public final class MyholidaysDynamicSqlSupport {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.432+08:00", comments="Source Table: MyHolidays")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.115+08:00", comments="Source Table: MyHolidays")
     public static final Myholidays myholidays = new Myholidays();
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.432+08:00", comments="Source field: MyHolidays.HolidaysTime")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.115+08:00", comments="Source field: MyHolidays.HolidaysTime")
     public static final SqlColumn<Date> holidaystime = myholidays.holidaystime;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.432+08:00", comments="Source field: MyHolidays.HolidaysContent")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.115+08:00", comments="Source field: MyHolidays.HolidaysContent")
     public static final SqlColumn<String> holidayscontent = myholidays.holidayscontent;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.432+08:00", comments="Source Table: MyHolidays")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.115+08:00", comments="Source Table: MyHolidays")
     public static final class Myholidays extends SqlTable {
         public final SqlColumn<Date> holidaystime = column("HolidaysTime", JDBCType.TIMESTAMP);
 

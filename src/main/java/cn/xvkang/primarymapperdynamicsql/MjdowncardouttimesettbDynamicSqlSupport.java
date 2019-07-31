@@ -6,13 +6,13 @@ import org.mybatis.dynamic.sql.SqlColumn;
 import org.mybatis.dynamic.sql.SqlTable;
 
 public final class MjdowncardouttimesettbDynamicSqlSupport {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.133+08:00", comments="Source Table: MJDownCardOutTimeSettb")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.960+08:00", comments="Source Table: MJDownCardOutTimeSettb")
     public static final Mjdowncardouttimesettb mjdowncardouttimesettb = new Mjdowncardouttimesettb();
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.133+08:00", comments="Source field: MJDownCardOutTimeSettb.outtime")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.960+08:00", comments="Source field: MJDownCardOutTimeSettb.outtime")
     public static final SqlColumn<Integer> outtime = mjdowncardouttimesettb.outtime;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.133+08:00", comments="Source Table: MJDownCardOutTimeSettb")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.960+08:00", comments="Source Table: MJDownCardOutTimeSettb")
     public static final class Mjdowncardouttimesettb extends SqlTable {
         public final SqlColumn<Integer> outtime = column("outtime", JDBCType.INTEGER);
 

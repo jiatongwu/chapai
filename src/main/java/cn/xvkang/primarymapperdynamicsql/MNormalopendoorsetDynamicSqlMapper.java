@@ -33,25 +33,25 @@ import org.mybatis.dynamic.sql.util.SqlProviderAdapter;
 
 @Mapper
 public interface MNormalopendoorsetDynamicSqlMapper {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.382+08:00", comments="Source Table: M_NormalOpenDoorSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.091+08:00", comments="Source Table: M_NormalOpenDoorSet")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     long count(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.382+08:00", comments="Source Table: M_NormalOpenDoorSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.092+08:00", comments="Source Table: M_NormalOpenDoorSet")
     @DeleteProvider(type=SqlProviderAdapter.class, method="delete")
     int delete(DeleteStatementProvider deleteStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.382+08:00", comments="Source Table: M_NormalOpenDoorSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.092+08:00", comments="Source Table: M_NormalOpenDoorSet")
     @InsertProvider(type=SqlProviderAdapter.class, method="insert")
     @SelectKey(statement="SELECT SCOPE_IDENTITY()", keyProperty="record.id", before=false, resultType=Integer.class)
     int insert(InsertStatementProvider<MNormalopendoorset> insertStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.382+08:00", comments="Source Table: M_NormalOpenDoorSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.092+08:00", comments="Source Table: M_NormalOpenDoorSet")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @ResultMap("MNormalopendoorsetResult")
     MNormalopendoorset selectOne(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.382+08:00", comments="Source Table: M_NormalOpenDoorSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.092+08:00", comments="Source Table: M_NormalOpenDoorSet")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @Results(id="MNormalopendoorsetResult", value = {
         @Result(column="id", property="id", jdbcType=JdbcType.INTEGER, id=true),
@@ -69,22 +69,22 @@ public interface MNormalopendoorsetDynamicSqlMapper {
     })
     List<MNormalopendoorset> selectMany(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.382+08:00", comments="Source Table: M_NormalOpenDoorSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.092+08:00", comments="Source Table: M_NormalOpenDoorSet")
     @UpdateProvider(type=SqlProviderAdapter.class, method="update")
     int update(UpdateStatementProvider updateStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.382+08:00", comments="Source Table: M_NormalOpenDoorSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.092+08:00", comments="Source Table: M_NormalOpenDoorSet")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<Long>> countByExample() {
         return SelectDSL.selectWithMapper(this::count, SqlBuilder.count())
                 .from(MNormalopendoorset);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.382+08:00", comments="Source Table: M_NormalOpenDoorSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.092+08:00", comments="Source Table: M_NormalOpenDoorSet")
     default DeleteDSL<MyBatis3DeleteModelAdapter<Integer>> deleteByExample() {
         return DeleteDSL.deleteFromWithMapper(this::delete, MNormalopendoorset);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.382+08:00", comments="Source Table: M_NormalOpenDoorSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.092+08:00", comments="Source Table: M_NormalOpenDoorSet")
     default int deleteByPrimaryKey(Integer id_) {
         return DeleteDSL.deleteFromWithMapper(this::delete, MNormalopendoorset)
                 .where(id, isEqualTo(id_))
@@ -92,7 +92,7 @@ public interface MNormalopendoorsetDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.382+08:00", comments="Source Table: M_NormalOpenDoorSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.092+08:00", comments="Source Table: M_NormalOpenDoorSet")
     default int insert(MNormalopendoorset record) {
         return insert(SqlBuilder.insert(record)
                 .into(MNormalopendoorset)
@@ -111,7 +111,7 @@ public interface MNormalopendoorsetDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.382+08:00", comments="Source Table: M_NormalOpenDoorSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.092+08:00", comments="Source Table: M_NormalOpenDoorSet")
     default int insertSelective(MNormalopendoorset record) {
         return insert(SqlBuilder.insert(record)
                 .into(MNormalopendoorset)
@@ -130,19 +130,19 @@ public interface MNormalopendoorsetDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.382+08:00", comments="Source Table: M_NormalOpenDoorSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.092+08:00", comments="Source Table: M_NormalOpenDoorSet")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<MNormalopendoorset>>> selectByExample() {
         return SelectDSL.selectWithMapper(this::selectMany, id, devcnum, doorleibie, normalset, stat1, end1, stat2, end2, stat3, end3, stat4, end4)
                 .from(MNormalopendoorset);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.382+08:00", comments="Source Table: M_NormalOpenDoorSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.092+08:00", comments="Source Table: M_NormalOpenDoorSet")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<MNormalopendoorset>>> selectDistinctByExample() {
         return SelectDSL.selectDistinctWithMapper(this::selectMany, id, devcnum, doorleibie, normalset, stat1, end1, stat2, end2, stat3, end3, stat4, end4)
                 .from(MNormalopendoorset);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.382+08:00", comments="Source Table: M_NormalOpenDoorSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.092+08:00", comments="Source Table: M_NormalOpenDoorSet")
     default MNormalopendoorset selectByPrimaryKey(Integer id_) {
         return SelectDSL.selectWithMapper(this::selectOne, id, devcnum, doorleibie, normalset, stat1, end1, stat2, end2, stat3, end3, stat4, end4)
                 .from(MNormalopendoorset)
@@ -151,7 +151,7 @@ public interface MNormalopendoorsetDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.382+08:00", comments="Source Table: M_NormalOpenDoorSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.092+08:00", comments="Source Table: M_NormalOpenDoorSet")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExample(MNormalopendoorset record) {
         return UpdateDSL.updateWithMapper(this::update, MNormalopendoorset)
                 .set(devcnum).equalTo(record::getDevcnum)
@@ -167,7 +167,7 @@ public interface MNormalopendoorsetDynamicSqlMapper {
                 .set(end4).equalTo(record::getEnd4);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.382+08:00", comments="Source Table: M_NormalOpenDoorSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.092+08:00", comments="Source Table: M_NormalOpenDoorSet")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExampleSelective(MNormalopendoorset record) {
         return UpdateDSL.updateWithMapper(this::update, MNormalopendoorset)
                 .set(devcnum).equalToWhenPresent(record::getDevcnum)
@@ -183,7 +183,7 @@ public interface MNormalopendoorsetDynamicSqlMapper {
                 .set(end4).equalToWhenPresent(record::getEnd4);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.382+08:00", comments="Source Table: M_NormalOpenDoorSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.092+08:00", comments="Source Table: M_NormalOpenDoorSet")
     default int updateByPrimaryKey(MNormalopendoorset record) {
         return UpdateDSL.updateWithMapper(this::update, MNormalopendoorset)
                 .set(devcnum).equalTo(record::getDevcnum)
@@ -202,7 +202,7 @@ public interface MNormalopendoorsetDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.382+08:00", comments="Source Table: M_NormalOpenDoorSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.092+08:00", comments="Source Table: M_NormalOpenDoorSet")
     default int updateByPrimaryKeySelective(MNormalopendoorset record) {
         return UpdateDSL.updateWithMapper(this::update, MNormalopendoorset)
                 .set(devcnum).equalToWhenPresent(record::getDevcnum)

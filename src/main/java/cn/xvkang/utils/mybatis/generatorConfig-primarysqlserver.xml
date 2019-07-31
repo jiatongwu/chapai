@@ -27,7 +27,7 @@
 		<plugin type="org.mybatis.generator.plugins.SerializablePlugin" />
 		<jdbcConnection
 			driverClass="net.sourceforge.jtds.jdbc.Driver"
-			connectionURL="jdbc:jtds:sqlserver://192.168.77.3:1433/chepai_prod"
+			connectionURL="jdbc:jtds:sqlserver://192.168.56.101:1433/chepai_prod"
 			userId="sa" password="wujiatong">
 			<property name="remarksReporting" value="true"></property>
 		</jdbcConnection>
@@ -39,19 +39,19 @@
 		<!-- 生成模型的包名和位置 -->
 		<javaModelGenerator
 			targetPackage="cn.xvkang.primaryentity"
-			targetProject="/home/wu/Documents/workspace-sts-3.9.9.RELEASE/chepai/src/main/java/">
+			targetProject="/home/wu/eclipse-workspace/chepai/src/main/java/">
 			<property name="enableSubPackages" value="true" />
 			<property name="trimStrings" value="true" />
 		</javaModelGenerator>
 		<!--生成映射文件的包名和位置 -->
 		<sqlMapGenerator targetPackage="mapperdynamic"
-			targetProject="/home/wu/Documents/workspace-sts-3.9.9.RELEASE/chepai/src/main/resources/primarymybatis/">
+			targetProject="/home/wu/eclipse-workspace/chepai/src/main/resources/primarymybatis/">
 			<property name="enableSubPackages" value="true" />
 		</sqlMapGenerator>
 		<!--生成DAO的包名和位置 -->
 		<javaClientGenerator type="XMLMAPPER"
 			targetPackage="cn.xvkang.primarymapperdynamicsql"
-			targetProject="/home/wu/Documents/workspace-sts-3.9.9.RELEASE/chepai/src/main/java/">
+			targetProject="/home/wu/eclipse-workspace/chepai/src/main/java/">
 			<property name="enableSubPackages" value="true" />
 		</javaClientGenerator>
 		<!--要生成的表 tableName是数据库中的表名或视图名 domainObjectName是实体类名 -->
@@ -1037,6 +1037,16 @@
 			<generatedKey column="id" sqlStatement="JDBC"
 				type="post" identity="true" />
 		</table>
+
+
+		<table tableName="send_sms_log"
+			mapperName="SendSmsLogDynamicSqlMapper">
+			<property name="useActualColumnNames" value="false" />
+			<generatedKey column="id" sqlStatement="JDBC"
+				type="post" identity="true" />
+		</table>
+
+
 
 
 	</context>

@@ -76,6 +76,20 @@ layui.config({
                     $('.layui-laypage-btn').click();
                 }
             });
+        }
+        else if (event == 'modifyPhone') {
+           // console.log(data);
+            layer.open({
+                type: 2,
+                area: ['900px', '550px'],
+                title: '修改手机号',
+                content: contextPath + '/person/modifyPhonePage.html?userno=' + data.UserNO,
+                end: function () {
+                    // tableReload(table,data);
+                    // $('button[lay-filter = "query"]').click();
+                    $('.layui-laypage-btn').click();
+                }
+            });
         } else if (event == 'delete') {
             layer.confirm('删除该人员,会同时删除此人所有汽车,是否删除？', function (index) {
                 layer.load(2);

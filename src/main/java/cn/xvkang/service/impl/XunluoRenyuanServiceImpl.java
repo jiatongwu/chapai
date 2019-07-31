@@ -64,6 +64,8 @@ public class XunluoRenyuanServiceImpl implements XunluoRenyuanService {
 				.on(RoleDynamicSqlSupport.role.id, SqlBuilder.equalTo(UserRoleDynamicSqlSupport.userRole.roleId))
 				.where(RoleDynamicSqlSupport.role.code,
 						SqlBuilder.isEqualTo(Constants.DEFAULT_ROLES_ENUM.巡逻人员.getCode()))
+				.and(UserTableDynamicSqlSupport.disabled,
+						SqlBuilder.isEqualTo(Constants.User_Table_Disable_Enum.启用.getStatus()))
 				.and(UserTableDynamicSqlSupport.username, SqlBuilder.isEqualTo(username)).build()
 				.render(RenderingStrategy.MYBATIS3);
 		List<UserTable> users = userTableDynamicSqlMapper.selectMany(render);

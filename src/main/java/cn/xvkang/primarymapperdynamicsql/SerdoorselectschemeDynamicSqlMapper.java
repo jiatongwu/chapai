@@ -33,25 +33,25 @@ import org.mybatis.dynamic.sql.util.SqlProviderAdapter;
 
 @Mapper
 public interface SerdoorselectschemeDynamicSqlMapper {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.471+08:00", comments="Source Table: SerDoorSelectScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.172+08:00", comments="Source Table: SerDoorSelectScheme")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     long count(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.471+08:00", comments="Source Table: SerDoorSelectScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.172+08:00", comments="Source Table: SerDoorSelectScheme")
     @DeleteProvider(type=SqlProviderAdapter.class, method="delete")
     int delete(DeleteStatementProvider deleteStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.471+08:00", comments="Source Table: SerDoorSelectScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.172+08:00", comments="Source Table: SerDoorSelectScheme")
     @InsertProvider(type=SqlProviderAdapter.class, method="insert")
     @SelectKey(statement="SELECT SCOPE_IDENTITY()", keyProperty="record.schid", before=false, resultType=Integer.class)
     int insert(InsertStatementProvider<Serdoorselectscheme> insertStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.471+08:00", comments="Source Table: SerDoorSelectScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.172+08:00", comments="Source Table: SerDoorSelectScheme")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @ResultMap("SerdoorselectschemeResult")
     Serdoorselectscheme selectOne(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.471+08:00", comments="Source Table: SerDoorSelectScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.172+08:00", comments="Source Table: SerDoorSelectScheme")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @Results(id="SerdoorselectschemeResult", value = {
         @Result(column="SchId", property="schid", jdbcType=JdbcType.INTEGER, id=true),
@@ -64,22 +64,22 @@ public interface SerdoorselectschemeDynamicSqlMapper {
     })
     List<Serdoorselectscheme> selectMany(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.471+08:00", comments="Source Table: SerDoorSelectScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.172+08:00", comments="Source Table: SerDoorSelectScheme")
     @UpdateProvider(type=SqlProviderAdapter.class, method="update")
     int update(UpdateStatementProvider updateStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.471+08:00", comments="Source Table: SerDoorSelectScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.172+08:00", comments="Source Table: SerDoorSelectScheme")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<Long>> countByExample() {
         return SelectDSL.selectWithMapper(this::count, SqlBuilder.count())
                 .from(serdoorselectscheme);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.471+08:00", comments="Source Table: SerDoorSelectScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.172+08:00", comments="Source Table: SerDoorSelectScheme")
     default DeleteDSL<MyBatis3DeleteModelAdapter<Integer>> deleteByExample() {
         return DeleteDSL.deleteFromWithMapper(this::delete, serdoorselectscheme);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.471+08:00", comments="Source Table: SerDoorSelectScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.172+08:00", comments="Source Table: SerDoorSelectScheme")
     default int deleteByPrimaryKey(Integer schid_) {
         return DeleteDSL.deleteFromWithMapper(this::delete, serdoorselectscheme)
                 .where(schid, isEqualTo(schid_))
@@ -87,7 +87,7 @@ public interface SerdoorselectschemeDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.471+08:00", comments="Source Table: SerDoorSelectScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.172+08:00", comments="Source Table: SerDoorSelectScheme")
     default int insert(Serdoorselectscheme record) {
         return insert(SqlBuilder.insert(record)
                 .into(serdoorselectscheme)
@@ -101,7 +101,7 @@ public interface SerdoorselectschemeDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.471+08:00", comments="Source Table: SerDoorSelectScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.172+08:00", comments="Source Table: SerDoorSelectScheme")
     default int insertSelective(Serdoorselectscheme record) {
         return insert(SqlBuilder.insert(record)
                 .into(serdoorselectscheme)
@@ -115,19 +115,19 @@ public interface SerdoorselectschemeDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.471+08:00", comments="Source Table: SerDoorSelectScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.173+08:00", comments="Source Table: SerDoorSelectScheme")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Serdoorselectscheme>>> selectByExample() {
         return SelectDSL.selectWithMapper(this::selectMany, schid, schname, fieldname, operators, selectvalues, startime, endtime)
                 .from(serdoorselectscheme);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.471+08:00", comments="Source Table: SerDoorSelectScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.173+08:00", comments="Source Table: SerDoorSelectScheme")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Serdoorselectscheme>>> selectDistinctByExample() {
         return SelectDSL.selectDistinctWithMapper(this::selectMany, schid, schname, fieldname, operators, selectvalues, startime, endtime)
                 .from(serdoorselectscheme);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.471+08:00", comments="Source Table: SerDoorSelectScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.173+08:00", comments="Source Table: SerDoorSelectScheme")
     default Serdoorselectscheme selectByPrimaryKey(Integer schid_) {
         return SelectDSL.selectWithMapper(this::selectOne, schid, schname, fieldname, operators, selectvalues, startime, endtime)
                 .from(serdoorselectscheme)
@@ -136,7 +136,7 @@ public interface SerdoorselectschemeDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.471+08:00", comments="Source Table: SerDoorSelectScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.173+08:00", comments="Source Table: SerDoorSelectScheme")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExample(Serdoorselectscheme record) {
         return UpdateDSL.updateWithMapper(this::update, serdoorselectscheme)
                 .set(schname).equalTo(record::getSchname)
@@ -147,7 +147,7 @@ public interface SerdoorselectschemeDynamicSqlMapper {
                 .set(endtime).equalTo(record::getEndtime);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.471+08:00", comments="Source Table: SerDoorSelectScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.173+08:00", comments="Source Table: SerDoorSelectScheme")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExampleSelective(Serdoorselectscheme record) {
         return UpdateDSL.updateWithMapper(this::update, serdoorselectscheme)
                 .set(schname).equalToWhenPresent(record::getSchname)
@@ -158,7 +158,7 @@ public interface SerdoorselectschemeDynamicSqlMapper {
                 .set(endtime).equalToWhenPresent(record::getEndtime);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.471+08:00", comments="Source Table: SerDoorSelectScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.173+08:00", comments="Source Table: SerDoorSelectScheme")
     default int updateByPrimaryKey(Serdoorselectscheme record) {
         return UpdateDSL.updateWithMapper(this::update, serdoorselectscheme)
                 .set(schname).equalTo(record::getSchname)
@@ -172,7 +172,7 @@ public interface SerdoorselectschemeDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.471+08:00", comments="Source Table: SerDoorSelectScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.173+08:00", comments="Source Table: SerDoorSelectScheme")
     default int updateByPrimaryKeySelective(Serdoorselectscheme record) {
         return UpdateDSL.updateWithMapper(this::update, serdoorselectscheme)
                 .set(schname).equalToWhenPresent(record::getSchname)

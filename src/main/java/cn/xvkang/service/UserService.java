@@ -15,7 +15,7 @@ public interface UserService {
 
 	UserDto loginFindByUsername(String username);
 
-	public PageImpl<UserTable> selectAll(Map<String, Object> params, Integer pageNum, Integer pageSize);
+	public PageImpl<Map<String, Object>> selectAll(Map<String, Object> params, Integer pageNum, Integer pageSize);
 
 	public UserTable findById(Integer id);
 

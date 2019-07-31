@@ -37,6 +37,17 @@
 							</div>
 						</div>
 						<div class="layui-inline">
+							<label class="layui-form-label">角色</label>
+							<div class="layui-input-inline">
+								<select name="roleId">
+									<option value=""></option>
+									<c:forEach var="tmp" items="${roles}">
+										<option value="<c:out value="${tmp.id}" />"><c:out value="${tmp.name}"/></option>
+									</c:forEach>
+								</select>
+							</div>
+						</div>
+						<div class="layui-inline">
 							<label class="layui-form-label">用户创建时间排序</label>
 							<div class="layui-input-inline">
 								<select name="createTimeAsc" id="createTimeAsc">

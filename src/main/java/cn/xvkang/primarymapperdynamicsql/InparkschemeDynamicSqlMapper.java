@@ -33,25 +33,25 @@ import org.mybatis.dynamic.sql.util.SqlProviderAdapter;
 
 @Mapper
 public interface InparkschemeDynamicSqlMapper {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.115+08:00", comments="Source Table: InParkScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.949+08:00", comments="Source Table: InParkScheme")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     long count(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.115+08:00", comments="Source Table: InParkScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.949+08:00", comments="Source Table: InParkScheme")
     @DeleteProvider(type=SqlProviderAdapter.class, method="delete")
     int delete(DeleteStatementProvider deleteStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.115+08:00", comments="Source Table: InParkScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.949+08:00", comments="Source Table: InParkScheme")
     @InsertProvider(type=SqlProviderAdapter.class, method="insert")
     @SelectKey(statement="SELECT SCOPE_IDENTITY()", keyProperty="record.schid", before=false, resultType=Integer.class)
     int insert(InsertStatementProvider<Inparkscheme> insertStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.115+08:00", comments="Source Table: InParkScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.949+08:00", comments="Source Table: InParkScheme")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @ResultMap("InparkschemeResult")
     Inparkscheme selectOne(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.115+08:00", comments="Source Table: InParkScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.949+08:00", comments="Source Table: InParkScheme")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @Results(id="InparkschemeResult", value = {
         @Result(column="SchId", property="schid", jdbcType=JdbcType.INTEGER, id=true),
@@ -64,22 +64,22 @@ public interface InparkschemeDynamicSqlMapper {
     })
     List<Inparkscheme> selectMany(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.116+08:00", comments="Source Table: InParkScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.949+08:00", comments="Source Table: InParkScheme")
     @UpdateProvider(type=SqlProviderAdapter.class, method="update")
     int update(UpdateStatementProvider updateStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.116+08:00", comments="Source Table: InParkScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.949+08:00", comments="Source Table: InParkScheme")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<Long>> countByExample() {
         return SelectDSL.selectWithMapper(this::count, SqlBuilder.count())
                 .from(inparkscheme);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.116+08:00", comments="Source Table: InParkScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.949+08:00", comments="Source Table: InParkScheme")
     default DeleteDSL<MyBatis3DeleteModelAdapter<Integer>> deleteByExample() {
         return DeleteDSL.deleteFromWithMapper(this::delete, inparkscheme);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.116+08:00", comments="Source Table: InParkScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.949+08:00", comments="Source Table: InParkScheme")
     default int deleteByPrimaryKey(Integer schid_) {
         return DeleteDSL.deleteFromWithMapper(this::delete, inparkscheme)
                 .where(schid, isEqualTo(schid_))
@@ -87,7 +87,7 @@ public interface InparkschemeDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.116+08:00", comments="Source Table: InParkScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.949+08:00", comments="Source Table: InParkScheme")
     default int insert(Inparkscheme record) {
         return insert(SqlBuilder.insert(record)
                 .into(inparkscheme)
@@ -101,7 +101,7 @@ public interface InparkschemeDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.116+08:00", comments="Source Table: InParkScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.949+08:00", comments="Source Table: InParkScheme")
     default int insertSelective(Inparkscheme record) {
         return insert(SqlBuilder.insert(record)
                 .into(inparkscheme)
@@ -115,19 +115,19 @@ public interface InparkschemeDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.116+08:00", comments="Source Table: InParkScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.949+08:00", comments="Source Table: InParkScheme")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Inparkscheme>>> selectByExample() {
         return SelectDSL.selectWithMapper(this::selectMany, schid, schname, fieldname, operators, selectvalues, startime, endtime)
                 .from(inparkscheme);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.116+08:00", comments="Source Table: InParkScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.949+08:00", comments="Source Table: InParkScheme")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Inparkscheme>>> selectDistinctByExample() {
         return SelectDSL.selectDistinctWithMapper(this::selectMany, schid, schname, fieldname, operators, selectvalues, startime, endtime)
                 .from(inparkscheme);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.116+08:00", comments="Source Table: InParkScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.949+08:00", comments="Source Table: InParkScheme")
     default Inparkscheme selectByPrimaryKey(Integer schid_) {
         return SelectDSL.selectWithMapper(this::selectOne, schid, schname, fieldname, operators, selectvalues, startime, endtime)
                 .from(inparkscheme)
@@ -136,7 +136,7 @@ public interface InparkschemeDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.116+08:00", comments="Source Table: InParkScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.949+08:00", comments="Source Table: InParkScheme")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExample(Inparkscheme record) {
         return UpdateDSL.updateWithMapper(this::update, inparkscheme)
                 .set(schname).equalTo(record::getSchname)
@@ -147,7 +147,7 @@ public interface InparkschemeDynamicSqlMapper {
                 .set(endtime).equalTo(record::getEndtime);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.116+08:00", comments="Source Table: InParkScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.950+08:00", comments="Source Table: InParkScheme")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExampleSelective(Inparkscheme record) {
         return UpdateDSL.updateWithMapper(this::update, inparkscheme)
                 .set(schname).equalToWhenPresent(record::getSchname)
@@ -158,7 +158,7 @@ public interface InparkschemeDynamicSqlMapper {
                 .set(endtime).equalToWhenPresent(record::getEndtime);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.116+08:00", comments="Source Table: InParkScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.950+08:00", comments="Source Table: InParkScheme")
     default int updateByPrimaryKey(Inparkscheme record) {
         return UpdateDSL.updateWithMapper(this::update, inparkscheme)
                 .set(schname).equalTo(record::getSchname)
@@ -172,7 +172,7 @@ public interface InparkschemeDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.116+08:00", comments="Source Table: InParkScheme")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.950+08:00", comments="Source Table: InParkScheme")
     default int updateByPrimaryKeySelective(Inparkscheme record) {
         return UpdateDSL.updateWithMapper(this::update, inparkscheme)
                 .set(schname).equalToWhenPresent(record::getSchname)

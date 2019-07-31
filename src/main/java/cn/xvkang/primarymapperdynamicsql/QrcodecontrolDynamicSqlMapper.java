@@ -30,19 +30,19 @@ import org.mybatis.dynamic.sql.util.SqlProviderAdapter;
 
 @Mapper
 public interface QrcodecontrolDynamicSqlMapper {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.456+08:00", comments="Source Table: QRCodeControl")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.160+08:00", comments="Source Table: QRCodeControl")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     long count(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.456+08:00", comments="Source Table: QRCodeControl")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.160+08:00", comments="Source Table: QRCodeControl")
     @DeleteProvider(type=SqlProviderAdapter.class, method="delete")
     int delete(DeleteStatementProvider deleteStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.456+08:00", comments="Source Table: QRCodeControl")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.160+08:00", comments="Source Table: QRCodeControl")
     @InsertProvider(type=SqlProviderAdapter.class, method="insert")
     int insert(InsertStatementProvider<Qrcodecontrol> insertStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.456+08:00", comments="Source Table: QRCodeControl")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.160+08:00", comments="Source Table: QRCodeControl")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @Results(id="QrcodecontrolResult", value = {
         @Result(column="ID", property="id", jdbcType=JdbcType.INTEGER),
@@ -54,22 +54,22 @@ public interface QrcodecontrolDynamicSqlMapper {
     })
     List<Qrcodecontrol> selectMany(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.456+08:00", comments="Source Table: QRCodeControl")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.160+08:00", comments="Source Table: QRCodeControl")
     @UpdateProvider(type=SqlProviderAdapter.class, method="update")
     int update(UpdateStatementProvider updateStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.456+08:00", comments="Source Table: QRCodeControl")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.160+08:00", comments="Source Table: QRCodeControl")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<Long>> countByExample() {
         return SelectDSL.selectWithMapper(this::count, SqlBuilder.count())
                 .from(qrcodecontrol);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.456+08:00", comments="Source Table: QRCodeControl")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.160+08:00", comments="Source Table: QRCodeControl")
     default DeleteDSL<MyBatis3DeleteModelAdapter<Integer>> deleteByExample() {
         return DeleteDSL.deleteFromWithMapper(this::delete, qrcodecontrol);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.456+08:00", comments="Source Table: QRCodeControl")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.160+08:00", comments="Source Table: QRCodeControl")
     default int insert(Qrcodecontrol record) {
         return insert(SqlBuilder.insert(record)
                 .into(qrcodecontrol)
@@ -83,7 +83,7 @@ public interface QrcodecontrolDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.456+08:00", comments="Source Table: QRCodeControl")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.161+08:00", comments="Source Table: QRCodeControl")
     default int insertSelective(Qrcodecontrol record) {
         return insert(SqlBuilder.insert(record)
                 .into(qrcodecontrol)
@@ -97,19 +97,19 @@ public interface QrcodecontrolDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.456+08:00", comments="Source Table: QRCodeControl")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.161+08:00", comments="Source Table: QRCodeControl")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Qrcodecontrol>>> selectByExample() {
         return SelectDSL.selectWithMapper(this::selectMany, id, machineno, controlip, hostip, inoutflag, boundedcontrolid)
                 .from(qrcodecontrol);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.456+08:00", comments="Source Table: QRCodeControl")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.161+08:00", comments="Source Table: QRCodeControl")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Qrcodecontrol>>> selectDistinctByExample() {
         return SelectDSL.selectDistinctWithMapper(this::selectMany, id, machineno, controlip, hostip, inoutflag, boundedcontrolid)
                 .from(qrcodecontrol);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.456+08:00", comments="Source Table: QRCodeControl")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.161+08:00", comments="Source Table: QRCodeControl")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExample(Qrcodecontrol record) {
         return UpdateDSL.updateWithMapper(this::update, qrcodecontrol)
                 .set(id).equalTo(record::getId)
@@ -120,7 +120,7 @@ public interface QrcodecontrolDynamicSqlMapper {
                 .set(boundedcontrolid).equalTo(record::getBoundedcontrolid);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.456+08:00", comments="Source Table: QRCodeControl")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.161+08:00", comments="Source Table: QRCodeControl")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExampleSelective(Qrcodecontrol record) {
         return UpdateDSL.updateWithMapper(this::update, qrcodecontrol)
                 .set(id).equalToWhenPresent(record::getId)

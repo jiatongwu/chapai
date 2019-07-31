@@ -7,37 +7,37 @@ import org.mybatis.dynamic.sql.SqlColumn;
 import org.mybatis.dynamic.sql.SqlTable;
 
 public final class ZhEstcaroutDynamicSqlSupport {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.542+08:00", comments="Source Table: zh_EstCarOut")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.215+08:00", comments="Source Table: zh_EstCarOut")
     public static final ZhEstcarout zhEstcarout = new ZhEstcarout();
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.542+08:00", comments="Source field: zh_EstCarOut.id")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.215+08:00", comments="Source field: zh_EstCarOut.id")
     public static final SqlColumn<Integer> id = zhEstcarout.id;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.542+08:00", comments="Source field: zh_EstCarOut.orderNo")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.215+08:00", comments="Source field: zh_EstCarOut.orderNo")
     public static final SqlColumn<String> orderno = zhEstcarout.orderno;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.542+08:00", comments="Source field: zh_EstCarOut.carNo")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.215+08:00", comments="Source field: zh_EstCarOut.carNo")
     public static final SqlColumn<String> carno = zhEstcarout.carno;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.542+08:00", comments="Source field: zh_EstCarOut.carType")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.215+08:00", comments="Source field: zh_EstCarOut.carType")
     public static final SqlColumn<String> cartype = zhEstcarout.cartype;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.542+08:00", comments="Source field: zh_EstCarOut.outTime")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.215+08:00", comments="Source field: zh_EstCarOut.outTime")
     public static final SqlColumn<Date> outtime = zhEstcarout.outtime;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.542+08:00", comments="Source field: zh_EstCarOut.imgpath")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.215+08:00", comments="Source field: zh_EstCarOut.imgpath")
     public static final SqlColumn<String> imgpath = zhEstcarout.imgpath;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.542+08:00", comments="Source field: zh_EstCarOut.gateName")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.215+08:00", comments="Source field: zh_EstCarOut.gateName")
     public static final SqlColumn<String> gatename = zhEstcarout.gatename;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.542+08:00", comments="Source field: zh_EstCarOut.ctlNo")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.215+08:00", comments="Source field: zh_EstCarOut.ctlNo")
     public static final SqlColumn<Integer> ctlno = zhEstcarout.ctlno;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.542+08:00", comments="Source field: zh_EstCarOut.synflag")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.215+08:00", comments="Source field: zh_EstCarOut.synflag")
     public static final SqlColumn<Integer> synflag = zhEstcarout.synflag;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.542+08:00", comments="Source Table: zh_EstCarOut")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.215+08:00", comments="Source Table: zh_EstCarOut")
     public static final class ZhEstcarout extends SqlTable {
         public final SqlColumn<Integer> id = column("id", JDBCType.INTEGER);
 

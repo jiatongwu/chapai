@@ -6,46 +6,46 @@ import org.mybatis.dynamic.sql.SqlColumn;
 import org.mybatis.dynamic.sql.SqlTable;
 
 public final class MysurpluscarscreenDynamicSqlSupport {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.330+08:00", comments="Source Table: MYSurplusCarScreen")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.057+08:00", comments="Source Table: MYSurplusCarScreen")
     public static final Mysurpluscarscreen mysurpluscarscreen = new Mysurpluscarscreen();
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.330+08:00", comments="Source field: MYSurplusCarScreen.ID")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.057+08:00", comments="Source field: MYSurplusCarScreen.ID")
     public static final SqlColumn<Integer> id = mysurpluscarscreen.id;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.330+08:00", comments="Source field: MYSurplusCarScreen.CtrID")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.057+08:00", comments="Source field: MYSurplusCarScreen.CtrID")
     public static final SqlColumn<Integer> ctrid = mysurpluscarscreen.ctrid;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.330+08:00", comments="Source field: MYSurplusCarScreen.SurplusID")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.057+08:00", comments="Source field: MYSurplusCarScreen.SurplusID")
     public static final SqlColumn<String> surplusid = mysurpluscarscreen.surplusid;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.330+08:00", comments="Source field: MYSurplusCarScreen.Speed")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.057+08:00", comments="Source field: MYSurplusCarScreen.Speed")
     public static final SqlColumn<String> speed = mysurpluscarscreen.speed;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.330+08:00", comments="Source field: MYSurplusCarScreen.StopTime")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.057+08:00", comments="Source field: MYSurplusCarScreen.StopTime")
     public static final SqlColumn<String> stoptime = mysurpluscarscreen.stoptime;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.330+08:00", comments="Source field: MYSurplusCarScreen.Color")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.057+08:00", comments="Source field: MYSurplusCarScreen.Color")
     public static final SqlColumn<String> color = mysurpluscarscreen.color;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.330+08:00", comments="Source field: MYSurplusCarScreen.SumTime")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.057+08:00", comments="Source field: MYSurplusCarScreen.SumTime")
     public static final SqlColumn<String> sumtime = mysurpluscarscreen.sumtime;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.331+08:00", comments="Source field: MYSurplusCarScreen.PCName")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.058+08:00", comments="Source field: MYSurplusCarScreen.PCName")
     public static final SqlColumn<String> pcname = mysurpluscarscreen.pcname;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.331+08:00", comments="Source field: MYSurplusCarScreen.CPHEndStr")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.058+08:00", comments="Source field: MYSurplusCarScreen.CPHEndStr")
     public static final SqlColumn<String> cphendstr = mysurpluscarscreen.cphendstr;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.333+08:00", comments="Source field: MYSurplusCarScreen.ShowWay")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.058+08:00", comments="Source field: MYSurplusCarScreen.ShowWay")
     public static final SqlColumn<String> showway = mysurpluscarscreen.showway;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.333+08:00", comments="Source field: MYSurplusCarScreen.Move")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.058+08:00", comments="Source field: MYSurplusCarScreen.Move")
     public static final SqlColumn<String> move = mysurpluscarscreen.move;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.333+08:00", comments="Source field: MYSurplusCarScreen.Pattern")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.058+08:00", comments="Source field: MYSurplusCarScreen.Pattern")
     public static final SqlColumn<String> pattern = mysurpluscarscreen.pattern;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.330+08:00", comments="Source Table: MYSurplusCarScreen")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.057+08:00", comments="Source Table: MYSurplusCarScreen")
     public static final class Mysurpluscarscreen extends SqlTable {
         public final SqlColumn<Integer> id = column("ID", JDBCType.INTEGER);
 

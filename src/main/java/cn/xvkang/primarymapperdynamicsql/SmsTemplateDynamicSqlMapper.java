@@ -33,25 +33,25 @@ import org.mybatis.dynamic.sql.util.SqlProviderAdapter;
 
 @Mapper
 public interface SmsTemplateDynamicSqlMapper {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.560+08:00", comments="Source Table: sms_template")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.232+08:00", comments="Source Table: sms_template")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     long count(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.560+08:00", comments="Source Table: sms_template")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.232+08:00", comments="Source Table: sms_template")
     @DeleteProvider(type=SqlProviderAdapter.class, method="delete")
     int delete(DeleteStatementProvider deleteStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.560+08:00", comments="Source Table: sms_template")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.232+08:00", comments="Source Table: sms_template")
     @InsertProvider(type=SqlProviderAdapter.class, method="insert")
     @Options(useGeneratedKeys=true,keyProperty="record.id")
     int insert(InsertStatementProvider<SmsTemplate> insertStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.560+08:00", comments="Source Table: sms_template")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.232+08:00", comments="Source Table: sms_template")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @ResultMap("SmsTemplateResult")
     SmsTemplate selectOne(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.560+08:00", comments="Source Table: sms_template")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.232+08:00", comments="Source Table: sms_template")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @Results(id="SmsTemplateResult", value = {
         @Result(column="id", property="id", jdbcType=JdbcType.INTEGER, id=true),
@@ -61,22 +61,22 @@ public interface SmsTemplateDynamicSqlMapper {
     })
     List<SmsTemplate> selectMany(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.560+08:00", comments="Source Table: sms_template")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.232+08:00", comments="Source Table: sms_template")
     @UpdateProvider(type=SqlProviderAdapter.class, method="update")
     int update(UpdateStatementProvider updateStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.560+08:00", comments="Source Table: sms_template")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.232+08:00", comments="Source Table: sms_template")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<Long>> countByExample() {
         return SelectDSL.selectWithMapper(this::count, SqlBuilder.count())
                 .from(smsTemplate);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.560+08:00", comments="Source Table: sms_template")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.232+08:00", comments="Source Table: sms_template")
     default DeleteDSL<MyBatis3DeleteModelAdapter<Integer>> deleteByExample() {
         return DeleteDSL.deleteFromWithMapper(this::delete, smsTemplate);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.560+08:00", comments="Source Table: sms_template")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.232+08:00", comments="Source Table: sms_template")
     default int deleteByPrimaryKey(Integer id_) {
         return DeleteDSL.deleteFromWithMapper(this::delete, smsTemplate)
                 .where(id, isEqualTo(id_))
@@ -84,7 +84,7 @@ public interface SmsTemplateDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.560+08:00", comments="Source Table: sms_template")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.232+08:00", comments="Source Table: sms_template")
     default int insert(SmsTemplate record) {
         return insert(SqlBuilder.insert(record)
                 .into(smsTemplate)
@@ -95,7 +95,7 @@ public interface SmsTemplateDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.560+08:00", comments="Source Table: sms_template")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.232+08:00", comments="Source Table: sms_template")
     default int insertSelective(SmsTemplate record) {
         return insert(SqlBuilder.insert(record)
                 .into(smsTemplate)
@@ -106,19 +106,19 @@ public interface SmsTemplateDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.560+08:00", comments="Source Table: sms_template")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.232+08:00", comments="Source Table: sms_template")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<SmsTemplate>>> selectByExample() {
         return SelectDSL.selectWithMapper(this::selectMany, id, name, content, createtime)
                 .from(smsTemplate);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.560+08:00", comments="Source Table: sms_template")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.232+08:00", comments="Source Table: sms_template")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<SmsTemplate>>> selectDistinctByExample() {
         return SelectDSL.selectDistinctWithMapper(this::selectMany, id, name, content, createtime)
                 .from(smsTemplate);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.560+08:00", comments="Source Table: sms_template")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.232+08:00", comments="Source Table: sms_template")
     default SmsTemplate selectByPrimaryKey(Integer id_) {
         return SelectDSL.selectWithMapper(this::selectOne, id, name, content, createtime)
                 .from(smsTemplate)
@@ -127,7 +127,7 @@ public interface SmsTemplateDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.561+08:00", comments="Source Table: sms_template")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.232+08:00", comments="Source Table: sms_template")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExample(SmsTemplate record) {
         return UpdateDSL.updateWithMapper(this::update, smsTemplate)
                 .set(name).equalTo(record::getName)
@@ -135,7 +135,7 @@ public interface SmsTemplateDynamicSqlMapper {
                 .set(createtime).equalTo(record::getCreatetime);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.561+08:00", comments="Source Table: sms_template")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.232+08:00", comments="Source Table: sms_template")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExampleSelective(SmsTemplate record) {
         return UpdateDSL.updateWithMapper(this::update, smsTemplate)
                 .set(name).equalToWhenPresent(record::getName)
@@ -143,7 +143,7 @@ public interface SmsTemplateDynamicSqlMapper {
                 .set(createtime).equalToWhenPresent(record::getCreatetime);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.561+08:00", comments="Source Table: sms_template")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.232+08:00", comments="Source Table: sms_template")
     default int updateByPrimaryKey(SmsTemplate record) {
         return UpdateDSL.updateWithMapper(this::update, smsTemplate)
                 .set(name).equalTo(record::getName)
@@ -154,7 +154,7 @@ public interface SmsTemplateDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.563+08:00", comments="Source Table: sms_template")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.232+08:00", comments="Source Table: sms_template")
     default int updateByPrimaryKeySelective(SmsTemplate record) {
         return UpdateDSL.updateWithMapper(this::update, smsTemplate)
                 .set(name).equalToWhenPresent(record::getName)

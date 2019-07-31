@@ -7,16 +7,16 @@ import org.mybatis.dynamic.sql.SqlColumn;
 import org.mybatis.dynamic.sql.SqlTable;
 
 public final class TbldbversionDynamicSqlSupport {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.530+08:00", comments="Source Table: tblDBVersion")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.205+08:00", comments="Source Table: tblDBVersion")
     public static final Tbldbversion tbldbversion = new Tbldbversion();
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.531+08:00", comments="Source field: tblDBVersion.DBVer")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.205+08:00", comments="Source field: tblDBVersion.DBVer")
     public static final SqlColumn<Integer> dbver = tbldbversion.dbver;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.531+08:00", comments="Source field: tblDBVersion.upd_Time")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.205+08:00", comments="Source field: tblDBVersion.upd_Time")
     public static final SqlColumn<Date> updTime = tbldbversion.updTime;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.530+08:00", comments="Source Table: tblDBVersion")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.205+08:00", comments="Source Table: tblDBVersion")
     public static final class Tbldbversion extends SqlTable {
         public final SqlColumn<Integer> dbver = column("DBVer", JDBCType.INTEGER);
 

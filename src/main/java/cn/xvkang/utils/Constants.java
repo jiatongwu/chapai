@@ -1,7 +1,9 @@
 package cn.xvkang.utils;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class Constants {
 	// 车牌巡逻人员android登录
@@ -204,12 +206,48 @@ public class Constants {
 
 	}
 
+	public static enum User_Table_Disable_Enum {
+		禁用(1), 启用(0);
+		private int status;
+
+		User_Table_Disable_Enum(int status) {
+			this.status = status;
+		}
+
+		public int getStatus() {
+			return status;
+		}
+
+		public void setStatus(int status) {
+			this.status = status;
+		}
+
+	}
+
 	public static enum DEFAULT_ROLES_ENUM {
-		管理员("admin_user"), 普通用户("normal_user"), 超级管理员("super_admin"), 巡逻人员("xuluo_user");
+		管理员("管理员", "admin_user"), 普通用户("普通用户", "normal_user"), 超级管理员("超级管理员", "super_admin"),
+		巡逻人员("巡逻人员", "xuluo_user");
+		private String name;
 		private String code;
 
-		DEFAULT_ROLES_ENUM(String code) {
+		DEFAULT_ROLES_ENUM(String name, String code) {
+			this.name = name;
 			this.code = code;
+		}
+
+		public Map<String, String> getOneMap() {
+			Map<String, String> map = new HashMap<>();
+			map.put("name", this.getName());
+			map.put("code", this.getCode());
+			return map;
+		}
+
+		public String getName() {
+			return name;
+		}
+
+		public void setName(String name) {
+			this.name = name;
 		}
 
 		public String getCode() {

@@ -30,19 +30,19 @@ import org.mybatis.dynamic.sql.util.SqlProviderAdapter;
 
 @Mapper
 public interface JjcnewshenzhenDynamicSqlMapper {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.127+08:00", comments="Source Table: JJCNEWSHENZHEN")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.957+08:00", comments="Source Table: JJCNEWSHENZHEN")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     long count(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.127+08:00", comments="Source Table: JJCNEWSHENZHEN")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.957+08:00", comments="Source Table: JJCNEWSHENZHEN")
     @DeleteProvider(type=SqlProviderAdapter.class, method="delete")
     int delete(DeleteStatementProvider deleteStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.127+08:00", comments="Source Table: JJCNEWSHENZHEN")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.957+08:00", comments="Source Table: JJCNEWSHENZHEN")
     @InsertProvider(type=SqlProviderAdapter.class, method="insert")
     int insert(InsertStatementProvider<Jjcnewshenzhen> insertStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.127+08:00", comments="Source Table: JJCNEWSHENZHEN")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.957+08:00", comments="Source Table: JJCNEWSHENZHEN")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @Results(id="JjcnewshenzhenResult", value = {
         @Result(column="CardType", property="cardtype", jdbcType=JdbcType.VARCHAR),
@@ -79,22 +79,22 @@ public interface JjcnewshenzhenDynamicSqlMapper {
     })
     List<Jjcnewshenzhen> selectMany(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.127+08:00", comments="Source Table: JJCNEWSHENZHEN")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.957+08:00", comments="Source Table: JJCNEWSHENZHEN")
     @UpdateProvider(type=SqlProviderAdapter.class, method="update")
     int update(UpdateStatementProvider updateStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.127+08:00", comments="Source Table: JJCNEWSHENZHEN")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.957+08:00", comments="Source Table: JJCNEWSHENZHEN")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<Long>> countByExample() {
         return SelectDSL.selectWithMapper(this::count, SqlBuilder.count())
                 .from(jjcnewshenzhen);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.127+08:00", comments="Source Table: JJCNEWSHENZHEN")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.957+08:00", comments="Source Table: JJCNEWSHENZHEN")
     default DeleteDSL<MyBatis3DeleteModelAdapter<Integer>> deleteByExample() {
         return DeleteDSL.deleteFromWithMapper(this::delete, jjcnewshenzhen);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.127+08:00", comments="Source Table: JJCNEWSHENZHEN")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.957+08:00", comments="Source Table: JJCNEWSHENZHEN")
     default int insert(Jjcnewshenzhen record) {
         return insert(SqlBuilder.insert(record)
                 .into(jjcnewshenzhen)
@@ -133,7 +133,7 @@ public interface JjcnewshenzhenDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.127+08:00", comments="Source Table: JJCNEWSHENZHEN")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.958+08:00", comments="Source Table: JJCNEWSHENZHEN")
     default int insertSelective(Jjcnewshenzhen record) {
         return insert(SqlBuilder.insert(record)
                 .into(jjcnewshenzhen)
@@ -172,19 +172,19 @@ public interface JjcnewshenzhenDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.128+08:00", comments="Source Table: JJCNEWSHENZHEN")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.958+08:00", comments="Source Table: JJCNEWSHENZHEN")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Jjcnewshenzhen>>> selectByExample() {
         return SelectDSL.selectWithMapper(this::selectMany, cardtype, firstchargetimehour, firstchargetimeminute, carparktype, chargebyday, freeminute, peakstarthour, peakstartminute, peakendhour, peakendminute, holidayonestartmonth, holidayonestartday, holidayoneendmonth, holidayoneendday, holidaytwostartmonth, holidaytwostartday, holidaytwoendmonth, holidaytwoendday, peakchargehour, peakchargeminute, nopeakchargehour, nopeakchargeminute, holidaychargehour, holidaychargeminute, peakmoney, nopeakmoney, holidaymoney, workdayfirsthourmoney, holidayfirsthourmoney, alldaytopmoney, yesnofreetime)
                 .from(jjcnewshenzhen);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.128+08:00", comments="Source Table: JJCNEWSHENZHEN")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.958+08:00", comments="Source Table: JJCNEWSHENZHEN")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Jjcnewshenzhen>>> selectDistinctByExample() {
         return SelectDSL.selectDistinctWithMapper(this::selectMany, cardtype, firstchargetimehour, firstchargetimeminute, carparktype, chargebyday, freeminute, peakstarthour, peakstartminute, peakendhour, peakendminute, holidayonestartmonth, holidayonestartday, holidayoneendmonth, holidayoneendday, holidaytwostartmonth, holidaytwostartday, holidaytwoendmonth, holidaytwoendday, peakchargehour, peakchargeminute, nopeakchargehour, nopeakchargeminute, holidaychargehour, holidaychargeminute, peakmoney, nopeakmoney, holidaymoney, workdayfirsthourmoney, holidayfirsthourmoney, alldaytopmoney, yesnofreetime)
                 .from(jjcnewshenzhen);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.128+08:00", comments="Source Table: JJCNEWSHENZHEN")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.958+08:00", comments="Source Table: JJCNEWSHENZHEN")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExample(Jjcnewshenzhen record) {
         return UpdateDSL.updateWithMapper(this::update, jjcnewshenzhen)
                 .set(cardtype).equalTo(record::getCardtype)
@@ -220,7 +220,7 @@ public interface JjcnewshenzhenDynamicSqlMapper {
                 .set(yesnofreetime).equalTo(record::getYesnofreetime);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.128+08:00", comments="Source Table: JJCNEWSHENZHEN")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.958+08:00", comments="Source Table: JJCNEWSHENZHEN")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExampleSelective(Jjcnewshenzhen record) {
         return UpdateDSL.updateWithMapper(this::update, jjcnewshenzhen)
                 .set(cardtype).equalToWhenPresent(record::getCardtype)

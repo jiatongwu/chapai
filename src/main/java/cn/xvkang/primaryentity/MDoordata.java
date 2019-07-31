@@ -4,270 +4,270 @@ import java.io.Serializable;
 import javax.annotation.Generated;
 
 public class MDoordata implements Serializable {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.361+08:00", comments="Source field: M_DoorData.MachNo")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.080+08:00", comments="Source field: M_DoorData.MachNo")
     private Integer machno;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.361+08:00", comments="Source field: M_DoorData.Place")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.080+08:00", comments="Source field: M_DoorData.Place")
     private String place;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.361+08:00", comments="Source field: M_DoorData.BaudRate")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.080+08:00", comments="Source field: M_DoorData.BaudRate")
     private Integer baudrate;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.361+08:00", comments="Source field: M_DoorData.ControlType")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.080+08:00", comments="Source field: M_DoorData.ControlType")
     private Integer controltype;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.361+08:00", comments="Source field: M_DoorData.IPadress")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.081+08:00", comments="Source field: M_DoorData.IPadress")
     private String ipadress;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.361+08:00", comments="Source field: M_DoorData.DoorNumber")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.081+08:00", comments="Source field: M_DoorData.DoorNumber")
     private String doornumber;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.361+08:00", comments="Source field: M_DoorData.DoorName")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.081+08:00", comments="Source field: M_DoorData.DoorName")
     private String doorname;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.361+08:00", comments="Source field: M_DoorData.DoorNumber1")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.081+08:00", comments="Source field: M_DoorData.DoorNumber1")
     private String doornumber1;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.361+08:00", comments="Source field: M_DoorData.DoorName1")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.081+08:00", comments="Source field: M_DoorData.DoorName1")
     private String doorname1;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.361+08:00", comments="Source field: M_DoorData.DoorNumber2")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.081+08:00", comments="Source field: M_DoorData.DoorNumber2")
     private String doornumber2;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.361+08:00", comments="Source field: M_DoorData.DoorName2")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.081+08:00", comments="Source field: M_DoorData.DoorName2")
     private String doorname2;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.361+08:00", comments="Source field: M_DoorData.DoorNumber3")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.081+08:00", comments="Source field: M_DoorData.DoorNumber3")
     private String doornumber3;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.361+08:00", comments="Source field: M_DoorData.DoorName3")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.081+08:00", comments="Source field: M_DoorData.DoorName3")
     private String doorname3;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.361+08:00", comments="Source field: M_DoorData.DoorNumber4")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.081+08:00", comments="Source field: M_DoorData.DoorNumber4")
     private String doornumber4;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.361+08:00", comments="Source field: M_DoorData.DoorName4")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.081+08:00", comments="Source field: M_DoorData.DoorName4")
     private String doorname4;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.361+08:00", comments="Source field: M_DoorData.DoorLeibie")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.081+08:00", comments="Source field: M_DoorData.DoorLeibie")
     private String doorleibie;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.361+08:00", comments="Source field: M_DoorData.DoorLeibie1")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.081+08:00", comments="Source field: M_DoorData.DoorLeibie1")
     private String doorleibie1;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.361+08:00", comments="Source field: M_DoorData.DoorLeibie2")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.081+08:00", comments="Source field: M_DoorData.DoorLeibie2")
     private String doorleibie2;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.361+08:00", comments="Source field: M_DoorData.DoorLeibie3")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.081+08:00", comments="Source field: M_DoorData.DoorLeibie3")
     private String doorleibie3;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.361+08:00", comments="Source field: M_DoorData.DoorLeibie4")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.081+08:00", comments="Source field: M_DoorData.DoorLeibie4")
     private String doorleibie4;
 
     /**
      * This field was generated by MyBatis Generator.
      * This field corresponds to the database table M_DoorData
      *
-     * @mbg.generated Fri Jul 19 09:31:22 CST 2019
+     * @mbg.generated Wed Jul 31 15:28:01 CST 2019
      */
     private static final long serialVersionUID = 1L;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.361+08:00", comments="Source field: M_DoorData.MachNo")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.080+08:00", comments="Source field: M_DoorData.MachNo")
     public Integer getMachno() {
         return machno;
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.361+08:00", comments="Source field: M_DoorData.MachNo")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.080+08:00", comments="Source field: M_DoorData.MachNo")
     public void setMachno(Integer machno) {
         this.machno = machno;
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.361+08:00", comments="Source field: M_DoorData.Place")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.080+08:00", comments="Source field: M_DoorData.Place")
     public String getPlace() {
         return place;
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.361+08:00", comments="Source field: M_DoorData.Place")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.080+08:00", comments="Source field: M_DoorData.Place")
     public void setPlace(String place) {
         this.place = place == null ? null : place.trim();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.361+08:00", comments="Source field: M_DoorData.BaudRate")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.080+08:00", comments="Source field: M_DoorData.BaudRate")
     public Integer getBaudrate() {
         return baudrate;
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.361+08:00", comments="Source field: M_DoorData.BaudRate")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.080+08:00", comments="Source field: M_DoorData.BaudRate")
     public void setBaudrate(Integer baudrate) {
         this.baudrate = baudrate;
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.361+08:00", comments="Source field: M_DoorData.ControlType")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.081+08:00", comments="Source field: M_DoorData.ControlType")
     public Integer getControltype() {
         return controltype;
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.361+08:00", comments="Source field: M_DoorData.ControlType")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.081+08:00", comments="Source field: M_DoorData.ControlType")
     public void setControltype(Integer controltype) {
         this.controltype = controltype;
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.361+08:00", comments="Source field: M_DoorData.IPadress")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.081+08:00", comments="Source field: M_DoorData.IPadress")
     public String getIpadress() {
         return ipadress;
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.361+08:00", comments="Source field: M_DoorData.IPadress")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.081+08:00", comments="Source field: M_DoorData.IPadress")
     public void setIpadress(String ipadress) {
         this.ipadress = ipadress == null ? null : ipadress.trim();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.361+08:00", comments="Source field: M_DoorData.DoorNumber")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.081+08:00", comments="Source field: M_DoorData.DoorNumber")
     public String getDoornumber() {
         return doornumber;
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.361+08:00", comments="Source field: M_DoorData.DoorNumber")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.081+08:00", comments="Source field: M_DoorData.DoorNumber")
     public void setDoornumber(String doornumber) {
         this.doornumber = doornumber == null ? null : doornumber.trim();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.361+08:00", comments="Source field: M_DoorData.DoorName")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.081+08:00", comments="Source field: M_DoorData.DoorName")
     public String getDoorname() {
         return doorname;
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.361+08:00", comments="Source field: M_DoorData.DoorName")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.081+08:00", comments="Source field: M_DoorData.DoorName")
     public void setDoorname(String doorname) {
         this.doorname = doorname == null ? null : doorname.trim();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.361+08:00", comments="Source field: M_DoorData.DoorNumber1")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.081+08:00", comments="Source field: M_DoorData.DoorNumber1")
     public String getDoornumber1() {
         return doornumber1;
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.361+08:00", comments="Source field: M_DoorData.DoorNumber1")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.081+08:00", comments="Source field: M_DoorData.DoorNumber1")
     public void setDoornumber1(String doornumber1) {
         this.doornumber1 = doornumber1 == null ? null : doornumber1.trim();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.361+08:00", comments="Source field: M_DoorData.DoorName1")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.081+08:00", comments="Source field: M_DoorData.DoorName1")
     public String getDoorname1() {
         return doorname1;
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.361+08:00", comments="Source field: M_DoorData.DoorName1")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.081+08:00", comments="Source field: M_DoorData.DoorName1")
     public void setDoorname1(String doorname1) {
         this.doorname1 = doorname1 == null ? null : doorname1.trim();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.361+08:00", comments="Source field: M_DoorData.DoorNumber2")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.081+08:00", comments="Source field: M_DoorData.DoorNumber2")
     public String getDoornumber2() {
         return doornumber2;
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.361+08:00", comments="Source field: M_DoorData.DoorNumber2")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.081+08:00", comments="Source field: M_DoorData.DoorNumber2")
     public void setDoornumber2(String doornumber2) {
         this.doornumber2 = doornumber2 == null ? null : doornumber2.trim();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.361+08:00", comments="Source field: M_DoorData.DoorName2")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.081+08:00", comments="Source field: M_DoorData.DoorName2")
     public String getDoorname2() {
         return doorname2;
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.361+08:00", comments="Source field: M_DoorData.DoorName2")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.081+08:00", comments="Source field: M_DoorData.DoorName2")
     public void setDoorname2(String doorname2) {
         this.doorname2 = doorname2 == null ? null : doorname2.trim();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.361+08:00", comments="Source field: M_DoorData.DoorNumber3")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.081+08:00", comments="Source field: M_DoorData.DoorNumber3")
     public String getDoornumber3() {
         return doornumber3;
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.361+08:00", comments="Source field: M_DoorData.DoorNumber3")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.081+08:00", comments="Source field: M_DoorData.DoorNumber3")
     public void setDoornumber3(String doornumber3) {
         this.doornumber3 = doornumber3 == null ? null : doornumber3.trim();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.361+08:00", comments="Source field: M_DoorData.DoorName3")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.081+08:00", comments="Source field: M_DoorData.DoorName3")
     public String getDoorname3() {
         return doorname3;
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.361+08:00", comments="Source field: M_DoorData.DoorName3")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.081+08:00", comments="Source field: M_DoorData.DoorName3")
     public void setDoorname3(String doorname3) {
         this.doorname3 = doorname3 == null ? null : doorname3.trim();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.361+08:00", comments="Source field: M_DoorData.DoorNumber4")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.081+08:00", comments="Source field: M_DoorData.DoorNumber4")
     public String getDoornumber4() {
         return doornumber4;
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.361+08:00", comments="Source field: M_DoorData.DoorNumber4")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.081+08:00", comments="Source field: M_DoorData.DoorNumber4")
     public void setDoornumber4(String doornumber4) {
         this.doornumber4 = doornumber4 == null ? null : doornumber4.trim();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.361+08:00", comments="Source field: M_DoorData.DoorName4")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.081+08:00", comments="Source field: M_DoorData.DoorName4")
     public String getDoorname4() {
         return doorname4;
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.361+08:00", comments="Source field: M_DoorData.DoorName4")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.081+08:00", comments="Source field: M_DoorData.DoorName4")
     public void setDoorname4(String doorname4) {
         this.doorname4 = doorname4 == null ? null : doorname4.trim();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.361+08:00", comments="Source field: M_DoorData.DoorLeibie")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.081+08:00", comments="Source field: M_DoorData.DoorLeibie")
     public String getDoorleibie() {
         return doorleibie;
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.361+08:00", comments="Source field: M_DoorData.DoorLeibie")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.081+08:00", comments="Source field: M_DoorData.DoorLeibie")
     public void setDoorleibie(String doorleibie) {
         this.doorleibie = doorleibie == null ? null : doorleibie.trim();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.361+08:00", comments="Source field: M_DoorData.DoorLeibie1")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.081+08:00", comments="Source field: M_DoorData.DoorLeibie1")
     public String getDoorleibie1() {
         return doorleibie1;
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.361+08:00", comments="Source field: M_DoorData.DoorLeibie1")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.081+08:00", comments="Source field: M_DoorData.DoorLeibie1")
     public void setDoorleibie1(String doorleibie1) {
         this.doorleibie1 = doorleibie1 == null ? null : doorleibie1.trim();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.361+08:00", comments="Source field: M_DoorData.DoorLeibie2")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.081+08:00", comments="Source field: M_DoorData.DoorLeibie2")
     public String getDoorleibie2() {
         return doorleibie2;
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.361+08:00", comments="Source field: M_DoorData.DoorLeibie2")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.081+08:00", comments="Source field: M_DoorData.DoorLeibie2")
     public void setDoorleibie2(String doorleibie2) {
         this.doorleibie2 = doorleibie2 == null ? null : doorleibie2.trim();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.361+08:00", comments="Source field: M_DoorData.DoorLeibie3")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.081+08:00", comments="Source field: M_DoorData.DoorLeibie3")
     public String getDoorleibie3() {
         return doorleibie3;
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.361+08:00", comments="Source field: M_DoorData.DoorLeibie3")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.081+08:00", comments="Source field: M_DoorData.DoorLeibie3")
     public void setDoorleibie3(String doorleibie3) {
         this.doorleibie3 = doorleibie3 == null ? null : doorleibie3.trim();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.361+08:00", comments="Source field: M_DoorData.DoorLeibie4")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.081+08:00", comments="Source field: M_DoorData.DoorLeibie4")
     public String getDoorleibie4() {
         return doorleibie4;
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.361+08:00", comments="Source field: M_DoorData.DoorLeibie4")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.081+08:00", comments="Source field: M_DoorData.DoorLeibie4")
     public void setDoorleibie4(String doorleibie4) {
         this.doorleibie4 = doorleibie4 == null ? null : doorleibie4.trim();
     }

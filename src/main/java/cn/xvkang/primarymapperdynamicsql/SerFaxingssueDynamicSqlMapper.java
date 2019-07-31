@@ -30,19 +30,19 @@ import org.mybatis.dynamic.sql.util.SqlProviderAdapter;
 
 @Mapper
 public interface SerFaxingssueDynamicSqlMapper {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.511+08:00", comments="Source Table: Ser_FaxingSsue")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.185+08:00", comments="Source Table: Ser_FaxingSsue")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     long count(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.511+08:00", comments="Source Table: Ser_FaxingSsue")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.185+08:00", comments="Source Table: Ser_FaxingSsue")
     @DeleteProvider(type=SqlProviderAdapter.class, method="delete")
     int delete(DeleteStatementProvider deleteStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.511+08:00", comments="Source Table: Ser_FaxingSsue")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.185+08:00", comments="Source Table: Ser_FaxingSsue")
     @InsertProvider(type=SqlProviderAdapter.class, method="insert")
     int insert(InsertStatementProvider<SerFaxingssue> insertStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.511+08:00", comments="Source Table: Ser_FaxingSsue")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.185+08:00", comments="Source Table: Ser_FaxingSsue")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @Results(id="SerFaxingssueResult", value = {
         @Result(column="ID", property="id", jdbcType=JdbcType.INTEGER),
@@ -66,22 +66,22 @@ public interface SerFaxingssueDynamicSqlMapper {
     })
     List<SerFaxingssue> selectMany(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.511+08:00", comments="Source Table: Ser_FaxingSsue")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.185+08:00", comments="Source Table: Ser_FaxingSsue")
     @UpdateProvider(type=SqlProviderAdapter.class, method="update")
     int update(UpdateStatementProvider updateStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.511+08:00", comments="Source Table: Ser_FaxingSsue")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.185+08:00", comments="Source Table: Ser_FaxingSsue")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<Long>> countByExample() {
         return SelectDSL.selectWithMapper(this::count, SqlBuilder.count())
                 .from(serFaxingssue);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.511+08:00", comments="Source Table: Ser_FaxingSsue")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.185+08:00", comments="Source Table: Ser_FaxingSsue")
     default DeleteDSL<MyBatis3DeleteModelAdapter<Integer>> deleteByExample() {
         return DeleteDSL.deleteFromWithMapper(this::delete, serFaxingssue);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.511+08:00", comments="Source Table: Ser_FaxingSsue")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.185+08:00", comments="Source Table: Ser_FaxingSsue")
     default int insert(SerFaxingssue record) {
         return insert(SqlBuilder.insert(record)
                 .into(serFaxingssue)
@@ -107,7 +107,7 @@ public interface SerFaxingssueDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.511+08:00", comments="Source Table: Ser_FaxingSsue")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.186+08:00", comments="Source Table: Ser_FaxingSsue")
     default int insertSelective(SerFaxingssue record) {
         return insert(SqlBuilder.insert(record)
                 .into(serFaxingssue)
@@ -133,19 +133,19 @@ public interface SerFaxingssueDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.511+08:00", comments="Source Table: Ser_FaxingSsue")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.186+08:00", comments="Source Table: Ser_FaxingSsue")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<SerFaxingssue>>> selectByExample() {
         return SelectDSL.selectWithMapper(this::selectMany, id, cardno, cardidno, userno, cardstate, issdate, cardtype, temnum, timeteam, casecade, enddate, doormark, doorperinfo, holiday, sysholiday, devcnum, doornum, carddownflag)
                 .from(serFaxingssue);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.511+08:00", comments="Source Table: Ser_FaxingSsue")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.186+08:00", comments="Source Table: Ser_FaxingSsue")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<SerFaxingssue>>> selectDistinctByExample() {
         return SelectDSL.selectDistinctWithMapper(this::selectMany, id, cardno, cardidno, userno, cardstate, issdate, cardtype, temnum, timeteam, casecade, enddate, doormark, doorperinfo, holiday, sysholiday, devcnum, doornum, carddownflag)
                 .from(serFaxingssue);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.511+08:00", comments="Source Table: Ser_FaxingSsue")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.186+08:00", comments="Source Table: Ser_FaxingSsue")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExample(SerFaxingssue record) {
         return UpdateDSL.updateWithMapper(this::update, serFaxingssue)
                 .set(id).equalTo(record::getId)
@@ -168,7 +168,7 @@ public interface SerFaxingssueDynamicSqlMapper {
                 .set(carddownflag).equalTo(record::getCarddownflag);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.511+08:00", comments="Source Table: Ser_FaxingSsue")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.186+08:00", comments="Source Table: Ser_FaxingSsue")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExampleSelective(SerFaxingssue record) {
         return UpdateDSL.updateWithMapper(this::update, serFaxingssue)
                 .set(id).equalToWhenPresent(record::getId)

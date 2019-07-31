@@ -27,10 +27,12 @@ import cn.xvkang.primaryentity.UserCarCreate;
 import cn.xvkang.primaryentity.UserPersonCreate;
 import cn.xvkang.primaryentity.UserTable;
 import cn.xvkang.primarymapperdynamicsql.LogDynamicSqlSupport;
+import cn.xvkang.primarymapperdynamicsql.RoleDynamicSqlSupport;
 import cn.xvkang.primarymapperdynamicsql.UserCarCreateDynamicSqlSupport;
 import cn.xvkang.primarymapperdynamicsql.UserPersonCreateDynamicSqlSupport;
 import cn.xvkang.primarymapperdynamicsql.UserTableDynamicSqlSupport;
 import cn.xvkang.service.LogService;
+import cn.xvkang.service.RoleService;
 import cn.xvkang.service.UserCarCreateService;
 import cn.xvkang.service.UserPersonCreateService;
 import cn.xvkang.service.UserService;
@@ -51,16 +53,18 @@ public class UserController {
 	private UserPersonCreateService userPersonCreateService;
 	@Autowired
 	private PasswordEncoder passwordEncoder;
+	@Autowired
+	private RoleService roleService;
 
 	@GetMapping("/selectAll")
 	@ResponseBody
 	// @PermissionAnnotation(code = "student_list_menu",describe = "学生列表",name =
 	// "学生列表",parentCode = "student_directory",type = 1,url =
 	// "/browser/user/listPage,/browser/user/selectAll",isFirst = false)
-	public PageImpl<UserTable> selectAll(@RequestParam Map<String, Object> params,
+	public PageImpl<Map<String, Object>> selectAll(@RequestParam Map<String, Object> params,
 			@RequestParam(name = "page", defaultValue = "1", required = false) Integer pageNumber,
 			@RequestParam(name = "limit", defaultValue = "10", required = false) Integer pageSize) {
-		PageImpl<UserTable> selectAll = userService.selectAll(params, pageNumber, pageSize);
+		PageImpl<Map<String, Object>> selectAll = userService.selectAll(params, pageNumber, pageSize);
 		return selectAll;
 	}
 
@@ -69,6 +73,11 @@ public class UserController {
 	// "学生列表",parentCode = "student_directory",type = 1,url =
 	// "/browser/user/listPage,/browser/user/selectAll",isFirst = true)
 	public String list(HttpServletRequest request) {
+		SelectStatementProvider render = SqlBuilder.select(RoleDynamicSqlSupport.role.allColumns())
+				.from(RoleDynamicSqlSupport.role).where()
+				.and(RoleDynamicSqlSupport.code, SqlBuilder.isNotEqualTo(Constants.DEFAULT_ROLES_ENUM.超级管理员.getCode()))
+				.build().render(RenderingStrategy.MYBATIS3);
+		request.setAttribute("roles", roleService.findByExample(render));
 		return "user/user_listPage";
 	}
 
@@ -85,6 +94,15 @@ public class UserController {
 	public String addPage(HttpServletRequest request, String id) {
 //		User findById = userService.findById(Integer.parseInt(id));
 //		request.setAttribute("xm", findById);
+		Map<String, String> oneMap = Constants.DEFAULT_ROLES_ENUM.巡逻人员.getOneMap();
+
+		Map<String, String> oneMap2 = Constants.DEFAULT_ROLES_ENUM.普通用户.getOneMap();
+		List<Map<String, String>> roles = new ArrayList<>();
+		roles.add(oneMap);
+		roles.add(oneMap2);
+
+		request.setAttribute("roles", roles);
+
 		return "user/user_addPage";
 	}
 

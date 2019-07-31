@@ -33,25 +33,25 @@ import org.mybatis.dynamic.sql.util.SqlProviderAdapter;
 
 @Mapper
 public interface MyshoufeiguangzouDynamicSqlMapper {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.317+08:00", comments="Source Table: MYSHOUFEIGUANGZOU")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.054+08:00", comments="Source Table: MYSHOUFEIGUANGZOU")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     long count(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.324+08:00", comments="Source Table: MYSHOUFEIGUANGZOU")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.054+08:00", comments="Source Table: MYSHOUFEIGUANGZOU")
     @DeleteProvider(type=SqlProviderAdapter.class, method="delete")
     int delete(DeleteStatementProvider deleteStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.324+08:00", comments="Source Table: MYSHOUFEIGUANGZOU")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.054+08:00", comments="Source Table: MYSHOUFEIGUANGZOU")
     @InsertProvider(type=SqlProviderAdapter.class, method="insert")
     @SelectKey(statement="SELECT SCOPE_IDENTITY()", keyProperty="record.cardtype", before=false, resultType=String.class)
     int insert(InsertStatementProvider<Myshoufeiguangzou> insertStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.324+08:00", comments="Source Table: MYSHOUFEIGUANGZOU")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.054+08:00", comments="Source Table: MYSHOUFEIGUANGZOU")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @ResultMap("MyshoufeiguangzouResult")
     Myshoufeiguangzou selectOne(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.324+08:00", comments="Source Table: MYSHOUFEIGUANGZOU")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.054+08:00", comments="Source Table: MYSHOUFEIGUANGZOU")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @Results(id="MyshoufeiguangzouResult", value = {
         @Result(column="CardType", property="cardtype", jdbcType=JdbcType.VARCHAR, id=true),
@@ -64,22 +64,22 @@ public interface MyshoufeiguangzouDynamicSqlMapper {
     })
     List<Myshoufeiguangzou> selectMany(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.324+08:00", comments="Source Table: MYSHOUFEIGUANGZOU")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.054+08:00", comments="Source Table: MYSHOUFEIGUANGZOU")
     @UpdateProvider(type=SqlProviderAdapter.class, method="update")
     int update(UpdateStatementProvider updateStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.324+08:00", comments="Source Table: MYSHOUFEIGUANGZOU")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.054+08:00", comments="Source Table: MYSHOUFEIGUANGZOU")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<Long>> countByExample() {
         return SelectDSL.selectWithMapper(this::count, SqlBuilder.count())
                 .from(myshoufeiguangzou);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.324+08:00", comments="Source Table: MYSHOUFEIGUANGZOU")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.054+08:00", comments="Source Table: MYSHOUFEIGUANGZOU")
     default DeleteDSL<MyBatis3DeleteModelAdapter<Integer>> deleteByExample() {
         return DeleteDSL.deleteFromWithMapper(this::delete, myshoufeiguangzou);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.324+08:00", comments="Source Table: MYSHOUFEIGUANGZOU")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.054+08:00", comments="Source Table: MYSHOUFEIGUANGZOU")
     default int deleteByPrimaryKey(String cardtype_) {
         return DeleteDSL.deleteFromWithMapper(this::delete, myshoufeiguangzou)
                 .where(cardtype, isEqualTo(cardtype_))
@@ -87,7 +87,7 @@ public interface MyshoufeiguangzouDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.324+08:00", comments="Source Table: MYSHOUFEIGUANGZOU")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.054+08:00", comments="Source Table: MYSHOUFEIGUANGZOU")
     default int insert(Myshoufeiguangzou record) {
         return insert(SqlBuilder.insert(record)
                 .into(myshoufeiguangzou)
@@ -101,7 +101,7 @@ public interface MyshoufeiguangzouDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.324+08:00", comments="Source Table: MYSHOUFEIGUANGZOU")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.054+08:00", comments="Source Table: MYSHOUFEIGUANGZOU")
     default int insertSelective(Myshoufeiguangzou record) {
         return insert(SqlBuilder.insert(record)
                 .into(myshoufeiguangzou)
@@ -115,19 +115,19 @@ public interface MyshoufeiguangzouDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.324+08:00", comments="Source Table: MYSHOUFEIGUANGZOU")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.055+08:00", comments="Source Table: MYSHOUFEIGUANGZOU")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Myshoufeiguangzou>>> selectByExample() {
         return SelectDSL.selectWithMapper(this::selectMany, cardtype, freemark, freetime, sfcycle, timeperiod, withinperiodsf, withoutperiodsf)
                 .from(myshoufeiguangzou);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.324+08:00", comments="Source Table: MYSHOUFEIGUANGZOU")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.055+08:00", comments="Source Table: MYSHOUFEIGUANGZOU")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Myshoufeiguangzou>>> selectDistinctByExample() {
         return SelectDSL.selectDistinctWithMapper(this::selectMany, cardtype, freemark, freetime, sfcycle, timeperiod, withinperiodsf, withoutperiodsf)
                 .from(myshoufeiguangzou);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.324+08:00", comments="Source Table: MYSHOUFEIGUANGZOU")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.055+08:00", comments="Source Table: MYSHOUFEIGUANGZOU")
     default Myshoufeiguangzou selectByPrimaryKey(String cardtype_) {
         return SelectDSL.selectWithMapper(this::selectOne, cardtype, freemark, freetime, sfcycle, timeperiod, withinperiodsf, withoutperiodsf)
                 .from(myshoufeiguangzou)
@@ -136,7 +136,7 @@ public interface MyshoufeiguangzouDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.324+08:00", comments="Source Table: MYSHOUFEIGUANGZOU")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.055+08:00", comments="Source Table: MYSHOUFEIGUANGZOU")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExample(Myshoufeiguangzou record) {
         return UpdateDSL.updateWithMapper(this::update, myshoufeiguangzou)
                 .set(freemark).equalTo(record::getFreemark)
@@ -147,7 +147,7 @@ public interface MyshoufeiguangzouDynamicSqlMapper {
                 .set(withoutperiodsf).equalTo(record::getWithoutperiodsf);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.324+08:00", comments="Source Table: MYSHOUFEIGUANGZOU")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.055+08:00", comments="Source Table: MYSHOUFEIGUANGZOU")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExampleSelective(Myshoufeiguangzou record) {
         return UpdateDSL.updateWithMapper(this::update, myshoufeiguangzou)
                 .set(freemark).equalToWhenPresent(record::getFreemark)
@@ -158,7 +158,7 @@ public interface MyshoufeiguangzouDynamicSqlMapper {
                 .set(withoutperiodsf).equalToWhenPresent(record::getWithoutperiodsf);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.324+08:00", comments="Source Table: MYSHOUFEIGUANGZOU")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.055+08:00", comments="Source Table: MYSHOUFEIGUANGZOU")
     default int updateByPrimaryKey(Myshoufeiguangzou record) {
         return UpdateDSL.updateWithMapper(this::update, myshoufeiguangzou)
                 .set(freemark).equalTo(record::getFreemark)
@@ -172,7 +172,7 @@ public interface MyshoufeiguangzouDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.324+08:00", comments="Source Table: MYSHOUFEIGUANGZOU")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.055+08:00", comments="Source Table: MYSHOUFEIGUANGZOU")
     default int updateByPrimaryKeySelective(Myshoufeiguangzou record) {
         return UpdateDSL.updateWithMapper(this::update, myshoufeiguangzou)
                 .set(freemark).equalToWhenPresent(record::getFreemark)

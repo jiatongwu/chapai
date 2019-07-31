@@ -30,19 +30,19 @@ import org.mybatis.dynamic.sql.util.SqlProviderAdapter;
 
 @Mapper
 public interface MyvoicecardnoDynamicSqlMapper {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.443+08:00", comments="Source Table: MyVoiceCardNO")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.151+08:00", comments="Source Table: MyVoiceCardNO")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     long count(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.443+08:00", comments="Source Table: MyVoiceCardNO")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.151+08:00", comments="Source Table: MyVoiceCardNO")
     @DeleteProvider(type=SqlProviderAdapter.class, method="delete")
     int delete(DeleteStatementProvider deleteStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.444+08:00", comments="Source Table: MyVoiceCardNO")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.151+08:00", comments="Source Table: MyVoiceCardNO")
     @InsertProvider(type=SqlProviderAdapter.class, method="insert")
     int insert(InsertStatementProvider<Myvoicecardno> insertStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.444+08:00", comments="Source Table: MyVoiceCardNO")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.151+08:00", comments="Source Table: MyVoiceCardNO")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @Results(id="MyvoicecardnoResult", value = {
         @Result(column="VoiceCardNO", property="voicecardno", jdbcType=JdbcType.VARCHAR),
@@ -50,22 +50,22 @@ public interface MyvoicecardnoDynamicSqlMapper {
     })
     List<Myvoicecardno> selectMany(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.444+08:00", comments="Source Table: MyVoiceCardNO")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.151+08:00", comments="Source Table: MyVoiceCardNO")
     @UpdateProvider(type=SqlProviderAdapter.class, method="update")
     int update(UpdateStatementProvider updateStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.444+08:00", comments="Source Table: MyVoiceCardNO")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.151+08:00", comments="Source Table: MyVoiceCardNO")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<Long>> countByExample() {
         return SelectDSL.selectWithMapper(this::count, SqlBuilder.count())
                 .from(myvoicecardno);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.444+08:00", comments="Source Table: MyVoiceCardNO")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.151+08:00", comments="Source Table: MyVoiceCardNO")
     default DeleteDSL<MyBatis3DeleteModelAdapter<Integer>> deleteByExample() {
         return DeleteDSL.deleteFromWithMapper(this::delete, myvoicecardno);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.444+08:00", comments="Source Table: MyVoiceCardNO")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.151+08:00", comments="Source Table: MyVoiceCardNO")
     default int insert(Myvoicecardno record) {
         return insert(SqlBuilder.insert(record)
                 .into(myvoicecardno)
@@ -75,7 +75,7 @@ public interface MyvoicecardnoDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.444+08:00", comments="Source Table: MyVoiceCardNO")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.151+08:00", comments="Source Table: MyVoiceCardNO")
     default int insertSelective(Myvoicecardno record) {
         return insert(SqlBuilder.insert(record)
                 .into(myvoicecardno)
@@ -85,26 +85,26 @@ public interface MyvoicecardnoDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.444+08:00", comments="Source Table: MyVoiceCardNO")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.151+08:00", comments="Source Table: MyVoiceCardNO")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Myvoicecardno>>> selectByExample() {
         return SelectDSL.selectWithMapper(this::selectMany, voicecardno, ctrlnumber)
                 .from(myvoicecardno);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.444+08:00", comments="Source Table: MyVoiceCardNO")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.151+08:00", comments="Source Table: MyVoiceCardNO")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Myvoicecardno>>> selectDistinctByExample() {
         return SelectDSL.selectDistinctWithMapper(this::selectMany, voicecardno, ctrlnumber)
                 .from(myvoicecardno);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.444+08:00", comments="Source Table: MyVoiceCardNO")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.151+08:00", comments="Source Table: MyVoiceCardNO")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExample(Myvoicecardno record) {
         return UpdateDSL.updateWithMapper(this::update, myvoicecardno)
                 .set(voicecardno).equalTo(record::getVoicecardno)
                 .set(ctrlnumber).equalTo(record::getCtrlnumber);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.444+08:00", comments="Source Table: MyVoiceCardNO")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.151+08:00", comments="Source Table: MyVoiceCardNO")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExampleSelective(Myvoicecardno record) {
         return UpdateDSL.updateWithMapper(this::update, myvoicecardno)
                 .set(voicecardno).equalToWhenPresent(record::getVoicecardno)

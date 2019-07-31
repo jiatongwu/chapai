@@ -36,6 +36,18 @@
 				</div>
 				<div class="layui-form-mid layui-word-aux">必填</div>
 			</div>
+			<div class="layui-form-item">
+				<label class="layui-form-label">角色</label>
+				<div class="layui-input-inline">
+					<select name="roleCode"  lay-verify="required" >
+						<option value=""></option>
+						<c:forEach var="tmp" items="${roles}">
+							<option value="<c:out value="${tmp.code}" />"><c:out value="${tmp.name}"/></option>
+						</c:forEach>
+					</select>
+				</div>
+				<div class="layui-form-mid layui-word-aux">必填</div>
+			</div>
 			<input type="text" hidden />
 			<input type="password" hidden />
 			<div class="layui-form-item">

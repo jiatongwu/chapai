@@ -50,6 +50,11 @@
 
 
 </body>
+<style>
+	.layui-form-label {
+		width:150px;
+	}
+</style>
 <jsp:include page="/WEB-INF/jsp/common/body_script.jsp"></jsp:include>
 <script src="${pageContext.request.contextPath }/static/js/user/user_editPage.js"></script>
 <script>

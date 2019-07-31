@@ -30,19 +30,19 @@ import org.mybatis.dynamic.sql.util.SqlProviderAdapter;
 
 @Mapper
 public interface MyofflineDynamicSqlMapper {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.296+08:00", comments="Source Table: MYOffLine")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.041+08:00", comments="Source Table: MYOffLine")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     long count(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.296+08:00", comments="Source Table: MYOffLine")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.041+08:00", comments="Source Table: MYOffLine")
     @DeleteProvider(type=SqlProviderAdapter.class, method="delete")
     int delete(DeleteStatementProvider deleteStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.296+08:00", comments="Source Table: MYOffLine")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.041+08:00", comments="Source Table: MYOffLine")
     @InsertProvider(type=SqlProviderAdapter.class, method="insert")
     int insert(InsertStatementProvider<Myoffline> insertStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.296+08:00", comments="Source Table: MYOffLine")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.041+08:00", comments="Source Table: MYOffLine")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @Results(id="MyofflineResult", value = {
         @Result(column="CardNO", property="cardno", jdbcType=JdbcType.VARCHAR),
@@ -52,22 +52,22 @@ public interface MyofflineDynamicSqlMapper {
     })
     List<Myoffline> selectMany(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.296+08:00", comments="Source Table: MYOffLine")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.041+08:00", comments="Source Table: MYOffLine")
     @UpdateProvider(type=SqlProviderAdapter.class, method="update")
     int update(UpdateStatementProvider updateStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.296+08:00", comments="Source Table: MYOffLine")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.041+08:00", comments="Source Table: MYOffLine")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<Long>> countByExample() {
         return SelectDSL.selectWithMapper(this::count, SqlBuilder.count())
                 .from(myoffline);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.296+08:00", comments="Source Table: MYOffLine")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.041+08:00", comments="Source Table: MYOffLine")
     default DeleteDSL<MyBatis3DeleteModelAdapter<Integer>> deleteByExample() {
         return DeleteDSL.deleteFromWithMapper(this::delete, myoffline);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.296+08:00", comments="Source Table: MYOffLine")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.041+08:00", comments="Source Table: MYOffLine")
     default int insert(Myoffline record) {
         return insert(SqlBuilder.insert(record)
                 .into(myoffline)
@@ -79,7 +79,7 @@ public interface MyofflineDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.296+08:00", comments="Source Table: MYOffLine")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.041+08:00", comments="Source Table: MYOffLine")
     default int insertSelective(Myoffline record) {
         return insert(SqlBuilder.insert(record)
                 .into(myoffline)
@@ -91,19 +91,19 @@ public interface MyofflineDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.296+08:00", comments="Source Table: MYOffLine")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.041+08:00", comments="Source Table: MYOffLine")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Myoffline>>> selectByExample() {
         return SelectDSL.selectWithMapper(this::selectMany, cardno, cphcardno, downloadtime, state)
                 .from(myoffline);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.297+08:00", comments="Source Table: MYOffLine")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.041+08:00", comments="Source Table: MYOffLine")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Myoffline>>> selectDistinctByExample() {
         return SelectDSL.selectDistinctWithMapper(this::selectMany, cardno, cphcardno, downloadtime, state)
                 .from(myoffline);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.297+08:00", comments="Source Table: MYOffLine")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.041+08:00", comments="Source Table: MYOffLine")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExample(Myoffline record) {
         return UpdateDSL.updateWithMapper(this::update, myoffline)
                 .set(cardno).equalTo(record::getCardno)
@@ -112,7 +112,7 @@ public interface MyofflineDynamicSqlMapper {
                 .set(state).equalTo(record::getState);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.297+08:00", comments="Source Table: MYOffLine")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.041+08:00", comments="Source Table: MYOffLine")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExampleSelective(Myoffline record) {
         return UpdateDSL.updateWithMapper(this::update, myoffline)
                 .set(cardno).equalToWhenPresent(record::getCardno)

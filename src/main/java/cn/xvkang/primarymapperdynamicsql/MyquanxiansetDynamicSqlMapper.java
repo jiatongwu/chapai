@@ -30,19 +30,19 @@ import org.mybatis.dynamic.sql.util.SqlProviderAdapter;
 
 @Mapper
 public interface MyquanxiansetDynamicSqlMapper {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.300+08:00", comments="Source Table: MYQUANXIANSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.044+08:00", comments="Source Table: MYQUANXIANSET")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     long count(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.300+08:00", comments="Source Table: MYQUANXIANSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.044+08:00", comments="Source Table: MYQUANXIANSET")
     @DeleteProvider(type=SqlProviderAdapter.class, method="delete")
     int delete(DeleteStatementProvider deleteStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.300+08:00", comments="Source Table: MYQUANXIANSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.044+08:00", comments="Source Table: MYQUANXIANSET")
     @InsertProvider(type=SqlProviderAdapter.class, method="insert")
     int insert(InsertStatementProvider<Myquanxianset> insertStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.300+08:00", comments="Source Table: MYQUANXIANSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.044+08:00", comments="Source Table: MYQUANXIANSET")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @Results(id="MyquanxiansetResult", value = {
         @Result(column="FormName", property="formname", jdbcType=JdbcType.VARCHAR),
@@ -53,22 +53,22 @@ public interface MyquanxiansetDynamicSqlMapper {
     })
     List<Myquanxianset> selectMany(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.300+08:00", comments="Source Table: MYQUANXIANSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.044+08:00", comments="Source Table: MYQUANXIANSET")
     @UpdateProvider(type=SqlProviderAdapter.class, method="update")
     int update(UpdateStatementProvider updateStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.300+08:00", comments="Source Table: MYQUANXIANSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.044+08:00", comments="Source Table: MYQUANXIANSET")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<Long>> countByExample() {
         return SelectDSL.selectWithMapper(this::count, SqlBuilder.count())
                 .from(myquanxianset);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.300+08:00", comments="Source Table: MYQUANXIANSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.044+08:00", comments="Source Table: MYQUANXIANSET")
     default DeleteDSL<MyBatis3DeleteModelAdapter<Integer>> deleteByExample() {
         return DeleteDSL.deleteFromWithMapper(this::delete, myquanxianset);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.300+08:00", comments="Source Table: MYQUANXIANSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.044+08:00", comments="Source Table: MYQUANXIANSET")
     default int insert(Myquanxianset record) {
         return insert(SqlBuilder.insert(record)
                 .into(myquanxianset)
@@ -81,7 +81,7 @@ public interface MyquanxiansetDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.300+08:00", comments="Source Table: MYQUANXIANSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.044+08:00", comments="Source Table: MYQUANXIANSET")
     default int insertSelective(Myquanxianset record) {
         return insert(SqlBuilder.insert(record)
                 .into(myquanxianset)
@@ -94,19 +94,19 @@ public interface MyquanxiansetDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.300+08:00", comments="Source Table: MYQUANXIANSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.044+08:00", comments="Source Table: MYQUANXIANSET")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Myquanxianset>>> selectByExample() {
         return SelectDSL.selectWithMapper(this::selectMany, formname, menuname, menutext, validmark, keyvalue)
                 .from(myquanxianset);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.300+08:00", comments="Source Table: MYQUANXIANSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.044+08:00", comments="Source Table: MYQUANXIANSET")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Myquanxianset>>> selectDistinctByExample() {
         return SelectDSL.selectDistinctWithMapper(this::selectMany, formname, menuname, menutext, validmark, keyvalue)
                 .from(myquanxianset);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.300+08:00", comments="Source Table: MYQUANXIANSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.044+08:00", comments="Source Table: MYQUANXIANSET")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExample(Myquanxianset record) {
         return UpdateDSL.updateWithMapper(this::update, myquanxianset)
                 .set(formname).equalTo(record::getFormname)
@@ -116,7 +116,7 @@ public interface MyquanxiansetDynamicSqlMapper {
                 .set(keyvalue).equalTo(record::getKeyvalue);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.300+08:00", comments="Source Table: MYQUANXIANSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.044+08:00", comments="Source Table: MYQUANXIANSET")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExampleSelective(Myquanxianset record) {
         return UpdateDSL.updateWithMapper(this::update, myquanxianset)
                 .set(formname).equalToWhenPresent(record::getFormname)

@@ -6,19 +6,19 @@ import org.mybatis.dynamic.sql.SqlColumn;
 import org.mybatis.dynamic.sql.SqlTable;
 
 public final class DtDoorHolidayDynamicSqlSupport {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:21.975+08:00", comments="Source Table: Dt_Door_Holiday")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.879+08:00", comments="Source Table: Dt_Door_Holiday")
     public static final DtDoorHoliday dtDoorHoliday = new DtDoorHoliday();
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:21.975+08:00", comments="Source field: Dt_Door_Holiday.id")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.879+08:00", comments="Source field: Dt_Door_Holiday.id")
     public static final SqlColumn<Integer> id = dtDoorHoliday.id;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:21.975+08:00", comments="Source field: Dt_Door_Holiday.sDate")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.879+08:00", comments="Source field: Dt_Door_Holiday.sDate")
     public static final SqlColumn<String> sdate = dtDoorHoliday.sdate;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:21.976+08:00", comments="Source field: Dt_Door_Holiday.DevcNum")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.879+08:00", comments="Source field: Dt_Door_Holiday.DevcNum")
     public static final SqlColumn<Integer> devcnum = dtDoorHoliday.devcnum;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:21.975+08:00", comments="Source Table: Dt_Door_Holiday")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.879+08:00", comments="Source Table: Dt_Door_Holiday")
     public static final class DtDoorHoliday extends SqlTable {
         public final SqlColumn<Integer> id = column("id", JDBCType.INTEGER);
 

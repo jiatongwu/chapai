@@ -21,6 +21,7 @@ import org.springframework.stereotype.Service;
 import com.github.pagehelper.PageHelper;
 
 import cn.xvkang.dto.UserDto;
+import cn.xvkang.primarycustommapper.UserCustomMapper;
 import cn.xvkang.primaryentity.Permission;
 import cn.xvkang.primaryentity.Role;
 import cn.xvkang.primaryentity.UserRole;
@@ -51,6 +52,8 @@ public class UserServiceImpl implements UserService {
 	private UserRoleDynamicSqlMapper userRoleDynamicSqlMapper;
 
 	private PasswordEncoder passwordEncoder;
+	@Autowired
+	private UserCustomMapper userCustomMapper;
 
 	@Override
 	public UserTable findByUsername(String username) {
@@ -112,25 +115,49 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
-	public PageImpl<UserTable> selectAll(Map<String, Object> params, Integer pageNum, Integer pageSize) {
-
+	public PageImpl<Map<String, Object>> selectAll(Map<String, Object> params, Integer pageNum, Integer pageSize) {
+		SelectStatementProvider render2 = SqlBuilder.select(RoleDynamicSqlSupport.id).from(RoleDynamicSqlSupport.role)
+				.where()
+				.and(RoleDynamicSqlSupport.code, SqlBuilder.isEqualTo(Constants.DEFAULT_ROLES_ENUM.超级管理员.getCode()))
+				.build().render(RenderingStrategy.MYBATIS3);
+		List<Role> roles = roleDynamicSqlMapper.selectMany(render2);
+		Integer superRoleId = null;
+		if (roles.size() > 0) {
+			superRoleId = roles.get(0).getId();
+		}
 		QueryExpressionDSL<SelectModel>.QueryExpressionWhereBuilder where = SqlBuilder
 				.select(UserTableDynamicSqlSupport.userTable.username, UserTableDynamicSqlSupport.userTable.disabled,
 						UserTableDynamicSqlSupport.userTable.id, UserTableDynamicSqlSupport.userTable.createTime,
 						UserTableDynamicSqlSupport.userTable.name)
 				.from(UserTableDynamicSqlSupport.userTable, "userTable")
-				.leftJoin(UserRoleDynamicSqlSupport.userRole, "userRole")
-				.on(UserTableDynamicSqlSupport.userTable.id,
-						SqlBuilder.equalTo((UserRoleDynamicSqlSupport.userRole.userId)))
-				.leftJoin(RoleDynamicSqlSupport.role, "role")
-				.on(UserRoleDynamicSqlSupport.userRole.roleId, SqlBuilder.equalTo(RoleDynamicSqlSupport.role.id))
+				// .leftJoin(UserRoleDynamicSqlSupport.userRole, "userRole")
+				// .on(UserTableDynamicSqlSupport.userTable.id,
+				// SqlBuilder.equalTo((UserRoleDynamicSqlSupport.userRole.userId)))
+				// .leftJoin(RoleDynamicSqlSupport.role, "role")
+				// .on(UserRoleDynamicSqlSupport.userRole.roleId,
+				// SqlBuilder.equalTo(RoleDynamicSqlSupport.role.id))
 				.where();
-		where.and(RoleDynamicSqlSupport.role.code,
-				SqlBuilder.isNotEqualTo(Constants.DEFAULT_ROLES_ENUM.超级管理员.getCode()));
+		// where.and(RoleDynamicSqlSupport.role.code,
+		// SqlBuilder.isNotEqualTo(Constants.DEFAULT_ROLES_ENUM.超级管理员.getCode()));
+		if (superRoleId != null) {
+			where.and(UserTableDynamicSqlSupport.id,
+					SqlBuilder.isNotIn(SqlBuilder.select(UserRoleDynamicSqlSupport.userId)
+							.from(UserRoleDynamicSqlSupport.userRole, "userRole").where()
+							.and(UserRoleDynamicSqlSupport.roleId, SqlBuilder.isEqualTo(superRoleId))));// (Constants.DEFAULT_ROLES_ENUM.超级管理员.getCode()));
+		}
 		/*
 		 * 
 		 * personName personPhone cheBianma chexing chepaihao isInDate createTimeAsc
 		 */
+		String roleId = (String) params.get("roleId");
+		if (StringUtils.isNotBlank(roleId)) {
+			where.and(UserTableDynamicSqlSupport.id,
+					SqlBuilder.isIn(SqlBuilder.select(UserRoleDynamicSqlSupport.userId)
+							.from(UserRoleDynamicSqlSupport.userRole, "userRole").where()
+							.and(UserRoleDynamicSqlSupport.roleId, SqlBuilder.isEqualTo(Integer.parseInt(roleId)))));// (Constants.DEFAULT_ROLES_ENUM.超级管理员.getCode()));
+
+		}
+
 		String username = (String) params.get("username");
 		if (StringUtils.isNotBlank(username)) {
 			params.put("username", "%" + username + "%");
@@ -154,10 +181,27 @@ public class UserServiceImpl implements UserService {
 		}
 		SelectStatementProvider render = where.build().render(RenderingStrategy.MYBATIS3);
 		PageHelper.startPage(pageNum, pageSize);
-		List<UserTable> selectByExample = userTableDynamicSqlMapper.selectMany(render);
-		PageImpl<UserTable> pageImpl = new MyPageImpl<UserTable>(selectByExample,
+		List<Map<String, Object>> selectByExample = userCustomMapper.selectMany(render);
+		// 添加上角色显示
+		for (Map<String, Object> tmp : selectByExample) {
+			int userId = (Integer) tmp.get("id");
+			SelectStatementProvider render3 = SqlBuilder.select(RoleDynamicSqlSupport.role.allColumns())
+					.from(RoleDynamicSqlSupport.role).where()
+					.and(RoleDynamicSqlSupport.id,
+							SqlBuilder.isIn(SqlBuilder.select(UserRoleDynamicSqlSupport.roleId)
+									.from(UserRoleDynamicSqlSupport.userRole, "userRole").where()
+									.and(UserRoleDynamicSqlSupport.userId, SqlBuilder.isEqualTo(userId))))
+					.build().render(RenderingStrategy.MYBATIS3);
+			List<Role> oneRoles = roleDynamicSqlMapper.selectMany(render3);
+			List<String> collect = oneRoles.stream().map((item) -> {
+				return item.getName();
+			}).collect(Collectors.toList());
+			String roleNames = StringUtils.join(collect, ",");
+			tmp.put("roleNames", roleNames);
+		}
+		PageImpl<Map<String, Object>> pageImpl = new MyPageImpl<Map<String, Object>>(selectByExample,
 				new PageRequest(pageNum - 1, pageSize),
-				((com.github.pagehelper.Page<UserTable>) selectByExample).getTotal());
+				((com.github.pagehelper.Page<Map<String, Object>>) selectByExample).getTotal());
 		return pageImpl;
 	}
 
@@ -170,6 +214,7 @@ public class UserServiceImpl implements UserService {
 	public int add(Map<String, Object> params) {
 		String username = (String) params.get("username");
 		String name = (String) params.get("name");
+		String roleCode = (String) params.get("roleCode");
 		String password = (String) params.get("password");
 
 		UserTable userTable = new UserTable();
@@ -186,13 +231,13 @@ public class UserServiceImpl implements UserService {
 		// 默认在这里添加的用户都是普通用户
 		UserRole ur = new UserRole();
 		List<Role> roles = roleDynamicSqlMapper.selectByExample()
-				.where(RoleDynamicSqlSupport.code, SqlBuilder.isEqualTo(Constants.DEFAULT_ROLES_ENUM.普通用户.getCode()))
+				.where(RoleDynamicSqlSupport.code, SqlBuilder.isEqualTo(roleCode))// SqlBuilder.isEqualTo(Constants.DEFAULT_ROLES_ENUM.普通用户.getCode()))
 				.build().execute();
 		if (roles.size() > 0) {
 			ur.setRoleId(roles.get(0).getId());
+			ur.setUserId(userTable.getId());
+			userRoleDynamicSqlMapper.insert(ur);
 		}
-		ur.setUserId(userTable.getId());
-		userRoleDynamicSqlMapper.insert(ur);
 		return userInsertResult;
 	}
 

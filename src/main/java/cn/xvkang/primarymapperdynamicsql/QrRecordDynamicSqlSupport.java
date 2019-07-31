@@ -6,37 +6,37 @@ import org.mybatis.dynamic.sql.SqlColumn;
 import org.mybatis.dynamic.sql.SqlTable;
 
 public final class QrRecordDynamicSqlSupport {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.465+08:00", comments="Source Table: Qr_Record")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.168+08:00", comments="Source Table: Qr_Record")
     public static final QrRecord qrRecord = new QrRecord();
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.465+08:00", comments="Source field: Qr_Record.Cardid")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.168+08:00", comments="Source field: Qr_Record.Cardid")
     public static final SqlColumn<String> cardid = qrRecord.cardid;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.465+08:00", comments="Source field: Qr_Record.Cardtype")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.168+08:00", comments="Source field: Qr_Record.Cardtype")
     public static final SqlColumn<String> cardtype = qrRecord.cardtype;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.465+08:00", comments="Source field: Qr_Record.Userno")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.168+08:00", comments="Source field: Qr_Record.Userno")
     public static final SqlColumn<String> userno = qrRecord.userno;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.465+08:00", comments="Source field: Qr_Record.UserName")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.168+08:00", comments="Source field: Qr_Record.UserName")
     public static final SqlColumn<String> username = qrRecord.username;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.465+08:00", comments="Source field: Qr_Record.Department")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.168+08:00", comments="Source field: Qr_Record.Department")
     public static final SqlColumn<String> department = qrRecord.department;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.465+08:00", comments="Source field: Qr_Record.Machno")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.168+08:00", comments="Source field: Qr_Record.Machno")
     public static final SqlColumn<String> machno = qrRecord.machno;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.465+08:00", comments="Source field: Qr_Record.Machplace")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.168+08:00", comments="Source field: Qr_Record.Machplace")
     public static final SqlColumn<String> machplace = qrRecord.machplace;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.465+08:00", comments="Source field: Qr_Record.Doorno")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.168+08:00", comments="Source field: Qr_Record.Doorno")
     public static final SqlColumn<String> doorno = qrRecord.doorno;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.465+08:00", comments="Source field: Qr_Record.Opentime")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.168+08:00", comments="Source field: Qr_Record.Opentime")
     public static final SqlColumn<String> opentime = qrRecord.opentime;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.465+08:00", comments="Source Table: Qr_Record")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.168+08:00", comments="Source Table: Qr_Record")
     public static final class QrRecord extends SqlTable {
         public final SqlColumn<String> cardid = column("Cardid", JDBCType.VARCHAR);
 

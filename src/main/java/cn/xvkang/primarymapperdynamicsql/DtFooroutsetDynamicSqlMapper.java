@@ -33,25 +33,25 @@ import org.mybatis.dynamic.sql.util.SqlProviderAdapter;
 
 @Mapper
 public interface DtFooroutsetDynamicSqlMapper {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.009+08:00", comments="Source Table: Dt_FoorOutSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.893+08:00", comments="Source Table: Dt_FoorOutSet")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     long count(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.009+08:00", comments="Source Table: Dt_FoorOutSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.893+08:00", comments="Source Table: Dt_FoorOutSet")
     @DeleteProvider(type=SqlProviderAdapter.class, method="delete")
     int delete(DeleteStatementProvider deleteStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.009+08:00", comments="Source Table: Dt_FoorOutSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.893+08:00", comments="Source Table: Dt_FoorOutSet")
     @InsertProvider(type=SqlProviderAdapter.class, method="insert")
     @SelectKey(statement="SELECT SCOPE_IDENTITY()", keyProperty="record.id", before=false, resultType=Integer.class)
     int insert(InsertStatementProvider<DtFooroutset> insertStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.009+08:00", comments="Source Table: Dt_FoorOutSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.893+08:00", comments="Source Table: Dt_FoorOutSet")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @ResultMap("DtFooroutsetResult")
     DtFooroutset selectOne(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.009+08:00", comments="Source Table: Dt_FoorOutSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.893+08:00", comments="Source Table: Dt_FoorOutSet")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @Results(id="DtFooroutsetResult", value = {
         @Result(column="id", property="id", jdbcType=JdbcType.INTEGER, id=true),
@@ -65,22 +65,22 @@ public interface DtFooroutsetDynamicSqlMapper {
     })
     List<DtFooroutset> selectMany(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.009+08:00", comments="Source Table: Dt_FoorOutSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.893+08:00", comments="Source Table: Dt_FoorOutSet")
     @UpdateProvider(type=SqlProviderAdapter.class, method="update")
     int update(UpdateStatementProvider updateStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.009+08:00", comments="Source Table: Dt_FoorOutSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.893+08:00", comments="Source Table: Dt_FoorOutSet")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<Long>> countByExample() {
         return SelectDSL.selectWithMapper(this::count, SqlBuilder.count())
                 .from(dtFooroutset);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.009+08:00", comments="Source Table: Dt_FoorOutSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.893+08:00", comments="Source Table: Dt_FoorOutSet")
     default DeleteDSL<MyBatis3DeleteModelAdapter<Integer>> deleteByExample() {
         return DeleteDSL.deleteFromWithMapper(this::delete, dtFooroutset);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.009+08:00", comments="Source Table: Dt_FoorOutSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.893+08:00", comments="Source Table: Dt_FoorOutSet")
     default int deleteByPrimaryKey(Integer id_) {
         return DeleteDSL.deleteFromWithMapper(this::delete, dtFooroutset)
                 .where(id, isEqualTo(id_))
@@ -88,7 +88,7 @@ public interface DtFooroutsetDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.009+08:00", comments="Source Table: Dt_FoorOutSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.893+08:00", comments="Source Table: Dt_FoorOutSet")
     default int insert(DtFooroutset record) {
         return insert(SqlBuilder.insert(record)
                 .into(dtFooroutset)
@@ -103,7 +103,7 @@ public interface DtFooroutsetDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.009+08:00", comments="Source Table: Dt_FoorOutSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.893+08:00", comments="Source Table: Dt_FoorOutSet")
     default int insertSelective(DtFooroutset record) {
         return insert(SqlBuilder.insert(record)
                 .into(dtFooroutset)
@@ -118,19 +118,19 @@ public interface DtFooroutsetDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.010+08:00", comments="Source Table: Dt_FoorOutSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.893+08:00", comments="Source Table: Dt_FoorOutSet")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<DtFooroutset>>> selectByExample() {
         return SelectDSL.selectWithMapper(this::selectMany, id, devcno, holid, foorkzout, foorhf, baojin, reccunchu, foorinfo)
                 .from(dtFooroutset);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.010+08:00", comments="Source Table: Dt_FoorOutSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.893+08:00", comments="Source Table: Dt_FoorOutSet")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<DtFooroutset>>> selectDistinctByExample() {
         return SelectDSL.selectDistinctWithMapper(this::selectMany, id, devcno, holid, foorkzout, foorhf, baojin, reccunchu, foorinfo)
                 .from(dtFooroutset);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.010+08:00", comments="Source Table: Dt_FoorOutSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.893+08:00", comments="Source Table: Dt_FoorOutSet")
     default DtFooroutset selectByPrimaryKey(Integer id_) {
         return SelectDSL.selectWithMapper(this::selectOne, id, devcno, holid, foorkzout, foorhf, baojin, reccunchu, foorinfo)
                 .from(dtFooroutset)
@@ -139,7 +139,7 @@ public interface DtFooroutsetDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.010+08:00", comments="Source Table: Dt_FoorOutSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.893+08:00", comments="Source Table: Dt_FoorOutSet")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExample(DtFooroutset record) {
         return UpdateDSL.updateWithMapper(this::update, dtFooroutset)
                 .set(devcno).equalTo(record::getDevcno)
@@ -151,7 +151,7 @@ public interface DtFooroutsetDynamicSqlMapper {
                 .set(foorinfo).equalTo(record::getFoorinfo);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.010+08:00", comments="Source Table: Dt_FoorOutSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.894+08:00", comments="Source Table: Dt_FoorOutSet")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExampleSelective(DtFooroutset record) {
         return UpdateDSL.updateWithMapper(this::update, dtFooroutset)
                 .set(devcno).equalToWhenPresent(record::getDevcno)
@@ -163,7 +163,7 @@ public interface DtFooroutsetDynamicSqlMapper {
                 .set(foorinfo).equalToWhenPresent(record::getFoorinfo);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.010+08:00", comments="Source Table: Dt_FoorOutSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.894+08:00", comments="Source Table: Dt_FoorOutSet")
     default int updateByPrimaryKey(DtFooroutset record) {
         return UpdateDSL.updateWithMapper(this::update, dtFooroutset)
                 .set(devcno).equalTo(record::getDevcno)
@@ -178,7 +178,7 @@ public interface DtFooroutsetDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.010+08:00", comments="Source Table: Dt_FoorOutSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.894+08:00", comments="Source Table: Dt_FoorOutSet")
     default int updateByPrimaryKeySelective(DtFooroutset record) {
         return UpdateDSL.updateWithMapper(this::update, dtFooroutset)
                 .set(devcno).equalToWhenPresent(record::getDevcno)

@@ -68,7 +68,7 @@ public class ThriftServer {
 			THsHaServer.Args args1 = new THsHaServer.Args(tNonblockingServerSocket).minWorkerThreads(minThreads)
 					.maxWorkerThreads(maxThreads);
 			args1.protocolFactory(protocolFactory);
-
+			args1.maxReadBufferBytes = 100036854l;
 			args1.transportFactory(transportFactory);
 			args1.processorFactory(new TProcessorFactory(processor));
 			// TServer server = new TThreadPoolServer(tArgs);

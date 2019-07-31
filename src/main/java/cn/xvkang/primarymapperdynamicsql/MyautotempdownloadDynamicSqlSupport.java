@@ -7,28 +7,28 @@ import org.mybatis.dynamic.sql.SqlColumn;
 import org.mybatis.dynamic.sql.SqlTable;
 
 public final class MyautotempdownloadDynamicSqlSupport {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.139+08:00", comments="Source Table: MYAutoTempDownLoad")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.967+08:00", comments="Source Table: MYAutoTempDownLoad")
     public static final Myautotempdownload myautotempdownload = new Myautotempdownload();
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.140+08:00", comments="Source field: MYAutoTempDownLoad.ID")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.967+08:00", comments="Source field: MYAutoTempDownLoad.ID")
     public static final SqlColumn<Integer> id = myautotempdownload.id;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.141+08:00", comments="Source field: MYAutoTempDownLoad.CPH")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.967+08:00", comments="Source field: MYAutoTempDownLoad.CPH")
     public static final SqlColumn<String> cph = myautotempdownload.cph;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.141+08:00", comments="Source field: MYAutoTempDownLoad.InTime")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.967+08:00", comments="Source field: MYAutoTempDownLoad.InTime")
     public static final SqlColumn<Date> intime = myautotempdownload.intime;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.141+08:00", comments="Source field: MYAutoTempDownLoad.DownloadSignal")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.968+08:00", comments="Source field: MYAutoTempDownLoad.DownloadSignal")
     public static final SqlColumn<String> downloadsignal = myautotempdownload.downloadsignal;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.141+08:00", comments="Source field: MYAutoTempDownLoad.InOut")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.968+08:00", comments="Source field: MYAutoTempDownLoad.InOut")
     public static final SqlColumn<Integer> inout = myautotempdownload.inout;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.141+08:00", comments="Source field: MYAutoTempDownLoad.iBigSmall")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.968+08:00", comments="Source field: MYAutoTempDownLoad.iBigSmall")
     public static final SqlColumn<Integer> ibigsmall = myautotempdownload.ibigsmall;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.139+08:00", comments="Source Table: MYAutoTempDownLoad")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.967+08:00", comments="Source Table: MYAutoTempDownLoad")
     public static final class Myautotempdownload extends SqlTable {
         public final SqlColumn<Integer> id = column("ID", JDBCType.INTEGER);
 

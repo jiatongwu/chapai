@@ -30,19 +30,19 @@ import org.mybatis.dynamic.sql.util.SqlProviderAdapter;
 
 @Mapper
 public interface MyparkingrecoverDynamicSqlMapper {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.439+08:00", comments="Source Table: MyParkingRecover")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.119+08:00", comments="Source Table: MyParkingRecover")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     long count(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.439+08:00", comments="Source Table: MyParkingRecover")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.119+08:00", comments="Source Table: MyParkingRecover")
     @DeleteProvider(type=SqlProviderAdapter.class, method="delete")
     int delete(DeleteStatementProvider deleteStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.439+08:00", comments="Source Table: MyParkingRecover")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.119+08:00", comments="Source Table: MyParkingRecover")
     @InsertProvider(type=SqlProviderAdapter.class, method="insert")
     int insert(InsertStatementProvider<Myparkingrecover> insertStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.439+08:00", comments="Source Table: MyParkingRecover")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.119+08:00", comments="Source Table: MyParkingRecover")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @Results(id="MyparkingrecoverResult", value = {
         @Result(column="CtrlNumber", property="ctrlnumber", jdbcType=JdbcType.INTEGER),
@@ -51,22 +51,22 @@ public interface MyparkingrecoverDynamicSqlMapper {
     })
     List<Myparkingrecover> selectMany(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.439+08:00", comments="Source Table: MyParkingRecover")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.119+08:00", comments="Source Table: MyParkingRecover")
     @UpdateProvider(type=SqlProviderAdapter.class, method="update")
     int update(UpdateStatementProvider updateStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.439+08:00", comments="Source Table: MyParkingRecover")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.119+08:00", comments="Source Table: MyParkingRecover")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<Long>> countByExample() {
         return SelectDSL.selectWithMapper(this::count, SqlBuilder.count())
                 .from(myparkingrecover);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.439+08:00", comments="Source Table: MyParkingRecover")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.119+08:00", comments="Source Table: MyParkingRecover")
     default DeleteDSL<MyBatis3DeleteModelAdapter<Integer>> deleteByExample() {
         return DeleteDSL.deleteFromWithMapper(this::delete, myparkingrecover);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.439+08:00", comments="Source Table: MyParkingRecover")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.119+08:00", comments="Source Table: MyParkingRecover")
     default int insert(Myparkingrecover record) {
         return insert(SqlBuilder.insert(record)
                 .into(myparkingrecover)
@@ -77,7 +77,7 @@ public interface MyparkingrecoverDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.439+08:00", comments="Source Table: MyParkingRecover")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.119+08:00", comments="Source Table: MyParkingRecover")
     default int insertSelective(Myparkingrecover record) {
         return insert(SqlBuilder.insert(record)
                 .into(myparkingrecover)
@@ -88,19 +88,19 @@ public interface MyparkingrecoverDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.439+08:00", comments="Source Table: MyParkingRecover")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.119+08:00", comments="Source Table: MyParkingRecover")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Myparkingrecover>>> selectByExample() {
         return SelectDSL.selectWithMapper(this::selectMany, ctrlnumber, instruct, flag)
                 .from(myparkingrecover);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.440+08:00", comments="Source Table: MyParkingRecover")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.119+08:00", comments="Source Table: MyParkingRecover")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Myparkingrecover>>> selectDistinctByExample() {
         return SelectDSL.selectDistinctWithMapper(this::selectMany, ctrlnumber, instruct, flag)
                 .from(myparkingrecover);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.440+08:00", comments="Source Table: MyParkingRecover")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.119+08:00", comments="Source Table: MyParkingRecover")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExample(Myparkingrecover record) {
         return UpdateDSL.updateWithMapper(this::update, myparkingrecover)
                 .set(ctrlnumber).equalTo(record::getCtrlnumber)
@@ -108,7 +108,7 @@ public interface MyparkingrecoverDynamicSqlMapper {
                 .set(flag).equalTo(record::getFlag);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.440+08:00", comments="Source Table: MyParkingRecover")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.119+08:00", comments="Source Table: MyParkingRecover")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExampleSelective(Myparkingrecover record) {
         return UpdateDSL.updateWithMapper(this::update, myparkingrecover)
                 .set(ctrlnumber).equalToWhenPresent(record::getCtrlnumber)

@@ -8,43 +8,43 @@ import org.mybatis.dynamic.sql.SqlColumn;
 import org.mybatis.dynamic.sql.SqlTable;
 
 public final class MyicmoneyDynamicSqlSupport {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.274+08:00", comments="Source Table: MYICMONEY")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.031+08:00", comments="Source Table: MYICMONEY")
     public static final Myicmoney myicmoney = new Myicmoney();
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.274+08:00", comments="Source field: MYICMONEY.ID")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.031+08:00", comments="Source field: MYICMONEY.ID")
     public static final SqlColumn<Integer> id = myicmoney.id;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.274+08:00", comments="Source field: MYICMONEY.CardNO")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.031+08:00", comments="Source field: MYICMONEY.CardNO")
     public static final SqlColumn<String> cardno = myicmoney.cardno;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.274+08:00", comments="Source field: MYICMONEY.OptDate")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.031+08:00", comments="Source field: MYICMONEY.OptDate")
     public static final SqlColumn<Date> optdate = myicmoney.optdate;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.274+08:00", comments="Source field: MYICMONEY.SFJE")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.031+08:00", comments="Source field: MYICMONEY.SFJE")
     public static final SqlColumn<BigDecimal> sfje = myicmoney.sfje;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.274+08:00", comments="Source field: MYICMONEY.Balance")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.031+08:00", comments="Source field: MYICMONEY.Balance")
     public static final SqlColumn<BigDecimal> balance = myicmoney.balance;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.274+08:00", comments="Source field: MYICMONEY.OperatorCardNO")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.031+08:00", comments="Source field: MYICMONEY.OperatorCardNO")
     public static final SqlColumn<String> operatorcardno = myicmoney.operatorcardno;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.274+08:00", comments="Source field: MYICMONEY.OptType")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.031+08:00", comments="Source field: MYICMONEY.OptType")
     public static final SqlColumn<String> opttype = myicmoney.opttype;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.274+08:00", comments="Source field: MYICMONEY.NewStartDate")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.031+08:00", comments="Source field: MYICMONEY.NewStartDate")
     public static final SqlColumn<Date> newstartdate = myicmoney.newstartdate;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.274+08:00", comments="Source field: MYICMONEY.NewEndDate")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.031+08:00", comments="Source field: MYICMONEY.NewEndDate")
     public static final SqlColumn<Date> newenddate = myicmoney.newenddate;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.274+08:00", comments="Source field: MYICMONEY.LastEndDate")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.031+08:00", comments="Source field: MYICMONEY.LastEndDate")
     public static final SqlColumn<Date> lastenddate = myicmoney.lastenddate;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.274+08:00", comments="Source field: MYICMONEY.Remark")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.031+08:00", comments="Source field: MYICMONEY.Remark")
     public static final SqlColumn<String> remark = myicmoney.remark;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.274+08:00", comments="Source Table: MYICMONEY")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.031+08:00", comments="Source Table: MYICMONEY")
     public static final class Myicmoney extends SqlTable {
         public final SqlColumn<Integer> id = column("ID", JDBCType.INTEGER);
 

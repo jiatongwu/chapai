@@ -33,25 +33,25 @@ import org.mybatis.dynamic.sql.util.SqlProviderAdapter;
 
 @Mapper
 public interface DtOpentimeweekDynamicSqlMapper {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.023+08:00", comments="Source Table: Dt_OpenTimeWeek")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.897+08:00", comments="Source Table: Dt_OpenTimeWeek")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     long count(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.023+08:00", comments="Source Table: Dt_OpenTimeWeek")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.897+08:00", comments="Source Table: Dt_OpenTimeWeek")
     @DeleteProvider(type=SqlProviderAdapter.class, method="delete")
     int delete(DeleteStatementProvider deleteStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.023+08:00", comments="Source Table: Dt_OpenTimeWeek")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.897+08:00", comments="Source Table: Dt_OpenTimeWeek")
     @InsertProvider(type=SqlProviderAdapter.class, method="insert")
     @SelectKey(statement="SELECT SCOPE_IDENTITY()", keyProperty="record.id", before=false, resultType=Integer.class)
     int insert(InsertStatementProvider<DtOpentimeweek> insertStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.023+08:00", comments="Source Table: Dt_OpenTimeWeek")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.897+08:00", comments="Source Table: Dt_OpenTimeWeek")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @ResultMap("DtOpentimeweekResult")
     DtOpentimeweek selectOne(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.023+08:00", comments="Source Table: Dt_OpenTimeWeek")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.898+08:00", comments="Source Table: Dt_OpenTimeWeek")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @Results(id="DtOpentimeweekResult", value = {
         @Result(column="id", property="id", jdbcType=JdbcType.INTEGER, id=true),
@@ -62,22 +62,22 @@ public interface DtOpentimeweekDynamicSqlMapper {
     })
     List<DtOpentimeweek> selectMany(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.023+08:00", comments="Source Table: Dt_OpenTimeWeek")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.898+08:00", comments="Source Table: Dt_OpenTimeWeek")
     @UpdateProvider(type=SqlProviderAdapter.class, method="update")
     int update(UpdateStatementProvider updateStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.023+08:00", comments="Source Table: Dt_OpenTimeWeek")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.898+08:00", comments="Source Table: Dt_OpenTimeWeek")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<Long>> countByExample() {
         return SelectDSL.selectWithMapper(this::count, SqlBuilder.count())
                 .from(dtOpentimeweek);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.023+08:00", comments="Source Table: Dt_OpenTimeWeek")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.898+08:00", comments="Source Table: Dt_OpenTimeWeek")
     default DeleteDSL<MyBatis3DeleteModelAdapter<Integer>> deleteByExample() {
         return DeleteDSL.deleteFromWithMapper(this::delete, dtOpentimeweek);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.024+08:00", comments="Source Table: Dt_OpenTimeWeek")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.898+08:00", comments="Source Table: Dt_OpenTimeWeek")
     default int deleteByPrimaryKey(Integer id_) {
         return DeleteDSL.deleteFromWithMapper(this::delete, dtOpentimeweek)
                 .where(id, isEqualTo(id_))
@@ -85,7 +85,7 @@ public interface DtOpentimeweekDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.024+08:00", comments="Source Table: Dt_OpenTimeWeek")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.898+08:00", comments="Source Table: Dt_OpenTimeWeek")
     default int insert(DtOpentimeweek record) {
         return insert(SqlBuilder.insert(record)
                 .into(dtOpentimeweek)
@@ -97,7 +97,7 @@ public interface DtOpentimeweekDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.025+08:00", comments="Source Table: Dt_OpenTimeWeek")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.898+08:00", comments="Source Table: Dt_OpenTimeWeek")
     default int insertSelective(DtOpentimeweek record) {
         return insert(SqlBuilder.insert(record)
                 .into(dtOpentimeweek)
@@ -109,19 +109,19 @@ public interface DtOpentimeweekDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.025+08:00", comments="Source Table: Dt_OpenTimeWeek")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.898+08:00", comments="Source Table: Dt_OpenTimeWeek")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<DtOpentimeweek>>> selectByExample() {
         return SelectDSL.selectWithMapper(this::selectMany, id, devcnum, week, startime, endtime)
                 .from(dtOpentimeweek);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.025+08:00", comments="Source Table: Dt_OpenTimeWeek")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.898+08:00", comments="Source Table: Dt_OpenTimeWeek")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<DtOpentimeweek>>> selectDistinctByExample() {
         return SelectDSL.selectDistinctWithMapper(this::selectMany, id, devcnum, week, startime, endtime)
                 .from(dtOpentimeweek);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.025+08:00", comments="Source Table: Dt_OpenTimeWeek")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.898+08:00", comments="Source Table: Dt_OpenTimeWeek")
     default DtOpentimeweek selectByPrimaryKey(Integer id_) {
         return SelectDSL.selectWithMapper(this::selectOne, id, devcnum, week, startime, endtime)
                 .from(dtOpentimeweek)
@@ -130,7 +130,7 @@ public interface DtOpentimeweekDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.025+08:00", comments="Source Table: Dt_OpenTimeWeek")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.898+08:00", comments="Source Table: Dt_OpenTimeWeek")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExample(DtOpentimeweek record) {
         return UpdateDSL.updateWithMapper(this::update, dtOpentimeweek)
                 .set(devcnum).equalTo(record::getDevcnum)
@@ -139,7 +139,7 @@ public interface DtOpentimeweekDynamicSqlMapper {
                 .set(endtime).equalTo(record::getEndtime);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.025+08:00", comments="Source Table: Dt_OpenTimeWeek")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.898+08:00", comments="Source Table: Dt_OpenTimeWeek")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExampleSelective(DtOpentimeweek record) {
         return UpdateDSL.updateWithMapper(this::update, dtOpentimeweek)
                 .set(devcnum).equalToWhenPresent(record::getDevcnum)
@@ -148,7 +148,7 @@ public interface DtOpentimeweekDynamicSqlMapper {
                 .set(endtime).equalToWhenPresent(record::getEndtime);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.025+08:00", comments="Source Table: Dt_OpenTimeWeek")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.898+08:00", comments="Source Table: Dt_OpenTimeWeek")
     default int updateByPrimaryKey(DtOpentimeweek record) {
         return UpdateDSL.updateWithMapper(this::update, dtOpentimeweek)
                 .set(devcnum).equalTo(record::getDevcnum)
@@ -160,7 +160,7 @@ public interface DtOpentimeweekDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.025+08:00", comments="Source Table: Dt_OpenTimeWeek")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.899+08:00", comments="Source Table: Dt_OpenTimeWeek")
     default int updateByPrimaryKeySelective(DtOpentimeweek record) {
         return UpdateDSL.updateWithMapper(this::update, dtOpentimeweek)
                 .set(devcnum).equalToWhenPresent(record::getDevcnum)

@@ -588,13 +588,18 @@ public class ChepaiServiceImpl implements ChepaiService {
 		 * 14:33:04.887',@IDCard='',@MaritalStatus='未婚', @HighestDegree='',@PoliticalStatus='',@PicPath='',@School='',@Speciality='',@ForeignLanguage='',@Skill='',@TelNumber='',@MobNumber='13120344930',@ZipCode='1',@NativePlace='',@CPH='冀T2A086',@CarType='蓝鸟', @CarColor='#FFFFFF',@CarPic='',@CarPlace='11车位',@PersonPhoto=NULL,@CarPhoto=NULL
 		 */
 		String mobnumber = myjibenziliao.getMobnumber();
-		List<Myjibenziliao> myjibenziliaos = myjibenziliaoDynamicSqlMapper.selectByExample()
-				.where(MyjibenziliaoDynamicSqlSupport.mobnumber, SqlBuilder.isEqualTo(mobnumber)).build().execute();
-		if (myjibenziliaos.size() > 0) {
-			// 更新//为了简单 可以先删除此数据然后统一进行新增
-			myjibenziliao.setUserno(myjibenziliaos.get(0).getUserno());
-			myjibenziliaoDynamicSqlMapper.deleteByExample()
+		if (StringUtils.isNotBlank(mobnumber)) {
+			List<Myjibenziliao> myjibenziliaos = myjibenziliaoDynamicSqlMapper.selectByExample()
 					.where(MyjibenziliaoDynamicSqlSupport.mobnumber, SqlBuilder.isEqualTo(mobnumber)).build().execute();
+			if (myjibenziliaos.size() > 0) {
+				// 更新//为了简单 可以先删除此数据然后统一进行新增
+				myjibenziliao.setUserno(myjibenziliaos.get(0).getUserno());
+				myjibenziliaoDynamicSqlMapper.deleteByExample()
+						.where(MyjibenziliaoDynamicSqlSupport.mobnumber, SqlBuilder.isEqualTo(mobnumber)).build()
+						.execute();
+			}
+		} else {
+			myjibenziliao.setMobnumber("");
 		}
 		// 新增
 		int insertResult = myjibenziliaoDynamicSqlMapper.insert(myjibenziliao);
@@ -833,10 +838,10 @@ public class ChepaiServiceImpl implements ChepaiService {
 					isDataFormatOk = false;
 					errorMsgStringBuilder.append(" 联系人姓名不能为空 ");
 				}
-				if (StringUtils.isBlank(phoneCellString)) {
-					isDataFormatOk = false;
-					errorMsgStringBuilder.append(" 联系人手机号不能为空 ");
-				}
+//				if (StringUtils.isBlank(phoneCellString)) {
+//					isDataFormatOk = false;
+//					errorMsgStringBuilder.append(" 联系人手机号不能为空 ");
+//				}
 				if (StringUtils.isBlank(cphCellString)) {
 					isDataFormatOk = false;
 					errorMsgStringBuilder.append(" 车牌号不能为空 ");

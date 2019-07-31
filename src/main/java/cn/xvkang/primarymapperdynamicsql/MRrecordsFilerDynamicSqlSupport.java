@@ -7,40 +7,40 @@ import org.mybatis.dynamic.sql.SqlColumn;
 import org.mybatis.dynamic.sql.SqlTable;
 
 public final class MRrecordsFilerDynamicSqlSupport {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.411+08:00", comments="Source Table: M_Rrecords_Filer")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.099+08:00", comments="Source Table: M_Rrecords_Filer")
     public static final MRrecordsFiler MRrecordsFiler = new MRrecordsFiler();
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.411+08:00", comments="Source field: M_Rrecords_Filer.CardID")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.099+08:00", comments="Source field: M_Rrecords_Filer.CardID")
     public static final SqlColumn<String> cardid = MRrecordsFiler.cardid;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.411+08:00", comments="Source field: M_Rrecords_Filer.UserNo")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.099+08:00", comments="Source field: M_Rrecords_Filer.UserNo")
     public static final SqlColumn<String> userno = MRrecordsFiler.userno;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.411+08:00", comments="Source field: M_Rrecords_Filer.MachNo")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.099+08:00", comments="Source field: M_Rrecords_Filer.MachNo")
     public static final SqlColumn<Integer> machno = MRrecordsFiler.machno;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.411+08:00", comments="Source field: M_Rrecords_Filer.MachPlace")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.099+08:00", comments="Source field: M_Rrecords_Filer.MachPlace")
     public static final SqlColumn<String> machplace = MRrecordsFiler.machplace;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.411+08:00", comments="Source field: M_Rrecords_Filer.DoorNo")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.099+08:00", comments="Source field: M_Rrecords_Filer.DoorNo")
     public static final SqlColumn<Integer> doorno = MRrecordsFiler.doorno;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.411+08:00", comments="Source field: M_Rrecords_Filer.DoorPlace")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.099+08:00", comments="Source field: M_Rrecords_Filer.DoorPlace")
     public static final SqlColumn<String> doorplace = MRrecordsFiler.doorplace;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.411+08:00", comments="Source field: M_Rrecords_Filer.Events")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.099+08:00", comments="Source field: M_Rrecords_Filer.Events")
     public static final SqlColumn<String> events = MRrecordsFiler.events;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.411+08:00", comments="Source field: M_Rrecords_Filer.OpenTime")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.099+08:00", comments="Source field: M_Rrecords_Filer.OpenTime")
     public static final SqlColumn<Date> opentime = MRrecordsFiler.opentime;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.411+08:00", comments="Source field: M_Rrecords_Filer.Password")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.099+08:00", comments="Source field: M_Rrecords_Filer.Password")
     public static final SqlColumn<String> password = MRrecordsFiler.password;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.411+08:00", comments="Source field: M_Rrecords_Filer.PasswordType")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.099+08:00", comments="Source field: M_Rrecords_Filer.PasswordType")
     public static final SqlColumn<String> passwordtype = MRrecordsFiler.passwordtype;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.411+08:00", comments="Source Table: M_Rrecords_Filer")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.099+08:00", comments="Source Table: M_Rrecords_Filer")
     public static final class MRrecordsFiler extends SqlTable {
         public final SqlColumn<String> cardid = column("CardID", JDBCType.VARCHAR);
 

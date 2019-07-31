@@ -30,19 +30,19 @@ import org.mybatis.dynamic.sql.util.SqlProviderAdapter;
 
 @Mapper
 public interface TblconstantDynamicSqlMapper {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.530+08:00", comments="Source Table: tblConstant")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.204+08:00", comments="Source Table: tblConstant")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     long count(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.530+08:00", comments="Source Table: tblConstant")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.204+08:00", comments="Source Table: tblConstant")
     @DeleteProvider(type=SqlProviderAdapter.class, method="delete")
     int delete(DeleteStatementProvider deleteStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.530+08:00", comments="Source Table: tblConstant")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.204+08:00", comments="Source Table: tblConstant")
     @InsertProvider(type=SqlProviderAdapter.class, method="insert")
     int insert(InsertStatementProvider<Tblconstant> insertStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.530+08:00", comments="Source Table: tblConstant")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.204+08:00", comments="Source Table: tblConstant")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @Results(id="TblconstantResult", value = {
         @Result(column="Types", property="types", jdbcType=JdbcType.VARCHAR),
@@ -53,22 +53,22 @@ public interface TblconstantDynamicSqlMapper {
     })
     List<Tblconstant> selectMany(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.530+08:00", comments="Source Table: tblConstant")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.204+08:00", comments="Source Table: tblConstant")
     @UpdateProvider(type=SqlProviderAdapter.class, method="update")
     int update(UpdateStatementProvider updateStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.530+08:00", comments="Source Table: tblConstant")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.204+08:00", comments="Source Table: tblConstant")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<Long>> countByExample() {
         return SelectDSL.selectWithMapper(this::count, SqlBuilder.count())
                 .from(tblconstant);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.530+08:00", comments="Source Table: tblConstant")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.204+08:00", comments="Source Table: tblConstant")
     default DeleteDSL<MyBatis3DeleteModelAdapter<Integer>> deleteByExample() {
         return DeleteDSL.deleteFromWithMapper(this::delete, tblconstant);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.530+08:00", comments="Source Table: tblConstant")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.204+08:00", comments="Source Table: tblConstant")
     default int insert(Tblconstant record) {
         return insert(SqlBuilder.insert(record)
                 .into(tblconstant)
@@ -81,7 +81,7 @@ public interface TblconstantDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.530+08:00", comments="Source Table: tblConstant")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.204+08:00", comments="Source Table: tblConstant")
     default int insertSelective(Tblconstant record) {
         return insert(SqlBuilder.insert(record)
                 .into(tblconstant)
@@ -94,19 +94,19 @@ public interface TblconstantDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.530+08:00", comments="Source Table: tblConstant")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.204+08:00", comments="Source Table: tblConstant")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Tblconstant>>> selectByExample() {
         return SelectDSL.selectWithMapper(this::selectMany, types, orderno, keys, value, flag)
                 .from(tblconstant);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.530+08:00", comments="Source Table: tblConstant")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.204+08:00", comments="Source Table: tblConstant")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Tblconstant>>> selectDistinctByExample() {
         return SelectDSL.selectDistinctWithMapper(this::selectMany, types, orderno, keys, value, flag)
                 .from(tblconstant);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.530+08:00", comments="Source Table: tblConstant")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.204+08:00", comments="Source Table: tblConstant")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExample(Tblconstant record) {
         return UpdateDSL.updateWithMapper(this::update, tblconstant)
                 .set(types).equalTo(record::getTypes)
@@ -116,7 +116,7 @@ public interface TblconstantDynamicSqlMapper {
                 .set(flag).equalTo(record::getFlag);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.530+08:00", comments="Source Table: tblConstant")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.204+08:00", comments="Source Table: tblConstant")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExampleSelective(Tblconstant record) {
         return UpdateDSL.updateWithMapper(this::update, tblconstant)
                 .set(types).equalToWhenPresent(record::getTypes)

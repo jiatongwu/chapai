@@ -313,7 +313,11 @@ layui.config({
         }, {
             field: 'name',
             title: '真实姓名'
-        }, {field: 'disabled', title: '是否禁用', width: 110, templet: '#userDisableTpl', unresize: true}, {
+        },
+            {
+                field: 'roleNames',
+                title: '拥有的角色'
+            }, {field: 'disabled', title: '是否禁用', width: 110, templet: '#userDisableTpl', unresize: true}, {
             field: 'createTime',
             title: '创建时间',
             templet: function (d) {

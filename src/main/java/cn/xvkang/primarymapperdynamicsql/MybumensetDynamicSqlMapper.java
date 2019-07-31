@@ -33,25 +33,25 @@ import org.mybatis.dynamic.sql.util.SqlProviderAdapter;
 
 @Mapper
 public interface MybumensetDynamicSqlMapper {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.155+08:00", comments="Source Table: MYBUMENSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.970+08:00", comments="Source Table: MYBUMENSET")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     long count(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.155+08:00", comments="Source Table: MYBUMENSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.970+08:00", comments="Source Table: MYBUMENSET")
     @DeleteProvider(type=SqlProviderAdapter.class, method="delete")
     int delete(DeleteStatementProvider deleteStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.155+08:00", comments="Source Table: MYBUMENSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.970+08:00", comments="Source Table: MYBUMENSET")
     @InsertProvider(type=SqlProviderAdapter.class, method="insert")
     @SelectKey(statement="SELECT SCOPE_IDENTITY()", keyProperty="record.id", before=false, resultType=Integer.class)
     int insert(InsertStatementProvider<Mybumenset> insertStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.155+08:00", comments="Source Table: MYBUMENSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.970+08:00", comments="Source Table: MYBUMENSET")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @ResultMap("MybumensetResult")
     Mybumenset selectOne(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.155+08:00", comments="Source Table: MYBUMENSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.970+08:00", comments="Source Table: MYBUMENSET")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @Results(id="MybumensetResult", value = {
         @Result(column="ID", property="id", jdbcType=JdbcType.INTEGER, id=true),
@@ -62,22 +62,22 @@ public interface MybumensetDynamicSqlMapper {
     })
     List<Mybumenset> selectMany(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.155+08:00", comments="Source Table: MYBUMENSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.970+08:00", comments="Source Table: MYBUMENSET")
     @UpdateProvider(type=SqlProviderAdapter.class, method="update")
     int update(UpdateStatementProvider updateStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.155+08:00", comments="Source Table: MYBUMENSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.970+08:00", comments="Source Table: MYBUMENSET")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<Long>> countByExample() {
         return SelectDSL.selectWithMapper(this::count, SqlBuilder.count())
                 .from(mybumenset);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.155+08:00", comments="Source Table: MYBUMENSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.970+08:00", comments="Source Table: MYBUMENSET")
     default DeleteDSL<MyBatis3DeleteModelAdapter<Integer>> deleteByExample() {
         return DeleteDSL.deleteFromWithMapper(this::delete, mybumenset);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.155+08:00", comments="Source Table: MYBUMENSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.970+08:00", comments="Source Table: MYBUMENSET")
     default int deleteByPrimaryKey(Integer id_) {
         return DeleteDSL.deleteFromWithMapper(this::delete, mybumenset)
                 .where(id, isEqualTo(id_))
@@ -85,7 +85,7 @@ public interface MybumensetDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.155+08:00", comments="Source Table: MYBUMENSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.970+08:00", comments="Source Table: MYBUMENSET")
     default int insert(Mybumenset record) {
         return insert(SqlBuilder.insert(record)
                 .into(mybumenset)
@@ -97,7 +97,7 @@ public interface MybumensetDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.155+08:00", comments="Source Table: MYBUMENSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.970+08:00", comments="Source Table: MYBUMENSET")
     default int insertSelective(Mybumenset record) {
         return insert(SqlBuilder.insert(record)
                 .into(mybumenset)
@@ -109,19 +109,19 @@ public interface MybumensetDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.155+08:00", comments="Source Table: MYBUMENSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.970+08:00", comments="Source Table: MYBUMENSET")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Mybumenset>>> selectByExample() {
         return SelectDSL.selectWithMapper(this::selectMany, id, deptno, deptname, deptsymbol, pid)
                 .from(mybumenset);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.155+08:00", comments="Source Table: MYBUMENSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.970+08:00", comments="Source Table: MYBUMENSET")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<Mybumenset>>> selectDistinctByExample() {
         return SelectDSL.selectDistinctWithMapper(this::selectMany, id, deptno, deptname, deptsymbol, pid)
                 .from(mybumenset);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.155+08:00", comments="Source Table: MYBUMENSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.970+08:00", comments="Source Table: MYBUMENSET")
     default Mybumenset selectByPrimaryKey(Integer id_) {
         return SelectDSL.selectWithMapper(this::selectOne, id, deptno, deptname, deptsymbol, pid)
                 .from(mybumenset)
@@ -130,7 +130,7 @@ public interface MybumensetDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.156+08:00", comments="Source Table: MYBUMENSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.970+08:00", comments="Source Table: MYBUMENSET")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExample(Mybumenset record) {
         return UpdateDSL.updateWithMapper(this::update, mybumenset)
                 .set(deptno).equalTo(record::getDeptno)
@@ -139,7 +139,7 @@ public interface MybumensetDynamicSqlMapper {
                 .set(pid).equalTo(record::getPid);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.156+08:00", comments="Source Table: MYBUMENSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.971+08:00", comments="Source Table: MYBUMENSET")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExampleSelective(Mybumenset record) {
         return UpdateDSL.updateWithMapper(this::update, mybumenset)
                 .set(deptno).equalToWhenPresent(record::getDeptno)
@@ -148,7 +148,7 @@ public interface MybumensetDynamicSqlMapper {
                 .set(pid).equalToWhenPresent(record::getPid);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.156+08:00", comments="Source Table: MYBUMENSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.971+08:00", comments="Source Table: MYBUMENSET")
     default int updateByPrimaryKey(Mybumenset record) {
         return UpdateDSL.updateWithMapper(this::update, mybumenset)
                 .set(deptno).equalTo(record::getDeptno)
@@ -160,7 +160,7 @@ public interface MybumensetDynamicSqlMapper {
                 .execute();
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.156+08:00", comments="Source Table: MYBUMENSET")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.971+08:00", comments="Source Table: MYBUMENSET")
     default int updateByPrimaryKeySelective(Mybumenset record) {
         return UpdateDSL.updateWithMapper(this::update, mybumenset)
                 .set(deptno).equalToWhenPresent(record::getDeptno)

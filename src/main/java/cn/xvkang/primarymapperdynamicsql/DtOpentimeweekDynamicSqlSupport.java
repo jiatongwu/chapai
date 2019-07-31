@@ -6,25 +6,25 @@ import org.mybatis.dynamic.sql.SqlColumn;
 import org.mybatis.dynamic.sql.SqlTable;
 
 public final class DtOpentimeweekDynamicSqlSupport {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.019+08:00", comments="Source Table: Dt_OpenTimeWeek")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.897+08:00", comments="Source Table: Dt_OpenTimeWeek")
     public static final DtOpentimeweek dtOpentimeweek = new DtOpentimeweek();
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.020+08:00", comments="Source field: Dt_OpenTimeWeek.id")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.897+08:00", comments="Source field: Dt_OpenTimeWeek.id")
     public static final SqlColumn<Integer> id = dtOpentimeweek.id;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.020+08:00", comments="Source field: Dt_OpenTimeWeek.DevcNum")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.897+08:00", comments="Source field: Dt_OpenTimeWeek.DevcNum")
     public static final SqlColumn<Integer> devcnum = dtOpentimeweek.devcnum;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.021+08:00", comments="Source field: Dt_OpenTimeWeek.Week")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.897+08:00", comments="Source field: Dt_OpenTimeWeek.Week")
     public static final SqlColumn<Integer> week = dtOpentimeweek.week;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.021+08:00", comments="Source field: Dt_OpenTimeWeek.startime")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.897+08:00", comments="Source field: Dt_OpenTimeWeek.startime")
     public static final SqlColumn<String> startime = dtOpentimeweek.startime;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.021+08:00", comments="Source field: Dt_OpenTimeWeek.endtime")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.897+08:00", comments="Source field: Dt_OpenTimeWeek.endtime")
     public static final SqlColumn<String> endtime = dtOpentimeweek.endtime;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.020+08:00", comments="Source Table: Dt_OpenTimeWeek")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:00.897+08:00", comments="Source Table: Dt_OpenTimeWeek")
     public static final class DtOpentimeweek extends SqlTable {
         public final SqlColumn<Integer> id = column("id", JDBCType.INTEGER);
 

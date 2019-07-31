@@ -30,41 +30,41 @@ import org.mybatis.dynamic.sql.util.SqlProviderAdapter;
 
 @Mapper
 public interface QrComsetDynamicSqlMapper {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.460+08:00", comments="Source Table: Qr_ComSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.164+08:00", comments="Source Table: Qr_ComSet")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     long count(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.460+08:00", comments="Source Table: Qr_ComSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.164+08:00", comments="Source Table: Qr_ComSet")
     @DeleteProvider(type=SqlProviderAdapter.class, method="delete")
     int delete(DeleteStatementProvider deleteStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.460+08:00", comments="Source Table: Qr_ComSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.164+08:00", comments="Source Table: Qr_ComSet")
     @InsertProvider(type=SqlProviderAdapter.class, method="insert")
     int insert(InsertStatementProvider<QrComset> insertStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.460+08:00", comments="Source Table: Qr_ComSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.164+08:00", comments="Source Table: Qr_ComSet")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @Results(id="QrComsetResult", value = {
         @Result(column="com", property="com", jdbcType=JdbcType.INTEGER)
     })
     List<QrComset> selectMany(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.461+08:00", comments="Source Table: Qr_ComSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.164+08:00", comments="Source Table: Qr_ComSet")
     @UpdateProvider(type=SqlProviderAdapter.class, method="update")
     int update(UpdateStatementProvider updateStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.461+08:00", comments="Source Table: Qr_ComSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.164+08:00", comments="Source Table: Qr_ComSet")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<Long>> countByExample() {
         return SelectDSL.selectWithMapper(this::count, SqlBuilder.count())
                 .from(qrComset);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.461+08:00", comments="Source Table: Qr_ComSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.164+08:00", comments="Source Table: Qr_ComSet")
     default DeleteDSL<MyBatis3DeleteModelAdapter<Integer>> deleteByExample() {
         return DeleteDSL.deleteFromWithMapper(this::delete, qrComset);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.461+08:00", comments="Source Table: Qr_ComSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.164+08:00", comments="Source Table: Qr_ComSet")
     default int insert(QrComset record) {
         return insert(SqlBuilder.insert(record)
                 .into(qrComset)
@@ -73,7 +73,7 @@ public interface QrComsetDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.461+08:00", comments="Source Table: Qr_ComSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.164+08:00", comments="Source Table: Qr_ComSet")
     default int insertSelective(QrComset record) {
         return insert(SqlBuilder.insert(record)
                 .into(qrComset)
@@ -82,25 +82,25 @@ public interface QrComsetDynamicSqlMapper {
                 .render(RenderingStrategy.MYBATIS3));
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.461+08:00", comments="Source Table: Qr_ComSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.164+08:00", comments="Source Table: Qr_ComSet")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<QrComset>>> selectByExample() {
         return SelectDSL.selectWithMapper(this::selectMany, com)
                 .from(qrComset);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.461+08:00", comments="Source Table: Qr_ComSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.164+08:00", comments="Source Table: Qr_ComSet")
     default QueryExpressionDSL<MyBatis3SelectModelAdapter<List<QrComset>>> selectDistinctByExample() {
         return SelectDSL.selectDistinctWithMapper(this::selectMany, com)
                 .from(qrComset);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.461+08:00", comments="Source Table: Qr_ComSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.164+08:00", comments="Source Table: Qr_ComSet")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExample(QrComset record) {
         return UpdateDSL.updateWithMapper(this::update, qrComset)
                 .set(com).equalTo(record::getCom);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-19T09:31:22.461+08:00", comments="Source Table: Qr_ComSet")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2019-07-31T15:28:01.164+08:00", comments="Source Table: Qr_ComSet")
     default UpdateDSL<MyBatis3UpdateModelAdapter<Integer>> updateByExampleSelective(QrComset record) {
         return UpdateDSL.updateWithMapper(this::update, qrComset)
                 .set(com).equalToWhenPresent(record::getCom);
