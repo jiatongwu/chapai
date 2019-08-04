@@ -36,8 +36,11 @@ import org.springframework.stereotype.Service;
 import com.github.pagehelper.PageHelper;
 
 import cn.xvkang.primarycustommapper.SendSmsLogCustomMapper;
+import cn.xvkang.primaryentity.Myfaxingssue;
 import cn.xvkang.primaryentity.Myjibenziliao;
 import cn.xvkang.primaryentity.SendSmsLog;
+import cn.xvkang.primarymapperdynamicsql.MyfaxingssueDynamicSqlMapper;
+import cn.xvkang.primarymapperdynamicsql.MyfaxingssueDynamicSqlSupport;
 import cn.xvkang.primarymapperdynamicsql.MyjibenziliaoDynamicSqlMapper;
 import cn.xvkang.primarymapperdynamicsql.MyjibenziliaoDynamicSqlSupport;
 import cn.xvkang.primarymapperdynamicsql.SendSmsLogDynamicSqlMapper;
@@ -54,6 +57,8 @@ public class SendSmsLogServiceImpl implements SendSmsLogService {
 	private SendSmsLogCustomMapper sendSmsLogCustomMapper;
 	@Autowired
 	private MyjibenziliaoDynamicSqlMapper myjibenziliaoDynamicSqlMapper;
+	@Autowired
+	private MyfaxingssueDynamicSqlMapper myfaxingssueDynamicSqlMapper;
 
 	@Override
 	public List<SendSmsLog> findByExample(SelectStatementProvider selectStatementProvider) {
@@ -177,6 +182,26 @@ public class SendSmsLogServiceImpl implements SendSmsLogService {
 		List<Map<String, Object>> selectByExample = sendSmsLogCustomMapper.selectMany(render);
 		if (selectByExample.size() > 0) {
 			Map<String, Object> map = selectByExample.get(0);
+			String cph = (String) map.get("cph");
+			if (StringUtils.isNotBlank(cph)) {
+				// 根据车牌号查询车主姓名
+				List<Myfaxingssue> execute = myfaxingssueDynamicSqlMapper.selectByExample().where()
+						.and(MyfaxingssueDynamicSqlSupport.cph, SqlBuilder.isEqualTo(cph)).build().execute();
+				if (execute.size() == 1) {
+					Myfaxingssue myfaxingssue = execute.get(0);
+					String userno = myfaxingssue.getUserno();
+					if (StringUtils.isNotBlank(userno)) {
+						List<Myjibenziliao> execute2 = myjibenziliaoDynamicSqlMapper.selectByExample().where()
+								.and(MyjibenziliaoDynamicSqlSupport.userno, SqlBuilder.isEqualTo(userno)).build()
+								.execute();
+						if (execute2.size() == 1) {
+							Myjibenziliao myjibenziliao = execute2.get(0);
+							String username = myjibenziliao.getUsername();
+							map.put("ownerName", username);
+						}
+					}
+				}
+			}
 			return map;
 		}
 		return null;

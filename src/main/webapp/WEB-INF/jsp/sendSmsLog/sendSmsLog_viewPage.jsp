@@ -54,6 +54,7 @@
             </div>
 
         </div>
+        <br/>
         <div class="layui-row">
             <div class="layui-col-xs3">
                 车牌号所有人手机:
@@ -78,7 +79,7 @@
                 短信内容:
             </div>
             <div class="layui-col-xs9">
-                ${sendSmsLog.smsMessage}
+                ${sendSmsLog.sms_message}
             </div>
         </div>
         <br/>
