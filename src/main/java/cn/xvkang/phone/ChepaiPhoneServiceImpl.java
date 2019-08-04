@@ -49,6 +49,10 @@ import cn.xvkang.phone.thrift.DataException;
 import cn.xvkang.phone.thrift.GetAllSmsTemplateOneItem;
 import cn.xvkang.phone.thrift.GetAllSmsTemplateRequest;
 import cn.xvkang.phone.thrift.GetAllSmsTemplateResponse;
+import cn.xvkang.phone.thrift.GetCarPersonPojo;
+import cn.xvkang.phone.thrift.GetCarPersonRequest;
+import cn.xvkang.phone.thrift.GetCarPersonResponse;
+import cn.xvkang.phone.thrift.GetCarPersonTypeEnum;
 import cn.xvkang.phone.thrift.GetOneWeiguijiluRequest;
 import cn.xvkang.phone.thrift.GetWeiguiRequestData;
 import cn.xvkang.phone.thrift.GetWeiguiResponseData;
@@ -633,13 +637,10 @@ public class ChepaiPhoneServiceImpl implements ChepaiPhoneService.Iface {
 			// 一个人在同一手机上有可能有多个jwt
 			String xunluoRenyuanJwtTokenKeyStartWith = applicationProperties.getRedisNameSpace() + ":"
 					+ Constants.REDIS_JWT_XUNLUO_RENYUAN_PREFIX + username + "_" + imei + "_" + "*";
-
 			// redisTemplateString.opsForValue().set(xunluoRenyuanJwtTokenKey, jwt);
-
 			// 每一个jwt都代表一个人在一个手机上某一时间登录
 			// String jwtKey = applicationProperties.getRedisNameSpace() + ":" +
 			// Constants.REDIS_JWT_XUNLUO_RENYUAN_PREFIX + jwt;
-
 			// String phoneJwtSetKey = Constants.REDIS_PREFIX + Constants.REDIS_JWT_PREFIX +
 			// phone + Constants.PHONE_JWT_SET_SUFFIX;
 			// 删除掉此用户所有登录设备上的redis jwt
@@ -654,8 +655,30 @@ public class ChepaiPhoneServiceImpl implements ChepaiPhoneService.Iface {
 					redisStringTemplate.expireAt(key, new Date());
 				}
 			}
-
 		}
+	}
 
+	@Override
+	public GetCarPersonResponse getCarPersonByPhotoOrCph(GetCarPersonRequest request) throws DataException, TException {
+		GetCarPersonResponse response = new GetCarPersonResponse();
+		response.setCode(Result_Code.OK);
+		List<GetCarPersonPojo> carPersons = new ArrayList<>();
+		response.setCarPersons(carPersons);
+		GetCarPersonTypeEnum getCarPersonTypeEnum = request.getCarPersonTypeEnum;
+		if (getCarPersonTypeEnum == GetCarPersonTypeEnum.CPH) {
+			List<Map<String, Object>> myjibenziliaos = chepaiService.findByCphLike(request.getImageOrCph());
+			if (myjibenziliaos != null) {
+				for (Map<String, Object> tmpMap : myjibenziliaos) {
+					GetCarPersonPojo pojo = new GetCarPersonPojo();
+					pojo.setCph((String) tmpMap.get("chepaihao"));
+					pojo.setPersonName((String) tmpMap.get("UserName"));
+					pojo.setPhone((String) tmpMap.get("MobNumber"));
+					carPersons.add(pojo);
+				}
+			}
+		} else if (getCarPersonTypeEnum == GetCarPersonTypeEnum.PHOTO) {
+			// 这种情况不用考虑 已经修改成由手机通过4G网进行车牌识别
+		}
+		return response;
 	}
 }

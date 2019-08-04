@@ -95,6 +95,25 @@ struct ResetPwdResponse{
 1:optional Result_Code result_code
 }
 
+enum GetCarPersonTypeEnum{
+PHOTO=1,
+CPH=2
+}
+struct GetCarPersonRequest{
+1:optional GetCarPersonTypeEnum getCarPersonTypeEnum,
+2:optional String imageOrCph
+}
+struct GetCarPersonPojo{
+1:optional String personName,
+2:optional String phone,
+3:optional String cph
+}
+struct GetCarPersonResponse{
+1: optional Result_Code code,
+2:optional list<GetCarPersonPojo> carPersons
+}
+
+
 
 
 
@@ -109,6 +128,9 @@ GetWeiguiResponseData GetWeiguijiluResponse(1:required GetWeiguiRequestData requ
 Weiguijilu getOneWeiguijilu(1:required GetOneWeiguijiluRequest request)throws (1:DataException dataException),
 ResetPwdResponse resetPwd(1:required ResetPwdRequest request)throws (1:DataException dataException),
 void logout(1:required String jwt)throws (1:DataException dataException),
+
+GetCarPersonResponse getCarPersonByPhotoOrCph(1:required GetCarPersonRequest request)throws (1:DataException dataException),
+
 String login(1:required String username,2:required String password,3:required String imei)throws (1:DataException dataException)
 }
 

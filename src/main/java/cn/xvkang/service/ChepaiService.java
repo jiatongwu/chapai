@@ -1,6 +1,7 @@
 package cn.xvkang.service;
 
 import java.io.InputStream;
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.data.domain.PageImpl;
@@ -23,4 +24,6 @@ public interface ChepaiService {
 	public Map<String, Object> importExcel(InputStream inputStream);
 
 	public Myjibenziliao findByChp(String cph);
+
+	public List<Map<String, Object>> findByCphLike(String cphLike);
 }

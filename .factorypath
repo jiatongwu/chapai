@@ -132,7 +132,7 @@
     <factorypathentry kind="VARJAR" id="M2_REPO/org/springframework/spring-orm/4.3.24.RELEASE/spring-orm-4.3.24.RELEASE.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/org/springframework/spring-aspects/4.3.24.RELEASE/spring-aspects-4.3.24.RELEASE.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/com/h2database/h2/1.4.199/h2-1.4.199.jar" enabled="true" runInBatchMode="false"/>
-    <factorypathentry kind="VARJAR" id="M2_REPO/org/apache/thrift/libthrift/0.10.0/libthrift-0.10.0.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/org/apache/thrift/libthrift/0.11.0/libthrift-0.11.0.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/org/freemarker/freemarker/2.3.28/freemarker-2.3.28.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/io/netty/netty-all/4.1.37.Final/netty-all-4.1.37.Final.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/com/google/protobuf/protobuf-java/3.5.0/protobuf-java-3.5.0.jar" enabled="true" runInBatchMode="false"/>

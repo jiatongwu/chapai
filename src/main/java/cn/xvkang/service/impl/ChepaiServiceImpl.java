@@ -53,6 +53,7 @@ import com.github.pagehelper.PageHelper;
 import cn.xvkang.dto.MyUserDetails;
 import cn.xvkang.middle.LogServiceMiddle;
 import cn.xvkang.primarycustommapper.ChepaiCustomMapper;
+import cn.xvkang.primarycustommapper.MyjibenziliaoCustomMapper;
 import cn.xvkang.primarycustommapper.PersonCustomMapper;
 import cn.xvkang.primaryentity.Myfaxingssue;
 import cn.xvkang.primaryentity.Myicvalid;
@@ -99,6 +100,9 @@ public class ChepaiServiceImpl implements ChepaiService {
 	private UserCarCreateDynamicSqlMapper userCarCreateDynamicSqlMapper;
 	@Autowired
 	private UserPersonCreateDynamicSqlMapper userPersonCreateDynamicSqlMapper;
+	@Autowired
+	private MyjibenziliaoCustomMapper myjibenziliaoCustomMapper;
+
 	// @Autowired
 	// private BaseCustomMapper baseCustomMapper;
 	public static String startPersonNo = "Z40001";
@@ -373,6 +377,10 @@ public class ChepaiServiceImpl implements ChepaiService {
 		String phone = (String) params.get("phone");
 		String homeAddress = (String) params.get("homeAddress");
 		String chepaihao = (String) params.get("chepaihao");
+		if (StringUtils.isNotBlank(chepaihao)) {
+			chepaihao = chepaihao.toUpperCase();
+			params.put("chepaihao", chepaihao.toUpperCase());
+		}
 		String chexing = (String) params.get("chexing");
 		String validStart = (String) params.get("validStart");
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
@@ -1013,5 +1021,22 @@ public class ChepaiServiceImpl implements ChepaiService {
 			return myjibenziliaos.get(0);
 		}
 		return null;
+	}
+
+	@Override
+	public List<Map<String, Object>> findByCphLike(String cphLike) {
+		if (StringUtils.isNotBlank(cphLike)) {
+			SelectStatementProvider render = SqlBuilder
+					.select(MyjibenziliaoDynamicSqlSupport.myjibenziliao.allColumns(),
+							MyfaxingssueDynamicSqlSupport.cph.as("chepaihao"))
+					.from(MyfaxingssueDynamicSqlSupport.myfaxingssue, "myfaxingssue")
+					.leftJoin(MyjibenziliaoDynamicSqlSupport.myjibenziliao, "myjibenziliao")
+					.on(MyjibenziliaoDynamicSqlSupport.userno, SqlBuilder.equalTo(MyfaxingssueDynamicSqlSupport.userno))
+					.where(MyfaxingssueDynamicSqlSupport.cph, SqlBuilder.isLike("%" + cphLike + "%")).build()
+					.render(RenderingStrategy.MYBATIS3);
+			List<Map<String, Object>> myjibenziliaos = myjibenziliaoCustomMapper.selectMany(render);
+			return myjibenziliaos;
+		}
+		return new ArrayList<>();
 	}
 }
