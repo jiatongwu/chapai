@@ -56,9 +56,13 @@ spring:
     username: sa
     password: wujiatong
     dbcp2:
-      validation-query: SELECT 1
-      test-while-idle: true
+      max-idle: 10
+      min-idle: 5
+      initial-size: 5
       test-on-borrow: true
+      test-while-idle: true
+      time-between-eviction-runs-millis: 18800
+      validation-query: SELECT 1
 slave:      
   datasource:
       url: jdbc:mysql://localhost:3306/fuxing_school?useUnicode=true&characterEncoding=utf8&allowMultiQueries=true
@@ -148,9 +152,13 @@ spring:
     username: sa
     password: 12345
     dbcp2:
-      validation-query: SELECT 1
-      test-while-idle: true
+      max-idle: 10
+      min-idle: 5
+      initial-size: 5
       test-on-borrow: true
+      test-while-idle: true
+      time-between-eviction-runs-millis: 18800
+      validation-query: SELECT 1
 slave:      
   datasource:
       url: jdbc:mysql://localhost:3306/fuxing_school?useUnicode=true&characterEncoding=utf8&allowMultiQueries=true

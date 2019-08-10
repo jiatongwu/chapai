@@ -6,16 +6,19 @@ import java.util.List;
 
 import javax.sql.DataSource;
 
+import org.apache.commons.dbcp2.BasicDataSource;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.annotation.MapperScan;
 import org.mybatis.spring.boot.autoconfigure.SpringBootVFS;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.boot.autoconfigure.jdbc.DataSourceBuilder;
+import org.springframework.boot.autoconfigure.jdbc.DataSourceProperties;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
+import org.springframework.core.env.Environment;
 import org.springframework.core.io.DefaultResourceLoader;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
@@ -25,12 +28,29 @@ import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 @MapperScan(basePackages = { "cn.xvkang.primarymapperdynamicsql",
 		"cn.xvkang.primarycustommapper" }, sqlSessionFactoryRef = "primarySqlSessionFactory")
 public class PrimaryDataSourceConfig {
+	@Autowired
+	private Environment env;
 
-	@Bean("primaryDataSource")
+	@Bean(value = "primaryDataSource", destroyMethod = "close")
 	@Primary
 	@ConfigurationProperties(prefix = "spring.datasource")
-	public DataSource primaryDataSource() {
-		return DataSourceBuilder.create().build();
+	public DataSource primaryDataSource(DataSourceProperties properties) {
+		BasicDataSource dataSource = new BasicDataSource();
+		dataSource.setUrl(properties.determineUrl());
+		dataSource.setUsername(properties.determineUsername());
+		dataSource.setPassword(properties.determinePassword());
+		dataSource.setDriverClassName(properties.determineDriverClassName());
+		dataSource.setMaxIdle(Integer.parseInt(env.getProperty("spring.datasource.dbcp2.max-idle")));
+		dataSource.setMinIdle(Integer.parseInt(env.getProperty("spring.datasource.dbcp2.min-idle")));
+		dataSource.setInitialSize(Integer.parseInt(env.getProperty("spring.datasource.dbcp2.initial-size")));
+		dataSource.setTestOnBorrow(Boolean.parseBoolean(env.getProperty("spring.datasource.dbcp2.test-on-borrow")));
+		dataSource.setTestWhileIdle(Boolean.parseBoolean(env.getProperty("spring.datasource.dbcp2.test-while-idle")));
+		dataSource.setTimeBetweenEvictionRunsMillis(
+				Integer.parseInt(env.getProperty("spring.datasource.dbcp2.time-between-eviction-runs-millis")));
+		dataSource.setValidationQuery(env.getProperty("spring.datasource.dbcp2.validation-query"));
+		return dataSource;
+
+		// return DataSourceBuilder.create().build();
 	}
 
 	@Primary
