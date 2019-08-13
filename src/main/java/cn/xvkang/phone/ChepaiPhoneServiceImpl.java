@@ -433,14 +433,10 @@ public class ChepaiPhoneServiceImpl implements ChepaiPhoneService.Iface {
 			weiguijilu.setId((Integer) map.get("id"));
 			String originBase64image = (String) map.get("base64image");
 			if (StringUtils.isNotBlank(originBase64image)) {
-
 				byte[] base64bytes = org.apache.commons.codec.binary.Base64.decodeBase64(originBase64image);
-
 				try {
-
 					BufferedImage read = ImageIO.read(new ByteArrayInputStream(base64bytes));
 					BufferedImage outBufferedImage = scale(read, 80, 50);
-
 					ByteArrayOutputStream bos = new ByteArrayOutputStream();
 					ImageIO.write(outBufferedImage, "jpeg", bos);
 					byte[] imageBytes = bos.toByteArray();
@@ -451,7 +447,6 @@ public class ChepaiPhoneServiceImpl implements ChepaiPhoneService.Iface {
 					e.printStackTrace();
 				}
 			}
-
 			weiguijilu.setBase64image(originBase64image);
 			weiguijilus.add(weiguijilu);
 		}
@@ -514,7 +509,23 @@ public class ChepaiPhoneServiceImpl implements ChepaiPhoneService.Iface {
 		int id = request.getId();
 		Weiguijilu findById = weiguijiluService.findById(id);
 		cn.xvkang.phone.thrift.Weiguijilu weiguijilu = new cn.xvkang.phone.thrift.Weiguijilu();
-		weiguijilu.setBase64image(findById.getBase64image());
+		String originBase64image = findById.getBase64image();
+		if (StringUtils.isNotBlank(originBase64image)) {
+			byte[] base64bytes = org.apache.commons.codec.binary.Base64.decodeBase64(originBase64image);
+			try {
+				BufferedImage read = ImageIO.read(new ByteArrayInputStream(base64bytes));
+				BufferedImage outBufferedImage = scale(read, 800, 500);
+				ByteArrayOutputStream bos = new ByteArrayOutputStream();
+				ImageIO.write(outBufferedImage, "jpeg", bos);
+				byte[] imageBytes = bos.toByteArray();
+				bos.flush();
+				bos.close();
+				originBase64image = org.apache.commons.codec.binary.Base64.encodeBase64String(imageBytes);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+		weiguijilu.setBase64image(originBase64image);
 		weiguijilu.setCph(findById.getCph());
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 		weiguijilu.setCreatetime(sdf.format(findById.getCreatetime()));
