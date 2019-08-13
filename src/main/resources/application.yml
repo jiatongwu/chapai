@@ -109,8 +109,8 @@ thrift:
 isRealySendSms: true
 logging:
   level:
-    cn:
-      xvkang: debug
+    org: error
+    cn: error
 spring:
   jmx:
     default-domain: cheapi.com
